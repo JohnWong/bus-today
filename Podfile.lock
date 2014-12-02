@@ -1,0 +1,10 @@
+PODS:
+  - STHTTPRequest (1.0.2)
+
+DEPENDENCIES:
+  - STHTTPRequest (~> 1.0.2)
+
+SPEC CHECKSUMS:
+  STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
+
+COCOAPODS: 0.34.4
