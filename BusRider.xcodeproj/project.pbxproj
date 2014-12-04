@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
+		525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
+		525CB36D1A30C106000CBA2B /* JWBusStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 525CB36C1A30C106000CBA2B /* JWBusStopView.m */; };
 		52AB79CF1A2E193E001904CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79CE1A2E193E001904CA /* main.m */; };
 		52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D11A2E193E001904CA /* AppDelegate.m */; };
-		52AB79D51A2E193E001904CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D41A2E193E001904CA /* ViewController.m */; };
+		52AB79D51A2E193E001904CA /* JWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D41A2E193E001904CA /* JWViewController.m */; };
 		52AB79D81A2E193E001904CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB79D61A2E193E001904CA /* Main.storyboard */; };
 		52AB79DA1A2E193E001904CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AB79D91A2E193E001904CA /* Images.xcassets */; };
 		52AB79DD1A2E193E001904CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AB79DB1A2E193E001904CA /* LaunchScreen.xib */; };
 		52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79E81A2E193E001904CA /* BusRiderTests.m */; };
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
-		52AB79FF1A2E1982001904CA /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79FE1A2E1982001904CA /* TodayViewController.m */; };
+		52AB79FF1A2E1982001904CA /* JWTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79FE1A2E1982001904CA /* JWTodayViewController.m */; };
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -63,13 +66,15 @@
 /* Begin PBXFileReference section */
 		45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
+		525CB36B1A30C106000CBA2B /* JWBusStopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusStopView.h; sourceTree = "<group>"; };
+		525CB36C1A30C106000CBA2B /* JWBusStopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusStopView.m; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79CD1A2E193E001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AB79CE1A2E193E001904CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		52AB79D31A2E193E001904CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		52AB79D41A2E193E001904CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52AB79D31A2E193E001904CA /* JWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWViewController.h; sourceTree = "<group>"; };
+		52AB79D41A2E193E001904CA /* JWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWViewController.m; sourceTree = "<group>"; };
 		52AB79D71A2E193E001904CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52AB79D91A2E193E001904CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52AB79DC1A2E193E001904CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -79,16 +84,19 @@
 		52AB79F61A2E1982001904CA /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79F81A2E1982001904CA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		52AB79FC1A2E1982001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52AB79FD1A2E1982001904CA /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		52AB79FE1A2E1982001904CA /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		52AB79FD1A2E1982001904CA /* JWTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTodayViewController.h; sourceTree = "<group>"; };
+		52AB79FE1A2E1982001904CA /* JWTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWTodayViewController.m; sourceTree = "<group>"; };
 		52AB7A001A2E1982001904CA /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		52AB7A0B1A2E2F01001904CA /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		52AB7A0D1A2E2F61001904CA /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		72465DFF41495C91510F4648 /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
+		52B3BAAB1A30B9B1001E38BB /* UIView+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSAdditions.h"; sourceTree = "<group>"; };
+		52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSAdditions.m"; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
 		E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
-		E42113CFF0EDC02573D71F4A /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
 		F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,10 +153,11 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
+				52B3BAAA1A30B9B1001E38BB /* UIView+RSAdditions */,
 				52AB79D01A2E193E001904CA /* AppDelegate.h */,
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
-				52AB79D31A2E193E001904CA /* ViewController.h */,
-				52AB79D41A2E193E001904CA /* ViewController.m */,
+				52AB79D31A2E193E001904CA /* JWViewController.h */,
+				52AB79D41A2E193E001904CA /* JWViewController.m */,
 				52AB79D61A2E193E001904CA /* Main.storyboard */,
 				52AB79D91A2E193E001904CA /* Images.xcassets */,
 				52AB79DB1A2E193E001904CA /* LaunchScreen.xib */,
@@ -200,10 +209,12 @@
 		52AB79FA1A2E1982001904CA /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				52AB79FD1A2E1982001904CA /* TodayViewController.h */,
-				52AB79FE1A2E1982001904CA /* TodayViewController.m */,
+				52AB79FD1A2E1982001904CA /* JWTodayViewController.h */,
+				52AB79FE1A2E1982001904CA /* JWTodayViewController.m */,
 				52AB7A001A2E1982001904CA /* MainInterface.storyboard */,
 				52AB79FB1A2E1982001904CA /* Supporting Files */,
+				525CB36B1A30C106000CBA2B /* JWBusStopView.h */,
+				525CB36C1A30C106000CBA2B /* JWBusStopView.m */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -212,8 +223,18 @@
 			isa = PBXGroup;
 			children = (
 				52AB79FC1A2E1982001904CA /* Info.plist */,
+				52B3BAA91A309775001E38BB /* Today-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52B3BAAA1A30B9B1001E38BB /* UIView+RSAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				52B3BAAB1A30B9B1001E38BB /* UIView+RSAdditions.h */,
+				52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */,
+			);
+			path = "UIView+RSAdditions";
 			sourceTree = "<group>";
 		};
 		F9F4BBD7B41A279A6BD95859 /* Pods */ = {
@@ -221,8 +242,8 @@
 			children = (
 				F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */,
 				E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */,
-				72465DFF41495C91510F4648 /* Pods-BusRider.debug.xcconfig */,
-				E42113CFF0EDC02573D71F4A /* Pods-BusRider.release.xcconfig */,
+				9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */,
+				C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -234,7 +255,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52AB79EC1A2E193E001904CA /* Build configuration list for PBXNativeTarget "BusRider" */;
 			buildPhases = (
-				839385369C2A99703848124E /* Check Pods Manifest.lock */,
 				52AB79C51A2E193E001904CA /* Sources */,
 				52AB79C61A2E193E001904CA /* Frameworks */,
 				52AB79C71A2E193E001904CA /* Resources */,
@@ -295,6 +315,7 @@
 		52AB79C11A2E193E001904CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JW;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "John Wong";
 				TargetAttributes = {
@@ -389,21 +410,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		839385369C2A99703848124E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		B9AD4A758888148E929EA5C5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,9 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52AB79D51A2E193E001904CA /* ViewController.m in Sources */,
+				52AB79D51A2E193E001904CA /* JWViewController.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				52AB79CF1A2E193E001904CA /* main.m in Sources */,
+				52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +451,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52AB79FF1A2E1982001904CA /* TodayViewController.m in Sources */,
+				525CB36D1A30C106000CBA2B /* JWBusStopView.m in Sources */,
+				52AB79FF1A2E1982001904CA /* JWTodayViewController.m in Sources */,
+				525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +577,7 @@
 		};
 		52AB79ED1A2E193E001904CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72465DFF41495C91510F4648 /* Pods-BusRider.debug.xcconfig */;
+			baseConfigurationReference = 9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BusRider/Info.plist;
@@ -583,7 +592,7 @@
 		};
 		52AB79EE1A2E193E001904CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42113CFF0EDC02573D71F4A /* Pods-BusRider.release.xcconfig */;
+			baseConfigurationReference = C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BusRider/Info.plist;
@@ -634,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -653,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (

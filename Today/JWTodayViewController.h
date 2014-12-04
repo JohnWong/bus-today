@@ -1,5 +1,5 @@
 //
-//  TodayViewController.h
+//  JWTodayViewController.h
 //  Today
 //
 //  Created by John Wong on 12/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TodayViewController : UIViewController
+@interface JWTodayViewController : UIViewController
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 John Wong. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JWViewController.h"
 
-@interface ViewController ()
+@interface JWViewController ()
 
 @end
 
-@implementation ViewController
+@implementation JWViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
