@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWStopInfoItem.h"
 
 @interface JWBusStopView : UIView
 
-- (void)setTitle:(NSString *)title;
+- (void)setItem:(JWStopInfoItem *)item;
 
 @end

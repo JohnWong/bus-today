@@ -9,6 +9,7 @@
 #import "JWTodayViewController.h"
 #import "STHTTPRequest.h"
 #import "JWBusStopView.h"
+#import "JWStopInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
@@ -55,16 +56,43 @@
             NSDictionary *lineInfo = (NSDictionary *)dict[@"jsonr"][@"data"];
             NSLog(@"%@", lineInfo);
             
-            NSArray *map = lineInfo[@"map"];
-            NSInteger itemHeight = 24;
+            NSMutableArray *mapArray = [lineInfo[@"map"] mutableCopy];
+            NSArray *busArray = lineInfo[@"bus"];
+            NSInteger itemHeight = 32;
             NSInteger margin = 12;
-            self.containerView.frame = CGRectMake(0, margin, self.view.width, map.count * itemHeight);
+            self.containerView.frame = CGRectMake(0, margin, self.view.width, (busArray.count + 1) * itemHeight);
             self.preferredContentSize = CGSizeMake(self.view.width, self.containerView.height + margin * 2);
-            for (int i = 0; i < map.count; i++) {
-                NSDictionary *stopInfo = map[i];
-                JWBusStopView *busStopView = [[JWBusStopView alloc] initWithFrame:CGRectMake(0, i * itemHeight, self.view.width, itemHeight - 1)];
-                [busStopView setTitle:stopInfo[@"stopName"]];
-                [self.containerView addSubview:busStopView];
+            
+            for (int i = 0; i < busArray.count; i++) {
+                NSDictionary *busDict = busArray[i];
+                NSInteger order = [busDict[@"order"] integerValue] - 1;
+                NSMutableDictionary *mapDict = [mapArray[order] mutableCopy];
+                mapDict[@"bus"] = busDict;
+                [mapArray replaceObjectAtIndex:i withObject:mapDict];
+            }
+            
+            NSInteger top = 0;
+            NSInteger lastOrder = 0;
+            for (NSDictionary * mapDict in mapArray) {
+                NSDictionary *busDict = mapDict[@"bus"];
+                if (busDict) {
+                    JWStopInfoItem *stopInfoItem = [[JWStopInfoItem alloc] initWithDictionary:mapDict];
+                    if ([stopInfoItem.title isEqualToString: @"文一西路狮山路口"]) {
+                        stopInfoItem.lastOrder = lastOrder;
+                    }
+                    JWBusStopView *busStopView = [[JWBusStopView alloc] initWithFrame:CGRectMake(0, top * itemHeight, self.view.width, itemHeight - 1)];
+                    top ++;
+                    [busStopView setItem:stopInfoItem];
+                    [self.containerView addSubview:busStopView];
+                    lastOrder = [busDict[@"order"] integerValue];
+                } else if ([mapDict[@"stopName"] isEqualToString:@"文一西路狮山路口"]) {
+                    JWStopInfoItem *stopInfoItem = [[JWStopInfoItem alloc] initWithDictionary:mapDict];
+                    stopInfoItem.lastOrder = lastOrder;
+                    JWBusStopView *busStopView = [[JWBusStopView alloc] initWithFrame:CGRectMake(0, top * itemHeight, self.view.width, itemHeight - 1)];
+                    top ++;
+                    [busStopView setItem:stopInfoItem];
+                    [self.containerView addSubview:busStopView];
+                }
             }
         }
     };
