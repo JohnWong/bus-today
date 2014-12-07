@@ -10,4 +10,64 @@
 
 @implementation JWBusInfoItem
 
+- (instancetype)initWithUserStop:(NSString *)userStop busInfo:(NSDictionary *)busInfo {
+    if (self = [super init]) {
+        [self setUserStop:userStop busInfo:busInfo];
+    }
+    return self;
+}
+
+- (void)setUserStop:(NSString *)currentStop busInfo:(NSDictionary *)dict {
+    
+    NSArray *mapArray = dict[@"map"];
+    NSArray *busArray = dict[@"bus"];
+    NSDictionary *lineInfo = dict[@"line"];
+    
+    self.currentStop = currentStop;
+    self.lineNumber = lineInfo[@"lineName"];
+    self.from = lineInfo[@"startStopName"];
+    self.to = lineInfo[@"endStopName"];
+    self.firstTime = lineInfo[@"firstTime"];
+    self.lastTime = lineInfo[@"lastTime"];
+    
+    NSInteger currentOrder = -1;
+    for (NSDictionary *mapInfo in mapArray) {
+        if ([mapInfo[@"stopName"] isEqualToString:currentStop]) {
+            currentOrder = [mapInfo[@"order"] integerValue];
+            break;
+        }
+    }
+    if (currentOrder == -1) {
+        // can not find current stop
+        return;
+    }
+    
+    if (busArray.count == 0) {
+        self.state = JWBusStateNotFound;
+        return;
+    }
+    NSInteger nearestOrder = -1;
+    NSDictionary *busInfo = nil;
+    for (NSDictionary *busDict in busArray) {
+        NSInteger order = [busDict[@"order"] integerValue];
+        if (order > nearestOrder && order <= currentOrder) {
+            nearestOrder = order;
+            busInfo = busDict;
+        }
+    }
+    
+    if (nearestOrder == -1) {
+        self.state = JWBusStateNotStarted;
+        self.pastTime = [dict[@"busBehindTime"] integerValue];
+    } else if (nearestOrder == currentOrder) {
+        self.state = JWBusStateNear;
+        self.distance = (int)floor([busInfo[@"distance"] doubleValue]);
+    } else {
+        self.state = JWBusStateFar;
+        self.remains = currentOrder - nearestOrder;
+    }
+    self.order = currentOrder;
+    self.updateTime = [busInfo[@"lastTime"] integerValue];
+}
+
 @end
