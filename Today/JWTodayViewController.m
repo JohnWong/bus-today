@@ -9,7 +9,9 @@
 #import "JWTodayViewController.h"
 #import "STHTTPRequest.h"
 #import "JWBusStopView.h"
+#import "JWBusCardView.h"
 #import "JWStopInfoItem.h"
+#import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
@@ -52,12 +54,12 @@
         NSError *error = nil;
         id dict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
         if (error == nil && [dict isKindOfClass:[NSDictionary class]]) {
-            [self.containerView removeAllSubviews];
-            NSDictionary *lineInfo = (NSDictionary *)dict[@"jsonr"][@"data"];
-            NSLog(@"%@", lineInfo);
+            NSDictionary *busInfo = (NSDictionary *)dict[@"jsonr"][@"data"];
+            NSLog(@"%@", busInfo);
             
-            NSMutableArray *mapArray = [lineInfo[@"map"] mutableCopy];
-            NSArray *busArray = lineInfo[@"bus"];
+            /*
+            NSMutableArray *mapArray = [busInfo[@"map"] mutableCopy];
+            NSArray *busArray = busInfo[@"bus"];
             NSInteger itemHeight = 32;
             NSInteger margin = 12;
             self.containerView.frame = CGRectMake(0, margin, self.view.width, (busArray.count + 1) * itemHeight);
@@ -68,7 +70,7 @@
                 NSInteger order = [busDict[@"order"] integerValue] - 1;
                 NSMutableDictionary *mapDict = [mapArray[order] mutableCopy];
                 mapDict[@"bus"] = busDict;
-                [mapArray replaceObjectAtIndex:i withObject:mapDict];
+                [mapArray replaceObjectAtIndex:order withObject:mapDict];
             }
             
             NSInteger top = 0;
@@ -94,13 +96,32 @@
                     [self.containerView addSubview:busStopView];
                 }
             }
+             */
+            
+            NSDictionary *lineInfo = busInfo[@"line"];
+            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] init];
+            busInfoItem.currentStop = @"文一西路狮山路口";
+            busInfoItem.lineNumber = lineInfo[@"lineName"];
+            busInfoItem.from = lineInfo[@"startStopName"];
+            busInfoItem.to = lineInfo[@"endStopName"];
+            busInfoItem.firstTime = lineInfo[@"firstTime"];
+            busInfoItem.lastTime = lineInfo[@"lastTime"];
+            
+            JWBusCardView *cardView = [[JWBusCardView alloc] initWithFrame:CGRectMake(47, 0, self.view.width - 47, 75)];
+            [cardView setItem:busInfoItem];
+            [self.containerView addSubview:cardView];
+            
         }
     };
+    request.errorBlock = ^(NSError *error) {
+    
+    };
+
     [request startAsynchronous];
 }
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    return UIEdgeInsetsMake(0, 0, 0, 12);
 }
 
 @end

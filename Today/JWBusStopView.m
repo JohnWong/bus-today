@@ -38,7 +38,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(47, 0, self.width - 47, self.height)];
-        _titleLabel.font = [UIFont systemFontOfSize:22];
+        _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.textColor = [UIColor whiteColor];
     }
     return _titleLabel;
@@ -47,15 +47,15 @@
 #pragma mark callable
 - (void)setItem:(JWStopInfoItem *)item {
     if (item.lastOrder > 0) {
-        self.titleLabel.text = item.lastOrder > 0? [NSString stringWithFormat:@"%@ (还有%ld站)", item.title, item.stopRemains] : item.title;
+        self.titleLabel.text = [NSString stringWithFormat:@"%ld. %@ (还有%ld站)", item.order, item.title, item.stopRemains];
         self.titleLabel.textColor = HEXCOLOR(0xEF0708);
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:22];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
         NSInteger imageSize = 16;
         UIImageView *busView = [[UIImageView alloc] initWithFrame:CGRectMake((self.leftView.width - imageSize) / 2, (self.leftView.height - imageSize) / 2, imageSize, imageSize)];
         busView.image = [UIImage imageNamed:@"JWIconBus"];
         [self.leftView addSubview:busView];
     } else {
-        self.titleLabel.text = item.title;
+        self.titleLabel.text = [NSString stringWithFormat:@"%ld. %@", item.order, item.title];
         NSInteger radius = 8;
         UIView *centerView = [[UIView alloc] initWithFrame:CGRectMake((_leftView.width - radius) / 2, (_leftView.height - radius) / 2, radius, radius)];
         centerView.layer.cornerRadius = radius / 2.0;
