@@ -45,8 +45,8 @@
 }
 
 - (void)requestLineInfo {
-    NSString *lineId = @"0571-0428-0";//@"0571-044-0";
-    NSString *userStop = @"浙江理工大学科艺学院";
+    NSString *lineId = @"0571-0428-1";//@"0571-044-0";
+    NSString *userStop = @"文一西路狮山路口";
     
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:JWBusLineURL(lineId)];
     request.completionBlock = ^(NSDictionary *headers, NSString *body) {

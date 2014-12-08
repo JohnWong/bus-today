@@ -44,6 +44,11 @@
     
     if (busArray.count == 0) {
         self.state = JWBusStateNotFound;
+        if ([dict[@"nobustip"] containsString:@"已过运营时间"]) {
+            self.noBusTip = @"已过运营时间";
+        } else {
+            self.noBusTip = @"暂无数据";
+        }
         return;
     }
     NSInteger nearestOrder = -1;

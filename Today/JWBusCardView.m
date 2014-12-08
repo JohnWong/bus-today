@@ -44,22 +44,23 @@
             self.updateLabel.text = [NSString stringWithFormat:@"上一辆车发出%ld分钟", item.pastTime];
             return;
         case JWBusStateNotFound:
-            self.mainLabel.text = @"暂无数据";
+            self.mainLabel.text = item.noBusTip;
             self.mainLabel.font = [UIFont systemFontOfSize:32];
             self.subLabel.text = @"";
             return;
         case JWBusStateNear:
-            self.mainLabel.text = [NSString stringWithFormat:@"%ld", item.distance];
-            self.subLabel.text = @"米";
-            break;
-        case JWBusStateFar:
-            if (item.remains < 1000) {
-                self.mainLabel.text = [NSString stringWithFormat:@"%ld", item.remains];
-                self.subLabel.text = @"站";
+            if (item.distance < 1000) {
+                self.mainLabel.text = [NSString stringWithFormat:@"%ld", item.distance];
+                self.subLabel.text = @"米";
             } else {
-                self.mainLabel.text = [NSString stringWithFormat:@"%.1f", item.remains / 1000.0];
+                self.mainLabel.text = [NSString stringWithFormat:@"%.1f", item.distance / 1000.0];
                 self.subLabel.text = @"千米";
             }
+            break;
+        case JWBusStateFar:
+            self.mainLabel.text = [NSString stringWithFormat:@"%ld", item.remains];
+            self.subLabel.text = @"站";
+            
             break;
     }
     
