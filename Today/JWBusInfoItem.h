@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
 @property (nonatomic, assign) NSInteger remains; // 最近一辆车还有几站，JWBusStateFar时有效
 @property (nonatomic, strong) NSString *firstTime; // 首班时间
 @property (nonatomic, strong) NSString *lastTime; // 末班时间
-@property (nonatomic, assign) NSInteger updateTime; // 信息上次更新时间
+@property (nonatomic, assign) NSInteger updateTime; // 信息上次报告时间
 @property (nonatomic, assign) NSInteger distance; // 车辆距离，JWBusStateNear时有效
 @property (nonatomic, assign) NSInteger pastTime; // 上一辆车发出的分钟数
 

@@ -63,11 +63,10 @@
             break;
     }
     
-    
     if (item.updateTime < 60) {
-        self.updateLabel.text = [NSString stringWithFormat:@"%ld秒前更新", item.updateTime];
+        self.updateLabel.text = [NSString stringWithFormat:@"%ld秒前报告位置", item.updateTime];
     } else {
-        self.updateLabel.text = [NSString stringWithFormat:@"%ld分前更新", item.updateTime / 60];
+        self.updateLabel.text = [NSString stringWithFormat:@"%ld分前报告位置", item.updateTime / 60];
     }
 }
 

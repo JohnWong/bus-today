@@ -21,15 +21,17 @@
 
 @implementation JWTodayViewController
 
+#pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self requestLineInfo];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark NCWidgetProviding
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
+    return UIEdgeInsetsMake(0, 0, 0, 12);
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
@@ -44,7 +46,7 @@
 
 - (void)requestLineInfo {
     NSString *lineId = @"0571-0428-0";//@"0571-044-0";
-    NSString *userStop = @"文一西路狮山路口";
+    NSString *userStop = @"浙江理工大学科艺学院";
     
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:JWBusLineURL(lineId)];
     request.completionBlock = ^(NSDictionary *headers, NSString *body) {
@@ -66,8 +68,10 @@
     [request startAsynchronous];
 }
 
-- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
-    return UIEdgeInsetsMake(0, 0, 0, 12);
+
+#pragma mark action
+- (IBAction)refreshData:(id)sender {
+    [self requestLineInfo];
 }
 
 @end
