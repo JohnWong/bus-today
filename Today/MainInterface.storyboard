@@ -158,16 +158,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY">
-                                        <rect key="frame" x="276" y="9" width="44" height="26"/>
-                                        <color key="backgroundColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY">
+                                        <rect key="frame" x="276" y="9" width="32" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="3u6-He-dsx"/>
-                                            <constraint firstAttribute="width" constant="44" id="A4H-N6-Nir"/>
+                                            <constraint firstAttribute="width" constant="32" id="Gp0-Hs-LD5"/>
+                                            <constraint firstAttribute="height" constant="26" id="bqk-sE-EeN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="刷新">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="JWIconRefresh.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -197,23 +195,24 @@
                                     <constraint firstItem="FmD-RV-Yhv" firstAttribute="top" secondItem="7jK-an-sTp" secondAttribute="bottom" constant="6" id="LIw-Ye-rIP"/>
                                     <constraint firstItem="KhJ-yb-lVz" firstAttribute="top" secondItem="FmD-RV-Yhv" secondAttribute="top" constant="2" id="O74-cZ-WTx"/>
                                     <constraint firstItem="7jK-an-sTp" firstAttribute="top" secondItem="t4v-YC-jXK" secondAttribute="top" constant="10" id="RPB-W8-Rlc"/>
+                                    <constraint firstItem="7jK-an-sTp" firstAttribute="centerY" secondItem="dve-YY-rUY" secondAttribute="centerY" id="SEZ-I5-r9a"/>
                                     <constraint firstItem="6bY-wW-2FO" firstAttribute="top" secondItem="QSF-hd-4OR" secondAttribute="bottom" id="Sdl-Gb-Z7a"/>
-                                    <constraint firstItem="dve-YY-rUY" firstAttribute="centerY" secondItem="7jK-an-sTp" secondAttribute="centerY" id="TRs-7P-Hu1"/>
                                     <constraint firstItem="FmD-RV-Yhv" firstAttribute="leading" secondItem="7jK-an-sTp" secondAttribute="leading" id="TVd-DV-VRf"/>
                                     <constraint firstItem="KhJ-yb-lVz" firstAttribute="trailing" secondItem="QEg-GV-dkp" secondAttribute="trailing" id="ZHY-7L-yeJ"/>
                                     <constraint firstItem="S1o-Ct-SYP" firstAttribute="top" secondItem="6bY-wW-2FO" secondAttribute="top" constant="2" id="bCn-4h-nHL"/>
                                     <constraint firstItem="QnF-SQ-Ife" firstAttribute="top" secondItem="amW-fp-71b" secondAttribute="top" constant="-2" id="bd6-HB-AOs"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="top" secondItem="FmD-RV-Yhv" secondAttribute="bottom" id="beP-Cw-Agb"/>
+                                    <constraint firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" constant="12" id="cJu-oP-bQJ"/>
                                     <constraint firstAttribute="height" constant="157" id="dIv-AD-qMK"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="leading" secondItem="7jK-an-sTp" secondAttribute="leading" id="geU-25-RKM"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="trailing" secondItem="V3S-3d-GTm" secondAttribute="leading" id="gk6-TF-CaU"/>
-                                    <constraint firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" id="lDg-QQ-wTU"/>
                                     <constraint firstItem="7jK-an-sTp" firstAttribute="leading" secondItem="t4v-YC-jXK" secondAttribute="leading" constant="47" id="mYU-Y3-hDX"/>
                                     <constraint firstAttribute="trailing" secondItem="KhJ-yb-lVz" secondAttribute="trailing" id="mvL-zA-uWl"/>
                                     <constraint firstItem="S1o-Ct-SYP" firstAttribute="trailing" secondItem="KhJ-yb-lVz" secondAttribute="trailing" id="nHe-M6-k70"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="bottom" secondItem="Ab5-hZ-Zkw" secondAttribute="top" id="nrd-dO-cvl"/>
                                     <constraint firstItem="7jK-an-sTp" firstAttribute="leading" secondItem="Ab5-hZ-Zkw" secondAttribute="leading" id="qfX-NI-wuU"/>
                                     <constraint firstItem="pct-G3-pE8" firstAttribute="top" secondItem="QEg-GV-dkp" secondAttribute="top" constant="-2" id="w6K-cb-vcP"/>
+                                    <constraint firstItem="QSF-hd-4OR" firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" constant="-6" id="ylM-p5-raz"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="firstTimeLabel" destination="QnF-SQ-Ife" id="X9H-ya-bP5"/>
@@ -250,6 +249,9 @@
             <point key="canvasLocation" x="516" y="282.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="JWIconRefresh.png" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

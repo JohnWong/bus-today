@@ -19,7 +19,7 @@
 #define kJWMajorColor [UIColor whiteColor]
 #define kJWMinorColor HEXCOLOR(0xA3A6AE)
 
-//#define FAKE
+#define FAKE
 #ifdef FAKE
 #define kJWHost @"localhost:7000"
 #else

@@ -9,7 +9,6 @@
 #import "JWTodayViewController.h"
 #import "STHTTPRequest.h"
 #import "JWBusCardView.h"
-#import "JWStopInfoItem.h"
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
 
@@ -25,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self requestLineInfo];
+    [self requestLineInfo:nil];
 }
 
 
@@ -35,16 +34,10 @@
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
-    // Perform any setup necessary in order to update the view.
-    
-    // If an error is encountered, use NCUpdateResultFailed
-    // If there's no update required, use NCUpdateResultNoData
-    // If there's an update, use NCUpdateResultNewData
-
-    completionHandler(NCUpdateResultNewData);
+    [self requestLineInfo:completionHandler];
 }
 
-- (void)requestLineInfo {
+- (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
     NSString *lineId = @"0571-0428-1";//@"0571-044-0";
     NSString *userStop = @"文一西路狮山路口";
     
@@ -59,6 +52,13 @@
             
             JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStop busInfo:busInfo];
             [self.busCardView setItem:busInfoItem];
+            if (completionHandler) {
+                completionHandler(NCUpdateResultNewData);
+            }
+        } else {
+            if (completionHandler) {
+                completionHandler(NCUpdateResultFailed);
+            }
         }
     };
     request.errorBlock = ^(NSError *error) {
@@ -71,7 +71,7 @@
 
 #pragma mark action
 - (IBAction)refreshData:(id)sender {
-    [self requestLineInfo];
+    [self requestLineInfo:nil];
 }
 
 @end
