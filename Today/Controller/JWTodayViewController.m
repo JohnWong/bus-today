@@ -38,6 +38,8 @@
 }
 
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
+    [self.busCardView setItem:nil];
+    
     NSString *lineId = @"0571-0428-1";//@"0571-044-0";
     NSString *userStop = @"文一西路狮山路口";
     
