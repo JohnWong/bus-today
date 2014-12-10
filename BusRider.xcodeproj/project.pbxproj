@@ -13,6 +13,7 @@
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
 		5204538C1A37340A002A8541 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453871A37340A002A8541 /* JWCharIconView.m */; };
 		5204538F1A376C7D002A8541 /* JWLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5204538E1A376C7D002A8541 /* JWLineTableViewController.m */; };
+		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
 		525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
 		52AB79CF1A2E193E001904CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79CE1A2E193E001904CA /* main.m */; };
@@ -81,6 +82,8 @@
 		5204538D1A376C7D002A8541 /* JWLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineTableViewController.h; sourceTree = "<group>"; };
 		5204538E1A376C7D002A8541 /* JWLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineTableViewController.m; sourceTree = "<group>"; };
 		520453901A376D51002A8541 /* JWBusRider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWBusRider-Prefix.pch"; sourceTree = "<group>"; };
+		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
+		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79CD1A2E193E001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				520453851A37340A002A8541 /* JWBusCardView.m */,
 				520453861A37340A002A8541 /* JWCharIconView.h */,
 				520453871A37340A002A8541 /* JWCharIconView.m */,
+				52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */,
+				52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 					};
 					52AB79F51A2E1982001904CA = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = RMP5PV6R6N;
 					};
 				};
 			};
@@ -511,6 +517,7 @@
 				5204538C1A37340A002A8541 /* JWCharIconView.m in Sources */,
 				5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */,
 				520453881A37340A002A8541 /* JWTodayViewController.m in Sources */,
+				52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +598,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "64bdc028-2288-46dd-8dc6-ecc7aa6aca1a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -626,6 +634,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "64bdc028-2288-46dd-8dc6-ecc7aa6aca1a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -704,6 +713,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -724,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

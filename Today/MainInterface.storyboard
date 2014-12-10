@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -158,7 +158,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY" customClass="JWButtonWithAnimation">
                                         <rect key="frame" x="276" y="9" width="32" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="Gp0-Hs-LD5"/>
@@ -219,6 +219,7 @@
                                     <outlet property="fromLabel" destination="QSF-hd-4OR" id="PwB-Ln-dT7"/>
                                     <outlet property="lastTimeLabel" destination="pct-G3-pE8" id="3to-gG-6fa"/>
                                     <outlet property="mainLabel" destination="AeH-Sr-dUA" id="Lzn-xK-OZV"/>
+                                    <outlet property="refreshButton" destination="dve-YY-rUY" id="ql0-cQ-Rsx"/>
                                     <outlet property="stationLabel" destination="FmD-RV-Yhv" id="pL9-ge-qCf"/>
                                     <outlet property="subLabel" destination="V3S-3d-GTm" id="Ita-6Q-zUQ"/>
                                     <outlet property="titleLabel" destination="7jK-an-sTp" id="yUP-SW-Ne8"/>
