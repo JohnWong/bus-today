@@ -13,6 +13,9 @@
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
 		5204538C1A37340A002A8541 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453871A37340A002A8541 /* JWCharIconView.m */; };
 		5204538F1A376C7D002A8541 /* JWLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5204538E1A376C7D002A8541 /* JWLineTableViewController.m */; };
+		520C5D721A391D7900ADAC8D /* JWBorderExtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C5D6F1A391D7900ADAC8D /* JWBorderExtView.m */; };
+		520C5D731A391D7900ADAC8D /* JWStopInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C5D711A391D7900ADAC8D /* JWStopInfoTableViewCell.m */; };
+		520C5D751A391DA800ADAC8D /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453871A37340A002A8541 /* JWCharIconView.m */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
 		525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
@@ -82,6 +85,11 @@
 		5204538D1A376C7D002A8541 /* JWLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineTableViewController.h; sourceTree = "<group>"; };
 		5204538E1A376C7D002A8541 /* JWLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineTableViewController.m; sourceTree = "<group>"; };
 		520453901A376D51002A8541 /* JWBusRider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWBusRider-Prefix.pch"; sourceTree = "<group>"; };
+		520C5D6E1A391D7900ADAC8D /* JWBorderExtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBorderExtView.h; sourceTree = "<group>"; };
+		520C5D6F1A391D7900ADAC8D /* JWBorderExtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBorderExtView.m; sourceTree = "<group>"; };
+		520C5D701A391D7900ADAC8D /* JWStopInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopInfoTableViewCell.h; sourceTree = "<group>"; };
+		520C5D711A391D7900ADAC8D /* JWStopInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopInfoTableViewCell.m; sourceTree = "<group>"; };
+		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
 		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
@@ -207,6 +215,11 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
+				520C5D741A391D9100ADAC8D /* JWColorDefine.h */,
+				520C5D6E1A391D7900ADAC8D /* JWBorderExtView.h */,
+				520C5D6F1A391D7900ADAC8D /* JWBorderExtView.m */,
+				520C5D701A391D7900ADAC8D /* JWStopInfoTableViewCell.h */,
+				520C5D711A391D7900ADAC8D /* JWStopInfoTableViewCell.m */,
 				52B3BAAA1A30B9B1001E38BB /* UIView+RSAdditions */,
 				52AB79D01A2E193E001904CA /* AppDelegate.h */,
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
@@ -493,9 +506,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AB79D51A2E193E001904CA /* JWViewController.m in Sources */,
+				520C5D721A391D7900ADAC8D /* JWBorderExtView.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				5204538F1A376C7D002A8541 /* JWLineTableViewController.m in Sources */,
 				52AB79CF1A2E193E001904CA /* main.m in Sources */,
+				520C5D731A391D7900ADAC8D /* JWStopInfoTableViewCell.m in Sources */,
+				520C5D751A391DA800ADAC8D /* JWCharIconView.m in Sources */,
 				52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

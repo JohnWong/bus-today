@@ -11,5 +11,6 @@
 @interface JWCharIconView : UIView
 
 @property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) UIColor *color;
 
 @end

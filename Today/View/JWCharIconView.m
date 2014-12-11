@@ -45,4 +45,9 @@
     self.centerLabel.text = text;
 }
 
+- (void)setColor:(UIColor *)color {
+    self.layer.borderColor = color.CGColor;
+    self.centerLabel.textColor = color;
+}
+
 @end
