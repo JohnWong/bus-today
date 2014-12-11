@@ -23,6 +23,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Bus Line View Controller-->
+        <scene sceneID="TAp-mh-pIo">
+            <objects>
+                <viewController id="TYM-DL-tKA" customClass="JWBusLineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d12-Je-PYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="ntS-LB-eE5"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="HBW-jN-7oq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-jS-U28">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1D-ar-lYK" customClass="JWOnePixelView">
+                                        <rect key="frame" x="0.0" y="71" width="320" height="1"/>
+                                        <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="FAC-oa-1hh"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="311路(新西湖小镇-蒋村公交中心站)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIx-N9-eRf">
+                                        <rect key="frame" x="16" y="13" width="288" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="3N1-yK-kJ3"/>
+                                            <constraint firstAttribute="height" constant="19" id="hZL-Fr-sJd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXU-ir-4YM" customClass="JWCharIconView">
+                                        <rect key="frame" x="16" y="42" width="13" height="13"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="13" id="aAL-VF-t5l"/>
+                                            <constraint firstAttribute="height" constant="13" id="ysW-pX-zPU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="首"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXQ-eZ-cX7">
+                                        <rect key="frame" x="33" y="40" width="36.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4B-0G-hhd" customClass="JWCharIconView">
+                                        <rect key="frame" x="77" y="42" width="13" height="13"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="9nw-2l-0OB"/>
+                                            <constraint firstAttribute="width" constant="13" id="rmI-CS-8Q6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="末"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.92156862750000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akn-Bq-c0Q">
+                                        <rect key="frame" x="94" y="40" width="36.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="m1D-ar-lYK" secondAttribute="bottom" id="Aoa-mm-Ze8"/>
+                                    <constraint firstAttribute="height" constant="72" id="BPd-0m-njk"/>
+                                    <constraint firstItem="EIx-N9-eRf" firstAttribute="leading" secondItem="CH8-jS-U28" secondAttribute="leading" constant="16" id="DGJ-hZ-SLF"/>
+                                    <constraint firstItem="akn-Bq-c0Q" firstAttribute="centerY" secondItem="P4B-0G-hhd" secondAttribute="centerY" id="Ek4-4c-2yu"/>
+                                    <constraint firstItem="eXU-ir-4YM" firstAttribute="leading" secondItem="EIx-N9-eRf" secondAttribute="leading" id="GxF-25-TwM"/>
+                                    <constraint firstItem="eXU-ir-4YM" firstAttribute="centerY" secondItem="P4B-0G-hhd" secondAttribute="centerY" id="JVw-Zt-3pU"/>
+                                    <constraint firstItem="m1D-ar-lYK" firstAttribute="leading" secondItem="CH8-jS-U28" secondAttribute="leading" id="OxP-6w-At6"/>
+                                    <constraint firstItem="XXQ-eZ-cX7" firstAttribute="leading" secondItem="eXU-ir-4YM" secondAttribute="trailing" constant="4" id="SWF-kZ-Hg5"/>
+                                    <constraint firstItem="akn-Bq-c0Q" firstAttribute="leading" secondItem="P4B-0G-hhd" secondAttribute="trailing" constant="4" id="Uty-jv-UMD"/>
+                                    <constraint firstItem="XXQ-eZ-cX7" firstAttribute="centerY" secondItem="eXU-ir-4YM" secondAttribute="centerY" id="Ytg-Nj-V3D"/>
+                                    <constraint firstAttribute="trailing" secondItem="m1D-ar-lYK" secondAttribute="trailing" id="gBX-PA-1W6"/>
+                                    <constraint firstItem="eXU-ir-4YM" firstAttribute="top" secondItem="EIx-N9-eRf" secondAttribute="bottom" constant="10" id="i0C-Gq-oWh"/>
+                                    <constraint firstItem="P4B-0G-hhd" firstAttribute="leading" secondItem="XXQ-eZ-cX7" secondAttribute="trailing" constant="8" id="pM6-Yc-tA1"/>
+                                    <constraint firstItem="EIx-N9-eRf" firstAttribute="top" secondItem="CH8-jS-U28" secondAttribute="top" constant="13" id="sF8-cb-o5T"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="810-Dz-zgJ">
+                                <rect key="frame" x="8" y="80" width="304" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyS-hu-alJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="49"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="蒋村公交中心站">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="6B0-gB-N1o"/>
+                                    <constraint firstAttribute="trailing" secondItem="jyS-hu-alJ" secondAttribute="trailing" id="Ken-1H-LFn"/>
+                                    <constraint firstItem="jyS-hu-alJ" firstAttribute="leading" secondItem="810-Dz-zgJ" secondAttribute="leading" id="c6u-jd-j5C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="810-Dz-zgJ" firstAttribute="leading" secondItem="HBW-jN-7oq" secondAttribute="leading" constant="8" id="3MF-W9-mTT"/>
+                            <constraint firstItem="CH8-jS-U28" firstAttribute="top" secondItem="HBW-jN-7oq" secondAttribute="top" id="92j-oS-pU6"/>
+                            <constraint firstAttribute="centerX" secondItem="CH8-jS-U28" secondAttribute="centerX" id="KJx-9c-AQn"/>
+                            <constraint firstAttribute="trailing" secondItem="810-Dz-zgJ" secondAttribute="trailing" constant="8" id="Kxc-t5-SCg"/>
+                            <constraint firstItem="CH8-jS-U28" firstAttribute="leading" secondItem="HBW-jN-7oq" secondAttribute="leading" id="Mkz-yo-Y0S"/>
+                            <constraint firstItem="810-Dz-zgJ" firstAttribute="top" secondItem="CH8-jS-U28" secondAttribute="bottom" constant="8" id="e1J-6n-PFl"/>
+                            <constraint firstAttribute="trailing" secondItem="CH8-jS-U28" secondAttribute="trailing" id="uCS-Gz-dS0"/>
+                        </constraints>
+                    </scrollView>
+                    <navigationItem key="navigationItem" id="vjt-mN-QuG"/>
+                    <connections>
+                        <outlet property="busStopButton" destination="jyS-hu-alJ" id="3La-CO-of5"/>
+                        <outlet property="contentView" destination="810-Dz-zgJ" id="qql-IV-pMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-zI-V4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="900"/>
+        </scene>
         <!--311路-->
         <scene sceneID="V4q-mu-hRc">
             <objects>
@@ -157,12 +289,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Svp-kY-cck" kind="relationship" relationship="rootViewController" id="FB8-gT-Irx"/>
+                        <segue destination="TYM-DL-tKA" kind="relationship" relationship="rootViewController" id="eDd-0S-ffG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVl-54-HL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="818"/>
+            <point key="canvasLocation" x="-498" y="857"/>
         </scene>
     </scenes>
 </document>

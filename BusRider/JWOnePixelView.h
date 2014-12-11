@@ -1,5 +1,5 @@
 //
-//  JWBorderExtView.h
+//  JWOnePixelView.h
 //  BusRider
 //
 //  Created by John Wong on 12/11/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JWBorderExtView : UIView
-
-- (void)setCorner:(UIRectCorner)corners radius:(CGFloat)radius;
+@interface JWOnePixelView : UIView
 
 @end
