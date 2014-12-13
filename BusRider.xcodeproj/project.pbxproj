@@ -29,6 +29,8 @@
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
+		52EB7BF91A3C15E900057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7BF81A3C15E900057723 /* JWStopNameButton.m */; };
+		52EB7BFD1A3C165700057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7BFC1A3C165700057723 /* JWStopNameButton.xib */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,9 @@
 		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
 		52B3BAAB1A30B9B1001E38BB /* UIView+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSAdditions.h"; sourceTree = "<group>"; };
 		52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSAdditions.m"; sourceTree = "<group>"; };
+		52EB7BF71A3C15E900057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
+		52EB7BF81A3C15E900057723 /* JWStopNameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopNameButton.m; sourceTree = "<group>"; };
+		52EB7BFC1A3C165700057723 /* JWStopNameButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWStopNameButton.xib; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +232,9 @@
 				52A909BA1A39EF23007B8BE0 /* JWOnePixelView.m */,
 				52A909BC1A39FA9C007B8BE0 /* JWBusLineViewController.h */,
 				52A909BD1A39FA9C007B8BE0 /* JWBusLineViewController.m */,
+				52EB7BF71A3C15E900057723 /* JWStopNameButton.h */,
+				52EB7BF81A3C15E900057723 /* JWStopNameButton.m */,
+				52EB7BFC1A3C165700057723 /* JWStopNameButton.xib */,
 			);
 			path = BusRider;
 			sourceTree = "<group>";
@@ -424,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AB79D81A2E193E001904CA /* Main.storyboard in Resources */,
+				52EB7BFD1A3C165700057723 /* JWStopNameButton.xib in Resources */,
 				52AB79DD1A2E193E001904CA /* LaunchScreen.xib in Resources */,
 				52AB79DA1A2E193E001904CA /* Images.xcassets in Resources */,
 			);
@@ -501,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A909BE1A39FA9C007B8BE0 /* JWBusLineViewController.m in Sources */,
+				52EB7BF91A3C15E900057723 /* JWStopNameButton.m in Sources */,
 				52AB79D51A2E193E001904CA /* JWViewController.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				52A909BB1A39EF23007B8BE0 /* JWOnePixelView.m in Sources */,

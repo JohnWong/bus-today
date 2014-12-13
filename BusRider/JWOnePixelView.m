@@ -12,7 +12,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        self.height = 1 / [UIScreen mainScreen].scale;
+        ((NSLayoutConstraint *)self.constraints[0]).constant = 1 / [UIScreen mainScreen].scale;
     }
     return self;
 }

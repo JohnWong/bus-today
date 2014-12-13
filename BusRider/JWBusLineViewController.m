@@ -7,10 +7,12 @@
 //
 
 #import "JWBusLineViewController.h"
+#import "JWStopNameButton.h"
+
+#define kJWButtonHeight 49
 
 @interface JWBusLineViewController()
 
-@property (weak, nonatomic) IBOutlet UIButton *busStopButton;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (nonatomic, strong) UIScrollView *view;
 
@@ -21,14 +23,53 @@
 #pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    for (int i = 0; i < 5; i ++) {
-        UIButton *button = [NSKeyedUnarchiver unarchiveObjectWithData:
-                            [NSKeyedArchiver archivedDataWithRootObject:self.busStopButton]];
-        button.frame = CGRectMake(0, i * self.busStopButton.height, self.view.width, self.busStopButton.height);
-        button.hidden = NO;
+    [self setViews];
+}
+
+- (void)setViews {
+    NSInteger count = 5;
+    self.contentView.height = count * kJWButtonHeight;
+    ((NSLayoutConstraint *)self.contentView.constraints[0]).constant = count * kJWButtonHeight;
+    
+    for (int i = 0; i < count; i ++) {
+        UIView *button = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];
         [self.contentView addSubview:button];
+        [self.contentView addConstraints:@[
+                                           [NSLayoutConstraint
+                                            constraintWithItem:button
+                                            attribute:NSLayoutAttributeLeading
+                                            relatedBy:NSLayoutRelationEqual
+                                            toItem:self.contentView
+                                            attribute:NSLayoutAttributeLeading
+                                            multiplier:1.0
+                                            constant:0],
+                                           [NSLayoutConstraint
+                                            constraintWithItem:button
+                                            attribute:NSLayoutAttributeTrailing
+                                            relatedBy:NSLayoutRelationEqual
+                                            toItem:self.contentView
+                                            attribute:NSLayoutAttributeTrailing
+                                            multiplier:1.0
+                                            constant:0],
+                                           [NSLayoutConstraint
+                                            constraintWithItem:button
+                                            attribute:NSLayoutAttributeTop
+                                            relatedBy:NSLayoutRelationEqual
+                                            toItem:self.contentView
+                                            attribute:NSLayoutAttributeTop
+                                            multiplier:1.0
+                                            constant:button.top],
+                                           [NSLayoutConstraint
+                                            constraintWithItem:button
+                                            attribute:NSLayoutAttributeHeight
+                                            relatedBy:NSLayoutRelationEqual
+                                            toItem:nil
+                                            attribute:NSLayoutAttributeNotAnAttribute
+                                            multiplier:1.0
+                                            constant:button.height]
+                                           ]
+         ];
     }
-    self.view.contentSize = CGSizeMake(self.view.width, self.busStopButton.height * 5);
 }
 
 @end
