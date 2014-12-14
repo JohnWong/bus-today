@@ -32,11 +32,12 @@
     ((NSLayoutConstraint *)self.contentView.constraints[0]).constant = count * kJWButtonHeight;
     
     for (int i = 0; i < count; i ++) {
-        UIView *button = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];
-        [self.contentView addSubview:button];
+        JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
+        [stopButton setIndex:i + 1 title:@"蒋村公交中心站" isLast:i == count - 1];
+        [self.contentView addSubview:stopButton];
         [self.contentView addConstraints:@[
                                            [NSLayoutConstraint
-                                            constraintWithItem:button
+                                            constraintWithItem:stopButton
                                             attribute:NSLayoutAttributeLeading
                                             relatedBy:NSLayoutRelationEqual
                                             toItem:self.contentView
@@ -44,7 +45,7 @@
                                             multiplier:1.0
                                             constant:0],
                                            [NSLayoutConstraint
-                                            constraintWithItem:button
+                                            constraintWithItem:stopButton
                                             attribute:NSLayoutAttributeTrailing
                                             relatedBy:NSLayoutRelationEqual
                                             toItem:self.contentView
@@ -52,21 +53,21 @@
                                             multiplier:1.0
                                             constant:0],
                                            [NSLayoutConstraint
-                                            constraintWithItem:button
+                                            constraintWithItem:stopButton
                                             attribute:NSLayoutAttributeTop
                                             relatedBy:NSLayoutRelationEqual
                                             toItem:self.contentView
                                             attribute:NSLayoutAttributeTop
                                             multiplier:1.0
-                                            constant:button.top],
+                                            constant:stopButton.top],
                                            [NSLayoutConstraint
-                                            constraintWithItem:button
+                                            constraintWithItem:stopButton
                                             attribute:NSLayoutAttributeHeight
                                             relatedBy:NSLayoutRelationEqual
                                             toItem:nil
                                             attribute:NSLayoutAttributeNotAnAttribute
                                             multiplier:1.0
-                                            constant:button.height]
+                                            constant:stopButton.height]
                                            ]
          ];
     }

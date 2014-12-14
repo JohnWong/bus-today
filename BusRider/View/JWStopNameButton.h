@@ -10,4 +10,6 @@
 
 @interface JWStopNameButton : UIView
 
+- (void)setIndex:(NSInteger)index title:(NSString *)title isLast:(BOOL)isLast;
+
 @end
