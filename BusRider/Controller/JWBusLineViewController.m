@@ -23,6 +23,8 @@
 #pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"311路";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reverseDirection)];
     [self setViews];
 }
 
@@ -71,6 +73,11 @@
                                            ]
          ];
     }
+}
+
+#pragma mark action
+- (void)reverseDirection {
+    
 }
 
 @end
