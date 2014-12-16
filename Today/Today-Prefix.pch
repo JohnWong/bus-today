@@ -11,14 +11,6 @@
 
 #import "UIView+RSAdditions.h"
 #import "JWColorDefine.h"
-
-//#define FAKE
-#ifdef FAKE
-#define kJWHost @"localhost:7000"
-#else
-#define kJWHost @"api.chelaile.net.cn:7000"
-#endif
-
-#define JWBusLineURL(lineId) [NSString stringWithFormat:@"http://%@/bus/line!map2.action?lineId=%@&s=IOS&v=2.9&cityId=004&sign=", kJWHost, lineId]
+#import "JWCommonDefine.h"
 
 #endif

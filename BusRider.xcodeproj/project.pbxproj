@@ -11,17 +11,15 @@
 		520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453801A37340A002A8541 /* JWBusInfoItem.m */; };
 		5204538A1A37340A002A8541 /* JWIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWIconRefresh@2x.png */; };
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
-		5204538C1A37340A002A8541 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453871A37340A002A8541 /* JWCharIconView.m */; };
-		520C5D751A391DA800ADAC8D /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453871A37340A002A8541 /* JWCharIconView.m */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
+		523853441A408A7A004FB163 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
+		523853471A408CC7004FB163 /* JWBusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 523853461A408CC7004FB163 /* JWBusRequest.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
-		525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
 		52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D11A2E193E001904CA /* AppDelegate.m */; };
 		52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79E81A2E193E001904CA /* BusRiderTests.m */; };
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -32,6 +30,11 @@
 		52EB7C131A3DF73900057723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C0F1A3DF73900057723 /* Main.storyboard */; };
 		52EB7C151A3DF75C00057723 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C141A3DF75C00057723 /* Images.xcassets */; };
 		52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C171A3F248800057723 /* JWMainViewController.m */; };
+		52EB7C211A4077C200057723 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C201A4077C200057723 /* UIView+RSAdditions.m */; };
+		52EB7C221A4077CA00057723 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C201A4077C200057723 /* UIView+RSAdditions.m */; };
+		52EB7C251A4077FB00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
+		52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
+		52EB7C2A1A40784B00057723 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -82,12 +85,12 @@
 		520453821A37340A002A8541 /* JWIconRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconRefresh@2x.png"; sourceTree = "<group>"; };
 		520453841A37340A002A8541 /* JWBusCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusCardView.h; sourceTree = "<group>"; };
 		520453851A37340A002A8541 /* JWBusCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusCardView.m; sourceTree = "<group>"; };
-		520453861A37340A002A8541 /* JWCharIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCharIconView.h; sourceTree = "<group>"; };
-		520453871A37340A002A8541 /* JWCharIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCharIconView.m; sourceTree = "<group>"; };
 		520453901A376D51002A8541 /* JWBusRider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWBusRider-Prefix.pch"; sourceTree = "<group>"; };
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
 		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
+		523853451A408CC7004FB163 /* JWBusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusRequest.h; sourceTree = "<group>"; };
+		523853461A408CC7004FB163 /* JWBusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusRequest.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,8 +105,6 @@
 		52AB7A0B1A2E2F01001904CA /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		52AB7A0D1A2E2F61001904CA /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
-		52B3BAAB1A30B9B1001E38BB /* UIView+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSAdditions.h"; sourceTree = "<group>"; };
-		52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSAdditions.m"; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -118,6 +119,13 @@
 		52EB7C141A3DF75C00057723 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52EB7C161A3F248800057723 /* JWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainViewController.h; sourceTree = "<group>"; };
 		52EB7C171A3F248800057723 /* JWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainViewController.m; sourceTree = "<group>"; };
+		52EB7C1F1A4077C200057723 /* UIView+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSAdditions.h"; sourceTree = "<group>"; };
+		52EB7C201A4077C200057723 /* UIView+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSAdditions.m"; sourceTree = "<group>"; };
+		52EB7C231A4077FB00057723 /* JWCharIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCharIconView.h; sourceTree = "<group>"; };
+		52EB7C241A4077FB00057723 /* JWCharIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCharIconView.m; sourceTree = "<group>"; };
+		52EB7C281A40784B00057723 /* JWRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRequest.h; sourceTree = "<group>"; };
+		52EB7C291A40784B00057723 /* JWRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRequest.m; sourceTree = "<group>"; };
+		52EB7C2B1A40872900057723 /* JWCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWCommonDefine.h; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,8 +193,6 @@
 			children = (
 				520453841A37340A002A8541 /* JWBusCardView.h */,
 				520453851A37340A002A8541 /* JWBusCardView.m */,
-				520453861A37340A002A8541 /* JWCharIconView.h */,
-				520453871A37340A002A8541 /* JWCharIconView.m */,
 				52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */,
 				52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */,
 			);
@@ -196,6 +202,7 @@
 		52AB79C01A2E193E001904CA = {
 			isa = PBXGroup;
 			children = (
+				52EB7C1D1A4077C200057723 /* Common */,
 				52AB79CB1A2E193E001904CA /* BusRider */,
 				52AB79E51A2E193E001904CA /* BusRiderTests */,
 				52AB79FA1A2E1982001904CA /* Today */,
@@ -221,7 +228,6 @@
 				52EB7C071A3DF6E400057723 /* Controller */,
 				52EB7BFE1A3DF6CF00057723 /* View */,
 				520C5D741A391D9100ADAC8D /* JWColorDefine.h */,
-				52B3BAAA1A30B9B1001E38BB /* UIView+RSAdditions */,
 				52EB7C0B1A3DF73900057723 /* Supporting Files */,
 				52AB79D01A2E193E001904CA /* AppDelegate.h */,
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
@@ -264,6 +270,7 @@
 		52AB79FA1A2E1982001904CA /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				52EB7C1C1A40775F00057723 /* Model */,
 				5204537B1A37340A002A8541 /* Controller */,
 				5204537E1A37340A002A8541 /* Item */,
 				520453811A37340A002A8541 /* Resource */,
@@ -281,15 +288,6 @@
 				52B3BAA91A309775001E38BB /* Today-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		52B3BAAA1A30B9B1001E38BB /* UIView+RSAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				52B3BAAB1A30B9B1001E38BB /* UIView+RSAdditions.h */,
-				52B3BAAC1A30B9B1001E38BB /* UIView+RSAdditions.m */,
-			);
-			path = "UIView+RSAdditions";
 			sourceTree = "<group>";
 		};
 		52EB7BFE1A3DF6CF00057723 /* View */ = {
@@ -325,6 +323,45 @@
 				52EB7C0F1A3DF73900057723 /* Main.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52EB7C1C1A40775F00057723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				523853451A408CC7004FB163 /* JWBusRequest.h */,
+				523853461A408CC7004FB163 /* JWBusRequest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52EB7C1D1A4077C200057723 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52EB7C271A40781E00057723 /* Model */,
+				52EB7C231A4077FB00057723 /* JWCharIconView.h */,
+				52EB7C241A4077FB00057723 /* JWCharIconView.m */,
+				52EB7C1E1A4077C200057723 /* UIView+RSAdditions */,
+				52EB7C2B1A40872900057723 /* JWCommonDefine.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52EB7C1E1A4077C200057723 /* UIView+RSAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				52EB7C1F1A4077C200057723 /* UIView+RSAdditions.h */,
+				52EB7C201A4077C200057723 /* UIView+RSAdditions.m */,
+			);
+			path = "UIView+RSAdditions";
+			sourceTree = "<group>";
+		};
+		52EB7C271A40781E00057723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52EB7C281A40784B00057723 /* JWRequest.h */,
+				52EB7C291A40784B00057723 /* JWRequest.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F9F4BBD7B41A279A6BD95859 /* Pods */ = {
@@ -529,12 +566,13 @@
 			files = (
 				52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */,
 				52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */,
+				523853441A408A7A004FB163 /* JWRequest.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
-				520C5D751A391DA800ADAC8D /* JWCharIconView.m in Sources */,
-				52B3BAAD1A30B9B1001E38BB /* UIView+RSAdditions.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,
+				52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */,
+				52EB7C221A4077CA00057723 /* UIView+RSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,12 +588,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EB7C251A4077FB00057723 /* JWCharIconView.m in Sources */,
 				520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */,
-				525CB3681A30BFF7000CBA2B /* UIView+RSAdditions.m in Sources */,
-				5204538C1A37340A002A8541 /* JWCharIconView.m in Sources */,
 				5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */,
+				523853471A408CC7004FB163 /* JWBusRequest.m in Sources */,
 				520453881A37340A002A8541 /* JWTodayViewController.m in Sources */,
 				52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */,
+				52EB7C2A1A40784B00057723 /* JWRequest.m in Sources */,
+				52EB7C211A4077C200057723 /* UIView+RSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

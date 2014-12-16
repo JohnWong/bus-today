@@ -8,6 +8,8 @@
 
 #import "JWMainViewController.h"
 
+#define kJWSearchCellId @"kJWSearchCellId"
+
 @interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource>
 
 @end
@@ -23,17 +25,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""]
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kJWSearchCellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kJWSearchCellId];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
+    return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
 }
-*/
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+}
 
 @end

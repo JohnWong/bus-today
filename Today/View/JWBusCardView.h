@@ -11,6 +11,8 @@
 
 @interface JWBusCardView : UIView
 
+- (void)setLoadingView;
+- (void)setErrorView:(NSString *)errorMessage;
 - (void)setItem:(JWBusInfoItem *)item;
 
 @end

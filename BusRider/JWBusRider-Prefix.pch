@@ -11,5 +11,6 @@
 
 #import "UIView+RSAdditions.h"
 #import "JWColorDefine.h"
+#import "JWCommonDefine.h"
 
 #endif

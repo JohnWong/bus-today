@@ -27,26 +27,44 @@
 @implementation JWBusCardView
 
 #pragma mark callable
-- (void)setItem:(JWBusInfoItem *)item {
-    if (item == nil) {
+- (void)setLoadingView {
+    [self setPlaceHolder];
+    [self.refreshButton startAnimation];
+}
+
+- (void)setErrorView:(NSString *)errorMessage {
+    [UIView animateWithDuration:0.3 animations:^{
+        [self setToSubviews:^(UIView *view) {
+            view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
+        }];
+    } completion:^(BOOL finished) {
         [self setPlaceHolder];
-        [self.refreshButton startAnimation];
-    } else {
-        [UIView animateWithDuration:0.3 animations:^{
+        self.updateLabel.text = errorMessage;
+        [UIView animateWithDuration:0.5 animations:^{
             [self setToSubviews:^(UIView *view) {
-                view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
+                view.layer.transform = CATransform3DMakeRotation(0, 1, 0, 0);
             }];
         } completion:^(BOOL finished) {
-            [self setItemInternal:item];
-            [UIView animateWithDuration:0.5 animations:^{
-                [self setToSubviews:^(UIView *view) {
-                    view.layer.transform = CATransform3DMakeRotation(0, 1, 0, 0);
-                }];
-            } completion:^(BOOL finished) {
-                [self.refreshButton stopAnimation];
-            }];
+            [self.refreshButton stopAnimation];
         }];
-    }
+    }];
+}
+
+- (void)setItem:(JWBusInfoItem *)item {
+    [UIView animateWithDuration:0.3 animations:^{
+        [self setToSubviews:^(UIView *view) {
+            view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
+        }];
+    } completion:^(BOOL finished) {
+        [self setItemInternal:item];
+        [UIView animateWithDuration:0.5 animations:^{
+            [self setToSubviews:^(UIView *view) {
+                view.layer.transform = CATransform3DMakeRotation(0, 1, 0, 0);
+            }];
+        } completion:^(BOOL finished) {
+            [self.refreshButton stopAnimation];
+        }];
+    }];
 }
 
 - (void)setPlaceHolder {

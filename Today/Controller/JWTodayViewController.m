@@ -11,10 +11,12 @@
 #import "JWBusCardView.h"
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import "JWBusRequest.h"
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
+@property (nonatomic, strong) JWBusRequest *busRequest;
 
 @end
 
@@ -23,6 +25,7 @@
 #pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self requestLineInfo:nil];
 }
 
 
@@ -36,38 +39,30 @@
 }
 
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
-    [self.busCardView setItem:nil];
+    [self.busCardView setLoadingView];
     
-    NSString *lineId = @"0571-0428-1";//@"0571-044-0";
-    NSString *userStop = @"文一西路狮山路口";
-    
-    STHTTPRequest *request = [STHTTPRequest requestWithURLString:JWBusLineURL(lineId)];
-    request.completionBlock = ^(NSDictionary *headers, NSString *body) {
-        NSString *jsonString = [[body stringByReplacingOccurrencesOfString:@"**YGKJ" withString:@""] stringByReplacingOccurrencesOfString:@"YGKJ##" withString:@""];
-        NSError *error = nil;
-        id dict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-        if (error == nil && [dict isKindOfClass:[NSDictionary class]]) {
-            NSDictionary *busInfo = (NSDictionary *)dict[@"jsonr"][@"data"];
-            NSLog(@"%@", busInfo);
-            
-            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStop busInfo:busInfo];
-            [self.busCardView setItem:busInfoItem];
-            if (completionHandler) {
-                completionHandler(NCUpdateResultNewData);
-            }
+    self.busRequest.lineId = @"057-0428-0";//@"0571-044-0";
+    __weak typeof(self) weakSelf = self;
+    [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        if (error) {
+            [weakSelf.busCardView setErrorView:error.domain];
+            if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            if (completionHandler) {
-                completionHandler(NCUpdateResultFailed);
-            }
+            NSString *userStop = @"文一西路狮山路口";
+            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStop busInfo:dict];
+            [weakSelf.busCardView setItem:busInfoItem];
+            if (completionHandler) completionHandler(NCUpdateResultNewData);
         }
-    };
-    request.errorBlock = ^(NSError *error) {
-        NSLog(@"%@", error);
-    };
-
-    [request startAsynchronous];
+    }];
 }
 
+#pragma mark getter
+- (JWBusRequest *)busRequest {
+    if (!_busRequest) {
+        _busRequest = [[JWBusRequest alloc] init];
+    }
+    return _busRequest;
+}
 
 #pragma mark action
 - (IBAction)refreshData:(id)sender {
