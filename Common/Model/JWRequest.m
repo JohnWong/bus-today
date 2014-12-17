@@ -12,6 +12,7 @@
 @implementation JWRequest
 
 - (void)loadWithCompletion:(JWCompletion)completion {
+    __weak typeof(self) weakSelf = self;
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:[self urlPath]];
     request.completionBlock = ^(NSDictionary *headers, NSString *body) {
         NSString *jsonString = [[body stringByReplacingOccurrencesOfString:@"**YGKJ" withString:@""] stringByReplacingOccurrencesOfString:@"YGKJ##" withString:@""];
@@ -20,7 +21,6 @@
         if (error == nil && [dict isKindOfClass:[NSDictionary class]]) {
             NSDictionary *jsonr = dict[@"jsonr"];
             NSDictionary *infoDict = jsonr[@"data"];
-            NSLog(@"%@", infoDict);
             if (infoDict.count > 0) {
                 completion(infoDict, nil);
             } else {
@@ -35,7 +35,7 @@
         }
     };
     request.errorBlock = ^(NSError *error) {
-        NSLog(@"%@", error);
+        NSLog(@"Request Error: %@, %@", [weakSelf urlPath], error);
         completion(nil, error);
     };
     [request startAsynchronous];

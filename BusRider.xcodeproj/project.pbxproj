@@ -20,6 +20,7 @@
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -35,6 +36,12 @@
 		52EB7C251A4077FB00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
 		52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
 		52EB7C2A1A40784B00057723 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
+		52EC7E381A41D25200CE4C23 /* JWLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E371A41D25200CE4C23 /* JWLineItem.m */; };
+		52EC7E3B1A41D6B300CE4C23 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E3A1A41D6B300CE4C23 /* JWStopItem.m */; };
+		52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
+		52EC7E441A41E8FA00CE4C23 /* JWItemArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E431A41E8FA00CE4C23 /* JWItemArray.m */; };
+		52EC7E471A41EE5000CE4C23 /* JWBusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E461A41EE5000CE4C23 /* JWBusItem.m */; };
+		52EC7E4D1A41F27200CE4C23 /* JWBusLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E4C1A41F27200CE4C23 /* JWBusLineItem.m */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +112,8 @@
 		52AB7A0B1A2E2F01001904CA /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		52AB7A0D1A2E2F61001904CA /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
+		52BC1CEF1A41BE8A00C98CB9 /* JWSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchRequest.h; sourceTree = "<group>"; };
+		52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchRequest.m; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -126,6 +135,18 @@
 		52EB7C281A40784B00057723 /* JWRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRequest.h; sourceTree = "<group>"; };
 		52EB7C291A40784B00057723 /* JWRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRequest.m; sourceTree = "<group>"; };
 		52EB7C2B1A40872900057723 /* JWCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWCommonDefine.h; sourceTree = "<group>"; };
+		52EC7E361A41D25200CE4C23 /* JWLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineItem.h; sourceTree = "<group>"; };
+		52EC7E371A41D25200CE4C23 /* JWLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineItem.m; sourceTree = "<group>"; };
+		52EC7E391A41D6B300CE4C23 /* JWStopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopItem.h; sourceTree = "<group>"; };
+		52EC7E3A1A41D6B300CE4C23 /* JWStopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopItem.m; sourceTree = "<group>"; };
+		52EC7E3F1A41DDE000CE4C23 /* JWItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWItem.h; sourceTree = "<group>"; };
+		52EC7E401A41DDE000CE4C23 /* JWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWItem.m; sourceTree = "<group>"; };
+		52EC7E421A41E8FA00CE4C23 /* JWItemArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWItemArray.h; sourceTree = "<group>"; };
+		52EC7E431A41E8FA00CE4C23 /* JWItemArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWItemArray.m; sourceTree = "<group>"; };
+		52EC7E451A41EE5000CE4C23 /* JWBusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusItem.h; sourceTree = "<group>"; };
+		52EC7E461A41EE5000CE4C23 /* JWBusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusItem.m; sourceTree = "<group>"; };
+		52EC7E4B1A41F27200CE4C23 /* JWBusLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusLineItem.h; sourceTree = "<group>"; };
+		52EC7E4C1A41F27200CE4C23 /* JWBusLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusLineItem.m; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +246,8 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
+				52EC7E351A41D07000CE4C23 /* Item */,
+				52BC1CEB1A41BB3900C98CB9 /* Model */,
 				52EB7C071A3DF6E400057723 /* Controller */,
 				52EB7BFE1A3DF6CF00057723 /* View */,
 				520C5D741A391D9100ADAC8D /* JWColorDefine.h */,
@@ -290,6 +313,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		52BC1CEB1A41BB3900C98CB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52BC1CEF1A41BE8A00C98CB9 /* JWSearchRequest.h */,
+				52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52EB7BFE1A3DF6CF00057723 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +369,7 @@
 		52EB7C1D1A4077C200057723 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				52EC7E3E1A41DDD600CE4C23 /* Item */,
 				52EB7C271A40781E00057723 /* Model */,
 				52EB7C231A4077FB00057723 /* JWCharIconView.h */,
 				52EB7C241A4077FB00057723 /* JWCharIconView.m */,
@@ -362,6 +395,32 @@
 				52EB7C291A40784B00057723 /* JWRequest.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52EC7E351A41D07000CE4C23 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				52EC7E361A41D25200CE4C23 /* JWLineItem.h */,
+				52EC7E371A41D25200CE4C23 /* JWLineItem.m */,
+				52EC7E391A41D6B300CE4C23 /* JWStopItem.h */,
+				52EC7E3A1A41D6B300CE4C23 /* JWStopItem.m */,
+				52EC7E451A41EE5000CE4C23 /* JWBusItem.h */,
+				52EC7E461A41EE5000CE4C23 /* JWBusItem.m */,
+				52EC7E4B1A41F27200CE4C23 /* JWBusLineItem.h */,
+				52EC7E4C1A41F27200CE4C23 /* JWBusLineItem.m */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		52EC7E3E1A41DDD600CE4C23 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				52EC7E3F1A41DDE000CE4C23 /* JWItem.h */,
+				52EC7E401A41DDE000CE4C23 /* JWItem.m */,
+				52EC7E421A41E8FA00CE4C23 /* JWItemArray.h */,
+				52EC7E431A41E8FA00CE4C23 /* JWItemArray.m */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		F9F4BBD7B41A279A6BD95859 /* Pods */ = {
@@ -564,12 +623,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */,
 				52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */,
+				52EC7E3B1A41D6B300CE4C23 /* JWStopItem.m in Sources */,
+				52EC7E441A41E8FA00CE4C23 /* JWItemArray.m in Sources */,
 				52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */,
 				523853441A408A7A004FB163 /* JWRequest.m in Sources */,
+				52EC7E471A41EE5000CE4C23 /* JWBusItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
+				52EC7E381A41D25200CE4C23 /* JWLineItem.m in Sources */,
+				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
+				52EC7E4D1A41F27200CE4C23 /* JWBusLineItem.m in Sources */,
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,
 				52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */,
 				52EB7C221A4077CA00057723 /* UIView+RSAdditions.m in Sources */,
