@@ -9,12 +9,15 @@
 #import "JWMainViewController.h"
 #import "JWSearchRequest.h"
 #import "JWBusLineItem.h"
+#import "JWBusLineViewController.h"
 
-#define kJWSearchCellId @"kJWSearchCellId"
+#define kJWCellIdSearch @"kJWCellIdSearch"
+#define kJWSeguePushLine @"kJWSeguePushLine"
 
 @interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
+@property (nonatomic, strong) JWBusLineItem *busLineItem;
 
 @end
 
@@ -25,6 +28,14 @@
     [super viewDidLoad];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kJWSeguePushLine]) {
+        if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
+            JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
+            busLineViewController.busLineItem = self.busLineItem;            
+        }
+    }
+}
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -32,9 +43,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kJWSearchCellId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kJWCellIdSearch];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kJWSearchCellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kJWCellIdSearch];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
     return cell;
@@ -53,9 +64,8 @@
         if (result == 1) {
             // list result
         } else if (result == 2) {
-            JWBusLineItem *busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            
-            
+            self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            [self performSegueWithIdentifier:kJWSeguePushLine sender:self];
         }
     }];
 }

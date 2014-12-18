@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWBusLineItem.h"
 
 @interface JWBusLineViewController : UIViewController
+
+@property (nonatomic, strong) JWBusLineItem *busLineItem;
 
 @end
