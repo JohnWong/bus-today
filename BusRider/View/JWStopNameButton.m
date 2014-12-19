@@ -21,6 +21,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)  owner:self options:nil][0])) {
         [self setFrame:frame];
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return self;
 }

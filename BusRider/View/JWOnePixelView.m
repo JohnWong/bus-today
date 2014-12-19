@@ -12,8 +12,10 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        if (self.constraints.count > 0) {
-            ((NSLayoutConstraint *)self.constraints[0]).constant = 1 / [UIScreen mainScreen].scale;
+        for (NSLayoutConstraint *constraint in self.constraints) {
+            if (constraint.firstAttribute == NSLayoutAttributeHeight) {
+                constraint.constant = kOnePixel;
+            }
         }
     }
     return self;

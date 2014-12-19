@@ -17,7 +17,7 @@
     self.from = lineDict[@"startStopName"];
     self.to = lineDict[@"endStopName"];
     self.firstTime = lineDict[@"firstTime"];
-    self.lastTime = dict[@"lastTime"];
+    self.lastTime = lineDict[@"lastTime"];
     
     NSArray *otherLines = dict[@"otherlines"];
     if (otherLines.count == 1) {

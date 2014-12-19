@@ -57,7 +57,6 @@
     self.searchRequest.keyWord = keyWord;
     [self.searchRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
-            
             return;
         }
         NSInteger result = [dict[@"result"] integerValue];

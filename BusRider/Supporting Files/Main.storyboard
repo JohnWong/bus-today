@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TYM-DL-tKA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lsK-o1-ehk">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Bus Line View Controller-->
@@ -22,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sly-UQ-9At">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
@@ -110,43 +109,67 @@
                                                     <constraint firstAttribute="trailing" secondItem="I7M-25-UI6" secondAttribute="trailing" constant="16" id="vQD-AH-mJc"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-3g-JbP">
-                                                <rect key="frame" x="8" y="80" width="304" height="700"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-3g-JbP">
+                                                <rect key="frame" x="8" y="80" width="304" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlH-sy-reo">
+                                                        <rect key="frame" x="19" y="20" width="2" height="10"/>
+                                                        <color key="backgroundColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="2" id="v5Y-IE-VYK"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ZZ2-iG-JWt"/>
+                                                    <constraint firstItem="TlH-sy-reo" firstAttribute="top" secondItem="8Y6-3g-JbP" secondAttribute="top" constant="20" id="qF2-2I-uQm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TlH-sy-reo" secondAttribute="bottom" constant="20" id="tP3-ko-qcV"/>
+                                                    <constraint firstItem="TlH-sy-reo" firstAttribute="leading" secondItem="8Y6-3g-JbP" secondAttribute="leading" constant="19" id="ya4-61-4t1"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="W8I-C8-gZg" firstAttribute="top" secondItem="Sly-UQ-9At" secondAttribute="top" id="5Is-wR-ycv"/>
-                                            <constraint firstAttribute="height" constant="1400" id="WaS-WL-koy"/>
-                                            <constraint firstItem="W8I-C8-gZg" firstAttribute="leading" secondItem="Sly-UQ-9At" secondAttribute="leading" id="j9i-HQ-N8f"/>
-                                            <constraint firstAttribute="trailing" secondItem="W8I-C8-gZg" secondAttribute="trailing" id="oId-UH-K6h"/>
+                                            <constraint firstItem="8Y6-3g-JbP" firstAttribute="leading" secondItem="Sly-UQ-9At" secondAttribute="leading" constant="8" id="7FC-If-hF4"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Y6-3g-JbP" secondAttribute="trailing" constant="8" id="FyE-xv-QjS"/>
+                                            <constraint firstItem="8Y6-3g-JbP" firstAttribute="top" secondItem="Sly-UQ-9At" secondAttribute="top" constant="80" id="Mbk-56-yLv"/>
+                                            <constraint firstItem="W8I-C8-gZg" firstAttribute="leading" secondItem="Sly-UQ-9At" secondAttribute="leading" id="ayB-Gr-QTj"/>
+                                            <constraint firstAttribute="trailing" secondItem="W8I-C8-gZg" secondAttribute="trailing" id="m6D-CN-t8j"/>
+                                            <constraint firstItem="W8I-C8-gZg" firstAttribute="top" secondItem="Sly-UQ-9At" secondAttribute="top" id="muZ-2m-b6w"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Y6-3g-JbP" secondAttribute="bottom" constant="8" id="rRa-RK-Ptm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="leading" secondItem="UCQ-Jw-tBY" secondAttribute="leading" id="15y-gR-uIu"/>
-                                    <constraint firstAttribute="bottom" secondItem="Sly-UQ-9At" secondAttribute="bottom" id="1BX-gQ-oAa"/>
-                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="top" secondItem="UCQ-Jw-tBY" secondAttribute="top" id="GxV-5O-laK"/>
-                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="centerX" secondItem="UCQ-Jw-tBY" secondAttribute="centerX" id="IGO-sH-78C"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sly-UQ-9At" secondAttribute="trailing" id="hfq-Lb-hmB"/>
+                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="leading" secondItem="UCQ-Jw-tBY" secondAttribute="leading" id="0AQ-IU-reT"/>
+                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="width" secondItem="UCQ-Jw-tBY" secondAttribute="width" id="2Zc-sj-Gnm"/>
+                                    <constraint firstItem="Sly-UQ-9At" firstAttribute="top" secondItem="UCQ-Jw-tBY" secondAttribute="top" id="meB-YS-IBN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sly-UQ-9At" secondAttribute="bottom" id="qjJ-mt-EeS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sly-UQ-9At" secondAttribute="trailing" id="uCg-d4-YXh"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UCQ-Jw-tBY" firstAttribute="leading" secondItem="qin-lm-xzw" secondAttribute="leading" id="H4U-f9-rcX"/>
-                            <constraint firstAttribute="trailing" secondItem="UCQ-Jw-tBY" secondAttribute="trailing" id="ge8-mq-IG7"/>
-                            <constraint firstItem="UCQ-Jw-tBY" firstAttribute="top" secondItem="qin-lm-xzw" secondAttribute="top" id="gwl-Ah-bei"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="UCQ-Jw-tBY" secondAttribute="bottom" id="tkp-Yg-jXH"/>
+                            <constraint firstAttribute="bottom" secondItem="UCQ-Jw-tBY" secondAttribute="bottom" id="C1w-D4-CS8"/>
+                            <constraint firstAttribute="trailing" secondItem="UCQ-Jw-tBY" secondAttribute="trailing" id="EKl-HQ-kNf"/>
+                            <constraint firstItem="UCQ-Jw-tBY" firstAttribute="top" secondItem="qin-lm-xzw" secondAttribute="top" id="ceY-I4-vYW"/>
+                            <constraint firstItem="UCQ-Jw-tBY" firstAttribute="leading" secondItem="qin-lm-xzw" secondAttribute="leading" id="mld-Oc-D5Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vjt-mN-QuG"/>
+                    <navigationItem key="navigationItem" id="vjt-mN-QuG">
+                        <barButtonItem key="backBarButtonItem" title="back" id="oJP-1u-Sd8"/>
+                    </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
+                        <outlet property="firstTimeLabel" destination="hAa-Zv-Vg0" id="WsK-oL-bJ8"/>
+                        <outlet property="lastTimeLabel" destination="Q3a-61-SXF" id="OF5-WN-Cfc"/>
                         <outlet property="scrollView" destination="UCQ-Jw-tBY" id="tTp-5Y-IRS"/>
+                        <outlet property="titleLabel" destination="I7M-25-UI6" id="b0w-JK-1N0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-zI-V4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,7 +180,6 @@
         <scene sceneID="67g-oX-tOw">
             <objects>
                 <navigationController id="lsK-o1-ehk" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCG-kR-bE7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,7 +219,9 @@
                             <constraint firstItem="lyx-OZ-nxX" firstAttribute="top" secondItem="28H-Rc-LmS" secondAttribute="bottom" id="lre-Ls-IVv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="test" id="NHI-km-Lky"/>
+                    <navigationItem key="navigationItem" title="test" id="NHI-km-Lky">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ByG-jG-4WV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="XEx-sA-mlR" id="XAx-EJ-dsH"/>
                         <segue destination="TYM-DL-tKA" kind="push" identifier="kJWSeguePushLine" id="eHi-0t-BF3"/>
