@@ -9,6 +9,8 @@
 #import "JWRequest.h"
 #import "STHTTPRequest.h"
 
+#define JWDataErrorKey @"JWDataError"
+
 @implementation JWRequest
 
 - (void)loadWithCompletion:(JWCompletion)completion {
@@ -24,9 +26,11 @@
             if (infoDict.count > 0) {
                 completion(infoDict, nil);
             } else {
-                error = [NSError errorWithDomain:jsonr[@"errmsg"]
+                error = [NSError errorWithDomain:JWDataErrorKey
                                             code:301
-                                        userInfo:nil];
+                                        userInfo:@{
+                                                   NSLocalizedDescriptionKey:jsonr[@"errmsg"]
+                                                   }];
                 completion(nil, error);
             }
             

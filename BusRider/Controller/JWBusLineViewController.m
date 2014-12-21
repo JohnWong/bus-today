@@ -9,6 +9,7 @@
 #import "JWBusLineViewController.h"
 #import "JWStopNameButton.h"
 #import "JWStopItem.h"
+#import "JWSearchRequest.h"
 
 #define kJWButtonHeight 50
 
@@ -83,7 +84,11 @@
 
 #pragma mark action
 - (void)reverseDirection {
-    
+    JWSearchRequest *request = [[JWSearchRequest alloc] init];
+    request.keyWord = @"123123";
+     [request loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+         
+     }];
 }
 
 @end

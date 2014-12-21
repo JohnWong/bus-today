@@ -45,7 +45,7 @@
     __weak typeof(self) weakSelf = self;
     [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
-            [weakSelf.busCardView setErrorView:error.domain];
+            [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
             NSString *userStop = @"文一西路狮山路口";

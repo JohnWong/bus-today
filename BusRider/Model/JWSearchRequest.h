@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 John Wong. All rights reserved.
 //
 
-#import "JWRequest.h"
+#import "JWRequestWithAlert.h"
 
-@interface JWSearchRequest : JWRequest
+@interface JWSearchRequest : JWRequestWithAlert
 
 @property (nonatomic, strong) NSString *keyWord;
 
