@@ -12,7 +12,15 @@
 @interface JWBusLineItem : JWItem
 
 @property (nonatomic, strong) JWLineItem *lineItem;
-@property (nonatomic, strong) NSArray *stopItems; // JWStopItem
-@property (nonatomic, strong) NSArray *busItems; // JWBusItem
+
+/**
+ *  Array of JWStopItem
+ */
+@property (nonatomic, strong) NSArray *stopItems;
+
+/**
+ *  Array of JWBusItem
+ */
+@property (nonatomic, strong) NSArray *busItems;
 
 @end

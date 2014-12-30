@@ -23,6 +23,7 @@
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
+		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -120,6 +121,8 @@
 		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
 		52BC1CEF1A41BE8A00C98CB9 /* JWSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchRequest.h; sourceTree = "<group>"; };
 		52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchRequest.m; sourceTree = "<group>"; };
+		52C53EA11A523DDB0089334A /* JWLineRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineRequest.h; sourceTree = "<group>"; };
+		52C53EA21A523DDB0089334A /* JWLineRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineRequest.m; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -326,6 +329,8 @@
 				52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */,
 				5257A0641A4496AD0066A354 /* JWRequestWithAlert.h */,
 				5257A0651A4496AD0066A354 /* JWRequestWithAlert.m */,
+				52C53EA11A523DDB0089334A /* JWLineRequest.h */,
+				52C53EA21A523DDB0089334A /* JWLineRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 			files = (
 				52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */,
 				5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */,
+				52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */,
 				52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */,
 				52EC7E3B1A41D6B300CE4C23 /* JWStopItem.m in Sources */,
 				52EC7E441A41E8FA00CE4C23 /* JWItemArray.m in Sources */,
