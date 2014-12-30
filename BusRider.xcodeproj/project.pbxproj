@@ -24,6 +24,8 @@
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
+		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
+		52D091F51A531F9400C5A957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F41A531F9400C5A957 /* Localizable.strings */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -123,6 +125,8 @@
 		52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchRequest.m; sourceTree = "<group>"; };
 		52C53EA11A523DDB0089334A /* JWLineRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineRequest.h; sourceTree = "<group>"; };
 		52C53EA21A523DDB0089334A /* JWLineRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineRequest.m; sourceTree = "<group>"; };
+		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
+		52D091F41A531F9400C5A957 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
+				52D091F11A53092600C5A957 /* Resource */,
 				52EC7E351A41D07000CE4C23 /* Item */,
 				52BC1CEB1A41BB3900C98CB9 /* Model */,
 				52EB7C071A3DF6E400057723 /* Controller */,
@@ -335,6 +340,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		52D091F11A53092600C5A957 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				52D091F21A53092600C5A957 /* JWIconBus@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		52EB7BFE1A3DF6CF00057723 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +381,7 @@
 				52EB7C0D1A3DF73900057723 /* LaunchScreen.xib */,
 				52EB7C0E1A3DF73900057723 /* main.m */,
 				52EB7C0F1A3DF73900057723 /* Main.storyboard */,
+				52D091F41A531F9400C5A957 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -560,7 +574,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EB7C111A3DF73900057723 /* LaunchScreen.xib in Resources */,
+				52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */,
 				52EB7C151A3DF75C00057723 /* Images.xcassets in Resources */,
+				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
 				52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */,
 				52EB7C101A3DF73900057723 /* Info.plist in Resources */,

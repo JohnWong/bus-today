@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  BusRider
+
+  Created by John Wong on 12/31/14.
+  Copyright (c) 2014 John Wong. All rights reserved.
+*/
+
+"Pull to refresh..."="下拉刷新...";
+"Release to refresh..."="释放刷新...";
+"Loading..."="加载中...";

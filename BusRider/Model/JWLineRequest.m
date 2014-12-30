@@ -12,7 +12,7 @@
 
 - (NSDictionary *)params {
     return @{
-             @"lineId": self.lineId
+             @"lineId": self.lineId?:@""
              };
 }
 

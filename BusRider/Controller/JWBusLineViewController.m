@@ -12,6 +12,7 @@
 #import "JWSearchRequest.h"
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
+#import "UIScrollView+SVPullToRefresh.h"
 
 #define kJWButtonHeight 50
 
@@ -24,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
+@property (nonatomic, strong) JWLineRequest *lineRequest;
 
 @end
 
@@ -43,6 +46,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.scrollView addPullToRefreshWithActionHandler:^{
+        [self.scrollView.pullToRefreshView startAnimating];
+        [self loadRequest];
+    }];
+    
 }
 
 - (void)updateView {
@@ -56,7 +64,11 @@
     NSInteger count = self.busLineItem? self.busLineItem.stopItems.count : 0;
     self.contentHeightConstraint.constant = count * kJWButtonHeight;
     
-    [self.contentView removeAllSubviews];
+    for (UIView *view in self.contentView.subviews) {
+        if (view != self.lineView) {
+            [view removeFromSuperview];
+        }
+    }
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
@@ -82,24 +94,40 @@
     }
     
     for (JWBusItem *busItem in self.busLineItem.busItems) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"JWIconRefresh"]];
-        imageView.origin = CGPointMake(0, );
+        UIImage *image = [UIImage imageNamed:@"JWIconBus"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
+        [self.contentView addSubview:imageView];
+        NSLog(@"%ld", busItem.order);
     }
+}
+
+#pragma mark getter
+- (JWLineRequest *)lineRequest {
+    if (!_lineRequest) {
+        _lineRequest = [[JWLineRequest alloc] init];
+        _lineRequest.lineId = self.busLineItem.lineItem.lineId;
+    }
+    return _lineRequest;
 }
 
 #pragma mark action
 - (void)reverseDirection {
-    JWLineRequest *request = [[JWLineRequest alloc] init];
-    request.lineId = self.busLineItem.lineItem.otherLineId;
-     [request loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-         if (error) {
-             // TODO
-             return;
-         } else {
-             self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-             [self updateView];
-         }
-     }];
+    self.lineRequest.lineId = self.busLineItem.lineItem.otherLineId;
+    [self loadRequest];
+}
+
+- (void)loadRequest {
+    [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        [self.scrollView.pullToRefreshView stopAnimating];
+        if (error) {
+            // TODO
+            return;
+        } else {
+            self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            [self updateView];
+        }
+    }];
 }
 
 @end

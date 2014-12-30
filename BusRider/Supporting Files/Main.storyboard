@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ntS-LB-eE5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qin-lm-xzw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCQ-Jw-tBY">
@@ -162,12 +162,12 @@
                     <navigationItem key="navigationItem" id="vjt-mN-QuG">
                         <barButtonItem key="backBarButtonItem" title="back" id="oJP-1u-Sd8"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
                         <outlet property="firstTimeLabel" destination="hAa-Zv-Vg0" id="WsK-oL-bJ8"/>
                         <outlet property="lastTimeLabel" destination="Q3a-61-SXF" id="OF5-WN-Cfc"/>
+                        <outlet property="lineView" destination="TlH-sy-reo" id="Ujz-Ce-zPc"/>
                         <outlet property="scrollView" destination="UCQ-Jw-tBY" id="tTp-5Y-IRS"/>
                         <outlet property="titleLabel" destination="I7M-25-UI6" id="b0w-JK-1N0"/>
                     </connections>

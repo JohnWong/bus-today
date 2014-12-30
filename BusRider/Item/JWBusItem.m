@@ -10,6 +10,12 @@
 
 @implementation JWBusItem
 
-
+- (void)setFromDictionary:(NSDictionary *)dict {
+    self.arrived = dict[@"arrived"];
+    self.order = [dict[@"order"] integerValue];
+    self.distance = [dict[@"distance"] integerValue];
+    self.lastTime = [dict[@"lastTime"] integerValue];
+    self.stopId = dict[@"stopId"];
+}
 
 @end

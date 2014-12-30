@@ -1,10 +1,13 @@
 PODS:
   - STHTTPRequest (1.0.2)
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - STHTTPRequest (~> 1.0.2)
+  - SVPullToRefresh (~> 0.4.1)
 
 SPEC CHECKSUMS:
   STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
+  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
 
 COCOAPODS: 0.34.4
