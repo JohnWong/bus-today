@@ -11,7 +11,7 @@
 
 #define kOnePixel (1 / [UIScreen mainScreen].scale)
 
-#define FAKE
+//#define FAKE
 
 #ifdef FAKE
 #define kJWHost @"localhost:7000"

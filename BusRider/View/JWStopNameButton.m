@@ -23,8 +23,7 @@
     if ((self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)  owner:self options:nil][0])) {
         [self setFrame:frame];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self.titleButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-//        [self.titleButton setBackgroundImage:[JWViewUtil resizableImageWithColor:HEXCOLORA(0x333333, 0.3)] forState:UIControlStateHighlighted];
+        [self.titleButton setBackgroundImage:[JWViewUtil resizableImageWithColor:HEXCOLORA(0x333333, 0.3)] forState:UIControlStateHighlighted];
     }
     return self;
 }
