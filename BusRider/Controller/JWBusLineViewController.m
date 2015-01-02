@@ -13,11 +13,12 @@
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
 #import "UIScrollView+SVPullToRefresh.h"
+#import "JWBusInfoItem.h"
 
 #define kJWButtonHeight 50
+#define kJWButtonBaseTag 2000
 
 @interface JWBusLineViewController()
-
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstTimeLabel;
@@ -26,7 +27,16 @@
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *lineView;
+
+// Bottom bar
+@property (weak, nonatomic) IBOutlet UILabel *stopLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *updateLabel;
+
 @property (nonatomic, strong) JWLineRequest *lineRequest;
+@property (nonatomic, strong) NSString *selectedStopId;
+@property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 
 @end
 
@@ -41,7 +51,7 @@
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reverseDirection)];
     
-    [self updateView];
+    [self updateViews];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -53,7 +63,7 @@
     
 }
 
-- (void)updateView {
+- (void)updateViews {
     self.title = [NSString stringWithFormat:@"%@路", self.busLineItem.lineItem.lineNumber];
     
     JWLineItem *lineItem = self.busLineItem.lineItem;
@@ -69,10 +79,20 @@
             [view removeFromSuperview];
         }
     }
+    
+    JWStopItem *selectedItem = nil;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
         [stopButton setIndex:i + 1 title:stopItem.stopName isLast:i == count - 1];
+        
+        stopButton.titleButton.tag = kJWButtonBaseTag + i;
+        [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
+        if ([stopItem.stopId isEqualToString:self.self.selectedStopId]) {
+            selectedItem = stopItem;
+            stopButton.titleButton.selected = YES;
+            self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
+        }
         [self.contentView addSubview:stopButton];
         
         // add constraints
@@ -94,12 +114,59 @@
     }
     
     for (JWBusItem *busItem in self.busLineItem.busItems) {
-        UIImage *image = [UIImage imageNamed:@"JWIconBus"];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
-        [self.contentView addSubview:imageView];
-        NSLog(@"%ld", busItem.order);
+            UIImage *image = [UIImage imageNamed:@"JWIconBus"];
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+            imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
+            [self.contentView addSubview:imageView];
     }
+    
+    [self updateBusInfo];
+}
+
+- (void)updateBusInfo {
+    
+    if (self.busInfoItem) {
+        self.stopLabel.text = [NSString stringWithFormat:@"距%@", self.busInfoItem.currentStop];
+        
+        switch (self.busInfoItem.state) {
+            case JWBusStateNotStarted:
+                self.mainLabel.text = @"--";
+                self.unitLabel.text = @"";
+                self.updateLabel.text = [NSString stringWithFormat:@"上一辆车发出%ld分钟", self.busInfoItem.pastTime];
+                break;
+            case JWBusStateNotFound:
+                self.mainLabel.text = @"--";
+                self.unitLabel.text = @"";
+                self.updateLabel.text = self.busInfoItem.noBusTip;
+                break;
+            case JWBusStateNear:
+                if (self.busInfoItem.distance < 1000) {
+                    self.mainLabel.text = [NSString stringWithFormat:@"%ld", self.busInfoItem.distance];
+                    self.unitLabel.text = @"米";
+                } else {
+                    self.mainLabel.text = [NSString stringWithFormat:@"%.1f", self.busInfoItem.distance / 1000.0];
+                    self.unitLabel.text = @"千米";
+                }
+                self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", self.busInfoItem.updateTime / (self.busInfoItem.updateTime < 60 ? 1 : 60), self.busInfoItem.updateTime < 60 ? @"秒" : @"分"];
+                break;
+            case JWBusStateFar:
+                self.mainLabel.text = [NSString stringWithFormat:@"%ld", self.busInfoItem.remains];
+                self.unitLabel.text = @"站";
+                self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", self.busInfoItem.updateTime / (self.busInfoItem.updateTime < 60 ? 1 : 60), self.busInfoItem.updateTime < 60 ? @"秒" : @"分"];
+                break;
+        }
+    } else {
+        self.stopLabel.text = @"--";
+        self.mainLabel.text = @"--";
+        self.unitLabel.text = @"";
+        self.updateLabel.text = @"未选择当前站点";
+
+    }
+}
+
+- (void)didSelectStop:(UIButton *)sender {
+    self.selectedStopId = ((JWStopItem *)self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag]).stopId;
+    [self loadRequest];
 }
 
 #pragma mark getter
@@ -112,11 +179,6 @@
 }
 
 #pragma mark action
-- (void)reverseDirection {
-    self.lineRequest.lineId = self.busLineItem.lineItem.otherLineId;
-    [self loadRequest];
-}
-
 - (void)loadRequest {
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [self.scrollView.pullToRefreshView stopAnimating];
@@ -125,9 +187,25 @@
             return;
         } else {
             self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            [self updateView];
+            if (self.selectedStopId) {
+                self.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopId busInfo:dict];
+            }
+            [self updateViews];
         }
     }];
+}
+
+- (IBAction)collect:(id)sender {
+    
+}
+
+- (IBAction)revertDirection:(id)sender {
+    self.lineRequest.lineId = self.busLineItem.lineItem.otherLineId;
+    [self loadRequest];
+}
+
+- (IBAction)refresh:(id)sender {
+    [self loadRequest];
 }
 
 @end

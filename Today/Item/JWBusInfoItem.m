@@ -17,13 +17,12 @@
     return self;
 }
 
-- (void)setUserStop:(NSString *)currentStop busInfo:(NSDictionary *)dict {
+- (void)setUserStop:(NSString *)stopId busInfo:(NSDictionary *)dict {
     
     NSArray *mapArray = dict[@"map"];
     NSArray *busArray = dict[@"bus"];
     NSDictionary *lineInfo = dict[@"line"];
     
-    self.currentStop = currentStop;
     self.lineNumber = lineInfo[@"lineName"];
     self.from = lineInfo[@"startStopName"];
     self.to = lineInfo[@"endStopName"];
@@ -32,8 +31,9 @@
     
     NSInteger currentOrder = -1;
     for (NSDictionary *mapInfo in mapArray) {
-        if ([mapInfo[@"stopName"] isEqualToString:currentStop]) {
+        if ([mapInfo[@"stopId"] isEqualToString:stopId]) {
             currentOrder = [mapInfo[@"order"] integerValue];
+            self.currentStop = mapInfo[@"stopName"];
             break;
         }
     }

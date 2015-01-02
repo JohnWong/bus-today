@@ -14,6 +14,7 @@
 @implementation JWRequest
 
 - (void)loadWithCompletion:(JWCompletion)completion {
+    NSLog(@"JWRequest: load %@", [self urlPath]);
     __weak typeof(self) weakSelf = self;
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:[self urlPath]];
     request.completionBlock = ^(NSDictionary *headers, NSString *body) {
@@ -24,6 +25,7 @@
             NSDictionary *jsonr = dict[@"jsonr"];
             NSDictionary *infoDict = jsonr[@"data"];
             if (infoDict.count > 0) {
+                NSLog(@"JWRequest: response %@", infoDict);
                 completion(infoDict, nil);
             } else {
                 error = [NSError errorWithDomain:JWDataErrorKey
@@ -31,10 +33,12 @@
                                         userInfo:@{
                                                    NSLocalizedDescriptionKey:jsonr[@"errmsg"]
                                                    }];
+                NSLog(@"JWRequest: error %@", error);
                 completion(nil, error);
             }
             
         } else {
+            NSLog(@"JWRequest: error %@", error);
             completion(nil, error);
         }
     };
@@ -51,7 +55,7 @@
     for (NSString *key in paramDict) {
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
-    return [NSString stringWithFormat:@"http://%@/bus/%@.action?s=IOS&v=2.9&cityId=004&sign=&%@", kJWHost, [self actionName], paramString];
+    return [NSString stringWithFormat:@"http://%@/bus/%@.action?s=IOS&v=2.9&cityId=004&sign=%@", kJWHost, [self actionName], paramString];
 }
 
 @end

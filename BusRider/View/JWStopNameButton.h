@@ -10,6 +10,8 @@
 
 @interface JWStopNameButton : UIView
 
+@property (nonatomic, weak) IBOutlet UIButton *titleButton;
+
 - (void)setIndex:(NSInteger)index title:(NSString *)title isLast:(BOOL)isLast;
 
 @end

@@ -41,15 +41,15 @@
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
     [self.busCardView setLoadingView];
     
-    self.busRequest.lineId = @"057-0428-0";//@"0571-044-0";
+    self.busRequest.lineId = @"0571-0428-0";//@"0571-044-0";
     __weak typeof(self) weakSelf = self;
     [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            NSString *userStop = @"文一西路狮山路口";
-            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStop busInfo:dict];
+            NSString *userStopId = @"0571-4603";
+            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStopId busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         }

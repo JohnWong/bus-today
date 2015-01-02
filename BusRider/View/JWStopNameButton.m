@@ -13,7 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet UIView *separator;
 @property (nonatomic, weak) IBOutlet UILabel *indexLabel;
-@property (nonatomic, weak) IBOutlet UIButton *titleButton;
 
 @end
 
