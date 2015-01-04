@@ -55,6 +55,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *keyWord = searchBar.text;
     self.searchRequest.keyWord = keyWord;
+    __weak typeof(self) weakSelf = self;
     [self.searchRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             return;
@@ -63,8 +64,8 @@
         if (result == 1) {
             // list result
         } else if (result == 2) {
-            self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            [self performSegueWithIdentifier:kJWSeguePushLine sender:self];
+            weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            [weakSelf performSegueWithIdentifier:kJWSeguePushLine sender:self];
         }
     }];
 }

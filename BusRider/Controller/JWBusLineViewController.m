@@ -49,16 +49,30 @@
     self.contentView.layer.cornerRadius = 4;
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reverseDirection)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:nil];
+    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
+//    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+//    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Please Wait..."]; //to give the attributedTitle
+//    [refreshControl addTarget:self action:@selector(refreshControl:) forControlEvents:UIControlEventValueChanged];
+//    [self.scrollView addSubview:refreshControl];
     
     [self updateViews];
 }
 
+- (void)refreshControl:(UIRefreshControl *)refreshControl
+{
+    [refreshControl endRefreshing];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    __weak typeof(self) weakSelf = self;
     [self.scrollView addPullToRefreshWithActionHandler:^{
-        [self.scrollView.pullToRefreshView startAnimating];
-        [self loadRequest];
+        [weakSelf.scrollView.pullToRefreshView startAnimating];
+        [weakSelf loadRequest];
     }];
     
 }
@@ -181,7 +195,7 @@
 #pragma mark action
 - (void)loadRequest {
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-        [self.scrollView.pullToRefreshView stopAnimating];
+//        [self.scrollView.pullToRefreshView stopAnimating];
         if (error) {
             // TODO
             return;
@@ -205,7 +219,7 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    [self loadRequest];
+    [self.scrollView triggerPullToRefresh];
 }
 
 @end

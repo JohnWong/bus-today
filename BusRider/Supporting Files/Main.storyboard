@@ -21,12 +21,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sly-UQ-9At">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="265"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="RUy-77-phm"/>
@@ -137,7 +137,7 @@
                                             <constraint firstItem="W8I-C8-gZg" firstAttribute="leading" secondItem="Sly-UQ-9At" secondAttribute="leading" id="ayB-Gr-QTj"/>
                                             <constraint firstAttribute="trailing" secondItem="W8I-C8-gZg" secondAttribute="trailing" id="m6D-CN-t8j"/>
                                             <constraint firstItem="W8I-C8-gZg" firstAttribute="top" secondItem="Sly-UQ-9At" secondAttribute="top" id="muZ-2m-b6w"/>
-                                            <constraint firstAttribute="bottom" secondItem="8Y6-3g-JbP" secondAttribute="bottom" constant="135" id="rRa-RK-Ptm"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Y6-3g-JbP" secondAttribute="bottom" constant="140" id="rRa-RK-Ptm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -206,34 +206,35 @@
                                         <color key="textColor" red="0.63921568630000003" green="0.65098039220000004" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-Ni-QJW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-Ni-QJW" customClass="JWSwitchChangeButton">
                                         <rect key="frame" x="228" y="16" width="76" height="28"/>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="RCA-lg-jy3"/>
+                                            <constraint firstAttribute="width" constant="76" id="eAa-Tf-Rl4"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="收藏" image="JWIconFavOff.png">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" title="收藏" image="JWIconFavOff.png"/>
                                         <state key="highlighted" image="JWIconFavOn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="JWIconFavOff"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="JWIconFavOn"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="collect:" destination="TYM-DL-tKA" eventType="touchUpInside" id="7yd-Yh-6g6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-zv-JZb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-zv-JZb" customClass="JWSwitchRotationButton">
                                         <rect key="frame" x="228" y="52" width="76" height="28"/>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="dDX-9O-Jki"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="换向" image="JWIconExchange.png">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" title="换向" image="JWIconExchange.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="4"/>
@@ -244,15 +245,14 @@
                                             <action selector="revertDirection:" destination="TYM-DL-tKA" eventType="touchUpInside" id="mwQ-aC-ha0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-du-zIQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-du-zIQ" customClass="JWSwitchRotationButton">
                                         <rect key="frame" x="228" y="88" width="76" height="28"/>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="dNu-Ty-QC2"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="刷新" image="JWIconRefresh.png">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" title="刷新" image="JWIconRefresh.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="4"/>
@@ -264,9 +264,15 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="top" secondItem="BtA-zv-JZb" secondAttribute="bottom" constant="8" id="Kgu-oW-Lu0"/>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="trailing" secondItem="BtA-zv-JZb" secondAttribute="trailing" id="Kpj-cb-CfT"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="top" secondItem="3sa-F3-v9B" secondAttribute="top" constant="16" id="Ml5-lx-dAW"/>
+                                    <constraint firstAttribute="trailing" secondItem="eyO-Ni-QJW" secondAttribute="trailing" constant="16" id="OKc-Oy-BU3"/>
+                                    <constraint firstItem="BtA-zv-JZb" firstAttribute="top" secondItem="eyO-Ni-QJW" secondAttribute="bottom" constant="8" id="OV3-He-ZtP"/>
                                     <constraint firstAttribute="trailing" secondItem="Xp1-1q-8jA" secondAttribute="trailing" id="Okd-Qo-K9F"/>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="leading" secondItem="eyO-Ni-QJW" secondAttribute="leading" id="Qhb-YU-IRr"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="leading" secondItem="3sa-F3-v9B" secondAttribute="leading" constant="16" id="RKR-0R-EsO"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="leading" secondItem="ble-G6-1bG" secondAttribute="leading" id="RNs-th-8PH"/>
                                     <constraint firstItem="GYn-wc-OIZ" firstAttribute="bottom" secondItem="E0g-Dj-Blm" secondAttribute="bottom" constant="-6" id="RQh-bf-6kE"/>
@@ -274,9 +280,12 @@
                                     <constraint firstItem="ble-G6-1bG" firstAttribute="top" secondItem="E0g-Dj-Blm" secondAttribute="bottom" id="bDY-yN-ukT"/>
                                     <constraint firstItem="E0g-Dj-Blm" firstAttribute="top" secondItem="icu-is-1zH" secondAttribute="bottom" id="e2p-2L-DAO"/>
                                     <constraint firstItem="Xp1-1q-8jA" firstAttribute="top" secondItem="3sa-F3-v9B" secondAttribute="top" id="j19-ri-lHa"/>
+                                    <constraint firstItem="eyO-Ni-QJW" firstAttribute="top" secondItem="3sa-F3-v9B" secondAttribute="top" constant="16" id="kyn-fl-5bw"/>
                                     <constraint firstItem="GYn-wc-OIZ" firstAttribute="leading" secondItem="E0g-Dj-Blm" secondAttribute="trailing" id="n11-0f-eYl"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="leading" secondItem="E0g-Dj-Blm" secondAttribute="leading" id="su1-t5-LAi"/>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="leading" secondItem="BtA-zv-JZb" secondAttribute="leading" id="x82-gv-phh"/>
                                     <constraint firstAttribute="height" constant="132" id="y4x-xy-iYp"/>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="trailing" secondItem="eyO-Ni-QJW" secondAttribute="trailing" id="yHa-L6-7i0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -380,7 +389,9 @@
     </scenes>
     <resources>
         <image name="JWIconExchange.png" width="16" height="16"/>
+        <image name="JWIconFavOff" width="16" height="16"/>
         <image name="JWIconFavOff.png" width="16" height="16"/>
+        <image name="JWIconFavOn" width="16" height="16"/>
         <image name="JWIconFavOn.png" width="16" height="16"/>
         <image name="JWIconRefresh.png" width="16" height="16"/>
     </resources>

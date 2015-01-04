@@ -27,6 +27,9 @@
 		52B8D5B31A57120300B3DD5C /* JWIconFavOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B01A57120300B3DD5C /* JWIconFavOn@2x.png */; };
 		52B8D5B41A57120300B3DD5C /* JWIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */; };
 		52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */; };
+		52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5BA1A57F12300B3DD5C /* JWSwitchButton.m */; };
+		52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5BD1A57FA6E00B3DD5C /* JWSwitchRotationButton.m */; };
+		52B8D5C11A57FCCE00B3DD5C /* JWSwitchChangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */; };
 		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
@@ -35,7 +38,6 @@
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
 		52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C091A3DF6E400057723 /* JWBusLineViewController.m */; };
-		52EB7C101A3DF73900057723 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C0C1A3DF73900057723 /* Info.plist */; };
 		52EB7C111A3DF73900057723 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C0D1A3DF73900057723 /* LaunchScreen.xib */; };
 		52EB7C121A3DF73900057723 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C0E1A3DF73900057723 /* main.m */; };
 		52EB7C131A3DF73900057723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C0F1A3DF73900057723 /* Main.storyboard */; };
@@ -130,6 +132,12 @@
 		52B8D5B01A57120300B3DD5C /* JWIconFavOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconFavOn@2x.png"; sourceTree = "<group>"; };
 		52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconRefresh@2x.png"; sourceTree = "<group>"; };
 		52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconExchange@2x.png"; sourceTree = "<group>"; };
+		52B8D5B91A57F12300B3DD5C /* JWSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSwitchButton.h; sourceTree = "<group>"; };
+		52B8D5BA1A57F12300B3DD5C /* JWSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSwitchButton.m; sourceTree = "<group>"; };
+		52B8D5BC1A57FA6E00B3DD5C /* JWSwitchRotationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSwitchRotationButton.h; sourceTree = "<group>"; };
+		52B8D5BD1A57FA6E00B3DD5C /* JWSwitchRotationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSwitchRotationButton.m; sourceTree = "<group>"; };
+		52B8D5BF1A57FCCE00B3DD5C /* JWSwitchChangeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSwitchChangeButton.h; sourceTree = "<group>"; };
+		52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSwitchChangeButton.m; sourceTree = "<group>"; };
 		52BC1CEF1A41BE8A00C98CB9 /* JWSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchRequest.h; sourceTree = "<group>"; };
 		52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchRequest.m; sourceTree = "<group>"; };
 		52C53EA11A523DDB0089334A /* JWLineRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineRequest.h; sourceTree = "<group>"; };
@@ -371,6 +379,12 @@
 				52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */,
 				5257A0671A4562FC0066A354 /* JWViewUtil.h */,
 				5257A0681A4562FC0066A354 /* JWViewUtil.m */,
+				52B8D5B91A57F12300B3DD5C /* JWSwitchButton.h */,
+				52B8D5BA1A57F12300B3DD5C /* JWSwitchButton.m */,
+				52B8D5BC1A57FA6E00B3DD5C /* JWSwitchRotationButton.h */,
+				52B8D5BD1A57FA6E00B3DD5C /* JWSwitchRotationButton.m */,
+				52B8D5BF1A57FCCE00B3DD5C /* JWSwitchChangeButton.h */,
+				52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,7 +558,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JW;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "John Wong";
 				TargetAttributes = {
 					52AB79C81A2E193E001904CA = {
@@ -595,7 +609,6 @@
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
 				52B8D5B31A57120300B3DD5C /* JWIconFavOn@2x.png in Resources */,
 				52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */,
-				52EB7C101A3DF73900057723 /* Info.plist in Resources */,
 				52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,12 +691,14 @@
 				52EC7E3B1A41D6B300CE4C23 /* JWStopItem.m in Sources */,
 				52EC7E441A41E8FA00CE4C23 /* JWItemArray.m in Sources */,
 				52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */,
+				52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */,
 				523853441A408A7A004FB163 /* JWRequest.m in Sources */,
 				5257A0691A4562FC0066A354 /* JWViewUtil.m in Sources */,
 				52EC7E471A41EE5000CE4C23 /* JWBusItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				52EC7E381A41D25200CE4C23 /* JWLineItem.m in Sources */,
 				52B8D5AE1A56E3FA00B3DD5C /* JWBusInfoItem.m in Sources */,
+				52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */,
 				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
@@ -691,6 +706,7 @@
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,
 				52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */,
 				52EB7C221A4077CA00057723 /* UIView+RSAdditions.m in Sources */,
+				52B8D5C11A57FCCE00B3DD5C /* JWSwitchChangeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,7 +842,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -844,7 +860,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
