@@ -92,7 +92,7 @@
         case JWBusStateNotStarted:
             self.mainLabel.text = @"--";
             self.subLabel.text = @"";
-            self.updateLabel.text = [NSString stringWithFormat:@"上一辆车发出%ld分钟", item.pastTime];
+            self.updateLabel.text = item.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", item.pastTime];
             break;
         case JWBusStateNotFound:
             self.mainLabel.text = @"--";

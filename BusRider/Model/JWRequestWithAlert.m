@@ -10,7 +10,7 @@
 
 @implementation JWRequestWithAlert
 
-- (void)loadWithCompletion:(JWCompletion)completion {
+- (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
     JWCompletion completionWithAlert = ^(NSDictionary *dict, NSError *error) {
         if (error) {
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:error.userInfo[NSLocalizedDescriptionKey]?:error.domain
@@ -21,11 +21,10 @@
             }];
             [alertController addAction:alertAction];
             [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
-            
         }
         completion(dict, error);
     };
-    [super loadWithCompletion:completionWithAlert];
+    [super loadWithCompletion:completionWithAlert progress:progress];
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "JWBusRequest.h"
+#import "JWGroupDataUtil.h"
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
 
@@ -39,16 +40,18 @@
 }
 
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
+    NSDictionary *userInfo = [JWGroupDataUtil objectForKey:JWKeyBusLine];
+    
     [self.busCardView setLoadingView];
     
-    self.busRequest.lineId = @"0571-0428-0";//@"0571-044-0";
+    self.busRequest.lineId = userInfo[@"lineId"]; // @"0571-044-0";
     __weak typeof(self) weakSelf = self;
     [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            NSString *userStopId = @"0571-4603";
+            NSString *userStopId = userInfo[@"stopId"]; // @"0571-4603";
             JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStopId busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);

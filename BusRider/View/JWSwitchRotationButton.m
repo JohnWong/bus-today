@@ -10,6 +10,14 @@
 
 @implementation JWSwitchRotationButton
 
+#pragma mark lifecycle
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:(NSCoder *)aDecoder]) {
+        [self addTarget:self action:@selector(didTap:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
+}
+
 #pragma mark setter
 - (void)setOn:(BOOL)on  {
     [super setOn:on];
@@ -20,6 +28,11 @@
             self.imageView.transform = CGAffineTransformMakeRotation(0);
         }
     }];
+}
+
+#pragma mark action
+- (void)didTap:(UIButton *)sender {
+    self.on = !self.on;
 }
 
 @end

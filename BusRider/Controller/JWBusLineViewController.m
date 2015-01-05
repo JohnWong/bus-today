@@ -15,6 +15,9 @@
 #import "UIScrollView+SVPullToRefresh.h"
 #import "JWBusInfoItem.h"
 #import "UINavigationController+SGProgress.h"
+#import "JWGroupDataUtil.h"
+#import "JWSwitchChangeButton.h"
+#import <NotificationCenter/NotificationCenter.h>
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -34,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *updateLabel;
+@property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
 @property (nonatomic, strong) JWLineRequest *lineRequest;
 @property (nonatomic, strong) NSString *selectedStopId;
@@ -77,7 +81,7 @@
     self.titleLabel.text = [NSString stringWithFormat:@"%@路(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
     self.lastTimeLabel.text = lineItem.lastTime;
-
+    
     NSInteger count = self.busLineItem? self.busLineItem.stopItems.count : 0;
     self.contentHeightConstraint.constant = count * kJWButtonHeight;
     
@@ -121,10 +125,10 @@
     }
     
     for (JWBusItem *busItem in self.busLineItem.busItems) {
-            UIImage *image = [UIImage imageNamed:@"JWIconBus"];
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
-            [self.contentView addSubview:imageView];
+        UIImage *image = [UIImage imageNamed:@"JWIconBus"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
+        [self.contentView addSubview:imageView];
     }
     
     [self updateBusInfo];
@@ -167,7 +171,22 @@
         self.mainLabel.text = @"--";
         self.unitLabel.text = @"";
         self.updateLabel.text = @"未选择当前站点";
+    }
+    [self updateTodayButton];
+}
 
+- (void)updateTodayButton {
+    NSDictionary *userInfo = [JWGroupDataUtil objectForKey:JWKeyBusLine];
+    if (userInfo) {
+        NSString *lineId = userInfo[@"lineId"];
+        NSString *stopId = userInfo[@"stopId"];
+        if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopId]) {
+            self.todayButton.on = YES;
+        } else {
+            self.todayButton.on = NO;
+        }
+    } else {
+        self.todayButton.on = NO;
     }
 }
 
@@ -189,7 +208,7 @@
 - (void)loadRequest {
     __weak typeof(self) weakSelf = self;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-        [weakSelf.navigationController finishSGProgress];
+        [weakSelf.navigationController setSGProgressPercentage:100];
         if (error) {
             // TODO
             return;
@@ -201,7 +220,7 @@
             [weakSelf updateViews];
         }
     } progress:^(CGFloat percent) {
-        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"Loading"];
+        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
     }];
 }
 
@@ -223,11 +242,33 @@
 }
 
 - (IBAction)sendToToday:(id)sender {
-    
+    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopId) {
+        if (self.todayButton.isOn) {
+            [self removeTodayInfo];
+        } else {
+            [self saveLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopId];
+        }
+        [self updateTodayButton];
+    } else {
+        
+    }
 }
 
 - (IBAction)refresh:(id)sender {
     [self loadRequest];
+}
+
+- (void)saveLineId:(NSString *)lineId stopId:(NSString *)stopId {
+    [JWGroupDataUtil setObject:@{@"lineId": lineId,
+                                 @"stopId": stopId}
+                        forKey:JWKeyBusLine];
+    [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:@"com.visionary.BusRider.Today"];
+    
+}
+
+- (void)removeTodayInfo {
+    [JWGroupDataUtil removeObjectForKey:JWKeyBusLine];
+    [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:@"com.visionary.BusRider.Today"];
 }
 
 @end

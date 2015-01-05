@@ -11,17 +11,4 @@
 
 @implementation JWSwitchButton
 
-#pragma mark lifecycle
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:(NSCoder *)aDecoder]) {
-        [self addTarget:self action:@selector(didTap:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return self;
-}
-
-#pragma mark action
-- (void)didTap:(UIButton *)sender {
-    self.on = !self.on;
-}
-
 @end

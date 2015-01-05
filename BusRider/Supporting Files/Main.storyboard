@@ -26,7 +26,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="RUy-77-phm"/>
@@ -59,7 +59,7 @@
                                                         <rect key="frame" x="33" y="40" width="37" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="AAe-Cy-x4k"/>
-                                                            <constraint firstAttribute="width" constant="37" id="u4o-B5-Qb4"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="u4o-B5-Qb4"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,7 +82,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3a-61-SXF">
                                                         <rect key="frame" x="94" y="40" width="37" height="17"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="37" id="pfc-yH-FS5"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="pfc-yH-FS5"/>
                                                             <constraint firstAttribute="height" constant="17" id="tMq-nK-6sa"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -214,7 +214,7 @@
                                             <constraint firstAttribute="width" constant="76" id="eAa-Tf-Rl4"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="收藏" image="JWIconTodayOn.png"/>
+                                        <state key="normal" title="今日" image="JWIconTodayOn.png"/>
                                         <state key="highlighted" image="JWIconFavOn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -303,16 +303,18 @@
                     <navigationItem key="navigationItem" id="vjt-mN-QuG">
                         <barButtonItem key="backBarButtonItem" id="oJP-1u-Sd8"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
                         <outlet property="firstTimeLabel" destination="hAa-Zv-Vg0" id="WsK-oL-bJ8"/>
                         <outlet property="lastTimeLabel" destination="Q3a-61-SXF" id="OF5-WN-Cfc"/>
-                        <outlet property="lineView" destination="TlH-sy-reo" id="Ujz-Ce-zPc"/>
+                        <outlet property="lineView" destination="TlH-sy-reo" id="YQu-BP-JjX"/>
                         <outlet property="mainLabel" destination="E0g-Dj-Blm" id="99I-PN-hEN"/>
                         <outlet property="scrollView" destination="UCQ-Jw-tBY" id="tTp-5Y-IRS"/>
                         <outlet property="stopLabel" destination="icu-is-1zH" id="xDC-cQ-ik7"/>
                         <outlet property="titleLabel" destination="I7M-25-UI6" id="b0w-JK-1N0"/>
+                        <outlet property="todayButton" destination="eyO-Ni-QJW" id="kll-uM-5dR"/>
                         <outlet property="unitLabel" destination="GYn-wc-OIZ" id="zpq-GX-sxQ"/>
                         <outlet property="updateLabel" destination="ble-G6-1bG" id="qHM-5i-FNW"/>
                     </connections>
@@ -393,7 +395,7 @@
         <image name="JWIconRefresh.png" width="16" height="16"/>
         <image name="JWIconTodayOff" width="16" height="16"/>
         <image name="JWIconTodayOn" width="16" height="16"/>
-        <image name="JWIconTodayOn.png" width="32" height="32"/>
+        <image name="JWIconTodayOn.png" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
