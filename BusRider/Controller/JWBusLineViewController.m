@@ -14,6 +14,7 @@
 #import "JWBusItem.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "JWBusInfoItem.h"
+#import "UINavigationController+SGProgress.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -49,15 +50,7 @@
     self.contentView.layer.cornerRadius = 4;
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:nil];
-    
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    
-//    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-//    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Please Wait..."]; //to give the attributedTitle
-//    [refreshControl addTarget:self action:@selector(refreshControl:) forControlEvents:UIControlEventValueChanged];
-//    [self.scrollView addSubview:refreshControl];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"JWIconCollectOn"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     
     [self updateViews];
 }
@@ -71,7 +64,7 @@
     [super viewDidAppear:animated];
     __weak typeof(self) weakSelf = self;
     [self.scrollView addPullToRefreshWithActionHandler:^{
-        [weakSelf.scrollView.pullToRefreshView startAnimating];
+        [weakSelf.scrollView.pullToRefreshView stopAnimating];
         [weakSelf loadRequest];
     }];
     
@@ -194,23 +187,22 @@
 
 #pragma mark action
 - (void)loadRequest {
+    __weak typeof(self) weakSelf = self;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-//        [self.scrollView.pullToRefreshView stopAnimating];
+        [weakSelf.navigationController finishSGProgress];
         if (error) {
             // TODO
             return;
         } else {
-            self.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            if (self.selectedStopId) {
-                self.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopId busInfo:dict];
+            weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            if (weakSelf.selectedStopId) {
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopId busInfo:dict];
             }
-            [self updateViews];
+            [weakSelf updateViews];
         }
+    } progress:^(CGFloat percent) {
+        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"Loading"];
     }];
-}
-
-- (IBAction)collect:(id)sender {
-    
 }
 
 - (IBAction)revertDirection:(id)sender {
@@ -218,8 +210,24 @@
     [self loadRequest];
 }
 
+- (void)collect:(id)sender {
+    if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+        UIBarButtonItem *barButton = (UIBarButtonItem *)sender;
+        static int i = 0;
+        if (i++ % 2) {
+            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOn"]];
+        } else {
+            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOff"]];
+        }
+    }
+}
+
+- (IBAction)sendToToday:(id)sender {
+    
+}
+
 - (IBAction)refresh:(id)sender {
-    [self.scrollView triggerPullToRefresh];
+    [self loadRequest];
 }
 
 @end

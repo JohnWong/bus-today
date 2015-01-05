@@ -11,6 +11,13 @@
 
 #define kOnePixel (1 / [UIScreen mainScreen].scale)
 
+// NSLog
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
 //#define FAKE
 
 #ifdef FAKE

@@ -214,17 +214,17 @@
                                             <constraint firstAttribute="width" constant="76" id="eAa-Tf-Rl4"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="收藏" image="JWIconFavOff.png"/>
+                                        <state key="normal" title="收藏" image="JWIconTodayOn.png"/>
                                         <state key="highlighted" image="JWIconFavOn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="JWIconFavOff"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="JWIconFavOn"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="JWIconTodayOff"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="JWIconTodayOn"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="collect:" destination="TYM-DL-tKA" eventType="touchUpInside" id="7yd-Yh-6g6"/>
+                                            <action selector="sendToToday:" destination="TYM-DL-tKA" eventType="touchUpInside" id="xhY-WE-g25"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-zv-JZb" customClass="JWSwitchRotationButton">
@@ -365,7 +365,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="公交信息" id="NHI-km-Lky">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="ByG-jG-4WV"/>
+                        <barButtonItem key="backBarButtonItem" id="ByG-jG-4WV"/>
                     </navigationItem>
                     <keyCommands/>
                     <connections>
@@ -389,11 +389,11 @@
     </scenes>
     <resources>
         <image name="JWIconExchange.png" width="16" height="16"/>
-        <image name="JWIconFavOff" width="16" height="16"/>
-        <image name="JWIconFavOff.png" width="16" height="16"/>
-        <image name="JWIconFavOn" width="16" height="16"/>
         <image name="JWIconFavOn.png" width="16" height="16"/>
         <image name="JWIconRefresh.png" width="16" height="16"/>
+        <image name="JWIconTodayOff" width="16" height="16"/>
+        <image name="JWIconTodayOn" width="16" height="16"/>
+        <image name="JWIconTodayOn.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

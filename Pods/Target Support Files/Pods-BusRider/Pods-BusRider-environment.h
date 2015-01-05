@@ -6,6 +6,12 @@
 // project.
 
 
+// SGNavigationProgress
+#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress
+#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress 1
+#define COCOAPODS_VERSION_MINOR_SGNavigationProgress 2
+#define COCOAPODS_VERSION_PATCH_SGNavigationProgress 0
+
 // STHTTPRequest
 #define COCOAPODS_POD_AVAILABLE_STHTTPRequest
 #define COCOAPODS_VERSION_MAJOR_STHTTPRequest 1
