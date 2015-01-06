@@ -1,14 +1,17 @@
 PODS:
+  - MBProgressHUD (0.9)
   - SGNavigationProgress (1.2)
   - STHTTPRequest (1.0.2)
   - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
+  - MBProgressHUD
   - SGNavigationProgress
-  - STHTTPRequest (~> 1.0.2)
-  - SVPullToRefresh (~> 0.4.1)
+  - STHTTPRequest
+  - SVPullToRefresh
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   SGNavigationProgress: 6c38006ca3c652618411c67d493b263343d5aece
   STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
   SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
