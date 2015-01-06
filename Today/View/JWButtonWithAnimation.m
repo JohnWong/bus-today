@@ -33,8 +33,4 @@
     [self.imageView.layer removeAnimationForKey:kJWRefreshAnimationKey];
 }
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    
-}
-
 @end

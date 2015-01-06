@@ -32,7 +32,7 @@
 
 #pragma mark NCWidgetProviding
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
-    return UIEdgeInsetsMake(0, 0, 0, 12);
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
@@ -70,6 +70,13 @@
 #pragma mark action
 - (IBAction)refreshData:(id)sender {
     [self requestLineInfo:nil];
+}
+
+- (IBAction)goSettings:(id)sender {
+    [self.extensionContext openURL:[NSURL URLWithString:@"jwapp://busrider"]
+                 completionHandler:^(BOOL success) {
+                     NSLog(@"open url result:%d",success);
+                 }];
 }
 
 @end
