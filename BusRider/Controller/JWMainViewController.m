@@ -10,9 +10,10 @@
 #import "JWSearchRequest.h"
 #import "JWBusLineItem.h"
 #import "JWBusLineViewController.h"
+#import "JWViewUtil.h"
 
-#define kJWCellIdSearch @"kJWCellIdSearch"
-#define kJWSeguePushLine @"kJWSeguePushLine"
+#define JWCellIdSearch @"JWCellIdSearch"
+#define JWSeguePushLine @"JWSeguePushLine"
 
 @interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource>
 
@@ -31,7 +32,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:kJWSeguePushLine]) {
+    if ([segue.identifier isEqualToString:JWSeguePushLine]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
             busLineViewController.busLineItem = self.busLineItem;            
@@ -41,16 +42,20 @@
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (tableView == self.tableView) {
+        return 5;
+    } else {
+        return 3;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kJWCellIdSearch];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kJWCellIdSearch];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 56;
 }
 
 #pragma mark UISearchBarDelegate
@@ -60,6 +65,7 @@
     __weak typeof(self) weakSelf = self;
     [self.searchRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
+            [JWViewUtil showError:error];
             return;
         }
         NSInteger result = [dict[@"result"] integerValue];
@@ -67,7 +73,7 @@
             // list result
         } else if (result == 2) {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            [weakSelf performSegueWithIdentifier:kJWSeguePushLine sender:self];
+            [weakSelf performSegueWithIdentifier:JWSeguePushLine sender:self];
         }
     }];
 }

@@ -12,5 +12,8 @@
 
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)resizableImageWithColor:(UIColor *)color;
++ (void)showErrorWithMessage:(NSString *)message;
++ (void)showSuccessWithMessage:(NSString *)message;
++ (void)showError:(NSError *)error;
 
 @end

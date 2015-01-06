@@ -4,7 +4,7 @@ target :BusRider do
     pod 'STHTTPRequest'
     pod 'SVPullToRefresh'
     pod 'SGNavigationProgress'
-    pod 'MBProgressHUD'
+    pod 'SVProgressHUD'
 end
 
 target :Today do

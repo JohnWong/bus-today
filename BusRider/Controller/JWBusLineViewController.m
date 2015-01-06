@@ -18,6 +18,7 @@
 #import "JWGroupDataUtil.h"
 #import "JWSwitchChangeButton.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import "JWViewUtil.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -143,7 +144,7 @@
             case JWBusStateNotStarted:
                 self.mainLabel.text = @"--";
                 self.unitLabel.text = @"";
-                self.updateLabel.text = [NSString stringWithFormat:@"上一辆车发出%ld分钟", self.busInfoItem.pastTime];
+                self.updateLabel.text = self.busInfoItem.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", self.busInfoItem.pastTime];
                 break;
             case JWBusStateNotFound:
                 self.mainLabel.text = @"--";
@@ -210,7 +211,7 @@
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
         if (error) {
-            // TODO
+            [JWViewUtil showError:error];
             return;
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
@@ -250,7 +251,7 @@
         }
         [self updateTodayButton];
     } else {
-        
+        [JWViewUtil showErrorWithMessage:@"请先点击选择当前站点"];
     }
 }
 

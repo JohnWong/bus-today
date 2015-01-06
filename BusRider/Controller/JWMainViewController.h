@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JWMainViewController : UIViewController
+@interface JWMainViewController : UITableViewController
 
 @end

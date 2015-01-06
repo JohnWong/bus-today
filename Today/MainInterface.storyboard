@@ -251,7 +251,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="JWIconRefresh.png" width="20" height="20"/>
+        <image name="JWIconRefresh.png" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

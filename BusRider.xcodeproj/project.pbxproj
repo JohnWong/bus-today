@@ -592,7 +592,7 @@
 					};
 					52AB79F51A2E1982001904CA = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = RMP5PV6R6N;
+						DevelopmentTeam = RAB78V9Y6Z;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -821,7 +821,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "64bdc028-2288-46dd-8dc6-ecc7aa6aca1a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -857,7 +856,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "64bdc028-2288-46dd-8dc6-ecc7aa6aca1a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -881,7 +879,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "da694ffb-d202-4ffe-bcf2-fd48be0e0aef";
 			};
 			name = Debug;
 		};
@@ -902,7 +900,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "da694ffb-d202-4ffe-bcf2-fd48be0e0aef";
 			};
 			name = Release;
 		};
@@ -921,6 +919,7 @@
 				INFOPLIST_FILE = BusRiderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRider.app/BusRider";
 			};
 			name = Debug;
@@ -936,6 +935,7 @@
 				INFOPLIST_FILE = BusRiderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRider.app/BusRider";
 			};
 			name = Release;
@@ -959,7 +959,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "01c27f90-88db-438f-9330-1e5a7deae1bd";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -979,7 +979,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "01c27f90-88db-438f-9330-1e5a7deae1bd";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -7,20 +7,14 @@
 //
 
 #import "JWRequestWithAlert.h"
+#import "JWViewUtil.h"
 
 @implementation JWRequestWithAlert
 
 - (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
     JWCompletion completionWithAlert = ^(NSDictionary *dict, NSError *error) {
         if (error) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:error.userInfo[NSLocalizedDescriptionKey]?:error.domain
-                                                                                     message:nil
-                                                                              preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [alertController dismissViewControllerAnimated:YES completion:nil];
-            }];
-            [alertController addAction:alertAction];
-            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+            [JWViewUtil showError:error];
         }
         completion(dict, error);
     };

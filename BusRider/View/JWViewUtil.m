@@ -7,6 +7,7 @@
 //
 
 #import "JWViewUtil.h"
+#import "SVProgressHUD.h"
 
 @implementation JWViewUtil
 
@@ -21,6 +22,25 @@
 
 + (UIImage *)resizableImageWithColor:(UIColor *)color {
     return [[self imageWithColor:color size:CGSizeMake(1, 1)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+}
+
++ (void)setHUDColor {
+    [SVProgressHUD setBackgroundColor:HEXCOLORA(0xeeeeee, 0.95)];
+}
+
++ (void)showErrorWithMessage:(NSString *)message {
+    [self setHUDColor];
+    [SVProgressHUD showErrorWithStatus:message];
+}
+
++ (void)showSuccessWithMessage:(NSString *)message {
+    [self setHUDColor];
+    [SVProgressHUD showSuccessWithStatus:message];
+}
+
++ (void)showError:(NSError *)error {
+    [self setHUDColor];
+    [SVProgressHUD showErrorWithStatus:error.localizedDescription ? : error.domain];
 }
 
 @end
