@@ -10,7 +10,15 @@
 
 @interface JWItem : NSObject
 
-- (id)initWithDictionary:(NSDictionary *)dict;
+- (instancetype)initWithDictionary:(NSDictionary *)dict NS_DESIGNATED_INITIALIZER;
 - (void)setFromDictionary:(NSDictionary *)dict;
+/**
+ *  Get array of JWItem from array of NSDictionary
+ *
+ *  @param array of NSDictionary
+ *
+ *  @return array of JWItem
+ */
++ (NSArray *)arrayFromDictionary:(NSArray *)array;
 
 @end

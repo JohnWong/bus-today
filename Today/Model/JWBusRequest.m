@@ -20,13 +20,11 @@
     return @"line!map2";
 }
 
-- (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
+- (NSString *)validateParams {
     if (!self.lineId || self.lineId.length <= 0) {
-        NSError *error = [NSError errorWithDomain:@"请先到应用中选择路线" code:0 userInfo:nil];
-        completion(nil, error);
-    } else {
-        [super loadWithCompletion:completion progress:progress];
+        return @"请先到应用中选择路线";
     }
+    return nil;
 }
 
 @end

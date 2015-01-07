@@ -10,7 +10,7 @@
 
 @implementation JWItem
 
-- (id)initWithDictionary:(NSDictionary *)dict {
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
         [self setFromDictionary:dict];
     }
@@ -18,5 +18,14 @@
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict {}
+
++ (NSArray *)arrayFromDictionary:(NSArray *)array {
+    NSArray *ret = [[NSArray alloc] init];
+    for (NSDictionary *dict in array) {
+        id item = [[self alloc] initWithDictionary:dict];
+        ret = [ret arrayByAddingObject:item];
+    }
+    return ret;
+}
 
 @end

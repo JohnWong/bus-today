@@ -80,7 +80,7 @@
 }
 
 - (void)setItemInternal:(JWBusInfoItem *)item {
-    self.titleLabel.text = [NSString stringWithFormat:@"%@路", item.lineNumber];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@", item.lineNumber];
     self.stationLabel.text = [NSString stringWithFormat:@"距%@", item.currentStop];
     
     self.fromLabel.text = item.from;

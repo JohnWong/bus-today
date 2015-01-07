@@ -20,4 +20,11 @@
     return @"line!map2";
 }
 
+- (NSString *)validateParams {
+    if (!self.lineId || self.lineId.length <= 0) {
+        return @"线路ID不能为空";
+    }
+    return nil;
+}
+
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "JWItem.h"
-
+/**
+ *  Used by JWBusLineItem
+ */
 @interface JWBusItem : JWItem
 
 @property (nonatomic, assign, getter=isArrived) BOOL arrived;

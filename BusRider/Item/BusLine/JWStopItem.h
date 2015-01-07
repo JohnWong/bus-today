@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import "JWItem.h"
-
+/**
+ *  Used by JWBusLineItem
+ */
 @interface JWStopItem : JWItem
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;

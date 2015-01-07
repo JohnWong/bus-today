@@ -9,6 +9,9 @@
 #import "JWItem.h"
 #import "JWLineItem.h"
 
+/**
+ *  包含了一个JWLineItem和多个JWStopItem、JWBusItem
+ */
 @interface JWBusLineItem : JWItem
 
 @property (nonatomic, strong) JWLineItem *lineItem;

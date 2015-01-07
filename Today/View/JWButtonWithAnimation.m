@@ -23,8 +23,8 @@
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animation.duration = 1.0;
     animation.repeatCount = CGFLOAT_MAX;
-    animation.fromValue = [NSNumber numberWithFloat:0.0];
-    animation.toValue = [NSNumber numberWithFloat:M_PI];
+    animation.fromValue = @0.0f;
+    animation.toValue = @M_PI;
     animation.delegate = self;
     [self.imageView.layer addAnimation:animation forKey:kJWRefreshAnimationKey];
 }

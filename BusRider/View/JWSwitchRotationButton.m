@@ -11,7 +11,7 @@
 @implementation JWSwitchRotationButton
 
 #pragma mark lifecycle
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:(NSCoder *)aDecoder]) {
         [self addTarget:self action:@selector(didTap:) forControlEvents:UIControlEventTouchUpInside];
     }

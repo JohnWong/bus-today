@@ -26,7 +26,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="RUy-77-phm"/>
@@ -303,7 +303,6 @@
                     <navigationItem key="navigationItem" id="vjt-mN-QuG">
                         <barButtonItem key="backBarButtonItem" id="oJP-1u-Sd8"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
@@ -347,6 +346,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="EwO-e6-NuY">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -356,7 +356,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JWCellIdSearch" rowHeight="56" id="b4h-jK-XA6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JWCellIdCollect" rowHeight="56" id="b4h-jK-XA6">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4h-jK-XA6" id="jcT-bO-vo4">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -385,8 +385,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="公交信息" id="56u-eM-wRg"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="rXk-mQ-GD1" id="u4a-MF-A1I"/>
-                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLine" id="jwN-Vj-vCx"/>
+                        <outlet property="searchController" destination="rXk-mQ-GD1" id="ZYF-JY-Fnh"/>
+                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithData" id="jwN-Vj-vCx"/>
+                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithId" id="G7i-vT-q86"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-BV-Afg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,4 +417,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jwN-Vj-vCx"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

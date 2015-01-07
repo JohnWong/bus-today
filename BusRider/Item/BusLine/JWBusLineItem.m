@@ -7,7 +7,6 @@
 //
 
 #import "JWBusLineItem.h"
-#import "JWItemArray.h"
 #import "JWStopItem.h"
 #import "JWBusItem.h"
 
@@ -15,9 +14,8 @@
 
 - (void)setFromDictionary:(NSDictionary *)dict {
     self.lineItem = [[JWLineItem alloc] initWithDictionary:dict];
-    self.stopItems = [JWItemArray arrayWithItemClass:JWStopItem.class dictArray:dict[@"map"]];
-    self.busItems = [JWItemArray arrayWithItemClass:JWBusItem.class dictArray:dict[@"bus"]];
-    
+    self.stopItems = [JWStopItem arrayFromDictionary:dict[@"map"]];
+    self.busItems = [JWBusItem arrayFromDictionary:dict[@"bus"]];
 }
 
 @end

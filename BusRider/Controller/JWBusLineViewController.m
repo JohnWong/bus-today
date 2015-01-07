@@ -57,7 +57,17 @@
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"JWIconCollectOn"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     
-    [self updateViews];
+    /**
+     *  If data is given, just update views. Or lineId is given, load request at once.
+     */
+    if (self.busLineItem) {
+        self.title = self.busLineItem.lineItem.lineNumber;
+        [self updateViews];
+    } else {
+        self.lineRequest.lineId = self.searchLineItem.lineId;
+        self.title = self.searchLineItem.lineNumber;
+        [self loadRequest];
+    }
 }
 
 - (void)refreshControl:(UIRefreshControl *)refreshControl
@@ -76,10 +86,8 @@
 }
 
 - (void)updateViews {
-    self.title = [NSString stringWithFormat:@"%@路", self.busLineItem.lineItem.lineNumber];
-    
     JWLineItem *lineItem = self.busLineItem.lineItem;
-    self.titleLabel.text = [NSString stringWithFormat:@"%@路(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
     self.lastTimeLabel.text = lineItem.lastTime;
     

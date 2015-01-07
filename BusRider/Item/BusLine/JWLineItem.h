@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "JWItem.h"
-
+/**
+ *  Used by JWBusLineItem
+ */
 @interface JWLineItem : JWItem
 /**
  *  路线id

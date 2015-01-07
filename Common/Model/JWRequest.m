@@ -24,7 +24,14 @@
 }
 
 - (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
+    NSString *checkResult = [self validateParams];
+    if (checkResult) {
+        NSError *error = [NSError errorWithDomain:checkResult code:0 userInfo:nil];
+        completion(nil, error);
+        return;
+    }
     NSLog(@"JWRequest: load %@", [self urlPath]);
+    
     __weak typeof(self) weakSelf = self;
     if (self.request) {
         [self.request cancel];
@@ -78,6 +85,10 @@
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
     return [NSString stringWithFormat:@"http://%@/bus/%@.action?s=IOS&v=2.9&cityId=004&sign=%@", kJWHost, [self actionName], paramString];
+}
+
+- (NSString *)validateParams {
+    return nil;
 }
 
 @end

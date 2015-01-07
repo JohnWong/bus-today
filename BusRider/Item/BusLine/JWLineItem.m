@@ -13,7 +13,13 @@
 - (void)setFromDictionary:(NSDictionary *)dict {
     NSDictionary *lineDict = dict[@"line"];
     self.lineId = lineDict[@"lineId"];
-    self.lineNumber = lineDict[@"lineName"];
+    NSString *lineName = lineDict[@"lineName"];
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"\\d*" options:0 error:nil];
+    if ([regularExpression stringByReplacingMatchesInString:lineName options:0 range:NSMakeRange(0, lineName.length) withTemplate:@""].length == 0) {
+        self.lineNumber = [NSString stringWithFormat:@"%@路", lineName];
+    } else {
+        self.lineNumber = lineName;
+    }
     self.from = lineDict[@"startStopName"];
     self.to = lineDict[@"endStopName"];
     self.firstTime = lineDict[@"firstTime"];
