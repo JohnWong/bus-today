@@ -162,9 +162,8 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离文一西路狮山路口" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-is-1zH">
-                                        <rect key="frame" x="16" y="16" width="140" height="17"/>
+                                        <rect key="frame" x="16" y="16" width="204" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="IUr-D8-hrK"/>
                                             <constraint firstAttribute="height" constant="17" id="oUV-rY-yGh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -197,9 +196,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3分钟前更新" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ble-G6-1bG">
-                                        <rect key="frame" x="16" y="99" width="210" height="17"/>
+                                        <rect key="frame" x="16" y="99" width="204" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="210" id="BUk-3l-uij"/>
                                             <constraint firstAttribute="height" constant="17" id="CZf-47-gtw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -241,7 +239,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="refresh:" destination="TYM-DL-tKA" eventType="touchUpInside" id="KxT-tN-Pmu"/>
                                             <action selector="revertDirection:" destination="TYM-DL-tKA" eventType="touchUpInside" id="mwQ-aC-ha0"/>
                                         </connections>
                                     </button>
@@ -273,6 +270,7 @@
                                     <constraint firstItem="BtA-zv-JZb" firstAttribute="top" secondItem="eyO-Ni-QJW" secondAttribute="bottom" constant="8" id="OV3-He-ZtP"/>
                                     <constraint firstAttribute="trailing" secondItem="Xp1-1q-8jA" secondAttribute="trailing" id="Okd-Qo-K9F"/>
                                     <constraint firstItem="3cR-du-zIQ" firstAttribute="leading" secondItem="eyO-Ni-QJW" secondAttribute="leading" id="Qhb-YU-IRr"/>
+                                    <constraint firstItem="eyO-Ni-QJW" firstAttribute="leading" secondItem="icu-is-1zH" secondAttribute="trailing" constant="8" id="QsH-h9-wXf"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="leading" secondItem="3sa-F3-v9B" secondAttribute="leading" constant="16" id="RKR-0R-EsO"/>
                                     <constraint firstItem="icu-is-1zH" firstAttribute="leading" secondItem="ble-G6-1bG" secondAttribute="leading" id="RNs-th-8PH"/>
                                     <constraint firstItem="GYn-wc-OIZ" firstAttribute="bottom" secondItem="E0g-Dj-Blm" secondAttribute="bottom" constant="-6" id="RQh-bf-6kE"/>
@@ -286,6 +284,7 @@
                                     <constraint firstItem="3cR-du-zIQ" firstAttribute="leading" secondItem="BtA-zv-JZb" secondAttribute="leading" id="x82-gv-phh"/>
                                     <constraint firstAttribute="height" constant="132" id="y4x-xy-iYp"/>
                                     <constraint firstItem="3cR-du-zIQ" firstAttribute="trailing" secondItem="eyO-Ni-QJW" secondAttribute="trailing" id="yHa-L6-7i0"/>
+                                    <constraint firstItem="3cR-du-zIQ" firstAttribute="leading" secondItem="ble-G6-1bG" secondAttribute="trailing" constant="8" id="z2x-4f-20b"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -355,28 +354,6 @@
                                 <outlet property="delegate" destination="W5h-xe-WPW" id="fR0-yI-N5N"/>
                             </connections>
                         </searchBar>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JWCellIdCollect" rowHeight="56" id="b4h-jK-XA6">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4h-jK-XA6" id="jcT-bO-vo4">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconBus.png" translatesAutoresizingMaskIntoConstraints="NO" id="cAq-f1-onF">
-                                            <rect key="frame" x="16" y="16" width="24" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="24" id="0zy-Qp-4Bq"/>
-                                                <constraint firstAttribute="width" constant="24" id="E66-6N-Oo5"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="cAq-f1-onF" firstAttribute="leading" secondItem="jcT-bO-vo4" secondAttribute="leading" constant="16" id="4GC-Ww-ldy"/>
-                                        <constraint firstAttribute="centerY" secondItem="cAq-f1-onF" secondAttribute="centerY" id="iRR-hs-Ncy"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="W5h-xe-WPW" id="kol-Px-5rr"/>
@@ -405,7 +382,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="JWIconBus.png" width="16" height="16"/>
         <image name="JWIconExchange.png" width="16" height="16"/>
         <image name="JWIconRefresh.png" width="16" height="16"/>
         <image name="JWIconTodayOff" width="16" height="16"/>
@@ -418,7 +394,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jwN-Vj-vCx"/>
+        <segue reference="G7i-vT-q86"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

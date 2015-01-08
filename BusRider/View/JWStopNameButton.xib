@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-Le-d4V" customClass="JWOnePixelView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-Le-d4V" customClass="JWOnePixelView">
                     <color key="backgroundColor" red="0.84313725490196079" green="0.84705882352941175" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" id="iwQ-BS-7Ah"/>
@@ -52,6 +52,23 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日插件" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxF-sP-cNP">
+                    <rect key="frame" x="260" y="16" width="52" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.73333333333333328" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="OXN-b9-qkB"/>
+                        <constraint firstAttribute="height" constant="18" id="c2u-3M-ORY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
             </subviews>
             <constraints>
                 <constraint firstItem="QY2-9b-2uP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3fh-97-jI2"/>
@@ -62,7 +79,9 @@
                 <constraint firstAttribute="bottom" secondItem="lYa-Le-d4V" secondAttribute="bottom" id="SBy-PU-3Cj"/>
                 <constraint firstItem="cBA-8f-3Zn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="YtA-xx-55w"/>
                 <constraint firstAttribute="trailing" secondItem="cBA-8f-3Zn" secondAttribute="trailing" constant="293" id="c0C-HM-Z2f"/>
+                <constraint firstAttribute="centerY" secondItem="wxF-sP-cNP" secondAttribute="centerY" id="dwk-Bv-P2c"/>
                 <constraint firstItem="cBA-8f-3Zn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="11" id="kij-Yv-msP"/>
+                <constraint firstAttribute="trailing" secondItem="wxF-sP-cNP" secondAttribute="trailing" constant="8" id="pu1-1U-QFY"/>
                 <constraint firstAttribute="trailing" secondItem="QY2-9b-2uP" secondAttribute="trailing" id="y7h-ry-CfY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -75,6 +94,7 @@
                 <outlet property="indexLabel" destination="cBA-8f-3Zn" id="dNs-tu-8Sc"/>
                 <outlet property="separator" destination="lYa-Le-d4V" id="cO0-WV-liF"/>
                 <outlet property="titleButton" destination="QY2-9b-2uP" id="Cdc-fI-r2J"/>
+                <outlet property="todayButton" destination="wxF-sP-cNP" id="CFh-at-6Zt"/>
             </connections>
         </view>
     </objects>

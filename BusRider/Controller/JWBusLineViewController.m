@@ -9,13 +9,12 @@
 #import "JWBusLineViewController.h"
 #import "JWStopNameButton.h"
 #import "JWStopItem.h"
-#import "JWSearchRequest.h"
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "JWBusInfoItem.h"
 #import "UINavigationController+SGProgress.h"
-#import "JWGroupDataUtil.h"
+#import "JWUserDefaultsUtil.h"
 #import "JWSwitchChangeButton.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "JWViewUtil.h"
@@ -43,6 +42,8 @@
 @property (nonatomic, strong) JWLineRequest *lineRequest;
 @property (nonatomic, strong) NSString *selectedStopId;
 @property (nonatomic, strong) JWBusInfoItem *busInfoItem;
+@property (nonatomic, strong) NSString *lineNumber;
+@property (nonatomic, strong) NSString *lineId;
 
 @end
 
@@ -55,24 +56,18 @@
     self.contentView.layer.cornerRadius = 4;
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"JWIconCollectOn"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil stopIdForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+    self.title = self.lineNumber;
     
     /**
      *  If data is given, just update views. Or lineId is given, load request at once.
      */
     if (self.busLineItem) {
-        self.title = self.busLineItem.lineItem.lineNumber;
         [self updateViews];
     } else {
-        self.lineRequest.lineId = self.searchLineItem.lineId;
-        self.title = self.searchLineItem.lineNumber;
         [self loadRequest];
     }
-}
-
-- (void)refreshControl:(UIRefreshControl *)refreshControl
-{
-    [refreshControl endRefreshing];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -100,11 +95,13 @@
         }
     }
     
+    NSString *savedStopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
+    
     JWStopItem *selectedItem = nil;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
-        [stopButton setIndex:i + 1 title:stopItem.stopName isLast:i == count - 1];
+        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:[stopItem.stopId isEqualToString:savedStopId]];
         
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
@@ -113,6 +110,7 @@
             stopButton.titleButton.selected = YES;
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
         }
+        
         [self.contentView addSubview:stopButton];
         
         // add constraints
@@ -185,7 +183,7 @@
 }
 
 - (void)updateTodayButton {
-    NSDictionary *userInfo = [JWGroupDataUtil objectForKey:JWKeyBusLine];
+    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
     if (userInfo) {
         NSString *lineId = userInfo[@"lineId"];
         NSString *stopId = userInfo[@"stopId"];
@@ -208,14 +206,36 @@
 - (JWLineRequest *)lineRequest {
     if (!_lineRequest) {
         _lineRequest = [[JWLineRequest alloc] init];
-        _lineRequest.lineId = self.busLineItem.lineItem.lineId;
     }
     return _lineRequest;
+}
+
+- (NSString *)lineId {
+    if (!_lineId) {
+        if (self.busLineItem) {
+            _lineId = self.busLineItem.lineItem.lineId;
+        } else {
+            _lineId = self.searchLineItem.lineId;
+        }
+    }
+    return _lineId;
+}
+
+- (NSString *)lineNumber {
+    if (!_lineNumber) {
+        if (self.busLineItem) {
+            _lineNumber = self.busLineItem.lineItem.lineNumber;
+        } else {
+            _lineNumber = self.searchLineItem.lineNumber;
+        }
+    }
+    return _lineNumber;
 }
 
 #pragma mark action
 - (void)loadRequest {
     __weak typeof(self) weakSelf = self;
+    self.lineRequest.lineId = self.lineId;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
         if (error) {
@@ -234,19 +254,31 @@
 }
 
 - (IBAction)revertDirection:(id)sender {
-    self.lineRequest.lineId = self.busLineItem.lineItem.otherLineId;
+    self.lineId = self.busLineItem.lineItem.otherLineId;
     [self loadRequest];
 }
 
 - (void)collect:(id)sender {
     if ([sender isKindOfClass:[UIBarButtonItem class]]) {
         UIBarButtonItem *barButton = (UIBarButtonItem *)sender;
-        static int i = 0;
-        if (i++ % 2) {
-            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOn"]];
+        
+        if (self.busLineItem) {
+            self.title = self.busLineItem.lineItem.lineNumber;
+            [self updateViews];
         } else {
-            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOff"]];
+            self.title = self.searchLineItem.lineNumber;
+            [self loadRequest];
         }
+        
+        NSString *stopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
+        if (stopId) {
+            [JWUserDefaultsUtil removeLineId:self.lineId];
+            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOff"]];
+        } else {
+            [JWUserDefaultsUtil saveLineNumber:self.title lineId:self.lineId stopId:self.selectedStopId ? : @""];
+            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOn"]];
+        }
+        stopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
     }
 }
 
@@ -255,11 +287,11 @@
         if (self.todayButton.isOn) {
             [self removeTodayInfo];
         } else {
-            [self saveLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopId];
+            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopId];
         }
         [self updateTodayButton];
     } else {
-        [JWViewUtil showErrorWithMessage:@"请先点击选择当前站点"];
+        [JWViewUtil showInfoWithMessage:@"请先点击选择当前站点"];
     }
 }
 
@@ -267,17 +299,22 @@
     [self loadRequest];
 }
 
-- (void)saveLineId:(NSString *)lineId stopId:(NSString *)stopId {
-    [JWGroupDataUtil setObject:@{@"lineId": lineId,
+- (NSString *)todayBundleId {
+    NSString *mainId = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleIdentifierKey];
+    return [mainId stringByAppendingString:@".Today"];
+}
+
+- (void)setTodayInfoWithLineId:(NSString *)lineId stopId:(NSString *)stopId {
+    [[JWUserDefaultsUtil groupUserDefaults] setObject:@{@"lineId": lineId,
                                  @"stopId": stopId}
                         forKey:JWKeyBusLine];
-    [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:@"com.visionary.BusRider.Today"];
+    [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:[self todayBundleId]];
     
 }
 
 - (void)removeTodayInfo {
-    [JWGroupDataUtil removeObjectForKey:JWKeyBusLine];
-    [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:@"com.visionary.BusRider.Today"];
+    [[JWUserDefaultsUtil groupUserDefaults] removeObjectForKey:JWKeyBusLine];
+    [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
 }
 
 @end

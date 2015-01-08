@@ -33,14 +33,28 @@
     [SVProgressHUD showErrorWithStatus:message];
 }
 
++ (void)showError:(NSError *)error {
+    [self setHUDColor];
+    [SVProgressHUD showErrorWithStatus:error.localizedDescription ? : error.domain];
+}
+
 + (void)showSuccessWithMessage:(NSString *)message {
     [self setHUDColor];
     [SVProgressHUD showSuccessWithStatus:message];
 }
 
-+ (void)showError:(NSError *)error {
++ (void)showInfoWithMessage:(NSString *)message {
     [self setHUDColor];
-    [SVProgressHUD showErrorWithStatus:error.localizedDescription ? : error.domain];
+    [SVProgressHUD showInfoWithStatus:message];
+}
+
++ (void)showProgress {
+    [self setHUDColor];
+    [SVProgressHUD show];
+}
+
++ (void)hideProgress {
+    [SVProgressHUD dismiss];
 }
 
 @end

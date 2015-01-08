@@ -8,7 +8,7 @@
 
 #import "JWRequestWithAlert.h"
 
-@interface JWSearchRequest : JWRequestWithAlert
+@interface JWSearchRequest : JWRequest
 
 @property (nonatomic, strong) NSString *keyWord;
 

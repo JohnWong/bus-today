@@ -15,5 +15,8 @@
 + (void)showErrorWithMessage:(NSString *)message;
 + (void)showSuccessWithMessage:(NSString *)message;
 + (void)showError:(NSError *)error;
++ (void)showInfoWithMessage:(NSString *)message;
++ (void)showProgress;
++ (void)hideProgress;
 
 @end

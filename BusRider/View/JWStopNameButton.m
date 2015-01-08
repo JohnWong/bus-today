@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView *separator;
 @property (nonatomic, weak) IBOutlet UILabel *indexLabel;
+@property (weak, nonatomic) IBOutlet UILabel *todayButton;
 
 @end
 
@@ -29,7 +30,7 @@
 
 
 #pragma mark action
-- (void)setIndex:(NSInteger)index title:(NSString *)title isLast:(BOOL)isLast {
+- (void)setIndex:(NSInteger)index title:(NSString *)title last:(BOOL)isLast today:(BOOL)isToday{
     if (isLast) {
         self.separator.hidden = YES;
     } else {
@@ -37,6 +38,12 @@
     }
     self.indexLabel.text = [NSString stringWithFormat:@"%ld", index];;
     [self.titleButton setTitle:title forState:UIControlStateNormal];
+    
+    if (isToday) {
+        self.todayButton.hidden = NO;
+    } else {
+        self.todayButton.hidden = YES;
+    }
 }
 
 @end

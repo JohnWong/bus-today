@@ -12,7 +12,7 @@
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "JWBusRequest.h"
-#import "JWGroupDataUtil.h"
+#import "JWUserDefaultsUtil.h"
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
 
@@ -40,7 +40,7 @@
 }
 
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
-    NSDictionary *userInfo = [JWGroupDataUtil objectForKey:JWKeyBusLine];
+    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
     
     [self.busCardView setLoadingView];
     

@@ -15,6 +15,9 @@
 #import "JWSearchLineItem.h"
 #import "JWSearchStopItem.h"
 #import "JWSearchTableViewCell.h"
+#import "JWUserDefaultsUtil.h"
+#import "SVPullToRefresh.h"
+#import "UINavigationController+SGProgress.h"
 
 #define JWCellIdCollect @"JWCellIdCollect"
 #define JWCellIdSearch @"JWCellIdSearch"
@@ -31,6 +34,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
 @property (nonatomic, strong) JWSearchListItem *searchListItem;
+/**
+ *  array of JWSearchLineItem
+ */
+@property (nonatomic, strong) NSArray *collectLineItem;
+
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchController;
 
 /**
@@ -55,6 +63,15 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf loadData];
+        [weakSelf.tableView.pullToRefreshView stopAnimating];
+    }];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:JWSeguePushLineWithData]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
@@ -72,10 +89,10 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.tableView) {
-        return 5;
+        return self.collectLineItem ? self.collectLineItem.count : 0;
     } else {
         if (self.searchListItem) {
-            if (section == 0) {
+            if (section == 0 && self.searchListItem.lineList.count > 0) {
                 return self.searchListItem.lineList.count;
             } else {
                 return self.searchListItem.stopList.count;
@@ -91,7 +108,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         return 1;
     } else {
         if (self.searchListItem) {
-            return 2;
+            return (self.searchListItem.lineList.count == 0 ? 0 : 1) + (self.searchListItem.stopList.count == 0 ? 0 : 1);
         } else {
             return 0;
         }
@@ -101,10 +118,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
         JWSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
+        NSDictionary *dict = self.collectLineItem[indexPath.row];
+        cell.titleLabel.text = dict[@"lineNumber"];
         return cell;
     } else {
         JWSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
-        if (indexPath.section == 0) {
+        if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
             JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];
             cell.titleLabel.text = lineItem.lineNumber;
         } else {
@@ -135,14 +154,18 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        
+        NSDictionary *lineDict = self.collectLineItem[indexPath.row];
+        self.selectedLine = [[JWSearchLineItem alloc] init];
+        self.selectedLine.lineId = lineDict[@"lineId"];
+        self.selectedLine.lineNumber = lineDict[@"lineNumber"];
+        [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
     } else {
         if (indexPath.section == 0) {
             JWSearchLineItem *searchLineItem = self.searchListItem.lineList[indexPath.row];
             self.selectedLine = searchLineItem;
             [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
         } else {
-            
+            // TODO 站点界面
         }
     }
 }
@@ -150,15 +173,14 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchText = searchBar.text;
-    // TODO request and show progress
     if (searchText && searchText.length > 0) {
-        [self loadRequestWithKeyword:searchText isShowProgress:YES];
+        [self loadRequestWithKeyword:searchText showHUD:YES];
     }
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (searchText && searchText.length > 0) {
-        [self loadRequestWithKeyword:searchText isShowProgress:YES];
+        [self loadRequestWithKeyword:searchText showHUD:NO];
     }
 }
 
@@ -170,16 +192,36 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     return _searchRequest;
 }
 
+- (NSArray *)collectLineItem {
+    if (!_collectLineItem) {
+        _collectLineItem = [[[JWUserDefaultsUtil allStopIdAndLineId] reverseObjectEnumerator] allObjects];
+    }
+    return _collectLineItem;
+}
+
 #pragma mark action
-- (void)loadRequestWithKeyword:(NSString *)keyword isShowProgress:(BOOL)isShowProgress{
+- (void)loadData {
+    [self.navigationController showSGProgressWithDuration:0.8];
+    _collectLineItem = nil;
+    [self.tableView reloadData];
+}
+
+- (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD{
+    if (isShowHUD) {
+        [JWViewUtil showProgress];
+    }
+    
     self.searchRequest.keyWord = keyword;
     __weak typeof(self) weakSelf = self;
     [self.searchRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-        if (error) {
-            if (isShowProgress) {
-                // TODO show progress hud and hold interaction
+        if (isShowHUD) {
+            if (error) {
                 [JWViewUtil showError:error];
+            } else {
+                [JWViewUtil hideProgress];
             }
+        }
+        if (error) {
             weakSelf.searchListItem = nil;
             [weakSelf.searchController.searchResultsTableView reloadData];
             return;
@@ -193,6 +235,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             weakSelf.searchListItem = [[JWSearchListItem alloc] initWithDictionary:dict];
             [weakSelf.searchController.searchResultsTableView reloadData];
         } else if (result == JWSearchResultTypeSingle) {
+            // single result
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
             [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:self];
         }
