@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JWCollectItem.h"
 
 #define JWKeyBusLine @"BusLine"
 
@@ -21,9 +22,14 @@
 
 //---------------------------------------------------------------
 // 收藏店铺的方法
-+ (void)saveLineNumber:(NSString *)lineNumber lineId:(NSString *)lineId stopId:(NSString *)stopId;
-+ (NSString *)stopIdForLineId:(NSString *)lineId;
-+ (void)removeLineId:(NSString *)lineId;
-+ (NSArray *)allStopIdAndLineId;
++ (void)saveCollectItem:(JWCollectItem *)item;
++ (JWCollectItem *)collectItemForLineId:(NSString *)lineId;
++ (void)removeCollectItemWithLineId:(NSString *)lineId;
+/**
+ *  返回所有收藏的线路信息
+ *
+ *  @return array of JWCollectItem
+ */
++ (NSArray *)allCollectItems;
 
 @end

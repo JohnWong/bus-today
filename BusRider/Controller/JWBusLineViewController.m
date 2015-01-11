@@ -18,6 +18,7 @@
 #import "JWSwitchChangeButton.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "JWViewUtil.h"
+#import "JWCollectItem.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -40,7 +41,7 @@
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
 @property (nonatomic, strong) JWLineRequest *lineRequest;
-@property (nonatomic, strong) NSString *selectedStopId;
+@property (nonatomic, strong) JWStopItem *selectedStopItem;
 @property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 @property (nonatomic, strong) NSString *lineNumber;
 @property (nonatomic, strong) NSString *lineId;
@@ -57,8 +58,16 @@
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil stopIdForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     self.title = self.lineNumber;
+    
+    JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
+    if (collectItem) {
+        JWStopItem *stopItem = [[JWStopItem alloc] init];
+        stopItem.stopId = collectItem.stopId;
+        stopItem.stopName = collectItem.stopName;
+        self.selectedStopItem = stopItem;
+    }
     
     /**
      *  If data is given, just update views. Or lineId is given, load request at once.
@@ -95,20 +104,26 @@
         }
     }
     
-    NSString *savedStopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
-    
-    JWStopItem *selectedItem = nil;
+    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
+    NSString *todayStopId;
+    if (userInfo && [self.lineId isEqualToString:userInfo[@"lineId"]]) {
+        todayStopId = userInfo[@"stopId"];
+    }
+    NSString *focusStopId = todayStopId ? : [JWUserDefaultsUtil collectItemForLineId:self.lineId].stopId;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
-        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:[stopItem.stopId isEqualToString:savedStopId]];
+        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopId && [stopItem.stopId isEqualToString:todayStopId]];
         
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
-        if ([stopItem.stopId isEqualToString:self.self.selectedStopId]) {
-            selectedItem = stopItem;
+        if (self.selectedStopItem && [stopItem.stopId isEqualToString:self.selectedStopItem.stopId]) {
             stopButton.titleButton.selected = YES;
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
+        }
+        if (focusStopId && [focusStopId isEqualToString:stopItem.stopId]) {
+            // TODO
+            self.scrollView.contentOffset =  CGPointMake(0, self.scrollView.contentOffset.y + self.contentView.top);
         }
         
         [self.contentView addSubview:stopButton];
@@ -187,7 +202,7 @@
     if (userInfo) {
         NSString *lineId = userInfo[@"lineId"];
         NSString *stopId = userInfo[@"stopId"];
-        if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopId]) {
+        if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopItem.stopId]) {
             self.todayButton.on = YES;
         } else {
             self.todayButton.on = NO;
@@ -198,8 +213,21 @@
 }
 
 - (void)didSelectStop:(UIButton *)sender {
-    self.selectedStopId = ((JWStopItem *)self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag]).stopId;
+    self.selectedStopItem = [((JWStopItem *)self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag]) copy];
+    [self updateCollectItem];
     [self loadRequest];
+}
+
+- (void)updateCollectItem {
+    JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
+    if (collectItem) {
+        [self saveCollectItem];
+    }
+}
+
+- (void)saveCollectItem {
+    JWCollectItem *collectItem = [[JWCollectItem alloc] initWithLineId:self.lineId lineNumber:self.lineNumber from:self.busLineItem.lineItem.from to:self.busLineItem.lineItem.to stopId:self.selectedStopItem.stopId ? : @"" stopName:self.selectedStopItem.stopName];
+    [JWUserDefaultsUtil saveCollectItem:collectItem];
 }
 
 #pragma mark getter
@@ -243,8 +271,8 @@
             return;
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            if (weakSelf.selectedStopId) {
-                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopId busInfo:dict];
+            if (weakSelf.selectedStopItem.stopId) {
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopItem.stopId busInfo:dict];
             }
             [weakSelf updateViews];
         }
@@ -270,24 +298,22 @@
             [self loadRequest];
         }
         
-        NSString *stopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
-        if (stopId) {
-            [JWUserDefaultsUtil removeLineId:self.lineId];
+        if ([JWUserDefaultsUtil collectItemForLineId:self.lineId]) {
+            [JWUserDefaultsUtil removeCollectItemWithLineId:self.lineId];
             [barButton setImage:[UIImage imageNamed:@"JWIconCollectOff"]];
         } else {
-            [JWUserDefaultsUtil saveLineNumber:self.title lineId:self.lineId stopId:self.selectedStopId ? : @""];
+            [self saveCollectItem];
             [barButton setImage:[UIImage imageNamed:@"JWIconCollectOn"]];
         }
-        stopId = [JWUserDefaultsUtil stopIdForLineId:self.lineId];
     }
 }
 
 - (IBAction)sendToToday:(id)sender {
-    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopId) {
+    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopItem.stopId) {
         if (self.todayButton.isOn) {
             [self removeTodayInfo];
         } else {
-            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopId];
+            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopItem.stopId];
         }
         [self updateTodayButton];
     } else {

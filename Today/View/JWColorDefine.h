@@ -18,4 +18,6 @@
 #define kJWMinorColor HEXCOLOR(0xA3A6AE)
 #define kJWBorderColor HEXCOLOR(0xcccccc)
 
+#define kJWTintColor HEXCOLOR(0x007aff)
+
 #endif

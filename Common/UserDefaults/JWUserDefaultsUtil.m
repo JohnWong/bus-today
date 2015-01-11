@@ -52,70 +52,73 @@
     return [sharedUserDefaults objectForKey:key];
 }
 
-+ (void)saveLineNumber:(NSString *)lineNumber lineId:(NSString *)lineId stopId:(NSString *)stopId {
+- (void)setItem:(id)item forKey:(NSString *)key {
+    NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
+    [self setObject:itemData forKey:key];
+}
+
+- (id)itemForKey:(NSString *)key {
+    NSUserDefaults *sharedUserDefaults = [self userDefaults];
+    NSData *itemData = [sharedUserDefaults objectForKey:key];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:itemData];
+}
+
++ (void)saveCollectItem:(JWCollectItem *)item {
     JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults objectForKey:JWKeyLineStop];
-    NSDictionary *dict = @{
-                           @"stopId": stopId,
-                           @"lineId": lineId,
-                           @"lineNumber": lineNumber
-                           };
+    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
     if (lineList == nil) {
-        lineList = [NSArray arrayWithObject:dict];
+        lineList = @[item];
     } else  {
         for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
-            NSDictionary *dict = lineList[i];
-            NSString *storedLineId = dict[@"lineId"];
-            if ([storedLineId isEqualToString:lineId]) {
+            JWCollectItem *savedItem = lineList[i];
+            if ([savedItem.lineId isEqualToString:item.lineId]) {
                 NSMutableArray *mutableArray = [lineList mutableCopy];
                 [mutableArray removeObjectAtIndex:i];
                 lineList = mutableArray;
                 break;
             }
         }
-        lineList = [lineList arrayByAddingObject:dict];
+        lineList = [lineList arrayByAddingObject:item];
     }
-    [userDefaults setObject:lineList forKey:JWKeyLineStop];
-    
+    [userDefaults setItem:lineList forKey:JWKeyLineStop];
 }
 
-+ (void)removeLineId:(NSString *)lineId {
++ (void)removeCollectItemWithLineId:(NSString *)lineId {
     JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults objectForKey:JWKeyLineStop];
+    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
     if (lineList == nil) {
         return;
     }
     for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
-        NSDictionary *dict = lineList[i];
-        NSString *storedLineId = dict[@"lineId"];
-        if ([storedLineId isEqualToString:lineId]) {
+        JWCollectItem *savedItem = lineList[i];
+        if ([savedItem.lineId isEqualToString:lineId]) {
             NSMutableArray *mutableArray = [lineList mutableCopy];
             [mutableArray removeObjectAtIndex:i];
             lineList = mutableArray;
             break;
         }
     }
-    [userDefaults setObject:lineList forKey:JWKeyLineStop];
+    [userDefaults setItem:lineList forKey:JWKeyLineStop];
 }
 
-+ (NSString *)stopIdForLineId:(NSString *)lineId {
++ (JWCollectItem *)collectItemForLineId:(NSString *)lineId {
     JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults objectForKey:JWKeyLineStop];
+    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
     if (lineList == nil) {
         return nil;
     } else {
-        for (NSDictionary *dict in lineList) {
-            if ([dict[@"lineId"] isEqualToString:lineId]) {
-                return dict[@"stopId"];
+        for (JWCollectItem *item in lineList) {
+            if ([item.lineId isEqualToString:lineId]) {
+                return item;
             }
         }
         return nil;
     }
 }
 
-+ (NSArray *)allStopIdAndLineId {
++ (NSArray *)allCollectItems {
     JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    return [userDefaults objectForKey:JWKeyLineStop];
+    return [userDefaults itemForKey:JWKeyLineStop];
 }
 
 @end

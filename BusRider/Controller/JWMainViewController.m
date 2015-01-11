@@ -18,8 +18,9 @@
 #import "JWUserDefaultsUtil.h"
 #import "SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
+#import "JWMainTableViewCell.h"
 
-#define JWCellIdCollect @"JWCellIdCollect"
+#define JWCellIdMain @"JWCellIdMain"
 #define JWCellIdSearch @"JWCellIdSearch"
 #define JWSeguePushLineWithData @"JWSeguePushLineWithData"
 #define JWSeguePushLineWithId @"JWSeguePushLineWithId"
@@ -59,7 +60,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
-    [self.tableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
@@ -117,9 +118,10 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        JWSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
-        NSDictionary *dict = self.collectLineItem[indexPath.row];
-        cell.titleLabel.text = dict[@"lineNumber"];
+        JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
+        JWCollectItem *item = self.collectLineItem[indexPath.row];
+        cell.titleLabel.text = item.lineNumber;
+        cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
         return cell;
     } else {
         JWSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
@@ -149,15 +151,19 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    if (tableView == self.tableView) {
+        return 54;
+    } else {
+        return 44;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        NSDictionary *lineDict = self.collectLineItem[indexPath.row];
+        JWCollectItem *item = self.collectLineItem[indexPath.row];
         self.selectedLine = [[JWSearchLineItem alloc] init];
-        self.selectedLine.lineId = lineDict[@"lineId"];
-        self.selectedLine.lineNumber = lineDict[@"lineNumber"];
+        self.selectedLine.lineId = item.lineId;
+        self.selectedLine.lineNumber = item.lineNumber;
         [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
     } else {
         if (indexPath.section == 0) {
@@ -194,7 +200,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (NSArray *)collectLineItem {
     if (!_collectLineItem) {
-        _collectLineItem = [[[JWUserDefaultsUtil allStopIdAndLineId] reverseObjectEnumerator] allObjects];
+        _collectLineItem = [[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects];
     }
     return _collectLineItem;
 }
