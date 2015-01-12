@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self loadData];
     __weak typeof(self) weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf loadData];
@@ -207,7 +208,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 #pragma mark action
 - (void)loadData {
-    [self.navigationController showSGProgressWithDuration:0.8];
+    [self.navigationController showSGProgressWithDuration:0.6];
     _collectLineItem = nil;
     [self.tableView reloadData];
 }

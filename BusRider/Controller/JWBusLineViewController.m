@@ -58,11 +58,10 @@
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     self.title = self.lineNumber;
     
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
-    if (collectItem) {
+    if (collectItem && collectItem.stopId && collectItem.stopName) {
         JWStopItem *stopItem = [[JWStopItem alloc] init];
         stopItem.stopId = collectItem.stopId;
         stopItem.stopName = collectItem.stopName;
@@ -90,6 +89,8 @@
 }
 
 - (void)updateViews {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+    
     JWLineItem *lineItem = self.busLineItem.lineItem;
     self.titleLabel.text = [NSString stringWithFormat:@"%@(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
@@ -110,6 +111,7 @@
         todayStopId = userInfo[@"stopId"];
     }
     NSString *focusStopId = todayStopId ? : [JWUserDefaultsUtil collectItemForLineId:self.lineId].stopId;
+    focusStopId = focusStopId ? : self.selectedStopItem.stopId;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
@@ -123,7 +125,11 @@
         }
         if (focusStopId && [focusStopId isEqualToString:stopItem.stopId]) {
             // TODO
-            self.scrollView.contentOffset =  CGPointMake(0, self.scrollView.contentOffset.y + self.contentView.top);
+            NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
+            if (scrollTo < - self.scrollView.contentInset.top) {
+                scrollTo = - self.scrollView.contentInset.top;
+            }
+            self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
         }
         
         [self.contentView addSubview:stopButton];
@@ -289,14 +295,6 @@
 - (void)collect:(id)sender {
     if ([sender isKindOfClass:[UIBarButtonItem class]]) {
         UIBarButtonItem *barButton = (UIBarButtonItem *)sender;
-        
-        if (self.busLineItem) {
-            self.title = self.busLineItem.lineItem.lineNumber;
-            [self updateViews];
-        } else {
-            self.title = self.searchLineItem.lineNumber;
-            [self loadRequest];
-        }
         
         if ([JWUserDefaultsUtil collectItemForLineId:self.lineId]) {
             [JWUserDefaultsUtil removeCollectItemWithLineId:self.lineId];
