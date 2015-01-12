@@ -37,6 +37,8 @@
 		525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */; };
 		5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558591A62BB1B00898779 /* JWMainTableViewCell.m */; };
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
+		528558611A642EA400898779 /* JWStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558601A642EA400898779 /* JWStopTableViewController.m */; };
+		528558641A6432C100898779 /* JWStopRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558631A6432C100898779 /* JWStopRequest.m */; };
 		52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D11A2E193E001904CA /* AppDelegate.m */; };
 		52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79E81A2E193E001904CA /* BusRiderTests.m */; };
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
@@ -159,6 +161,10 @@
 		528558581A62BB1B00898779 /* JWMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTableViewCell.h; sourceTree = "<group>"; };
 		528558591A62BB1B00898779 /* JWMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTableViewCell.m; sourceTree = "<group>"; };
 		5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWMainTableViewCell.xib; sourceTree = "<group>"; };
+		5285585F1A642EA400898779 /* JWStopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopTableViewController.h; sourceTree = "<group>"; };
+		528558601A642EA400898779 /* JWStopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopTableViewController.m; sourceTree = "<group>"; };
+		528558621A6432C100898779 /* JWStopRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopRequest.h; sourceTree = "<group>"; };
+		528558631A6432C100898779 /* JWStopRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopRequest.m; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -437,6 +443,8 @@
 				5257A0651A4496AD0066A354 /* JWRequestWithAlert.m */,
 				52C53EA11A523DDB0089334A /* JWLineRequest.h */,
 				52C53EA21A523DDB0089334A /* JWLineRequest.m */,
+				528558621A6432C100898779 /* JWStopRequest.h */,
+				528558631A6432C100898779 /* JWStopRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +497,8 @@
 				52EB7C091A3DF6E400057723 /* JWBusLineViewController.m */,
 				52EB7C161A3F248800057723 /* JWMainViewController.h */,
 				52EB7C171A3F248800057723 /* JWMainViewController.m */,
+				5285585F1A642EA400898779 /* JWStopTableViewController.h */,
+				528558601A642EA400898779 /* JWStopTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -781,6 +791,7 @@
 				5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */,
 				522A9E9A1A5D0DB000673EB0 /* JWSearchStopItem.m in Sources */,
 				52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */,
+				528558611A642EA400898779 /* JWStopTableViewController.m in Sources */,
 				522A9E941A5D02F100673EB0 /* JWBusItem.m in Sources */,
 				522A9E971A5D02F100673EB0 /* JWStopItem.m in Sources */,
 				52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */,
@@ -800,6 +811,7 @@
 				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				524F572E1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m in Sources */,
+				528558641A6432C100898779 /* JWStopRequest.m in Sources */,
 				522A9E871A5D026E00673EB0 /* JWSearchLineItem.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,

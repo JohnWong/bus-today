@@ -110,21 +110,19 @@
     if (userInfo && [self.lineId isEqualToString:userInfo[@"lineId"]]) {
         todayStopId = userInfo[@"stopId"];
     }
-    NSString *focusStopId = todayStopId ? : [JWUserDefaultsUtil collectItemForLineId:self.lineId].stopId;
-    focusStopId = focusStopId ? : self.selectedStopItem.stopId;
+    NSString *focusStopId = self.selectedStopItem.stopId ? : todayStopId;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
-        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopId && [stopItem.stopId isEqualToString:todayStopId]];
+        BOOL isSelected = self.selectedStopItem && [stopItem.stopId isEqualToString:self.selectedStopItem.stopId];
+        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopId && [stopItem.stopId isEqualToString:todayStopId] selected:isSelected];
         
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
-        if (self.selectedStopItem && [stopItem.stopId isEqualToString:self.selectedStopItem.stopId]) {
-            stopButton.titleButton.selected = YES;
+        if (isSelected) {
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
         }
         if (focusStopId && [focusStopId isEqualToString:stopItem.stopId]) {
-            // TODO
             NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
             if (scrollTo < - self.scrollView.contentInset.top) {
                 scrollTo = - self.scrollView.contentInset.top;
@@ -210,12 +208,10 @@
         NSString *stopId = userInfo[@"stopId"];
         if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopItem.stopId]) {
             self.todayButton.on = YES;
-        } else {
-            self.todayButton.on = NO;
+            return;
         }
-    } else {
-        self.todayButton.on = NO;
     }
+    self.todayButton.on = NO;
 }
 
 - (void)didSelectStop:(UIButton *)sender {
@@ -313,7 +309,7 @@
         } else {
             [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId stopId:self.selectedStopItem.stopId];
         }
-        [self updateTodayButton];
+        [self updateViews];
     } else {
         [JWViewUtil showInfoWithMessage:@"请先点击选择当前站点"];
     }

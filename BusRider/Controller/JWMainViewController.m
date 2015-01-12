@@ -19,11 +19,13 @@
 #import "SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
 #import "JWMainTableViewCell.h"
+#import "JWStopTableViewController.h"
 
-#define JWCellIdMain @"JWCellIdMain"
-#define JWCellIdSearch @"JWCellIdSearch"
-#define JWSeguePushLineWithData @"JWSeguePushLineWithData"
-#define JWSeguePushLineWithId @"JWSeguePushLineWithId"
+#define JWCellIdMain                @"JWCellIdMain"
+#define JWCellIdSearch              @"JWCellIdSearch"
+#define JWSeguePushLineWithData     @"JWSeguePushLineWithData"
+#define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
+#define JWSeguePushStopList         @"JWSeguePushStopList"
 
 typedef NS_ENUM(NSInteger, JWSearchResultType) {
     JWSearchResultTypeNone = 0,
@@ -50,6 +52,10 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
  *  Pass to JWBusLineViewController
  */
 @property (nonatomic, strong) JWSearchLineItem *selectedLine;
+/**
+ *  Pass to JWStopViewController
+ */
+@property (nonatomic, strong) JWSearchStopItem *selectedStop;
 
 @end
 
@@ -84,6 +90,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
             busLineViewController.searchLineItem = self.selectedLine;
+        }
+    } else if ([segue.identifier isEqualToString:JWSeguePushStopList]) {
+        if ([segue.destinationViewController isKindOfClass:[JWStopTableViewController class]]) {
+            JWStopTableViewController *stopTableViewController = (JWStopTableViewController *)segue.destinationViewController;
+            stopTableViewController.stopItem = self.selectedStop;
         }
     }
 }
@@ -141,7 +152,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     if (tableView == self.tableView) {
         
     } else {
-        if (section == 0) {
+        if (section == 0 && self.searchListItem.lineList.count > 0) {
             return @"公交路线";
         } else {
             return @"公交站点";
@@ -167,12 +178,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         self.selectedLine.lineNumber = item.lineNumber;
         [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
     } else {
-        if (indexPath.section == 0) {
-            JWSearchLineItem *searchLineItem = self.searchListItem.lineList[indexPath.row];
-            self.selectedLine = searchLineItem;
+        if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
+            self.selectedLine = self.searchListItem.lineList[indexPath.row];
             [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
         } else {
-            // TODO 站点界面
+            self.selectedStop = self.searchListItem.stopList[indexPath.row];
+            [self performSegueWithIdentifier:JWSeguePushStopList sender:self];
         }
     }
 }
