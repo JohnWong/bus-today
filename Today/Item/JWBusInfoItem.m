@@ -7,6 +7,7 @@
 //
 
 #import "JWBusInfoItem.h"
+#import "JWFormatter.h"
 
 @implementation JWBusInfoItem
 
@@ -23,13 +24,7 @@
     NSArray *busArray = dict[@"bus"];
     NSDictionary *lineInfo = dict[@"line"];
     
-    NSString *lineName = lineInfo[@"lineName"];
-    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"\\d*" options:0 error:nil];
-    if ([regularExpression stringByReplacingMatchesInString:lineName options:0 range:NSMakeRange(0, lineName.length) withTemplate:@""].length == 0) {
-        self.lineNumber = [NSString stringWithFormat:@"%@路", lineName];
-    } else {
-        self.lineNumber = lineName;
-    }
+    self.lineNumber = [JWFormatter formatedLineNumber:lineInfo[@"lineName"]];
     self.from = lineInfo[@"startStopName"];
     self.to = lineInfo[@"endStopName"];
     self.firstTime = lineInfo[@"firstTime"];

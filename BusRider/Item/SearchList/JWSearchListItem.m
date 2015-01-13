@@ -13,8 +13,8 @@
 @implementation JWSearchListItem
 
 - (void)setFromDictionary:(NSDictionary *)dict {
-    self.lineList = [JWSearchLineItem arrayFromDictionary:dict[@"linelist"]];
-    self.stopList = [JWSearchStopItem arrayFromDictionary:dict[@"stoplist"]];
+    self.lineList = [JWSearchLineItem arrayFromDictionaryArray:dict[@"linelist"]];
+    self.stopList = [JWSearchStopItem arrayFromDictionaryArray:dict[@"stoplist"]];
 }
 
 @end

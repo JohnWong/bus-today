@@ -212,7 +212,7 @@
                                             <constraint firstAttribute="width" constant="76" id="eAa-Tf-Rl4"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                        <state key="normal" title="今日" image="JWIconTodayOn.png"/>
+                                        <state key="normal" title="今日" image="JWIconTodayOff.png"/>
                                         <state key="highlighted" image="JWIconTodayOn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -346,7 +346,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="EwO-e6-NuY">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="蒋" id="EwO-e6-NuY">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -390,10 +390,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rGB-gN-u9A">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JWStopLineCell" textLabel="3Sg-c4-cX3" detailTextLabel="Ecp-ML-WJv" style="IBUITableViewCellStyleSubtitle" id="rGB-gN-u9A">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGB-gN-u9A" id="lT2-tb-hnu">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Sg-c4-cX3">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ecp-ML-WJv">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -413,6 +427,7 @@
         <image name="JWIconExchange.png" width="16" height="16"/>
         <image name="JWIconRefresh.png" width="16" height="16"/>
         <image name="JWIconTodayOff" width="16" height="16"/>
+        <image name="JWIconTodayOff.png" width="16" height="16"/>
         <image name="JWIconTodayOn" width="16" height="16"/>
         <image name="JWIconTodayOn.png" width="16" height="16"/>
     </resources>

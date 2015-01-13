@@ -19,6 +19,6 @@
  *
  *  @return array of JWItem
  */
-+ (NSArray *)arrayFromDictionary:(NSArray *)array;
++ (NSArray *)arrayFromDictionaryArray:(NSArray *)array;
 
 @end

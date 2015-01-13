@@ -19,6 +19,7 @@
 #import <NotificationCenter/NotificationCenter.h>
 #import "JWViewUtil.h"
 #import "JWCollectItem.h"
+#import "JWFormatter.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -184,12 +185,12 @@
                     self.mainLabel.text = [NSString stringWithFormat:@"%.1f", self.busInfoItem.distance / 1000.0];
                     self.unitLabel.text = @"千米";
                 }
-                self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", self.busInfoItem.updateTime / (self.busInfoItem.updateTime < 60 ? 1 : 60), self.busInfoItem.updateTime < 60 ? @"秒" : @"分"];
+                self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;
             case JWBusStateFar:
                 self.mainLabel.text = [NSString stringWithFormat:@"%ld", self.busInfoItem.remains];
                 self.unitLabel.text = @"站";
-                self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", self.busInfoItem.updateTime / (self.busInfoItem.updateTime < 60 ? 1 : 60), self.busInfoItem.updateTime < 60 ? @"秒" : @"分"];
+                self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;
         }
     } else {
@@ -269,8 +270,7 @@
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
         if (error) {
-            [JWViewUtil showError:error];
-            return;
+            
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
             if (weakSelf.selectedStopItem.stopId) {

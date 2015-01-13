@@ -14,8 +14,8 @@
 
 - (void)setFromDictionary:(NSDictionary *)dict {
     self.lineItem = [[JWLineItem alloc] initWithDictionary:dict];
-    self.stopItems = [JWStopItem arrayFromDictionary:dict[@"map"]];
-    self.busItems = [JWBusItem arrayFromDictionary:dict[@"bus"]];
+    self.stopItems = [JWStopItem arrayFromDictionaryArray:dict[@"map"]];
+    self.busItems = [JWBusItem arrayFromDictionaryArray:dict[@"bus"]];
 }
 
 @end

@@ -7,8 +7,20 @@
 //
 
 #import "JWStopTableViewController.h"
+#import "JWStopRequest.h"
+#import "UINavigationController+SGProgress.h"
+#import "UIScrollView+SVPullToRefresh.h"
+#import "JWViewUtil.h"
+#import "JWStopLineTypeItem.h"
+#import "JWStopLineItem.h"
 
 @interface JWStopTableViewController ()
+
+@property (nonatomic, strong) JWStopRequest *stopRequest;
+/**
+ *  array of JWStopLineTypeItem
+ */
+@property (nonatomic, strong) NSArray *lineTypeList;
 
 @end
 
@@ -20,74 +32,83 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.title = self.stopItem.stopName;
     self.tableView.tableFooterView = [[UIView alloc] init];
+    [self loadRequest];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf.tableView.pullToRefreshView stopAnimating];
+        [weakSelf loadRequest];
+    }];
+    
+}
+
+- (void)updateViews {
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return self.lineTypeList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    JWStopLineTypeItem *typeItem = self.lineTypeList[section];
+    return typeItem.lineList.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JWStopLineCell" forIndexPath:indexPath];
+    JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
+    JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
+    NSString *leftStopDesc;
+    switch (lineItem.leftStops) {
+        case -2:
+            leftStopDesc = @"--";
+            break;
+        case -1:
+            leftStopDesc = @"尚未发车";
+            break;
+        default:
+            leftStopDesc = [NSString stringWithFormat:@"%ld站", lineItem.leftStops];
+            break;
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ | %@", lineItem.lineNumer, leftStopDesc];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    JWStopLineTypeItem *typeItem = self.lineTypeList[section];
+    return [NSString stringWithFormat:@"开往%@", typeItem.nextStop];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark getter
+- (JWStopRequest *)stopRequest {
+    if (!_stopRequest) {
+        _stopRequest = [[JWStopRequest alloc] init];
+    }
+    return _stopRequest;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark action
+- (void)loadRequest {
+    
+    __weak typeof(self) weakSelf = self;
+    self.stopRequest.stopName = self.stopItem.stopName;
+    [self.stopRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        [weakSelf.navigationController setSGProgressPercentage:100];
+        if (error) {
+            
+        } else {
+            self.lineTypeList = [JWStopLineTypeItem arrayFromDictionary:dict];
+            [weakSelf updateViews];
+        }
+    } progress:^(CGFloat percent) {
+        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
+    }];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

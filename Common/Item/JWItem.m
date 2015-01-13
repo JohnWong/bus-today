@@ -19,7 +19,7 @@
 
 - (void)setFromDictionary:(NSDictionary *)dict {}
 
-+ (NSArray *)arrayFromDictionary:(NSArray *)array {
++ (NSArray *)arrayFromDictionaryArray:(NSArray *)array {
     NSArray *ret = [[NSArray alloc] init];
     for (NSDictionary *dict in array) {
         id item = [[self alloc] initWithDictionary:dict];

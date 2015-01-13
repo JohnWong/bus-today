@@ -8,6 +8,7 @@
 
 #import "JWBusCardView.h"
 #import "JWButtonWithAnimation.h"
+#import "JWFormatter.h"
 
 @interface JWBusCardView()
 
@@ -107,12 +108,12 @@
                 self.mainLabel.text = [NSString stringWithFormat:@"%.1f", item.distance / 1000.0];
                 self.subLabel.text = @"千米";
             }
-            self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", item.updateTime / (item.updateTime < 60 ? 1 : 60), item.updateTime < 60 ? @"秒" : @"分"];
+            self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:item.updateTime]];
             break;
         case JWBusStateFar:
             self.mainLabel.text = [NSString stringWithFormat:@"%ld", item.remains];
             self.subLabel.text = @"站";
-            self.updateLabel.text = [NSString stringWithFormat:@"%ld%@前报告位置", item.updateTime / (item.updateTime < 60 ? 1 : 60), item.updateTime < 60 ? @"秒" : @"分"];
+            self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:item.updateTime]];
             break;
     }
 }
