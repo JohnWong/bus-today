@@ -158,11 +158,11 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="末"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY" customClass="JWButtonWithAnimation">
-                                        <rect key="frame" x="282" y="117" width="32" height="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY" customClass="JWButtonWithAnimation">
+                                        <rect key="frame" x="278" y="113" width="42" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Gp0-Hs-LD5"/>
-                                            <constraint firstAttribute="height" constant="24" id="bqk-sE-EeN"/>
+                                            <constraint firstAttribute="width" constant="42" id="Bit-ZN-Mi0"/>
+                                            <constraint firstAttribute="height" constant="32" id="bqk-sE-EeN"/>
                                         </constraints>
                                         <state key="normal" image="JWTodayIconRefresh.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,10 +180,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D01-eE-WIP" customClass="JWButtonWithAnimation">
-                                        <rect key="frame" x="250" y="117" width="32" height="24"/>
+                                        <rect key="frame" x="242" y="113" width="36" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="OXc-oS-Eev"/>
-                                            <constraint firstAttribute="width" constant="32" id="jhC-GP-AKn"/>
+                                            <constraint firstAttribute="height" constant="32" id="OXc-oS-Eev"/>
+                                            <constraint firstAttribute="width" constant="36" id="jhC-GP-AKn"/>
                                         </constraints>
                                         <state key="normal" image="JWTodayIconSetting.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,11 +219,11 @@
                                     <constraint firstItem="6bY-wW-2FO" firstAttribute="top" secondItem="QSF-hd-4OR" secondAttribute="bottom" id="Sdl-Gb-Z7a"/>
                                     <constraint firstItem="FmD-RV-Yhv" firstAttribute="leading" secondItem="7jK-an-sTp" secondAttribute="leading" id="TVd-DV-VRf"/>
                                     <constraint firstItem="KhJ-yb-lVz" firstAttribute="trailing" secondItem="QEg-GV-dkp" secondAttribute="trailing" id="ZHY-7L-yeJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="dve-YY-rUY" secondAttribute="bottom" constant="16" id="atN-Mz-mJO"/>
+                                    <constraint firstAttribute="bottom" secondItem="dve-YY-rUY" secondAttribute="bottom" constant="12" id="atN-Mz-mJO"/>
                                     <constraint firstItem="S1o-Ct-SYP" firstAttribute="top" secondItem="6bY-wW-2FO" secondAttribute="top" constant="2" id="bCn-4h-nHL"/>
                                     <constraint firstItem="QnF-SQ-Ife" firstAttribute="top" secondItem="amW-fp-71b" secondAttribute="top" constant="-2" id="bd6-HB-AOs"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="top" secondItem="FmD-RV-Yhv" secondAttribute="bottom" id="beP-Cw-Agb"/>
-                                    <constraint firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" constant="6" id="cJu-oP-bQJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" id="cJu-oP-bQJ"/>
                                     <constraint firstAttribute="height" constant="157" id="dIv-AD-qMK"/>
                                     <constraint firstItem="QSF-hd-4OR" firstAttribute="centerY" secondItem="KhJ-yb-lVz" secondAttribute="centerY" id="f6z-Uz-atn"/>
                                     <constraint firstItem="dve-YY-rUY" firstAttribute="centerY" secondItem="D01-eE-WIP" secondAttribute="centerY" id="gCL-Ek-Koe"/>

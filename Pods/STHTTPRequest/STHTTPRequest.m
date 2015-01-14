@@ -906,7 +906,6 @@ static NSMutableArray *localCookiesStorage = nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    
     if(_responseStatus >= 400) {
         NSDictionary *userInfo = [[self class] userInfoWithErrorDescriptionForHTTPStatus:_responseStatus];
         self.error = [NSError errorWithDomain:NSStringFromClass([self class]) code:_responseStatus userInfo:userInfo];

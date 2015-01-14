@@ -274,7 +274,7 @@
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
             if (weakSelf.selectedStopItem.stopId) {
-                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:self.selectedStopItem.stopId busInfo:dict];
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:weakSelf.selectedStopItem.stopId busInfo:dict];
             }
             [weakSelf updateViews];
         }
@@ -335,6 +335,10 @@
 - (void)removeTodayInfo {
     [[JWUserDefaultsUtil groupUserDefaults] removeObjectForKey:JWKeyBusLine];
     [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
+}
+
+- (void)dealloc {
+    [self.navigationController cancelSGProgress];
 }
 
 @end

@@ -91,4 +91,8 @@
     return nil;
 }
 
+- (void)dealloc {
+    [_request cancel];
+}
+
 @end

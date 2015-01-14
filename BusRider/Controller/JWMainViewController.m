@@ -219,7 +219,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 #pragma mark action
 - (void)loadData {
-    [self.navigationController showSGProgressWithDuration:0.6];
+//    [self.navigationController showSGProgressWithDuration:0.6];
     _collectLineItem = nil;
     [self.tableView reloadData];
 }

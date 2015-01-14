@@ -14,24 +14,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconCellBus.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGT-V7-TkW">
-                        <rect key="frame" x="16" y="8" width="24" height="24"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconCellBus38.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGT-V7-TkW">
+                        <rect key="frame" x="16" y="8" width="38" height="38"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="9Yi-bh-Hbg"/>
+                            <constraint firstAttribute="height" constant="38" id="9Yi-bh-Hbg"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="9ju-na-qOk"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="QH1-EU-bGc"/>
-                            <constraint firstAttribute="width" constant="24" id="rlC-or-wSw"/>
+                            <constraint firstAttribute="width" constant="38" id="rlC-or-wSw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="QH1-EU-bGc"/>
                                 <exclude reference="9ju-na-qOk"/>
+                                <exclude reference="QH1-EU-bGc"/>
                             </mask>
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fY-9s-h1k">
-                        <rect key="frame" x="48" y="8" width="231" height="20"/>
+                        <rect key="frame" x="62" y="8" width="217" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="231" id="07b-zV-B5o"/>
                             <constraint firstAttribute="height" constant="20" id="MV3-hq-LTD"/>
@@ -46,9 +46,9 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2a-V7-oaF">
-                        <rect key="frame" x="48" y="32" width="9.5" height="13.5"/>
+                        <rect key="frame" x="62" y="32" width="9.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -76,6 +76,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="JWIconCellBus.png" width="24" height="24"/>
+        <image name="JWIconCellBus38.png" width="38" height="38"/>
     </resources>
 </document>

@@ -91,6 +91,11 @@
     return [NSString stringWithFormat:@"开往%@", typeItem.nextStop];
 }
 
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 56;
+}
+
 #pragma mark getter
 - (JWStopRequest *)stopRequest {
     if (!_stopRequest) {
