@@ -11,6 +11,8 @@
 		52004FEF1A65082600EE9024 /* JWStopLineTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FEE1A65082600EE9024 /* JWStopLineTypeItem.m */; };
 		52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52004FF31A65125400EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
+		52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */; };
+		52004FF81A66050600EE9024 /* JWStopLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52004FF61A66050600EE9024 /* JWStopLineTableViewCell.xib */; };
 		520453881A37340A002A8541 /* JWTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5204537D1A37340A002A8541 /* JWTodayViewController.m */; };
 		520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453801A37340A002A8541 /* JWBusInfoItem.m */; };
 		5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */; };
@@ -122,6 +124,9 @@
 		52004FEE1A65082600EE9024 /* JWStopLineTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineTypeItem.m; sourceTree = "<group>"; };
 		52004FF01A6511EB00EE9024 /* JWFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFormatter.h; sourceTree = "<group>"; };
 		52004FF11A6511EB00EE9024 /* JWFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFormatter.m; sourceTree = "<group>"; };
+		52004FF41A66050600EE9024 /* JWStopLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineTableViewCell.h; sourceTree = "<group>"; };
+		52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineTableViewCell.m; sourceTree = "<group>"; };
+		52004FF61A66050600EE9024 /* JWStopLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWStopLineTableViewCell.xib; sourceTree = "<group>"; };
 		5204537C1A37340A002A8541 /* JWTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTodayViewController.h; sourceTree = "<group>"; };
 		5204537D1A37340A002A8541 /* JWTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTodayViewController.m; sourceTree = "<group>"; };
 		5204537F1A37340A002A8541 /* JWBusInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusInfoItem.h; sourceTree = "<group>"; };
@@ -508,6 +513,9 @@
 				528558581A62BB1B00898779 /* JWMainTableViewCell.h */,
 				528558591A62BB1B00898779 /* JWMainTableViewCell.m */,
 				5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */,
+				52004FF41A66050600EE9024 /* JWStopLineTableViewCell.h */,
+				52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */,
+				52004FF61A66050600EE9024 /* JWStopLineTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -735,6 +743,7 @@
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
 				525A1F6C1A5A9053006CE8BA /* JWIconCollectOn@2x.png in Resources */,
 				52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */,
+				52004FF81A66050600EE9024 /* JWStopLineTableViewCell.xib in Resources */,
 				52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +822,7 @@
 			files = (
 				52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */,
 				5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */,
+				52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */,
 				522A9E9A1A5D0DB000673EB0 /* JWSearchStopItem.m in Sources */,
 				52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */,
 				528558611A642EA400898779 /* JWStopTableViewController.m in Sources */,

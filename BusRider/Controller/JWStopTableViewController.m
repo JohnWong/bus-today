@@ -13,6 +13,9 @@
 #import "JWViewUtil.h"
 #import "JWStopLineTypeItem.h"
 #import "JWStopLineItem.h"
+#import "JWStopLineTableViewCell.h"
+
+#define JWCellIdStopLine @"JWCellIdStopLine"
 
 @interface JWStopTableViewController ()
 
@@ -31,6 +34,8 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.title = self.stopItem.stopName;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"JWStopLineTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdStopLine];
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self loadRequest];
 }
@@ -60,7 +65,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JWStopLineCell" forIndexPath:indexPath];
+    JWStopLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdStopLine forIndexPath:indexPath];
     JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
     JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
     NSString *leftStopDesc;
@@ -75,8 +80,9 @@
             leftStopDesc = [NSString stringWithFormat:@"%ld站", lineItem.leftStops];
             break;
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ | %@", lineItem.lineNumer, leftStopDesc];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to];
+    [cell setTitle:[NSString stringWithFormat:@"%@", lineItem.lineNumer]
+          subTitle:[NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to]
+       rightDetail:leftStopDesc];
     return cell;
 }
 
