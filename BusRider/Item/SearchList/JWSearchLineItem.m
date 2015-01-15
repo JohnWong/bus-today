@@ -11,6 +11,14 @@
 
 @implementation JWSearchLineItem
 
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber {
+    if (self = [super init]) {
+        self.lineId = lineId;
+        self.lineNumber = lineNumber;
+    }
+    return self;
+}
+
 - (void)setFromDictionary:(NSDictionary *)dict {
     self.lineId = dict[@"lineId"];
     self.lineNumber = [JWFormatter formatedLineNumber:dict[@"lineName"]];

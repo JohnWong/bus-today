@@ -14,8 +14,10 @@
 #import "JWStopLineTypeItem.h"
 #import "JWStopLineItem.h"
 #import "JWStopLineTableViewCell.h"
+#import "JWBusLineViewController.h"
 
 #define JWCellIdStopLine @"JWCellIdStopLine"
+#define JWSeguePushLineWithIdStop @"JWSeguePushLineWithIdStop"
 
 @interface JWStopTableViewController ()
 
@@ -24,11 +26,13 @@
  *  array of JWStopLineTypeItem
  */
 @property (nonatomic, strong) NSArray *lineTypeList;
+@property (nonatomic, strong) JWStopLineItem *selectedLineItem;
 
 @end
 
 @implementation JWStopTableViewController
 
+#pragma mark life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,6 +56,16 @@
 
 - (void)updateViews {
     [self.tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:JWSeguePushLineWithIdStop]) {
+        JWBusLineViewController *lineViewController = segue.destinationViewController;
+        lineViewController.searchLineItem = [[JWSearchLineItem alloc] initWithLineId:self.selectedLineItem.lineId
+                                                                          lineNumber:self.selectedLineItem.lineNumer];
+        lineViewController.selectedStopItem = [[JWStopItem alloc] initWithStopId:self.stopItem.stopId
+                                                                        stopName:self.stopItem.stopName];
+    }
 }
 
 #pragma mark - Table view data source
@@ -94,6 +108,17 @@
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 56;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 32;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
+    JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
+    self.selectedLineItem = lineItem;
+    [self performSegueWithIdentifier:JWSeguePushLineWithIdStop sender:self];
 }
 
 #pragma mark getter

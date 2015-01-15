@@ -60,7 +60,11 @@
 - (id)itemForKey:(NSString *)key {
     NSUserDefaults *sharedUserDefaults = [self userDefaults];
     NSData *itemData = [sharedUserDefaults objectForKey:key];
-    return [NSKeyedUnarchiver unarchiveObjectWithData:itemData];
+    if (itemData) {
+        return [NSKeyedUnarchiver unarchiveObjectWithData:itemData];
+    } else {
+        return nil;
+    }
 }
 
 + (void)saveCollectItem:(JWCollectItem *)item {

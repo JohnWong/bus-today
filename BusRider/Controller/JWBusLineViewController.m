@@ -8,7 +8,6 @@
 
 #import "JWBusLineViewController.h"
 #import "JWStopNameButton.h"
-#import "JWStopItem.h"
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
 #import "UIScrollView+SVPullToRefresh.h"
@@ -42,7 +41,6 @@
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
 @property (nonatomic, strong) JWLineRequest *lineRequest;
-@property (nonatomic, strong) JWStopItem *selectedStopItem;
 @property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 @property (nonatomic, strong) NSString *lineNumber;
 @property (nonatomic, strong) NSString *lineId;
@@ -59,13 +57,16 @@
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     
-    self.title = self.lineNumber;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 26)];
+    label.text = self.lineNumber;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:17];
+    self.navigationItem.titleView = label;
+    
     
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
     if (collectItem && collectItem.stopId && collectItem.stopName) {
-        JWStopItem *stopItem = [[JWStopItem alloc] init];
-        stopItem.stopId = collectItem.stopId;
-        stopItem.stopName = collectItem.stopName;
+        JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
         self.selectedStopItem = stopItem;
     }
     
@@ -216,7 +217,7 @@
 }
 
 - (void)didSelectStop:(UIButton *)sender {
-    self.selectedStopItem = [((JWStopItem *)self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag]) copy];
+    self.selectedStopItem = self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag];
     [self updateCollectItem];
     [self loadRequest];
 }
@@ -337,7 +338,8 @@
     [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
 }
 
-- (void)dealloc {
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     [self.navigationController cancelSGProgress];
 }
 

@@ -1,2925 +1,1245 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0106DA42111BC8EDCA676F0B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Today-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>01729E0BED257E13A16747FF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIScrollView+SVInfiniteScrolling.h</string>
-			<key>path</key>
-			<string>SVPullToRefresh/UIScrollView+SVInfiniteScrolling.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0439A435143A1B4E46BAFCA4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>39B28BAF4C998A0E5E506E34</string>
-			<key>targetProxy</key>
-			<string>A1A36A42CC5A508E2D7CFD30</string>
-		</dict>
-		<key>05D860FF06A68C9C89A0AD9F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVPullToRefresh-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>05EB62D1B1285941EB6207B2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0656FA1484FDAD1F07680E50</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>374F6599C7F8912029241C55</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>55CA664B860E905E5418C56C</string>
-			<key>productRefGroup</key>
-			<string>E2901A6A9A3E149164393FC0</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>CC5F3E41E83348E03CF723F5</string>
-				<string>39B28BAF4C998A0E5E506E34</string>
-				<string>3FEB4C39E4FF159C2FE89036</string>
-				<string>991E009AED17F081409FEB18</string>
-				<string>15302246797435571E7D812F</string>
-				<string>FB400920689FC43CD26EFE2C</string>
-				<string>CA121E1129E8648D5E956ADE</string>
-			</array>
-		</dict>
-		<key>08E6BDE86730A7AE8AC96825</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BusRider-SGNavigationProgress-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0C0AA3E3116447040D88F6B7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CA707EFF751A8F5DED52CC3E</string>
-				<string>914B6DE077298C7F5E3A7521</string>
-				<string>FE411060C5AE88B941033689</string>
-				<string>88ECA0FF214D127DEF877240</string>
-				<string>80BE0B88DE590FF84D5AE7D1</string>
-				<string>C47EB68B54882695002F7E9C</string>
-				<string>278430D474D5C35A8C16A65A</string>
-				<string>AA2D0B1B15EA30A8EB37C364</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-BusRider-STHTTPRequest</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0EAC4063E644E086A4CC304E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F7733EEAB22481B95F6ADB6A</string>
-				<string>3A1987D2C87B3E0DEFBA9A44</string>
-				<string>3E663BACE0B80C119C76B396</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0EFAE67837B322D9E50C8A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0106DA42111BC8EDCA676F0B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>13600839C589663F67F4AF6A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BusRider-SVPullToRefresh.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>13CC02C1A53498D889B34B63</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVPullToRefresh-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>152492F53AC5D559C64223D5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Today.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15302246797435571E7D812F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>90943D0265CC1B50E4A04117</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9A0785954572C479AEE2AA08</string>
-				<string>BE7DC91530DF8CE999AD7DD1</string>
-				<string>8CB0DABCC8157D78F1EBCCED</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BusRider-SVPullToRefresh</string>
-			<key>productName</key>
-			<string>Pods-BusRider-SVPullToRefresh</string>
-			<key>productReference</key>
-			<string>13600839C589663F67F4AF6A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>1F27AD06898DA9992C6EAB5D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EF7DA909266683CB6FF9F9C5</string>
-				<string>EDC05834696DE763858C381A</string>
-				<string>35A1E6861A076998DFFFB457</string>
-				<string>3E3F466C84160C151949BE5F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-BusRider-SVProgressHUD</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1FF51719C135F353D5805DA1</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EDC05834696DE763858C381A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SVProgressHUD/Pods-BusRider-SVProgressHUD-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2053D18CAB98B52CED4DE9F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UINavigationController+SGProgress.h</string>
-			<key>path</key>
-			<string>SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20CA2FB432C66F6C6BA8083D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>3FEB4C39E4FF159C2FE89036</string>
-			<key>targetProxy</key>
-			<string>9FFAE94542F4D168D9C743BF</string>
-		</dict>
-		<key>20E942FF6AEB66A2178DF97E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A81759AD55CB27B1E8315A3A</string>
-				<string>C5800151206255982BC122CD</string>
-				<string>0106DA42111BC8EDCA676F0B</string>
-				<string>42DB0ACC89DE20BCC5599AFC</string>
-				<string>44285F44AB7ADC44478E45DA</string>
-				<string>D56772E71278730A7553E141</string>
-				<string>152492F53AC5D559C64223D5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Today</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Today</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>212DD3A0DBBC8F2B0C5A018F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D56772E71278730A7553E141</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2242BAF2B25397C0BBA0A75E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0EFAE67837B322D9E50C8A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>23051CBB1C9AE1786A2CBE7E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>05EB62D1B1285941EB6207B2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>235999676B8D0931D07BD19B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UINavigationController+SGProgress.m</string>
-			<key>path</key>
-			<string>SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>246FD0AC8EA3E95CFE5B549B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>24991FF5A489CB5639C3627A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>91BBF736D551AAA61C7A35EE</string>
-				<string>B91E1497E95C1ADF6A1D2A52</string>
-				<string>0C0AA3E3116447040D88F6B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>STHTTPRequest</string>
-			<key>path</key>
-			<string>STHTTPRequest</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>278430D474D5C35A8C16A65A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>Pods-Today-STHTTPRequest-dummy.m</string>
-			<key>path</key>
-			<string>../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>30454A45A0BAEAF3D7495803</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EDC05834696DE763858C381A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SVProgressHUD/Pods-BusRider-SVProgressHUD-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3088E9B0709FE834A44F5C73</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-BusRider-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>334DB02639A70B4F8C7598BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>35A1E6861A076998DFFFB457</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>35A1E6861A076998DFFFB457</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVProgressHUD-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>36B37FE18B5AD7DFF0D5951D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7DE063BEBEA2454FEB41DF36</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>374F6599C7F8912029241C55</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F5C319377DB9A300ACE64DC5</string>
-				<string>246FD0AC8EA3E95CFE5B549B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>37FE79C0FFD47718E94231EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>39B28BAF4C998A0E5E506E34</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F848D58499A839BB222869AA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0EAC4063E644E086A4CC304E</string>
-				<string>71AE036DC0AC38594D54A938</string>
-				<string>744A323D3735A528F5560CA1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BusRider-SGNavigationProgress</string>
-			<key>productName</key>
-			<string>Pods-BusRider-SGNavigationProgress</string>
-			<key>productReference</key>
-			<string>4143A8FFE9FDC186BE7F30FF</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>39E193ABEF41967C1A04CAFF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E182652273EC2BA75CFB7C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A1987D2C87B3E0DEFBA9A44</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4392BEB99ECB73105AB7D123</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>3C5128D8E8951B35A9FA22E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B91E1497E95C1ADF6A1D2A52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>3DD5D967A815D2F680EC8D73</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>CA121E1129E8648D5E956ADE</string>
-			<key>targetProxy</key>
-			<string>87A2A667DC5D18FC4F4BF15B</string>
-		</dict>
-		<key>3E3F466C84160C151949BE5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVProgressHUD-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E663BACE0B80C119C76B396</key>
-		<dict>
-			<key>fileRef</key>
-			<string>235999676B8D0931D07BD19B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>3F37ECA524F10002693E3053</key>
-		<dict>
-			<key>fileRef</key>
-			<string>278430D474D5C35A8C16A65A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3FEB4C39E4FF159C2FE89036</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D8FA702B89A2118BE5B8E7CF</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C2C73D9C806EB0893F55A9EA</string>
-				<string>4D12A1B24AFC0301474ADE74</string>
-				<string>A4ADA410232EF78B88AAC7E1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BusRider-STHTTPRequest</string>
-			<key>productName</key>
-			<string>Pods-BusRider-STHTTPRequest</string>
-			<key>productReference</key>
-			<string>5FEB31F8AB568D52A2F9F422</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>408534687B0B2BCB5184AD09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CB6AEF9ECB46C1DBA0BDE4F5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SGNavigationProgress/Pods-BusRider-SGNavigationProgress-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4143A8FFE9FDC186BE7F30FF</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BusRider-SGNavigationProgress.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>425219F01B4E31DEF974C390</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96E7951C73C790D5F75F95E3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>42DB0ACC89DE20BCC5599AFC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Today-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>42E6EEF589E3CCDB4857C481</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9DE8C63933819EBB92CDE81A</string>
-				<string>CB6AEF9ECB46C1DBA0BDE4F5</string>
-				<string>F7EE1307048C48B10339F5CA</string>
-				<string>08E6BDE86730A7AE8AC96825</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-BusRider-SGNavigationProgress</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4392BEB99ECB73105AB7D123</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SGProgressView.m</string>
-			<key>path</key>
-			<string>SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43939244E2C06FB569C62EC4</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>0656FA1484FDAD1F07680E50</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>15302246797435571E7D812F</string>
-			<key>remoteInfo</key>
-			<string>Pods-BusRider-SVPullToRefresh</string>
-		</dict>
-		<key>44166062DAD34CB2BE484A51</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>23051CBB1C9AE1786A2CBE7E</string>
-				<string>675E0878F4ADBE809EE50BDA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>44285F44AB7ADC44478E45DA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Today-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49782BCD4C38C66B0A68400D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Today.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4A6DD10CBD5AA8D4BE5E0A80</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CE46985912D92417644BAE9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90BB7FC457B9317FD888CDBB</string>
-				<string>13CC02C1A53498D889B34B63</string>
-				<string>96E7951C73C790D5F75F95E3</string>
-				<string>05D860FF06A68C9C89A0AD9F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-BusRider-SVPullToRefresh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4D12A1B24AFC0301474ADE74</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D6D592A55404B194D94768E5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4D236DC22CC675F16BD27837</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C47EB68B54882695002F7E9C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4FC78C5255E9985F9E39C2CF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C72CA68F32C841E53A9D216F</string>
-				<string>7DE063BEBEA2454FEB41DF36</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>510FE4BFE707023098DCFEEB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3F37ECA524F10002693E3053</string>
-				<string>3C5128D8E8951B35A9FA22E5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>55CA664B860E905E5418C56C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>37FE79C0FFD47718E94231EF</string>
-				<string>B32FF42198AE112A5CB568B5</string>
-				<string>D3CB78DA5CB0F14AD69F8CE9</string>
-				<string>E2901A6A9A3E149164393FC0</string>
-				<string>A91845F771A7F8E6474BB130</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>580E615C7FF56E5756C78B51</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B8B4C012279A25A65BE50DCA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>59A218748F33D1F84C49F0BA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BusRider-SVProgressHUD.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5B0A0B83EB9B7F23DFCD13D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SVIndefiniteAnimatedView.m</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVIndefiniteAnimatedView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5FEB31F8AB568D52A2F9F422</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BusRider-STHTTPRequest.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>604BAF3C245AE89128A25D9D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8A7E6A1BA5184D8CFEC2DA6D</string>
-				<string>A1A48D5EA75DDA63CF573ECA</string>
-				<string>A3F405B14982F2A66E6706FA</string>
-				<string>9F82532486D672FD57B733B6</string>
-				<string>3088E9B0709FE834A44F5C73</string>
-				<string>05EB62D1B1285941EB6207B2</string>
-				<string>4A6DD10CBD5AA8D4BE5E0A80</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-BusRider</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-BusRider</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>62B069DD954CD0753ACB7394</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B5D7AC91D6DF6CB5B8D4C393</string>
-				<string>5B0A0B83EB9B7F23DFCD13D2</string>
-				<string>F3BFB7BC64FB3B170C8D3B86</string>
-				<string>B8B4C012279A25A65BE50DCA</string>
-				<string>39E193ABEF41967C1A04CAFF</string>
-				<string>1F27AD06898DA9992C6EAB5D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SVProgressHUD</string>
-			<key>path</key>
-			<string>SVProgressHUD</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>65CC2A88254B9CB77F346F01</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E585F1EC06E9C701089E4D52</string>
-				<string>4392BEB99ECB73105AB7D123</string>
-				<string>2053D18CAB98B52CED4DE9F9</string>
-				<string>235999676B8D0931D07BD19B</string>
-				<string>42E6EEF589E3CCDB4857C481</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SGNavigationProgress</string>
-			<key>path</key>
-			<string>SGNavigationProgress</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>675E0878F4ADBE809EE50BDA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4A6DD10CBD5AA8D4BE5E0A80</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>6BDB6F92631DB86782939F69</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7142FB41F2AA6396C68721EE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6F1405443D69EC1A03A02472</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>93E8A5DA55E0341C2960B51E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6F2FF09172A7008B1BB40AC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9867BCB431F6FAC45D8AF001</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7142FB41F2AA6396C68721EE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>71AE036DC0AC38594D54A938</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FE655D814E4E0415107A477C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>72C77F8EEB32126819B86B80</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>744A323D3735A528F5560CA1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>786D7A868FD285CD6EB24DE9</string>
-				<string>AB8A2FB148D1D95A09C71CA1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>75299E813C853C6AE8B76469</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B0A0B83EB9B7F23DFCD13D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>75E6EF8F789FF7A9A9731545</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>15302246797435571E7D812F</string>
-			<key>targetProxy</key>
-			<string>43939244E2C06FB569C62EC4</string>
-		</dict>
-		<key>761B85D75A4E34560A497442</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>914B6DE077298C7F5E3A7521</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>786D7A868FD285CD6EB24DE9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E585F1EC06E9C701089E4D52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>788D8E7F273FC65CC1D1346F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C47EB68B54882695002F7E9C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>793621D06DDCA1CD8F724949</key>
-		<dict>
-			<key>fileRef</key>
-			<string>01729E0BED257E13A16747FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7BD35B367DF3349993757D1E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CB6AEF9ECB46C1DBA0BDE4F5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SGNavigationProgress/Pods-BusRider-SGNavigationProgress-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7DE063BEBEA2454FEB41DF36</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>80BE0B88DE590FF84D5AE7D1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Today-STHTTPRequest.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>829948C94FB88E02C116C903</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>914B6DE077298C7F5E3A7521</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>87A2A667DC5D18FC4F4BF15B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>0656FA1484FDAD1F07680E50</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>CA121E1129E8648D5E956ADE</string>
-			<key>remoteInfo</key>
-			<string>Pods-Today-STHTTPRequest</string>
-		</dict>
-		<key>88ECA0FF214D127DEF877240</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BusRider-STHTTPRequest-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A7E6A1BA5184D8CFEC2DA6D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-BusRider-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CB0DABCC8157D78F1EBCCED</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CF1D95FA4EA750FE3F962472</string>
-				<string>793621D06DDCA1CD8F724949</string>
-				<string>6F2FF09172A7008B1BB40AC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8D27E4D9D1A413AD69E1E060</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>152492F53AC5D559C64223D5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8EC610483E34E578136C0147</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SVPullToRefresh.h</string>
-			<key>path</key>
-			<string>SVPullToRefresh/SVPullToRefresh.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8FF249BD604C638DF7582090</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>AC1D986D0531E81814692B50</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90943D0265CC1B50E4A04117</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E329CEEE9A666F228CE9960A</string>
-				<string>C5AF3859564B316E2DA4A6A3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>90BB7FC457B9317FD888CDBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVPullToRefresh.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>911B08047B1C2CC2D187BD65</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIScrollView+SVInfiniteScrolling.m</string>
-			<key>path</key>
-			<string>SVPullToRefresh/UIScrollView+SVInfiniteScrolling.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>914B6DE077298C7F5E3A7521</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-STHTTPRequest-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>91BBF736D551AAA61C7A35EE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>STHTTPRequest.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93E8A5DA55E0341C2960B51E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9443620DCE48B8A0BDC914B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B7962C25C5358725C5DCC8D1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>96E7951C73C790D5F75F95E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVPullToRefresh-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9867BCB431F6FAC45D8AF001</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIScrollView+SVPullToRefresh.h</string>
-			<key>path</key>
-			<string>SVPullToRefresh/UIScrollView+SVPullToRefresh.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>991E009AED17F081409FEB18</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CBA5B230D905D770ED9ED439</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C134552874DEB470B0BF5D9C</string>
-				<string>D60E2A8B4AFC5DE1C3B379F5</string>
-				<string>E5DF1DBB57096A302D09B2B1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BusRider-SVProgressHUD</string>
-			<key>productName</key>
-			<string>Pods-BusRider-SVProgressHUD</string>
-			<key>productReference</key>
-			<string>59A218748F33D1F84C49F0BA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>9A0785954572C479AEE2AA08</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>425219F01B4E31DEF974C390</string>
-				<string>F28B19B13F3D980695EAD03D</string>
-				<string>EF0697F1CB0759A766FBE5BF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9B9A489756ACA4A0A081C024</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Today-STHTTPRequest.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9DE8C63933819EBB92CDE81A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SGNavigationProgress.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F82532486D672FD57B733B6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BusRider-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9FFAE94542F4D168D9C743BF</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>0656FA1484FDAD1F07680E50</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>3FEB4C39E4FF159C2FE89036</string>
-			<key>remoteInfo</key>
-			<string>Pods-BusRider-STHTTPRequest</string>
-		</dict>
-		<key>A1A36A42CC5A508E2D7CFD30</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>0656FA1484FDAD1F07680E50</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>39B28BAF4C998A0E5E506E34</string>
-			<key>remoteInfo</key>
-			<string>Pods-BusRider-SGNavigationProgress</string>
-		</dict>
-		<key>A1A48D5EA75DDA63CF573ECA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-BusRider-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3F405B14982F2A66E6706FA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BusRider-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A4ADA410232EF78B88AAC7E1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FD0E3923A705A2988C4BC8A4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A81759AD55CB27B1E8315A3A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Today-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A91845F771A7F8E6474BB130</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>604BAF3C245AE89128A25D9D</string>
-				<string>20E942FF6AEB66A2178DF97E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA2D0B1B15EA30A8EB37C364</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Pods-Today-STHTTPRequest-prefix.pch</string>
-			<key>path</key>
-			<string>../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AB8A2FB148D1D95A09C71CA1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2053D18CAB98B52CED4DE9F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AC1D986D0531E81814692B50</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B01E16C7A04C3AEFB0523D91</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B5D7AC91D6DF6CB5B8D4C393</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B32FF42198AE112A5CB568B5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4FC78C5255E9985F9E39C2CF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B39BDC98B48784AD587EF22B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3F405B14982F2A66E6706FA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B570011CE63BC5FF81AB963D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BusRider.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B5D7AC91D6DF6CB5B8D4C393</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SVIndefiniteAnimatedView.h</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVIndefiniteAnimatedView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B63A2B3B595DBFA6F6627BEE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B39BDC98B48784AD587EF22B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B7962C25C5358725C5DCC8D1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91BBF736D551AAA61C7A35EE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B8B4C012279A25A65BE50DCA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SVProgressHUD.m</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVProgressHUD.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B91E1497E95C1ADF6A1D2A52</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>STHTTPRequest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BDB50B1F9A1458477CE888F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>991E009AED17F081409FEB18</string>
-			<key>targetProxy</key>
-			<string>C50B4E553D6E91D75A61EFCA</string>
-		</dict>
-		<key>BE7DC91530DF8CE999AD7DD1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CD46530DDD3818B83F52B897</string>
-				<string>36B37FE18B5AD7DFF0D5951D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BF0E86DF5281E0B4D0608417</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIScrollView+SVPullToRefresh.m</string>
-			<key>path</key>
-			<string>SVPullToRefresh/UIScrollView+SVPullToRefresh.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C134552874DEB470B0BF5D9C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>334DB02639A70B4F8C7598BC</string>
-				<string>75299E813C853C6AE8B76469</string>
-				<string>580E615C7FF56E5756C78B51</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C264340E39D9C34F56ED3055</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE411060C5AE88B941033689</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C2C73D9C806EB0893F55A9EA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C264340E39D9C34F56ED3055</string>
-				<string>D604E8C93AD88D5EEF22A1EE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C47EB68B54882695002F7E9C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Today-STHTTPRequest-Private.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C50B4E553D6E91D75A61EFCA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>0656FA1484FDAD1F07680E50</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>991E009AED17F081409FEB18</string>
-			<key>remoteInfo</key>
-			<string>Pods-BusRider-SVProgressHUD</string>
-		</dict>
-		<key>C5800151206255982BC122CD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Today-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5AF3859564B316E2DA4A6A3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>13CC02C1A53498D889B34B63</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SVPullToRefresh/Pods-BusRider-SVPullToRefresh-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C72CA68F32C841E53A9D216F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>CA121E1129E8648D5E956ADE</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F1AE566BEE473E65F263AE81</string>
-			<key>buildPhases</key>
-			<array>
-				<string>510FE4BFE707023098DCFEEB</string>
-				<string>6BDB6F92631DB86782939F69</string>
-				<string>9443620DCE48B8A0BDC914B2</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Today-STHTTPRequest</string>
-			<key>productName</key>
-			<string>Pods-Today-STHTTPRequest</string>
-			<key>productReference</key>
-			<string>9B9A489756ACA4A0A081C024</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>CA707EFF751A8F5DED52CC3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-STHTTPRequest.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CB6AEF9ECB46C1DBA0BDE4F5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SGNavigationProgress-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBA5B230D905D770ED9ED439</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>30454A45A0BAEAF3D7495803</string>
-				<string>1FF51719C135F353D5805DA1</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CC5F3E41E83348E03CF723F5</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>44166062DAD34CB2BE484A51</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B63A2B3B595DBFA6F6627BEE</string>
-				<string>6F1405443D69EC1A03A02472</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>0439A435143A1B4E46BAFCA4</string>
-				<string>20CA2FB432C66F6C6BA8083D</string>
-				<string>BDB50B1F9A1458477CE888F7</string>
-				<string>75E6EF8F789FF7A9A9731545</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BusRider</string>
-			<key>productName</key>
-			<string>Pods-BusRider</string>
-			<key>productReference</key>
-			<string>B570011CE63BC5FF81AB963D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>CD46530DDD3818B83F52B897</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CF1D95FA4EA750FE3F962472</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EC610483E34E578136C0147</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D3CB78DA5CB0F14AD69F8CE9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>65CC2A88254B9CB77F346F01</string>
-				<string>24991FF5A489CB5639C3627A</string>
-				<string>62B069DD954CD0753ACB7394</string>
-				<string>D7B7A84D4F8CD8AB8771A1E6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D56772E71278730A7553E141</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Today.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D604E8C93AD88D5EEF22A1EE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B91E1497E95C1ADF6A1D2A52</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>D60E2A8B4AFC5DE1C3B379F5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>72C77F8EEB32126819B86B80</string>
-				<string>F66064CADB4D8F472089D446</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D6D592A55404B194D94768E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D7B7A84D4F8CD8AB8771A1E6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8EC610483E34E578136C0147</string>
-				<string>01729E0BED257E13A16747FF</string>
-				<string>911B08047B1C2CC2D187BD65</string>
-				<string>9867BCB431F6FAC45D8AF001</string>
-				<string>BF0E86DF5281E0B4D0608417</string>
-				<string>4CE46985912D92417644BAE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SVPullToRefresh</string>
-			<key>path</key>
-			<string>SVPullToRefresh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8FA702B89A2118BE5B8E7CF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>829948C94FB88E02C116C903</string>
-				<string>761B85D75A4E34560A497442</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E182652273EC2BA75CFB7C03</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>SVProgressHUD.bundle</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVProgressHUD.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2901A6A9A3E149164393FC0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B570011CE63BC5FF81AB963D</string>
-				<string>4143A8FFE9FDC186BE7F30FF</string>
-				<string>5FEB31F8AB568D52A2F9F422</string>
-				<string>59A218748F33D1F84C49F0BA</string>
-				<string>13600839C589663F67F4AF6A</string>
-				<string>49782BCD4C38C66B0A68400D</string>
-				<string>9B9A489756ACA4A0A081C024</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E329CEEE9A666F228CE9960A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>13CC02C1A53498D889B34B63</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-BusRider-SVPullToRefresh/Pods-BusRider-SVPullToRefresh-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E585F1EC06E9C701089E4D52</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SGProgressView.h</string>
-			<key>path</key>
-			<string>SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5DF1DBB57096A302D09B2B1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B01E16C7A04C3AEFB0523D91</string>
-				<string>ED0F548EA853FF08B8DFB766</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>ED0F548EA853FF08B8DFB766</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F3BFB7BC64FB3B170C8D3B86</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EDC05834696DE763858C381A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVProgressHUD-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF0697F1CB0759A766FBE5BF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BF0E86DF5281E0B4D0608417</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>EF7DA909266683CB6FF9F9C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BusRider-SVProgressHUD.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1AE566BEE473E65F263AE81</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4D236DC22CC675F16BD27837</string>
-				<string>788D8E7F273FC65CC1D1346F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F28B19B13F3D980695EAD03D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>911B08047B1C2CC2D187BD65</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>F3BFB7BC64FB3B170C8D3B86</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SVProgressHUD.h</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVProgressHUD.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F5C319377DB9A300ACE64DC5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F66064CADB4D8F472089D446</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7DE063BEBEA2454FEB41DF36</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F7733EEAB22481B95F6ADB6A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F7EE1307048C48B10339F5CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F7EE1307048C48B10339F5CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BusRider-SGNavigationProgress-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F848D58499A839BB222869AA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7BD35B367DF3349993757D1E</string>
-				<string>408534687B0B2BCB5184AD09</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FB400920689FC43CD26EFE2C</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>FC69600B562CE11B3440CC8D</string>
-			<key>buildPhases</key>
-			<array>
-				<string>2242BAF2B25397C0BBA0A75E</string>
-				<string>8FF249BD604C638DF7582090</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>3DD5D967A815D2F680EC8D73</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Today</string>
-			<key>productName</key>
-			<string>Pods-Today</string>
-			<key>productReference</key>
-			<string>49782BCD4C38C66B0A68400D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>FC69600B562CE11B3440CC8D</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>212DD3A0DBBC8F2B0C5A018F</string>
-				<string>8D27E4D9D1A413AD69E1E060</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FD0E3923A705A2988C4BC8A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91BBF736D551AAA61C7A35EE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FE411060C5AE88B941033689</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BusRider-STHTTPRequest-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE655D814E4E0415107A477C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C72CA68F32C841E53A9D216F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>0656FA1484FDAD1F07680E50</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03E395D49F44EB4D6A3B85FA /* UINavigationController+SGProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC97EF79CC70BEE8B17EA03 /* UINavigationController+SGProgress.h */; };
+		0570271B091C46265B311968 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E524BE14F0BD4C12FBE4403 /* UIScrollView+SVInfiniteScrolling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		05787D86E790ABB395AB9BED /* Pods-Today-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF756CFA813D425DE2517B /* Pods-Today-STHTTPRequest-dummy.m */; };
+		094E96727B6847097F196EAF /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C6152E74F761EED3888CA9 /* STHTTPRequest.h */; };
+		2AB70207FF9BD187AF8E50B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		34C332E461FBC1FFD7BE6BAF /* Pods-BusRider-SGNavigationProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC49FAA710CE254295AED5 /* Pods-BusRider-SGNavigationProgress-dummy.m */; };
+		3CAACAE0542EFDAC49AB432E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93DE6B6E5AB40C725712D60 /* QuartzCore.framework */; };
+		4424444079537E736DA37164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		4E04E45C397BD4216DA5472F /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A145EFB968F17755FA19EFD /* SVProgressHUD.h */; };
+		50FF9FC31FB47606955815B1 /* Pods-BusRider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F6347A2B8B41165FEC712B /* Pods-BusRider-dummy.m */; };
+		522C2D381A67F31C00EE2F3F /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C172BADF68B2D48480FBF977 /* UINavigationController+SGProgress.m */; };
+		5B5B4426D29E99100687C369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		7F5019F7ACD5971C46B59636 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		8B29A33B3439337EF08BB6B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		8B5339307682D145C3FA50D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		A57CDE12710FE968883AC0F2 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 588A1B7D40323A42688E3485 /* SVIndefiniteAnimatedView.h */; };
+		AC11D254C73C7A009BE07DEB /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F0503620956986327F969B /* SVIndefiniteAnimatedView.m */; };
+		B683913D0667E4B09ACF494F /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4C88B837016DDE76D1BA63 /* UIScrollView+SVPullToRefresh.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B8B6675ABEC7ABC40A022AC0 /* SGProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = D490B50ECE763E8743F19BB4 /* SGProgressView.h */; };
+		BD2498617BC66638AD37434E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29545319E8880D1FF8C31C25 /* Foundation.framework */; };
+		BDEE3176227E884089B0E973 /* Pods-BusRider-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 284B7693AC4D5ADCD63D4FDB /* Pods-BusRider-STHTTPRequest-dummy.m */; };
+		C566B0DE8191D75589D1B619 /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = D953303106E795F6D823AC63 /* UIScrollView+SVPullToRefresh.h */; };
+		C7D7C68C054A7850805D88FE /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C6152E74F761EED3888CA9 /* STHTTPRequest.h */; };
+		E111DC8B89918742E18D608E /* Pods-BusRider-SVPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82FAD6491D416C6F38C2513 /* Pods-BusRider-SVPullToRefresh-dummy.m */; };
+		E29B3EBD863187E0955AD360 /* UIScrollView+SVInfiniteScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA211576F0C501827AB7DFD /* UIScrollView+SVInfiniteScrolling.h */; };
+		E75392AB781E8EEB63EAFD35 /* SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE9E62FA144F18D037D74DD /* SVPullToRefresh.h */; };
+		E77B6DE19F5F1F93DD8A411B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B2459213B484FBB98B166F93 /* SVProgressHUD.m */; };
+		E8A36547B64210E06815D114 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B220EC52CC5073C73D7CF907 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F01920B0E52EA8FA8B6C5F6A /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B220EC52CC5073C73D7CF907 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F6DD57D858E79EB1643409E6 /* Pods-Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1FB452379251E298C429D3 /* Pods-Today-dummy.m */; };
+		F8B3B163FE0151E7ED3F05ED /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E13CCE88C74364DBADA774AC /* SGProgressView.m */; };
+		FD4E3F569395A042AB56BC0E /* Pods-BusRider-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA70A2F338F09B7F14192A67 /* Pods-BusRider-SVProgressHUD-dummy.m */; };
+		FE3C7C86B5FBC49D231FD03A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93DE6B6E5AB40C725712D60 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E3DD5DF7BE53AC9A56FA3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8B8E74FADF36B4C1AB4E466;
+			remoteInfo = "Pods-BusRider-SVPullToRefresh";
+		};
+		5A144BE866D5A8C733599739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D9EC85EAD9D6F05572E601;
+			remoteInfo = "Pods-BusRider-STHTTPRequest";
+		};
+		6F8E44BCC8D4418806D9A4F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1214E6CFFCEEB1DFA0FD9C2;
+			remoteInfo = "Pods-Today-STHTTPRequest";
+		};
+		73F15BE6897F2A99A3E579CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5C124F78754F0CE0720F440;
+			remoteInfo = "Pods-BusRider-SVProgressHUD";
+		};
+		8F36A5C3AE1FE1758EA0A4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B0C07CC069F765ACB733C72;
+			remoteInfo = "Pods-BusRider-SGNavigationProgress";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DDAF5543CC7EB9531DA32BD /* libPods-BusRider-SVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-SVProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC97EF79CC70BEE8B17EA03 /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+SGProgress.h"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
+		1BE9E62FA144F18D037D74DD /* SVPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVPullToRefresh.h; path = SVPullToRefresh/SVPullToRefresh.h; sourceTree = "<group>"; };
+		256E09940CD9C4DA62D93545 /* Pods-BusRider-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		2613C18EB0757F34C0E0AFB6 /* Pods-Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Today-acknowledgements.markdown"; sourceTree = "<group>"; };
+		284B7693AC4D5ADCD63D4FDB /* Pods-BusRider-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		29545319E8880D1FF8C31C25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2B187E511160BBEEF31E3DBA /* libPods-Today-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87EA6182F3BF606BCD3850 /* Pods-BusRider-SGNavigationProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-SGNavigationProgress-prefix.pch"; sourceTree = "<group>"; };
+		2D1FB452379251E298C429D3 /* Pods-Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Today-dummy.m"; sourceTree = "<group>"; };
+		2F169F191C262408450A8983 /* Pods-Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Today-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A145EFB968F17755FA19EFD /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		3B8D9A605D552ADB19B7943F /* Pods-BusRider-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-resources.sh"; sourceTree = "<group>"; };
+		3E90BDA40C9BC2AB819B5C28 /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
+		43F0503620956986327F969B /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		44DD6E1A81AC88CAF0F24A92 /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		4E2FA97C1335D090D6520A11 /* Pods-Today-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Today-STHTTPRequest-prefix.pch"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
+		4E56C9925520088A520046D0 /* Pods-BusRider-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
+		56BE4B7D54B6B861CFFA97D8 /* Pods-BusRider-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
+		588A1B7D40323A42688E3485 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		608DBAADF570D418BDFD839E /* libPods-BusRider-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62734140363F628EA4166851 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		6416C9A34A895A844AD11ECB /* Pods-Today-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-STHTTPRequest.xcconfig"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
+		66F6347A2B8B41165FEC712B /* Pods-BusRider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-dummy.m"; sourceTree = "<group>"; };
+		6CFC49FAA710CE254295AED5 /* Pods-BusRider-SGNavigationProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-SGNavigationProgress-dummy.m"; sourceTree = "<group>"; };
+		6F0A399F6A0AF093D7AD4660 /* Pods-BusRider-STHTTPRequest-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-STHTTPRequest-Private.xcconfig"; sourceTree = "<group>"; };
+		7A19F6CEF4819907E53D8BE3 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		7E524BE14F0BD4C12FBE4403 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SVInfiniteScrolling.m"; path = "SVPullToRefresh/UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		839C766432FB9F3104D4F5A0 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		84F32520672D1FB553876F85 /* libPods-BusRider-SGNavigationProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-SGNavigationProgress.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C9FA96D2A942142B59654E /* libPods-BusRider-SVPullToRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-SVPullToRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C47ECF24F43ACEDD700E9FA /* Pods-BusRider-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-environment.h"; sourceTree = "<group>"; };
+		9851DC2368880F92DDD520D6 /* Pods-BusRider-SGNavigationProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SGNavigationProgress.xcconfig"; sourceTree = "<group>"; };
+		9EBF1C04CE9BDD92D91D8960 /* Pods-BusRider-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		A979BA40055218C595F7A521 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B220EC52CC5073C73D7CF907 /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
+		B2459213B484FBB98B166F93 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		BB65E94FF62F17BB7BFC51E1 /* Pods-Today-STHTTPRequest-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-STHTTPRequest-Private.xcconfig"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-Private.xcconfig"; sourceTree = "<group>"; };
+		BCC07A52C3693E27CB45F547 /* Pods-BusRider-SVPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SVPullToRefresh.xcconfig"; sourceTree = "<group>"; };
+		C172BADF68B2D48480FBF977 /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+SGProgress.m"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
+		C5CF07DDD29B27AE4C67F3B5 /* Pods-Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-resources.sh"; sourceTree = "<group>"; };
+		C71BC28DBC6580C96F3DBF51 /* Pods-Today-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Today-environment.h"; sourceTree = "<group>"; };
+		C7C6152E74F761EED3888CA9 /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
+		CEAAC44F0F7A959C4CBD5DB9 /* Pods-BusRider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF4E38FB034C799B12E2A44A /* Pods-BusRider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D490B50ECE763E8743F19BB4 /* SGProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGProgressView.h; path = "SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.h"; sourceTree = "<group>"; };
+		D73D4911FED7E05A654B0AB7 /* Pods-BusRider-SVPullToRefresh-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SVPullToRefresh-Private.xcconfig"; sourceTree = "<group>"; };
+		D93DE6B6E5AB40C725712D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		D953303106E795F6D823AC63 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SVPullToRefresh.h"; path = "SVPullToRefresh/UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		DB4C88B837016DDE76D1BA63 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SVPullToRefresh.m"; path = "SVPullToRefresh/UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		DF6C01361514F5AB3C2CC2E2 /* Pods-BusRider-SGNavigationProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-SGNavigationProgress-Private.xcconfig"; sourceTree = "<group>"; };
+		E13CCE88C74364DBADA774AC /* SGProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGProgressView.m; path = "SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.m"; sourceTree = "<group>"; };
+		E625D8EF19B61F01EE1C9EDA /* Pods-BusRider-SVPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-SVPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		E82FAD6491D416C6F38C2513 /* Pods-BusRider-SVPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-SVPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		EA70A2F338F09B7F14192A67 /* Pods-BusRider-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		EDD47158E50D0507065E94F2 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA211576F0C501827AB7DFD /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SVInfiniteScrolling.h"; path = "SVPullToRefresh/UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		F83B22B1554F83EA6FE1CD7D /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F71C62FD10330A06039540 /* Pods-BusRider-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		FDEF756CFA813D425DE2517B /* Pods-Today-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Today-STHTTPRequest-dummy.m"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E26668C031E911CA83502A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AB70207FF9BD187AF8E50B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC1C5ACD17F12DD8A77CD99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5B4426D29E99100687C369 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2345E3B481368D3B4BE1C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5019F7ACD5971C46B59636 /* Foundation.framework in Frameworks */,
+				3CAACAE0542EFDAC49AB432E /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C7127CE77732492C2B722CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B29A33B3439337EF08BB6B2 /* Foundation.framework in Frameworks */,
+				FE3C7C86B5FBC49D231FD03A /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2D2B26EA3F2A0F787C4DB8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4424444079537E736DA37164 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFED985957A69BD1002551EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2498617BC66638AD37434E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E017042453111F3B06474949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B5339307682D145C3FA50D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27C03D5682E1241D19AA5213 /* Pods-Today */ = {
+			isa = PBXGroup;
+			children = (
+				2613C18EB0757F34C0E0AFB6 /* Pods-Today-acknowledgements.markdown */,
+				2F169F191C262408450A8983 /* Pods-Today-acknowledgements.plist */,
+				2D1FB452379251E298C429D3 /* Pods-Today-dummy.m */,
+				C71BC28DBC6580C96F3DBF51 /* Pods-Today-environment.h */,
+				C5CF07DDD29B27AE4C67F3B5 /* Pods-Today-resources.sh */,
+				839C766432FB9F3104D4F5A0 /* Pods-Today.debug.xcconfig */,
+				7A19F6CEF4819907E53D8BE3 /* Pods-Today.release.xcconfig */,
+			);
+			name = "Pods-Today";
+			path = "Target Support Files/Pods-Today";
+			sourceTree = "<group>";
+		};
+		2C0E4D209ACB669741FC55C5 /* Pods-BusRider */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E38FB034C799B12E2A44A /* Pods-BusRider-acknowledgements.markdown */,
+				CEAAC44F0F7A959C4CBD5DB9 /* Pods-BusRider-acknowledgements.plist */,
+				66F6347A2B8B41165FEC712B /* Pods-BusRider-dummy.m */,
+				8C47ECF24F43ACEDD700E9FA /* Pods-BusRider-environment.h */,
+				3B8D9A605D552ADB19B7943F /* Pods-BusRider-resources.sh */,
+				44DD6E1A81AC88CAF0F24A92 /* Pods-BusRider.debug.xcconfig */,
+				3E90BDA40C9BC2AB819B5C28 /* Pods-BusRider.release.xcconfig */,
+			);
+			name = "Pods-BusRider";
+			path = "Target Support Files/Pods-BusRider";
+			sourceTree = "<group>";
+		};
+		3DB35BE6E405439D2F87B432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDD47158E50D0507065E94F2 /* libPods-BusRider.a */,
+				84F32520672D1FB553876F85 /* libPods-BusRider-SGNavigationProgress.a */,
+				608DBAADF570D418BDFD839E /* libPods-BusRider-STHTTPRequest.a */,
+				0DDAF5543CC7EB9531DA32BD /* libPods-BusRider-SVProgressHUD.a */,
+				88C9FA96D2A942142B59654E /* libPods-BusRider-SVPullToRefresh.a */,
+				F83B22B1554F83EA6FE1CD7D /* libPods-Today.a */,
+				2B187E511160BBEEF31E3DBA /* libPods-Today-STHTTPRequest.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		455F23D177DCE691E6E8FA31 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				1BE9E62FA144F18D037D74DD /* SVPullToRefresh.h */,
+				EEA211576F0C501827AB7DFD /* UIScrollView+SVInfiniteScrolling.h */,
+				7E524BE14F0BD4C12FBE4403 /* UIScrollView+SVInfiniteScrolling.m */,
+				D953303106E795F6D823AC63 /* UIScrollView+SVPullToRefresh.h */,
+				DB4C88B837016DDE76D1BA63 /* UIScrollView+SVPullToRefresh.m */,
+				4F51C677FD165445A66F5348 /* Support Files */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
+		4F51C677FD165445A66F5348 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCC07A52C3693E27CB45F547 /* Pods-BusRider-SVPullToRefresh.xcconfig */,
+				D73D4911FED7E05A654B0AB7 /* Pods-BusRider-SVPullToRefresh-Private.xcconfig */,
+				E82FAD6491D416C6F38C2513 /* Pods-BusRider-SVPullToRefresh-dummy.m */,
+				E625D8EF19B61F01EE1C9EDA /* Pods-BusRider-SVPullToRefresh-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BusRider-SVPullToRefresh";
+			sourceTree = "<group>";
+		};
+		540BFBAEE52DD1A03F3148E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9851DC2368880F92DDD520D6 /* Pods-BusRider-SGNavigationProgress.xcconfig */,
+				DF6C01361514F5AB3C2CC2E2 /* Pods-BusRider-SGNavigationProgress-Private.xcconfig */,
+				6CFC49FAA710CE254295AED5 /* Pods-BusRider-SGNavigationProgress-dummy.m */,
+				2B87EA6182F3BF606BCD3850 /* Pods-BusRider-SGNavigationProgress-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BusRider-SGNavigationProgress";
+			sourceTree = "<group>";
+		};
+		6C35647649C80398A3C27E22 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E56C9925520088A520046D0 /* Pods-BusRider-STHTTPRequest.xcconfig */,
+				6F0A399F6A0AF093D7AD4660 /* Pods-BusRider-STHTTPRequest-Private.xcconfig */,
+				284B7693AC4D5ADCD63D4FDB /* Pods-BusRider-STHTTPRequest-dummy.m */,
+				56BE4B7D54B6B861CFFA97D8 /* Pods-BusRider-STHTTPRequest-prefix.pch */,
+				6416C9A34A895A844AD11ECB /* Pods-Today-STHTTPRequest.xcconfig */,
+				BB65E94FF62F17BB7BFC51E1 /* Pods-Today-STHTTPRequest-Private.xcconfig */,
+				FDEF756CFA813D425DE2517B /* Pods-Today-STHTTPRequest-dummy.m */,
+				4E2FA97C1335D090D6520A11 /* Pods-Today-STHTTPRequest-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BusRider-STHTTPRequest";
+			sourceTree = "<group>";
+		};
+		71295E77457468E82069E5B0 /* SGNavigationProgress */ = {
+			isa = PBXGroup;
+			children = (
+				D490B50ECE763E8743F19BB4 /* SGProgressView.h */,
+				E13CCE88C74364DBADA774AC /* SGProgressView.m */,
+				1AC97EF79CC70BEE8B17EA03 /* UINavigationController+SGProgress.h */,
+				C172BADF68B2D48480FBF977 /* UINavigationController+SGProgress.m */,
+				540BFBAEE52DD1A03F3148E2 /* Support Files */,
+			);
+			path = SGNavigationProgress;
+			sourceTree = "<group>";
+		};
+		82FBE9E7AD3C8FE6BC6EC0F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62734140363F628EA4166851 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		853DF73F304659FDCBC7ECDC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C0E4D209ACB669741FC55C5 /* Pods-BusRider */,
+				27C03D5682E1241D19AA5213 /* Pods-Today */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8D29974042075E547E8E52E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EBF1C04CE9BDD92D91D8960 /* Pods-BusRider-SVProgressHUD.xcconfig */,
+				256E09940CD9C4DA62D93545 /* Pods-BusRider-SVProgressHUD-Private.xcconfig */,
+				EA70A2F338F09B7F14192A67 /* Pods-BusRider-SVProgressHUD-dummy.m */,
+				F9F71C62FD10330A06039540 /* Pods-BusRider-SVProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BusRider-SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		91CA6BF72D91FB19BE46B141 /* STHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C7C6152E74F761EED3888CA9 /* STHTTPRequest.h */,
+				B220EC52CC5073C73D7CF907 /* STHTTPRequest.m */,
+				6C35647649C80398A3C27E22 /* Support Files */,
+			);
+			path = STHTTPRequest;
+			sourceTree = "<group>";
+		};
+		A33FB48FC2A9B21A0ADD1DE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71295E77457468E82069E5B0 /* SGNavigationProgress */,
+				91CA6BF72D91FB19BE46B141 /* STHTTPRequest */,
+				E24428ABFA6BBFBA9A98331D /* SVProgressHUD */,
+				455F23D177DCE691E6E8FA31 /* SVPullToRefresh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ACEC56574165471D7997CA26 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				29545319E8880D1FF8C31C25 /* Foundation.framework */,
+				D93DE6B6E5AB40C725712D60 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BFACE57E0E76CED40B6263F4 = {
+			isa = PBXGroup;
+			children = (
+				A979BA40055218C595F7A521 /* Podfile */,
+				CC5F353FD84A19D142ADDAB0 /* Frameworks */,
+				A33FB48FC2A9B21A0ADD1DE1 /* Pods */,
+				3DB35BE6E405439D2F87B432 /* Products */,
+				853DF73F304659FDCBC7ECDC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CC5F353FD84A19D142ADDAB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACEC56574165471D7997CA26 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E24428ABFA6BBFBA9A98331D /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				588A1B7D40323A42688E3485 /* SVIndefiniteAnimatedView.h */,
+				43F0503620956986327F969B /* SVIndefiniteAnimatedView.m */,
+				3A145EFB968F17755FA19EFD /* SVProgressHUD.h */,
+				B2459213B484FBB98B166F93 /* SVProgressHUD.m */,
+				82FBE9E7AD3C8FE6BC6EC0F0 /* Resources */,
+				8D29974042075E547E8E52E0 /* Support Files */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E98F73C1A60FFE0C6E58BF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57CDE12710FE968883AC0F2 /* SVIndefiniteAnimatedView.h in Headers */,
+				4E04E45C397BD4216DA5472F /* SVProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E79E2DD6B7AF3A1CA556CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7D7C68C054A7850805D88FE /* STHTTPRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB770E489C366A881DA2BBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75392AB781E8EEB63EAFD35 /* SVPullToRefresh.h in Headers */,
+				E29B3EBD863187E0955AD360 /* UIScrollView+SVInfiniteScrolling.h in Headers */,
+				C566B0DE8191D75589D1B619 /* UIScrollView+SVPullToRefresh.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875CE10437383892B514E8F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094E96727B6847097F196EAF /* STHTTPRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A284960106DAA0752B8E082E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B6675ABEC7ABC40A022AC0 /* SGProgressView.h in Headers */,
+				03E395D49F44EB4D6A3B85FA /* UINavigationController+SGProgress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B0C07CC069F765ACB733C72 /* Pods-BusRider-SGNavigationProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FF5FB686645C7B114EB2E2 /* Build configuration list for PBXNativeTarget "Pods-BusRider-SGNavigationProgress" */;
+			buildPhases = (
+				061CE93125111E229F81C095 /* Sources */,
+				B2D2B26EA3F2A0F787C4DB8E /* Frameworks */,
+				A284960106DAA0752B8E082E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BusRider-SGNavigationProgress";
+			productName = "Pods-BusRider-SGNavigationProgress";
+			productReference = 84F32520672D1FB553876F85 /* libPods-BusRider-SGNavigationProgress.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		58D9EC85EAD9D6F05572E601 /* Pods-BusRider-STHTTPRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24C5CD3764D9BA983809B37 /* Build configuration list for PBXNativeTarget "Pods-BusRider-STHTTPRequest" */;
+			buildPhases = (
+				98E71830CA754D9926FFB8C1 /* Sources */,
+				E017042453111F3B06474949 /* Frameworks */,
+				70E79E2DD6B7AF3A1CA556CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BusRider-STHTTPRequest";
+			productName = "Pods-BusRider-STHTTPRequest";
+			productReference = 608DBAADF570D418BDFD839E /* libPods-BusRider-STHTTPRequest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		83400993967365BBE12946A8 /* Pods-Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7A6BDA5106DCE525D3C20D0 /* Build configuration list for PBXNativeTarget "Pods-Today" */;
+			buildPhases = (
+				2C705B7702DCF31E31AC9C97 /* Sources */,
+				CFED985957A69BD1002551EF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B890860F4C4490723A245AB8 /* PBXTargetDependency */,
+			);
+			name = "Pods-Today";
+			productName = "Pods-Today";
+			productReference = F83B22B1554F83EA6FE1CD7D /* libPods-Today.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A5C124F78754F0CE0720F440 /* Pods-BusRider-SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FBEBEDD3C522CFB3A3FFACE /* Build configuration list for PBXNativeTarget "Pods-BusRider-SVProgressHUD" */;
+			buildPhases = (
+				907C75D9712A40F2930D5BC4 /* Sources */,
+				3A2345E3B481368D3B4BE1C3 /* Frameworks */,
+				2E98F73C1A60FFE0C6E58BF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BusRider-SVProgressHUD";
+			productName = "Pods-BusRider-SVProgressHUD";
+			productReference = 0DDAF5543CC7EB9531DA32BD /* libPods-BusRider-SVProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B8B8E74FADF36B4C1AB4E466 /* Pods-BusRider-SVPullToRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 926078403AF09E62FFDFC5D2 /* Build configuration list for PBXNativeTarget "Pods-BusRider-SVPullToRefresh" */;
+			buildPhases = (
+				60441EC56589AA9AEFA11944 /* Sources */,
+				3C7127CE77732492C2B722CC /* Frameworks */,
+				7FB770E489C366A881DA2BBE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BusRider-SVPullToRefresh";
+			productName = "Pods-BusRider-SVPullToRefresh";
+			productReference = 88C9FA96D2A942142B59654E /* libPods-BusRider-SVPullToRefresh.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA01A3E768DEEE19C6510A4D /* Pods-BusRider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD03BB6D976100D07BFAC35A /* Build configuration list for PBXNativeTarget "Pods-BusRider" */;
+			buildPhases = (
+				CBE96746BC81F14A97C1696D /* Sources */,
+				2AC1C5ACD17F12DD8A77CD99 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C52BB44CFA70FA1D8DAC00BB /* PBXTargetDependency */,
+				AB03E5E5DCA29A404E76A932 /* PBXTargetDependency */,
+				42DBC1734129DA02F167EAC5 /* PBXTargetDependency */,
+				FF13A51BAE735137BEB78EDE /* PBXTargetDependency */,
+			);
+			name = "Pods-BusRider";
+			productName = "Pods-BusRider";
+			productReference = EDD47158E50D0507065E94F2 /* libPods-BusRider.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E1214E6CFFCEEB1DFA0FD9C2 /* Pods-Today-STHTTPRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A54F1617673F3FCFDC3CF3 /* Build configuration list for PBXNativeTarget "Pods-Today-STHTTPRequest" */;
+			buildPhases = (
+				41EF8B420ACB4CD7BCC43A88 /* Sources */,
+				1E26668C031E911CA83502A2 /* Frameworks */,
+				875CE10437383892B514E8F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Today-STHTTPRequest";
+			productName = "Pods-Today-STHTTPRequest";
+			productReference = 2B187E511160BBEEF31E3DBA /* libPods-Today-STHTTPRequest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D7CA1A1E43CD34E7EA84A1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 9CC4B2ED0D7CA1D942BAB7E6 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFACE57E0E76CED40B6263F4;
+			productRefGroup = 3DB35BE6E405439D2F87B432 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA01A3E768DEEE19C6510A4D /* Pods-BusRider */,
+				4B0C07CC069F765ACB733C72 /* Pods-BusRider-SGNavigationProgress */,
+				58D9EC85EAD9D6F05572E601 /* Pods-BusRider-STHTTPRequest */,
+				A5C124F78754F0CE0720F440 /* Pods-BusRider-SVProgressHUD */,
+				B8B8E74FADF36B4C1AB4E466 /* Pods-BusRider-SVPullToRefresh */,
+				83400993967365BBE12946A8 /* Pods-Today */,
+				E1214E6CFFCEEB1DFA0FD9C2 /* Pods-Today-STHTTPRequest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		061CE93125111E229F81C095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C332E461FBC1FFD7BE6BAF /* Pods-BusRider-SGNavigationProgress-dummy.m in Sources */,
+				522C2D381A67F31C00EE2F3F /* UINavigationController+SGProgress.m in Sources */,
+				F8B3B163FE0151E7ED3F05ED /* SGProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C705B7702DCF31E31AC9C97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6DD57D858E79EB1643409E6 /* Pods-Today-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41EF8B420ACB4CD7BCC43A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05787D86E790ABB395AB9BED /* Pods-Today-STHTTPRequest-dummy.m in Sources */,
+				F01920B0E52EA8FA8B6C5F6A /* STHTTPRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60441EC56589AA9AEFA11944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E111DC8B89918742E18D608E /* Pods-BusRider-SVPullToRefresh-dummy.m in Sources */,
+				0570271B091C46265B311968 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				B683913D0667E4B09ACF494F /* UIScrollView+SVPullToRefresh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907C75D9712A40F2930D5BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4E3F569395A042AB56BC0E /* Pods-BusRider-SVProgressHUD-dummy.m in Sources */,
+				AC11D254C73C7A009BE07DEB /* SVIndefiniteAnimatedView.m in Sources */,
+				E77B6DE19F5F1F93DD8A411B /* SVProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E71830CA754D9926FFB8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEE3176227E884089B0E973 /* Pods-BusRider-STHTTPRequest-dummy.m in Sources */,
+				E8A36547B64210E06815D114 /* STHTTPRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE96746BC81F14A97C1696D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FF9FC31FB47606955815B1 /* Pods-BusRider-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42DBC1734129DA02F167EAC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BusRider-SVProgressHUD";
+			target = A5C124F78754F0CE0720F440 /* Pods-BusRider-SVProgressHUD */;
+			targetProxy = 73F15BE6897F2A99A3E579CD /* PBXContainerItemProxy */;
+		};
+		AB03E5E5DCA29A404E76A932 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BusRider-STHTTPRequest";
+			target = 58D9EC85EAD9D6F05572E601 /* Pods-BusRider-STHTTPRequest */;
+			targetProxy = 5A144BE866D5A8C733599739 /* PBXContainerItemProxy */;
+		};
+		B890860F4C4490723A245AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Today-STHTTPRequest";
+			target = E1214E6CFFCEEB1DFA0FD9C2 /* Pods-Today-STHTTPRequest */;
+			targetProxy = 6F8E44BCC8D4418806D9A4F0 /* PBXContainerItemProxy */;
+		};
+		C52BB44CFA70FA1D8DAC00BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BusRider-SGNavigationProgress";
+			target = 4B0C07CC069F765ACB733C72 /* Pods-BusRider-SGNavigationProgress */;
+			targetProxy = 8F36A5C3AE1FE1758EA0A4DF /* PBXContainerItemProxy */;
+		};
+		FF13A51BAE735137BEB78EDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BusRider-SVPullToRefresh";
+			target = B8B8E74FADF36B4C1AB4E466 /* Pods-BusRider-SVPullToRefresh */;
+			targetProxy = 52E3DD5DF7BE53AC9A56FA3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15BE17EAD98E3FFDA021D9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E90BDA40C9BC2AB819B5C28 /* Pods-BusRider.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29C74F192858DBB50CC05D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0A399F6A0AF093D7AD4660 /* Pods-BusRider-STHTTPRequest-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2DEE3D15CA1A022A18971E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB65E94FF62F17BB7BFC51E1 /* Pods-Today-STHTTPRequest-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		314F23EA119C40884CBAD71F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		3DD75FB5605F0EB37BFCFFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 839C766432FB9F3104D4F5A0 /* Pods-Today.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		46F18022D508871B7D4A71B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256E09940CD9C4DA62D93545 /* Pods-BusRider-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SVProgressHUD/Pods-BusRider-SVProgressHUD-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5375F7E3EE0E65EE965A85B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6C01361514F5AB3C2CC2E2 /* Pods-BusRider-SGNavigationProgress-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SGNavigationProgress/Pods-BusRider-SGNavigationProgress-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		696B1857C3E299490396ECA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A19F6CEF4819907E53D8BE3 /* Pods-Today.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E82B891D8058CAB8DD7DB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73F19322F9A9842731B8D8FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB65E94FF62F17BB7BFC51E1 /* Pods-Today-STHTTPRequest-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2B2688811EA9FA7ABEB8E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73D4911FED7E05A654B0AB7 /* Pods-BusRider-SVPullToRefresh-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SVPullToRefresh/Pods-BusRider-SVPullToRefresh-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AAA52AFE3090C3A53CDEBF81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DD6E1A81AC88CAF0F24A92 /* Pods-BusRider.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C7E4EAA09DB0CE3FA733E077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73D4911FED7E05A654B0AB7 /* Pods-BusRider-SVPullToRefresh-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SVPullToRefresh/Pods-BusRider-SVPullToRefresh-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA6DDBF25F832AB2B21D7CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256E09940CD9C4DA62D93545 /* Pods-BusRider-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SVProgressHUD/Pods-BusRider-SVProgressHUD-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF13B4780BB39DFFC7D417D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0A399F6A0AF093D7AD4660 /* Pods-BusRider-STHTTPRequest-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE6B0AAF9BFEDDA01F4E3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6C01361514F5AB3C2CC2E2 /* Pods-BusRider-SGNavigationProgress-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-SGNavigationProgress/Pods-BusRider-SGNavigationProgress-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FBEBEDD3C522CFB3A3FFACE /* Build configuration list for PBXNativeTarget "Pods-BusRider-SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F18022D508871B7D4A71B5 /* Debug */,
+				CA6DDBF25F832AB2B21D7CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		926078403AF09E62FFDFC5D2 /* Build configuration list for PBXNativeTarget "Pods-BusRider-SVPullToRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B2688811EA9FA7ABEB8E9D /* Debug */,
+				C7E4EAA09DB0CE3FA733E077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC4B2ED0D7CA1D942BAB7E6 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314F23EA119C40884CBAD71F /* Debug */,
+				6E82B891D8058CAB8DD7DB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A54F1617673F3FCFDC3CF3 /* Build configuration list for PBXNativeTarget "Pods-Today-STHTTPRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DEE3D15CA1A022A18971E38 /* Debug */,
+				73F19322F9A9842731B8D8FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24C5CD3764D9BA983809B37 /* Build configuration list for PBXNativeTarget "Pods-BusRider-STHTTPRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C74F192858DBB50CC05D9D /* Debug */,
+				CF13B4780BB39DFFC7D417D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD03BB6D976100D07BFAC35A /* Build configuration list for PBXNativeTarget "Pods-BusRider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA52AFE3090C3A53CDEBF81 /* Debug */,
+				15BE17EAD98E3FFDA021D9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7A6BDA5106DCE525D3C20D0 /* Build configuration list for PBXNativeTarget "Pods-Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DD75FB5605F0EB37BFCFFAA /* Debug */,
+				696B1857C3E299490396ECA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FF5FB686645C7B114EB2E2 /* Build configuration list for PBXNativeTarget "Pods-BusRider-SGNavigationProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5375F7E3EE0E65EE965A85B5 /* Debug */,
+				DE6B0AAF9BFEDDA01F4E3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D7CA1A1E43CD34E7EA84A1F /* Project object */;
+}

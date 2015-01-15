@@ -23,4 +23,6 @@
  */
 @property (nonatomic, strong) NSString *lineNumber;
 
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber;
+
 @end

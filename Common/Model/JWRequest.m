@@ -26,7 +26,9 @@
 - (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
     NSString *checkResult = [self validateParams];
     if (checkResult) {
-        NSError *error = [NSError errorWithDomain:checkResult code:0 userInfo:nil];
+        NSError *error = [NSError errorWithDomain:JWDataErrorKey code:0 userInfo:@{
+            NSLocalizedDescriptionKey: checkResult
+        }];
         completion(nil, error);
         return;
     }

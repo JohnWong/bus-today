@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconCellBus38.png" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-Po-HMQ">
-                        <rect key="frame" x="16" y="10" width="38" height="38"/>
+                        <rect key="frame" x="16" y="8" width="38" height="38"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="06q-NP-S3B"/>
@@ -36,8 +36,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="aDI-BX-wrK"/>
                                 <exclude reference="06q-NP-S3B"/>
+                                <exclude reference="aDI-BX-wrK"/>
                             </mask>
                         </variation>
                     </imageView>
@@ -53,7 +53,7 @@
                     <constraint firstAttribute="trailing" secondItem="hep-EL-vMC" secondAttribute="trailing" constant="20" id="9xk-NS-fe4"/>
                     <constraint firstItem="JZb-y4-whF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="BQG-l5-hte"/>
                     <constraint firstAttribute="trailing" secondItem="hep-EL-vMC" secondAttribute="trailing" id="RpH-1p-N1y"/>
-                    <constraint firstAttribute="centerY" secondItem="o4f-Po-HMQ" secondAttribute="centerY" constant="-1.25" id="SqT-WA-EKi"/>
+                    <constraint firstAttribute="centerY" secondItem="o4f-Po-HMQ" secondAttribute="centerY" id="SqT-WA-EKi"/>
                     <constraint firstItem="abe-0j-dP9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="d5C-gm-dlR"/>
                     <constraint firstItem="o4f-Po-HMQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="diX-LK-rEI"/>
                     <constraint firstItem="JZb-y4-whF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hMB-B5-wYK"/>

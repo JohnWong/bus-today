@@ -26,7 +26,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="RUy-77-phm"/>
@@ -302,6 +302,7 @@
                     <navigationItem key="navigationItem" id="vjt-mN-QuG">
                         <barButtonItem key="backBarButtonItem" id="oJP-1u-Sd8"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
@@ -319,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-zI-V4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="704"/>
+            <point key="canvasLocation" x="409" y="717"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="67g-oX-tOw">
@@ -335,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVl-54-HL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-820" y="933"/>
+            <point key="canvasLocation" x="-1000" y="935"/>
         </scene>
         <!--公交信息-->
         <scene sceneID="CUQ-Nd-5Ie">
@@ -379,7 +380,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-369" y="933"/>
+            <point key="canvasLocation" x="-522" y="935"/>
         </scene>
         <!--Stop Table View Controller-->
         <scene sceneID="iWr-d8-tpT">
@@ -395,10 +396,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5RN-k6-PYV"/>
+                    <connections>
+                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithIdStop" id="bKI-le-Ue2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig9-5u-5MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="1358"/>
+            <point key="canvasLocation" x="-41" y="1034"/>
         </scene>
     </scenes>
     <resources>
@@ -415,6 +419,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="G7i-vT-q86"/>
+        <segue reference="bKI-le-Ue2"/>
     </inferredMetricsTieBreakers>
 </document>

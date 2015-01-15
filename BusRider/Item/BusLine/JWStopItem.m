@@ -10,13 +10,12 @@
 
 @implementation JWStopItem
 
-- (id)copyWithZone:(NSZone *)zone {
-    JWStopItem *item = [[[self class] allocWithZone:zone] init];
-    item.order = self.order;
-    item.stopId = self.stopId;
-    item.stopName = self.stopName;
-    item.coordinate = self.coordinate;
-    return item;
+- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName {
+    if (self = [super init]) {
+        self.stopId = stopId;
+        self.stopName = stopName;
+    }
+    return self;
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict {

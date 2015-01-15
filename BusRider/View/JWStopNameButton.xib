@@ -30,7 +30,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-Le-d4V" customClass="JWOnePixelView">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-Le-d4V" customClass="JWOnePixelView">
                     <color key="backgroundColor" red="0.84313725490196079" green="0.84705882352941175" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" id="iwQ-BS-7Ah"/>

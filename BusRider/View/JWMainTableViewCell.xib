@@ -54,19 +54,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qGT-V7-TkW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5hJ-Go-NFf"/>
-                    <constraint firstItem="qGT-V7-TkW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="A3r-GJ-9Qm"/>
-                    <constraint firstItem="1fY-9s-h1k" firstAttribute="leading" secondItem="qGT-V7-TkW" secondAttribute="trailing" constant="8" id="Xv5-ZV-ymv"/>
                     <constraint firstItem="1fY-9s-h1k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="c1e-eY-EoC"/>
                     <constraint firstItem="S2a-V7-oaF" firstAttribute="top" secondItem="1fY-9s-h1k" secondAttribute="bottom" constant="4" id="fPE-79-6Ah"/>
+                    <constraint firstItem="qGT-V7-TkW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hAO-uW-JfR"/>
                     <constraint firstItem="1fY-9s-h1k" firstAttribute="leading" secondItem="S2a-V7-oaF" secondAttribute="leading" id="oZF-hV-bCI"/>
                     <constraint firstItem="1fY-9s-h1k" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="x3b-wF-ufk"/>
                     <constraint firstItem="1fY-9s-h1k" firstAttribute="leading" secondItem="qGT-V7-TkW" secondAttribute="trailing" constant="8" id="xKm-Oj-fvv"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="Xv5-ZV-ymv"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
