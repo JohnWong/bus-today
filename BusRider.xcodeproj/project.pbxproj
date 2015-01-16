@@ -76,6 +76,8 @@
 		52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
 		52EB7C2A1A40784B00057723 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
+		52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */; };
+		52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +235,9 @@
 		52EB7C2B1A40872900057723 /* JWCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWCommonDefine.h; sourceTree = "<group>"; };
 		52EC7E3F1A41DDE000CE4C23 /* JWItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWItem.h; sourceTree = "<group>"; };
 		52EC7E401A41DDE000CE4C23 /* JWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWItem.m; sourceTree = "<group>"; };
+		52FB0DEA1A694D0A001AF0A8 /* JWNavigationCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWNavigationCenterView.h; sourceTree = "<group>"; };
+		52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWNavigationCenterView.m; sourceTree = "<group>"; };
+		52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconExpand@2x.png"; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
@@ -481,6 +486,7 @@
 		52D091F11A53092600C5A957 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */,
 				522C2D361A66660200EE2F3F /* JWIconCellBus38@2x.png */,
 				524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */,
 				525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */,
@@ -519,6 +525,8 @@
 				52004FF41A66050600EE9024 /* JWStopLineTableViewCell.h */,
 				52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */,
 				52004FF61A66050600EE9024 /* JWStopLineTableViewCell.xib */,
+				52FB0DEA1A694D0A001AF0A8 /* JWNavigationCenterView.h */,
+				52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -742,6 +750,7 @@
 				525A1F6B1A5A9053006CE8BA /* JWIconCollectOff@2x.png in Resources */,
 				52EB7C151A3DF75C00057723 /* Images.xcassets in Resources */,
 				5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */,
+				52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */,
 				524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */,
 				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
@@ -836,6 +845,7 @@
 				52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */,
 				52004FEC1A65075D00EE9024 /* JWStopLineItem.m in Sources */,
 				5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */,
+				52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */,
 				524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */,
 				52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */,
 				522A9E961A5D02F100673EB0 /* JWLineItem.m in Sources */,

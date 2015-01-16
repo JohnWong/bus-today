@@ -18,11 +18,12 @@
 #import "JWViewUtil.h"
 #import "JWCollectItem.h"
 #import "JWFormatter.h"
+#import "JWNavigationCenterView.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
 
-@interface JWBusLineViewController()
+@interface JWBusLineViewController() <JWNavigationCenterDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstTimeLabel;
@@ -39,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *updateLabel;
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
+@property (nonatomic, strong) JWNavigationCenterView *navigationCenterView;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
 
 @end
@@ -58,7 +60,8 @@
         JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
         self.selectedStopId = stopItem.stopId;
     }
-    [self setNavigationItemCenter:nil];
+//    [self setNavigationItemCenter:nil];
+    self.navigationItem.titleView = self.navigationCenterView;
     
     /**
      *  If data is given, just update views. Or lineId is given, load request at once. To set view correctly, updateViews is called in viewDidAppear.
@@ -80,22 +83,16 @@
     }
 }
 
-- (void)setNavigationItemCenter:(NSString *)title {
-    if (!self.navigationItem.titleView) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 26)];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont boldSystemFontOfSize:17];
-        self.navigationItem.titleView = label;
-    }
-    UILabel *label = (UILabel *)self.navigationItem.titleView;
-    label.text = title;
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController cancelSGProgress];
 }
 
 - (void)updateViews {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     
     JWLineItem *lineItem = self.busLineItem.lineItem;
-    [self setNavigationItemCenter:lineItem.lineNumber];
+    [self.navigationCenterView setTitle:lineItem.lineNumber];
     self.titleLabel.text = [NSString stringWithFormat:@"%@(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
     self.lastTimeLabel.text = lineItem.lastTime;
@@ -258,6 +255,41 @@
     return _lineId;
 }
 
+- (JWNavigationCenterView *)navigationCenterView {
+    if (!_navigationCenterView) {
+        _navigationCenterView = [[JWNavigationCenterView alloc] initWithTitle:nil];
+        _navigationCenterView.delegate = self;
+    }
+    return _navigationCenterView;
+}
+
+#pragma mark JWNavigationCenterDelegate
+- (void)setOn:(BOOL)isOn {
+    if (isOn) {
+        UIViewController *topViewController = self.navigationController;
+//        UIView *containerView = topViewController.view;
+//        UIView *maskView = [JWViewUtil viewWithFrame:self.navigationController.view.bounds color:HEXCOLORA(0x0, 0.25)];
+//        [containerView addSubview:maskView];
+//        maskView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        UIPickerView *pickerView = [UIPickerView alloc] init
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"选择站点" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        __weak typeof(self) weakSelf = self;
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [weakSelf.navigationCenterView setOn:NO];
+        }];
+        [alertController addAction:cancelAction];
+        for (JWStopItem *stopItem in self.busLineItem.stopItems) {
+            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:stopItem.stopName style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                NSLog(@"%@", stopItem.stopName);
+            }];
+            [alertController addAction:confirmAction];
+        }
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
+
 #pragma mark action
 - (void)loadRequest {
     __weak typeof(self) weakSelf = self;
@@ -333,11 +365,6 @@
 - (void)removeTodayInfo {
     [[JWUserDefaultsUtil groupUserDefaults] removeObjectForKey:JWKeyBusLine];
     [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController cancelSGProgress];
 }
 
 @end

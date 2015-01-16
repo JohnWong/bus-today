@@ -10,6 +10,8 @@
 
 @interface JWViewUtil : NSObject
 
++ (UIView *)viewWithFrame:(CGRect)frame color:(UIColor *)color;
++ (UILabel *)labelWithFrame:(CGRect)frame text:(NSString *)text size:(NSInteger)size color:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)resizableImageWithColor:(UIColor *)color;
 + (void)showErrorWithMessage:(NSString *)message;

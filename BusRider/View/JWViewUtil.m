@@ -11,6 +11,21 @@
 
 @implementation JWViewUtil
 
++ (UIView *)viewWithFrame:(CGRect)frame color:(UIColor *)color {
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = color;
+    return view;
+}
+
++ (UILabel *)labelWithFrame:(CGRect)frame text:(NSString *)text size:(NSInteger)size color:(UIColor *)color {
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:size];
+    label.textColor = color;
+    label.text = text;
+    return label;
+}
+
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size{
     UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
     [color set];
