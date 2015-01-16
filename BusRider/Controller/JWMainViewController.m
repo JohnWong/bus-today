@@ -20,12 +20,10 @@
 #import "UINavigationController+SGProgress.h"
 #import "JWMainTableViewCell.h"
 #import "JWStopTableViewController.h"
+#import "JWBusInfoItem.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdSearch              @"JWCellIdSearch"
-#define JWSeguePushLineWithData     @"JWSeguePushLineWithData"
-#define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
-#define JWSeguePushStopList         @"JWSeguePushStopList"
 
 typedef NS_ENUM(NSInteger, JWSearchResultType) {
     JWSearchResultTypeNone = 0,
@@ -51,7 +49,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 /**
  *  Pass to JWBusLineViewController
  */
-@property (nonatomic, strong) JWSearchLineItem *selectedLine;
+@property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 /**
  *  Pass to JWStopViewController
  */
@@ -84,12 +82,13 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     if ([segue.identifier isEqualToString:JWSeguePushLineWithData]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
-            busLineViewController.busLineItem = self.busLineItem;            
+            busLineViewController.busLineItem = self.busLineItem;
+            busLineViewController.busInfoItem = self.busInfoItem;
         }
     } else if ([segue.identifier isEqualToString:JWSeguePushLineWithId]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
-            busLineViewController.searchLineItem = self.selectedLine;
+            busLineViewController.lineId = self.selectedLineId;
         }
     } else if ([segue.identifier isEqualToString:JWSeguePushStopList]) {
         if ([segue.destinationViewController isKindOfClass:[JWStopTableViewController class]]) {
@@ -173,13 +172,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
         JWCollectItem *item = self.collectLineItem[indexPath.row];
-        self.selectedLine = [[JWSearchLineItem alloc] init];
-        self.selectedLine.lineId = item.lineId;
-        self.selectedLine.lineNumber = item.lineNumber;
+        self.selectedLineId = item.lineId;
         [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
     } else {
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
-            self.selectedLine = self.searchListItem.lineList[indexPath.row];
+            JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];
+            self.selectedLineId = lineItem.lineId;
             [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
         } else {
             self.selectedStop = self.searchListItem.stopList[indexPath.row];
@@ -254,8 +252,17 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf.searchController.searchResultsTableView reloadData];
         } else if (result == JWSearchResultTypeSingle) {
             // single result
-            weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:self];
+            JWBusLineItem *busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            weakSelf.busLineItem = busLineItem;
+            
+            JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:busLineItem.lineItem.lineId];
+            if (collectItem && collectItem.stopId && collectItem.stopName) {
+                JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:stopItem.stopId busInfo:dict];
+            } else {
+                weakSelf.busInfoItem = nil;
+            }
+            [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:weakSelf];
         }
     }];
 }

@@ -13,4 +13,9 @@
 #import "JWColorDefine.h"
 #import "JWCommonDefine.h"
 
+#define JWSeguePushLineWithData     @"JWSeguePushLineWithData"
+#define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
+#define JWSeguePushStopList         @"JWSeguePushStopList"
+#define JWSeguePushLineWithIdStop   @"JWSeguePushLineWithIdStop"
+
 #endif

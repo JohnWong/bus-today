@@ -10,6 +10,7 @@
 #import "JWBusLineItem.h"
 #import "JWSearchLineItem.h"
 #import "JWStopItem.h"
+#import "JWBusInfoItem.h"
 
 @interface JWBusLineViewController : UIViewController
 
@@ -18,12 +19,17 @@
  */
 @property (nonatomic, strong) JWBusLineItem *busLineItem;
 /**
- *  传过来的线路id和名称
+ *  传过来的到站信息
  */
-@property (nonatomic, strong) JWSearchLineItem *searchLineItem;
+@property (nonatomic, strong) JWBusInfoItem *busInfoItem;
+
+/**
+ *  传过来的线路id
+ */
+@property (nonatomic, strong) NSString *lineId;
 /**
  *  当前用户站点
  */
-@property (nonatomic, strong) JWStopItem *selectedStopItem;
+@property (nonatomic, strong) NSString *selectedStopId;
 
 @end

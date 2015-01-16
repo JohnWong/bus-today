@@ -26,7 +26,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8I-C8-gZg">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-M0-atX" customClass="JWOnePixelView">
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="RUy-77-phm"/>
@@ -419,6 +419,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bKI-le-Ue2"/>
+        <segue reference="jwN-Vj-vCx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,4 +10,9 @@
 
 @interface JWMainViewController : UITableViewController
 
+/**
+ *  Pass to JWBusLineViewController
+ */
+@property (nonatomic, strong) NSString *selectedLineId;
+
 @end

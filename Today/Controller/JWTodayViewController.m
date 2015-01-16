@@ -18,6 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
 @property (nonatomic, strong) JWBusRequest *busRequest;
+@property (nonatomic, strong) NSString *lineId;
+@property (nonatomic, strong) NSString *stopId;
 
 @end
 
@@ -40,18 +42,16 @@
 }
 
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
-    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
-    
     [self.busCardView setLoadingView];
     
-    self.busRequest.lineId = userInfo[@"lineId"]; // @"0571-044-0";
+    self.busRequest.lineId = self.lineId; // @"0571-044-0";
     __weak typeof(self) weakSelf = self;
     [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            NSString *userStopId = userInfo[@"stopId"]; // @"0571-4603";
+            NSString *userStopId = self.stopId; // @"0571-4603";
             JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStopId busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
@@ -65,6 +65,26 @@
         _busRequest = [[JWBusRequest alloc] init];
     }
     return _busRequest;
+}
+
+- (NSString *)lineId {
+    if (!_lineId) {
+        NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
+        if (userInfo) {
+            _lineId = userInfo[@"lineId"];
+        }
+    }
+    return _lineId;
+}
+
+- (NSString *)stopId {
+    if (!_stopId) {
+        NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
+        if (userInfo) {
+            _stopId = userInfo[@"stopId"];
+        }
+    }
+    return _stopId;
 }
 
 #pragma mark action

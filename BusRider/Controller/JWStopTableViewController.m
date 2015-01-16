@@ -17,7 +17,6 @@
 #import "JWBusLineViewController.h"
 
 #define JWCellIdStopLine @"JWCellIdStopLine"
-#define JWSeguePushLineWithIdStop @"JWSeguePushLineWithIdStop"
 
 @interface JWStopTableViewController ()
 
@@ -61,10 +60,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:JWSeguePushLineWithIdStop]) {
         JWBusLineViewController *lineViewController = segue.destinationViewController;
-        lineViewController.searchLineItem = [[JWSearchLineItem alloc] initWithLineId:self.selectedLineItem.lineId
-                                                                          lineNumber:self.selectedLineItem.lineNumer];
-        lineViewController.selectedStopItem = [[JWStopItem alloc] initWithStopId:self.stopItem.stopId
-                                                                        stopName:self.stopItem.stopName];
+        lineViewController.lineId = self.selectedLineItem.lineId;
+        lineViewController.selectedStopId = self.stopItem.stopId;
     }
 }
 

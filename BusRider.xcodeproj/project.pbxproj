@@ -129,7 +129,7 @@
 		52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineTableViewCell.m; sourceTree = "<group>"; };
 		52004FF61A66050600EE9024 /* JWStopLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWStopLineTableViewCell.xib; sourceTree = "<group>"; };
 		5204537C1A37340A002A8541 /* JWTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTodayViewController.h; sourceTree = "<group>"; };
-		5204537D1A37340A002A8541 /* JWTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTodayViewController.m; sourceTree = "<group>"; };
+		5204537D1A37340A002A8541 /* JWTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JWTodayViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5204537F1A37340A002A8541 /* JWBusInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusInfoItem.h; sourceTree = "<group>"; };
 		520453801A37340A002A8541 /* JWBusInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusInfoItem.m; sourceTree = "<group>"; };
 		520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWTodayIconRefresh@2x.png"; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchTableViewCell.m; sourceTree = "<group>"; };
 		524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWSearchTableViewCell.xib; sourceTree = "<group>"; };
 		524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellBus@2x.png"; sourceTree = "<group>"; };
-		524F572C1A5E272F00DFD0A7 /* JWUserDefaultsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWUserDefaultsUtil.h; sourceTree = "<group>"; };
+		524F572C1A5E272F00DFD0A7 /* JWUserDefaultsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JWUserDefaultsUtil.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWUserDefaultsUtil.m; sourceTree = "<group>"; };
 		524F57351A618C3600DFD0A7 /* JWCollectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCollectItem.h; sourceTree = "<group>"; };
 		524F57361A618C3600DFD0A7 /* JWCollectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectItem.m; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		528558631A6432C100898779 /* JWStopRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopRequest.m; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		52AB79E21A2E193E001904CA /* BusRiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusRiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79E71A2E193E001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AB79E81A2E193E001904CA /* BusRiderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusRiderTests.m; sourceTree = "<group>"; };
