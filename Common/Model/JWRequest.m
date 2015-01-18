@@ -86,7 +86,8 @@
     for (NSString *key in paramDict) {
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
-    return [[NSString stringWithFormat:@"http://%@/bus/%@.action?s=IOS&v=2.9&cityId=004&sign=%@", kJWHost, [self actionName], paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?s=IOS&v=2.9&cityId=004&sign=%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)validateParams {

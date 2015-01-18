@@ -42,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *updateLabel;
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
-@property (nonatomic, strong) JWNavigationCenterView *navigationCenterView;
+@property (nonatomic, strong) JWNavigationCenterView *stopButtonItem;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
 /**
  *  Pass to JWBusLineViewController
@@ -67,7 +67,7 @@
         JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
         self.selectedStopId = stopItem.stopId;
     }
-    self.navigationItem.titleView = self.navigationCenterView;
+    self.navigationItem.titleView = self.stopButtonItem;
     
     /**
      *  If data is given, just update views. Or lineId is given, load request at once. To set view correctly, updateViews is called in viewDidAppear.
@@ -105,7 +105,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     
     JWLineItem *lineItem = self.busLineItem.lineItem;
-    [self.navigationCenterView setTitle:lineItem.lineNumber];
+    [self.stopButtonItem setTitle:lineItem.lineNumber];
     self.titleLabel.text = [NSString stringWithFormat:@"%@(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
     self.lastTimeLabel.text = lineItem.lastTime;
@@ -270,12 +270,12 @@
     return _lineId;
 }
 
-- (JWNavigationCenterView *)navigationCenterView {
-    if (!_navigationCenterView) {
-        _navigationCenterView = [[JWNavigationCenterView alloc] initWithTitle:nil];
-        _navigationCenterView.delegate = self;
+- (JWNavigationCenterView *)stopButtonItem {
+    if (!_stopButtonItem) {
+        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil];
+        _stopButtonItem.delegate = self;
     }
-    return _navigationCenterView;
+    return _stopButtonItem;
 }
 
 #pragma mark JWNavigationCenterDelegate
@@ -285,12 +285,12 @@
         actionSheet.cancelButtonTitle = @"取消";
         __weak typeof(self) weakSelf = self;
         actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
-            [weakSelf.navigationCenterView setOn:NO];
+            [weakSelf.stopButtonItem setOn:NO];
         };
         for (JWStopItem *stopItem in self.busLineItem.stopItems) {
             __weak typeof(self) weakSelf = self;
             [actionSheet addButtonWithTitle:stopItem.stopName image:[UIImage imageNamed:@"JWIconBusThin"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                [weakSelf.navigationCenterView setOn:NO];
+                [weakSelf.stopButtonItem setOn:NO];
                 JWSearchStopItem *searchStopItem = [[JWSearchStopItem alloc] init];
                 searchStopItem.stopId = stopItem.stopId;
                 searchStopItem.stopName = stopItem.stopName;

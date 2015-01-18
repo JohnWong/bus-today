@@ -60,7 +60,7 @@
 - (void)didTap:(UIButton *)sender {
     self.button.on = !self.button.on;
     if (self.delegate) {
-        [self.delegate setOn:self.button.isOn];
+        [self.delegate buttonItem:self setOn:self.button.isOn];
     }
 }
 

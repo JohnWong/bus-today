@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class JWNavigationCenterView;
+
 @protocol JWNavigationCenterDelegate
 
-- (void)setOn:(BOOL)isOn;
+- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn;
 
 @end
 

@@ -21,6 +21,8 @@
 #import "JWMainTableViewCell.h"
 #import "JWStopTableViewController.h"
 #import "JWBusInfoItem.h"
+#import "JWNavigationCenterView.h"
+#import "JWCityRequest.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdSearch              @"JWCellIdSearch"
@@ -31,7 +33,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     JWSearchResultTypeSingle = 2
 };
 
-@interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource>
+@interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, JWNavigationCenterDelegate>
 
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
 @property (nonatomic, strong) JWSearchListItem *searchListItem;
@@ -54,6 +56,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
  *  Pass to JWStopViewController
  */
 @property (nonatomic, strong) JWSearchStopItem *selectedStop;
+@property (nonatomic, strong) JWNavigationCenterView *cityButtonItem;
+@property (nonatomic, strong) JWCityRequest *cityRequest;
 
 @end
 
@@ -62,6 +66,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
@@ -186,6 +191,15 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
+#pragma mark JWNavigationCenterDelegate
+- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
+    if (isOn) {
+        [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+            
+        }];
+    }
+}
+
 #pragma mark UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchText = searchBar.text;
@@ -208,6 +222,13 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     return _searchRequest;
 }
 
+- (JWCityRequest *)cityRequest {
+    if (!_cityRequest) {
+        _cityRequest = [[JWCityRequest alloc] init];
+    }
+    return _cityRequest;
+}
+
 - (NSArray *)collectLineItem {
     if (!_collectLineItem) {
         _collectLineItem = [[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects];
@@ -215,9 +236,16 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     return _collectLineItem;
 }
 
+- (JWNavigationCenterView *)cityButtonItem {
+    if (!_cityButtonItem) {
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:@"城市"];
+        _cityButtonItem.delegate = self;
+    }
+    return _cityButtonItem;
+}
+
 #pragma mark action
 - (void)loadData {
-//    [self.navigationController showSGProgressWithDuration:0.3];
     _collectLineItem = nil;
     [self.tableView reloadData];
 }
