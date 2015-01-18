@@ -27,6 +27,7 @@
 		522A9E971A5D02F100673EB0 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E931A5D02F100673EB0 /* JWStopItem.m */; };
 		522A9E9A1A5D0DB000673EB0 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E991A5D0DB000673EB0 /* JWSearchStopItem.m */; };
 		522C2D371A66660200EE2F3F /* JWIconCellBus38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C2D361A66660200EE2F3F /* JWIconCellBus38@2x.png */; };
+		522C4EAD1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */; };
 		523853441A408A7A004FB163 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		523853471A408CC7004FB163 /* JWBusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 523853461A408CC7004FB163 /* JWBusRequest.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
@@ -157,6 +158,7 @@
 		522A9E981A5D0DB000673EB0 /* JWSearchStopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchStopItem.h; sourceTree = "<group>"; };
 		522A9E991A5D0DB000673EB0 /* JWSearchStopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchStopItem.m; sourceTree = "<group>"; };
 		522C2D361A66660200EE2F3F /* JWIconCellBus38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellBus38@2x.png"; sourceTree = "<group>"; };
+		522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBusThin@2x.png"; sourceTree = "<group>"; };
 		523853451A408CC7004FB163 /* JWBusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusRequest.h; sourceTree = "<group>"; };
 		523853461A408CC7004FB163 /* JWBusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusRequest.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 		52D091F11A53092600C5A957 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */,
 				52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */,
 				522C2D361A66660200EE2F3F /* JWIconCellBus38@2x.png */,
 				524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */,
@@ -755,6 +758,7 @@
 				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
 				525A1F6C1A5A9053006CE8BA /* JWIconCollectOn@2x.png in Resources */,
+				522C4EAD1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png in Resources */,
 				52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */,
 				52004FF81A66050600EE9024 /* JWStopLineTableViewCell.xib in Resources */,
 				52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */,

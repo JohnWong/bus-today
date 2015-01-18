@@ -19,6 +19,7 @@
 #import "JWCollectItem.h"
 #import "JWFormatter.h"
 #import "JWNavigationCenterView.h"
+#import "AHKActionSheet.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -266,27 +267,17 @@
 #pragma mark JWNavigationCenterDelegate
 - (void)setOn:(BOOL)isOn {
     if (isOn) {
-        UIViewController *topViewController = self.navigationController;
-//        UIView *containerView = topViewController.view;
-//        UIView *maskView = [JWViewUtil viewWithFrame:self.navigationController.view.bounds color:HEXCOLORA(0x0, 0.25)];
-//        [containerView addSubview:maskView];
-//        maskView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        
-        UIPickerView *pickerView = [UIPickerView alloc] init
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"选择站点" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-        __weak typeof(self) weakSelf = self;
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            [weakSelf.navigationCenterView setOn:NO];
-        }];
-        [alertController addAction:cancelAction];
+        AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
+        actionSheet.cancelButtonTitle = @"取消";
+        actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
+            [self.navigationCenterView setOn:NO];
+        };
         for (JWStopItem *stopItem in self.busLineItem.stopItems) {
-            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:stopItem.stopName style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            [actionSheet addButtonWithTitle:stopItem.stopName image:[UIImage imageNamed:@"JWIconBusThin"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
                 NSLog(@"%@", stopItem.stopName);
             }];
-            [alertController addAction:confirmAction];
         }
-        [self presentViewController:alertController animated:YES completion:nil];
+        [actionSheet show];
     }
 }
 

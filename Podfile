@@ -5,6 +5,7 @@ target :BusRider do
     pod 'SVPullToRefresh'
     pod 'SGNavigationProgress'
     pod 'SVProgressHUD'
+    pod "AHKActionSheet"
 end
 
 target :Today do

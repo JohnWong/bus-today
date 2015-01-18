@@ -6,6 +6,12 @@
 // project.
 
 
+// AHKActionSheet
+#define COCOAPODS_POD_AVAILABLE_AHKActionSheet
+#define COCOAPODS_VERSION_MAJOR_AHKActionSheet 0
+#define COCOAPODS_VERSION_MINOR_AHKActionSheet 5
+#define COCOAPODS_VERSION_PATCH_AHKActionSheet 0
+
 // SGNavigationProgress
 #define COCOAPODS_POD_AVAILABLE_SGNavigationProgress
 #define COCOAPODS_VERSION_MAJOR_SGNavigationProgress 1
