@@ -10,6 +10,14 @@
 
 @implementation JWSearchStopItem
 
+- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName {
+    if (self = [super init]) {
+        self.stopId = stopId;
+        self.stopName = stopName;
+    }
+    return self;
+}
+
 - (void)setFromDictionary:(NSDictionary *)dict {
     self.stopId = dict[@"stopId"];
     self.stopName = dict[@"stopName"];

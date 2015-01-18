@@ -316,11 +316,12 @@
                         <outlet property="todayButton" destination="eyO-Ni-QJW" id="kll-uM-5dR"/>
                         <outlet property="unitLabel" destination="GYn-wc-OIZ" id="zpq-GX-sxQ"/>
                         <outlet property="updateLabel" destination="ble-G6-1bG" id="qHM-5i-FNW"/>
+                        <segue destination="wuS-za-bCw" kind="push" identifier="JWSeguePushStop" id="BPd-eC-Cbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-zI-V4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="717"/>
+            <point key="canvasLocation" x="433" y="614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="67g-oX-tOw">
@@ -402,7 +403,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig9-5u-5MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="1034"/>
+            <point key="canvasLocation" x="-2" y="1331"/>
         </scene>
     </scenes>
     <resources>
@@ -419,6 +420,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jwN-Vj-vCx"/>
+        <segue reference="BPd-eC-Cbi"/>
+        <segue reference="bKI-le-Ue2"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,5 +17,6 @@
 #define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
 #define JWSeguePushStopList         @"JWSeguePushStopList"
 #define JWSeguePushLineWithIdStop   @"JWSeguePushLineWithIdStop"
+#define JWSeguePushStop             @"JWSeguePushStop"
 
 #endif

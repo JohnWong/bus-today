@@ -22,4 +22,6 @@
  */
 @property (nonatomic, strong) NSString *stopName;
 
+- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName;
+
 @end

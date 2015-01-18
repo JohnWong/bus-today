@@ -20,6 +20,7 @@
 #import "JWFormatter.h"
 #import "JWNavigationCenterView.h"
 #import "AHKActionSheet.h"
+#import "JWStopTableViewController.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -43,6 +44,10 @@
 
 @property (nonatomic, strong) JWNavigationCenterView *navigationCenterView;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
+/**
+ *  Pass to JWBusLineViewController
+ */
+@property (nonatomic, strong) JWSearchStopItem *selectedStopItem;
 
 @end
 
@@ -52,6 +57,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.contentView.layer.cornerRadius = 4;
     self.contentView.layer.borderWidth = kOnePixel;
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
@@ -61,7 +67,6 @@
         JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
         self.selectedStopId = stopItem.stopId;
     }
-//    [self setNavigationItemCenter:nil];
     self.navigationItem.titleView = self.navigationCenterView;
     
     /**
@@ -87,6 +92,13 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController cancelSGProgress];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:JWSeguePushStop]) {
+        JWStopTableViewController *stopViewController = segue.destinationViewController;
+        stopViewController.stopItem = self.selectedStopItem;
+    }
 }
 
 - (void)updateViews {
@@ -129,7 +141,9 @@
             if (scrollTo < - self.scrollView.contentInset.top) {
                 scrollTo = - self.scrollView.contentInset.top;
             }
-            self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
+            [UIView animateWithDuration:0.25 + 0.002 * scrollTo animations:^{
+                self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
+            }];
         }
         
         [self.contentView addSubview:stopButton];
@@ -269,12 +283,19 @@
     if (isOn) {
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
         actionSheet.cancelButtonTitle = @"取消";
+        __weak typeof(self) weakSelf = self;
         actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
-            [self.navigationCenterView setOn:NO];
+            [weakSelf.navigationCenterView setOn:NO];
         };
         for (JWStopItem *stopItem in self.busLineItem.stopItems) {
+            __weak typeof(self) weakSelf = self;
             [actionSheet addButtonWithTitle:stopItem.stopName image:[UIImage imageNamed:@"JWIconBusThin"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                NSLog(@"%@", stopItem.stopName);
+                [weakSelf.navigationCenterView setOn:NO];
+                JWSearchStopItem *searchStopItem = [[JWSearchStopItem alloc] init];
+                searchStopItem.stopId = stopItem.stopId;
+                searchStopItem.stopName = stopItem.stopName;
+                weakSelf.selectedStopItem = searchStopItem;
+                [weakSelf performSegueWithIdentifier:JWSeguePushStop sender:weakSelf];
             }];
         }
         [actionSheet show];
