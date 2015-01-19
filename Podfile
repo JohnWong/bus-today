@@ -5,7 +5,8 @@ target :BusRider do
     pod 'SVPullToRefresh'
     pod 'SGNavigationProgress'
     pod 'SVProgressHUD'
-    pod "AHKActionSheet"
+    pod 'AHKActionSheet'
+    pod 'Reveal-iOS-SDK', '~> 1.0.6',:configurations => ['Debug']
 end
 
 target :Today do

@@ -10,6 +10,7 @@
 #import "JWCollectItem.h"
 
 #define JWKeyBusLine @"BusLine"
+#define JWKeyCity @"City"
 
 @interface JWUserDefaultsUtil : NSObject
 
@@ -19,6 +20,8 @@
 - (void)setObject:(id)userInfo forKey:(NSString *)key;
 - (void)removeObjectForKey:(NSString *)key;
 - (id)objectForKey:(NSString *)key;
+- (void)setItem:(id)item forKey:(NSString *)key;
+- (id)itemForKey:(NSString *)key;
 
 //---------------------------------------------------------------
 // 收藏店铺的方法

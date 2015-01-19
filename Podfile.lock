@@ -1,5 +1,6 @@
 PODS:
   - AHKActionSheet (0.5)
+  - Reveal-iOS-SDK (1.0.7)
   - SGNavigationProgress (1.2)
   - STHTTPRequest (1.0.2)
   - SVProgressHUD (1.1.2)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - AHKActionSheet
+  - Reveal-iOS-SDK (~> 1.0.6)
   - SGNavigationProgress
   - STHTTPRequest
   - SVProgressHUD
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AHKActionSheet: f332463c7dba624b49cd4a37a59608e1da0032da
+  Reveal-iOS-SDK: 7ee5e9b37ef13dcd93ae1736c1b72c7c650da3e3
   SGNavigationProgress: 6c38006ca3c652618411c67d493b263343d5aece
   STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438

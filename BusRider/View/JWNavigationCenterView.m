@@ -12,8 +12,8 @@
 
 @interface JWNavigationCenterView ()
 
-@property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) JWSwitchRotationButton *button;
+//@property (nonatomic, strong) UILabel *titleLabel;
+//@property (nonatomic, strong) JWSwitchRotationButton *button;
 
 @end
 
@@ -22,50 +22,38 @@
 - (instancetype)initWithTitle:(NSString *)title {
     if (self = [super initWithFrame:CGRectMake(0, 0, 0, 24)]) {
         [self addSubview:self.titleLabel];
-        [self addSubview:self.button];
+        self.titleLabel.font = [UIFont systemFontOfSize:17];
         [self setTitle:title];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"JWIconExpand"] forState:UIControlStateNormal];
+        self.alpha = 0;
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
+        [self addGestureRecognizer:tapRecognizer];
     }
     return self;
 }
 
 - (void)setTitle:(NSString *)title {
-    self.titleLabel.text = title;
-    self.titleLabel.width = title ? [title sizeWithFont:self.titleLabel.font].width : 0;
-    self.button.left = self.titleLabel.width;
-    self.width = self.titleLabel.width + self.button.width;
+    [self setTitle:title forState:UIControlStateNormal];
+    CGFloat width = (title ? [title sizeWithFont:self.titleLabel.font].width : 0);
+    CGFloat imageWidth = 18;
+    self.width = width + imageWidth;
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageWidth, 0, imageWidth);
+    self.imageEdgeInsets = UIEdgeInsetsMake(0, width + (imageWidth - 14) / 2.0, 0, (imageWidth - 14) / 2.0);
     if (title) {
-        self.button.hidden = NO;
+        self.alpha = 1;
     }
-}
-
-#pragma mark getter
-- (UILabel *)titleLabel {
-    if (!_titleLabel) {
-        _titleLabel = [JWViewUtil labelWithFrame:CGRectMake(0, (self.height - 20) / 2.0, 0, 20) text:nil size:17 color:[UIColor blackColor]];
-    }
-    return _titleLabel;
-}
-
-- (JWSwitchRotationButton *)button {
-    if (!_button) {
-        _button = [[JWSwitchRotationButton alloc] initWithFrame:CGRectMake(0, 0, self.height, self.height)];
-        [_button setImage:[UIImage imageNamed:@"JWIconExpand"] forState:UIControlStateNormal];
-        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
-        _button.hidden = YES;
-        [_button addGestureRecognizer:tapRecognizer];
-    }
-    return _button;
 }
 
 - (void)didTap:(UIButton *)sender {
-    self.button.on = !self.button.on;
-    if (self.delegate) {
-        [self.delegate buttonItem:self setOn:self.button.isOn];
-    }
+    self.on = !self.on;
 }
 
-- (void)setOn:(BOOL)isOn {
-    [self.button setOn:isOn];
+- (void)setOn:(BOOL)on {
+    [super setOn:on];
+    if (self.delegate) {
+        [self.delegate buttonItem:self setOn:self.isOn];
+    }
 }
 
 @end

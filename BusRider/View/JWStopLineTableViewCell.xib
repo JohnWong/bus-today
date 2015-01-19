@@ -25,7 +25,7 @@
                         <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconCellBus38.png" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-Po-HMQ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JWIconCellBus-38.png" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-Po-HMQ">
                         <rect key="frame" x="16" y="8" width="38" height="38"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -74,6 +74,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="JWIconCellBus38.png" width="38" height="38"/>
+        <image name="JWIconCellBus-38.png" width="38" height="38"/>
     </resources>
 </document>

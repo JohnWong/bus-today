@@ -23,6 +23,8 @@
 #import "JWBusInfoItem.h"
 #import "JWNavigationCenterView.h"
 #import "JWCityRequest.h"
+#import "JWCityItem.h"
+#import "AHKActionSheet.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdSearch              @"JWCellIdSearch"
@@ -195,7 +197,23 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
     if (isOn) {
         [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-            
+            NSArray *array = [JWCityItem arrayFromDictionary:dict];
+            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
+            actionSheet.cancelButtonTitle = @"取消";
+            actionSheet.buttonHeight = 44;
+            __weak typeof(self) weakSelf = self;
+            actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
+                [weakSelf.cityButtonItem setOn:NO];
+            };
+            for (JWCityItem *cityItem in array) {
+                __weak typeof(self) weakSelf = self;
+                [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                    [weakSelf.cityButtonItem setOn:NO];
+                    [weakSelf.cityButtonItem setTitle:cityItem.cityName];
+                    [[JWUserDefaultsUtil standardUserDefaults] setItem:cityItem forKey:JWKeyCity];
+                }];
+            }
+            [actionSheet show];
         }];
     }
 }
@@ -238,7 +256,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (JWNavigationCenterView *)cityButtonItem {
     if (!_cityButtonItem) {
-        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:@"城市"];
+        JWCityItem *cityItem = [[JWUserDefaultsUtil standardUserDefaults] itemForKey:JWKeyCity];
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市"];
         _cityButtonItem.delegate = self;
     }
     return _cityButtonItem;

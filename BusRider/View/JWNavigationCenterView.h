@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWSwitchRotationButton.h"
 
 @class JWNavigationCenterView;
 
@@ -16,15 +17,11 @@
 
 @end
 
-/**
- *  包含1个label和一个button
- */
-@interface JWNavigationCenterView : UIView
+@interface JWNavigationCenterView : JWSwitchRotationButton
 
 @property (nonatomic, weak) id<JWNavigationCenterDelegate> delegate;
 
 - (instancetype)initWithTitle:(NSString *)title;
 - (void)setTitle:(NSString *)title;
-- (void)setOn:(BOOL)isOn;
 
 @end

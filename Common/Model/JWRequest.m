@@ -8,6 +8,8 @@
 
 #import "JWRequest.h"
 #import "STHTTPRequest.h"
+#import "JWUserDefaultsUtil.h"
+#import "JWCityItem.h"
 
 #define JWDataErrorKey @"JWDataError"
 
@@ -86,8 +88,12 @@
     for (NSString *key in paramDict) {
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
-    
-    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?s=IOS&v=2.9&cityId=004&sign=%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *cityId = @"";
+    JWCityItem *cityItem = [[JWUserDefaultsUtil standardUserDefaults] itemForKey:JWKeyCity];
+    if (cityId) {
+        cityId = cityItem.cityId;
+    }
+    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?s=IOS&v=2.9&cityId=%@&sign=%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)validateParams {

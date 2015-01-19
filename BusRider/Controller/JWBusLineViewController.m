@@ -279,10 +279,11 @@
 }
 
 #pragma mark JWNavigationCenterDelegate
-- (void)setOn:(BOOL)isOn {
+- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
     if (isOn) {
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
         actionSheet.cancelButtonTitle = @"取消";
+        actionSheet.buttonHeight = 44;
         __weak typeof(self) weakSelf = self;
         actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
             [weakSelf.stopButtonItem setOn:NO];
