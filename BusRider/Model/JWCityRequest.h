@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 John Wong. All rights reserved.
 //
 
-#import "JWRequest.h"
+#import "JWRequestWithAlert.h"
 
-@interface JWCityRequest : JWRequest
+@interface JWCityRequest : JWRequestWithAlert
 
 @end

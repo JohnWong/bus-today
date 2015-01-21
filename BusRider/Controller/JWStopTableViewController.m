@@ -136,7 +136,7 @@
         if (error) {
             
         } else {
-            self.lineTypeList = [JWStopLineTypeItem arrayFromDictionary:dict];
+            weakSelf.lineTypeList = [JWStopLineTypeItem arrayFromDictionary:dict];
             [weakSelf updateViews];
         }
     } progress:^(CGFloat percent) {

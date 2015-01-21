@@ -89,11 +89,11 @@
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
     NSString *cityId = @"";
-    JWCityItem *cityItem = [[JWUserDefaultsUtil standardUserDefaults] itemForKey:JWKeyCity];
-    if (cityId) {
-        cityId = cityItem.cityId;
+    JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
+    if (cityItem) {
+        cityId = [NSString stringWithFormat:@"&cityId=%@", cityItem.cityId];
     }
-    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?s=IOS&v=2.9&cityId=%@&sign=%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?s=IOS&v=2.9%@&sign=%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)validateParams {

@@ -119,10 +119,10 @@
         }
     }
     
-    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
+    JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
     NSString *todayStopId;
-    if (userInfo && [self.lineId isEqualToString:userInfo[@"lineId"]]) {
-        todayStopId = userInfo[@"stopId"];
+    if (todayItem && [self.lineId isEqualToString:todayItem.lineId]) {
+        todayStopId = todayItem.stopId;
     }
     NSString *focusStopId = self.selectedStopId ? : todayStopId;
     for (int i = 0; i < count; i ++) {
@@ -217,10 +217,10 @@
 }
 
 - (void)updateTodayButton {
-    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
-    if (userInfo) {
-        NSString *lineId = userInfo[@"lineId"];
-        NSString *stopId = userInfo[@"stopId"];
+    JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+    if (todayItem) {
+        NSString *lineId = todayItem.lineId;
+        NSString *stopId = todayItem.stopId;
         if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopId]) {
             self.todayButton.on = YES;
             return;
@@ -252,7 +252,7 @@
         }
     }
     JWCollectItem *collectItem = [[JWCollectItem alloc] initWithLineId:self.lineId lineNumber:self.busLineItem.lineItem.lineNumber from:self.busLineItem.lineItem.from to:self.busLineItem.lineItem.to stopId:self.selectedStopId ? : @"" stopName:stopName];
-    [JWUserDefaultsUtil saveCollectItem:collectItem];
+    [JWUserDefaultsUtil addCollectItem:collectItem];
 }
 
 #pragma mark getter
@@ -365,18 +365,14 @@
 }
 
 - (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopId:(NSString *)stopId {
-    [[JWUserDefaultsUtil groupUserDefaults] setObject:@{
-                                                        @"lineId": lineId,
-                                                        @"lineNumber": lineNumber,
-                                                        @"stopId": stopId
-                                                        }
-                                               forKey:JWKeyBusLine];
+    JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopId:stopId stopName:nil];
+    [JWUserDefaultsUtil setTodayBusLine:todayItem];
     [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:[self todayBundleId]];
     
 }
 
 - (void)removeTodayInfo {
-    [[JWUserDefaultsUtil groupUserDefaults] removeObjectForKey:JWKeyBusLine];
+    [JWUserDefaultsUtil removeTodayBusLine];
     [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
 }
 

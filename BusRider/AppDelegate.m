@@ -47,15 +47,12 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
-    NSString *lineId = userInfo[@"lineId"];
-    if (lineId) {
-        JWSearchLineItem *selectedLine = [[JWSearchLineItem alloc] init];
-        selectedLine.lineId = lineId;
+    JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+    if (todayItem) {
         UINavigationController *navigationViewController = (UINavigationController *)self.window.rootViewController;
         [navigationViewController popToRootViewControllerAnimated:YES];
         JWMainViewController *mainViewController = (JWMainViewController *)navigationViewController.topViewController;
-        mainViewController.selectedLineId = lineId;
+        mainViewController.selectedLineId = todayItem.lineId;
         [mainViewController performSegueWithIdentifier:JWSeguePushLineWithId sender:mainViewController];
     }
     return YES;

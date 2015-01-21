@@ -28,7 +28,6 @@
 		522A9E9A1A5D0DB000673EB0 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E991A5D0DB000673EB0 /* JWSearchStopItem.m */; };
 		522C4EAD1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */; };
 		522C4EB21A6C191D00B4C1E9 /* JWCityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 522C4EB11A6C191D00B4C1E9 /* JWCityRequest.m */; };
-		522C4EB51A6C9D1F00B4C1E9 /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522C4EB41A6C9D1F00B4C1E9 /* JWCityItem.m */; };
 		522C4EBC1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */; };
 		522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */; };
 		523853441A408A7A004FB163 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
@@ -39,7 +38,6 @@
 		524F57271A5D93A800DFD0A7 /* JWIconCellBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */; };
 		524F572E1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */; };
 		524F572F1A5E2AB400DFD0A7 /* JWUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */; };
-		524F57371A618C3600DFD0A7 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F57361A618C3600DFD0A7 /* JWCollectItem.m */; };
 		5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257A0651A4496AD0066A354 /* JWRequestWithAlert.m */; };
 		5257A0691A4562FC0066A354 /* JWViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257A0681A4562FC0066A354 /* JWViewUtil.m */; };
 		525A1F6B1A5A9053006CE8BA /* JWIconCollectOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F691A5A9053006CE8BA /* JWIconCollectOff@2x.png */; };
@@ -82,6 +80,11 @@
 		52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
 		52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */; };
 		52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */; };
+		52FCD06E1A700F5800419271 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
+		52FCD0721A70177800419271 /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
+		52FCD0731A7017BE00419271 /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
+		52FCD0741A7017C200419271 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
+		52FCD0751A7017CB00419271 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
@@ -163,8 +166,6 @@
 		522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBusThin@2x.png"; sourceTree = "<group>"; };
 		522C4EB01A6C191D00B4C1E9 /* JWCityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCityRequest.h; sourceTree = "<group>"; };
 		522C4EB11A6C191D00B4C1E9 /* JWCityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCityRequest.m; sourceTree = "<group>"; };
-		522C4EB31A6C9D1F00B4C1E9 /* JWCityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCityItem.h; sourceTree = "<group>"; };
-		522C4EB41A6C9D1F00B4C1E9 /* JWCityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCityItem.m; sourceTree = "<group>"; };
 		522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellBus-38@2x.png"; sourceTree = "<group>"; };
 		522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCity@2x.png"; sourceTree = "<group>"; };
 		523853451A408CC7004FB163 /* JWBusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusRequest.h; sourceTree = "<group>"; };
@@ -176,8 +177,6 @@
 		524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellBus@2x.png"; sourceTree = "<group>"; };
 		524F572C1A5E272F00DFD0A7 /* JWUserDefaultsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JWUserDefaultsUtil.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWUserDefaultsUtil.m; sourceTree = "<group>"; };
-		524F57351A618C3600DFD0A7 /* JWCollectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCollectItem.h; sourceTree = "<group>"; };
-		524F57361A618C3600DFD0A7 /* JWCollectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectItem.m; sourceTree = "<group>"; };
 		5257A0641A4496AD0066A354 /* JWRequestWithAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRequestWithAlert.h; sourceTree = "<group>"; };
 		5257A0651A4496AD0066A354 /* JWRequestWithAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRequestWithAlert.m; sourceTree = "<group>"; };
 		5257A0671A4562FC0066A354 /* JWViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWViewUtil.h; sourceTree = "<group>"; };
@@ -248,6 +247,10 @@
 		52FB0DEA1A694D0A001AF0A8 /* JWNavigationCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWNavigationCenterView.h; sourceTree = "<group>"; };
 		52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWNavigationCenterView.m; sourceTree = "<group>"; };
 		52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconExpand@2x.png"; sourceTree = "<group>"; };
+		52FCD06C1A700F5800419271 /* JWCollectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCollectItem.h; sourceTree = "<group>"; };
+		52FCD06D1A700F5800419271 /* JWCollectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectItem.m; sourceTree = "<group>"; };
+		52FCD0701A70177800419271 /* JWCityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCityItem.h; sourceTree = "<group>"; };
+		52FCD0711A70177800419271 /* JWCityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCityItem.m; sourceTree = "<group>"; };
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
@@ -337,12 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				52004FE91A65075D00EE9024 /* StopLine */,
-				524F57351A618C3600DFD0A7 /* JWCollectItem.h */,
-				524F57361A618C3600DFD0A7 /* JWCollectItem.m */,
 				522A9E8B1A5D02F100673EB0 /* BusLine */,
 				522A9E7E1A5D026E00673EB0 /* SearchList */,
-				522C4EB31A6C9D1F00B4C1E9 /* JWCityItem.h */,
-				522C4EB41A6C9D1F00B4C1E9 /* JWCityItem.m */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -617,6 +616,10 @@
 		52EC7E3E1A41DDD600CE4C23 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				52FCD0701A70177800419271 /* JWCityItem.h */,
+				52FCD0711A70177800419271 /* JWCityItem.m */,
+				52FCD06C1A700F5800419271 /* JWCollectItem.h */,
+				52FCD06D1A700F5800419271 /* JWCollectItem.m */,
 				52EC7E3F1A41DDE000CE4C23 /* JWItem.h */,
 				52EC7E401A41DDE000CE4C23 /* JWItem.m */,
 				52004FF01A6511EB00EE9024 /* JWFormatter.h */,
@@ -855,6 +858,7 @@
 				5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */,
 				52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */,
 				522A9E9A1A5D0DB000673EB0 /* JWSearchStopItem.m in Sources */,
+				52FCD06E1A700F5800419271 /* JWCollectItem.m in Sources */,
 				52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */,
 				528558611A642EA400898779 /* JWStopTableViewController.m in Sources */,
 				522A9E941A5D02F100673EB0 /* JWBusItem.m in Sources */,
@@ -872,9 +876,8 @@
 				5257A0691A4562FC0066A354 /* JWViewUtil.m in Sources */,
 				52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */,
 				522A9E951A5D02F100673EB0 /* JWBusLineItem.m in Sources */,
+				52FCD0721A70177800419271 /* JWCityItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
-				522C4EB51A6C9D1F00B4C1E9 /* JWCityItem.m in Sources */,
-				524F57371A618C3600DFD0A7 /* JWCollectItem.m in Sources */,
 				52B8D5AE1A56E3FA00B3DD5C /* JWBusInfoItem.m in Sources */,
 				52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */,
 				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
@@ -904,8 +907,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FCD0751A7017CB00419271 /* JWItem.m in Sources */,
+				52FCD0741A7017C200419271 /* JWCollectItem.m in Sources */,
 				52EB7C251A4077FB00057723 /* JWCharIconView.m in Sources */,
 				524F572F1A5E2AB400DFD0A7 /* JWUserDefaultsUtil.m in Sources */,
+				52FCD0731A7017BE00419271 /* JWCityItem.m in Sources */,
 				520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */,
 				5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */,
 				523853471A408CC7004FB163 /* JWBusRequest.m in Sources */,

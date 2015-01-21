@@ -8,24 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "JWCollectItem.h"
-
-#define JWKeyBusLine @"BusLine"
-#define JWKeyCity @"City"
+#import "JWCityItem.h"
 
 @interface JWUserDefaultsUtil : NSObject
 
-+ (instancetype)standardUserDefaults;
-+ (instancetype)groupUserDefaults;
+#pragma mark today busline
++ (void)setTodayBusLine:(JWCollectItem *)busLine;
++ (JWCollectItem *)todayBusLine;
++ (void)removeTodayBusLine;
 
-- (void)setObject:(id)userInfo forKey:(NSString *)key;
-- (void)removeObjectForKey:(NSString *)key;
-- (id)objectForKey:(NSString *)key;
-- (void)setItem:(id)item forKey:(NSString *)key;
-- (id)itemForKey:(NSString *)key;
+#pragma mark city
++ (void)setCityItem:(JWCityItem *)item;
++ (JWCityItem *)cityItem;
 
-//---------------------------------------------------------------
-// 收藏店铺的方法
-+ (void)saveCollectItem:(JWCollectItem *)item;
+#pragma mark collect busline
++ (void)addCollectItem:(JWCollectItem *)item;
 + (JWCollectItem *)collectItemForLineId:(NSString *)lineId;
 + (void)removeCollectItemWithLineId:(NSString *)lineId;
 /**

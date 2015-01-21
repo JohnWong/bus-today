@@ -51,7 +51,7 @@
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            NSString *userStopId = self.stopId; // @"0571-4603";
+            NSString *userStopId = weakSelf.stopId; // @"0571-4603";
             JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStopId busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
@@ -69,9 +69,9 @@
 
 - (NSString *)lineId {
     if (!_lineId) {
-        NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
-        if (userInfo) {
-            _lineId = userInfo[@"lineId"];
+        JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+        if (todayItem) {
+            _lineId = todayItem.lineId;
         }
     }
     return _lineId;
@@ -79,9 +79,9 @@
 
 - (NSString *)stopId {
     if (!_stopId) {
-        NSDictionary *userInfo = [[JWUserDefaultsUtil groupUserDefaults] objectForKey:JWKeyBusLine];
-        if (userInfo) {
-            _stopId = userInfo[@"stopId"];
+        JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+        if (todayItem) {
+            _stopId = todayItem.stopId;
         }
     }
     return _stopId;

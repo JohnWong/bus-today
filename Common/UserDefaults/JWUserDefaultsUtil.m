@@ -10,7 +10,9 @@
 
 #define JWSuiteName @"group.visionary.busrider"
 
-#define JWKeyLineStop @"JWKeyLineStop"
+#define JWKeyCollectedLine  @"JWKeyCollectedLine"
+#define JWKeyTodayBusLine   @"JWKeyTodayBusLine"
+#define JWKeyCity           @"JWKeyCity"
 
 @interface JWUserDefaultsUtil ()
 
@@ -67,62 +69,119 @@
     }
 }
 
-+ (void)saveCollectItem:(JWCollectItem *)item {
-    JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
-    if (lineList == nil) {
-        lineList = @[item];
-    } else  {
++ (void)setCityItem:(JWCityItem *)item {
+    [[self groupUserDefaults] setItem:item forKey:JWKeyCity];
+}
+
++ (JWCityItem *)cityItem {
+    return [[self groupUserDefaults] itemForKey:JWKeyCity];
+}
+
++ (void)addCollectItem:(JWCollectItem *)item {
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    if (key) {
+        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        NSArray *lineList = [userDefaults itemForKey:key];
+        if (lineList == nil) {
+            lineList = @[item];
+        } else  {
+            for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
+                JWCollectItem *savedItem = lineList[i];
+                if ([savedItem.lineId isEqualToString:item.lineId]) {
+                    NSMutableArray *mutableArray = [lineList mutableCopy];
+                    [mutableArray removeObjectAtIndex:i];
+                    lineList = mutableArray;
+                    break;
+                }
+            }
+            lineList = [lineList arrayByAddingObject:item];
+        }
+        [userDefaults setItem:lineList forKey:key];
+    }
+}
+
++ (void)removeCollectItemWithLineId:(NSString *)lineId {
+    
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    if (key) {
+        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        NSArray *lineList = [userDefaults itemForKey:key];
+        if (lineList == nil) {
+            return;
+        }
         for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
             JWCollectItem *savedItem = lineList[i];
-            if ([savedItem.lineId isEqualToString:item.lineId]) {
+            if ([savedItem.lineId isEqualToString:lineId]) {
                 NSMutableArray *mutableArray = [lineList mutableCopy];
                 [mutableArray removeObjectAtIndex:i];
                 lineList = mutableArray;
                 break;
             }
         }
-        lineList = [lineList arrayByAddingObject:item];
+        [userDefaults setItem:lineList forKey:key];
     }
-    [userDefaults setItem:lineList forKey:JWKeyLineStop];
-}
-
-+ (void)removeCollectItemWithLineId:(NSString *)lineId {
-    JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
-    if (lineList == nil) {
-        return;
-    }
-    for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
-        JWCollectItem *savedItem = lineList[i];
-        if ([savedItem.lineId isEqualToString:lineId]) {
-            NSMutableArray *mutableArray = [lineList mutableCopy];
-            [mutableArray removeObjectAtIndex:i];
-            lineList = mutableArray;
-            break;
-        }
-    }
-    [userDefaults setItem:lineList forKey:JWKeyLineStop];
 }
 
 + (JWCollectItem *)collectItemForLineId:(NSString *)lineId {
-    JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    NSArray *lineList = [userDefaults itemForKey:JWKeyLineStop];
-    if (lineList == nil) {
-        return nil;
-    } else {
-        for (JWCollectItem *item in lineList) {
-            if ([item.lineId isEqualToString:lineId]) {
-                return item;
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    if (key) {
+        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        NSArray *lineList = [userDefaults itemForKey:key];
+        if (lineList == nil) {
+            return nil;
+        } else {
+            for (JWCollectItem *item in lineList) {
+                if ([item.lineId isEqualToString:lineId]) {
+                    return item;
+                }
             }
+            return nil;
         }
+    } else {
         return nil;
     }
 }
 
 + (NSArray *)allCollectItems {
-    JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-    return [userDefaults itemForKey:JWKeyLineStop];
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    if (key) {
+        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        return [userDefaults itemForKey:key];
+    } else {
+        return nil;
+    }
+}
+
++ (NSString *)combinedkey:(NSString *)key {
+    JWCityItem *cityItem = [self cityItem];
+    if (cityItem) {
+        return [NSString stringWithFormat:@"%@-%@", cityItem.cityId, key];
+    } else {
+        return nil;
+    }
+}
+
++ (void)setTodayBusLine:(JWCollectItem *)busLine {
+    NSString *key = [self combinedkey:JWKeyTodayBusLine];
+    if (key) {
+        [[self groupUserDefaults] setItem:busLine forKey:key];
+    }
+}
+
++ (JWCollectItem *)todayBusLine {
+    NSString *key = [self combinedkey:JWKeyTodayBusLine];
+    if (key) {
+        return [[self groupUserDefaults] itemForKey:key];
+    } else {
+        return nil;
+    }
+}
+
++ (void)removeTodayBusLine {
+    NSString *key = [self combinedkey:JWKeyTodayBusLine];
+    if (key) {
+        return [[self groupUserDefaults] removeObjectForKey:key];
+    }
 }
 
 @end

@@ -196,29 +196,21 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark JWNavigationCenterDelegate
 - (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
     if (isOn) {
-        [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-            NSArray *array = [JWCityItem arrayFromDictionary:dict];
-            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
-            actionSheet.cancelButtonTitle = @"取消";
-            actionSheet.buttonHeight = 44;
-            __weak typeof(self) weakSelf = self;
-            actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
-                [weakSelf.cityButtonItem setOn:NO];
-            };
-            for (JWCityItem *cityItem in array) {
-                __weak typeof(self) weakSelf = self;
-                [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                    [weakSelf.cityButtonItem setOn:NO];
-                    [weakSelf.cityButtonItem setTitle:cityItem.cityName];
-                    [[JWUserDefaultsUtil standardUserDefaults] setItem:cityItem forKey:JWKeyCity];
-                }];
-            }
-            [actionSheet show];
-        }];
+        [self showCityList];
     }
 }
 
 #pragma mark UISearchBarDelegate
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
+    if (cityItem) {
+        return YES;
+    } else {
+        [self showCityList];
+        return NO;
+    }
+}
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSString *searchText = searchBar.text;
     if (searchText && searchText.length > 0) {
@@ -256,7 +248,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (JWNavigationCenterView *)cityButtonItem {
     if (!_cityButtonItem) {
-        JWCityItem *cityItem = [[JWUserDefaultsUtil standardUserDefaults] itemForKey:JWKeyCity];
+        JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
         _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市"];
         _cityButtonItem.delegate = self;
     }
@@ -267,6 +259,30 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)loadData {
     _collectLineItem = nil;
     [self.tableView reloadData];
+}
+
+- (void)showCityList {
+    __weak typeof(self) weakSelf = self;
+    [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        if (!error) {
+            NSArray *array = [JWCityItem arrayFromDictionary:dict];
+            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
+            actionSheet.cancelButtonTitle = @"取消";
+            actionSheet.buttonHeight = 44;
+            actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
+                [weakSelf.cityButtonItem setOn:NO];
+            };
+            for (JWCityItem *cityItem in array) {
+                [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                    [weakSelf.cityButtonItem setOn:NO];
+                    [weakSelf.cityButtonItem setTitle:cityItem.cityName];
+                    [JWUserDefaultsUtil setCityItem:cityItem];
+                    [weakSelf loadData];
+                }];
+            }
+            [actionSheet show];
+        }
+    }];
 }
 
 - (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD{
@@ -292,7 +308,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         NSInteger result = [dict[@"result"] integerValue];
         if (result == JWSearchResultTypeNone) {
             weakSelf.searchListItem = nil;
-            [weakSelf.searchController.searchResultsTableView reloadData];    
+            [weakSelf.searchController.searchResultsTableView reloadData];
         } else if (result == JWSearchResultTypeList) {
             // list result
             weakSelf.searchListItem = [[JWSearchListItem alloc] initWithDictionary:dict];
