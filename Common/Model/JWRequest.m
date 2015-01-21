@@ -74,7 +74,7 @@
         completion(nil, error);
     };
     self.request.downloadProgressBlock = ^(NSData *data, NSUInteger totalBytesReceived, long long totalBytesExpectedToReceive) {
-        NSLog(@"JWRequest: progress %ld / %lld", totalBytesReceived, totalBytesExpectedToReceive);
+        NSLog(@"JWRequest: progress %ld / %lld", (unsigned long)totalBytesReceived, totalBytesExpectedToReceive);
         if (progress) {
             progress(totalBytesReceived * 100 / totalBytesExpectedToReceive);
         }

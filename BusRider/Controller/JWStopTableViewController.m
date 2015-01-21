@@ -88,7 +88,7 @@
             leftStopDesc = @"尚未发车";
             break;
         default:
-            leftStopDesc = [NSString stringWithFormat:@"%ld站", lineItem.leftStops];
+            leftStopDesc = [NSString stringWithFormat:@"%ld站", (long)lineItem.leftStops];
             break;
     }
     [cell setTitle:[NSString stringWithFormat:@"%@", lineItem.lineNumer]

@@ -20,7 +20,7 @@
 }
 
 + (NSString *)formatedTime:(NSInteger)time {
-    return [NSString stringWithFormat:@"%ld%@", time < 60 ? time : time / 60, time < 60 ? @"秒" : @"分"];
+    return [NSString stringWithFormat:@"%ld%@", (long)(time < 60 ? time : time / 60), time < 60 ? @"秒" : @"分"];
 }
 
 @end

@@ -184,7 +184,7 @@
             case JWBusStateNotStarted:
                 self.mainLabel.text = @"--";
                 self.unitLabel.text = @"";
-                self.updateLabel.text = self.busInfoItem.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", self.busInfoItem.pastTime];
+                self.updateLabel.text = self.busInfoItem.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", (long)self.busInfoItem.pastTime];
                 break;
             case JWBusStateNotFound:
                 self.mainLabel.text = @"--";
@@ -193,7 +193,7 @@
                 break;
             case JWBusStateNear:
                 if (self.busInfoItem.distance < 1000) {
-                    self.mainLabel.text = [NSString stringWithFormat:@"%ld", self.busInfoItem.distance];
+                    self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)self.busInfoItem.distance];
                     self.unitLabel.text = @"米";
                 } else {
                     self.mainLabel.text = [NSString stringWithFormat:@"%.1f", self.busInfoItem.distance / 1000.0];
@@ -202,7 +202,7 @@
                 self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;
             case JWBusStateFar:
-                self.mainLabel.text = [NSString stringWithFormat:@"%ld", self.busInfoItem.remains];
+                self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)self.busInfoItem.remains];
                 self.unitLabel.text = @"站";
                 self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;

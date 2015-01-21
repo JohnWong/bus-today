@@ -35,7 +35,7 @@
     } else {
         self.separator.hidden = NO;
     }
-    self.indexLabel.text = [NSString stringWithFormat:@"%ld", index];;
+    self.indexLabel.text = [NSString stringWithFormat:@"%ld", (long)index];;
     [self.titleButton setTitle:title forState:UIControlStateNormal];
     
     [self setIsToday:isToday];
