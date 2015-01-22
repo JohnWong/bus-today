@@ -14,7 +14,7 @@
 /**
  *  array of JWStopLineItem
  */
-@property (nonatomic, strong) NSArray *lineList;
+@property (nonatomic, strong) NSMutableArray *lineList;
 
 - (instancetype)initWithNextStop:(NSString *)nextStop NS_DESIGNATED_INITIALIZER;
 

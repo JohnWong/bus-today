@@ -81,9 +81,9 @@
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
-        NSArray *lineList = [userDefaults itemForKey:key];
+        NSMutableArray *lineList = [[userDefaults itemForKey:key] mutableCopy];
         if (lineList == nil) {
-            lineList = @[item];
+            lineList = [[NSMutableArray alloc] initWithObjects:item, nil];
         } else  {
             for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
                 JWCollectItem *savedItem = lineList[i];
@@ -94,9 +94,9 @@
                     break;
                 }
             }
-            lineList = [lineList arrayByAddingObject:item];
+            [lineList addObject:item];
         }
-        [userDefaults setItem:lineList forKey:key];
+        [userDefaults setItem:[NSArray arrayWithArray:lineList] forKey:key];
     }
 }
 

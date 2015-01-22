@@ -14,7 +14,7 @@
 - (instancetype)initWithNextStop:(NSString *)nextStop {
     if (self = [super init]) {
         self.nextStop = nextStop;
-        self.lineList = [[NSArray alloc] init];
+        self.lineList = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -27,10 +27,10 @@
             mutableTypeDict[lineItem.nextStop] = [[JWStopLineTypeItem alloc] initWithNextStop:lineItem.nextStop];
         }
         JWStopLineTypeItem *typeItem = mutableTypeDict[lineItem.nextStop];
-        typeItem.lineList = [typeItem.lineList arrayByAddingObject:lineItem];
+        [typeItem.lineList addObject:lineItem];
     }
     for (JWStopLineTypeItem *typeItem in mutableTypeDict.allValues) {
-        typeItem.lineList = [typeItem.lineList sortedArrayUsingSelector:@selector(compare:)];
+        [typeItem.lineList sortedArrayUsingSelector:@selector(compare:)];
     }
     NSArray *keyList = mutableTypeDict.allKeys;
     keyList = [keyList sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];

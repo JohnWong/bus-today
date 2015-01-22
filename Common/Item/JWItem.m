@@ -20,12 +20,12 @@
 - (void)setFromDictionary:(NSDictionary *)dict {}
 
 + (NSArray *)arrayFromDictionaryArray:(NSArray *)array {
-    NSArray *ret = [[NSArray alloc] init];
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *dict in array) {
         id item = [[self alloc] initWithDictionary:dict];
-        ret = [ret arrayByAddingObject:item];
+        [mutableArray addObject:item];
     }
-    return ret;
+    return [NSArray arrayWithArray:mutableArray];
 }
 
 @end
