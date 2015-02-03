@@ -27,7 +27,7 @@
 
 #### 公交线路
 
-实时公交信息展示，简介明了。
+实时公交信息展示，简洁明了。
 
 ![公交线路](https://raw.githubusercontent.com/JohnWong/bus-today/master/Docs/screenshot-line.png)
 
