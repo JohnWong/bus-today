@@ -264,7 +264,10 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)showCityList {
     __weak typeof(self) weakSelf = self;
     [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-        if (!error) {
+        if (error) {
+            [JWViewUtil showError:error];
+            [weakSelf.cityButtonItem setOn:NO];
+        } else {
             NSArray *array = [JWCityItem arrayFromDictionary:dict];
             AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
             actionSheet.cancelButtonTitle = @"取消";

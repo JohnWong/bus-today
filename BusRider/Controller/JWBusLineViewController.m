@@ -359,21 +359,13 @@
     [self loadRequest];
 }
 
-- (NSString *)todayBundleId {
-    NSString *mainId = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleIdentifierKey];
-    return [mainId stringByAppendingString:@".Today"];
-}
-
 - (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopId:(NSString *)stopId {
     JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopId:stopId stopName:nil];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
-    [[NCWidgetController widgetController] setHasContent:YES forWidgetWithBundleIdentifier:[self todayBundleId]];
-    
 }
 
 - (void)removeTodayInfo {
     [JWUserDefaultsUtil removeTodayBusLine];
-    [[NCWidgetController widgetController] setHasContent:NO forWidgetWithBundleIdentifier:[self todayBundleId]];
 }
 
 @end

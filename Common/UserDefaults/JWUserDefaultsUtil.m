@@ -8,7 +8,7 @@
 
 #import "JWUserDefaultsUtil.h"
 
-#define JWSuiteName @"group.visionary.busrider"
+#define JWSuiteName @"group.johnwong.busrider"
 
 #define JWKeyCollectedLine  @"JWKeyCollectedLine"
 #define JWKeyTodayBusLine   @"JWKeyTodayBusLine"

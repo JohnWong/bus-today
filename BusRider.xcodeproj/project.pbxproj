@@ -712,7 +712,7 @@
 				TargetAttributes = {
 					52AB79C81A2E193E001904CA = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = RMP5PV6R6N;
+						DevelopmentTeam = KC63T62SBR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -725,7 +725,7 @@
 					};
 					52AB79F51A2E1982001904CA = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = RAB78V9Y6Z;
+						DevelopmentTeam = KC63T62SBR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1043,7 +1043,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "da694ffb-d202-4ffe-bcf2-fd48be0e0aef";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1068,7 +1068,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "da694ffb-d202-4ffe-bcf2-fd48be0e0aef";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1127,7 +1127,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01c27f90-88db-438f-9330-1e5a7deae1bd";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1147,7 +1147,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01c27f90-88db-438f-9330-1e5a7deae1bd";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

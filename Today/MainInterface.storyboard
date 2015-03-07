@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4v-YC-jXK" customClass="JWBusCardView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jK-an-sTp">
                                         <rect key="frame" x="47" y="10" width="126" height="24"/>
@@ -64,13 +64,12 @@
                                         <color key="textColor" red="0.63921568627450975" green="0.65098039215686276" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmD-RV-Yhv">
-                                        <rect key="frame" x="47" y="40" width="140" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmD-RV-Yhv">
+                                        <rect key="frame" x="47" y="40" width="131" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="6eD-XV-XpP"/>
-                                            <constraint firstAttribute="height" constant="18" id="ucb-GE-1bM"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="ucb-GE-1bM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -158,8 +157,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="末"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY" customClass="JWButtonWithAnimation">
-                                        <rect key="frame" x="278" y="113" width="42" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-YY-rUY" customClass="JWButtonWithAnimation">
+                                        <rect key="frame" x="278" y="124" width="42" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="Bit-ZN-Mi0"/>
                                             <constraint firstAttribute="height" constant="32" id="bqk-sE-EeN"/>
@@ -180,7 +179,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D01-eE-WIP" customClass="JWButtonWithAnimation">
-                                        <rect key="frame" x="242" y="113" width="36" height="32"/>
+                                        <rect key="frame" x="242" y="124" width="36" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="OXc-oS-Eev"/>
                                             <constraint firstAttribute="width" constant="36" id="jhC-GP-AKn"/>
@@ -219,13 +218,14 @@
                                     <constraint firstItem="6bY-wW-2FO" firstAttribute="top" secondItem="QSF-hd-4OR" secondAttribute="bottom" id="Sdl-Gb-Z7a"/>
                                     <constraint firstItem="FmD-RV-Yhv" firstAttribute="leading" secondItem="7jK-an-sTp" secondAttribute="leading" id="TVd-DV-VRf"/>
                                     <constraint firstItem="KhJ-yb-lVz" firstAttribute="trailing" secondItem="QEg-GV-dkp" secondAttribute="trailing" id="ZHY-7L-yeJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="dve-YY-rUY" secondAttribute="bottom" constant="12" id="atN-Mz-mJO"/>
+                                    <constraint firstAttribute="bottom" secondItem="dve-YY-rUY" secondAttribute="bottom" constant="16" id="atN-Mz-mJO"/>
                                     <constraint firstItem="S1o-Ct-SYP" firstAttribute="top" secondItem="6bY-wW-2FO" secondAttribute="top" constant="2" id="bCn-4h-nHL"/>
                                     <constraint firstItem="QnF-SQ-Ife" firstAttribute="top" secondItem="amW-fp-71b" secondAttribute="top" constant="-2" id="bd6-HB-AOs"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="top" secondItem="FmD-RV-Yhv" secondAttribute="bottom" id="beP-Cw-Agb"/>
                                     <constraint firstAttribute="trailing" secondItem="dve-YY-rUY" secondAttribute="trailing" id="cJu-oP-bQJ"/>
-                                    <constraint firstAttribute="height" constant="157" id="dIv-AD-qMK"/>
+                                    <constraint firstAttribute="height" constant="172" id="dIv-AD-qMK"/>
                                     <constraint firstItem="QSF-hd-4OR" firstAttribute="centerY" secondItem="KhJ-yb-lVz" secondAttribute="centerY" id="f6z-Uz-atn"/>
+                                    <constraint firstAttribute="trailing" secondItem="FmD-RV-Yhv" secondAttribute="trailing" constant="142" id="fsd-Ii-kNp"/>
                                     <constraint firstItem="dve-YY-rUY" firstAttribute="centerY" secondItem="D01-eE-WIP" secondAttribute="centerY" id="gCL-Ek-Koe"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="leading" secondItem="7jK-an-sTp" secondAttribute="leading" id="geU-25-RKM"/>
                                     <constraint firstItem="AeH-Sr-dUA" firstAttribute="trailing" secondItem="V3S-3d-GTm" secondAttribute="leading" id="gk6-TF-CaU"/>
@@ -254,15 +254,16 @@
                             <constraint firstItem="t4v-YC-jXK" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="2DP-Gn-VkE"/>
                             <constraint firstItem="t4v-YC-jXK" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="I52-RD-Yao"/>
                             <constraint firstAttribute="trailing" secondItem="t4v-YC-jXK" secondAttribute="trailing" id="NBa-na-mrt"/>
+                            <constraint firstAttribute="bottom" secondItem="t4v-YC-jXK" secondAttribute="bottom" id="WaL-d6-Z4u"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <value key="contentSizeForViewInPopover" type="size" width="320" height="157"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="172"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="157"/>
+                    <size key="freeformSize" width="320" height="172"/>
                     <connections>
                         <outlet property="busCardView" destination="t4v-YC-jXK" id="zbB-hD-HOh"/>
                     </connections>
