@@ -8,23 +8,23 @@
 
 #import "JWCollectItem.h"
 
-#define JWKeyLineId @"lineId"
-#define JWKeyLineNumber @"lineNumber"
-#define JWKeyFrom @"from"
-#define JWKeyTo @"to"
-#define JWKeyStopId @"stopId"
-#define JWKeyStopName @"stopName"
+#define JWKeyLineId         @"lineId"
+#define JWKeyLineNumber     @"lineNumber"
+#define JWKeyFrom           @"from"
+#define JWKeyTo             @"to"
+#define JWKeyOrder          @"order"
+#define JWKeyStopName       @"stopName"
 
 
 @implementation JWCollectItem
 
-- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopId:(NSString *)stopId stopName:(NSString *)stopName {
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order {
     if (self = [super init]) {
         self.lineId = lineId;
         self.lineNumber = lineNumber;
         self.from = from;
         self.to = to;
-        self.stopId = stopId;
+        self.order = order;
         self.stopName = stopName;
     }
     return self;
@@ -37,7 +37,7 @@
         self.lineNumber = [aDecoder decodeObjectForKey:JWKeyLineNumber];
         self.from = [aDecoder decodeObjectForKey:JWKeyFrom];
         self.to = [aDecoder decodeObjectForKey:JWKeyTo];
-        self.stopId = [aDecoder decodeObjectForKey:JWKeyStopId];
+        self.order = [[aDecoder decodeObjectForKey:JWKeyOrder] integerValue];
         self.stopName = [aDecoder decodeObjectForKey:JWKeyStopName];
     }
     return self;
@@ -48,7 +48,7 @@
     [aCoder encodeObject:self.lineNumber forKey:JWKeyLineNumber];
     [aCoder encodeObject:self.from forKey:JWKeyFrom];
     [aCoder encodeObject:self.to forKey:JWKeyTo];
-    [aCoder encodeObject:self.stopId forKey:JWKeyStopId];
+    [aCoder encodeObject:@(self.order) forKey:JWKeyOrder];
     [aCoder encodeObject:self.stopName forKey:JWKeyStopName];
 }
 

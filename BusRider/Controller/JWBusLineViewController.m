@@ -63,9 +63,9 @@
     self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
     
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
-    if (collectItem && collectItem.stopId && collectItem.stopName) {
-        JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
-        self.selectedStopId = stopItem.stopId;
+    if (collectItem && collectItem.order && collectItem.stopName) {
+        JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName];
+        self.selectedStopOrder = stopItem.order;
     }
     self.navigationItem.titleView = self.stopButtonItem;
     
@@ -246,12 +246,12 @@
 - (void)saveCollectItem {
     NSString *stopName;
     for (JWStopItem *stopItem in self.busLineItem.stopItems) {
-        if ([stopItem.stopId isEqualToString:self.selectedStopId]) {
+        if (stopItem.order == self.selectedStopOrder) {
             stopName = stopItem.stopName;
             break;
         }
     }
-    JWCollectItem *collectItem = [[JWCollectItem alloc] initWithLineId:self.lineId lineNumber:self.busLineItem.lineItem.lineNumber from:self.busLineItem.lineItem.from to:self.busLineItem.lineItem.to stopId:self.selectedStopId ? : @"" stopName:stopName];
+    JWCollectItem *collectItem = [[JWCollectItem alloc] initWithLineId:self.lineId lineNumber:self.busLineItem.lineItem.lineNumber from:self.busLineItem.lineItem.from to:self.busLineItem.lineItem.to stopName:stopName order:self.selectedStopOrder];
     [JWUserDefaultsUtil addCollectItem:collectItem];
 }
 
@@ -293,7 +293,6 @@
             [actionSheet addButtonWithTitle:stopItem.stopName image:[UIImage imageNamed:@"JWIconBusThin"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
                 [weakSelf.stopButtonItem setOn:NO];
                 JWSearchStopItem *searchStopItem = [[JWSearchStopItem alloc] init];
-                searchStopItem.stopId = stopItem.stopId;
                 searchStopItem.stopName = stopItem.stopName;
                 weakSelf.selectedStopItem = searchStopItem;
                 [weakSelf performSegueWithIdentifier:JWSeguePushStop sender:weakSelf];
@@ -313,8 +312,8 @@
             
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            if (weakSelf.selectedStopId) {
-                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:weakSelf.selectedStopId busInfo:dict];
+            if (weakSelf.selectedStopOrder) {
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:weakSelf.selectedStopOrder busInfo:dict];
             }
             [weakSelf updateViews];
         }
@@ -343,11 +342,11 @@
 }
 
 - (IBAction)sendToToday:(id)sender {
-    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopId) {
+    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopOrder) {
         if (self.todayButton.isOn) {
             [self removeTodayInfo];
         } else {
-            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId lineNumber:self.busLineItem.lineItem.lineNumber stopId:self.selectedStopId];
+            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId lineNumber:self.busLineItem.lineItem.lineNumber stopOrder:self.selectedStopOrder];
         }
         [self updateViews];
     } else {
@@ -359,8 +358,8 @@
     [self loadRequest];
 }
 
-- (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopId:(NSString *)stopId {
-    JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopId:stopId stopName:nil];
+- (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopOrder:(NSInteger)order {
+    JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopName:nil order:self.selectedStopOrder];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
 }
 

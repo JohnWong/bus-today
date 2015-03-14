@@ -27,14 +27,14 @@
  */
 @property (nonatomic, strong) NSString *to;
 /**
- *  当前站点id
- */
-@property (nonatomic, strong) NSString *stopId;
-/**
  *  当前站点名称
  */
 @property (nonatomic, strong) NSString *stopName;
+/**
+ *  站点序号
+ */
+@property (nonatomic, assign) NSInteger order;
 
-- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopId:(NSString *)stopId stopName:(NSString *)stopName NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -14,10 +14,6 @@
 @interface JWSearchStopItem : JWItem
 
 /**
- *  车站ID
- */
-@property (nonatomic, strong) NSString *stopId;
-/**
  *  车站名称
  */
 @property (nonatomic, strong) NSString *stopName;

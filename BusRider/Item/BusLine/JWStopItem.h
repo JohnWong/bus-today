@@ -23,14 +23,10 @@
  */
 @property (nonatomic, assign) NSInteger order;
 /**
- *  站点ID
- */
-@property (nonatomic, strong) NSString *stopId;
-/**
  *  站点名称
  */
 @property (nonatomic, strong) NSString *stopName;
 
-- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName;
+- (instancetype)initWithOrder:(NSInteger)order stopName:(NSString *)stopName;
 
 @end

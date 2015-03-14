@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
 @property (nonatomic, strong) JWBusRequest *busRequest;
 @property (nonatomic, strong) NSString *lineId;
-@property (nonatomic, strong) NSString *stopId;
+@property (nonatomic, assign) NSInteger stopOrder;
 
 @end
 
@@ -51,8 +51,7 @@
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            NSString *userStopId = weakSelf.stopId; // @"0571-4603";
-            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:userStopId busInfo:dict];
+            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:self.stopOrder busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         }
@@ -70,6 +69,7 @@
 - (NSString *)lineId {
     if (!_lineId) {
         JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+        NSLog(@"TodayItem: %@, %ld, %@", todayItem.lineId, todayItem.order, todayItem.stopName);
         if (todayItem) {
             _lineId = todayItem.lineId;
         }
@@ -77,14 +77,12 @@
     return _lineId;
 }
 
-- (NSString *)stopId {
-    if (!_stopId) {
+- (NSInteger)stopOrder {
+    if (_stopOrder <= 0) {
         JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-        if (todayItem) {
-            _stopId = todayItem.stopId;
-        }
+        _stopOrder = todayItem.order;
     }
-    return _stopId;
+    return _stopOrder;
 }
 
 #pragma mark action

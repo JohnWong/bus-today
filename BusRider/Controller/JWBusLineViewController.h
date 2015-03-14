@@ -28,8 +28,8 @@
  */
 @property (nonatomic, strong) NSString *lineId;
 /**
- *  当前用户站点
+ *  当前用户站点顺序
  */
-@property (nonatomic, strong) NSString *selectedStopId;
+@property (nonatomic, assign) NSInteger selectedStopOrder;
 
 @end

@@ -322,9 +322,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             weakSelf.busLineItem = busLineItem;
             
             JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:busLineItem.lineItem.lineId];
-            if (collectItem && collectItem.stopId && collectItem.stopName) {
-                JWStopItem *stopItem = [[JWStopItem alloc] initWithStopId:collectItem.stopId stopName:collectItem.stopName];
-                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStop:stopItem.stopId busInfo:dict];
+            if (collectItem && collectItem.order && collectItem.stopName) {
+                JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName];
+                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:stopItem.order busInfo:dict];
             } else {
                 weakSelf.busInfoItem = nil;
             }

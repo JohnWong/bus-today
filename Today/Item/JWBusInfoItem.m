@@ -11,14 +11,14 @@
 
 @implementation JWBusInfoItem
 
-- (instancetype)initWithUserStop:(NSString *)userStop busInfo:(NSDictionary *)busInfo {
+- (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo {
     if (self = [super init]) {
-        [self setUserStop:userStop busInfo:busInfo];
+        [self setUserStopOrder:stopOrder busInfo:busInfo];
     }
     return self;
 }
 
-- (void)setUserStop:(NSString *)stopId busInfo:(NSDictionary *)dict {
+- (void)setUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)dict {
     
     NSArray *mapArray = dict[@"map"];
     NSArray *busArray = dict[@"bus"];
@@ -32,7 +32,7 @@
     
     NSInteger currentOrder = -1;
     for (NSDictionary *mapInfo in mapArray) {
-        if ([mapInfo[@"stopId"] isEqualToString:stopId]) {
+        if ([mapInfo[@"order"] integerValue] == stopOrder) {
             currentOrder = [mapInfo[@"order"] integerValue];
             self.currentStop = mapInfo[@"stopName"];
             break;
