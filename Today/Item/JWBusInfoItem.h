@@ -68,6 +68,5 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
 @property (nonatomic, strong) NSString *noBusTip;
 
 - (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo NS_DESIGNATED_INITIALIZER;
-- (void)setUserStop:(NSString *)userStop busInfo:(NSDictionary *)dict;
 
 @end

@@ -61,6 +61,8 @@
 		52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5BD1A57FA6E00B3DD5C /* JWSwitchRotationButton.m */; };
 		52B8D5C11A57FCCE00B3DD5C /* JWSwitchChangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */; };
 		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
+		52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EAFF1AB603FD0035D912 /* libz.dylib */; };
+		52C0EB021AB606730035D912 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
 		52D091F51A531F9400C5A957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F41A531F9400C5A957 /* Localizable.strings */; };
@@ -219,6 +221,8 @@
 		52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSwitchChangeButton.m; sourceTree = "<group>"; };
 		52BC1CEF1A41BE8A00C98CB9 /* JWSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchRequest.h; sourceTree = "<group>"; };
 		52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchRequest.m; sourceTree = "<group>"; };
+		52C0EAFF1AB603FD0035D912 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		52C0EB011AB606730035D912 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		52C53EA11A523DDB0089334A /* JWLineRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineRequest.h; sourceTree = "<group>"; };
 		52C53EA21A523DDB0089334A /* JWLineRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineRequest.m; sourceTree = "<group>"; };
 		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C0EB021AB606730035D912 /* AVFoundation.framework in Frameworks */,
+				52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */,
 				524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +452,8 @@
 		52AB79F71A2E1982001904CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52C0EB011AB606730035D912 /* AVFoundation.framework */,
+				52C0EAFF1AB603FD0035D912 /* libz.dylib */,
 				524B319E1A2E39C300E4A11F /* libPods-BusRider.a */,
 				52AB7A0D1A2E2F61001904CA /* libPods.a */,
 				52AB7A0B1A2E2F01001904CA /* libPods-AFNetworking.a */,

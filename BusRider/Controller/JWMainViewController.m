@@ -16,7 +16,6 @@
 #import "JWSearchStopItem.h"
 #import "JWSearchTableViewCell.h"
 #import "JWUserDefaultsUtil.h"
-//#import "SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
 #import "JWMainTableViewCell.h"
 #import "JWStopTableViewController.h"
@@ -200,6 +199,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (tableView == self.tableView) {
         if (self.collectLineItem.count > 0) {
             JWCollectItem *item = self.collectLineItem[indexPath.row];

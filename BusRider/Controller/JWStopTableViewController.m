@@ -9,12 +9,12 @@
 #import "JWStopTableViewController.h"
 #import "JWStopRequest.h"
 #import "UINavigationController+SGProgress.h"
-#import "UIScrollView+SVPullToRefresh.h"
 #import "JWViewUtil.h"
 #import "JWStopLineTypeItem.h"
 #import "JWStopLineItem.h"
 #import "JWStopLineTableViewCell.h"
 #import "JWBusLineViewController.h"
+#import "CBStoreHouseRefreshControl.h"
 
 #define JWCellIdStopLine @"JWCellIdStopLine"
 
@@ -26,6 +26,7 @@
  */
 @property (nonatomic, strong) NSArray *lineTypeList;
 @property (nonatomic, strong) JWStopLineItem *selectedLineItem;
+@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 
 @end
 
@@ -40,16 +41,24 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"JWStopLineTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdStopLine];
     self.tableView.tableFooterView = [[UIView alloc] init];
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
+                                                                            target:self
+                                                                     refreshAction:@selector(loadRequest)
+                                                                             plist:@"bus"
+                                                                             color:HEXCOLOR(0x007AFF)
+                                                                         lineWidth:1
+                                                                        dropHeight:60
+                                                                             scale:1
+                                                              horizontalRandomness:150
+                                                           reverseLoadingAnimation:YES
+                                                           internalAnimationFactor:1];
+    
     [self loadRequest];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    __weak typeof(self) weakSelf = self;
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        [weakSelf.tableView.pullToRefreshView stopAnimating];
-        [weakSelf loadRequest];
-    }];
+    [self.storeHouseRefreshControl scrollViewDidAppear];
     
 }
 
@@ -133,6 +142,7 @@
     self.stopRequest.stopName = self.stopItem.stopName;
     [self.stopRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
+        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
         if (error) {
             
         } else {
@@ -142,6 +152,15 @@
     } progress:^(CGFloat percent) {
         [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
     }];
+}
+
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.storeHouseRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 
 @end

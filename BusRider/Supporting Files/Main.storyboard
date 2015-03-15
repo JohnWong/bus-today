@@ -129,7 +129,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="8Y6-3g-JbP" firstAttribute="leading" secondItem="Sly-UQ-9At" secondAttribute="leading" constant="8" id="7FC-If-hF4"/>
                                             <constraint firstAttribute="trailing" secondItem="8Y6-3g-JbP" secondAttribute="trailing" constant="8" id="FyE-xv-QjS"/>
@@ -141,7 +141,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Sly-UQ-9At" firstAttribute="leading" secondItem="UCQ-Jw-tBY" secondAttribute="leading" id="0AQ-IU-reT"/>
                                     <constraint firstItem="Sly-UQ-9At" firstAttribute="width" secondItem="UCQ-Jw-tBY" secondAttribute="width" id="2Zc-sj-Gnm"/>
@@ -334,6 +334,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="wCY-yI-hLD" kind="relationship" relationship="rootViewController" id="mqB-jz-i4a"/>
@@ -385,7 +388,9 @@
                             <constraint firstItem="cx7-s5-1Lo" firstAttribute="leading" secondItem="yFD-cs-k0H" secondAttribute="leading" id="z5c-bN-DMQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="公交信息" id="O9F-b6-YRp"/>
+                    <navigationItem key="navigationItem" title="公交信息" id="O9F-b6-YRp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="jjJ-kH-6IU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchController" destination="nKC-wf-krp" id="c5I-Fu-0tr"/>
                         <outlet property="searchDisplayController" destination="nKC-wf-krp" id="jIR-sY-ykM"/>
@@ -415,7 +420,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y4w-7w-22c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="wuS-za-bCw" id="0HY-cp-z42"/>
                             <outlet property="delegate" destination="wuS-za-bCw" id="H2C-ib-m7s"/>
@@ -445,7 +450,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IJF-i3-WQx"/>
         <segue reference="Juj-fM-HbG"/>
+        <segue reference="IJF-i3-WQx"/>
     </inferredMetricsTieBreakers>
 </document>

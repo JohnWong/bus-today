@@ -1,28 +1,31 @@
 PODS:
   - AHKActionSheet (0.5)
-  - CBStoreHouseRefreshControl (1.0)
+  - CBStoreHouseRefreshControl-JW (1.0)
   - Reveal-iOS-SDK (1.0.7)
   - SGNavigationProgress (1.2)
   - STHTTPRequest (1.0.2)
   - SVProgressHUD (1.1.2)
-  - SVPullToRefresh (0.4.1)
+  - UMengAnalytics (3.4.6)
+  - UMengFeedback (2.1)
 
 DEPENDENCIES:
   - AHKActionSheet
-  - CBStoreHouseRefreshControl
+  - CBStoreHouseRefreshControl-JW
   - Reveal-iOS-SDK (~> 1.0.6)
   - SGNavigationProgress
   - STHTTPRequest
   - SVProgressHUD
-  - SVPullToRefresh
+  - UMengAnalytics
+  - UMengFeedback (~> 2.1)
 
 SPEC CHECKSUMS:
   AHKActionSheet: f332463c7dba624b49cd4a37a59608e1da0032da
-  CBStoreHouseRefreshControl: 3c67731fe57aff3ccd2a151c9d13a6f2aed8a11e
+  CBStoreHouseRefreshControl-JW: 116b2c5a04247ce5e4c04ddafc99558636475b59
   Reveal-iOS-SDK: 7ee5e9b37ef13dcd93ae1736c1b72c7c650da3e3
   SGNavigationProgress: 6c38006ca3c652618411c67d493b263343d5aece
   STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
-  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
+  UMengAnalytics: bc026b4f4a9a162cdf5adc0c53c5a498de7a73bb
+  UMengFeedback: 39ad590db2195efb0f3d748032209efb6a322f83
 
 COCOAPODS: 0.35.0

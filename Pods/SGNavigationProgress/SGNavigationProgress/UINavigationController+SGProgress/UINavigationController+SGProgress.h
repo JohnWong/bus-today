@@ -10,7 +10,6 @@
 
 #define kSGProgressTitleChanged @"kSGProgressTitleChanged"
 #define kSGProgressOldTitle @"kSGProgressOldTitle"
-#define kSGProgressLoadingTitle @"kSGProgressLoadingTitle"
 
 @interface UINavigationController (SGProgress)
 

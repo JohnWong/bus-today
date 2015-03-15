@@ -1,12 +1,14 @@
 source 'https://gitcafe.com/yellowxz/Specs.git'
+source 'https://github.com/JohnWong/Specs.git'
 
 target :BusRider do
     pod 'STHTTPRequest'
-    pod 'SVPullToRefresh'
     pod 'SGNavigationProgress'
     pod 'SVProgressHUD'
     pod 'AHKActionSheet'
-    pod 'CBStoreHouseRefreshControl'
+    pod 'CBStoreHouseRefreshControl-JW'
+    pod 'UMengAnalytics'
+    pod 'UMengFeedback', '~> 2.1'
     pod 'Reveal-iOS-SDK', '~> 1.0.6',:configurations => ['Debug']
 end
 

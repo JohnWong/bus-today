@@ -10,7 +10,6 @@
 #import "JWStopNameButton.h"
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
-//#import "UIScrollView+SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
 #import "JWUserDefaultsUtil.h"
 #import "JWSwitchChangeButton.h"
@@ -71,21 +70,21 @@
         self.selectedStopOrder = stopItem.order;
     }
     self.navigationItem.titleView = self.stopButtonItem;
-//    if (!self.storeHouseRefreshControl) {
-        self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
-                                                                                target:self
-                                                                         refreshAction:@selector(loadRequest)
-                                                                                 plist:@"bus"
-                                                                                 color:HEXCOLOR(0x007AFF)
-                                                                             lineWidth:1
-                                                                            dropHeight:60
-                                                                                 scale:1
-                                                                  horizontalRandomness:150
-                                                               reverseLoadingAnimation:YES
-                                                               internalAnimationFactor:1];
-//    }
-    if (!self.busLineItem) {
-        
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
+                                                                            target:self
+                                                                     refreshAction:@selector(loadRequest)
+                                                                             plist:@"bus"
+                                                                             color:HEXCOLOR(0x007AFF)
+                                                                         lineWidth:1
+                                                                        dropHeight:60
+                                                                             scale:1
+                                                              horizontalRandomness:150
+                                                           reverseLoadingAnimation:YES
+                                                           internalAnimationFactor:1];
+    if (self.busLineItem) {
+        [self updateViews];
+    } else {
+        [self loadRequest];
     }
 }
 
@@ -96,15 +95,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
-
-    /**
-     *  If data is given, just update views. Or lineId is given, load request at once. To set view correctly, updateViews is called in viewDidAppear.
-     */
-    if (self.busLineItem) {
-        [self updateViews];
-    } else {
-        [self loadRequest];
-    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -327,7 +317,7 @@
     self.lineRequest.lineId = self.lineId;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
-        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:1 inModes:@[NSRunLoopCommonModes]];
+        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
         if (error) {
             
         } else {
