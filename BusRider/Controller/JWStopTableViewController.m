@@ -61,7 +61,7 @@
     if ([segue.identifier isEqualToString:JWSeguePushLineWithIdStop]) {
         JWBusLineViewController *lineViewController = segue.destinationViewController;
         lineViewController.lineId = self.selectedLineItem.lineId;
-        lineViewController.selectedStopId = self.stopItem.stopId;
+        lineViewController.selectedStopOrder = self.stopItem.order;
     }
 }
 

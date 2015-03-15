@@ -120,23 +120,23 @@
     }
     
     JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-    NSString *todayStopId;
+    NSInteger todayStopOrder = 0;
     if (todayItem && [self.lineId isEqualToString:todayItem.lineId]) {
-        todayStopId = todayItem.stopId;
+        todayStopOrder = todayItem.order;
     }
-    NSString *focusStopId = self.selectedStopId ? : todayStopId;
+    NSInteger focusStopOrder = self.selectedStopOrder ? : todayStopOrder;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
-        BOOL isSelected = self.selectedStopId && [stopItem.stopId isEqualToString:self.selectedStopId];
-        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopId && [stopItem.stopId isEqualToString:todayStopId] selected:isSelected];
+        BOOL isSelected = self.selectedStopOrder && stopItem.order == self.selectedStopOrder;
+        [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopOrder && stopItem.order == todayStopOrder selected:isSelected];
         
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
         if (isSelected) {
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
         }
-        if (focusStopId && [focusStopId isEqualToString:stopItem.stopId]) {
+        if (focusStopOrder && focusStopOrder == stopItem.order) {
             NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
             if (scrollTo < - self.scrollView.contentInset.top) {
                 scrollTo = - self.scrollView.contentInset.top;

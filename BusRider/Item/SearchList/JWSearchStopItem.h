@@ -17,6 +17,10 @@
  *  车站名称
  */
 @property (nonatomic, strong) NSString *stopName;
+/**
+ *  站点序号
+ */
+@property (nonatomic, assign) NSInteger order;
 
 - (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName;
 

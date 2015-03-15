@@ -27,6 +27,7 @@
 #import "AHKActionSheet.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
+#define JWCellIdEmpty               @"JWCellIdEmpty"
 #define JWCellIdSearch              @"JWCellIdSearch"
 
 typedef NS_ENUM(NSInteger, JWSearchResultType) {
@@ -108,7 +109,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.tableView) {
-        return self.collectLineItem ? self.collectLineItem.count : 0;
+        return self.collectLineItem.count ? : 1;
     } else {
         if (self.searchListItem) {
             if (section == 0 && self.searchListItem.lineList.count > 0) {
@@ -136,11 +137,21 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
-        JWCollectItem *item = self.collectLineItem[indexPath.row];
-        cell.titleLabel.text = item.lineNumber;
-        cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
-        return cell;
+        if (self.collectLineItem.count > 0) {
+            JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
+            JWCollectItem *item = self.collectLineItem[indexPath.row];
+            cell.titleLabel.text = item.lineNumber;
+            cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
+            return cell;
+        } else {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdEmpty];
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:JWCellIdEmpty];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            }
+            cell.textLabel.text = @"您还没有收藏的公交线路";
+            return cell;
+        }
     } else {
         JWSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdSearch forIndexPath:indexPath];
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
@@ -178,9 +189,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        JWCollectItem *item = self.collectLineItem[indexPath.row];
-        self.selectedLineId = item.lineId;
-        [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
+        if (self.collectLineItem.count > 0) {
+            JWCollectItem *item = self.collectLineItem[indexPath.row];
+            self.selectedLineId = item.lineId;
+            [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
+        }
     } else {
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
             JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];

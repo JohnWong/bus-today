@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>startPoints</key>
+        <array>
+            <string>{7,1}</string>
+            <string>{35,1}</string>
+            <string>{40,6}</string>
+            <string>{40,12}</string>
+            <string>{42,12}</string>
+            <string>{42,18}</string>
+            <string>{40,20}</string>
+            <string>{40,40}</string>
+            <string>{37,40}</string>
+            <string>{37,45}</string>
+            <string>{33,45}</string>
+            <string>{33,40}</string>
+            <string>{11,40}</string>
+            <string>{11,45}</string>
+            <string>{7,45}</string>
+            <string>{7,40}</string>
+            <string>{3,40}</string>
+            <string>{3,20}</string>
+            <string>{1,19}</string>
+            <string>{1,12}</string>
+            <string>{3,12}</string>
+            <string>{3,6}</string>
+            <!-- 1 -->
+            <string>{10,4}</string>
+            <string>{32,4}</string>
+            <string>{32,8}</string>
+            <string>{10,8}</string>
+            <!-- 2 -->
+            <string>{7,10}</string>
+            <string>{36,10}</string>
+            <string>{36,25}</string>
+            <string>{7,25}</string>
+            <!-- 3 -->
+            <string>{11,30}</string>
+            <string>{15,34}</string>
+            <string>{11,38}</string>
+            <string>{7,34}</string>
+            <!-- 4 -->
+            <string>{33,30}</string>
+            <string>{37,34}</string>
+            <string>{33,38}</string>
+            <string>{29,34}</string>
+        </array>
+        <key>endPoints</key>
+        <array>
+            <string>{35,1}</string>
+            <string>{40,6}</string>
+            <string>{40,12}</string>
+            <string>{42,12}</string>
+            <string>{42,18}</string>
+            <string>{40,20}</string>
+            <string>{40,40}</string>
+            <string>{37,40}</string>
+            <string>{37,45}</string>
+            <string>{33,45}</string>
+            <string>{33,40}</string>
+            <string>{11,40}</string>
+            <string>{11,45}</string>
+            <string>{7,45}</string>
+            <string>{7,40}</string>
+            <string>{3,40}</string>
+            <string>{3,20}</string>
+            <string>{1,19}</string>
+            <string>{1,12}</string>
+            <string>{3,12}</string>
+            <string>{3,6}</string>
+            <string>{7,1}</string>
+            <!-- 1 -->
+            <string>{32,4}</string>
+            <string>{32,8}</string>
+            <string>{10,8}</string>
+            <string>{10,4}</string>
+            <!-- 2 -->
+            <string>{36,10}</string>
+            <string>{36,25}</string>
+            <string>{7,25}</string>
+            <string>{7,10}</string>
+            <!-- 3 -->
+            <string>{15,34}</string>
+            <string>{11,38}</string>
+            <string>{7,34}</string>
+            <string>{11,30}</string>
+            <!-- 4 -->
+            <string>{37,34}</string>
+            <string>{33,38}</string>
+            <string>{29,34}</string>
+            <string>{33,30}</string>
+        </array>
+    </dict>
+</plist>
