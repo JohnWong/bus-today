@@ -220,8 +220,8 @@
     JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
     if (todayItem) {
         NSString *lineId = todayItem.lineId;
-        NSString *stopId = todayItem.stopId;
-        if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopId && [stopId isEqualToString:self.selectedStopId]) {
+        NSInteger stopOrder = todayItem.order;
+        if (lineId && [lineId isEqualToString:self.busLineItem.lineItem.lineId] && stopOrder && stopOrder == self.selectedStopOrder) {
             self.todayButton.on = YES;
             return;
         }
