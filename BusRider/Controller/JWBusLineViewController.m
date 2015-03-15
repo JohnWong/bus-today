@@ -231,7 +231,7 @@
 
 - (void)didSelectStop:(UIButton *)sender {
     JWStopItem *stopItem = self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag];
-    self.selectedStopId = stopItem.stopId;
+    self.selectedStopOrder = stopItem.order;
     [self updateCollectItem];
     [self loadRequest];
 }
@@ -294,6 +294,7 @@
                 [weakSelf.stopButtonItem setOn:NO];
                 JWSearchStopItem *searchStopItem = [[JWSearchStopItem alloc] init];
                 searchStopItem.stopName = stopItem.stopName;
+                searchStopItem.order = stopItem.order;
                 weakSelf.selectedStopItem = searchStopItem;
                 [weakSelf performSegueWithIdentifier:JWSeguePushStop sender:weakSelf];
             }];
