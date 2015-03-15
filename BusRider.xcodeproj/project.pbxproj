@@ -18,6 +18,7 @@
 		5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */; };
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
+		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
 		522A9E6D1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522A9E6C1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png */; };
 		522A9E871A5D026E00673EB0 /* JWSearchLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E801A5D026E00673EB0 /* JWSearchLineItem.m */; };
 		522A9E881A5D026E00673EB0 /* JWSearchListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E821A5D026E00673EB0 /* JWSearchListItem.m */; };
@@ -147,6 +148,7 @@
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
 		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
+		52257BEA1AB0A95A0002863B /* bus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bus.plist; sourceTree = "<group>"; };
 		522A9E6C1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWTodayIconSetting@2x.png"; sourceTree = "<group>"; };
 		522A9E7F1A5D026E00673EB0 /* JWSearchLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchLineItem.h; sourceTree = "<group>"; };
 		522A9E801A5D026E00673EB0 /* JWSearchLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchLineItem.m; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 		52D091F11A53092600C5A957 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				52257BEA1AB0A95A0002863B /* bus.plist */,
 				522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */,
 				522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */,
 				522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */,
@@ -770,6 +773,7 @@
 				52EB7C151A3DF75C00057723 /* Images.xcassets in Resources */,
 				522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */,
 				5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */,
+				52257BEB1AB0A95A0002863B /* bus.plist in Resources */,
 				52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */,
 				524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */,
 				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,

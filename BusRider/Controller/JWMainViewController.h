@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JWMainViewController : UITableViewController
+@interface JWMainViewController : UIViewController
 
 /**
  *  Pass to JWBusLineViewController

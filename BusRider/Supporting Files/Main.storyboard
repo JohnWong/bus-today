@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lsK-o1-ehk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lsK-o1-ehk">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Bus Line View Controller-->
@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ntS-LB-eE5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qin-lm-xzw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCQ-Jw-tBY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sly-UQ-9At">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
@@ -150,9 +150,12 @@
                                     <constraint firstAttribute="trailing" secondItem="Sly-UQ-9At" secondAttribute="trailing" id="uCg-d4-YXh"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="127"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TYM-DL-tKA" id="EVw-i3-IZn"/>
+                                </connections>
                             </scrollView>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sa-F3-v9B">
-                                <rect key="frame" x="0.0" y="436" width="320" height="132"/>
+                                <rect key="frame" x="0.0" y="372" width="320" height="132"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-1q-8jA" customClass="JWOnePixelView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
@@ -299,10 +302,10 @@
                             <constraint firstAttribute="trailing" secondItem="3sa-F3-v9B" secondAttribute="trailing" id="x24-ku-nxQ"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="vjt-mN-QuG">
                         <barButtonItem key="backBarButtonItem" id="oJP-1u-Sd8"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="contentHeightConstraint" destination="ZZ2-iG-JWt" id="5RT-Od-B9R"/>
                         <outlet property="contentView" destination="8Y6-3g-JbP" id="spN-Vb-iaN"/>
@@ -327,12 +330,13 @@
         <scene sceneID="67g-oX-tOw">
             <objects>
                 <navigationController id="lsK-o1-ehk" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCG-kR-bE7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="WCG-kR-bE7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="W5h-xe-WPW" kind="relationship" relationship="rootViewController" id="s5h-Vm-7b9"/>
+                        <segue destination="wCY-yI-hLD" kind="relationship" relationship="rootViewController" id="mqB-jz-i4a"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVl-54-HL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -340,55 +344,76 @@
             <point key="canvasLocation" x="-1000" y="935"/>
         </scene>
         <!--公交信息-->
-        <scene sceneID="CUQ-Nd-5Ie">
+        <scene sceneID="NGD-7E-f9H">
             <objects>
-                <tableViewController id="W5h-xe-WPW" customClass="JWMainViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uPy-iT-zIx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="wCY-yI-hLD" customClass="JWMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vKV-Tl-EY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="YaU-Cg-dgo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yFD-cs-k0H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-s5-1Lo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LAQ-Kg-cuQ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wCY-yI-hLD" id="tFc-dF-gsT"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xiu-d4-YcQ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wCY-yI-hLD" id="t7o-D6-R9d"/>
+                                    <outlet property="delegate" destination="wCY-yI-hLD" id="LiN-BL-JJl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="EwO-e6-NuY">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="W5h-xe-WPW" id="fR0-yI-N5N"/>
-                            </connections>
-                        </searchBar>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="W5h-xe-WPW" id="kol-Px-5rr"/>
-                            <outlet property="delegate" destination="W5h-xe-WPW" id="EU3-09-r6t"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="公交信息" id="56u-eM-wRg"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cx7-s5-1Lo" secondAttribute="trailing" id="8ks-iB-MkT"/>
+                            <constraint firstAttribute="bottom" secondItem="Xiu-d4-YcQ" secondAttribute="bottom" id="AdI-xJ-REA"/>
+                            <constraint firstItem="cx7-s5-1Lo" firstAttribute="top" secondItem="vKV-Tl-EY8" secondAttribute="bottom" id="NDS-La-qfe"/>
+                            <constraint firstAttribute="trailing" secondItem="Xiu-d4-YcQ" secondAttribute="trailing" id="rDR-Ga-4dl"/>
+                            <constraint firstItem="Xiu-d4-YcQ" firstAttribute="top" secondItem="cx7-s5-1Lo" secondAttribute="bottom" id="yhc-QF-d4A"/>
+                            <constraint firstItem="Xiu-d4-YcQ" firstAttribute="leading" secondItem="yFD-cs-k0H" secondAttribute="leading" id="yo1-t4-dwQ"/>
+                            <constraint firstItem="cx7-s5-1Lo" firstAttribute="leading" secondItem="yFD-cs-k0H" secondAttribute="leading" id="z5c-bN-DMQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="公交信息" id="O9F-b6-YRp"/>
                     <connections>
-                        <outlet property="searchController" destination="rXk-mQ-GD1" id="ZYF-JY-Fnh"/>
-                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithData" id="jwN-Vj-vCx"/>
-                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithId" id="G7i-vT-q86"/>
-                        <segue destination="wuS-za-bCw" kind="push" identifier="JWSeguePushStopList" id="WC3-ZG-sYO"/>
+                        <outlet property="searchController" destination="nKC-wf-krp" id="c5I-Fu-0tr"/>
+                        <outlet property="searchDisplayController" destination="nKC-wf-krp" id="jIR-sY-ykM"/>
+                        <outlet property="tableView" destination="Xiu-d4-YcQ" id="GIE-Nk-Kzp"/>
+                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithData" id="CnQ-hM-Yt8"/>
+                        <segue destination="wuS-za-bCw" kind="push" identifier="JWSeguePushStopList" id="IJF-i3-WQx"/>
+                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithId" id="Juj-fM-HbG"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-BV-Afg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="rXk-mQ-GD1">
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lu6-tq-gG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="nKC-wf-krp">
                     <connections>
-                        <outlet property="delegate" destination="W5h-xe-WPW" id="bba-Xa-kQG"/>
-                        <outlet property="searchBar" destination="EwO-e6-NuY" id="8z2-aR-0am"/>
-                        <outlet property="searchContentsController" destination="W5h-xe-WPW" id="MJk-la-5bN"/>
-                        <outlet property="searchResultsDataSource" destination="W5h-xe-WPW" id="dSl-Vn-0Kj"/>
-                        <outlet property="searchResultsDelegate" destination="W5h-xe-WPW" id="HKc-DF-rv9"/>
+                        <outlet property="delegate" destination="wCY-yI-hLD" id="lPv-Oz-vrV"/>
+                        <outlet property="searchBar" destination="cx7-s5-1Lo" id="cNy-mA-sf3"/>
+                        <outlet property="searchContentsController" destination="wCY-yI-hLD" id="yIh-Fm-8TT"/>
+                        <outlet property="searchResultsDataSource" destination="wCY-yI-hLD" id="fyf-iL-hhY"/>
+                        <outlet property="searchResultsDelegate" destination="wCY-yI-hLD" id="YOq-AB-MEu"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-522" y="935"/>
+            <point key="canvasLocation" x="-437" y="810"/>
         </scene>
         <!--Stop Table View Controller-->
         <scene sceneID="iWr-d8-tpT">
             <objects>
                 <tableViewController id="wuS-za-bCw" customClass="JWStopTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y4w-7w-22c">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -420,7 +445,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jwN-Vj-vCx"/>
-        <segue reference="WC3-ZG-sYO"/>
+        <segue reference="IJF-i3-WQx"/>
+        <segue reference="Juj-fM-HbG"/>
     </inferredMetricsTieBreakers>
 </document>

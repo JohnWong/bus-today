@@ -10,7 +10,7 @@
 #import "JWStopNameButton.h"
 #import "JWLineRequest.h"
 #import "JWBusItem.h"
-#import "UIScrollView+SVPullToRefresh.h"
+//#import "UIScrollView+SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
 #import "JWUserDefaultsUtil.h"
 #import "JWSwitchChangeButton.h"
@@ -21,11 +21,12 @@
 #import "JWNavigationCenterView.h"
 #import "AHKActionSheet.h"
 #import "JWStopTableViewController.h"
+#import "CBStoreHouseRefreshControl.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
 
-@interface JWBusLineViewController() <JWNavigationCenterDelegate>
+@interface JWBusLineViewController() <JWNavigationCenterDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstTimeLabel;
@@ -49,6 +50,8 @@
  */
 @property (nonatomic, strong) JWSearchStopItem *selectedStopItem;
 
+@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
+
 @end
 
 @implementation JWBusLineViewController
@@ -68,24 +71,39 @@
         self.selectedStopOrder = stopItem.order;
     }
     self.navigationItem.titleView = self.stopButtonItem;
-    
-    /**
-     *  If data is given, just update views. Or lineId is given, load request at once. To set view correctly, updateViews is called in viewDidAppear.
-     */
+//    if (!self.storeHouseRefreshControl) {
+        self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
+                                                                                target:self
+                                                                         refreshAction:@selector(loadRequest)
+                                                                                 plist:@"bus"
+                                                                                 color:HEXCOLOR(0x007AFF)
+                                                                             lineWidth:1
+                                                                            dropHeight:60
+                                                                                 scale:1
+                                                                  horizontalRandomness:150
+                                                               reverseLoadingAnimation:YES
+                                                               internalAnimationFactor:1];
+//    }
     if (!self.busLineItem) {
-        [self loadRequest];
+        
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    __weak typeof(self) weakSelf = self;
-    [self.scrollView addPullToRefreshWithActionHandler:^{
-        [weakSelf.scrollView.pullToRefreshView stopAnimating];
-        [weakSelf loadRequest];
-    }];
+    [self.storeHouseRefreshControl scrollViewDidAppear];
+
+    /**
+     *  If data is given, just update views. Or lineId is given, load request at once. To set view correctly, updateViews is called in viewDidAppear.
+     */
     if (self.busLineItem) {
         [self updateViews];
+    } else {
+        [self loadRequest];
     }
 }
 
@@ -272,7 +290,7 @@
 
 - (JWNavigationCenterView *)stopButtonItem {
     if (!_stopButtonItem) {
-        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil];
+        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil color:self.navigationController.navigationBar.tintColor];
         _stopButtonItem.delegate = self;
     }
     return _stopButtonItem;
@@ -309,6 +327,7 @@
     self.lineRequest.lineId = self.lineId;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         [weakSelf.navigationController setSGProgressPercentage:100];
+        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:1 inModes:@[NSRunLoopCommonModes]];
         if (error) {
             
         } else {
@@ -366,6 +385,15 @@
 
 - (void)removeTodayInfo {
     [JWUserDefaultsUtil removeTodayBusLine];
+}
+
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.storeHouseRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 
 @end

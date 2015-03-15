@@ -6,6 +6,7 @@ target :BusRider do
     pod 'SGNavigationProgress'
     pod 'SVProgressHUD'
     pod 'AHKActionSheet'
+    pod 'CBStoreHouseRefreshControl'
     pod 'Reveal-iOS-SDK', '~> 1.0.6',:configurations => ['Debug']
 end
 

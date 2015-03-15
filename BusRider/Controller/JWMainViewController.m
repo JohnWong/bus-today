@@ -16,7 +16,7 @@
 #import "JWSearchStopItem.h"
 #import "JWSearchTableViewCell.h"
 #import "JWUserDefaultsUtil.h"
-#import "SVPullToRefresh.h"
+//#import "SVPullToRefresh.h"
 #import "UINavigationController+SGProgress.h"
 #import "JWMainTableViewCell.h"
 #import "JWStopTableViewController.h"
@@ -25,6 +25,7 @@
 #import "JWCityRequest.h"
 #import "JWCityItem.h"
 #import "AHKActionSheet.h"
+#import "CBStoreHouseRefreshControl.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdEmpty               @"JWCellIdEmpty"
@@ -36,7 +37,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     JWSearchResultTypeSingle = 2
 };
 
-@interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, JWNavigationCenterDelegate>
+@interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, JWNavigationCenterDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
 @property (nonatomic, strong) JWSearchListItem *searchListItem;
@@ -61,6 +62,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 @property (nonatomic, strong) JWSearchStopItem *selectedStop;
 @property (nonatomic, strong) JWNavigationCenterView *cityButtonItem;
 @property (nonatomic, strong) JWCityRequest *cityRequest;
+@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -72,18 +75,27 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
+    self.tableView.backgroundColor = HEXCOLOR(0xefeff6);
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
-    self.tableView.tableFooterView = [[UIView alloc] init];
+//    self.tableView.tableFooterView = [[UIView alloc] init];
+    self.searchController.searchBar.showsScopeBar = YES;
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
+                                                                  target:self
+                                                           refreshAction:@selector(loadData)
+                                                                   plist:@"bus"
+                                                                   color:HEXCOLOR(0x007AFF)
+                                                               lineWidth:1
+                                                              dropHeight:60
+                                                                   scale:1
+                                                    horizontalRandomness:150
+                                                 reverseLoadingAnimation:YES
+                                                 internalAnimationFactor:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.storeHouseRefreshControl scrollViewDidAppear];
     [self loadData];
-    __weak typeof(self) weakSelf = self;
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        [weakSelf loadData];
-        [weakSelf.tableView.pullToRefreshView stopAnimating];
-    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -262,7 +274,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (JWNavigationCenterView *)cityButtonItem {
     if (!_cityButtonItem) {
         JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
-        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市"];
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市" color:self.navigationController.navigationBar.tintColor];
         _cityButtonItem.delegate = self;
     }
     return _cityButtonItem;
@@ -272,6 +284,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)loadData {
     _collectLineItem = nil;
     [self.tableView reloadData];
+    [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
 }
 
 - (void)showCityList {
@@ -285,6 +298,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
             actionSheet.cancelButtonTitle = @"取消";
             actionSheet.buttonHeight = 44;
+            actionSheet.animationDuration = 0.4;
             actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
                 [weakSelf.cityButtonItem setOn:NO];
             };
@@ -344,6 +358,19 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:weakSelf];
         }
     }];
+}
+
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//    [self.storeHouseRefreshControl scrollViewWillBeginDragging];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.storeHouseRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 
 @end
