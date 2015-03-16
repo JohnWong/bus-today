@@ -33,7 +33,10 @@
 		522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */; };
 		523853441A408A7A004FB163 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		523853471A408CC7004FB163 /* JWBusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 523853461A408CC7004FB163 /* JWBusRequest.m */; };
+		523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
+		523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
+		524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */; };
 		524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */; };
 		524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */; };
 		524F57271A5D93A800DFD0A7 /* JWIconCellBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */; };
@@ -62,7 +65,6 @@
 		52B8D5C11A57FCCE00B3DD5C /* JWSwitchChangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5C01A57FCCE00B3DD5C /* JWSwitchChangeButton.m */; };
 		52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC1CF01A41BE8A00C98CB9 /* JWSearchRequest.m */; };
 		52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EAFF1AB603FD0035D912 /* libz.dylib */; };
-		52C0EB021AB606730035D912 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
 		52D091F51A531F9400C5A957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F41A531F9400C5A957 /* Localizable.strings */; };
@@ -174,7 +176,11 @@
 		522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCity@2x.png"; sourceTree = "<group>"; };
 		523853451A408CC7004FB163 /* JWBusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusRequest.h; sourceTree = "<group>"; };
 		523853461A408CC7004FB163 /* JWBusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusRequest.m; sourceTree = "<group>"; };
+		523B7FBE1AB75D1A006939D6 /* JWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSettingViewController.h; sourceTree = "<group>"; };
+		523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSettingViewController.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
+		524B7A671AB6A6EC00767E9E /* JWUmengUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWUmengUtility.h; sourceTree = "<group>"; };
+		524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWUmengUtility.m; sourceTree = "<group>"; };
 		524F57211A5D3A3A00DFD0A7 /* JWSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchTableViewCell.h; sourceTree = "<group>"; };
 		524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchTableViewCell.m; sourceTree = "<group>"; };
 		524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWSearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -270,7 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C0EB021AB606730035D912 /* AVFoundation.framework in Frameworks */,
+				523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */,
 				52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */,
 				524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */,
 			);
@@ -382,6 +388,15 @@
 			path = BusLine;
 			sourceTree = "<group>";
 		};
+		524B7A661AB6A6D300767E9E /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				524B7A671AB6A6EC00767E9E /* JWUmengUtility.h */,
+				524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */,
+			);
+			path = 3rdparty;
+			sourceTree = "<group>";
+		};
 		524F57281A5E271500DFD0A7 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +432,7 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
+				524B7A661AB6A6D300767E9E /* 3rdparty */,
 				522A9E8A1A5D02AB00673EB0 /* JWBusRider-Prefix.pch */,
 				52AB79D01A2E193E001904CA /* AppDelegate.h */,
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
@@ -566,6 +582,8 @@
 				52EB7C171A3F248800057723 /* JWMainViewController.m */,
 				5285585F1A642EA400898779 /* JWStopTableViewController.h */,
 				528558601A642EA400898779 /* JWStopTableViewController.m */,
+				523B7FBE1AB75D1A006939D6 /* JWSettingViewController.h */,
+				523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -888,9 +906,11 @@
 				5257A0691A4562FC0066A354 /* JWViewUtil.m in Sources */,
 				52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */,
 				522A9E951A5D02F100673EB0 /* JWBusLineItem.m in Sources */,
+				524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */,
 				52FCD0721A70177800419271 /* JWCityItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				52B8D5AE1A56E3FA00B3DD5C /* JWBusInfoItem.m in Sources */,
+				523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */,
 				52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */,
 				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,

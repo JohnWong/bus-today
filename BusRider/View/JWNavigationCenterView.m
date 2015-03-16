@@ -22,7 +22,7 @@
 - (instancetype)initWithTitle:(NSString *)title color:(UIColor *)color {
     if (self = [super initWithFrame:CGRectMake(0, 0, 0, 24)]) {
         [self addSubview:self.titleLabel];
-        self.titleLabel.font = [UIFont systemFontOfSize:17];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
         [self setTitle:title];
         [self setTitleColor:color forState:UIControlStateNormal];
        

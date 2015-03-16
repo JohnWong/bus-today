@@ -6,7 +6,7 @@ PODS:
   - STHTTPRequest (1.0.2)
   - SVProgressHUD (1.1.2)
   - UMengAnalytics (3.4.6)
-  - UMengFeedback (2.1)
+  - UMengFeedback-JW (2.1)
 
 DEPENDENCIES:
   - AHKActionSheet
@@ -16,7 +16,7 @@ DEPENDENCIES:
   - STHTTPRequest
   - SVProgressHUD
   - UMengAnalytics
-  - UMengFeedback (~> 2.1)
+  - UMengFeedback-JW (~> 2.1)
 
 SPEC CHECKSUMS:
   AHKActionSheet: f332463c7dba624b49cd4a37a59608e1da0032da
@@ -26,6 +26,6 @@ SPEC CHECKSUMS:
   STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
   UMengAnalytics: bc026b4f4a9a162cdf5adc0c53c5a498de7a73bb
-  UMengFeedback: 39ad590db2195efb0f3d748032209efb6a322f83
+  UMengFeedback-JW: 308e41386bd5224410263ee7683e5192ba84ab42
 
 COCOAPODS: 0.35.0

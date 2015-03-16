@@ -42,11 +42,11 @@
 #define COCOAPODS_VERSION_MINOR_UMengAnalytics 4
 #define COCOAPODS_VERSION_PATCH_UMengAnalytics 6
 
-// UMengFeedback
-#define COCOAPODS_POD_AVAILABLE_UMengFeedback
-#define COCOAPODS_VERSION_MAJOR_UMengFeedback 2
-#define COCOAPODS_VERSION_MINOR_UMengFeedback 1
-#define COCOAPODS_VERSION_PATCH_UMengFeedback 0
+// UMengFeedback-JW
+#define COCOAPODS_POD_AVAILABLE_UMengFeedback_JW
+#define COCOAPODS_VERSION_MAJOR_UMengFeedback_JW 2
+#define COCOAPODS_VERSION_MINOR_UMengFeedback_JW 1
+#define COCOAPODS_VERSION_PATCH_UMengFeedback_JW 0
 
 // Debug build configuration
 #ifdef DEBUG

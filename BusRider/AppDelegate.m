@@ -12,7 +12,7 @@
 #import "JWUserDefaultsUtil.h"
 #import "JWSearchLineItem.h"
 #import "JWMainViewController.h"
-#import "MobClick.h"
+#import "JWUmengUtility.h"
 
 @interface AppDelegate ()
 
@@ -22,29 +22,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self setupUmeng];
+    [JWUmengUtility setupUmeng];
     return YES;
-}
-
-- (void)setupUmeng {
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [MobClick setAppVersion:version];
-    [MobClick startWithAppkey:@"5505ca7bfd98c5b3bc000020"
-                 reportPolicy:BATCH
-                    channelId:nil];
-    /*
-    Class cls = NSClassFromString(@"UMANUtil");
-    SEL deviceIDSelector = @selector(openUDIDString);
-    NSString *deviceID = nil;
-    if(cls && [cls respondsToSelector:deviceIDSelector]){
-        deviceID = [cls performSelector:deviceIDSelector];
-    }
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:@{@"oid" : deviceID}
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:nil];
-    
-    NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-    */
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

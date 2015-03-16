@@ -8,7 +8,7 @@ target :BusRider do
     pod 'AHKActionSheet'
     pod 'CBStoreHouseRefreshControl-JW'
     pod 'UMengAnalytics'
-    pod 'UMengFeedback', '~> 2.1'
+    pod 'UMengFeedback-JW', '~> 2.1'
     pod 'Reveal-iOS-SDK', '~> 1.0.6',:configurations => ['Debug']
 end
 

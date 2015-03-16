@@ -25,6 +25,7 @@
 #import "JWCityItem.h"
 #import "AHKActionSheet.h"
 #import "CBStoreHouseRefreshControl.h"
+#import "UMFeedback.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdEmpty               @"JWCellIdEmpty"
@@ -91,10 +92,21 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
                                                  internalAnimationFactor:1];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:NSStringFromClass(self.class)];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
     [self loadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:NSStringFromClass(self.class)];
+    [self.navigationController cancelSGProgress];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -359,12 +371,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         }
     }];
 }
-
-#pragma mark UIScrollViewDelegate
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-//    [self.storeHouseRefreshControl scrollViewWillBeginDragging];
+- (IBAction)presentFeedback:(id)sender {
+    [self presentViewController:[UMFeedback feedbackModalViewController] animated:YES completion:nil];
 }
 
+#pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.storeHouseRefreshControl scrollViewDidScroll];
 }
