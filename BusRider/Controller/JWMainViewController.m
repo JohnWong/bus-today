@@ -180,9 +180,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
             JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];
             cell.titleLabel.text = lineItem.lineNumber;
+            cell.iconView.image = [UIImage imageNamed:@"JWIconCellBus"];
         } else {
             JWSearchStopItem *stopItem = self.searchListItem.stopList[indexPath.row];
             cell.titleLabel.text = stopItem.stopName;
+            cell.iconView.image = [UIImage imageNamed:@"JWIconCellStop"];
         }
         return cell;
     }

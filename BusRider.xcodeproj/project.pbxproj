@@ -17,6 +17,7 @@
 		520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453801A37340A002A8541 /* JWBusInfoItem.m */; };
 		5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */; };
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
+		520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520EB0261AB7BE6C00D8988C /* MessageUI.framework */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
 		522A9E6D1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522A9E6C1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png */; };
@@ -48,6 +49,7 @@
 		525A1F6C1A5A9053006CE8BA /* JWIconCollectOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F6A1A5A9053006CE8BA /* JWIconCollectOn@2x.png */; };
 		525A1F731A5AA763006CE8BA /* JWIconTodayOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */; };
 		525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */; };
+		52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */; };
 		5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558591A62BB1B00898779 /* JWMainTableViewCell.m */; };
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
 		528558611A642EA400898779 /* JWStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558601A642EA400898779 /* JWStopTableViewController.m */; };
@@ -150,6 +152,7 @@
 		520453841A37340A002A8541 /* JWBusCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusCardView.h; sourceTree = "<group>"; };
 		520453851A37340A002A8541 /* JWBusCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusCardView.m; sourceTree = "<group>"; };
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
+		520EB0261AB7BE6C00D8988C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
 		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
 		52257BEA1AB0A95A0002863B /* bus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bus.plist; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconTodayOff@2x.png"; sourceTree = "<group>"; };
 		525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconTodayOn@2x.png"; sourceTree = "<group>"; };
 		525A1F751A5AE93B006CE8BA /* BusRider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BusRider.entitlements; sourceTree = "<group>"; };
+		52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellStop@2x.png"; sourceTree = "<group>"; };
 		528558581A62BB1B00898779 /* JWMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTableViewCell.h; sourceTree = "<group>"; };
 		528558591A62BB1B00898779 /* JWMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTableViewCell.m; sourceTree = "<group>"; };
 		5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWMainTableViewCell.xib; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */,
 				523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */,
 				52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */,
 				524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */,
@@ -468,6 +473,7 @@
 		52AB79F71A2E1982001904CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				520EB0261AB7BE6C00D8988C /* MessageUI.framework */,
 				52C0EB011AB606730035D912 /* AVFoundation.framework */,
 				52C0EAFF1AB603FD0035D912 /* libz.dylib */,
 				524B319E1A2E39C300E4A11F /* libPods-BusRider.a */,
@@ -525,6 +531,7 @@
 		52D091F11A53092600C5A957 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */,
 				52257BEA1AB0A95A0002863B /* bus.plist */,
 				522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */,
 				522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */,
@@ -800,6 +807,7 @@
 				522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */,
 				5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */,
 				52257BEB1AB0A95A0002863B /* bus.plist in Resources */,
+				52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */,
 				52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */,
 				524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */,
 				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,
