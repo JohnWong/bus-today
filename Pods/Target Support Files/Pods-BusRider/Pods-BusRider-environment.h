@@ -12,17 +12,23 @@
 #define COCOAPODS_VERSION_MINOR_AHKActionSheet 5
 #define COCOAPODS_VERSION_PATCH_AHKActionSheet 0
 
+// Appirater
+#define COCOAPODS_POD_AVAILABLE_Appirater
+#define COCOAPODS_VERSION_MAJOR_Appirater 2
+#define COCOAPODS_VERSION_MINOR_Appirater 0
+#define COCOAPODS_VERSION_PATCH_Appirater 4
+
 // CBStoreHouseRefreshControl-JW
 #define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl_JW
 #define COCOAPODS_VERSION_MAJOR_CBStoreHouseRefreshControl_JW 1
 #define COCOAPODS_VERSION_MINOR_CBStoreHouseRefreshControl_JW 0
 #define COCOAPODS_VERSION_PATCH_CBStoreHouseRefreshControl_JW 0
 
-// SGNavigationProgress
-#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress
-#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress 1
-#define COCOAPODS_VERSION_MINOR_SGNavigationProgress 2
-#define COCOAPODS_VERSION_PATCH_SGNavigationProgress 0
+// SGNavigationProgress-JW
+#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress_JW
+#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress_JW 1
+#define COCOAPODS_VERSION_MINOR_SGNavigationProgress_JW 2
+#define COCOAPODS_VERSION_PATCH_SGNavigationProgress_JW 0
 
 // STHTTPRequest
 #define COCOAPODS_POD_AVAILABLE_STHTTPRequest
@@ -41,12 +47,6 @@
 #define COCOAPODS_VERSION_MAJOR_UMengAnalytics 3
 #define COCOAPODS_VERSION_MINOR_UMengAnalytics 4
 #define COCOAPODS_VERSION_PATCH_UMengAnalytics 6
-
-// UMengFeedback-JW
-#define COCOAPODS_POD_AVAILABLE_UMengFeedback_JW
-#define COCOAPODS_VERSION_MAJOR_UMengFeedback_JW 2
-#define COCOAPODS_VERSION_MINOR_UMengFeedback_JW 1
-#define COCOAPODS_VERSION_PATCH_UMengFeedback_JW 0
 
 // Debug build configuration
 #ifdef DEBUG

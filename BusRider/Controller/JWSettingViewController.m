@@ -9,6 +9,8 @@
 #import "JWSettingViewController.h"
 #import <MessageUI/MessageUI.h>
 #import "JWViewUtil.h"
+#import "JWWebViewController.h"
+#import "Appirater.h"
 
 @interface JWSettingViewController () <MFMailComposeViewControllerDelegate>
 
@@ -20,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.width, 22)];
     self.versionLabel.text = [self appVersion];
 }
 
@@ -28,10 +31,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    JWWebViewController *webController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"JWPushAbout"]) {
+        webController.url = @"http://impress.sinaapp.com/bus/about.html";
+    } else if ([segue.identifier isEqualToString:@"JWPushHelp"]) {
+        webController.url = @"http://impress.sinaapp.com/bus/help.html";
+    } else if ([segue.identifier isEqualToString:@"JWPushPrivacy"]) {
+        webController.url = @"http://impress.sinaapp.com/bus/privacy.html";
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 1:
             switch (indexPath.row) {
+                case 0:
+                    [Appirater rateApp];
+                    break;
                 case 1:
                     [self sendMail];
                     break;
@@ -80,6 +98,8 @@
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 - (NSString *)appVersion {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];

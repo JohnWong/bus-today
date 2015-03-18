@@ -3,12 +3,12 @@ source 'https://github.com/JohnWong/Specs.git'
 
 target :BusRider do
     pod 'STHTTPRequest'
-    pod 'SGNavigationProgress'
     pod 'SVProgressHUD'
     pod 'AHKActionSheet'
-    pod 'CBStoreHouseRefreshControl-JW'
     pod 'UMengAnalytics'
-    pod 'UMengFeedback-JW', '~> 2.1'
+    pod 'Appirater', '~> 2.0.4'
+    pod 'SGNavigationProgress-JW'
+    pod 'CBStoreHouseRefreshControl-JW'
     pod 'Reveal-iOS-SDK', '~> 1.0.6',:configurations => ['Debug']
 end
 

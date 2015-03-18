@@ -36,7 +36,7 @@
 
 - (void)setTitle:(NSString *)title {
     [self setTitle:title forState:UIControlStateNormal];
-    CGFloat width = (title ? [title sizeWithFont:self.titleLabel.font].width : 0);
+    CGFloat width = (title ? [title sizeWithAttributes:@{ NSFontAttributeName: self.titleLabel.font }].width : 0);
     CGFloat imageWidth = 18;
     self.width = width + imageWidth;
     self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageWidth, 0, imageWidth);

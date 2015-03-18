@@ -54,6 +54,7 @@
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
 		528558611A642EA400898779 /* JWStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558601A642EA400898779 /* JWStopTableViewController.m */; };
 		528558641A6432C100898779 /* JWStopRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558631A6432C100898779 /* JWStopRequest.m */; };
+		52A170EA1AB94B9F005E7394 /* JWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A170E91AB94B9F005E7394 /* JWWebViewController.m */; };
 		52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D11A2E193E001904CA /* AppDelegate.m */; };
 		52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79E81A2E193E001904CA /* BusRiderTests.m */; };
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
@@ -69,7 +70,6 @@
 		52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EAFF1AB603FD0035D912 /* libz.dylib */; };
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
-		52D091F51A531F9400C5A957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F41A531F9400C5A957 /* Localizable.strings */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -207,6 +207,8 @@
 		528558601A642EA400898779 /* JWStopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopTableViewController.m; sourceTree = "<group>"; };
 		528558621A6432C100898779 /* JWStopRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopRequest.h; sourceTree = "<group>"; };
 		528558631A6432C100898779 /* JWStopRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopRequest.m; sourceTree = "<group>"; };
+		52A170E81AB94B9F005E7394 /* JWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWWebViewController.h; sourceTree = "<group>"; };
+		52A170E91AB94B9F005E7394 /* JWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWWebViewController.m; sourceTree = "<group>"; };
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -236,7 +238,6 @@
 		52C53EA11A523DDB0089334A /* JWLineRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineRequest.h; sourceTree = "<group>"; };
 		52C53EA21A523DDB0089334A /* JWLineRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineRequest.m; sourceTree = "<group>"; };
 		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
-		52D091F41A531F9400C5A957 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -591,6 +592,8 @@
 				528558601A642EA400898779 /* JWStopTableViewController.m */,
 				523B7FBE1AB75D1A006939D6 /* JWSettingViewController.h */,
 				523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */,
+				52A170E81AB94B9F005E7394 /* JWWebViewController.h */,
+				52A170E91AB94B9F005E7394 /* JWWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -603,7 +606,6 @@
 				52EB7C0D1A3DF73900057723 /* LaunchScreen.xib */,
 				52EB7C0E1A3DF73900057723 /* main.m */,
 				52EB7C0F1A3DF73900057723 /* Main.storyboard */,
-				52D091F41A531F9400C5A957 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -777,6 +779,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 52AB79C01A2E193E001904CA;
 			productRefGroup = 52AB79CA1A2E193E001904CA /* Products */;
@@ -810,7 +813,6 @@
 				52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */,
 				52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */,
 				524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */,
-				52D091F51A531F9400C5A957 /* Localizable.strings in Resources */,
 				52EB7C131A3DF73900057723 /* Main.storyboard in Resources */,
 				525A1F6C1A5A9053006CE8BA /* JWIconCollectOn@2x.png in Resources */,
 				522C4EAD1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png in Resources */,
@@ -932,6 +934,7 @@
 				52EB7C221A4077CA00057723 /* UIView+RSAdditions.m in Sources */,
 				522C4EB21A6C191D00B4C1E9 /* JWCityRequest.m in Sources */,
 				52B8D5C11A57FCCE00B3DD5C /* JWSwitchChangeButton.m in Sources */,
+				52A170EA1AB94B9F005E7394 /* JWWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,7 +1021,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1043,7 +1046,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1054,7 +1057,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1067,6 +1070,7 @@
 			baseConfigurationReference = 9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BusRider/BusRider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1076,12 +1080,8 @@
 				);
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1092,6 +1092,7 @@
 			baseConfigurationReference = C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BusRider/BusRider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1101,12 +1102,8 @@
 				);
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1161,11 +1158,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -1181,11 +1176,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

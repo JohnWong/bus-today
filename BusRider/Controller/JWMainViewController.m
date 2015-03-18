@@ -25,7 +25,6 @@
 #import "JWCityItem.h"
 #import "AHKActionSheet.h"
 #import "CBStoreHouseRefreshControl.h"
-#import "UMFeedback.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdEmpty               @"JWCellIdEmpty"
@@ -309,7 +308,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf.cityButtonItem setOn:NO];
         } else {
             NSArray *array = [JWCityItem arrayFromDictionary:dict];
-            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
+            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择城市"];
             actionSheet.cancelButtonTitle = @"取消";
             actionSheet.buttonHeight = 44;
             actionSheet.animationDuration = 0.4;
@@ -372,9 +371,6 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:weakSelf];
         }
     }];
-}
-- (IBAction)presentFeedback:(id)sender {
-    [self presentViewController:[UMFeedback feedbackModalViewController] animated:YES completion:nil];
 }
 
 #pragma mark UIScrollViewDelegate

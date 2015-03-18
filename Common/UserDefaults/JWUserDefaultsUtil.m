@@ -30,11 +30,19 @@
 }
 
 + (instancetype)standardUserDefaults {
-    return [[self alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
+    static JWUserDefaultsUtil *standardUserDefaults;
+    if (!standardUserDefaults) {
+        standardUserDefaults = [[self alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
+    }
+    return standardUserDefaults;
 }
 
 + (instancetype)groupUserDefaults {
-    return [[self alloc] initWithUserDefaults:[[NSUserDefaults alloc] initWithSuiteName:JWSuiteName]];
+    static JWUserDefaultsUtil *groupUserDefaults;
+    if (!groupUserDefaults) {
+        groupUserDefaults = [[self alloc] initWithUserDefaults:[[NSUserDefaults alloc] initWithSuiteName:JWSuiteName]];
+    }
+    return groupUserDefaults;
 }
 
 - (void)setObject:(id)userInfo forKey:(NSString *)key {

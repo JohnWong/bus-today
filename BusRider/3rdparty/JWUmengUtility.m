@@ -7,7 +7,6 @@
 //
 
 #import "JWUmengUtility.h"
-#import "UMFeedback.h"
 
 @implementation JWUmengUtility
 
@@ -19,8 +18,6 @@ static NSString *JWUmengAppkey = @"5505ca7bfd98c5b3bc000020";
     [MobClick startWithAppkey:JWUmengAppkey
                  reportPolicy:BATCH
                     channelId:nil];
-    [UMFeedback setAppkey:JWUmengAppkey];
-    
     /*
      Class cls = NSClassFromString(@"UMANUtil");
      SEL deviceIDSelector = @selector(openUDIDString);

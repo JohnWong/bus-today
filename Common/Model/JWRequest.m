@@ -36,7 +36,6 @@
     }
     NSLog(@"JWRequest: load %@", [self urlPath]);
     
-    __weak typeof(self) weakSelf = self;
     if (self.request) {
         [self.request cancel];
     }
@@ -66,6 +65,7 @@
             completion(nil, error);
         }
     };
+    __weak typeof(self) weakSelf = self;
     self.request.errorBlock = ^(NSError *error) {
         NSLog(@"JWRequest: error %@, %@", [weakSelf urlPath], error);
         if ([error.localizedDescription isEqualToString:@"Connection was cancelled."]) {

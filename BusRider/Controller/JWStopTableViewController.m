@@ -101,8 +101,11 @@
     JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
     NSString *leftStopDesc;
     switch (lineItem.leftStops) {
+        case -3:
+            leftStopDesc = nil;
+            break;
         case -2:
-            leftStopDesc = @"--";
+            leftStopDesc = @"暂无数据";
             break;
         case -1:
             leftStopDesc = @"尚未发车";

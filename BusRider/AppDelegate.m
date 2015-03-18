@@ -13,6 +13,7 @@
 #import "JWSearchLineItem.h"
 #import "JWMainViewController.h"
 #import "JWUmengUtility.h"
+#import "Appirater.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,17 @@
 
 @implementation AppDelegate
 
+static NSString *AppID = @"975022341";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [JWUmengUtility setupUmeng];
+    
+    [Appirater setAppId:AppID];
+
+//#ifdef DEBUG
+//    [Appirater setDebug:YES];
+//#endif
+    [Appirater appLaunched:YES];
     return YES;
 }
 
@@ -37,7 +46,7 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

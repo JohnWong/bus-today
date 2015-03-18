@@ -41,6 +41,14 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2014. Arash Payan. This library is distributed under the terms of the MIT/X11.</string>
+			<key>Title</key>
+			<string>Appirater</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (c) 2014 Suyu Zhang &lt;suyu_zhang@hotmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -259,7 +267,7 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </string>
 			<key>Title</key>
-			<string>SGNavigationProgress</string>
+			<string>SGNavigationProgress-JW</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -320,15 +328,6 @@ respective headers for the terms of their individual licenses.</string>
 </string>
 			<key>Title</key>
 			<string>UMengAnalytics</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright 2011 - 2014 UMeng.com. All rights reserved.
-</string>
-			<key>Title</key>
-			<string>UMengFeedback-JW</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
