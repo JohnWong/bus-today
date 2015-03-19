@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 Copyright 2014. Arash Payan. This library is distributed under the terms of the MIT/X11.
 
-## CBStoreHouseRefreshControl-JW
+## CBStoreHouseRefreshControl
 
 Copyright (c) 2014 Suyu Zhang <suyu_zhang@hotmail.com>
 
@@ -216,7 +216,7 @@ If you have any questions about this License Agreement, or if you want to contac
 Do you agree to be bound by the terms of this agreement?
 
 
-## SGNavigationProgress-JW
+## SGNavigationProgress
 
 The MIT License (MIT)
 

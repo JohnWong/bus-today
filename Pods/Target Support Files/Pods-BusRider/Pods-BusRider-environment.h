@@ -18,17 +18,17 @@
 #define COCOAPODS_VERSION_MINOR_Appirater 0
 #define COCOAPODS_VERSION_PATCH_Appirater 4
 
-// CBStoreHouseRefreshControl-JW
-#define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl_JW
-#define COCOAPODS_VERSION_MAJOR_CBStoreHouseRefreshControl_JW 1
-#define COCOAPODS_VERSION_MINOR_CBStoreHouseRefreshControl_JW 0
-#define COCOAPODS_VERSION_PATCH_CBStoreHouseRefreshControl_JW 0
+// CBStoreHouseRefreshControl
+#define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl
+#define COCOAPODS_VERSION_MAJOR_CBStoreHouseRefreshControl 1
+#define COCOAPODS_VERSION_MINOR_CBStoreHouseRefreshControl 0
+#define COCOAPODS_VERSION_PATCH_CBStoreHouseRefreshControl 0
 
-// SGNavigationProgress-JW
-#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress_JW
-#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress_JW 1
-#define COCOAPODS_VERSION_MINOR_SGNavigationProgress_JW 2
-#define COCOAPODS_VERSION_PATCH_SGNavigationProgress_JW 0
+// SGNavigationProgress
+#define COCOAPODS_POD_AVAILABLE_SGNavigationProgress
+#define COCOAPODS_VERSION_MAJOR_SGNavigationProgress 1
+#define COCOAPODS_VERSION_MINOR_SGNavigationProgress 2
+#define COCOAPODS_VERSION_PATCH_SGNavigationProgress 0
 
 // STHTTPRequest
 #define COCOAPODS_POD_AVAILABLE_STHTTPRequest
