@@ -7,7 +7,6 @@
 //
 
 #import "JWTodayViewController.h"
-#import "STHTTPRequest.h"
 #import "JWBusCardView.h"
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
@@ -69,7 +68,7 @@
 - (NSString *)lineId {
     if (!_lineId) {
         JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-        NSLog(@"TodayItem: %@, %ld, %@", todayItem.lineId, todayItem.order, todayItem.stopName);
+        NSLog(@"TodayItem: %@, %@, %@", todayItem.lineId, @(todayItem.order), todayItem.stopName);
         if (todayItem) {
             _lineId = todayItem.lineId;
         }

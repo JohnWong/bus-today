@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void (^JWCompletion)(NSDictionary *dict, NSError *error);
 typedef void (^JWProgress)(CGFloat percent);

@@ -9,8 +9,6 @@
 #ifndef BusRider_JWBusRider_Prefix_pch
 #define BusRider_JWBusRider_Prefix_pch
 
-#import "UIView+RSAdditions.h"
-#import "JWColorDefine.h"
 #import "JWCommonDefine.h"
 #import "MobClick.h"
 

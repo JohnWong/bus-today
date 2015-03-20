@@ -9,8 +9,6 @@
 #ifndef BusRider_Today_Prefix_pch
 #define BusRider_Today_Prefix_pch
 
-#import "UIView+RSAdditions.h"
-#import "JWColorDefine.h"
 #import "JWCommonDefine.h"
 
 #endif

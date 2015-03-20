@@ -9,6 +9,9 @@
 #ifndef BusRider_JWCommonDefine_h
 #define BusRider_JWCommonDefine_h
 
+#import "JWColorDefine.h"
+#import "UIView+RSAdditions.h"
+
 #define kOnePixel (1 / [UIScreen mainScreen].scale)
 
 // NSLog
