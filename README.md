@@ -39,6 +39,4 @@
 
 ### 下载
 
-暂时没有Apple开发者账号，不能发到App Store。仅支持越狱后下载安装。
-
-[BusRider.ipa v1.1](https://github.com/JohnWong/bus-today/releases/download/1.1/BusRider.ipa)
+[Available in iTunes](https://itunes.apple.com/app/id975022341)
