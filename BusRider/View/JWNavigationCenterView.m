@@ -19,12 +19,16 @@
 
 @implementation JWNavigationCenterView
 
-- (instancetype)initWithTitle:(NSString *)title color:(UIColor *)color {
+- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold {
     if (self = [super initWithFrame:CGRectMake(0, 0, 0, 24)]) {
         [self addSubview:self.titleLabel];
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        if (isBold) {
+            self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        } else {
+            self.titleLabel.font = [UIFont systemFontOfSize:17];
+        }
         [self setTitle:title];
-        [self setTitleColor:color forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
        
         [self setImage: [[UIImage imageNamed:@"JWIconExpand"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.alpha = 0;

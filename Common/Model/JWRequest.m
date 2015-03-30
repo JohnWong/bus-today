@@ -68,7 +68,7 @@
     __weak typeof(self) weakSelf = self;
     self.request.errorBlock = ^(NSError *error) {
         NSLog(@"JWRequest: error %@, %@", [weakSelf urlPath], error);
-        if ([error.localizedDescription isEqualToString:@"Connection was cancelled."]) {
+        if (error.code == 1) { // Connection was cancelled.
             return;
         }
         completion(nil, error);

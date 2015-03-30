@@ -21,7 +21,7 @@
 
 @property (nonatomic, weak) id<JWNavigationCenterDelegate> delegate;
 
-- (instancetype)initWithTitle:(NSString *)title color:(UIColor *)color;
+- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold;
 - (void)setTitle:(NSString *)title;
 
 @end

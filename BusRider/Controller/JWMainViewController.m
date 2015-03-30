@@ -287,7 +287,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (JWNavigationCenterView *)cityButtonItem {
     if (!_cityButtonItem) {
         JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
-        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市" color:self.navigationController.navigationBar.tintColor];
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市" isBold:NO];
         _cityButtonItem.delegate = self;
     }
     return _cityButtonItem;

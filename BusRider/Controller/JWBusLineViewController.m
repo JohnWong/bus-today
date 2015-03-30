@@ -282,7 +282,7 @@
 
 - (JWNavigationCenterView *)stopButtonItem {
     if (!_stopButtonItem) {
-        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil color:self.navigationController.navigationBar.tintColor];
+        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil isBold:YES];
         _stopButtonItem.delegate = self;
     }
     return _stopButtonItem;
