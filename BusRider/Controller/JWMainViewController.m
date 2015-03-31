@@ -25,6 +25,7 @@
 #import "JWCityItem.h"
 #import "AHKActionSheet.h"
 #import "CBStoreHouseRefreshControl.h"
+#import "JWMainEmptyTableViewCell.h"
 
 #define JWCellIdMain                @"JWCellIdMain"
 #define JWCellIdEmpty               @"JWCellIdEmpty"
@@ -76,6 +77,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
     self.tableView.backgroundColor = HEXCOLOR(0xefeff6);
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JWMainEmptyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdEmpty];
 //    self.tableView.tableFooterView = [[UIView alloc] init];
     self.searchController.searchBar.showsScopeBar = YES;
     self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
@@ -166,12 +168,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
             return cell;
         } else {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdEmpty];
-            if (!cell) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:JWCellIdEmpty];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            }
-            cell.textLabel.text = @"您还没有收藏的公交线路";
+            JWMainEmptyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdEmpty forIndexPath:indexPath];
+            cell.titleLabel.text = @"未收藏公交线路";
+            cell.subTitle.text = @"点击搜索框找到想要的线路。收藏后就会出现在这里";
             return cell;
         }
     } else {
@@ -205,7 +204,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        return 54;
+        if (self.collectLineItem.count == 0) {
+            return 54;
+        } else {
+            return 54;
+        }
     } else {
         return 44;
     }
