@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 /**
  *  array of JWSearchLineItem
  */
-@property (nonatomic, strong) NSArray *collectLineItem;
+@property (nonatomic, strong) NSMutableArray *collectLineItem;
 
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchController;
 
@@ -231,6 +231,21 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        if (indexPath.row < self.collectLineItem.count) {
+            JWCollectItem *item = self.collectLineItem[indexPath.row];
+            [JWUserDefaultsUtil removeCollectItemWithLineId:item.lineId];
+            [self.collectLineItem removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }
+}
+
 #pragma mark JWNavigationCenterDelegate
 - (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
     if (isOn) {
@@ -277,9 +292,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     return _cityRequest;
 }
 
-- (NSArray *)collectLineItem {
+- (NSMutableArray *)collectLineItem {
     if (!_collectLineItem) {
-        _collectLineItem = [[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects];
+        _collectLineItem = [[[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects] mutableCopy];
     }
     return _collectLineItem;
 }

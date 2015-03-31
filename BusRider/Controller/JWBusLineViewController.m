@@ -112,7 +112,7 @@
 }
 
 - (void)updateViews {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"JWIconCollectOn" : @"JWIconCollectOff"] style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"已收藏" : @"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
     
     JWLineItem *lineItem = self.busLineItem.lineItem;
     [self.stopButtonItem setTitle:lineItem.lineNumber];
@@ -345,10 +345,10 @@
         
         if ([JWUserDefaultsUtil collectItemForLineId:self.lineId]) {
             [JWUserDefaultsUtil removeCollectItemWithLineId:self.lineId];
-            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOff"]];
+            [barButton setTitle:@"收藏"];
         } else {
             [self saveCollectItem];
-            [barButton setImage:[UIImage imageNamed:@"JWIconCollectOn"]];
+            [barButton setTitle:@"已收藏"];
         }
     }
 }
