@@ -241,7 +241,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             JWCollectItem *item = self.collectLineItem[indexPath.row];
             [JWUserDefaultsUtil removeCollectItemWithLineId:item.lineId];
             [self.collectLineItem removeObjectAtIndex:indexPath.row];
-            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            if (self.collectLineItem.count > 0) {
+                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            } else {
+                [self.tableView reloadData];
+            }
         }
     }
 }
