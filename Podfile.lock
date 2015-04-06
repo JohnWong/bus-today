@@ -25,13 +25,13 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/JohnWong/SGNavigationProgress/master/SGNavigationProgress.podspec
 
 SPEC CHECKSUMS:
-  AHKActionSheet: f332463c7dba624b49cd4a37a59608e1da0032da
-  Appirater: cbdb7f305562cfde585300bfff86da01ae559deb
+  AHKActionSheet: 897341c618094e497c93f9d0c66fa69f71218063
+  Appirater: 8783318c36414e8de3ea023443028df94c1b784b
   CBStoreHouseRefreshControl: 18615ea0929c029e687481868f5875d24e8ed3c8
-  Reveal-iOS-SDK: 7ee5e9b37ef13dcd93ae1736c1b72c7c650da3e3
+  Reveal-iOS-SDK: 9125c58562f3347f6d74bb5e94b5311ef2568d2f
   SGNavigationProgress: 6620db991cfd7611f8de036f4d6536c903cf0557
-  STHTTPRequest: 9aee3fd1557dcaa380198a9e56d36527ede342d1
+  STHTTPRequest: f4ca4e3ca31ebd9b54c134aa721ddd1711f1089d
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
-  UMengAnalytics: bc026b4f4a9a162cdf5adc0c53c5a498de7a73bb
+  UMengAnalytics: 24c06f0ea07295d2f1c093f0fe12d196fd801ea4
 
 COCOAPODS: 0.36.0
