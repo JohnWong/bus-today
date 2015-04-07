@@ -7,6 +7,8 @@
 //
 
 #import "STHTTPRequest.h"
-#import "JWRequest.h"
-#import "JWRequestWithAlert.h"
-#import "JWCityRequest.h"
+
+#define SV_APP_EXTENSIONS 1
+#import "SVProgressHUD.h"
+
+#import "JWUserDefaultsUtil.h"

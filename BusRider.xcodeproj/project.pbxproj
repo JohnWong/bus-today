@@ -17,6 +17,10 @@
 		520453891A37340A002A8541 /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453801A37340A002A8541 /* JWBusInfoItem.m */; };
 		5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */; };
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
+		520A5B661AD4201D00C41F9D /* JWUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */; };
+		520A5B6A1AD4227100C41F9D /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; };
+		520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
+		520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
 		520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520EB0261AB7BE6C00D8988C /* MessageUI.framework */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
@@ -78,9 +82,7 @@
 		52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C53EA21A523DDB0089334A /* JWLineRequest.m */; };
 		52C9E0771AD36D2B00126937 /* JWCityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */; };
 		52C9E07A1AD37A3B00126937 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
-		52C9E07E1AD37D4800126937 /* JWRequestWithAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257A0651A4496AD0066A354 /* JWRequestWithAlert.m */; };
-		52C9E07F1AD37D4C00126937 /* JWCityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 522C4EB11A6C191D00B4C1E9 /* JWCityRequest.m */; };
-		52C9E0801AD37DC400126937 /* JWViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257A0681A4562FC0066A354 /* JWViewUtil.m */; };
+		52C9E0821AD3809C00126937 /* JWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0811AD3809C00126937 /* JWRequest.swift */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
@@ -180,6 +182,7 @@
 		520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWTodayIconRefresh@2x.png"; sourceTree = "<group>"; };
 		520453841A37340A002A8541 /* JWBusCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusCardView.h; sourceTree = "<group>"; };
 		520453851A37340A002A8541 /* JWBusCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusCardView.m; sourceTree = "<group>"; };
+		520A5B691AD4227100C41F9D /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		520EB0261AB7BE6C00D8988C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
@@ -279,6 +282,7 @@
 		52C53EA21A523DDB0089334A /* JWLineRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineRequest.m; sourceTree = "<group>"; };
 		52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWCityInterfaceController.swift; sourceTree = "<group>"; };
 		52C9E0791AD36F9F00126937 /* JWBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWBridge.h; sourceTree = "<group>"; };
+		52C9E0811AD3809C00126937 /* JWRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWRequest.swift; sourceTree = "<group>"; };
 		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
@@ -454,6 +458,8 @@
 				523DCD3A1AD2F5EF00862462 /* Images.xcassets */,
 				523DCD341AD2F5EF00862462 /* Supporting Files */,
 				52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */,
+				52C9E0811AD3809C00126937 /* JWRequest.swift */,
+				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
 			);
 			path = "BusRider WatchKit Extension";
 			sourceTree = "<group>";
@@ -1090,11 +1096,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520A5B6A1AD4227100C41F9D /* AppConfiguration.swift in Sources */,
+				52C9E0821AD3809C00126937 /* JWRequest.swift in Sources */,
+				520A5B661AD4201D00C41F9D /* JWUserDefaultsUtil.m in Sources */,
+				520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */,
 				523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */,
-				52C9E0801AD37DC400126937 /* JWViewUtil.m in Sources */,
-				52C9E07F1AD37D4C00126937 /* JWCityRequest.m in Sources */,
-				52C9E07E1AD37D4800126937 /* JWRequestWithAlert.m in Sources */,
 				523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */,
+				520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */,
 				52C9E0771AD36D2B00126937 /* JWCityInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
