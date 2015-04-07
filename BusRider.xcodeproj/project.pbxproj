@@ -21,6 +21,7 @@
 		520A5B6A1AD4227100C41F9D /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; };
 		520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
 		520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
+		520A5B6E1AD42A2900C41F9D /* JWCityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */; };
 		520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520EB0261AB7BE6C00D8988C /* MessageUI.framework */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
@@ -183,6 +184,7 @@
 		520453841A37340A002A8541 /* JWBusCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusCardView.h; sourceTree = "<group>"; };
 		520453851A37340A002A8541 /* JWBusCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusCardView.m; sourceTree = "<group>"; };
 		520A5B691AD4227100C41F9D /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWCityRequest.swift; sourceTree = "<group>"; };
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		520EB0261AB7BE6C00D8988C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */,
 				52C9E0811AD3809C00126937 /* JWRequest.swift */,
 				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
+				520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */,
 			);
 			path = "BusRider WatchKit Extension";
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */,
 				523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */,
 				520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */,
+				520A5B6E1AD42A2900C41F9D /* JWCityRequest.swift in Sources */,
 				52C9E0771AD36D2B00126937 /* JWCityInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

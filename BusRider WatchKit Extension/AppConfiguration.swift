@@ -12,4 +12,8 @@ public class AppConfiguration {
     public class var host: String {
         return "api.chelaile.net.cn:7000"
     }
+    
+    public class var dataErrorDomain: String {
+        return "JWDataError"
+    }
 }

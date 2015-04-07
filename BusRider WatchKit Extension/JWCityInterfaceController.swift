@@ -11,16 +11,15 @@ import Foundation
 
 class JWCityInterfaceController: WKInterfaceController {
     
-//    internal let cityRequest = JWCityRequest()
+    internal let cityRequest = JWCityRequest()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-//        cityRequest.loadWithCompletion { (result:[NSObject : AnyObject]!, error:NSError!) -> Void in
-//            if (error != nil) {
-//                
-//            }
-//        }
-        
+        cityRequest.loadWithCompletion { (result, error) -> Void in
+            if let result = result {
+                print(result["cities"])
+            }
+        }
     }
 
     override func willActivate() {
