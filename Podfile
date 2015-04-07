@@ -15,3 +15,9 @@ target :Today do
     platform :ios, '8.0'
     pod 'STHTTPRequest'
 end
+
+target :'BusRider WatchKit Extension' do
+    platform :ios, '8.0'
+    pod 'STHTTPRequest'
+    pod 'SVProgressHUD'
+end

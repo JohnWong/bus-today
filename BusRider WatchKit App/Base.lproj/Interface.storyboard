@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="164" y="217"/>
         </scene>
-        <!--Interface Controller-->
+        <!--City Interface Controller-->
         <scene sceneID="9uj-LL-2oS">
             <objects>
-                <controller id="dh2-pl-C2k">
+                <controller id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
