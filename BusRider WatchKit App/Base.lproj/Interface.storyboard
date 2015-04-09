@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -34,12 +34,22 @@
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
-                                <tableRow id="niG-ko-rx5">
-                                    <group key="rootItem" width="1" alignment="left" id="h4z-xq-ikW"/>
+                                <tableRow id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="h4z-xq-ikW">
+                                        <items>
+                                            <label width="136" height="32" alignment="left" text="Label" id="6i2-51-WVy"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="6i2-51-WVy" id="ay5-f1-p84"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="interfaceTable" destination="H8I-4n-mEl" id="4cz-qL-Qhu"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="374" y="211"/>

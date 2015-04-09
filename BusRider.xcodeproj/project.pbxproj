@@ -85,6 +85,7 @@
 		52C9E07A1AD37A3B00126937 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		52C9E0821AD3809C00126937 /* JWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0811AD3809C00126937 /* JWRequest.swift */; };
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
+		52DC59D01AD6FFCC00F25621 /* JWCityControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -286,6 +287,7 @@
 		52C9E0791AD36F9F00126937 /* JWBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWBridge.h; sourceTree = "<group>"; };
 		52C9E0811AD3809C00126937 /* JWRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWRequest.swift; sourceTree = "<group>"; };
 		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
+		52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWCityControllerRowType.swift; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				52C9E0811AD3809C00126937 /* JWRequest.swift */,
 				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
 				520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */,
+				52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */,
 			);
 			path = "BusRider WatchKit Extension";
 			sourceTree = "<group>";
@@ -1105,6 +1108,7 @@
 				520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */,
 				523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */,
 				523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */,
+				52DC59D01AD6FFCC00F25621 /* JWCityControllerRowType.swift in Sources */,
 				520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */,
 				520A5B6E1AD42A2900C41F9D /* JWCityRequest.swift in Sources */,
 				52C9E0771AD36D2B00126937 /* JWCityInterfaceController.swift in Sources */,

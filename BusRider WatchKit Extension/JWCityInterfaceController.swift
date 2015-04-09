@@ -11,13 +11,27 @@ import Foundation
 
 class JWCityInterfaceController: WKInterfaceController {
     
-    internal let cityRequest = JWCityRequest()
+    struct Storyboard {
+        static let interfaceControllerName = "JWCityInterfaceController"
+        
+        struct RowTypes {
+            static let item = "JWCityControllerRowType"
+//            static let noItems = "ListControllerNoItemsRowType"
+        }
+    }
+    
+    @IBOutlet weak var interfaceTable: WKInterfaceTable!
+    
+    let cityRequest = JWCityRequest()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         cityRequest.loadWithCompletion { (result, error) -> Void in
             if let result = result {
-                print(result["cities"])
+                if let cities = result["cities"]! as? NSArray {
+                    self.interfaceTable.setNumberOfRows(cities.count, withRowType: Storyboard.RowTypes.item)
+                    print(cities)
+                }
             }
         }
     }
