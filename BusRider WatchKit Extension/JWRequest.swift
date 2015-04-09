@@ -23,7 +23,7 @@ public class JWRequest: NSObject {
         return ""
     }
     
-    internal func urlPath() -> NSString {
+    internal func urlPath() -> String {
         var paramString = String()
         for (key, value) in self.params() {
             paramString = paramString.stringByAppendingFormat("&%@=%@", key, value.string)
@@ -47,9 +47,9 @@ public class JWRequest: NSObject {
             var error: NSError?
             var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions(), error: &error)
             if error == nil && jsonObject != nil && jsonObject!.isKindOfClass(NSDictionary) {
-                let dict = jsonObject as NSDictionary
-                let jsonr: NSDictionary = dict["jsonr"] as NSDictionary
-                let infoDict: NSDictionary = jsonr["data"] as NSDictionary
+                let dict = jsonObject as! NSDictionary
+                let jsonr: NSDictionary = dict["jsonr"] as! NSDictionary
+                let infoDict: NSDictionary = jsonr["data"] as! NSDictionary
                 if infoDict.count > 0 {
                     completion(infoDict, nil);
                 } else {
