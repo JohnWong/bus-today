@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -10,11 +10,19 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="杭州" id="UVC-bN-jUo">
-                            <connections>
-                                <segue destination="dh2-pl-C2k" kind="modal" id="Wj3-h9-zBa"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" id="7Ze-Fy-K16">
+                            <items>
+                                <button width="0.5" alignment="left" title="选择城市" id="UVC-bN-jUo">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                    <connections>
+                                        <segue destination="dh2-pl-C2k" kind="modal" id="PZ9-wd-K2g"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="搜索路线" id="4hd-eE-QKR">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </button>
+                            </items>
+                        </group>
                         <table alignment="left" id="54j-Y2-eQ6">
                             <items>
                                 <tableRow id="OMQ-Ny-dMd">
@@ -23,6 +31,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="cityButton" destination="UVC-bN-jUo" id="DqK-Dq-U9r"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="164" y="217"/>
@@ -34,14 +45,28 @@
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
-                                <tableRow id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="h4z-xq-ikW">
+                                <tableRow identifier="JWCityControllerRowType" id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="h4z-xq-ikW">
                                         <items>
-                                            <label width="136" height="32" alignment="left" text="Label" id="6i2-51-WVy"/>
+                                            <label width="136" height="32" alignment="left" text="Label" id="6i2-51-WVy">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="textLabel" destination="6i2-51-WVy" id="ay5-f1-p84"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="JWCityControllerNoRowType" selectable="NO" id="HoF-gk-4KD" customClass="JWCityControllerNoRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="bmB-q7-tT2">
+                                        <items>
+                                            <label width="136" height="32" alignment="left" text="加载中..." id="LVb-jv-6aU">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="LVb-jv-6aU" id="vTV-vO-C1I"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -52,7 +77,14 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="374" y="211"/>
+            <point key="canvasLocation" x="452" y="88"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="TUn-gD-QGY">
+            <objects>
+                <controller id="QeM-wk-tak"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="319"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">

@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
 @property (nonatomic, strong) JWSearchListItem *searchListItem;
+@property (nonatomic, strong) NSString *cityName;
 /**
  *  array of JWSearchLineItem
  */
@@ -72,6 +73,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 #pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _cityName = [JWUserDefaultsUtil cityItem].cityName;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
@@ -91,6 +93,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
                                                     horizontalRandomness:150
                                                  reverseLoadingAnimation:YES
                                                  internalAnimationFactor:1];
+    
+    NSStringEncoding strEncode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -102,6 +107,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
     [self loadData];
+    JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
+    if (cityItem && ![cityItem.cityName isEqualToString:_cityName]) {
+        _cityName = cityItem.cityName;
+        _cityButtonItem = nil;
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -308,8 +319,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (JWNavigationCenterView *)cityButtonItem {
     if (!_cityButtonItem) {
-        JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
-        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:cityItem ? cityItem.cityName : @"城市" isBold:NO];
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle: _cityName ? : @"城市" isBold:NO];
         _cityButtonItem.delegate = self;
     }
     return _cityButtonItem;

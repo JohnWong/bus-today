@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var cityButton: WKInterfaceButton!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -21,6 +23,11 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if let cityItem = JWUserDefaultsUtil.cityItem() {
+            if !cityItem.cityName.isEmpty {
+                self.cityButton.setTitle(cityItem.cityName)
+            }
+        }
     }
 
     override func didDeactivate() {
@@ -28,4 +35,22 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func openInputController() {
+        let initialPhrases = [
+            "311",
+            "211",
+            "59"
+        ]
+        self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
+            (results) -> Void in
+            if let results = results {
+                if results.count > 0 {
+                    let aResult = results[0] as! String;
+                    
+                }
+            } else {
+                // Nothing was selected.
+            }
+        }
+    }
 }
