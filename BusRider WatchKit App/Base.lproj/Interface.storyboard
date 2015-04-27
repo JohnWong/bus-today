@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -20,6 +20,9 @@
                                 </button>
                                 <button width="0.5" alignment="left" title="搜索路线" id="4hd-eE-QKR">
                                     <fontDescription key="font" type="system" pointSize="14"/>
+                                    <connections>
+                                        <action selector="openInputController" destination="AgC-eL-Hgc" id="jhO-gP-dQe"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
@@ -79,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="452" y="88"/>
         </scene>
-        <!--Interface Controller-->
+        <!--搜索结果-->
         <scene sceneID="TUn-gD-QGY">
             <objects>
-                <controller id="QeM-wk-tak"/>
+                <controller identifier="searchResult" title="搜索结果" id="QeM-wk-tak"/>
             </objects>
             <point key="canvasLocation" x="452" y="319"/>
         </scene>

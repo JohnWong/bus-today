@@ -11,6 +11,12 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    struct StoryBoard {
+        struct Controllers {
+            let searchResult = "searchResult"
+        }
+    }
 
     @IBOutlet weak var cityButton: WKInterfaceButton!
     
@@ -34,8 +40,17 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+//    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+//        println("\(sender)")
+//    }
 
     @IBAction func openInputController() {
+        #if DEBUG
+            pushControllerWithName(StoryBoard.Controllers.searchResult, context: "311")
+        #endif
+        
+        // TODO 收藏的路线
         let initialPhrases = [
             "311",
             "211",
