@@ -14,7 +14,7 @@ class InterfaceController: WKInterfaceController {
     
     struct StoryBoard {
         struct Controllers {
-            let searchResult = "searchResult"
+            static let searchResult = "searchResult"
         }
     }
 
