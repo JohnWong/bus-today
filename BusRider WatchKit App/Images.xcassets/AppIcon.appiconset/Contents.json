@@ -61,13 +61,6 @@
       "filename" : "Icon-98@2x.png",
       "role" : "quickLook",
       "subtype" : "42mm"
-    },
-    {
-      "size" : "40x40",
-      "idiom" : "watch",
-      "unassigned" : true,
-      "role" : "appLauncher",
-      "scale" : "2x"
     }
   ],
   "info" : {

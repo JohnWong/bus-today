@@ -8,12 +8,14 @@
 
 import Foundation
 
-public class AppConfiguration {
-    public class var host: String {
+class AppConfiguration {
+    class var host: String {
         return "api.chelaile.net.cn:7000"
     }
     
-    public class var dataErrorDomain: String {
+    static let Debug = NSBundle.mainBundle().objectForInfoDictionaryKey("Debug") as? String == "YES"
+    
+    class var dataErrorDomain: String {
         return "JWDataError"
     }
 }

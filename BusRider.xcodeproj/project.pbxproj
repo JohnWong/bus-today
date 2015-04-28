@@ -1250,7 +1250,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "8d527f08-335a-41d9-a554-77bc5a911d85";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1273,7 +1273,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "8d527f08-335a-41d9-a554-77bc5a911d85";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
 			};
@@ -1494,7 +1494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73f8824d-cd86-447f-b427-54fb69e35aad";
+				PROVISIONING_PROFILE = "16520e12-1a22-4b88-b59f-dbb4042e6a42";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1512,7 +1512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73f8824d-cd86-447f-b427-54fb69e35aad";
+				PROVISIONING_PROFILE = "16520e12-1a22-4b88-b59f-dbb4042e6a42";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

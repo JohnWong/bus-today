@@ -46,9 +46,12 @@ class InterfaceController: WKInterfaceController {
 //    }
 
     @IBAction func openInputController() {
-        #if DEBUG
+        if AppConfiguration.Debug {
             pushControllerWithName(StoryBoard.Controllers.searchResult, context: "311")
-        #endif
+            return
+        }
+        
+        println("\(AppConfiguration.Debug)")
         
         // TODO 收藏的路线
         let initialPhrases = [

@@ -20,5 +20,7 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Debug</key>
+	<string>${MTL_ENABLE_DEBUG_INFO}</string>
 </dict>
 </plist>
