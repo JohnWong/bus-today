@@ -15,15 +15,14 @@ class InterfaceController: WKInterfaceController {
     struct StoryBoard {
         struct Controllers {
             static let searchResult = "searchResult"
+            static let selectCity = "selectCity"
         }
     }
-
+    
     @IBOutlet weak var cityButton: WKInterfaceButton!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
     }
 
     override func willActivate() {
@@ -34,6 +33,10 @@ class InterfaceController: WKInterfaceController {
                 self.cityButton.setTitle(cityItem.cityName)
             }
         }
+        if JWUserDefaultsUtil.pushSearchController() {
+            self.search()
+            JWUserDefaultsUtil.setPushSearchController(false)
+        }
     }
 
     override func didDeactivate() {
@@ -41,34 +44,11 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-//    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-//        println("\(sender)")
-//    }
-
-    @IBAction func openInputController() {
-        if AppConfiguration.Debug {
-            pushControllerWithName(StoryBoard.Controllers.searchResult, context: "3")
-            return
-        }
-        
-        println("\(AppConfiguration.Debug)")
-        
-        // TODO 收藏的路线
-        let initialPhrases = [
-            "311",
-            "211",
-            "59"
-        ]
-        self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
-            (results) -> Void in
-            if let results = results {
-                if results.count > 0 {
-                    let aResult = results[0] as! String;
-                    
-                }
-            } else {
-                // Nothing was selected.
-            }
+    @IBAction func search() {
+        if let cityItem = JWUserDefaultsUtil.cityItem() {
+            pushControllerWithName(StoryBoard.Controllers.searchResult, context: nil)
+        } else {
+            presentControllerWithName(StoryBoard.Controllers.selectCity, context: true)
         }
     }
 }

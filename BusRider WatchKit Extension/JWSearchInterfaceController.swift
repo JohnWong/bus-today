@@ -27,9 +27,8 @@ class JWSearchInterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        if let keyword = context as? String {
-            loadData(keyword)
-        }
+        openInputController()
+        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "重新输入", action: Selector("openInputController"))
     }
 
     override func willActivate() {
@@ -63,6 +62,31 @@ class JWSearchInterfaceController: WKInterfaceController {
         } else {
             var item: JWSearchStopItem = self.searchItems.stopList[index - self.searchItems.lineList.count] as! JWSearchStopItem
             itemRowController.setText(item.stopName)
+        }
+    }
+    
+    func openInputController() {
+        if AppConfiguration.Debug {
+            loadData("3")
+            return
+        }
+        
+        // TODO 收藏的路线
+        let initialPhrases = [
+            "311",
+            "211",
+            "59"
+        ]
+        self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
+            [unowned self](results) -> Void in
+            if let results = results {
+                if results.count > 0 {
+                    let aResult = results[0] as! String;
+                    self.loadData(aResult)
+                }
+            } else {
+                // Nothing was selected.
+            }
         }
     }
 

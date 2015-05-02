@@ -10,9 +10,10 @@
 
 #define JWSuiteName @"group.johnwong.busrider"
 
-#define JWKeyCollectedLine  @"JWKeyCollectedLine"
-#define JWKeyTodayBusLine   @"JWKeyTodayBusLine"
-#define JWKeyCity           @"JWKeyCity"
+#define JWKeyCollectedLine          @"JWKeyCollectedLine"
+#define JWKeyTodayBusLine           @"JWKeyTodayBusLine"
+#define JWKeyCity                   @"JWKeyCity"
+#define JWKeyPushSearchController   @"JWKeyPushSearchController"
 
 @interface JWUserDefaultsUtil ()
 
@@ -189,6 +190,19 @@
     NSString *key = [self combinedkey:JWKeyTodayBusLine];
     if (key) {
         return [[self groupUserDefaults] removeObjectForKey:key];
+    }
+}
+
++ (void)setPushSearchController: (BOOL)value {
+    [((JWUserDefaultsUtil *)[self standardUserDefaults]).userDefaults setBool:value forKey:JWKeyPushSearchController];
+}
+
++ (BOOL)pushSearchController {
+    NSString *key = JWKeyPushSearchController;
+    if (key) {
+        return [((JWUserDefaultsUtil *)[self standardUserDefaults]).userDefaults boolForKey:key];
+    } else {
+        return NO;
     }
 }
 

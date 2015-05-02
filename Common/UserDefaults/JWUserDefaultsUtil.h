@@ -32,4 +32,7 @@
  */
 + (NSArray *)allCollectItems;
 
++ (void)setPushSearchController: (BOOL)value;
++ (BOOL)pushSearchController;
+
 @end

@@ -21,7 +21,7 @@
                                 <button width="0.5" alignment="left" title="搜索路线" id="4hd-eE-QKR">
                                     <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
-                                        <action selector="openInputController" destination="AgC-eL-Hgc" id="jhO-gP-dQe"/>
+                                        <action selector="search" destination="AgC-eL-Hgc" id="isC-BM-Wxp"/>
                                     </connections>
                                 </button>
                             </items>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="164" y="217"/>
         </scene>
-        <!--选择城市-->
+        <!--selectCity-->
         <scene sceneID="9uj-LL-2oS">
             <objects>
-                <controller title="选择城市" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="selectCity" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>

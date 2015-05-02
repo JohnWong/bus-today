@@ -18,16 +18,23 @@ class JWCityInterfaceController: WKInterfaceController {
             static let item = "JWCityControllerRowType"
             static let noItem = "JWCityControllerNoRowType"
         }
+        
+        struct Controllers {
+            static let searchResult = "searchResult"
+        }
     }
     
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
     
     var cities = Array<JWCityItem>()
     let cityRequest = JWCityRequest()
+    var isPushSearchController: Bool?
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+        if let context = context as? Bool {
+            isPushSearchController = context
+        }
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
         cityRequest.loadWithCompletion { (result, error) -> Void in
@@ -55,6 +62,9 @@ class JWCityInterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         let city = self.cities[rowIndex]
         JWUserDefaultsUtil.setCityItem(city)
+        if let isPushSearchController = isPushSearchController{
+            JWUserDefaultsUtil.setPushSearchController(isPushSearchController)
+        }
         self.dismissController()
     }
 
