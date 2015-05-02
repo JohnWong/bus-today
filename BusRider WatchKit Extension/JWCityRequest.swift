@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class JWCityRequest: JWRequest {
-    public override func actionName() -> String {
+class JWCityRequest: JWRequest {
+    override func actionName() -> String {
         return "city!morecities";
     }
     

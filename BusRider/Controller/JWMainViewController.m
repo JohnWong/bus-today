@@ -92,9 +92,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
                                                                    scale:1
                                                     horizontalRandomness:150
                                                  reverseLoadingAnimation:YES
-                                                 internalAnimationFactor:1];
-    
-    NSStringEncoding strEncode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+                                                           internalAnimationFactor:1];
     
 }
 

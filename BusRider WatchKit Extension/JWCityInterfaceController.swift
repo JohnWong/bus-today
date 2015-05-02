@@ -38,7 +38,6 @@ class JWCityInterfaceController: WKInterfaceController {
                         self.cities.append(JWCityItem(dictionary: dict as! [NSObject : AnyObject]))
                     }
                     self.interfaceTable.setNumberOfRows(cities.count, withRowType: Storyboard.RowTypes.item)
-                    print(cities)
                     for index in 0..<cities.count {
                         self.configureRowControllerAtIndex(index)
                     }

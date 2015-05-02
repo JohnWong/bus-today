@@ -9,3 +9,6 @@
 #import "STHTTPRequest.h"
 #import "SVProgressHUD.h"
 #import "JWUserDefaultsUtil.h"
+#import "JWSearchListItem.h"
+#import "JWSearchLineItem.h"
+#import "JWSearchStopItem.h"

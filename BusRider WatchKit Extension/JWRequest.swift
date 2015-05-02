@@ -8,25 +8,25 @@
 
 import Foundation
 
-public class JWRequest: NSObject {
+class JWRequest: NSObject {
     var request:STHTTPRequest?
     
     internal override init() {
         super.init()
     }
     
-    public func params() -> Dictionary<String, AnyObject> {
+    func params() -> Dictionary<String, AnyObject> {
         return Dictionary()
     }
     
-    public func actionName() -> String {
+    func actionName() -> String {
         return ""
     }
     
     internal func urlPath() -> String {
         var paramString = String()
         for (key, value) in self.params() {
-            paramString = paramString.stringByAppendingFormat("&%@=%@", key, value.string)
+            paramString = paramString.stringByAppendingFormat("&\(key)=\(value)")
         }
         var cityId = "";
         var cityItem = JWUserDefaultsUtil.cityItem()
@@ -36,7 +36,7 @@ public class JWRequest: NSObject {
         return String(format: "http://%@/%@/%@.action?s=IOS&v=2.9%@&sign=%@", AppConfiguration.host, self.isKindOfClass(JWCityRequest) ? "wow" : "bus", self.actionName(), cityId, paramString)
     }
     
-    public func loadWithCompletion(completion:(NSDictionary?, NSError?) -> Void) {
+    func loadWithCompletion(completion:(NSDictionary?, NSError?) -> Void) {
         request?.cancel();
         self.request = STHTTPRequest(URLString: self.urlPath())
         self.request?.completionBlock = {

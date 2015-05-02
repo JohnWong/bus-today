@@ -47,7 +47,7 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func openInputController() {
         if AppConfiguration.Debug {
-            pushControllerWithName(StoryBoard.Controllers.searchResult, context: "311")
+            pushControllerWithName(StoryBoard.Controllers.searchResult, context: "3")
             return
         }
         
