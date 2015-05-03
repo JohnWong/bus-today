@@ -18,6 +18,10 @@ class JWSearchInterfaceController: WKInterfaceController {
             static let item = "JWSearchControllerRowType"
             static let noItem = "JWSearchControllerNoRowType"
         }
+        
+        struct Controllers {
+            static let lineDetail = "lineDetail"
+        }
     }
     
     var searchRequest = JWSearchRequest()
@@ -28,7 +32,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         openInputController()
-        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "重新输入", action: Selector("openInputController"))
+        self.addMenuItemWithImage(UIImage(named: "Restart")!, title: "重新输入", action: Selector("openInputController"))
     }
 
     override func willActivate() {
@@ -42,13 +46,23 @@ class JWSearchInterfaceController: WKInterfaceController {
     }
     
     func loadData(keyword: String) {
+        self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.item)
+        let itemRowController = interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+        itemRowController.setText("加载中")
+        
         searchRequest.keyWord = keyword
         searchRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
                 self.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
-                self.interfaceTable.setNumberOfRows(self.searchItems.lineList.count + self.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
-                for index in 0 ..< self.searchItems.lineList.count + self.searchItems.stopList.count {
-                    self.configureRowControllerAtIndex(index)
+                var totalCount = self.searchItems.lineList.count + self.searchItems.stopList.count
+                if totalCount > 0 {
+                    self.interfaceTable.setNumberOfRows(self.searchItems.lineList.count + self.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
+                    for index in 0 ..< self.searchItems.lineList.count + self.searchItems.stopList.count {
+                        self.configureRowControllerAtIndex(index)
+                    }
+                } else {
+                    let itemRowController = self.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                    itemRowController.setText("没有结果")
                 }
             }
         }
@@ -65,9 +79,12 @@ class JWSearchInterfaceController: WKInterfaceController {
         }
     }
     
+    static var i = 1
+    
     func openInputController() {
         if AppConfiguration.Debug {
-            loadData("3")
+            JWSearchInterfaceController.i += 1
+            loadData("\(JWSearchInterfaceController.i)")
             return
         }
         
@@ -87,6 +104,15 @@ class JWSearchInterfaceController: WKInterfaceController {
             } else {
                 // Nothing was selected.
             }
+        }
+    }
+    
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        if rowIndex < self.searchItems.lineList.count {
+            var item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
+            self.pushControllerWithName(Storyboard.Controllers.lineDetail, context: item.lineId)
+        } else {
+            
         }
     }
 

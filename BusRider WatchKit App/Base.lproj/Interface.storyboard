@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QeM-wk-tak">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -51,7 +51,7 @@
                                 <tableRow identifier="JWCityControllerRowType" id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="h4z-xq-ikW">
                                         <items>
-                                            <label width="136" height="32" alignment="left" text="Label" id="6i2-51-WVy">
+                                            <label width="136" height="28" alignment="left" text="Label" id="6i2-51-WVy">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
@@ -82,6 +82,86 @@
             </objects>
             <point key="canvasLocation" x="452" y="88"/>
         </scene>
+        <!--线路-->
+        <scene sceneID="Vb9-ZZ-8uC">
+            <objects>
+                <controller identifier="lineDetail" title="线路" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="BusRider_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" spacing="0.0" id="NQK-0K-0Qk">
+                            <items>
+                                <label alignment="left" text="311路" id="10c-wS-wAT">
+                                    <fontDescription key="font" type="system" pointSize="26"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="1" id="icA-TI-DWN">
+                            <items>
+                                <group width="1" alignment="left" animationDuration="1" id="EQl-tM-Jbr">
+                                    <items>
+                                        <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="FwP-oJ-7kd">
+                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label alignment="left" text="余杭" numberOfLines="0" id="Uyx-Wg-tW9">
+                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="Ue2-U1-9MA">
+                                    <items>
+                                        <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="D8O-Nz-FJw">
+                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="sHz-yx-gcI">
+                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="87c-PV-d9N">
+                                    <items>
+                                        <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="9VU-4f-07M">
+                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label alignment="left" text="06:00-17:30" numberOfLines="0" id="Lud-t5-1MU">
+                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <table alignment="left" id="Q1p-zW-j2Y">
+                            <items>
+                                <tableRow identifier="lineRow" id="OFW-3b-nXY" customClass="JWLineRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="rVp-RG-kh7">
+                                        <items>
+                                            <group width="1" height="4" alignment="left" id="W4k-FH-0kB"/>
+                                            <group width="1" alignment="left" id="z2s-9i-s9M">
+                                                <items>
+                                                    <label width="19" alignment="left" verticalAlignment="center" text="88" textAlignment="left" id="iGg-UX-iz4"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="vAZ-hV-DBw"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" height="4" alignment="left" id="sre-F3-aKu"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="vAZ-hV-DBw" id="tTK-VP-Zfa"/>
+                                        <outlet property="numberLabel" destination="iGg-UX-iz4" id="xc5-Ab-LVE"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceTable" destination="Q1p-zW-j2Y" id="t0E-Fx-7Bb"/>
+                        <outlet property="lineNumberLabel" destination="10c-wS-wAT" id="2zD-ke-qH2"/>
+                        <outlet property="startLabel" destination="Uyx-Wg-tW9" id="HDY-yu-kFs"/>
+                        <outlet property="stopLabel" destination="sHz-yx-gcI" id="zbK-Wo-2kA"/>
+                        <outlet property="timeLabel" destination="Lud-t5-1MU" id="CTP-HS-0tP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="772" y="238"/>
+        </scene>
         <!--搜索-->
         <scene sceneID="TUn-gD-QGY">
             <objects>
@@ -90,9 +170,9 @@
                         <table alignment="left" id="Onz-hq-k5C">
                             <items>
                                 <tableRow identifier="JWSearchControllerRowType" id="s2S-RA-s2Z" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="bm9-JD-GKm">
+                                    <group key="rootItem" width="1" height="28" alignment="left" id="bm9-JD-GKm">
                                         <items>
-                                            <label height="39" alignment="left" text="Label" id="8Km-Ow-C0s"/>
+                                            <label height="28" alignment="left" text="Label" id="8Km-Ow-C0s"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -123,16 +203,16 @@
                                 <group width="1" alignment="left" id="lNu-Zj-Iiq">
                                     <items>
                                         <label alignment="left" text="1234" id="8UZ-LC-TRd">
-                                            <fontDescription key="font" type="system" pointSize="52"/>
+                                            <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                         <label alignment="left" verticalAlignment="bottom" text="米" id="dn1-ql-dYo">
                                             <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="IWF-EJ-VI3">
+                                <group width="1" alignment="left" spacing="0.0" id="IWF-EJ-VI3">
                                     <items>
-                                        <group alignment="left" layout="vertical" id="0WB-d3-PLp">
+                                        <group alignment="left" layout="vertical" spacing="0.0" id="0WB-d3-PLp">
                                             <items>
                                                 <label alignment="left" text="蒋村公交中心站" id="kC1-ck-PS3">
                                                     <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +224,7 @@
                                                 </label>
                                             </items>
                                         </group>
-                                        <group alignment="right" layout="vertical" id="UHs-fN-J38">
+                                        <group alignment="right" layout="vertical" spacing="0.0" id="UHs-fN-J38">
                                             <items>
                                                 <label alignment="right" text="05:00" id="1pW-B8-0DB">
                                                     <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>

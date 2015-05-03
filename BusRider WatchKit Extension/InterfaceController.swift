@@ -44,7 +44,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    @IBAction func search() {
+    func search() {
         if let cityItem = JWUserDefaultsUtil.cityItem() {
             pushControllerWithName(StoryBoard.Controllers.searchResult, context: nil)
         } else {

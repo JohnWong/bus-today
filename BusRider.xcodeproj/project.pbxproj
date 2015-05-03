@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52004FEC1A65075D00EE9024 /* JWStopLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FEB1A65075D00EE9024 /* JWStopLineItem.m */; };
-		52004FEF1A65082600EE9024 /* JWStopLineTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FEE1A65082600EE9024 /* JWStopLineTypeItem.m */; };
 		52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52004FF31A65125400EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */; };
@@ -26,16 +24,27 @@
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
 		522A9E6D1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522A9E6C1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png */; };
-		522A9E941A5D02F100673EB0 /* JWBusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E8D1A5D02F100673EB0 /* JWBusItem.m */; };
-		522A9E951A5D02F100673EB0 /* JWBusLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E8F1A5D02F100673EB0 /* JWBusLineItem.m */; };
-		522A9E961A5D02F100673EB0 /* JWLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E911A5D02F100673EB0 /* JWLineItem.m */; };
-		522A9E971A5D02F100673EB0 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522A9E931A5D02F100673EB0 /* JWStopItem.m */; };
 		522C4EAD1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */; };
 		522C4EB21A6C191D00B4C1E9 /* JWCityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 522C4EB11A6C191D00B4C1E9 /* JWCityRequest.m */; };
 		522C4EBC1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */; };
 		522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */; };
 		523853441A408A7A004FB163 /* JWRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C291A40784B00057723 /* JWRequest.m */; };
 		523853471A408CC7004FB163 /* JWBusRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 523853461A408CC7004FB163 /* JWBusRequest.m */; };
+		5239C6AB1AF65856006E70D7 /* JWLineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */; };
+		5239C6AD1AF66583006E70D7 /* JWLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */; };
+		5239C6AF1AF66E25006E70D7 /* JWLineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */; };
+		5239C6BE1AF68092006E70D7 /* JWBusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B21AF68092006E70D7 /* JWBusItem.m */; };
+		5239C6BF1AF68092006E70D7 /* JWBusLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B41AF68092006E70D7 /* JWBusLineItem.m */; };
+		5239C6C01AF68092006E70D7 /* JWLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B61AF68092006E70D7 /* JWLineItem.m */; };
+		5239C6C11AF68092006E70D7 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B81AF68092006E70D7 /* JWStopItem.m */; };
+		5239C6C21AF68092006E70D7 /* JWStopLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BB1AF68092006E70D7 /* JWStopLineItem.m */; };
+		5239C6C31AF68092006E70D7 /* JWStopLineTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BD1AF68092006E70D7 /* JWStopLineTypeItem.m */; };
+		5239C6C41AF6809B006E70D7 /* JWStopLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BB1AF68092006E70D7 /* JWStopLineItem.m */; };
+		5239C6C51AF6809F006E70D7 /* JWStopLineTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BD1AF68092006E70D7 /* JWStopLineTypeItem.m */; };
+		5239C6C61AF680A5006E70D7 /* JWBusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B21AF68092006E70D7 /* JWBusItem.m */; };
+		5239C6C71AF680A8006E70D7 /* JWBusLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B41AF68092006E70D7 /* JWBusLineItem.m */; };
+		5239C6C81AF680AB006E70D7 /* JWLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B61AF68092006E70D7 /* JWLineItem.m */; };
+		5239C6C91AF680AF006E70D7 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B81AF68092006E70D7 /* JWStopItem.m */; };
 		523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */; };
 		523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; };
@@ -175,10 +184,6 @@
 		0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		52004FEA1A65075D00EE9024 /* JWStopLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineItem.h; sourceTree = "<group>"; };
-		52004FEB1A65075D00EE9024 /* JWStopLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineItem.m; sourceTree = "<group>"; };
-		52004FED1A65082600EE9024 /* JWStopLineTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineTypeItem.h; sourceTree = "<group>"; };
-		52004FEE1A65082600EE9024 /* JWStopLineTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineTypeItem.m; sourceTree = "<group>"; };
 		52004FF01A6511EB00EE9024 /* JWFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFormatter.h; sourceTree = "<group>"; };
 		52004FF11A6511EB00EE9024 /* JWFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFormatter.m; sourceTree = "<group>"; };
 		52004FF41A66050600EE9024 /* JWStopLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineTableViewCell.h; sourceTree = "<group>"; };
@@ -200,14 +205,6 @@
 		52257BEA1AB0A95A0002863B /* bus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bus.plist; sourceTree = "<group>"; };
 		522A9E6C1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWTodayIconSetting@2x.png"; sourceTree = "<group>"; };
 		522A9E8A1A5D02AB00673EB0 /* JWBusRider-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWBusRider-Prefix.pch"; sourceTree = "<group>"; };
-		522A9E8C1A5D02F100673EB0 /* JWBusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusItem.h; sourceTree = "<group>"; };
-		522A9E8D1A5D02F100673EB0 /* JWBusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusItem.m; sourceTree = "<group>"; };
-		522A9E8E1A5D02F100673EB0 /* JWBusLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusLineItem.h; sourceTree = "<group>"; };
-		522A9E8F1A5D02F100673EB0 /* JWBusLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusLineItem.m; sourceTree = "<group>"; };
-		522A9E901A5D02F100673EB0 /* JWLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineItem.h; sourceTree = "<group>"; };
-		522A9E911A5D02F100673EB0 /* JWLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineItem.m; sourceTree = "<group>"; };
-		522A9E921A5D02F100673EB0 /* JWStopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopItem.h; sourceTree = "<group>"; };
-		522A9E931A5D02F100673EB0 /* JWStopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopItem.m; sourceTree = "<group>"; };
 		522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBusThin@2x.png"; sourceTree = "<group>"; };
 		522C4EB01A6C191D00B4C1E9 /* JWCityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCityRequest.h; sourceTree = "<group>"; };
 		522C4EB11A6C191D00B4C1E9 /* JWCityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCityRequest.m; sourceTree = "<group>"; };
@@ -215,6 +212,21 @@
 		522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCity@2x.png"; sourceTree = "<group>"; };
 		523853451A408CC7004FB163 /* JWBusRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusRequest.h; sourceTree = "<group>"; };
 		523853461A408CC7004FB163 /* JWBusRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusRequest.m; sourceTree = "<group>"; };
+		5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWLineInterfaceController.swift; sourceTree = "<group>"; };
+		5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWLineRowType.swift; sourceTree = "<group>"; };
+		5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWLineRequest.swift; sourceTree = "<group>"; };
+		5239C6B11AF68092006E70D7 /* JWBusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusItem.h; sourceTree = "<group>"; };
+		5239C6B21AF68092006E70D7 /* JWBusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusItem.m; sourceTree = "<group>"; };
+		5239C6B31AF68092006E70D7 /* JWBusLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusLineItem.h; sourceTree = "<group>"; };
+		5239C6B41AF68092006E70D7 /* JWBusLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusLineItem.m; sourceTree = "<group>"; };
+		5239C6B51AF68092006E70D7 /* JWLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLineItem.h; sourceTree = "<group>"; };
+		5239C6B61AF68092006E70D7 /* JWLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLineItem.m; sourceTree = "<group>"; };
+		5239C6B71AF68092006E70D7 /* JWStopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopItem.h; sourceTree = "<group>"; };
+		5239C6B81AF68092006E70D7 /* JWStopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopItem.m; sourceTree = "<group>"; };
+		5239C6BA1AF68092006E70D7 /* JWStopLineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineItem.h; sourceTree = "<group>"; };
+		5239C6BB1AF68092006E70D7 /* JWStopLineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineItem.m; sourceTree = "<group>"; };
+		5239C6BC1AF68092006E70D7 /* JWStopLineTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineTypeItem.h; sourceTree = "<group>"; };
+		5239C6BD1AF68092006E70D7 /* JWStopLineTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWStopLineTypeItem.m; sourceTree = "<group>"; };
 		523B7FBE1AB75D1A006939D6 /* JWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSettingViewController.h; sourceTree = "<group>"; };
 		523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSettingViewController.m; sourceTree = "<group>"; };
 		523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BusRider WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,17 +388,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52004FE91A65075D00EE9024 /* StopLine */ = {
-			isa = PBXGroup;
-			children = (
-				52004FEA1A65075D00EE9024 /* JWStopLineItem.h */,
-				52004FEB1A65075D00EE9024 /* JWStopLineItem.m */,
-				52004FED1A65082600EE9024 /* JWStopLineTypeItem.h */,
-				52004FEE1A65082600EE9024 /* JWStopLineTypeItem.m */,
-			);
-			path = StopLine;
-			sourceTree = "<group>";
-		};
 		5204537B1A37340A002A8541 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,46 +426,51 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		522A9E741A5D026E00673EB0 /* Item */ = {
+		5239C6B01AF68092006E70D7 /* BusLine */ = {
 			isa = PBXGroup;
 			children = (
-				52004FE91A65075D00EE9024 /* StopLine */,
-				522A9E8B1A5D02F100673EB0 /* BusLine */,
-			);
-			path = Item;
-			sourceTree = "<group>";
-		};
-		522A9E8B1A5D02F100673EB0 /* BusLine */ = {
-			isa = PBXGroup;
-			children = (
-				522A9E8C1A5D02F100673EB0 /* JWBusItem.h */,
-				522A9E8D1A5D02F100673EB0 /* JWBusItem.m */,
-				522A9E8E1A5D02F100673EB0 /* JWBusLineItem.h */,
-				522A9E8F1A5D02F100673EB0 /* JWBusLineItem.m */,
-				522A9E901A5D02F100673EB0 /* JWLineItem.h */,
-				522A9E911A5D02F100673EB0 /* JWLineItem.m */,
-				522A9E921A5D02F100673EB0 /* JWStopItem.h */,
-				522A9E931A5D02F100673EB0 /* JWStopItem.m */,
+				5239C6B11AF68092006E70D7 /* JWBusItem.h */,
+				5239C6B21AF68092006E70D7 /* JWBusItem.m */,
+				5239C6B31AF68092006E70D7 /* JWBusLineItem.h */,
+				5239C6B41AF68092006E70D7 /* JWBusLineItem.m */,
+				5239C6B51AF68092006E70D7 /* JWLineItem.h */,
+				5239C6B61AF68092006E70D7 /* JWLineItem.m */,
+				5239C6B71AF68092006E70D7 /* JWStopItem.h */,
+				5239C6B81AF68092006E70D7 /* JWStopItem.m */,
 			);
 			path = BusLine;
+			sourceTree = "<group>";
+		};
+		5239C6B91AF68092006E70D7 /* StopLine */ = {
+			isa = PBXGroup;
+			children = (
+				5239C6BA1AF68092006E70D7 /* JWStopLineItem.h */,
+				5239C6BB1AF68092006E70D7 /* JWStopLineItem.m */,
+				5239C6BC1AF68092006E70D7 /* JWStopLineTypeItem.h */,
+				5239C6BD1AF68092006E70D7 /* JWStopLineTypeItem.m */,
+			);
+			path = StopLine;
 			sourceTree = "<group>";
 		};
 		523DCD331AD2F5EF00862462 /* BusRider WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				523DCD531AD2F5FF00862462 /* BusRider WatchKit Extension.entitlements */,
-				523DCD361AD2F5EF00862462 /* InterfaceController.swift */,
+				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
 				523DCD381AD2F5EF00862462 /* GlanceController.swift */,
+				523DCD361AD2F5EF00862462 /* InterfaceController.swift */,
+				52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */,
+				52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */,
+				520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */,
+				5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */,
+				52C9E0811AD3809C00126937 /* JWRequest.swift */,
+				52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */,
+				52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */,
+				52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */,
 				523DCD3A1AD2F5EF00862462 /* Images.xcassets */,
 				523DCD341AD2F5EF00862462 /* Supporting Files */,
-				52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */,
-				52C9E0811AD3809C00126937 /* JWRequest.swift */,
-				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
-				520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */,
-				52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */,
-				52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */,
-				52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */,
-				52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */,
+				5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */,
+				5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */,
 			);
 			path = "BusRider WatchKit Extension";
 			sourceTree = "<group>";
@@ -549,7 +555,6 @@
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
 				525A1F751A5AE93B006CE8BA /* BusRider.entitlements */,
 				52EB7C071A3DF6E400057723 /* Controller */,
-				522A9E741A5D026E00673EB0 /* Item */,
 				520C5D741A391D9100ADAC8D /* JWColorDefine.h */,
 				52BC1CEB1A41BB3900C98CB9 /* Model */,
 				52D091F11A53092600C5A957 /* Resource */,
@@ -775,6 +780,8 @@
 		52EC7E3E1A41DDD600CE4C23 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				5239C6B01AF68092006E70D7 /* BusLine */,
+				5239C6B91AF68092006E70D7 /* StopLine */,
 				52AC0C2E1AF4CA3800F27EE1 /* SearchList */,
 				52FCD0701A70177800419271 /* JWCityItem.h */,
 				52FCD0711A70177800419271 /* JWCityItem.m */,
@@ -1118,16 +1125,25 @@
 			files = (
 				520A5B6A1AD4227100C41F9D /* AppConfiguration.swift in Sources */,
 				52C9E0821AD3809C00126937 /* JWRequest.swift in Sources */,
+				5239C6AB1AF65856006E70D7 /* JWLineInterfaceController.swift in Sources */,
+				5239C6BE1AF68092006E70D7 /* JWBusItem.m in Sources */,
 				52AC0C3D1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift in Sources */,
+				5239C6AF1AF66E25006E70D7 /* JWLineRequest.swift in Sources */,
+				5239C6C01AF68092006E70D7 /* JWLineItem.m in Sources */,
 				520A5B661AD4201D00C41F9D /* JWUserDefaultsUtil.m in Sources */,
+				5239C6C21AF68092006E70D7 /* JWStopLineItem.m in Sources */,
 				520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */,
 				52AC0C2C1AF4929300F27EE1 /* JWSearchInterfaceController.swift in Sources */,
 				523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */,
 				523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */,
+				5239C6C31AF68092006E70D7 /* JWStopLineTypeItem.m in Sources */,
 				52DC59D01AD6FFCC00F25621 /* JWCityControllerRowType.swift in Sources */,
+				5239C6C11AF68092006E70D7 /* JWStopItem.m in Sources */,
 				52AC0C381AF4CA3800F27EE1 /* JWSearchListItem.m in Sources */,
 				52AC0C3A1AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */,
 				520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */,
+				5239C6AD1AF66583006E70D7 /* JWLineRowType.swift in Sources */,
+				5239C6BF1AF68092006E70D7 /* JWBusLineItem.m in Sources */,
 				520A5B6E1AD42A2900C41F9D /* JWCityRequest.swift in Sources */,
 				52AC0C361AF4CA3800F27EE1 /* JWSearchLineItem.m in Sources */,
 				52AC0C3B1AF4CA4700F27EE1 /* JWFormatter.m in Sources */,
@@ -1141,40 +1157,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */,
+				5239C6C41AF6809B006E70D7 /* JWStopLineItem.m in Sources */,
 				5257A0661A4496AD0066A354 /* JWRequestWithAlert.m in Sources */,
 				52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */,
 				52AC0C371AF4CA3800F27EE1 /* JWSearchListItem.m in Sources */,
+				5239C6C51AF6809F006E70D7 /* JWStopLineTypeItem.m in Sources */,
 				52FCD06E1A700F5800419271 /* JWCollectItem.m in Sources */,
 				52C53EA31A523DDB0089334A /* JWLineRequest.m in Sources */,
 				528558611A642EA400898779 /* JWStopTableViewController.m in Sources */,
-				522A9E941A5D02F100673EB0 /* JWBusItem.m in Sources */,
-				522A9E971A5D02F100673EB0 /* JWStopItem.m in Sources */,
 				52EB7C0A1A3DF6E400057723 /* JWBusLineViewController.m in Sources */,
 				52AC0C351AF4CA3800F27EE1 /* JWSearchLineItem.m in Sources */,
 				52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */,
-				52004FEC1A65075D00EE9024 /* JWStopLineItem.m in Sources */,
 				5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */,
 				52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */,
 				52AC0C391AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */,
 				524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */,
 				52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */,
-				522A9E961A5D02F100673EB0 /* JWLineItem.m in Sources */,
 				523853441A408A7A004FB163 /* JWRequest.m in Sources */,
+				5239C6C61AF680A5006E70D7 /* JWBusItem.m in Sources */,
+				5239C6C91AF680AF006E70D7 /* JWStopItem.m in Sources */,
 				5257A0691A4562FC0066A354 /* JWViewUtil.m in Sources */,
 				52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */,
 				52AAFBDB1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m in Sources */,
-				522A9E951A5D02F100673EB0 /* JWBusLineItem.m in Sources */,
 				524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */,
 				52FCD0721A70177800419271 /* JWCityItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				52B8D5AE1A56E3FA00B3DD5C /* JWBusInfoItem.m in Sources */,
 				523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */,
 				52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */,
+				5239C6C71AF680A8006E70D7 /* JWBusLineItem.m in Sources */,
 				52BC1CF11A41BE8A00C98CB9 /* JWSearchRequest.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				524F572E1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m in Sources */,
+				5239C6C81AF680AB006E70D7 /* JWLineItem.m in Sources */,
 				528558641A6432C100898779 /* JWStopRequest.m in Sources */,
-				52004FEF1A65082600EE9024 /* JWStopLineTypeItem.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,
 				52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */,

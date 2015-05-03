@@ -12,3 +12,7 @@
 #import "JWSearchListItem.h"
 #import "JWSearchLineItem.h"
 #import "JWSearchStopItem.h"
+#import "JWBusItem.h"
+#import "JWBusLineItem.h"
+#import "JWLineItem.h"
+#import "JWStopItem.h"
