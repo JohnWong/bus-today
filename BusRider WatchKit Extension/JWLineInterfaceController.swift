@@ -20,6 +20,7 @@ class JWLineInterfaceController: WKInterfaceController {
     struct Storyboard {
         struct RowTypes {
             static let item = "lineRow"
+            static let arrivingItem = "arrivingRow"
         }
     }
 
@@ -33,6 +34,8 @@ class JWLineInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         if let lineId = context as? String {
             self.lineId = lineId
+        } else {
+            self.lineId = "311"
         }
         loadData()
     }
@@ -48,8 +51,12 @@ class JWLineInterfaceController: WKInterfaceController {
     }
     
     func configureRowControllerAtIndex(index: Int, text: String) {
-        let itemRowController = interfaceTable.rowControllerAtIndex(index) as! JWLineRowType
-        itemRowController.setNumber(index + 1, name: text)
+        let rowController: AnyObject? = interfaceTable.rowControllerAtIndex(index)
+        if let itemRowController = rowController as? JWLineRowType {
+            itemRowController.setNumber(index + 1, name: text)
+        } else if let let itemRowController = rowController as? JWArrivingLineRowType {
+            itemRowController.setName(text)
+        }
     }
     
     func loadData() {
@@ -67,10 +74,28 @@ class JWLineInterfaceController: WKInterfaceController {
                 self.stopLabel.setText("\(lineItem.to)")
                 self.timeLabel.setText("\(lineItem.firstTime)-\(lineItem.lastTime)")
                 var stopItems = self.busLineItem.stopItems
-                self.interfaceTable.setNumberOfRows(stopItems.count, withRowType: Storyboard.RowTypes.item)
+                var stopIds = Set<Int>()
+                for item in self.busLineItem.busItems {
+                    if let busItem = item as? JWBusItem {
+                        stopIds.insert(busItem.order)
+                    }
+                }
+                
+                var rowTypes = Array<String>(count: stopItems.count, repeatedValue: Storyboard.RowTypes.item)
                 for index in 0 ..< stopItems.count {
-                    var stopItem: JWStopItem = stopItems[index] as! JWStopItem
-                    self.configureRowControllerAtIndex(index, text: stopItem.stopName)
+                    if let stopItem = stopItems[index] as? JWStopItem {
+                        if stopIds.contains(stopItem.order) {
+                            rowTypes[index] = Storyboard.RowTypes.arrivingItem
+                        }
+                    }
+                }
+                
+                self.interfaceTable.setRowTypes(rowTypes)
+                
+                for index in 0 ..< stopItems.count {
+                    if let stopItem: JWStopItem = stopItems[index] as? JWStopItem {
+                        self.configureRowControllerAtIndex(index, text: stopItem.stopName)
+                    }
                 }
             } else {
                 self.lineNumberLabel.setText("未找到线路")
