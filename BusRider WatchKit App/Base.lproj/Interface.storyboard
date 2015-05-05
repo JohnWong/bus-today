@@ -355,7 +355,7 @@
                         <items>
                             <menuItem title="刷新" icon="repeat" id="cfZ-7Z-dBd">
                                 <connections>
-                                    <action selector="renderData" destination="4ix-0Q-vfT" id="gKR-o8-a8m"/>
+                                    <action selector="loadData" destination="4ix-0Q-vfT" id="zwm-Zp-aFD"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="发送到Glance" icon="accept" id="uTk-yo-awE">
@@ -378,7 +378,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="760" y="527"/>
+            <point key="canvasLocation" x="961" y="319"/>
         </scene>
     </scenes>
 </document>

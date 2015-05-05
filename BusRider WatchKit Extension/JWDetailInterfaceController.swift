@@ -52,7 +52,12 @@ class JWDetailInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    func loadData() {
+    @IBAction func loadData() {
+        self.lineLabel.setText("--")
+        self.stopLabel.setText("")
+        self.updateLabel.setText("--")
+        self.mainLabel.setText("--")
+        self.unitLabel.setText("")
         lineRequest.lineId = self.lineId
         lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
@@ -62,7 +67,7 @@ class JWDetailInterfaceController: WKInterfaceController {
         }
     }
     
-    @IBAction func renderData() {
+    func renderData() {
         var mainText = ""
         var unitText = ""
         var updateText = ""
