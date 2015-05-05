@@ -22,6 +22,10 @@ class JWLineInterfaceController: WKInterfaceController {
             static let item = "lineRow"
             static let arrivingItem = "arrivingRow"
         }
+        
+        struct Controllers {
+            static let detailInterface = "detailInterface"
+        }
     }
 
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
@@ -38,6 +42,8 @@ class JWLineInterfaceController: WKInterfaceController {
             self.lineId = "0571-0428-0"
         }
         loadData()
+//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "刷新", action: Selector("loadData"))
+//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Accept, title: "收藏", action: Selector("loadData"))
     }
 
     override func willActivate() {
@@ -59,11 +65,12 @@ class JWLineInterfaceController: WKInterfaceController {
         }
     }
     
-    func loadData() {
+    @IBAction func loadData() {
         self.lineNumberLabel.setText("--")
         self.startLabel.setText("--")
         self.stopLabel.setText("--")
         self.timeLabel.setText("--")
+        self.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
         self.lineRequest.lineId = lineId
         self.lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
@@ -101,6 +108,14 @@ class JWLineInterfaceController: WKInterfaceController {
                 self.lineNumberLabel.setText("未找到线路")
                 self.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
             }
+        }
+    }
+    
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        if let stopItem = self.busLineItem.stopItems[rowIndex] as? JWStopItem {
+            self.pushControllerWithName("detailInterface", context: [
+                "order": stopItem.order,
+                "lineId": self.busLineItem.lineItem.lineId])
         }
     }
 

@@ -32,7 +32,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         openInputController()
-        self.addMenuItemWithImage(UIImage(named: "Restart")!, title: "重新输入", action: Selector("openInputController"))
+        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "重新输入", action: Selector("openInputController"))
     }
 
     override func willActivate() {

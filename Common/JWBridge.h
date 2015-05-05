@@ -16,3 +16,5 @@
 #import "JWBusLineItem.h"
 #import "JWLineItem.h"
 #import "JWStopItem.h"
+#import "JWBusInfoItem.h"
+#import "JWFormatter.h"
