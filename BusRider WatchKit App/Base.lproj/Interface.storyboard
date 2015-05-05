@@ -251,39 +251,20 @@
                                             <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </items>
+                                    <edgeInsets key="margins" left="0.0" right="8" top="8" bottom="0.0"/>
                                 </group>
-                                <group width="1" alignment="left" spacing="0.0" id="IWF-EJ-VI3">
-                                    <items>
-                                        <group alignment="left" layout="vertical" spacing="0.0" id="0WB-d3-PLp">
-                                            <items>
-                                                <label alignment="left" text="蒋村公交中心站" id="kC1-ck-PS3">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                </label>
-                                                <label alignment="left" text="中泰" id="V8e-eN-9xD">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                </label>
-                                            </items>
-                                        </group>
-                                        <group alignment="right" layout="vertical" spacing="0.0" id="UHs-fN-J38">
-                                            <items>
-                                                <label alignment="right" text="05:00" id="1pW-B8-0DB">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                </label>
-                                                <label alignment="right" text="23:00" id="ttr-cw-inn">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                </label>
-                                            </items>
-                                        </group>
-                                    </items>
-                                </group>
+                                <label alignment="left" text="更新" id="s1V-GR-j7s"/>
                             </items>
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="lineLabel" destination="nRI-d8-LK9" id="Hox-pw-Nci"/>
+                        <outlet property="mainLabel" destination="8UZ-LC-TRd" id="97b-Xf-rgL"/>
+                        <outlet property="stopLabel" destination="EYP-C6-wfg" id="Wno-sh-6ms"/>
+                        <outlet property="unitLabel" destination="dn1-ql-dYo" id="EtQ-Xp-sv9"/>
+                        <outlet property="updateLabel" destination="s1V-GR-j7s" id="3PM-e7-V50"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="164" y="514"/>

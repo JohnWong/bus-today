@@ -22,7 +22,6 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var stopLabel: WKInterfaceLabel!
     @IBOutlet weak var mainLabel: WKInterfaceLabel!
     @IBOutlet weak var unitLabel: WKInterfaceLabel!
-    
     @IBOutlet weak var updateLabel: WKInterfaceLabel!
     @IBOutlet weak var fromLabel: WKInterfaceLabel!
     @IBOutlet weak var toLabel: WKInterfaceLabel!
