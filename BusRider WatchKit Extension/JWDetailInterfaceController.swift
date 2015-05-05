@@ -105,6 +105,7 @@ class JWDetailInterfaceController: WKInterfaceController {
     }
     
     @IBAction func sendToGlance() {
-        
+        var todayItem = JWCollectItem(lineId: self.lineId, lineNumber: self.busInfoItem.lineNumber, from: nil, to: nil, stopName: nil, order: self.order)
+        JWUserDefaultsUtil.setTodayBusLine(todayItem)
     }
 }

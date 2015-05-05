@@ -18,3 +18,4 @@
 #import "JWStopItem.h"
 #import "JWBusInfoItem.h"
 #import "JWFormatter.h"
+#import "JWCollectItem.h"

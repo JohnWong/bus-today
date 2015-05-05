@@ -87,46 +87,47 @@
             <objects>
                 <controller identifier="lineDetail" title="线路" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" spacing="0.0" id="NQK-0K-0Qk">
+                        <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
                                 <label alignment="left" text="311路" id="10c-wS-wAT">
-                                    <fontDescription key="font" type="system" pointSize="26"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
                                 </label>
+                                <group width="1" alignment="left" layout="vertical" id="icA-TI-DWN">
+                                    <items>
+                                        <group width="1" alignment="left" animationDuration="1" id="EQl-tM-Jbr">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="FwP-oJ-7kd">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="余杭" numberOfLines="0" id="Uyx-Wg-tW9">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="Ue2-U1-9MA">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="D8O-Nz-FJw">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="sHz-yx-gcI">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="87c-PV-d9N">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="9VU-4f-07M">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="Lud-t5-1MU">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
                             </items>
-                        </group>
-                        <group width="1" alignment="left" layout="vertical" spacing="1" id="icA-TI-DWN">
-                            <items>
-                                <group width="1" alignment="left" animationDuration="1" id="EQl-tM-Jbr">
-                                    <items>
-                                        <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="FwP-oJ-7kd">
-                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
-                                        <label alignment="left" text="余杭" numberOfLines="0" id="Uyx-Wg-tW9">
-                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </items>
-                                </group>
-                                <group width="1" alignment="left" id="Ue2-U1-9MA">
-                                    <items>
-                                        <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="D8O-Nz-FJw">
-                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
-                                        <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="sHz-yx-gcI">
-                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </items>
-                                </group>
-                                <group width="1" alignment="left" id="87c-PV-d9N">
-                                    <items>
-                                        <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="9VU-4f-07M">
-                                            <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
-                                        <label alignment="left" text="06:00-17:30" numberOfLines="0" id="Lud-t5-1MU">
-                                            <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </items>
-                                </group>
-                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="12"/>
                         </group>
                         <table alignment="left" id="Q1p-zW-j2Y">
                             <items>
@@ -292,15 +293,19 @@
             <objects>
                 <controller identifier="detailInterface" title="详情" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="311路" id="mlT-Bs-GMz">
-                            <fontDescription key="font" type="system" pointSize="26"/>
-                        </label>
-                        <group width="1" height="10" alignment="left" id="4oi-9V-yjJ"/>
-                        <label alignment="left" text="距文一西路狮山路口" numberOfLines="0" id="SLr-rU-bSD">
-                            <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <group width="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="8nf-bv-gW0">
                             <items>
+                                <group width="1" alignment="left" layout="vertical" id="Vo1-Nn-sEB">
+                                    <items>
+                                        <label alignment="left" text="311路" id="mlT-Bs-GMz">
+                                            <fontDescription key="font" type="system" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="10"/>
+                                </group>
+                                <label alignment="left" text="距文一西路狮山路口" numberOfLines="0" id="SLr-rU-bSD">
+                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
                                 <group width="1" alignment="left" id="B8h-yS-WLh">
                                     <items>
                                         <label alignment="left" text="1234" id="9LC-Y1-WCY">
@@ -318,6 +323,10 @@
                                         </label>
                                     </items>
                                 </group>
+                            </items>
+                        </group>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
+                            <items>
                                 <group width="1" height="10" alignment="left" id="9cN-E9-oy1"/>
                                 <group width="1" alignment="left" id="Ufy-BH-RYV">
                                     <items>

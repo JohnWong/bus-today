@@ -53,6 +53,7 @@
 		523DCD471AD2F5EF00862462 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
 		523DCD491AD2F5EF00862462 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; };
 		523DCD4C1AD2F5EF00862462 /* BusRider WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52466BB31AF9408F00095A8E /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
 		524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */; };
 		524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */; };
@@ -1148,6 +1149,7 @@
 				5239C6C11AF68092006E70D7 /* JWStopItem.m in Sources */,
 				52AC0C381AF4CA3800F27EE1 /* JWSearchListItem.m in Sources */,
 				52AC0C3A1AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */,
+				52466BB31AF9408F00095A8E /* JWCollectItem.m in Sources */,
 				520A5B6B1AD4245F00C41F9D /* JWCityItem.m in Sources */,
 				52C205851AF7EBE500CBF9DE /* JWArrivingLineRowType.swift in Sources */,
 				5239C6AD1AF66583006E70D7 /* JWLineRowType.swift in Sources */,
