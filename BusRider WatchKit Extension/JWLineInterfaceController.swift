@@ -119,4 +119,8 @@ class JWLineInterfaceController: WKInterfaceController {
         }
     }
 
+    @IBAction func reverseDirection() {
+        self.lineId = self.busLineItem.lineItem.otherLineId
+        self.loadData()
+    }
 }

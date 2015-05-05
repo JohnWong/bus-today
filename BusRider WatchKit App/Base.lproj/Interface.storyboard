@@ -131,7 +131,7 @@
                         <table alignment="left" id="Q1p-zW-j2Y">
                             <items>
                                 <tableRow identifier="lineRow" id="OFW-3b-nXY" customClass="JWLineRowType" customModule="BusRider_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="rVp-RG-kh7">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="rVp-RG-kh7">
                                         <items>
                                             <group width="1" height="2" alignment="left" id="W4k-FH-0kB"/>
                                             <group width="1" alignment="left" id="z2s-9i-s9M">
@@ -183,6 +183,11 @@
                             <menuItem title="刷新" icon="repeat" id="Biv-p0-Ke7">
                                 <connections>
                                     <action selector="loadData" destination="j7a-Ob-4ZY" id="cKU-Sj-pYL"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="反向" image="Exchange" id="St7-CH-zj2">
+                                <connections>
+                                    <action selector="reverseDirection" destination="j7a-Ob-4ZY" id="pY7-py-F4h"/>
                                 </connections>
                             </menuItem>
                         </items>
