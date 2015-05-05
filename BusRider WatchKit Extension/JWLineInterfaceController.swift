@@ -35,7 +35,7 @@ class JWLineInterfaceController: WKInterfaceController {
         if let lineId = context as? String {
             self.lineId = lineId
         } else {
-            self.lineId = "311"
+            self.lineId = "0571-0428-0"
         }
         loadData()
     }

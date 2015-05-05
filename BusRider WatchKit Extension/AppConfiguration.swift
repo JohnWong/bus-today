@@ -10,8 +10,8 @@ import Foundation
 
 class AppConfiguration {
     class var host: String {
-//        return "api.chelaile.net.cn:7000"
-        return "localhost:7000"
+        return "api.chelaile.net.cn:7000"
+//        return "localhost:7000"
     }
     
     static let Debug = NSBundle.mainBundle().objectForInfoDictionaryKey("Debug") as? String == "YES"
