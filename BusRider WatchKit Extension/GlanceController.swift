@@ -24,13 +24,6 @@ class GlanceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        self.showLoading()
-        var todayLine = JWUserDefaultsUtil.todayBusLine()
-        if let todayLine = todayLine {
-            self.loadData(todayLine)
-        } else {
-            self.updateLabel.setText("请先到应用中选中线路")
-        }
     }
     
     func showLoading() {
@@ -41,13 +34,19 @@ class GlanceController: WKInterfaceController {
         self.unitLabel.setText("")
     }
     
-    func loadData(todayLine: JWCollectItem) {
-        lineRequest.lineId = todayLine.lineId
-        lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
-            if let result = result {
-                self.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [NSObject : AnyObject])
-                self.renderData()
+    func loadData() {
+        self.showLoading()
+        var todayLine = JWUserDefaultsUtil.todayBusLine()
+        if let todayLine = todayLine {
+            lineRequest.lineId = todayLine.lineId
+            lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
+                if let result = result {
+                    self.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [NSObject : AnyObject])
+                    self.renderData()
+                }
             }
+        } else {
+            self.updateLabel.setText("请先到应用中选中线路")
         }
     }
     
@@ -91,6 +90,7 @@ class GlanceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        loadData();
     }
 
     override func didDeactivate() {
