@@ -37,15 +37,18 @@ class JWCityInterfaceController: WKInterfaceController {
         }
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
-        cityRequest.loadWithCompletion { (result, error) -> Void in
+        cityRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
-                if let cities = result["cities"]! as? NSArray {
+                if let citiesDict = result["cities"]! as? NSArray {
                     self.cities.removeAll(keepCapacity: true)
-                    for dict in cities {
-                        self.cities.append(JWCityItem(dictionary: dict as! [NSObject : AnyObject]))
+                    for dict in citiesDict {
+                        var cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
+                        if cityItem.cityVersion == 0 {
+                            self.cities.append(cityItem)
+                        }
                     }
-                    self.interfaceTable.setNumberOfRows(cities.count, withRowType: Storyboard.RowTypes.item)
-                    for index in 0..<cities.count {
+                    self.interfaceTable.setNumberOfRows(self.cities.count, withRowType: Storyboard.RowTypes.item)
+                    for index in 0 ..< self.cities.count {
                         self.configureRowControllerAtIndex(index)
                     }
                 }
