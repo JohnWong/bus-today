@@ -26,7 +26,7 @@ class JWRequest: NSObject {
     internal func urlPath() -> String {
         var paramString = String()
         for (key, value) in self.params() {
-            paramString = paramString.stringByAppendingFormat("&\(key)=\(value)")
+            paramString = paramString.stringByAppendingString("&\(key)=\(value)")
         }
         var cityId = "";
         var cityItem = JWUserDefaultsUtil.cityItem()

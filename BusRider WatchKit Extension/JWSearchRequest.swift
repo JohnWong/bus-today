@@ -10,11 +10,12 @@ import UIKit
 
 class JWSearchRequest: JWRequest {
    
-    var keyWord = ""
+    var keyword = ""
     
     override func params() -> Dictionary<String, AnyObject> {
+        var encodedKeyword = self.keyword.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         return [
-            "LsName": self.keyWord.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+            "LsName": encodedKeyword
         ]
     }
     

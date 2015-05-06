@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -42,7 +42,7 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="I3T-gy-PZU">
+                        <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="I3T-gy-PZU">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="EgN-vM-bhc">
                                     <items>
@@ -93,7 +93,7 @@
                                             </connections>
                                         </button>
                                     </items>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="16" bottom="0.0"/>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="2"/>
                                 </group>
                             </items>
                         </group>
@@ -252,6 +252,21 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <group width="1" height="60" alignment="left" verticalAlignment="bottom" id="YIE-Dl-je9">
+                            <items>
+                                <button width="0.5" alignment="left" verticalAlignment="bottom" title="刷新" id="qUZ-3S-DdP">
+                                    <connections>
+                                        <action selector="loadData" destination="j7a-Ob-4ZY" id="YXf-hi-lJu"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="right" verticalAlignment="bottom" title="换向" id="9EA-aS-83v">
+                                    <connections>
+                                        <action selector="reverseDirection" destination="j7a-Ob-4ZY" id="vdS-VE-Mv4"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="2"/>
+                        </group>
                     </items>
                     <menu key="menu" id="c2D-FW-lTG">
                         <items>
@@ -270,6 +285,7 @@
                     <connections>
                         <outlet property="interfaceTable" destination="Q1p-zW-j2Y" id="t0E-Fx-7Bb"/>
                         <outlet property="lineNumberLabel" destination="10c-wS-wAT" id="2zD-ke-qH2"/>
+                        <outlet property="loadData" destination="qUZ-3S-DdP" id="gQ0-IZ-KJc"/>
                         <outlet property="startLabel" destination="Uyx-Wg-tW9" id="HDY-yu-kFs"/>
                         <outlet property="stopLabel" destination="sHz-yx-gcI" id="zbK-Wo-2kA"/>
                         <outlet property="timeLabel" destination="Lud-t5-1MU" id="CTP-HS-0tP"/>
@@ -297,6 +313,16 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <group width="1" height="60" alignment="left" verticalAlignment="bottom" layout="vertical" id="VhL-ff-TAw">
+                            <items>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="重新输入" id="inW-tX-5oI">
+                                    <connections>
+                                        <action selector="openInputController" destination="QeM-wk-tak" id="F1F-Xk-Ip8"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="2"/>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="interfaceTable" destination="Onz-hq-k5C" id="b08-fa-Db2"/>
@@ -380,38 +406,58 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
+                        <group width="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
                             <items>
-                                <group width="1" alignment="left" id="Ufy-BH-RYV">
+                                <group width="1" alignment="left" layout="vertical" id="hsE-Mr-LaU">
                                     <items>
-                                        <group alignment="left" layout="vertical" id="FVt-Ma-zux">
+                                        <group width="1" alignment="left" animationDuration="1" id="gvC-1Q-cAh">
                                             <items>
-                                                <label alignment="left" text="蒋村公交中心站" id="lzi-9U-g1c">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                </label>
-                                                <label alignment="left" text="中泰" id="4OA-v5-iRH">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="6kJ-eE-qGa">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="余杭" numberOfLines="0" id="EQ2-70-ARM">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
                                         </group>
-                                        <group alignment="right" layout="vertical" id="S2W-Kt-G1N">
+                                        <group width="1" alignment="left" id="FiK-aH-OJI">
                                             <items>
-                                                <label alignment="right" text="05:00" id="qwr-yV-dcg">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="dm3-sS-qot">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="r2v-vg-VQt">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label alignment="right" text="23:00" id="daI-Jb-u0q">
-                                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="iet-9V-TEf">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="qqz-ww-XKx">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="5yO-BX-9o8">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                     </items>
-                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="10"/>
                                 </group>
                             </items>
+                        </group>
+                        <group width="1" height="60" alignment="left" verticalAlignment="bottom" id="vOP-Bn-V8m">
+                            <items>
+                                <button width="0.5" alignment="left" verticalAlignment="bottom" title="刷新" id="7K6-ji-WAU">
+                                    <connections>
+                                        <action selector="loadData" destination="4ix-0Q-vfT" id="ygi-aV-ZIt"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" verticalAlignment="bottom" title="发到首页" id="M1M-Qb-XXk">
+                                    <connections>
+                                        <action selector="sendToGlance" destination="4ix-0Q-vfT" id="Vyt-kT-hfE"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="2"/>
                         </group>
                     </items>
                     <menu key="menu" id="hew-du-8Xd">
@@ -421,7 +467,7 @@
                                     <action selector="loadData" destination="4ix-0Q-vfT" id="zwm-Zp-aFD"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="发送到应用首页" icon="accept" id="uTk-yo-awE">
+                            <menuItem title="发到首页" icon="accept" id="uTk-yo-awE">
                                 <connections>
                                     <action selector="sendToGlance" destination="4ix-0Q-vfT" id="JZt-s1-Peh"/>
                                 </connections>
@@ -429,13 +475,12 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="firstLabel" destination="qwr-yV-dcg" id="3Bi-H7-Fxs"/>
-                        <outlet property="fromLabel" destination="lzi-9U-g1c" id="ZC6-iT-hRh"/>
-                        <outlet property="lastLabel" destination="daI-Jb-u0q" id="IdV-2i-naf"/>
+                        <outlet property="fromLabel" destination="EQ2-70-ARM" id="7dP-dl-T98"/>
                         <outlet property="lineLabel" destination="mlT-Bs-GMz" id="E6c-sY-G5z"/>
                         <outlet property="mainLabel" destination="9LC-Y1-WCY" id="clr-wJ-qLB"/>
                         <outlet property="stopLabel" destination="SLr-rU-bSD" id="mmt-Id-Aad"/>
-                        <outlet property="toLabel" destination="4OA-v5-iRH" id="jYV-UK-vVc"/>
+                        <outlet property="timeLabel" destination="5yO-BX-9o8" id="p5u-7U-KxT"/>
+                        <outlet property="toLabel" destination="r2v-vg-VQt" id="YaG-kM-1Vf"/>
                         <outlet property="unitLabel" destination="m3r-VS-k5q" id="c92-YW-Uae"/>
                         <outlet property="updateLabel" destination="UB1-n5-PSp" id="hyg-Ch-8nO"/>
                     </connections>

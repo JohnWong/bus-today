@@ -134,8 +134,8 @@ class InterfaceController: WKInterfaceController {
         self.mainLabel.setText(mainText)
         self.unitLabel.setText(unitText)
         
-        self.fromLabel.setText("\(self.busInfoItem.from)")
-        self.toLabel.setText("\(self.busInfoItem.to)")
+        self.fromLabel.setText(self.busInfoItem.from)
+        self.toLabel.setText(self.busInfoItem.to)
         self.timeLabel.setText("\(self.busInfoItem.firstTime)-\(self.busInfoItem.lastTime)")
     }
 }

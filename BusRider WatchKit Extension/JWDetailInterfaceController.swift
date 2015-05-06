@@ -25,8 +25,7 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var updateLabel: WKInterfaceLabel!
     @IBOutlet weak var fromLabel: WKInterfaceLabel!
     @IBOutlet weak var toLabel: WKInterfaceLabel!
-    @IBOutlet weak var firstLabel: WKInterfaceLabel!
-    @IBOutlet weak var lastLabel: WKInterfaceLabel!
+    @IBOutlet weak var timeLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -35,10 +34,6 @@ class JWDetailInterfaceController: WKInterfaceController {
             order = dict["order"] as! Int
             loadData()
         }
-        
-//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "刷新", action: Selector("loadData"))
-//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Accept, title: "收藏", action: Selector("collect"))
-//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Add, title: "发送到Glance", action: Selector("sendToGlance"))
     }
 
     override func willActivate() {
@@ -57,6 +52,9 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.updateLabel.setText("--")
         self.mainLabel.setText("--")
         self.unitLabel.setText("")
+        self.fromLabel.setText("--")
+        self.toLabel.setText("--")
+        self.timeLabel.setText("--")
         lineRequest.lineId = self.lineId
         lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
@@ -101,6 +99,9 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.updateLabel.setText(updateText)
         self.mainLabel.setText(mainText)
         self.unitLabel.setText(unitText)
+        self.fromLabel.setText(self.busInfoItem.from)
+        self.toLabel.setText(self.busInfoItem.to)
+        self.timeLabel.setText("\(self.busInfoItem.firstTime)-\(self.busInfoItem.lastTime)")
     }
     
     @IBAction func sendToGlance() {

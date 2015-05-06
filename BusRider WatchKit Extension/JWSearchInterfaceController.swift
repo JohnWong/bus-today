@@ -50,7 +50,7 @@ class JWSearchInterfaceController: WKInterfaceController {
         let itemRowController = interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
         itemRowController.setText("加载中")
         
-        searchRequest.keyWord = keyword
+        searchRequest.keyword = keyword
         searchRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
                 self.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
@@ -81,7 +81,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     
     static var i = 1
     
-    func openInputController() {
+    @IBAction func openInputController() {
 
         var initialPhrases = Array<String>()
         let allCollectItems = JWUserDefaultsUtil.allCollectItems()
@@ -97,7 +97,8 @@ class JWSearchInterfaceController: WKInterfaceController {
             [unowned self](results) -> Void in
             if let results = results {
                 if results.count > 0 {
-                    let aResult = results[0] as! String;
+                    var aResult = results[0] as! String;
+                    aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions.allZeros, range: nil)
                     self.loadData(aResult)
                 }
             } else {
