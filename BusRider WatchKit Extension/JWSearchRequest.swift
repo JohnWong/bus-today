@@ -14,7 +14,7 @@ class JWSearchRequest: JWRequest {
     
     override func params() -> Dictionary<String, AnyObject> {
         return [
-            "LsName": self.keyWord
+            "LsName": self.keyWord.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         ]
     }
     

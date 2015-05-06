@@ -30,14 +30,6 @@
     return self;
 }
 
-+ (instancetype)standardUserDefaults {
-    static JWUserDefaultsUtil *standardUserDefaults;
-    if (!standardUserDefaults) {
-        standardUserDefaults = [[self alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
-    }
-    return standardUserDefaults;
-}
-
 + (instancetype)groupUserDefaults {
     static JWUserDefaultsUtil *groupUserDefaults;
     if (!groupUserDefaults) {
@@ -89,7 +81,7 @@
 + (void)addCollectItem:(JWCollectItem *)item {
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
-        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSMutableArray *lineList = [[userDefaults itemForKey:key] mutableCopy];
         if (lineList == nil) {
             lineList = [[NSMutableArray alloc] initWithObjects:item, nil];
@@ -113,7 +105,7 @@
     
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
-        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSArray *lineList = [userDefaults itemForKey:key];
         if (lineList == nil) {
             return;
@@ -134,7 +126,7 @@
 + (JWCollectItem *)collectItemForLineId:(NSString *)lineId {
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
-        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSArray *lineList = [userDefaults itemForKey:key];
         if (lineList == nil) {
             return nil;
@@ -154,7 +146,7 @@
 + (NSArray *)allCollectItems {
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
-        JWUserDefaultsUtil *userDefaults = [self standardUserDefaults];
+        JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         return [userDefaults itemForKey:key];
     } else {
         return nil;
@@ -194,13 +186,13 @@
 }
 
 + (void)setPushSearchController: (BOOL)value {
-    [((JWUserDefaultsUtil *)[self standardUserDefaults]).userDefaults setBool:value forKey:JWKeyPushSearchController];
+    [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults setBool:value forKey:JWKeyPushSearchController];
 }
 
 + (BOOL)pushSearchController {
     NSString *key = JWKeyPushSearchController;
     if (key) {
-        return [((JWUserDefaultsUtil *)[self standardUserDefaults]).userDefaults boolForKey:key];
+        return [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults boolForKey:key];
     } else {
         return NO;
     }

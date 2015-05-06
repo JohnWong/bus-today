@@ -82,18 +82,17 @@ class JWSearchInterfaceController: WKInterfaceController {
     static var i = 1
     
     func openInputController() {
-        if UIDevice.currentDevice().model == "iPhone Simulator" {
-            JWSearchInterfaceController.i += 1
-            loadData("\(JWSearchInterfaceController.i)")
-            return
+
+        var initialPhrases = Array<String>()
+        let allCollectItems = JWUserDefaultsUtil.allCollectItems()
+        if let allCollectItems = allCollectItems {
+            for item in JWUserDefaultsUtil.allCollectItems() {
+                if let collectItem = item as? JWCollectItem {
+                    initialPhrases.append(collectItem.lineNumber)
+                }
+            }
         }
         
-        // TODO 收藏的路线
-        let initialPhrases = [
-            "311",
-            "211",
-            "59"
-        ]
         self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
             [unowned self](results) -> Void in
             if let results = results {
