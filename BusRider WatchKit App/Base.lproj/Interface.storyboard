@@ -101,7 +101,7 @@
                     <connections>
                         <outlet property="cityButton" destination="UVC-bN-jUo" id="DqK-Dq-U9r"/>
                         <outlet property="fromLabel" destination="oaC-ic-pVK" id="1vI-El-Jmb"/>
-                        <outlet property="infoGroup" destination="Id9-pQ-apN" id="b0X-RZ-g9S"/>
+                        <outlet property="infoGroup" destination="EgN-vM-bhc" id="chS-vO-tiG"/>
                         <outlet property="lineLabel" destination="cdU-MN-Bce" id="525-NV-VqW"/>
                         <outlet property="mainLabel" destination="ZxJ-hx-Zgz" id="qky-xn-xUN"/>
                         <outlet property="stopLabel" destination="Bhw-ts-HH5" id="yGf-TU-bwG"/>
@@ -421,7 +421,7 @@
                                     <action selector="loadData" destination="4ix-0Q-vfT" id="zwm-Zp-aFD"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="发送到Glance" icon="accept" id="uTk-yo-awE">
+                            <menuItem title="发送到应用首页" icon="accept" id="uTk-yo-awE">
                                 <connections>
                                     <action selector="sendToGlance" destination="4ix-0Q-vfT" id="JZt-s1-Peh"/>
                                 </connections>
