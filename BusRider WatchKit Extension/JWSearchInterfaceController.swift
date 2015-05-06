@@ -82,7 +82,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     static var i = 1
     
     func openInputController() {
-        if AppConfiguration.Debug {
+        if UIDevice.currentDevice().model == "iPhone Simulator" {
             JWSearchInterfaceController.i += 1
             loadData("\(JWSearchInterfaceController.i)")
             return

@@ -452,24 +452,24 @@
 		523DCD331AD2F5EF00862462 /* BusRider WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				523DCD531AD2F5FF00862462 /* BusRider WatchKit Extension.entitlements */,
 				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
+				523DCD531AD2F5FF00862462 /* BusRider WatchKit Extension.entitlements */,
 				523DCD381AD2F5EF00862462 /* GlanceController.swift */,
+				523DCD3A1AD2F5EF00862462 /* Images.xcassets */,
 				523DCD361AD2F5EF00862462 /* InterfaceController.swift */,
+				52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */,
 				52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */,
 				52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */,
 				520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */,
+				52D700051AF91B74008A3C8C /* JWDetailInterfaceController.swift */,
 				5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */,
+				5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */,
+				5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */,
 				52C9E0811AD3809C00126937 /* JWRequest.swift */,
 				52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */,
 				52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */,
 				52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */,
-				523DCD3A1AD2F5EF00862462 /* Images.xcassets */,
 				523DCD341AD2F5EF00862462 /* Supporting Files */,
-				5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */,
-				5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */,
-				52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */,
-				52D700051AF91B74008A3C8C /* JWDetailInterfaceController.swift */,
 			);
 			path = "BusRider WatchKit Extension";
 			sourceTree = "<group>";

@@ -10,36 +10,110 @@
             <objects>
                 <controller title="今日公交" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" id="7Ze-Fy-K16">
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
-                                <button width="0.5" alignment="left" title="选择城市" id="UVC-bN-jUo">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                    <connections>
-                                        <segue destination="dh2-pl-C2k" kind="modal" id="PZ9-wd-K2g"/>
-                                    </connections>
-                                </button>
-                                <button width="0.5" alignment="left" title="搜索路线" id="4hd-eE-QKR">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                    <connections>
-                                        <action selector="search" destination="AgC-eL-Hgc" id="isC-BM-Wxp"/>
-                                    </connections>
-                                </button>
+                                <group width="1" alignment="left" layout="vertical" id="oxp-5G-tkH">
+                                    <items>
+                                        <label alignment="left" text="311路" id="cdU-MN-Bce">
+                                            <fontDescription key="font" type="system" pointSize="24"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
+                                <label alignment="left" text="距文一西路狮山路口" numberOfLines="0" id="Bhw-ts-HH5">
+                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <group width="1" alignment="left" id="IZS-sB-aHk">
+                                    <items>
+                                        <label alignment="left" text="1234" id="ZxJ-hx-Zgz">
+                                            <fontDescription key="font" type="system" pointSize="56"/>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="米" id="zlC-B5-cBc">
+                                            <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="EYI-uh-y6P">
+                                    <items>
+                                        <label width="1" alignment="left" text="更新" numberOfLines="0" id="6hq-o5-7Y1">
+                                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <table alignment="left" id="54j-Y2-eQ6">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="I3T-gy-PZU">
                             <items>
-                                <tableRow id="OMQ-Ny-dMd">
-                                    <group key="rootItem" width="1" alignment="left" id="43H-uW-lt4"/>
-                                </tableRow>
+                                <group width="1" alignment="left" layout="vertical" id="EgN-vM-bhc">
+                                    <items>
+                                        <group width="1" alignment="left" animationDuration="1" id="Id9-pQ-apN">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="5g8-FC-Zpl">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="余杭" numberOfLines="0" id="oaC-ic-pVK">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="c9E-ch-KTP">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="37a-Bb-Fqb">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="I72-Of-2Xh">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="8b1-hA-evE">
+                                            <items>
+                                                <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="n2A-c7-87c">
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="5Os-qh-XNf">
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="bottom" id="7Ze-Fy-K16">
+                                    <items>
+                                        <button width="0.5" alignment="left" title="选择城市" id="UVC-bN-jUo">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <segue destination="dh2-pl-C2k" kind="modal" id="PZ9-wd-K2g"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="left" title="查找路线" id="4hd-eE-QKR">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <action selector="search" destination="AgC-eL-Hgc" id="isC-BM-Wxp"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="16" bottom="0.0"/>
+                                </group>
                             </items>
-                        </table>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="cityButton" destination="UVC-bN-jUo" id="DqK-Dq-U9r"/>
+                        <outlet property="fromLabel" destination="oaC-ic-pVK" id="1vI-El-Jmb"/>
+                        <outlet property="infoGroup" destination="Id9-pQ-apN" id="b0X-RZ-g9S"/>
+                        <outlet property="lineLabel" destination="cdU-MN-Bce" id="525-NV-VqW"/>
+                        <outlet property="mainLabel" destination="ZxJ-hx-Zgz" id="qky-xn-xUN"/>
+                        <outlet property="stopLabel" destination="Bhw-ts-HH5" id="yGf-TU-bwG"/>
+                        <outlet property="timeLabel" destination="5Os-qh-XNf" id="bET-nq-1Bp"/>
+                        <outlet property="toLabel" destination="I72-Of-2Xh" id="R0C-iF-sy3"/>
+                        <outlet property="topGroup" destination="FAh-7t-PZI" id="992-sN-Vvv"/>
+                        <outlet property="unitLabel" destination="zlC-B5-cBc" id="cWv-zU-hjf"/>
+                        <outlet property="updateLabel" destination="6hq-o5-7Y1" id="G1T-W0-cVj"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="217"/>
+            <point key="canvasLocation" x="118" y="137.75"/>
         </scene>
         <!--selectCity-->
         <scene sceneID="9uj-LL-2oS">
@@ -90,7 +164,7 @@
                         <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
                                 <label alignment="left" text="311路" id="10c-wS-wAT">
-                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <fontDescription key="font" type="system" pointSize="36"/>
                                 </label>
                                 <group width="1" alignment="left" layout="vertical" id="icA-TI-DWN">
                                     <items>
@@ -290,7 +364,7 @@
                                 <group width="1" alignment="left" id="B8h-yS-WLh">
                                     <items>
                                         <label alignment="left" text="1234" id="9LC-Y1-WCY">
-                                            <fontDescription key="font" type="system" pointSize="48"/>
+                                            <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                         <label alignment="left" verticalAlignment="bottom" text="米" id="m3r-VS-k5q">
                                             <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,7 +382,6 @@
                         </group>
                         <group width="1" height="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
                             <items>
-                                <group width="1" height="10" alignment="left" id="9cN-E9-oy1"/>
                                 <group width="1" alignment="left" id="Ufy-BH-RYV">
                                     <items>
                                         <group alignment="left" layout="vertical" id="FVt-Ma-zux">
@@ -336,8 +409,8 @@
                                             </items>
                                         </group>
                                     </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="10"/>
                                 </group>
-                                <group width="1" height="10" alignment="left" id="MmP-YW-Qkb"/>
                             </items>
                         </group>
                     </items>
