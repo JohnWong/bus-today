@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *cityId;
 @property (nonatomic, strong) NSString *cityName;
+@property (nonatomic, assign) NSInteger cityVersion;
 
 + (NSArray *)arrayFromDictionary:(NSDictionary *)dict;
 
