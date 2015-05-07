@@ -220,7 +220,7 @@
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
-                                        <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
+                                        <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
                                     </group>
                                     <connections>
                                         <outlet property="nameLabel" destination="vAZ-hV-DBw" id="tTK-VP-Zfa"/>
@@ -235,7 +235,7 @@
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
-                                        <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
+                                        <edgeInsets key="margins" left="8" right="8" top="8" bottom="8"/>
                                     </group>
                                     <connections>
                                         <outlet property="nameLabel" destination="nei-PR-NFk" id="HmH-qW-Y3R"/>

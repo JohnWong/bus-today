@@ -40,7 +40,9 @@
 }
 
 + (void)setHUDColor {
-    [SVProgressHUD setBackgroundColor:HEXCOLORA(0xeeeeee, 0.95)];
+    [SVProgressHUD setBackgroundColor:HEXCOLORA(0x0, 0.65)];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    
 }
 
 + (void)showErrorWithMessage:(NSString *)message {

@@ -337,22 +337,24 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf.cityButtonItem setOn:NO];
         } else {
             NSArray *array = [JWCityItem arrayFromDictionary:dict];
-            AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择城市"];
-            actionSheet.cancelButtonTitle = @"取消";
-            actionSheet.buttonHeight = 44;
-            actionSheet.animationDuration = 0.4;
-            actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
-                [weakSelf.cityButtonItem setOn:NO];
-            };
-            for (JWCityItem *cityItem in array) {
-                [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            if (array.count > 0) {
+                AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择城市"];
+                actionSheet.cancelButtonTitle = @"取消";
+                actionSheet.buttonHeight = 44;
+                actionSheet.animationDuration = 0.4;
+                actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
                     [weakSelf.cityButtonItem setOn:NO];
-                    [weakSelf.cityButtonItem setTitle:cityItem.cityName];
-                    [JWUserDefaultsUtil setCityItem:cityItem];
-                    [weakSelf loadData];
-                }];
+                };
+                for (JWCityItem *cityItem in array) {
+                    [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+                        [weakSelf.cityButtonItem setOn:NO];
+                        [weakSelf.cityButtonItem setTitle:cityItem.cityName];
+                        [JWUserDefaultsUtil setCityItem:cityItem];
+                        [weakSelf loadData];
+                    }];
+                }
+                [actionSheet show];
             }
-            [actionSheet show];
         }
     }];
 }

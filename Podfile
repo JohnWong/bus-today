@@ -19,15 +19,14 @@ end
 target :'BusRider WatchKit Extension' do
     platform :ios, '8.0'
     pod 'STHTTPRequest'
-    pod 'SVProgressHUD'
 end
 
 inhibit_all_warnings!
 
-post_install do |installer_representation|
-    installer_representation.project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'SV_APP_EXTENSIONS=1']
-        end
-    end
-end
+#post_install do |installer_representation|
+#    installer_representation.project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'SV_APP_EXTENSIONS=1']
+#        end
+#    end
+#end
