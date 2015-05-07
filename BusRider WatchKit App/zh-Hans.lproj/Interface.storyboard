@@ -8,7 +8,7 @@
         <!--今日公交-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="今日公交" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_App" customModuleProvider="target">
+                <controller title="今日公交" id="AgC-eL-Hgc">
                     <items>
                         <group width="1" alignment="left" hidden="YES" id="bCi-nU-xFF">
                             <items>
@@ -30,7 +30,7 @@
                                 </label>
                                 <group width="1" alignment="left" id="IZS-sB-aHk">
                                     <items>
-                                        <label alignment="left" text="1234" id="ZxJ-hx-Zgz">
+                                        <label alignment="left" text="184" id="ZxJ-hx-Zgz">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                         <label alignment="left" verticalAlignment="bottom" text="米" id="zlC-B5-cBc">
@@ -40,7 +40,7 @@
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" id="EYI-uh-y6P">
                                     <items>
-                                        <label width="1" alignment="left" text="更新" numberOfLines="0" id="6hq-o5-7Y1">
+                                        <label width="1" alignment="left" text="3秒前更新" numberOfLines="0" id="6hq-o5-7Y1">
                                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                         </label>
                                     </items>
@@ -66,7 +66,7 @@
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="37a-Bb-Fqb">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="I72-Of-2Xh">
+                                                <label alignment="left" text="蒋村公交中心站" numberOfLines="0" id="I72-Of-2Xh">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -325,7 +325,7 @@
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" topTemplateType="mediumBody1" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="BusRider_WatchKit_Extension">
+                <glanceController spacing="0.0" topTemplateType="mediumBody1" id="Sv0-Ai-Zie">
                     <items>
                         <label alignment="left" text="311路" id="nRI-d8-LK9"/>
                         <label alignment="left" text="距文一西路狮山路口" id="EYP-C6-wfg">
@@ -335,7 +335,7 @@
                             <items>
                                 <group width="1" alignment="left" id="lNu-Zj-Iiq">
                                     <items>
-                                        <label alignment="left" text="1234" id="8UZ-LC-TRd">
+                                        <label alignment="left" text="86" id="8UZ-LC-TRd">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                         <label alignment="left" verticalAlignment="bottom" text="米" id="dn1-ql-dYo">
@@ -344,7 +344,7 @@
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="8" top="8" bottom="0.0"/>
                                 </group>
-                                <label alignment="left" text="更新" numberOfLines="0" id="s1V-GR-j7s"/>
+                                <label alignment="left" text="2分钟前" numberOfLines="0" id="s1V-GR-j7s"/>
                             </items>
                         </group>
                     </items>
