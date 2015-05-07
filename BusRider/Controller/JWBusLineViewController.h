@@ -15,15 +15,6 @@
 @interface JWBusLineViewController : UIViewController
 
 /**
- *  传过来的线路信息
- */
-@property (nonatomic, strong) JWBusLineItem *busLineItem;
-/**
- *  传过来的到站信息
- */
-@property (nonatomic, strong) JWBusInfoItem *busInfoItem;
-
-/**
  *  传过来的线路id
  */
 @property (nonatomic, strong) NSString *lineId;

@@ -50,6 +50,12 @@
 @property (nonatomic, strong) JWSearchStopItem *selectedStopItem;
 
 @property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
+/**
+ *  换向时使用
+ */
+@property (nonatomic, strong) NSString *selectedStopId;
+@property (nonatomic, strong) JWBusLineItem *busLineItem;
+@property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 
 @end
 
@@ -66,26 +72,28 @@
     
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
     if (collectItem && collectItem.order && collectItem.stopName) {
-        JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName];
+        JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName stopId:nil];
         self.selectedStopOrder = stopItem.order;
+    } else {
+        JWCollectItem *today = [JWUserDefaultsUtil todayBusLine];
+        if ([self.lineId isEqualToString:today.lineId]) {
+            self.selectedStopOrder = [JWUserDefaultsUtil todayBusLine].order;
+        }
     }
     self.navigationItem.titleView = self.stopButtonItem;
-    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
-                                                                            target:self
-                                                                     refreshAction:@selector(loadRequest)
-                                                                             plist:@"bus"
-                                                                             color:HEXCOLOR(0x007AFF)
-                                                                         lineWidth:1
-                                                                        dropHeight:60
-                                                                             scale:1
-                                                              horizontalRandomness:150
-                                                           reverseLoadingAnimation:YES
-                                                           internalAnimationFactor:1];
-    if (self.busLineItem) {
-        [self updateViews];
-    } else {
-        [self loadRequest];
-    }
+    self.storeHouseRefreshControl =
+    [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
+                                            target:self
+                                     refreshAction:@selector(loadRequest)
+                                             plist:@"bus"
+                                             color:HEXCOLOR(0x007AFF)
+                                         lineWidth:1
+                                        dropHeight:60
+                                             scale:1
+                              horizontalRandomness:150
+                           reverseLoadingAnimation:YES
+                           internalAnimationFactor:1];
+    [self loadRequest];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -134,19 +142,28 @@
     if (todayItem && [self.lineId isEqualToString:todayItem.lineId]) {
         todayStopOrder = todayItem.order;
     }
-    NSInteger focusStopOrder = self.selectedStopOrder ? : todayStopOrder;
+    self.selectedStopOrder = self.selectedStopOrder ? : todayStopOrder;
     for (int i = 0; i < count; i ++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
-        BOOL isSelected = self.selectedStopOrder && stopItem.order == self.selectedStopOrder;
+        BOOL isSelected = NO;
+        if (self.selectedStopOrder) {
+            isSelected = stopItem.order == self.selectedStopOrder;
+            if (isSelected) {
+                self.selectedStopId = stopItem.stopId;
+            }
+        } else if (self.selectedStopId) {
+            isSelected = [self.selectedStopId isEqualToString:stopItem.stopId];
+            if (isSelected) {
+                self.selectedStopOrder = stopItem.order;
+            }
+        }
         [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopOrder && stopItem.order == todayStopOrder selected:isSelected];
         
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
         if (isSelected) {
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
-        }
-        if (focusStopOrder && focusStopOrder == stopItem.order) {
             NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
             if (scrollTo < - self.scrollView.contentInset.top) {
                 scrollTo = - self.scrollView.contentInset.top;
@@ -321,13 +338,13 @@
         [weakSelf.navigationController setSGProgressPercentage:100];
         [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
         if (error) {
-            
+            // TODO johnwong
         } else {
             weakSelf.busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
+            [weakSelf updateViews];
             if (weakSelf.selectedStopOrder) {
                 weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:weakSelf.selectedStopOrder busInfo:dict];
             }
-            [weakSelf updateViews];
         }
     } progress:^(CGFloat percent) {
         [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
@@ -336,6 +353,7 @@
 
 - (IBAction)revertDirection:(id)sender {
     self.lineId = self.busLineItem.lineItem.otherLineId;
+    self.selectedStopOrder = 0;
     [self loadRequest];
 }
 

@@ -123,8 +123,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     if ([segue.identifier isEqualToString:JWSeguePushLineWithData]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
-            busLineViewController.busLineItem = self.busLineItem;
-            busLineViewController.busInfoItem = self.busInfoItem;
+            busLineViewController.lineId = self.busLineItem.lineItem.lineId;
         }
     } else if ([segue.identifier isEqualToString:JWSeguePushLineWithId]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
@@ -393,7 +392,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             
             JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:busLineItem.lineItem.lineId];
             if (collectItem && collectItem.order && collectItem.stopName) {
-                JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName];
+                JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName stopId:nil];
                 weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:stopItem.order busInfo:dict];
             } else {
                 weakSelf.busInfoItem = nil;

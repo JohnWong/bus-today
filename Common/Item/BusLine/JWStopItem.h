@@ -26,7 +26,11 @@
  *  站点名称
  */
 @property (nonatomic, strong) NSString *stopName;
+/**
+ *  站点ID，换向时使用，可能变掉。
+ */
+@property (nonatomic, strong) NSString *stopId;
 
-- (instancetype)initWithOrder:(NSInteger)order stopName:(NSString *)stopName;
+- (instancetype)initWithOrder:(NSInteger)order stopName:(NSString *)stopName stopId:(NSString *)stopId;
 
 @end

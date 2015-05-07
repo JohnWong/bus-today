@@ -10,10 +10,11 @@
 
 @implementation JWStopItem
 
-- (instancetype)initWithOrder:(NSInteger)order stopName:(NSString *)stopName {
+- (instancetype)initWithOrder:(NSInteger)order stopName:(NSString *)stopName stopId:(NSString *)stopId{
     if (self = [super init]) {
         self.order = order;
         self.stopName = stopName;
+        self.stopId = stopId;
     }
     return self;
 }
@@ -22,6 +23,7 @@
     self.order = [dict[@"order"] integerValue];
     self.stopName = dict[@"stopName"];
     self.coordinate = CLLocationCoordinate2DMake([dict[@"weidu"] doubleValue], [dict[@"jingdu"] doubleValue]);
+    self.stopId = dict[@"stopId"];
 }
 
 - (NSString *)description {
