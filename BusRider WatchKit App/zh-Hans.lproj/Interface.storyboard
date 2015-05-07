@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -10,6 +10,11 @@
             <objects>
                 <controller title="今日公交" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <group width="1" alignment="left" hidden="YES" id="bCi-nU-xFF">
+                            <items>
+                                <label alignment="left" text="这里展示到站信息。请选择线路、站点并发到首页。" numberOfLines="0" id="WN5-hv-waq"/>
+                            </items>
+                        </group>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="oxp-5G-tkH">
@@ -42,7 +47,7 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="I3T-gy-PZU">
+                        <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="I3T-gy-PZU">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="EgN-vM-bhc">
                                     <items>
@@ -77,6 +82,7 @@
                                             </items>
                                         </group>
                                     </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="10"/>
                                 </group>
                                 <group width="1" alignment="center" verticalAlignment="bottom" id="7Ze-Fy-K16">
                                     <items>
@@ -101,6 +107,7 @@
                     <connections>
                         <outlet property="cityButton" destination="UVC-bN-jUo" id="DqK-Dq-U9r"/>
                         <outlet property="fromLabel" destination="oaC-ic-pVK" id="1vI-El-Jmb"/>
+                        <outlet property="guideGroup" destination="bCi-nU-xFF" id="Tni-ui-NjF"/>
                         <outlet property="infoGroup" destination="EgN-vM-bhc" id="chS-vO-tiG"/>
                         <outlet property="lineLabel" destination="cdU-MN-Bce" id="525-NV-VqW"/>
                         <outlet property="mainLabel" destination="ZxJ-hx-Zgz" id="qky-xn-xUN"/>
@@ -115,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="118" y="137.75"/>
         </scene>
-        <!--selectCity-->
+        <!--取消-->
         <scene sceneID="9uj-LL-2oS">
             <objects>
-                <controller identifier="selectCity" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="selectCity" title="取消" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
@@ -389,7 +396,6 @@
                                     </items>
                                 </group>
                             </items>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="10"/>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
                             <items>
@@ -471,7 +477,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="961" y="319"/>
+            <point key="canvasLocation" x="961" y="353"/>
         </scene>
     </scenes>
 </document>

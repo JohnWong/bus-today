@@ -31,6 +31,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var topGroup: WKInterfaceGroup!
     @IBOutlet weak var infoGroup: WKInterfaceGroup!
     @IBOutlet weak var cityButton: WKInterfaceButton!
+    @IBOutlet weak var guideGroup: WKInterfaceGroup!
     
     var lineRequest = JWLineRequest()
     var busInfoItem = JWBusInfoItem()
@@ -92,9 +93,11 @@ class InterfaceController: WKInterfaceController {
             }
             self.topGroup.setHidden(false)
             self.infoGroup.setHidden(false)
+            self.guideGroup.setHidden(true)
         } else {
             self.topGroup.setHidden(true)
             self.infoGroup.setHidden(true)
+            self.guideGroup.setHidden(false)
         }
     }
     
