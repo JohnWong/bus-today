@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -206,19 +206,14 @@
                         <table alignment="left" id="Q1p-zW-j2Y">
                             <items>
                                 <tableRow identifier="lineRow" id="OFW-3b-nXY" customClass="JWLineRowType" customModule="BusRider_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="rVp-RG-kh7">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="rVp-RG-kh7">
                                         <items>
-                                            <group width="1" height="2" alignment="left" id="W4k-FH-0kB"/>
-                                            <group width="1" alignment="left" id="z2s-9i-s9M">
-                                                <items>
-                                                    <label width="19" height="19" alignment="left" verticalAlignment="center" text="88" textAlignment="left" id="iGg-UX-iz4"/>
-                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="vAZ-hV-DBw">
-                                                        <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                                    </label>
-                                                </items>
-                                            </group>
-                                            <group width="1" height="2" alignment="left" id="sre-F3-aKu"/>
+                                            <label width="19" height="19" alignment="left" verticalAlignment="center" text="88" textAlignment="left" id="iGg-UX-iz4"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="vAZ-hV-DBw">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
                                     </group>
                                     <connections>
                                         <outlet property="nameLabel" destination="vAZ-hV-DBw" id="tTK-VP-Zfa"/>
@@ -226,25 +221,14 @@
                                     </connections>
                                 </tableRow>
                                 <tableRow identifier="arrivingRow" id="JTU-xB-U8w" customClass="JWArrivingLineRowType" customModule="BusRider_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="b18-Ta-gUN">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="b18-Ta-gUN">
                                         <items>
-                                            <group width="1" height="2" alignment="left" id="r1S-Oz-Bxk"/>
-                                            <group width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="D7r-VY-u3t">
-                                                <items>
-                                                    <group width="1" height="2" alignment="left" id="Xfw-8P-bzS"/>
-                                                    <group width="1" alignment="left" id="8AW-eH-Qsn">
-                                                        <items>
-                                                            <imageView width="19" height="19" alignment="left" verticalAlignment="center" image="bus" animationDuration="4.5" id="fIr-U7-Kaj"/>
-                                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="nei-PR-NFk">
-                                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                                            </label>
-                                                        </items>
-                                                    </group>
-                                                    <group width="1" height="2" alignment="left" id="4xA-1A-DQS"/>
-                                                </items>
-                                            </group>
-                                            <group width="1" height="2" alignment="left" id="rMe-2o-JBr"/>
+                                            <imageView width="19" height="19" alignment="left" verticalAlignment="center" image="bus" animationDuration="4.5" id="fIr-U7-Kaj"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="nei-PR-NFk">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
                                     </group>
                                     <connections>
                                         <outlet property="nameLabel" destination="nei-PR-NFk" id="HmH-qW-Y3R"/>
@@ -405,6 +389,7 @@
                                     </items>
                                 </group>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="10"/>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
                             <items>
