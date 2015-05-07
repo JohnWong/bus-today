@@ -18,9 +18,9 @@
  */
 @property (nonatomic, strong) NSString *stopName;
 /**
- *  站点序号
+ *  站点ID
  */
-@property (nonatomic, assign) NSInteger order;
+@property (nonatomic, strong) NSString *stopId;
 
 - (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName;
 

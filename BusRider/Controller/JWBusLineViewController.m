@@ -51,9 +51,9 @@
 
 @property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 /**
- *  换向时使用
+ *  当前用户站点顺序
  */
-@property (nonatomic, strong) NSString *selectedStopId;
+@property (nonatomic, assign) NSInteger selectedStopOrder;
 @property (nonatomic, strong) JWBusLineItem *busLineItem;
 @property (nonatomic, strong) JWBusInfoItem *busInfoItem;
 
@@ -321,7 +321,7 @@
                 [weakSelf.stopButtonItem setOn:NO];
                 JWSearchStopItem *searchStopItem = [[JWSearchStopItem alloc] init];
                 searchStopItem.stopName = stopItem.stopName;
-                searchStopItem.order = stopItem.order;
+                searchStopItem.stopId = stopItem.stopId;
                 weakSelf.selectedStopItem = searchStopItem;
                 [weakSelf performSegueWithIdentifier:JWSeguePushStop sender:weakSelf];
             }];
