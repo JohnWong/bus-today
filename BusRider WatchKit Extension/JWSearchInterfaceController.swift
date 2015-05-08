@@ -79,10 +79,12 @@ class JWSearchInterfaceController: WKInterfaceController {
         }
     }
     
-    static var i = 1
-    
     @IBAction func openInputController() {
-
+        if UIDevice.currentDevice().model == "iPhone Simulator" {
+            loadData("2")
+            return
+        }
+        
         var initialPhrases = Array<String>()
         let allCollectItems = JWUserDefaultsUtil.allCollectItems()
         if let allCollectItems = allCollectItems {

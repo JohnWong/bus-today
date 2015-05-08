@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--今日公交-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="今日公交" id="AgC-eL-Hgc">
+                <controller title="今日公交" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" hidden="YES" id="bCi-nU-xFF">
-                            <items>
-                                <label alignment="left" text="这里展示到站信息。请选择线路、站点并发到首页。" numberOfLines="0" id="WN5-hv-waq"/>
-                            </items>
-                        </group>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="oxp-5G-tkH">
@@ -49,6 +44,11 @@
                         </group>
                         <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="I3T-gy-PZU">
                             <items>
+                                <group width="1" alignment="left" hidden="YES" id="bCi-nU-xFF">
+                                    <items>
+                                        <label alignment="left" text="这里展示到站信息。请选择线路、站点并发到首页。" numberOfLines="0" id="WN5-hv-waq"/>
+                                    </items>
+                                </group>
                                 <group width="1" alignment="left" layout="vertical" id="EgN-vM-bhc">
                                     <items>
                                         <group width="1" alignment="left" animationDuration="1" id="Id9-pQ-apN">
@@ -325,7 +325,7 @@
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" topTemplateType="mediumBody1" id="Sv0-Ai-Zie">
+                <glanceController spacing="0.0" topTemplateType="mediumBody1" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="311路" id="nRI-d8-LK9"/>
                         <label alignment="left" text="距文一西路狮山路口" id="EYP-C6-wfg">
@@ -469,6 +469,7 @@
                         <outlet property="fromLabel" destination="EQ2-70-ARM" id="7dP-dl-T98"/>
                         <outlet property="lineLabel" destination="mlT-Bs-GMz" id="E6c-sY-G5z"/>
                         <outlet property="mainLabel" destination="9LC-Y1-WCY" id="clr-wJ-qLB"/>
+                        <outlet property="sendButton" destination="M1M-Qb-XXk" id="ZId-36-Ioz"/>
                         <outlet property="stopLabel" destination="SLr-rU-bSD" id="mmt-Id-Aad"/>
                         <outlet property="timeLabel" destination="5yO-BX-9o8" id="p5u-7U-KxT"/>
                         <outlet property="toLabel" destination="r2v-vg-VQt" id="YaG-kM-1Vf"/>

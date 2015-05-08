@@ -26,6 +26,7 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var fromLabel: WKInterfaceLabel!
     @IBOutlet weak var toLabel: WKInterfaceLabel!
     @IBOutlet weak var timeLabel: WKInterfaceLabel!
+    @IBOutlet weak var sendButton: WKInterfaceButton!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -107,5 +108,6 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBAction func sendToGlance() {
         var todayItem = JWCollectItem(lineId: self.lineId, lineNumber: self.busInfoItem.lineNumber, from: nil, to: nil, stopName: nil, order: self.order)
         JWUserDefaultsUtil.setTodayBusLine(todayItem)
+        sendButton.setTitle("已发送")
     }
 }
