@@ -168,7 +168,8 @@
             if (scrollTo < - self.scrollView.contentInset.top) {
                 scrollTo = - self.scrollView.contentInset.top;
             }
-            [UIView animateWithDuration:0.25 + 0.002 * scrollTo animations:^{
+            
+            [UIView animateWithDuration:0.25 + 0.002 * fabs(scrollTo - self.scrollView.contentOffset.y) animations:^{
                 self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
             }];
         }
@@ -199,7 +200,6 @@
         imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
         [self.contentView addSubview:imageView];
     }
-    [self updateBusInfo];
 }
 
 - (void)updateBusInfo {
@@ -345,6 +345,7 @@
             if (weakSelf.selectedStopOrder) {
                 weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:weakSelf.selectedStopOrder busInfo:dict];
             }
+            [self updateBusInfo];
         }
     } progress:^(CGFloat percent) {
         [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];

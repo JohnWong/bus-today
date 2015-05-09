@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>Debug</key>
 	<string>${MTL_ENABLE_DEBUG_INFO}</string>
 	<key>LSRequiresIPhoneOS</key>
