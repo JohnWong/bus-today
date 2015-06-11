@@ -920,6 +920,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JW;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "John Wong";
 				TargetAttributes = {

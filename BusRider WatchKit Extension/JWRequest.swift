@@ -29,7 +29,7 @@ class JWRequest: NSObject {
             paramString = paramString.stringByAppendingString("&\(key)=\(value)")
         }
         var cityId = "";
-        var cityItem = JWUserDefaultsUtil.cityItem()
+        let cityItem = JWUserDefaultsUtil.cityItem()
         if  let cityItem = cityItem {
             cityId = String(format: "&cityId=%@", cityItem.cityId)
         }
@@ -42,10 +42,18 @@ class JWRequest: NSObject {
         self.request?.completionBlock = {
             (headers: Dictionary!, body: String!) in
             let correctString = body as NSString
-            print(correctString)
-            let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions.allZeros, range: nil)
+            print(correctString, appendNewline: false)
+            let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions(), range: nil)
             var error: NSError?
-            var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions(), error: &error)
+            var jsonObject: AnyObject?
+            do {
+                jsonObject = try NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions())
+            } catch var error1 as NSError {
+                error = error1
+                jsonObject = nil
+            } catch {
+                fatalError()
+            }
             if error == nil && jsonObject != nil && jsonObject!.isKindOfClass(NSDictionary) {
                 let dict = jsonObject as! NSDictionary
                 let jsonr: NSDictionary = dict["jsonr"] as! NSDictionary

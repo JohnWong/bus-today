@@ -54,7 +54,7 @@ class JWSearchInterfaceController: WKInterfaceController {
         searchRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
                 self.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
-                var totalCount = self.searchItems.lineList.count + self.searchItems.stopList.count
+                let totalCount = self.searchItems.lineList.count + self.searchItems.stopList.count
                 if totalCount > 0 {
                     self.interfaceTable.setNumberOfRows(self.searchItems.lineList.count + self.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
                     for index in 0 ..< self.searchItems.lineList.count + self.searchItems.stopList.count {
@@ -71,10 +71,10 @@ class JWSearchInterfaceController: WKInterfaceController {
     func configureRowControllerAtIndex(index: Int) {
         let itemRowController = interfaceTable.rowControllerAtIndex(index) as! JWSearchControllerRowType
         if index < self.searchItems.lineList.count {
-            var item: JWSearchLineItem = self.searchItems.lineList[index] as! JWSearchLineItem
+            let item: JWSearchLineItem = self.searchItems.lineList[index] as! JWSearchLineItem
             itemRowController.setText(item.lineNumber)
         } else {
-            var item: JWSearchStopItem = self.searchItems.stopList[index - self.searchItems.lineList.count] as! JWSearchStopItem
+            let item: JWSearchStopItem = self.searchItems.stopList[index - self.searchItems.lineList.count] as! JWSearchStopItem
             itemRowController.setText(item.stopName)
         }
     }
@@ -97,21 +97,17 @@ class JWSearchInterfaceController: WKInterfaceController {
         
         self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
             [unowned self](results) -> Void in
-            if let results = results {
-                if results.count > 0 {
-                    var aResult = results[0] as! String;
-                    aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions.allZeros, range: nil)
-                    self.loadData(aResult)
-                }
-            } else {
-                // Nothing was selected.
+            if results.count > 0 {
+                var aResult = results[0] as! String;
+                aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions(), range: nil)
+                self.loadData(aResult)
             }
         }
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         if rowIndex < self.searchItems.lineList.count {
-            var item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
+            let item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
             self.pushControllerWithName(Storyboard.Controllers.lineDetail, context: item.lineId)
         } else {
             

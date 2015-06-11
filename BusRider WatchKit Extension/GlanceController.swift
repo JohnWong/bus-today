@@ -36,7 +36,7 @@ class GlanceController: WKInterfaceController {
     
     func loadData() {
         self.showLoading()
-        var todayLine = JWUserDefaultsUtil.todayBusLine()
+        let todayLine = JWUserDefaultsUtil.todayBusLine()
         if let todayLine = todayLine {
             lineRequest.lineId = todayLine.lineId
             lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in

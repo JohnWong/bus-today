@@ -42,7 +42,7 @@ class JWCityInterfaceController: WKInterfaceController {
                 if let citiesDict = result["cities"]! as? NSArray {
                     self.cities.removeAll(keepCapacity: true)
                     for dict in citiesDict {
-                        var cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
+                        let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
                         if cityItem.cityVersion == 0 {
                             self.cities.append(cityItem)
                         }

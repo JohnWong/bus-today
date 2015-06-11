@@ -60,7 +60,7 @@ class JWLineInterfaceController: WKInterfaceController {
         let rowController: AnyObject? = interfaceTable.rowControllerAtIndex(index)
         if let itemRowController = rowController as? JWLineRowType {
             itemRowController.setNumber(index + 1, name: text)
-        } else if let let itemRowController = rowController as? JWArrivingLineRowType {
+        } else if let itemRowController = rowController as? JWArrivingLineRowType {
             itemRowController.setName(text)
         }
     }
@@ -75,7 +75,7 @@ class JWLineInterfaceController: WKInterfaceController {
         self.lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
             if let result = result {
                 self.busLineItem = JWBusLineItem(dictionary: result as [NSObject : AnyObject])
-                var lineItem = self.busLineItem.lineItem
+                let lineItem = self.busLineItem.lineItem
                 self.lineNumberLabel.setText("\(lineItem.lineNumber)")
                 self.startLabel.setText("\(lineItem.from)")
                 self.stopLabel.setText("\(lineItem.to)")
