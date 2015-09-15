@@ -65,9 +65,7 @@
             completion(nil, error);
         }
     };
-    __weak typeof(self) weakSelf = self;
     self.request.errorBlock = ^(NSError *error) {
-        NSLog(@"JWRequest: error %@, %@", [weakSelf urlPath], error);
         if (error.code == 1) { // Connection was cancelled.
             return;
         }

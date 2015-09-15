@@ -281,7 +281,6 @@
                     <connections>
                         <outlet property="interfaceTable" destination="Q1p-zW-j2Y" id="t0E-Fx-7Bb"/>
                         <outlet property="lineNumberLabel" destination="10c-wS-wAT" id="2zD-ke-qH2"/>
-                        <outlet property="loadData" destination="qUZ-3S-DdP" id="gQ0-IZ-KJc"/>
                         <outlet property="startLabel" destination="Uyx-Wg-tW9" id="HDY-yu-kFs"/>
                         <outlet property="stopLabel" destination="sHz-yx-gcI" id="zbK-Wo-2kA"/>
                         <outlet property="timeLabel" destination="Lud-t5-1MU" id="CTP-HS-0tP"/>
