@@ -106,11 +106,7 @@
                     </items>
                     <menu key="menu" id="6dM-d2-HHA">
                         <items>
-                            <menuItem title="刷新" icon="repeat" id="t2g-Ea-EMz">
-                                <connections>
-                                    <action selector="loadData" destination="AgC-eL-Hgc" id="Qoz-vR-isV"/>
-                                </connections>
-                            </menuItem>
+                            <menuItem title="刷新" icon="repeat" id="t2g-Ea-EMz"/>
                         </items>
                     </menu>
                     <connections>
@@ -275,7 +271,7 @@
                                     <action selector="loadData" destination="j7a-Ob-4ZY" id="cKU-Sj-pYL"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="反向" image="Exchange" id="St7-CH-zj2">
+                            <menuItem title="反向" image="Exchange" id="St7-CH-zj2" userLabel="换向">
                                 <connections>
                                     <action selector="reverseDirection" destination="j7a-Ob-4ZY" id="pY7-py-F4h"/>
                                 </connections>

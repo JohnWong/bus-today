@@ -42,7 +42,6 @@ class JWRequest: NSObject {
         self.request?.completionBlock = {
             (headers: Dictionary!, body: String!) in
             let correctString = body as NSString
-            print(correctString, appendNewline: false)
             let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions(), range: nil)
             var error: NSError?
             var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions(), error: &error)
