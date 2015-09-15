@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 3
 
+// UIViewAdditions
+#define COCOAPODS_POD_AVAILABLE_UIViewAdditions
+#define COCOAPODS_VERSION_MAJOR_UIViewAdditions 1
+#define COCOAPODS_VERSION_MINOR_UIViewAdditions 0
+#define COCOAPODS_VERSION_PATCH_UIViewAdditions 0
+
 // UMengAnalytics
 #define COCOAPODS_POD_AVAILABLE_UMengAnalytics
 #define COCOAPODS_VERSION_MAJOR_UMengAnalytics 3

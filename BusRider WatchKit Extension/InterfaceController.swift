@@ -80,7 +80,7 @@ class InterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
     }
     
-    func loadData() {
+    @IBAction func loadData() {
         self.showLoading()
         let todayLine = JWUserDefaultsUtil.todayBusLine()
         if let todayLine = todayLine {
@@ -141,4 +141,5 @@ class InterfaceController: WKInterfaceController {
         self.toLabel.setText(self.busInfoItem.to)
         self.timeLabel.setText("\(self.busInfoItem.firstTime)-\(self.busInfoItem.lastTime)")
     }
+    
 }

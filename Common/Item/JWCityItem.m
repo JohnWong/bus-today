@@ -39,9 +39,7 @@
     NSArray *cities = [self arrayFromDictionaryArray:dict[@"cities"]];
     NSMutableArray *ret = [NSMutableArray array];
     for (JWCityItem *item in cities) {
-        if (item.cityVersion == 0) {
-            [ret addObject:item];
-        }
+        [ret addObject:item];
     }
     return ret;
 }

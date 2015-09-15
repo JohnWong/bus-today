@@ -42,8 +42,6 @@ class JWLineInterfaceController: WKInterfaceController {
             self.lineId = "0571-0428-0"
         }
         loadData()
-//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "刷新", action: Selector("loadData"))
-//        self.addMenuItemWithItemIcon(WKMenuItemIcon.Accept, title: "收藏", action: Selector("loadData"))
     }
 
     override func willActivate() {
@@ -120,7 +118,9 @@ class JWLineInterfaceController: WKInterfaceController {
     }
 
     @IBAction func reverseDirection() {
-        self.lineId = self.busLineItem.lineItem.otherLineId
-        self.loadData()
+        if let _ = self.busLineItem.lineItem where self.busLineItem.lineItem.otherLineId.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+            self.lineId = self.busLineItem.lineItem.otherLineId
+            self.loadData()
+        }
     }
 }

@@ -45,15 +45,7 @@ class JWRequest: NSObject {
             print(correctString, appendNewline: false)
             let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions(), range: nil)
             var error: NSError?
-            var jsonObject: AnyObject?
-            do {
-                jsonObject = try NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions())
-            } catch var error1 as NSError {
-                error = error1
-                jsonObject = nil
-            } catch {
-                fatalError()
-            }
+            var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions(), error: &error)
             if error == nil && jsonObject != nil && jsonObject!.isKindOfClass(NSDictionary) {
                 let dict = jsonObject as! NSDictionary
                 let jsonr: NSDictionary = dict["jsonr"] as! NSDictionary

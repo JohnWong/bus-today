@@ -197,7 +197,7 @@
     for (JWBusItem *busItem in self.busLineItem.busItems) {
         UIImage *image = [UIImage imageNamed:@"JWIconBus"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.origin = CGPointMake(20 - image.size.width / 2, (busItem.order - 1) * kJWButtonHeight - image.size.height / 2);
+        imageView.center = CGPointMake(20, (busItem.order - 1) * kJWButtonHeight);
         [self.contentView addSubview:imageView];
     }
 }
@@ -372,14 +372,15 @@
     }
 }
 
-- (IBAction)sendToToday:(id)sender {
-    if (self.busLineItem && self.busLineItem.lineItem && self.busLineItem.lineItem.lineId && self.selectedStopOrder) {
-        if (self.todayButton.isOn) {
-            [self removeTodayInfo];
-        } else {
-            [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId lineNumber:self.busLineItem.lineItem.lineNumber stopOrder:self.selectedStopOrder];
-        }
+- (IBAction)sendToToday:(JWSwitchChangeButton *)sender {
+    if (self.todayButton.isOn) {
+        [self removeTodayInfo];
         [self updateViews];
+        [self updateTodayButton];
+    } else if (self.busLineItem.lineItem.lineId && self.selectedStopOrder) {
+        [self setTodayInfoWithLineId:self.busLineItem.lineItem.lineId lineNumber:self.busLineItem.lineItem.lineNumber stopOrder:self.selectedStopOrder];
+        [self updateViews];
+        [self updateTodayButton];
     } else {
         [JWViewUtil showInfoWithMessage:@"请先点击选择当前站点"];
     }

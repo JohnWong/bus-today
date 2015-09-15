@@ -5,6 +5,7 @@ target :BusRider do
     pod 'SVProgressHUD'
     pod 'AHKActionSheet'
     pod 'UMengAnalytics'
+    pod 'UIViewAdditions'
     pod 'Appirater', '~> 2.0.4'
     pod 'SGNavigationProgress', :podspec => 'https://raw.githubusercontent.com/JohnWong/SGNavigationProgress/master/SGNavigationProgress.podspec'
     pod 'CBStoreHouseRefreshControl', :podspec => 'https://raw.githubusercontent.com/JohnWong/CBStoreHouseRefreshControl/master/CBStoreHouseRefreshControl.podspec'
@@ -14,6 +15,7 @@ end
 target :Today do
     platform :ios, '8.0'
     pod 'STHTTPRequest'
+    pod 'UIViewAdditions'
 end
 
 target :'BusRider WatchKit Extension' do
