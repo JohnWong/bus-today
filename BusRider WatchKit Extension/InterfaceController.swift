@@ -34,7 +34,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var guideGroup: WKInterfaceGroup!
     
     var lineRequest = JWLineRequest()
-    var busInfoItem = JWBusInfoItem()
+    var busInfoItem: JWBusInfoItem!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)

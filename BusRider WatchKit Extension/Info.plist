@@ -36,5 +36,10 @@
 	</dict>
 	<key>RemoteInterfacePrincipalClass</key>
 	<string>$(PRODUCT_MODULE_NAME).InterfaceController</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

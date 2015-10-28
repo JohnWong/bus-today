@@ -47,10 +47,8 @@
 		523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */; };
 		523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; };
-		523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD381AD2F5EF00862462 /* GlanceController.swift */; };
 		523DCD3B1AD2F5EF00862462 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3A1AD2F5EF00862462 /* Images.xcassets */; };
 		523DCD3F1AD2F5EF00862462 /* BusRider WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3E1AD2F5EF00862462 /* BusRider WatchKit App.app */; };
-		523DCD471AD2F5EF00862462 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
 		523DCD491AD2F5EF00862462 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; };
 		523DCD4C1AD2F5EF00862462 /* BusRider WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52466BB31AF9408F00095A8E /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
@@ -66,6 +64,7 @@
 		525A1F731A5AA763006CE8BA /* JWIconTodayOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */; };
 		525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */; };
 		52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */; };
+		5280CD0D1BE1439B004FDE4F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; settings = {ASSET_TAGS = (); }; };
 		5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558591A62BB1B00898779 /* JWMainTableViewCell.m */; };
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
 		528558611A642EA400898779 /* JWStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558601A642EA400898779 /* JWStopTableViewController.m */; };
@@ -225,7 +224,6 @@
 		523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BusRider WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523DCD351AD2F5EF00862462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523DCD361AD2F5EF00862462 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		523DCD381AD2F5EF00862462 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		523DCD3A1AD2F5EF00862462 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		523DCD3E1AD2F5EF00862462 /* BusRider WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BusRider WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523DCD441AD2F5EF00862462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 			children = (
 				520A5B691AD4227100C41F9D /* AppConfiguration.swift */,
 				523DCD531AD2F5FF00862462 /* BusRider WatchKit Extension.entitlements */,
-				523DCD381AD2F5EF00862462 /* GlanceController.swift */,
 				523DCD3A1AD2F5EF00862462 /* Images.xcassets */,
 				523DCD361AD2F5EF00862462 /* InterfaceController.swift */,
 				52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */,
@@ -927,7 +924,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523DCD471AD2F5EF00862462 /* Interface.storyboard in Resources */,
+				5280CD0D1BE1439B004FDE4F /* Interface.storyboard in Resources */,
 				523DCD491AD2F5EF00862462 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1111,7 +1108,6 @@
 				520A5B6C1AD4247400C41F9D /* JWItem.m in Sources */,
 				52AC0C2C1AF4929300F27EE1 /* JWSearchInterfaceController.swift in Sources */,
 				523DCD371AD2F5EF00862462 /* InterfaceController.swift in Sources */,
-				523DCD391AD2F5EF00862462 /* GlanceController.swift in Sources */,
 				5239C6C31AF68092006E70D7 /* JWStopLineTypeItem.m in Sources */,
 				52DC59D01AD6FFCC00F25621 /* JWCityControllerRowType.swift in Sources */,
 				5239C6C11AF68092006E70D7 /* JWStopItem.m in Sources */,

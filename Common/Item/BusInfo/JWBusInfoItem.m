@@ -20,7 +20,6 @@
 }
 
 - (instancetype)init {
-    NSAssert(NO, @"Method is not designated initializer");
     return [self initWithUserStopOrder:0 busInfo:nil];
 }
 

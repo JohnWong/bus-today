@@ -15,7 +15,7 @@ class JWDetailInterfaceController: WKInterfaceController {
     var lineId = ""
     var order = 0
     var lineRequest = JWLineRequest()
-    var busInfoItem = JWBusInfoItem()
+    var busInfoItem: JWBusInfoItem!
     
     
     @IBOutlet weak var lineLabel: WKInterfaceLabel!
