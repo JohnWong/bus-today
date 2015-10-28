@@ -74,7 +74,6 @@
 		52AAFBDB1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AAFBD91ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m */; };
 		52AAFBDC1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AAFBDA1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.xib */; };
 		52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79D11A2E193E001904CA /* AppDelegate.m */; };
-		52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB79E81A2E193E001904CA /* BusRiderTests.m */; };
 		52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB79F81A2E1982001904CA /* NotificationCenter.framework */; };
 		52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AB7A001A2E1982001904CA /* MainInterface.storyboard */; };
 		52AB7A041A2E1982001904CA /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52AB79F61A2E1982001904CA /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -143,13 +142,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 523DCD311AD2F5EF00862462;
 			remoteInfo = "BusRider WatchKit Extension";
-		};
-		52AB79E31A2E193E001904CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52AB79C11A2E193E001904CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52AB79C81A2E193E001904CA;
-			remoteInfo = BusRider;
 		};
 		52AB7A021A2E1982001904CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -271,9 +263,6 @@
 		52AB79C91A2E193E001904CA /* BusRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79D01A2E193E001904CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AB79D11A2E193E001904CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		52AB79E21A2E193E001904CA /* BusRiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusRiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52AB79E71A2E193E001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52AB79E81A2E193E001904CA /* BusRiderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusRiderTests.m; sourceTree = "<group>"; };
 		52AB79F61A2E1982001904CA /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB79F81A2E1982001904CA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		52AB79FC1A2E1982001904CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -368,13 +357,6 @@
 				523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */,
 				52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */,
 				524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52AB79DF1A2E193E001904CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +501,6 @@
 			children = (
 				52EB7C1D1A4077C200057723 /* Common */,
 				52AB79CB1A2E193E001904CA /* BusRider */,
-				52AB79E51A2E193E001904CA /* BusRiderTests */,
 				52AB79FA1A2E1982001904CA /* Today */,
 				523DCD331AD2F5EF00862462 /* BusRider WatchKit Extension */,
 				523DCD421AD2F5EF00862462 /* BusRider WatchKit App */,
@@ -533,7 +514,6 @@
 			isa = PBXGroup;
 			children = (
 				52AB79C91A2E193E001904CA /* BusRider.app */,
-				52AB79E21A2E193E001904CA /* BusRiderTests.xctest */,
 				52AB79F61A2E1982001904CA /* Today.appex */,
 				523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */,
 				523DCD3E1AD2F5EF00862462 /* BusRider WatchKit App.app */,
@@ -557,23 +537,6 @@
 				52EB7BFE1A3DF6CF00057723 /* View */,
 			);
 			path = BusRider;
-			sourceTree = "<group>";
-		};
-		52AB79E51A2E193E001904CA /* BusRiderTests */ = {
-			isa = PBXGroup;
-			children = (
-				52AB79E81A2E193E001904CA /* BusRiderTests.m */,
-				52AB79E61A2E193E001904CA /* Supporting Files */,
-			);
-			path = BusRiderTests;
-			sourceTree = "<group>";
-		};
-		52AB79E61A2E193E001904CA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				52AB79E71A2E193E001904CA /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		52AB79F71A2E1982001904CA /* Frameworks */ = {
@@ -864,24 +827,6 @@
 			productReference = 52AB79C91A2E193E001904CA /* BusRider.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52AB79E11A2E193E001904CA /* BusRiderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52AB79EF1A2E193E001904CA /* Build configuration list for PBXNativeTarget "BusRiderTests" */;
-			buildPhases = (
-				52AB79DE1A2E193E001904CA /* Sources */,
-				52AB79DF1A2E193E001904CA /* Frameworks */,
-				52AB79E01A2E193E001904CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52AB79E41A2E193E001904CA /* PBXTargetDependency */,
-			);
-			name = BusRiderTests;
-			productName = BusRiderTests;
-			productReference = 52AB79E21A2E193E001904CA /* BusRiderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		52AB79F51A2E1982001904CA /* Today */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52AB7A071A2E1982001904CA /* Build configuration list for PBXNativeTarget "Today" */;
@@ -935,10 +880,6 @@
 							};
 						};
 					};
-					52AB79E11A2E193E001904CA = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 52AB79C81A2E193E001904CA;
-					};
 					52AB79F51A2E1982001904CA = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = KC63T62SBR;
@@ -965,7 +906,6 @@
 			projectRoot = "";
 			targets = (
 				52AB79C81A2E193E001904CA /* BusRider */,
-				52AB79E11A2E193E001904CA /* BusRiderTests */,
 				52AB79F51A2E1982001904CA /* Today */,
 				523DCD311AD2F5EF00862462 /* BusRider WatchKit Extension */,
 				523DCD3D1AD2F5EF00862462 /* BusRider WatchKit App */,
@@ -1016,13 +956,6 @@
 				52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */,
 				52004FF81A66050600EE9024 /* JWStopLineTableViewCell.xib in Resources */,
 				52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52AB79E01A2E193E001904CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1247,14 +1180,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52AB79DE1A2E193E001904CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52AB79E91A2E193E001904CA /* BusRiderTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52AB79F21A2E1982001904CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1286,11 +1211,6 @@
 			isa = PBXTargetDependency;
 			target = 523DCD311AD2F5EF00862462 /* BusRider WatchKit Extension */;
 			targetProxy = 523DCD4A1AD2F5EF00862462 /* PBXContainerItemProxy */;
-		};
-		52AB79E41A2E193E001904CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52AB79C81A2E193E001904CA /* BusRider */;
-			targetProxy = 52AB79E31A2E193E001904CA /* PBXContainerItemProxy */;
 		};
 		52AB7A031A2E1982001904CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1514,42 +1434,6 @@
 			};
 			name = Release;
 		};
-		52AB79F01A2E193E001904CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BusRiderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRider.app/BusRider";
-			};
-			name = Debug;
-		};
-		52AB79F11A2E193E001904CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BusRiderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRider.app/BusRider";
-			};
-			name = Release;
-		};
 		52AB7A081A2E1982001904CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */;
@@ -1621,15 +1505,6 @@
 			buildConfigurations = (
 				52AB79ED1A2E193E001904CA /* Debug */,
 				52AB79EE1A2E193E001904CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52AB79EF1A2E193E001904CA /* Build configuration list for PBXNativeTarget "BusRiderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52AB79F01A2E193E001904CA /* Debug */,
-				52AB79F11A2E193E001904CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

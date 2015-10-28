@@ -18,8 +18,7 @@
 }
 
 - (instancetype)init {
-    NSAssert(NO, @"Method is not designated initializer");
-    return [self initWithDictionary:nil];
+    return [super init];
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict {}

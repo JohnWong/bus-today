@@ -10,6 +10,7 @@
 
 @interface JWItem : NSObject
 
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithDictionary:(NSDictionary *)dict NS_DESIGNATED_INITIALIZER;
 - (void)setFromDictionary:(NSDictionary *)dict;
 /**

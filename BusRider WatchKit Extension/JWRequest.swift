@@ -33,7 +33,7 @@ class JWRequest: NSObject {
         if  let cityItem = cityItem {
             cityId = String(format: "&cityId=%@", cityItem.cityId)
         }
-        return String(format: "http://%@/%@/%@.action?s=IOS&v=2.9%@&sign=%@", AppConfiguration.host, self.isKindOfClass(JWCityRequest) ? "wow" : "bus", self.actionName(), cityId, paramString)
+        return String(format: "http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", AppConfiguration.host, self.isKindOfClass(JWCityRequest) ? "wow" : "bus", self.actionName(), cityId, paramString)
     }
     
     func loadWithCompletion(completion:(NSDictionary?, NSError?) -> Void) {
