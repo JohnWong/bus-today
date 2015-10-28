@@ -31,7 +31,6 @@
 }
 
 - (instancetype)init {
-    NSAssert(NO, @"Method is not designated initializer");
     return [self initWithLineId:nil lineNumber:nil from:nil to:nil stopName:nil order:0];
 }
 
