@@ -1,7 +1,11 @@
 source 'https://gitcafe.com/yellowxz/Specs.git'
 
+def shared_pods
+    pod 'STHTTPRequest', :podspec => 'https://raw.githubusercontent.com/JohnWong/STHTTPRequest/master/STHTTPRequest.podspec'
+end
+
 target :BusRider do
-    pod 'STHTTPRequest'
+    shared_pods
     pod 'SVProgressHUD'
     pod 'AHKActionSheet'
     pod 'UMengAnalytics'
@@ -14,13 +18,18 @@ end
 
 target :Today do
     platform :ios, '8.0'
-    pod 'STHTTPRequest'
+    shared_pods
     pod 'UIViewAdditions'
 end
 
 target :'BusRider WatchKit Extension' do
     platform :ios, '8.0'
-    pod 'STHTTPRequest'
+    shared_pods
+end
+
+target :'watchOS2 Extension' do
+    platform :watchos, '2.0'
+    shared_pods
 end
 
 inhibit_all_warnings!

@@ -86,6 +86,29 @@
 		52AC0C3A1AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C341AF4CA3800F27EE1 /* JWSearchStopItem.m */; };
 		52AC0C3B1AF4CA4700F27EE1 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52AC0C3D1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */; };
+		52B84A411BE1480800BC81F6 /* watchOS2 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A461BE1480800BC81F6 /* InterfaceController.m */; };
+		52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */; };
+		52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A4C1BE1480800BC81F6 /* ComplicationController.m */; };
+		52B84A4F1BE1480800BC81F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B84A4E1BE1480800BC81F6 /* Assets.xcassets */; };
+		52B84A531BE1480800BC81F6 /* watchOS2.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B84A341BE1480700BC81F6 /* watchOS2.app */; };
+		52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; settings = {ASSET_TAGS = (); }; };
+		52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A601BE14ADC00BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3A1AD2F5EF00862462 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A621BE14AE200BC81F6 /* JWCityControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A631BE14AE600BC81F6 /* JWCityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A651BE14AE600BC81F6 /* JWDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D700051AF91B74008A3C8C /* JWDetailInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A661BE14AE600BC81F6 /* JWLineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A681BE14AE600BC81F6 /* JWLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0811AD3809C00126937 /* JWRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A6A1BE14AE600BC81F6 /* JWSearchControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A6C1BE14AE600BC81F6 /* JWSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		52B8D5B41A57120300B3DD5C /* JWIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */; };
 		52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */; };
 		52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5BA1A57F12300B3DD5C /* JWSwitchButton.m */; };
@@ -124,6 +147,7 @@
 		52FCD0741A7017C200419271 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
 		52FCD0751A7017CB00419271 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
 		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
+		B428CC9B4AEC1FE72004C766 /* libPods-watchOS2 Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD6FEC75F04CFB73D73B8F7 /* libPods-watchOS2 Extension.a */; };
 		FC2C77673B83F761393587D3 /* libPods-BusRider WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +180,20 @@
 			remoteGlobalIDString = 52AB79F51A2E1982001904CA;
 			remoteInfo = Today;
 		};
+		52B84A421BE1480800BC81F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52AB79C11A2E193E001904CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B84A3F1BE1480700BC81F6;
+			remoteInfo = "watchOS2 Extension";
+		};
+		52B84A511BE1480800BC81F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52AB79C11A2E193E001904CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B84A331BE1480700BC81F6;
+			remoteInfo = watchOS2;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -171,11 +209,35 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52B84A591BE1480800BC81F6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52B84A411BE1480800BC81F6 /* watchOS2 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B84A5B1BE1480800BC81F6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				52B84A531BE1480800BC81F6 /* watchOS2.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0FD6FEC75F04CFB73D73B8F7 /* libPods-watchOS2 Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-watchOS2 Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS2 Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension.release.xcconfig"; sourceTree = "<group>"; };
 		4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		52004FF01A6511EB00EE9024 /* JWFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFormatter.h; sourceTree = "<group>"; };
 		52004FF11A6511EB00EE9024 /* JWFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFormatter.m; sourceTree = "<group>"; };
@@ -278,6 +340,18 @@
 		52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWSearchControllerRowType.swift; sourceTree = "<group>"; };
 		52B3BAA91A309775001E38BB /* Today-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Today-Prefix.pch"; sourceTree = "<group>"; };
 		52B529A81A5AEBC0002D912D /* Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Today.entitlements; sourceTree = "<group>"; };
+		52B84A341BE1480700BC81F6 /* watchOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B84A371BE1480700BC81F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		52B84A3B1BE1480700BC81F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchOS2 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B84A451BE1480800BC81F6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		52B84A461BE1480800BC81F6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		52B84A481BE1480800BC81F6 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		52B84A4B1BE1480800BC81F6 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		52B84A4C1BE1480800BC81F6 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		52B84A4E1BE1480800BC81F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B84A501BE1480800BC81F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconRefresh@2x.png"; sourceTree = "<group>"; };
 		52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconExchange@2x.png"; sourceTree = "<group>"; };
 		52B8D5B91A57F12300B3DD5C /* JWSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSwitchButton.h; sourceTree = "<group>"; };
@@ -332,6 +406,7 @@
 		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS2 Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
 		D0ADAE7343270CEBC0352B59 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
@@ -364,6 +439,14 @@
 			files = (
 				52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */,
 				A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B84A3D1BE1480700BC81F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B428CC9B4AEC1FE72004C766 /* libPods-watchOS2 Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +584,8 @@
 				52AB79FA1A2E1982001904CA /* Today */,
 				523DCD331AD2F5EF00862462 /* BusRider WatchKit Extension */,
 				523DCD421AD2F5EF00862462 /* BusRider WatchKit App */,
+				52B84A351BE1480700BC81F6 /* watchOS2 */,
+				52B84A441BE1480800BC81F6 /* watchOS2 Extension */,
 				52AB79F71A2E1982001904CA /* Frameworks */,
 				52AB79CA1A2E193E001904CA /* Products */,
 				F9F4BBD7B41A279A6BD95859 /* Pods */,
@@ -514,6 +599,8 @@
 				52AB79F61A2E1982001904CA /* Today.appex */,
 				523DCD321AD2F5EF00862462 /* BusRider WatchKit Extension.appex */,
 				523DCD3E1AD2F5EF00862462 /* BusRider WatchKit App.app */,
+				52B84A341BE1480700BC81F6 /* watchOS2.app */,
+				52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -550,6 +637,7 @@
 				81C72F15D51F696EE9C6872F /* libPods-Today.a */,
 				45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */,
 				0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */,
+				0FD6FEC75F04CFB73D73B8F7 /* libPods-watchOS2 Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -588,6 +676,30 @@
 				52AC0C341AF4CA3800F27EE1 /* JWSearchStopItem.m */,
 			);
 			path = SearchList;
+			sourceTree = "<group>";
+		};
+		52B84A351BE1480700BC81F6 /* watchOS2 */ = {
+			isa = PBXGroup;
+			children = (
+				52B84A361BE1480700BC81F6 /* Interface.storyboard */,
+				52B84A3B1BE1480700BC81F6 /* Info.plist */,
+			);
+			path = watchOS2;
+			sourceTree = "<group>";
+		};
+		52B84A441BE1480800BC81F6 /* watchOS2 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				52B84A451BE1480800BC81F6 /* InterfaceController.h */,
+				52B84A461BE1480800BC81F6 /* InterfaceController.m */,
+				52B84A481BE1480800BC81F6 /* ExtensionDelegate.h */,
+				52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */,
+				52B84A4B1BE1480800BC81F6 /* ComplicationController.h */,
+				52B84A4C1BE1480800BC81F6 /* ComplicationController.m */,
+				52B84A4E1BE1480800BC81F6 /* Assets.xcassets */,
+				52B84A501BE1480800BC81F6 /* Info.plist */,
+			);
+			path = "watchOS2 Extension";
 			sourceTree = "<group>";
 		};
 		52BC1CEB1A41BB3900C98CB9 /* Model */ = {
@@ -758,6 +870,8 @@
 				C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */,
 				4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */,
 				D0ADAE7343270CEBC0352B59 /* Pods-BusRider WatchKit Extension.release.xcconfig */,
+				B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */,
+				4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -811,6 +925,7 @@
 				52AB7A0A1A2E1982001904CA /* Embed App Extensions */,
 				275818CA71DF195E00CF5A93 /* Copy Pods Resources */,
 				A6285B81EE9C6904149EE931 /* Embed Pods Frameworks */,
+				52B84A5B1BE1480800BC81F6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -818,6 +933,7 @@
 				52AB7A031A2E1982001904CA /* PBXTargetDependency */,
 				52AB7A061A2E1982001904CA /* PBXTargetDependency */,
 				523DCD4B1AD2F5EF00862462 /* PBXTargetDependency */,
+				52B84A521BE1480800BC81F6 /* PBXTargetDependency */,
 			);
 			name = BusRider;
 			productName = BusRider;
@@ -843,6 +959,43 @@
 			productName = Today;
 			productReference = 52AB79F61A2E1982001904CA /* Today.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		52B84A331BE1480700BC81F6 /* watchOS2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B84A5A1BE1480800BC81F6 /* Build configuration list for PBXNativeTarget "watchOS2" */;
+			buildPhases = (
+				52B84A321BE1480700BC81F6 /* Resources */,
+				52B84A591BE1480800BC81F6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B84A431BE1480800BC81F6 /* PBXTargetDependency */,
+			);
+			name = watchOS2;
+			productName = watchOS2;
+			productReference = 52B84A341BE1480700BC81F6 /* watchOS2.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		52B84A3F1BE1480700BC81F6 /* watchOS2 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B84A581BE1480800BC81F6 /* Build configuration list for PBXNativeTarget "watchOS2 Extension" */;
+			buildPhases = (
+				DD3B6D65B569173AF736CE30 /* Check Pods Manifest.lock */,
+				52B84A3C1BE1480700BC81F6 /* Sources */,
+				52B84A3D1BE1480700BC81F6 /* Frameworks */,
+				52B84A3E1BE1480700BC81F6 /* Resources */,
+				C74288AF91C4CA76D6A4E032 /* Embed Pods Frameworks */,
+				76089659055225B7686406B3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchOS2 Extension";
+			productName = "watchOS2 Extension";
+			productReference = 52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -886,6 +1039,14 @@
 							};
 						};
 					};
+					52B84A331BE1480700BC81F6 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = KC63T62SBR;
+					};
+					52B84A3F1BE1480700BC81F6 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = KC63T62SBR;
+					};
 				};
 			};
 			buildConfigurationList = 52AB79C41A2E193E001904CA /* Build configuration list for PBXProject "BusRider" */;
@@ -906,6 +1067,8 @@
 				52AB79F51A2E1982001904CA /* Today */,
 				523DCD311AD2F5EF00862462 /* BusRider WatchKit Extension */,
 				523DCD3D1AD2F5EF00862462 /* BusRider WatchKit App */,
+				52B84A331BE1480700BC81F6 /* watchOS2 */,
+				52B84A3F1BE1480700BC81F6 /* watchOS2 Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -963,6 +1126,24 @@
 				5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */,
 				52AB7A011A2E1982001904CA /* MainInterface.storyboard in Resources */,
 				522A9E6D1A5C6DC700673EB0 /* JWTodayIconSetting@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B84A321BE1480700BC81F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */,
+				52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B84A3E1BE1480700BC81F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B84A4F1BE1480800BC81F6 /* Assets.xcassets in Resources */,
+				52B84A601BE14ADC00BC81F6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1225,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		76089659055225B7686406B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A6285B81EE9C6904149EE931 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1072,6 +1268,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74288AF91C4CA76D6A4E032 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD3B6D65B569173AF736CE30 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E79E467B5FC7CC7353BCE194 /* Copy Pods Resources */ = {
@@ -1195,6 +1421,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52B84A3C1BE1480700BC81F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */,
+				52B84A6C1BE14AE600BC81F6 /* JWSearchRequest.swift in Sources */,
+				52B84A631BE14AE600BC81F6 /* JWCityInterfaceController.swift in Sources */,
+				52B84A681BE14AE600BC81F6 /* JWLineRowType.swift in Sources */,
+				52B84A621BE14AE200BC81F6 /* JWCityControllerRowType.swift in Sources */,
+				52B84A6A1BE14AE600BC81F6 /* JWSearchControllerRowType.swift in Sources */,
+				52B84A651BE14AE600BC81F6 /* JWDetailInterfaceController.swift in Sources */,
+				52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */,
+				52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */,
+				52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */,
+				52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */,
+				52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */,
+				52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */,
+				52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */,
+				52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */,
+				52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */,
+				52B84A661BE14AE600BC81F6 /* JWLineInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1218,6 +1468,16 @@
 			target = 52AB79F51A2E1982001904CA /* Today */;
 			targetProxy = 52AB7A051A2E1982001904CA /* PBXContainerItemProxy */;
 		};
+		52B84A431BE1480800BC81F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B84A3F1BE1480700BC81F6 /* watchOS2 Extension */;
+			targetProxy = 52B84A421BE1480800BC81F6 /* PBXContainerItemProxy */;
+		};
+		52B84A521BE1480800BC81F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B84A331BE1480700BC81F6 /* watchOS2 */;
+			targetProxy = 52B84A511BE1480800BC81F6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1225,6 +1485,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				521A5D2D1AFBC86900C27C54 /* zh-Hans */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		52B84A361BE1480700BC81F6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B84A371BE1480700BC81F6 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1246,6 +1514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "02b64188-e0d1-4a86-9c54-907bb41ac4df";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1267,6 +1536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "02b64188-e0d1-4a86-9c54-907bb41ac4df";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
 			};
@@ -1446,6 +1716,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.BusRider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "434431a8-03d9-4002-ae6a-788e61a16375";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1462,7 +1733,88 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.BusRider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "434431a8-03d9-4002-ae6a-788e61a16375";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		52B84A541BE1480800BC81F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = watchOS2_Extension;
+				INFOPLIST_FILE = watchOS2/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		52B84A551BE1480800BC81F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = watchOS2_Extension;
+				INFOPLIST_FILE = watchOS2/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		52B84A561BE1480800BC81F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "watchOS2 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		52B84A571BE1480800BC81F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "watchOS2 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1510,6 +1862,24 @@
 			buildConfigurations = (
 				52AB7A081A2E1982001904CA /* Debug */,
 				52AB7A091A2E1982001904CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B84A581BE1480800BC81F6 /* Build configuration list for PBXNativeTarget "watchOS2 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B84A561BE1480800BC81F6 /* Debug */,
+				52B84A571BE1480800BC81F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B84A5A1BE1480800BC81F6 /* Build configuration list for PBXNativeTarget "watchOS2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B84A541BE1480800BC81F6 /* Debug */,
+				52B84A551BE1480800BC81F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

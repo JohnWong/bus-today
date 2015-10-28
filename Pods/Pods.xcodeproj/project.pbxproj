@@ -8,31 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		01255D4342271147A9DB3198AF6FD564 /* UIWindow+AHKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D001FB98317C065944B69781B2B8D92B /* UIWindow+AHKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0704BBF8F15B6876AA94D9E38305550A /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F29CF9497DD6FDEDEFE51727C63046D3 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0704BBF8F15B6876AA94D9E38305550A /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		073E61CB02E41B90C1E66D4E7EE9B50E /* Appirater.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DCA00893BFC53C6719D53C3FA78473 /* Appirater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07B20FF1D72D3FF1DDA7C507F8A6C6ED /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F8F624C2F41E2CABCAE3EE4D3545C3 /* BarItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0855CAFA762071CA09970AA27AD25D59 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC1B21312684831ABEF7292F77AE972 /* AHKActionSheetViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0A1993862A3978709DCBBBF21807EDFC /* UINavigationController+SGProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F91CF7A1ACE75A8661BB0315AE4A9B /* UINavigationController+SGProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17DEEFEA0FEF5E722595C935929E9FCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		0CB5A2A4210F88AD3FEC5D0F06913CBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC42DE279FD68067F4E17B675974A0F /* Foundation.framework */; };
+		17DEEFEA0FEF5E722595C935929E9FCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		180B0E96CDBA9DB098407E8869022C43 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C9E18204712049399AC98279186B22 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1A2FEE4467C7BED3FF0B86A7D89A74C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		1A2FEE4467C7BED3FF0B86A7D89A74C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		1C28CBCF7DE6BC7351733C8C132F7F57 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 04F7213FF9A2FEEEB7EA916EBF7803BB /* th.lproj */; };
-		1CB4882C25F57147A3A27B0B56CD69C0 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C78A93719A6E1A9A33CC26DA767D /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1CB4882C25F57147A3A27B0B56CD69C0 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D73D4B2FC7759477BAADA326C606CED /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4992DDF67283FB7055429DF54BE122 /* Appirater.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1DCDF8FF00138CEE33EE77ACADC65A9B /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E09DCBB1420A8EFA7BDBD208C5081 /* ro.lproj */; };
+		24ACB9B6D652CCC4B1BC7A2D16FE23B6 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		274695BC3E6D40B932C4129EA7847787 /* Pods-Today-UIViewAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE1953E5BC78C11BA2EA3C97CC43B7 /* Pods-Today-UIViewAdditions-dummy.m */; };
 		2970A89E2830B6AB83F5CB84EA4C53B2 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A72F6642E58101262A6587AB43A0F433 /* nl.lproj */; };
 		2B85BEBEA2A3D1C91F932A4FBCD0BB16 /* Pods-BusRider-UIViewAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2987BE6E521B044A5CB2696CB14AD52F /* Pods-BusRider-UIViewAdditions-dummy.m */; };
-		2BA5905B97ECA3DDC803269C143AC3F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
-		2C082EF712016A78FBBD9B74ADD27F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		2BA5905B97ECA3DDC803269C143AC3F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
+		2C082EF712016A78FBBD9B74ADD27F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		2C4156D72C6C8956E3AAB01E64451094 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9F8F94D5B0C91CB3C4D682C7E8CD426F /* he.lproj */; };
 		2E30F615A3ADB024853A1CCED801663A /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 13A62538DAAB8E24699689D2A1557C7C /* pt-BR.lproj */; };
-		3287F4E2CA5C2038EA5035CE55C2A1BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		3287F4E2CA5C2038EA5035CE55C2A1BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		33E43877B43268EC14FE6B63D06C72C3 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AC03A15F416CD638ED21B41C7F65DCA3 /* ca.lproj */; };
 		33EDE4B8A8BF8632EB6FB8D614846970 /* CBStoreHouseRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F038A21070A453F8955801A3006BBC4 /* CBStoreHouseRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		376E63431F39890BE878707D5B203387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		376E63431F39890BE878707D5B203387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		3A4F887D25FA9FFCC66E415A22B04069 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A142948BB371BD707F9C67EE02B739C0 /* it.lproj */; };
-		3D3A324A0735C0269DCD234BFF019EDF /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B694D797A36242FAEB067ED3183F390 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */; };
+		3D3A324A0735C0269DCD234BFF019EDF /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2238AC1C08378D22E659B45DC4025918 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */; };
 		3E18A6E258B9225790F2AD1FE384C0E7 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 850BA82C2986AC3ECB50FFB52F34ECAF /* zh-Hans.lproj */; };
 		3E8C098A2D3452E868DD44DEA9565001 /* SGNavigationProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5750816373ACFF29E567CCADF9D5DA0B /* SGNavigationProgress-dummy.m */; };
 		3F1352E027830AFB13898A905C31AB22 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C446B549C9A57A6A8B2137B7F8489 /* UIImage+AHKAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -42,66 +44,70 @@
 		4B715E7B2B8EBE17948B137B036DBBEB /* AHKActionSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B612FE37F7DB3093FDBDE03C88138E81 /* AHKActionSheet-dummy.m */; };
 		4B7752114D0D75822CBC3F311B50DE92 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B27F572A83EB83FA5C5D3E86C785757 /* UIWindow+AHKAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4D3C45DA9E2407DAFB6D9574CA7C3C8E /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9DA176C6D5953E5EEEAD1F8A6905566C /* ko.lproj */; };
-		4E79B5D5BD70E09675E88928C73EF656 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C78A93719A6E1A9A33CC26DA767D /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E79B5D5BD70E09675E88928C73EF656 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4E8CB9BF65FA263B3361BDCF7619A7D9 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E69CFD7CEA19446C9FF5BD8D8B413B /* AHKActionSheet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5A68E65C18754393B8DA1C024CDFDC25 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C89AB7B916FEA830DC8BFD30658003DF /* tr.lproj */; };
-		5EEF294077F20F9982511151855AA071 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E9C029F3B884792CB48B4B4090EB44 /* SystemConfiguration.framework */; };
+		5EEF294077F20F9982511151855AA071 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EDE472DB2D375414D54B22269F6A6 /* SystemConfiguration.framework */; };
 		5FCD10F57832A310A5463E7D4EBFECBB /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEE548BE8A4A6BE13146B04AD27381 /* en.lproj */; };
 		6558A5BE27EFD9BA894970800A9F8AAE /* SGProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = F90D922694014901A9866DCF60ACB75E /* SGProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66A62800D2B82E7F4B405496978175DB /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EB7F75E535619B33CD1BBDC02C05D906 /* vi.lproj */; };
 		66A8A71A8FCFD92C0AF0FA586DB6D598 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 544FA4644842D68CD6A0926A21074F94 /* es.lproj */; };
-		670FC3951A44C1311C05B0ED9FAF0D60 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F29CF9497DD6FDEDEFE51727C63046D3 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		670FC3951A44C1311C05B0ED9FAF0D60 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CB5ACD2B36EF23D579DA6C79789D9BD /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70122D79C417C0178DE5797D05322D5C /* Appirater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 974C1983E6747D6080C0ED01C4ED9507 /* Appirater-dummy.m */; };
+		7719A0D93E11BF665C220A060869EAA8 /* Pods-watchOS2 Extension-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF99566910C5EEDBD3B0A4EEA1F37B7 /* Pods-watchOS2 Extension-STHTTPRequest-dummy.m */; };
 		77C17AD599F56EFFC00E28E18D5FD44C /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0AA64FD297AA1575D7C21FDCBF572 /* SGProgressView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7A977FE1E941A33CAF013FEE7ED41586 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3CD79CDD7FCE7A9B962228B72EA9ED44 /* pt.lproj */; };
 		7D5456B4FA2E9A73F8142DDAB564852C /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6013C4131751FEE9C8E07FEDDCC9B150 /* pl.lproj */; };
 		7ED1E2772880D3EEE5934A63136E079C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F74EC2D986F3181605B7BED3CF12C0C3 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7FA4943CBD20295217612D99841B8C49 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 561D8618FC956036A48BA8639A3516DF /* hu.lproj */; };
-		80BA181FC55DD395CBB8A754C33B4D58 /* Pods-Today-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD747C532ABC63C3048287076B45B4 /* Pods-Today-STHTTPRequest-dummy.m */; };
-		84EC0CC1470A65BD5F52A46F42F05849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
-		89A496FBDAC410A4FB9D695E787644E4 /* Pods-BusRider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5228835CE9B09CFC2A9F86278D122B /* Pods-BusRider-dummy.m */; };
+		80BA181FC55DD395CBB8A754C33B4D58 /* Pods-Today-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC94A0355E9988D06BBA004A82EC07B /* Pods-Today-STHTTPRequest-dummy.m */; };
+		84EC0CC1470A65BD5F52A46F42F05849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
+		89A496FBDAC410A4FB9D695E787644E4 /* Pods-BusRider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF984C9C571C91F058DD11C2D47572E6 /* Pods-BusRider-dummy.m */; };
 		8BB5E391F4ECF18A9083878B530CA3B7 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FDA257DC08F22578DF34AA67D56189AF /* uk.lproj */; };
-		8C2A8EC2C5EC28DFE7B0E2A7796B9ECE /* Pods-BusRider-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7FDA4A558095A59F2433F802F396F4 /* Pods-BusRider-STHTTPRequest-dummy.m */; };
+		8C2A8EC2C5EC28DFE7B0E2A7796B9ECE /* Pods-BusRider-STHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6523B85F4A1DAF149DA1EB2E01538181 /* Pods-BusRider-STHTTPRequest-dummy.m */; };
 		8CBADE666C7FBE38B18B48CC72081392 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D9CDCF5EA362845B99D4C619033E3BCF /* ja.lproj */; };
 		8CCE15F0BE0E2EEC690755052FB72D46 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0CC3156C64980E115ECF21107875DE /* SVProgressHUD-dummy.m */; };
 		8DA593CD428A5A7C3123B85899A0BC46 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 81A25165AEE4B12333EE3D0AF9C6371E /* de.lproj */; };
 		95B66291B76F3B7FDBE870792FA45B88 /* CBStoreHouseRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 721FFB1E90B1D34C1F44CD323594F469 /* CBStoreHouseRefreshControl-dummy.m */; };
 		965CEDEE45FEE426ED316143E1917C5D /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B71378405A5579F2EC6D95B0C48EEBE /* CBStoreHouseRefreshControl.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9A140556CC700FDB8B738A7EA2F59E9C /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F6D84986F527A6C656A6BAD5CBAA60DD /* da.lproj */; };
-		A188BECB70BEB46704B7ECF391C4B145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
-		A28CB9761DFC05BEBBB34C1E0E1CD2D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		A188BECB70BEB46704B7ECF391C4B145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
+		A28CB9761DFC05BEBBB34C1E0E1CD2D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		AB3286B42F47E0AC1237E46C4E50DF83 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5059B050120D2D65096CD252AD69DEF2 /* sk.lproj */; };
 		B0BE3847E7980903F5F32A9594529B7E /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD1097329CCBD866648EFDB4478E5A9 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2F2EB36A54ABD521643C3589ECC55CF /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 484CFCBAD80E562B87F6B755DB650B2A /* ru.lproj */; };
 		B84F3E64803B61A4948C4881BA921697 /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70960BEAA7302BD591170D1FF4785F26 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBCD1A89FB41650D4943B447D955A6D4 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CF513ADD57E20AB6B378DD0F669C6FB9 /* cs.lproj */; };
-		BD08D91EA03F8EF142376FBDC6354882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		BD08D91EA03F8EF142376FBDC6354882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		BE13936C401538C22111ADCB2E02EF76 /* AppiraterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 082F338D72453B995E8F9CFF195E70BC /* AppiraterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3905F6800DA3FC306FA3D3705FA1B75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
-		CA3C0BD5E25C54CDBDAEA015C2038DA2 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B540E1583C971DECCFD042B55012ED /* Pods-BusRider WatchKit Extension-dummy.m */; };
+		C3905F6800DA3FC306FA3D3705FA1B75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
+		CA3C0BD5E25C54CDBDAEA015C2038DA2 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A016F54189978DCF51412124358D727 /* Pods-BusRider WatchKit Extension-dummy.m */; };
 		CD4522554BABE5F9160558723BB89E6B /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C361BCD254779841380D7E34A5A526AE /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE4A61B20044BAFE022DC0400F262DC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		CE4A61B20044BAFE022DC0400F262DC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		CE8E4A6D7A224B4CD8AEDCE93796DF86 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AB01BF8BC41133C3A1E8D58698928C6 /* id.lproj */; };
-		D1E821C665F3AEA08A5A395A05DDDACD /* Pods-Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8158E6C01777013F16164DE792F3FED2 /* Pods-Today-dummy.m */; };
+		D1E821C665F3AEA08A5A395A05DDDACD /* Pods-Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A253327C6BADB543BFD0B46AF7F94A /* Pods-Today-dummy.m */; };
 		D4064CEA24A0F41563818BF608F256CB /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 99A40755B69C668E23F415BCDF75CEB9 /* el.lproj */; };
 		D86839B776D2DCCF99F39C55538A8696 /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F240E973A2343668C7B741D45FF90BED /* ar.lproj */; };
 		D8F56ECF8A4D1F4D92EC8F07E9688262 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C834E0F1C6697EBAC1B7030AAD934462 /* fi.lproj */; };
+		DD1D2E8E8E47F62BBA0421E8435FDCFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC42DE279FD68067F4E17B675974A0F /* Foundation.framework */; };
 		DF7A82BFC2441F21BE348080008A8FFB /* AHKActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 78BCFB852494E4E8F1423C747E72756C /* AHKActionSheetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E198F2D77F43012C32FD4787895D16BD /* AHKActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FD282799BB37706907DEC59999EA0F /* AHKActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E40EAE2F21A9FD229E25027E9AF5FBAE /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 494358B0F20586073F4A943027B306FA /* fr.lproj */; };
 		E6483EF33E7186CBFC6DEA2272D4CFC8 /* UIImage+AHKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A9B7DD4F45C419DD13A7CA46A39400 /* UIImage+AHKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7E252D8E0C7F0030C963A69D9B0F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BB135446AEC5CCF308FA6DF9D848BC /* QuartzCore.framework */; };
-		E81A205F53F46CA880264B366B1CBBA3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9CEED18F370EEADF3BB8F177B80D0 /* CFNetwork.framework */; };
-		E94233F62EDE251A85CEF5ECE5244188 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F29CF9497DD6FDEDEFE51727C63046D3 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED580A8959A0F469D9EDE77ACB843008 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C78A93719A6E1A9A33CC26DA767D /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EF6DD63CC425576CB368224B0FEA1986 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BB135446AEC5CCF308FA6DF9D848BC /* QuartzCore.framework */; };
+		E7E252D8E0C7F0030C963A69D9B0F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */; };
+		E81A205F53F46CA880264B366B1CBBA3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22DA19CC02A58FF16944223382D1D51 /* CFNetwork.framework */; };
+		E94233F62EDE251A85CEF5ECE5244188 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB00201A590229E58B1EE4B32C99B007 /* Pods-watchOS2 Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F44403CB93ACBD56966059D91172F759 /* Pods-watchOS2 Extension-dummy.m */; };
+		ED580A8959A0F469D9EDE77ACB843008 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF6DD63CC425576CB368224B0FEA1986 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */; };
 		F0BA5F0B4C595A7F8BBBD1E7CEBA36F5 /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70960BEAA7302BD591170D1FF4785F26 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4E3AE09A6F8A1A1B8C56AAA0E767855 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0ACE6492D0C7FA5C0873349962A27C3F /* sv.lproj */; };
 		F78670DC9046195E328610756E91CA91 /* BarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7D6F999D0DA69CF46E59C2D3E6F56A /* BarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9DC108D15BB927A17DBAD9269083EAB /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CCC6CAB9F9E3240838750CBFFBE663 /* UINavigationController+SGProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FADB6D2BD4BE7FF9409B9449BD2D7012 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D22C0FB009C66B709802B4EA5293C3EA /* zh-Hant.lproj */; };
 		FB8112DD89A0C83DCC4F255FB19FAD24 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C9E18204712049399AC98279186B22 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FE9D4698B735AE8997DFA86FF8FB07CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */; };
+		FE9D4698B735AE8997DFA86FF8FB07CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +153,13 @@
 			remoteGlobalIDString = FEFE8707F3095D314478A361A555D591;
 			remoteInfo = SGNavigationProgress;
 		};
+		7BC74DB81F8A20E808831E1BD7A6B932 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF51F7917DE29E39FB7C1072CF439AB1;
+			remoteInfo = "Pods-watchOS2 Extension-STHTTPRequest";
+		};
 		8E5FA8735AE471307C5217FFAC8BF1C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -185,81 +198,89 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005BA18266FD46182580838F05398DB1 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		042BF444C7CBF5EEF82064858F0929BE /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		04CCC6CAB9F9E3240838750CBFFBE663 /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+SGProgress.m"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
 		04F7213FF9A2FEEEB7EA916EBF7803BB /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = th.lproj; sourceTree = "<group>"; };
+		05FB29D0F5BE7FCB585F3E75DD2AAD60 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FF8EF4A589CF8DF81B9F1F561E2C8F /* Pods-watchOS2 Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-watchOS2 Extension-resources.sh"; sourceTree = "<group>"; };
 		082F338D72453B995E8F9CFF195E70BC /* AppiraterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
-		09CF48085C2DEB8E1624044913B47F76 /* libAHKActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAHKActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A7756B2038D335D8DE1A9D367C89AA2 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		0A7EDE472DB2D375414D54B22269F6A6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		0ACE6492D0C7FA5C0873349962A27C3F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = sv.lproj; sourceTree = "<group>"; };
 		0B27F572A83EB83FA5C5D3E86C785757 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+AHKAdditions.m"; path = "Classes/UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
+		0CF99566910C5EEDBD3B0A4EEA1F37B7 /* Pods-watchOS2 Extension-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-watchOS2 Extension-STHTTPRequest-dummy.m"; path = "../Pods-watchOS2 Extension-STHTTPRequest/Pods-watchOS2 Extension-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		0EA5E1B01648FC5803C6E7781D208F11 /* Pods-BusRider-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BusRider-STHTTPRequest-prefix.pch"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
 		116D35C898816A943F6B5084E8CB752F /* AHKActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHKActionSheet-prefix.pch"; sourceTree = "<group>"; };
 		13A62538DAAB8E24699689D2A1557C7C /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "pt-BR.lproj"; sourceTree = "<group>"; };
 		16B62D5561656A3C38FEB0C44ED20E07 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		16FCB21468C77413348525BB595A783C /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		181A6185FBDFB2A0393FA33F132C0780 /* Pods-BusRider-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-frameworks.sh"; sourceTree = "<group>"; };
 		19F0AA64FD297AA1575D7C21FDCBF572 /* SGProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SGProgressView.m; path = "SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.m"; sourceTree = "<group>"; };
-		1BB3B6C37563ADF8DCC1D0891413212D /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EBCAE06C77F5093F520CC4C73C382FD /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
+		21E6BA8D4FB70AB5AF38B939A8BBF650 /* libAHKActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAHKActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2238AC1C08378D22E659B45DC4025918 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		295942E3FDD7A180ED21D8A49A7D66D7 /* libPods-watchOS2 Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-watchOS2 Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2987BE6E521B044A5CB2696CB14AD52F /* Pods-BusRider-UIViewAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-UIViewAdditions-dummy.m"; sourceTree = "<group>"; };
 		2AB01BF8BC41133C3A1E8D58698928C6 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = id.lproj; sourceTree = "<group>"; };
 		2ACE1953E5BC78C11BA2EA3C97CC43B7 /* Pods-Today-UIViewAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Today-UIViewAdditions-dummy.m"; path = "../Pods-Today-UIViewAdditions/Pods-Today-UIViewAdditions-dummy.m"; sourceTree = "<group>"; };
 		2AFEE548BE8A4A6BE13146B04AD27381 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
-		2E0AC1CDB3529B42191C0C810F2AAF32 /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
-		2E8810656BFD97CB182D1A2266723197 /* Pods-Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Today-acknowledgements.markdown"; sourceTree = "<group>"; };
-		31BD747C532ABC63C3048287076B45B4 /* Pods-Today-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Today-STHTTPRequest-dummy.m"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
-		39AF2951EA2B55A142EA4755BC7207CC /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA71AA47474EDA36CE13B4632933BED /* Pods-BusRider WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		2F8EB42328F15CC711237099D6B4E760 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		310BF4D1BEB350DC0BA75D58F1F3DA75 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C394B3D5B055A74C280BF63A2556EC /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		372057B4C04B8BB24A7B28EBC920DCDC /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
+		37EE48DE222FD68283E2FDA4D6BB8800 /* Pods-Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-resources.sh"; sourceTree = "<group>"; };
 		3C4E09DCBB1420A8EFA7BDBD208C5081 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ro.lproj; sourceTree = "<group>"; };
+		3CA25EB28223728E590C18BF5DFD7121 /* Pods-Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		3CD79CDD7FCE7A9B962228B72EA9ED44 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pt.lproj; sourceTree = "<group>"; };
 		3D4992DDF67283FB7055429DF54BE122 /* Appirater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
-		3F18C78A93719A6E1A9A33CC26DA767D /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
+		3D9F6F7F0EC285BA034306FE455DC8DD /* libPods-BusRider-UIViewAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-UIViewAdditions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		406BE42E5731565D1B52F0C090803179 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		44C9E18204712049399AC98279186B22 /* UIView+RSAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+RSAdditions.m"; path = "UIViewAdditions/Classes/UIView+RSAdditions.m"; sourceTree = "<group>"; };
 		484CFCBAD80E562B87F6B755DB650B2A /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ru.lproj; sourceTree = "<group>"; };
-		48BD5375F222D523B0491EC82ADD569B /* libPods-BusRider-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494358B0F20586073F4A943027B306FA /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fr.lproj; sourceTree = "<group>"; };
-		4C50C627FB6CA433E04E67C2DEF2CF84 /* Pods-BusRider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider-acknowledgements.plist"; sourceTree = "<group>"; };
-		4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4C4069ED135BE68E928D0FF4FC3197B9 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		4CF520B70301C46795F4A717791017A9 /* Pods-BusRider-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-resources.sh"; sourceTree = "<group>"; };
+		4D5EF5C1FDE1E85B8EE1199F186DFEEC /* libPods-BusRider-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7B02B26AE156B1263982840B8A716C /* AHKActionSheet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHKActionSheet.xcconfig; sourceTree = "<group>"; };
 		4EE34C3531971E4ADAF7DE029DB65ED4 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		5059B050120D2D65096CD252AD69DEF2 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = sk.lproj; sourceTree = "<group>"; };
-		51E443E4A496DB66A5C16510AF00F02C /* libPods-Today-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		510974AA3E3306C3AA705A196E22BF8C /* Pods-watchOS2 Extension-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS2 Extension-STHTTPRequest.xcconfig"; path = "../Pods-watchOS2 Extension-STHTTPRequest/Pods-watchOS2 Extension-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
+		5112A87BF8C68D58D414D7C87C8F28B3 /* Pods-watchOS2 Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchOS2 Extension.release.xcconfig"; sourceTree = "<group>"; };
 		53DCA00893BFC53C6719D53C3FA78473 /* Appirater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		544FA4644842D68CD6A0926A21074F94 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = es.lproj; sourceTree = "<group>"; };
-		54BB135446AEC5CCF308FA6DF9D848BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		5456A99A59BB0E0DED5056F9CFA367C0 /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		561D8618FC956036A48BA8639A3516DF /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = hu.lproj; sourceTree = "<group>"; };
-		566E64791F2F9F1865E2522DCB8830FF /* libPods-Today-UIViewAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today-UIViewAdditions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5750816373ACFF29E567CCADF9D5DA0B /* SGNavigationProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGNavigationProgress-dummy.m"; sourceTree = "<group>"; };
-		58B540E1583C971DECCFD042B55012ED /* Pods-BusRider WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
-		5B694D797A36242FAEB067ED3183F390 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		57F963481E9379675419981D450CFAF3 /* Pods-BusRider WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
 		5B71378405A5579F2EC6D95B0C48EEBE /* CBStoreHouseRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBStoreHouseRefreshControl.m; path = Class/CBStoreHouseRefreshControl.m; sourceTree = "<group>"; };
 		5DC1B21312684831ABEF7292F77AE972 /* AHKActionSheetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AHKActionSheetViewController.m; path = Classes/AHKActionSheetViewController.m; sourceTree = "<group>"; };
 		6013C4131751FEE9C8E07FEDDCC9B150 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pl.lproj; sourceTree = "<group>"; };
-		6567CE71F4F2B3EED1A1393792D5B7C0 /* Pods-BusRider WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
-		66EBB74BCA7BDCAD26669C42C9FACF36 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6523B85F4A1DAF149DA1EB2E01538181 /* Pods-BusRider-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BusRider-STHTTPRequest-dummy.m"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
 		670C446B549C9A57A6A8B2137B7F8489 /* UIImage+AHKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AHKAdditions.m"; path = "Classes/UIImage+AHKAdditions.m"; sourceTree = "<group>"; };
-		6C632A9F086A905AF650C8811BD9924C /* Pods-Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Today-acknowledgements.plist"; sourceTree = "<group>"; };
-		6D5228835CE9B09CFC2A9F86278D122B /* Pods-BusRider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-dummy.m"; sourceTree = "<group>"; };
+		6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
 		6E7D6F999D0DA69CF46E59C2D3E6F56A /* BarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarItem.h; path = Class/BarItem.h; sourceTree = "<group>"; };
+		6F897BA27AC0892FD26D6C8426B8F269 /* Pods-watchOS2 Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-watchOS2 Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7027DFE5327F50FE11DCD0B93D7E2762 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "Reveal-Framework-1.5.1/Reveal.framework"; sourceTree = "<group>"; };
 		70960BEAA7302BD591170D1FF4785F26 /* UIView+RSAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+RSAdditions.h"; path = "UIViewAdditions/Classes/UIView+RSAdditions.h"; sourceTree = "<group>"; };
 		721FFB1E90B1D34C1F44CD323594F469 /* CBStoreHouseRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CBStoreHouseRefreshControl-dummy.m"; sourceTree = "<group>"; };
+		72A253327C6BADB543BFD0B46AF7F94A /* Pods-Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Today-dummy.m"; sourceTree = "<group>"; };
+		7433462C581EE9B8F2BE600F34974BC9 /* Pods-Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Today-acknowledgements.markdown"; sourceTree = "<group>"; };
+		755CA471D4D85318351A0E58B46D432B /* libAppirater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppirater.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A07E7B87D7F3FD35F9086FA355278E /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
 		76C5480B87DA9EF0225D8FAA9128AF74 /* Pods-BusRider-UIViewAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider-UIViewAdditions.xcconfig"; sourceTree = "<group>"; };
 		78BCFB852494E4E8F1423C747E72756C /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AHKActionSheetViewController.h; path = Classes/AHKActionSheetViewController.h; sourceTree = "<group>"; };
-		78E10E02F32081A7AFF4D64965361338 /* Pods-Today-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-frameworks.sh"; sourceTree = "<group>"; };
+		793A86E2F6E03AAEC0A250E77CC5C3DB /* Pods-Today-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-STHTTPRequest.xcconfig"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
+		798631AE386CF4B95217AEC7D54E9089 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		7BD1097329CCBD866648EFDB4478E5A9 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		8158E6C01777013F16164DE792F3FED2 /* Pods-Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Today-dummy.m"; sourceTree = "<group>"; };
+		807104458C0AD72F6F7DF5D5DA397BBC /* libPods-Today-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A25165AEE4B12333EE3D0AF9C6371E /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
-		8255A9EC519994F3CF061623600159CA /* Pods-Today-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-STHTTPRequest.xcconfig"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
 		82A9B7DD4F45C419DD13A7CA46A39400 /* UIImage+AHKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AHKAdditions.h"; path = "Classes/UIImage+AHKAdditions.h"; sourceTree = "<group>"; };
-		850054639AEAF8CF54C3AE7FC434A511 /* libCBStoreHouseRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCBStoreHouseRefreshControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		850BA82C2986AC3ECB50FFB52F34ECAF /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
-		87B3D2282E1C9F6D2360179E9FD70C8D /* Pods-BusRider-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-resources.sh"; sourceTree = "<group>"; };
+		856278BD152105D0A9866A7C9AFA5BB9 /* libPods-watchOS2 Extension-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-watchOS2 Extension-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		890EE23E7757DEEEC7D3C4E6FAF77E22 /* libCBStoreHouseRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCBStoreHouseRefreshControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A016F54189978DCF51412124358D727 /* Pods-BusRider WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		8CD4AC22E270422210F66AB8C4B48472 /* CBStoreHouseRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBStoreHouseRefreshControl-prefix.pch"; sourceTree = "<group>"; };
+		8EB8E308883F79811DC967BB7857C2B3 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC42DE279FD68067F4E17B675974A0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8FDFF8907C7C70D496C662875618382A /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ms.lproj; sourceTree = "<group>"; };
-		90D683B203069B3E630FE8B7759E6498 /* Pods-BusRider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider-acknowledgements.markdown"; sourceTree = "<group>"; };
 		90F91CF7A1ACE75A8661BB0315AE4A9B /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+SGProgress.h"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
+		935BCA320377C08A12BC7CF7444604FA /* Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
 		965A0DCFD4142D82F809BF44F89893BF /* CBStoreHouseRefreshControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBStoreHouseRefreshControl.xcconfig; sourceTree = "<group>"; };
 		974922F746156049CB1C7E1E3A67E13A /* Pods-Today-UIViewAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Today-UIViewAdditions-prefix.pch"; path = "../Pods-Today-UIViewAdditions/Pods-Today-UIViewAdditions-prefix.pch"; sourceTree = "<group>"; };
 		974C1983E6747D6080C0ED01C4ED9507 /* Appirater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Appirater-dummy.m"; sourceTree = "<group>"; };
@@ -271,51 +292,56 @@
 		9F038A21070A453F8955801A3006BBC4 /* CBStoreHouseRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBStoreHouseRefreshControl.h; path = Class/CBStoreHouseRefreshControl.h; sourceTree = "<group>"; };
 		9F8F94D5B0C91CB3C4D682C7E8CD426F /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = he.lproj; sourceTree = "<group>"; };
 		A142948BB371BD707F9C67EE02B739C0 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = it.lproj; sourceTree = "<group>"; };
+		A20664FC0BED9CB65EFED7A38D754039 /* Pods-watchOS2 Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-watchOS2 Extension-frameworks.sh"; sourceTree = "<group>"; };
 		A72F6642E58101262A6587AB43A0F433 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = nl.lproj; sourceTree = "<group>"; };
-		A74499D33EEEFA9ACDCDA3B8A9F92D2F /* Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
-		A984F5D672B77C5D7258FE652725FEE6 /* Pods-Today-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Today-STHTTPRequest-prefix.pch"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
 		AC03A15F416CD638ED21B41C7F65DCA3 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ca.lproj; sourceTree = "<group>"; };
-		ACC90A0075EADF13D5F5041905C14D17 /* Pods-BusRider WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
-		AE4833A07FFFDFF78B21395C2B1B4295 /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Appirater.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7FDA4A558095A59F2433F802F396F4 /* Pods-BusRider-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BusRider-STHTTPRequest-dummy.m"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
-		B33BCE954E7404E59AF4AEBD474D2477 /* libAppirater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppirater.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6A0BEB14476783E092757D3479B1F8 /* Pods-BusRider-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider-STHTTPRequest.xcconfig"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
+		B1AC8B8822F5294E4D0891E1E9C54FAA /* Pods-watchOS2 Extension-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-watchOS2 Extension-STHTTPRequest-prefix.pch"; path = "../Pods-watchOS2 Extension-STHTTPRequest/Pods-watchOS2 Extension-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
+		B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B5B66A24A6906E0402CA10D5E65813B2 /* Appirater.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Appirater.xcconfig; sourceTree = "<group>"; };
+		B5CFB202E5A6430FC5513818211BDC9B /* libPods-Today-UIViewAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today-UIViewAdditions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B612FE37F7DB3093FDBDE03C88138E81 /* AHKActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHKActionSheet-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BD5E009C2D5E7ACF31A41231C818271E /* Pods-Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-resources.sh"; sourceTree = "<group>"; };
-		BE119521959288E1511CB6CD46DC5281 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
-		BED54392ACE2D66D3EE5811F989F6917 /* libPods-BusRider-UIViewAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider-UIViewAdditions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE63E8DB35C606A3105880C2041E253 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C060B9E488D92FBB454C1AA794781F2F /* Pods-BusRider WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C361BCD254779841380D7E34A5A526AE /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C371C860429B5DA1D7C8EA0EE1E1F332 /* Pods-BusRider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C3FD282799BB37706907DEC59999EA0F /* AHKActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AHKActionSheet.h; path = Classes/AHKActionSheet.h; sourceTree = "<group>"; };
-		C778162E9556C445CAFBBA8025994CDC /* libSGNavigationProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGNavigationProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C79C9FF534A8B1EF08E5DB79072219 /* Pods-watchOS2 Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-watchOS2 Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		C834E0F1C6697EBAC1B7030AAD934462 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fi.lproj; sourceTree = "<group>"; };
+		C87907BC19F887E9D5243670C36216FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C89AB7B916FEA830DC8BFD30658003DF /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = tr.lproj; sourceTree = "<group>"; };
-		CD15EA575D93A302F5B20DC4AA312C3B /* Pods-BusRider WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		CB54D0584285774ADB7FE09F335260EE /* libSGNavigationProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGNavigationProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF513ADD57E20AB6B378DD0F669C6FB9 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = cs.lproj; sourceTree = "<group>"; };
 		D001FB98317C065944B69781B2B8D92B /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+AHKAdditions.h"; path = "Classes/UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
 		D2110A4F5F736C4B8963B6FC3CE53B25 /* SGNavigationProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGNavigationProgress-prefix.pch"; sourceTree = "<group>"; };
 		D22C0FB009C66B709802B4EA5293C3EA /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "zh-Hant.lproj"; sourceTree = "<group>"; };
-		D5E9CEED18F370EEADF3BB8F177B80D0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D22DA19CC02A58FF16944223382D1D51 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
 		D9CDCF5EA362845B99D4C619033E3BCF /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ja.lproj; sourceTree = "<group>"; };
-		DE8263E770A6D12ECA5E824A389662D9 /* Pods-BusRider WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E21DB37DD4BD4A23ED39CDF03BD9F99A /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension-STHTTPRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E390348DC7FAF237327AB6C047262384 /* Pods-BusRider-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BusRider-STHTTPRequest-prefix.pch"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
+		DAB1BDC951F8C84B6841032DD8D87112 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		DF984C9C571C91F058DD11C2D47572E6 /* Pods-BusRider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-dummy.m"; sourceTree = "<group>"; };
+		E04264A502F50A858516FED235D249DB /* Pods-BusRider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider-acknowledgements.plist"; sourceTree = "<group>"; };
+		E282B05CD31A2C192A8562438CF8C8E0 /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Appirater.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E03B46F15A5DFA4166035384314631 /* SGNavigationProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SGNavigationProgress.xcconfig; sourceTree = "<group>"; };
-		E8E9C029F3B884792CB48B4B4090EB44 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		E86CBEF39C4120C9D91D1C2EFFAE37D6 /* Pods-Today-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-frameworks.sh"; sourceTree = "<group>"; };
+		E8D5B1237EC0569D186A02F930F19C8E /* Pods-watchOS2 Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-watchOS2 Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		EAFA12F64C641F8050F5320218814713 /* Pods-BusRider-UIViewAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusRider-UIViewAdditions-prefix.pch"; sourceTree = "<group>"; };
 		EB7F75E535619B33CD1BBDC02C05D906 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = vi.lproj; sourceTree = "<group>"; };
+		EBC94A0355E9988D06BBA004A82EC07B /* Pods-Today-STHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Today-STHTTPRequest-dummy.m"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		EDDE948A75686A3E787DD6ACFC17A7EF /* Pods-Today-STHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Today-STHTTPRequest-prefix.pch"; path = "../Pods-Today-STHTTPRequest/Pods-Today-STHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
 		EEB696EC5C5A81E7CDEFB645591C5E2A /* Pods-Today-UIViewAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-UIViewAdditions.xcconfig"; path = "../Pods-Today-UIViewAdditions/Pods-Today-UIViewAdditions.xcconfig"; sourceTree = "<group>"; };
 		F240E973A2343668C7B741D45FF90BED /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ar.lproj; sourceTree = "<group>"; };
-		F29CF9497DD6FDEDEFE51727C63046D3 /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
 		F3F8F624C2F41E2CABCAE3EE4D3545C3 /* BarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarItem.m; path = Class/BarItem.m; sourceTree = "<group>"; };
+		F44403CB93ACBD56966059D91172F759 /* Pods-watchOS2 Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-watchOS2 Extension-dummy.m"; sourceTree = "<group>"; };
 		F4D3B34CA7F6FAD318FB4149B6932D2F /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = nb.lproj; sourceTree = "<group>"; };
+		F628687976211B9579F0C987A499490C /* Pods-BusRider WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
 		F6D84986F527A6C656A6BAD5CBAA60DD /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = da.lproj; sourceTree = "<group>"; };
-		F6FEC37A67CFB148E25365E545142529 /* Pods-BusRider-STHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider-STHTTPRequest.xcconfig"; path = "../Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest.xcconfig"; sourceTree = "<group>"; };
 		F74EC2D986F3181605B7BED3CF12C0C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		F78D11A19358FA7BAFB78866721F63B5 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E69CFD7CEA19446C9FF5BD8D8B413B /* AHKActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AHKActionSheet.m; path = Classes/AHKActionSheet.m; sourceTree = "<group>"; };
 		F90D922694014901A9866DCF60ACB75E /* SGProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGProgressView.h; path = "SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.h"; sourceTree = "<group>"; };
 		F9433B81243114DCC8B1078A21B7122D /* Appirater-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-prefix.pch"; sourceTree = "<group>"; };
+		FD450451F52D2D487CEE5DC4F5B19710 /* Pods-BusRider-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-frameworks.sh"; sourceTree = "<group>"; };
 		FDA257DC08F22578DF34AA67D56189AF /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = uk.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +386,14 @@
 			files = (
 				2C082EF712016A78FBBD9B74ADD27F33 /* Foundation.framework in Frameworks */,
 				EF6DD63CC425576CB368224B0FEA1986 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62C0D04B37C3DCFB0EBAD854C554FDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1D2E8E8E47F62BBA0421E8435FDCFF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +452,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4300648C396DBD550FF4CC81986EE58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CB5A2A4210F88AD3FEC5D0F06913CBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9B2A0E81C8325EE4C4677D0BE5CE85E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,61 +480,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0226545007783443F3D4D26307CA565D /* Support Files */ = {
+		004A5955CF955CB6E98E76EBD39D0D2D /* Pods-BusRider */ = {
 			isa = PBXGroup;
 			children = (
-				2E0AC1CDB3529B42191C0C810F2AAF32 /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */,
-				5B694D797A36242FAEB067ED3183F390 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */,
-				A74499D33EEEFA9ACDCDA3B8A9F92D2F /* Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch */,
-				F6FEC37A67CFB148E25365E545142529 /* Pods-BusRider-STHTTPRequest.xcconfig */,
-				AE7FDA4A558095A59F2433F802F396F4 /* Pods-BusRider-STHTTPRequest-dummy.m */,
-				E390348DC7FAF237327AB6C047262384 /* Pods-BusRider-STHTTPRequest-prefix.pch */,
-				8255A9EC519994F3CF061623600159CA /* Pods-Today-STHTTPRequest.xcconfig */,
-				31BD747C532ABC63C3048287076B45B4 /* Pods-Today-STHTTPRequest-dummy.m */,
-				A984F5D672B77C5D7258FE652725FEE6 /* Pods-Today-STHTTPRequest-prefix.pch */,
+				C371C860429B5DA1D7C8EA0EE1E1F332 /* Pods-BusRider-acknowledgements.markdown */,
+				E04264A502F50A858516FED235D249DB /* Pods-BusRider-acknowledgements.plist */,
+				DF984C9C571C91F058DD11C2D47572E6 /* Pods-BusRider-dummy.m */,
+				FD450451F52D2D487CEE5DC4F5B19710 /* Pods-BusRider-frameworks.sh */,
+				4CF520B70301C46795F4A717791017A9 /* Pods-BusRider-resources.sh */,
+				31C394B3D5B055A74C280BF63A2556EC /* Pods-BusRider.debug.xcconfig */,
+				372057B4C04B8BB24A7B28EBC920DCDC /* Pods-BusRider.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BusRider WatchKit Extension-STHTTPRequest";
-			sourceTree = "<group>";
-		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B5D4D94BE87AED7AE02F5FBC9BA7B27 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		15BEA501BA3843CF768E37918302C1E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AE4833A07FFFDFF78B21395C2B1B4295 /* Appirater.bundle */,
-				09CF48085C2DEB8E1624044913B47F76 /* libAHKActionSheet.a */,
-				B33BCE954E7404E59AF4AEBD474D2477 /* libAppirater.a */,
-				850054639AEAF8CF54C3AE7FC434A511 /* libCBStoreHouseRefreshControl.a */,
-				F78D11A19358FA7BAFB78866721F63B5 /* libPods-BusRider.a */,
-				1BB3B6C37563ADF8DCC1D0891413212D /* libPods-BusRider WatchKit Extension.a */,
-				E21DB37DD4BD4A23ED39CDF03BD9F99A /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */,
-				48BD5375F222D523B0491EC82ADD569B /* libPods-BusRider-STHTTPRequest.a */,
-				BED54392ACE2D66D3EE5811F989F6917 /* libPods-BusRider-UIViewAdditions.a */,
-				16FCB21468C77413348525BB595A783C /* libPods-Today.a */,
-				51E443E4A496DB66A5C16510AF00F02C /* libPods-Today-STHTTPRequest.a */,
-				566E64791F2F9F1865E2522DCB8830FF /* libPods-Today-UIViewAdditions.a */,
-				C778162E9556C445CAFBBA8025994CDC /* libSGNavigationProgress.a */,
-				005BA18266FD46182580838F05398DB1 /* libSVProgressHUD.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1B5D4D94BE87AED7AE02F5FBC9BA7B27 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D5E9CEED18F370EEADF3BB8F177B80D0 /* CFNetwork.framework */,
-				4D61EEE303E0BEE1234857E913433C12 /* Foundation.framework */,
-				54BB135446AEC5CCF308FA6DF9D848BC /* QuartzCore.framework */,
-				E8E9C029F3B884792CB48B4B4090EB44 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
+			name = "Pods-BusRider";
+			path = "Target Support Files/Pods-BusRider";
 			sourceTree = "<group>";
 		};
 		1E1CF977E9B7C056F4284300168B28E2 /* AHKActionSheet */ = {
@@ -511,21 +511,6 @@
 			path = AHKActionSheet;
 			sourceTree = "<group>";
 		};
-		1ED7573A6592164B101A63C615730EDF /* Pods-BusRider WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				DE8263E770A6D12ECA5E824A389662D9 /* Pods-BusRider WatchKit Extension-acknowledgements.markdown */,
-				CD15EA575D93A302F5B20DC4AA312C3B /* Pods-BusRider WatchKit Extension-acknowledgements.plist */,
-				58B540E1583C971DECCFD042B55012ED /* Pods-BusRider WatchKit Extension-dummy.m */,
-				6567CE71F4F2B3EED1A1393792D5B7C0 /* Pods-BusRider WatchKit Extension-frameworks.sh */,
-				ACC90A0075EADF13D5F5041905C14D17 /* Pods-BusRider WatchKit Extension-resources.sh */,
-				042BF444C7CBF5EEF82064858F0929BE /* Pods-BusRider WatchKit Extension.debug.xcconfig */,
-				66EBB74BCA7BDCAD26669C42C9FACF36 /* Pods-BusRider WatchKit Extension.release.xcconfig */,
-			);
-			name = "Pods-BusRider WatchKit Extension";
-			path = "Target Support Files/Pods-BusRider WatchKit Extension";
-			sourceTree = "<group>";
-		};
 		26934C99A4DED5172F57CDB8FEAF9AA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,7 +519,7 @@
 				41789B60C66E1915D0EED12E211D0EDB /* CBStoreHouseRefreshControl */,
 				C5387DF71893D3C3EA580BD1BE597367 /* Reveal-iOS-SDK */,
 				3C4F5715F40C3FE474768737153A0ECA /* SGNavigationProgress */,
-				600411A1F20733A0FED52A90FAEE1D32 /* STHTTPRequest */,
+				35239186548ABA7F348A6F4B4266C85A /* STHTTPRequest */,
 				80F3693CA9C23F2CD2F8F4042F149325 /* SVProgressHUD */,
 				9E9235F38A1BE0ACBF141A1B382187B0 /* UIViewAdditions */,
 				7CEEE7D55956ABE072A7AA4DD4BE30A8 /* UMengAnalytics */,
@@ -581,6 +566,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		35239186548ABA7F348A6F4B4266C85A /* STHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */,
+				6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */,
+				81E0C311636881028372A5EB3B26D972 /* Support Files */,
+			);
+			path = STHTTPRequest;
+			sourceTree = "<group>";
+		};
 		3C4F5715F40C3FE474768737153A0ECA /* SGNavigationProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +611,21 @@
 			path = "../Target Support Files/AHKActionSheet";
 			sourceTree = "<group>";
 		};
+		53FA6D872371AA64BB1B4D3072D16A8A /* Pods-BusRider WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C060B9E488D92FBB454C1AA794781F2F /* Pods-BusRider WatchKit Extension-acknowledgements.markdown */,
+				2CA71AA47474EDA36CE13B4632933BED /* Pods-BusRider WatchKit Extension-acknowledgements.plist */,
+				8A016F54189978DCF51412124358D727 /* Pods-BusRider WatchKit Extension-dummy.m */,
+				57F963481E9379675419981D450CFAF3 /* Pods-BusRider WatchKit Extension-frameworks.sh */,
+				F628687976211B9579F0C987A499490C /* Pods-BusRider WatchKit Extension-resources.sh */,
+				4C4069ED135BE68E928D0FF4FC3197B9 /* Pods-BusRider WatchKit Extension.debug.xcconfig */,
+				798631AE386CF4B95217AEC7D54E9089 /* Pods-BusRider WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-BusRider WatchKit Extension";
+			path = "Target Support Files/Pods-BusRider WatchKit Extension";
+			sourceTree = "<group>";
+		};
 		59ABD9738FA6BB791C399CA4D0013A4A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,14 +651,24 @@
 			path = "../Target Support Files/SVProgressHUD";
 			sourceTree = "<group>";
 		};
-		600411A1F20733A0FED52A90FAEE1D32 /* STHTTPRequest */ = {
+		725E9D5DB3CD00C73FDE292C7C25FA15 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F29CF9497DD6FDEDEFE51727C63046D3 /* STHTTPRequest.h */,
-				3F18C78A93719A6E1A9A33CC26DA767D /* STHTTPRequest.m */,
-				0226545007783443F3D4D26307CA565D /* Support Files */,
+				D22DA19CC02A58FF16944223382D1D51 /* CFNetwork.framework */,
+				C87907BC19F887E9D5243670C36216FD /* Foundation.framework */,
+				B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */,
+				0A7EDE472DB2D375414D54B22269F6A6 /* SystemConfiguration.framework */,
 			);
-			path = STHTTPRequest;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		763F9A3BADCDBA5433E7A4316FF3721C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725E9D5DB3CD00C73FDE292C7C25FA15 /* iOS */,
+				95B114D59B0F211419DB2A1D74A4EEE4 /* watchOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7CEEE7D55956ABE072A7AA4DD4BE30A8 /* UMengAnalytics */ = {
@@ -663,10 +683,10 @@
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				763F9A3BADCDBA5433E7A4316FF3721C /* Frameworks */,
 				26934C99A4DED5172F57CDB8FEAF9AA8 /* Pods */,
-				15BEA501BA3843CF768E37918302C1E5 /* Products */,
-				D73341EBDF49D2A92F96A32978ACCA15 /* Targets Support Files */,
+				904D3D0254268E51EDA8797AA48350B2 /* Products */,
+				DD6A7FDC796714A24C223D931D921A47 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -683,19 +703,55 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		929520293A9CBCCA3A46D32B7D884195 /* Pods-BusRider */ = {
+		81E0C311636881028372A5EB3B26D972 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				90D683B203069B3E630FE8B7759E6498 /* Pods-BusRider-acknowledgements.markdown */,
-				4C50C627FB6CA433E04E67C2DEF2CF84 /* Pods-BusRider-acknowledgements.plist */,
-				6D5228835CE9B09CFC2A9F86278D122B /* Pods-BusRider-dummy.m */,
-				181A6185FBDFB2A0393FA33F132C0780 /* Pods-BusRider-frameworks.sh */,
-				87B3D2282E1C9F6D2360179E9FD70C8D /* Pods-BusRider-resources.sh */,
-				39AF2951EA2B55A142EA4755BC7207CC /* Pods-BusRider.debug.xcconfig */,
-				1EBCAE06C77F5093F520CC4C73C382FD /* Pods-BusRider.release.xcconfig */,
+				76A07E7B87D7F3FD35F9086FA355278E /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */,
+				2238AC1C08378D22E659B45DC4025918 /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m */,
+				935BCA320377C08A12BC7CF7444604FA /* Pods-BusRider WatchKit Extension-STHTTPRequest-prefix.pch */,
+				AF6A0BEB14476783E092757D3479B1F8 /* Pods-BusRider-STHTTPRequest.xcconfig */,
+				6523B85F4A1DAF149DA1EB2E01538181 /* Pods-BusRider-STHTTPRequest-dummy.m */,
+				0EA5E1B01648FC5803C6E7781D208F11 /* Pods-BusRider-STHTTPRequest-prefix.pch */,
+				793A86E2F6E03AAEC0A250E77CC5C3DB /* Pods-Today-STHTTPRequest.xcconfig */,
+				EBC94A0355E9988D06BBA004A82EC07B /* Pods-Today-STHTTPRequest-dummy.m */,
+				EDDE948A75686A3E787DD6ACFC17A7EF /* Pods-Today-STHTTPRequest-prefix.pch */,
+				510974AA3E3306C3AA705A196E22BF8C /* Pods-watchOS2 Extension-STHTTPRequest.xcconfig */,
+				0CF99566910C5EEDBD3B0A4EEA1F37B7 /* Pods-watchOS2 Extension-STHTTPRequest-dummy.m */,
+				B1AC8B8822F5294E4D0891E1E9C54FAA /* Pods-watchOS2 Extension-STHTTPRequest-prefix.pch */,
 			);
-			name = "Pods-BusRider";
-			path = "Target Support Files/Pods-BusRider";
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BusRider WatchKit Extension-STHTTPRequest";
+			sourceTree = "<group>";
+		};
+		904D3D0254268E51EDA8797AA48350B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E282B05CD31A2C192A8562438CF8C8E0 /* Appirater.bundle */,
+				21E6BA8D4FB70AB5AF38B939A8BBF650 /* libAHKActionSheet.a */,
+				755CA471D4D85318351A0E58B46D432B /* libAppirater.a */,
+				890EE23E7757DEEEC7D3C4E6FAF77E22 /* libCBStoreHouseRefreshControl.a */,
+				05FB29D0F5BE7FCB585F3E75DD2AAD60 /* libPods-BusRider.a */,
+				8EB8E308883F79811DC967BB7857C2B3 /* libPods-BusRider WatchKit Extension.a */,
+				5456A99A59BB0E0DED5056F9CFA367C0 /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */,
+				4D5EF5C1FDE1E85B8EE1199F186DFEEC /* libPods-BusRider-STHTTPRequest.a */,
+				3D9F6F7F0EC285BA034306FE455DC8DD /* libPods-BusRider-UIViewAdditions.a */,
+				310BF4D1BEB350DC0BA75D58F1F3DA75 /* libPods-Today.a */,
+				807104458C0AD72F6F7DF5D5DA397BBC /* libPods-Today-STHTTPRequest.a */,
+				B5CFB202E5A6430FC5513818211BDC9B /* libPods-Today-UIViewAdditions.a */,
+				295942E3FDD7A180ED21D8A49A7D66D7 /* libPods-watchOS2 Extension.a */,
+				856278BD152105D0A9866A7C9AFA5BB9 /* libPods-watchOS2 Extension-STHTTPRequest.a */,
+				CB54D0584285774ADB7FE09F335260EE /* libSGNavigationProgress.a */,
+				BCE63E8DB35C606A3105880C2041E253 /* libSVProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95B114D59B0F211419DB2A1D74A4EEE4 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				8FC42DE279FD68067F4E17B675974A0F /* Foundation.framework */,
+			);
+			name = watchOS;
 			sourceTree = "<group>";
 		};
 		9E9235F38A1BE0ACBF141A1B382187B0 /* UIViewAdditions */ = {
@@ -708,6 +764,21 @@
 			path = UIViewAdditions;
 			sourceTree = "<group>";
 		};
+		9F00067AC2164713EE691C301EE2A5BB /* Pods-Today */ = {
+			isa = PBXGroup;
+			children = (
+				7433462C581EE9B8F2BE600F34974BC9 /* Pods-Today-acknowledgements.markdown */,
+				3CA25EB28223728E590C18BF5DFD7121 /* Pods-Today-acknowledgements.plist */,
+				72A253327C6BADB543BFD0B46AF7F94A /* Pods-Today-dummy.m */,
+				E86CBEF39C4120C9D91D1C2EFFAE37D6 /* Pods-Today-frameworks.sh */,
+				37EE48DE222FD68283E2FDA4D6BB8800 /* Pods-Today-resources.sh */,
+				2F8EB42328F15CC711237099D6B4E760 /* Pods-Today.debug.xcconfig */,
+				DAB1BDC951F8C84B6841032DD8D87112 /* Pods-Today.release.xcconfig */,
+			);
+			name = "Pods-Today";
+			path = "Target Support Files/Pods-Today";
+			sourceTree = "<group>";
+		};
 		A04596D02A2748AE797B8FA27B6E3A22 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +788,21 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SGNavigationProgress";
+			sourceTree = "<group>";
+		};
+		A3C6A2B69E0585DB345EB903C07D578A /* Pods-watchOS2 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6F897BA27AC0892FD26D6C8426B8F269 /* Pods-watchOS2 Extension-acknowledgements.markdown */,
+				C4C79C9FF534A8B1EF08E5DB79072219 /* Pods-watchOS2 Extension-acknowledgements.plist */,
+				F44403CB93ACBD56966059D91172F759 /* Pods-watchOS2 Extension-dummy.m */,
+				A20664FC0BED9CB65EFED7A38D754039 /* Pods-watchOS2 Extension-frameworks.sh */,
+				05FF8EF4A589CF8DF81B9F1F561E2C8F /* Pods-watchOS2 Extension-resources.sh */,
+				E8D5B1237EC0569D186A02F930F19C8E /* Pods-watchOS2 Extension.debug.xcconfig */,
+				5112A87BF8C68D58D414D7C87C8F28B3 /* Pods-watchOS2 Extension.release.xcconfig */,
+			);
+			name = "Pods-watchOS2 Extension";
+			path = "Target Support Files/Pods-watchOS2 Extension";
 			sourceTree = "<group>";
 		};
 		AA60E4AA45B37DF4039F12F2C76F23AA /* Support Files */ = {
@@ -746,21 +832,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C12971DC7DC25816BA395800A8F7E63B /* Pods-Today */ = {
-			isa = PBXGroup;
-			children = (
-				2E8810656BFD97CB182D1A2266723197 /* Pods-Today-acknowledgements.markdown */,
-				6C632A9F086A905AF650C8811BD9924C /* Pods-Today-acknowledgements.plist */,
-				8158E6C01777013F16164DE792F3FED2 /* Pods-Today-dummy.m */,
-				78E10E02F32081A7AFF4D64965361338 /* Pods-Today-frameworks.sh */,
-				BD5E009C2D5E7ACF31A41231C818271E /* Pods-Today-resources.sh */,
-				BE119521959288E1511CB6CD46DC5281 /* Pods-Today.debug.xcconfig */,
-				0A7756B2038D335D8DE1A9D367C89AA2 /* Pods-Today.release.xcconfig */,
-			);
-			name = "Pods-Today";
-			path = "Target Support Files/Pods-Today";
-			sourceTree = "<group>";
-		};
 		C5387DF71893D3C3EA580BD1BE597367 /* Reveal-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,12 +852,13 @@
 			path = Appirater;
 			sourceTree = "<group>";
 		};
-		D73341EBDF49D2A92F96A32978ACCA15 /* Targets Support Files */ = {
+		DD6A7FDC796714A24C223D931D921A47 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				929520293A9CBCCA3A46D32B7D884195 /* Pods-BusRider */,
-				1ED7573A6592164B101A63C615730EDF /* Pods-BusRider WatchKit Extension */,
-				C12971DC7DC25816BA395800A8F7E63B /* Pods-Today */,
+				004A5955CF955CB6E98E76EBD39D0D2D /* Pods-BusRider */,
+				53FA6D872371AA64BB1B4D3072D16A8A /* Pods-BusRider WatchKit Extension */,
+				9F00067AC2164713EE691C301EE2A5BB /* Pods-Today */,
+				A3C6A2B69E0585DB345EB903C07D578A /* Pods-watchOS2 Extension */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -821,6 +893,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84F3E64803B61A4948C4881BA921697 /* UIView+RSAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD8A2DBB008249489BDF379309D8EFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB5ACD2B36EF23D579DA6C79789D9BD /* STHTTPRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,7 +989,7 @@
 			);
 			name = SVProgressHUD;
 			productName = SVProgressHUD;
-			productReference = 005BA18266FD46182580838F05398DB1 /* libSVProgressHUD.a */;
+			productReference = BCE63E8DB35C606A3105880C2041E253 /* libSVProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		33C8E4CE29C2DC0C7E7D34C3FFC34202 /* Pods-Today-UIViewAdditions */ = {
@@ -926,7 +1006,7 @@
 			);
 			name = "Pods-Today-UIViewAdditions";
 			productName = "Pods-Today-UIViewAdditions";
-			productReference = 566E64791F2F9F1865E2522DCB8830FF /* libPods-Today-UIViewAdditions.a */;
+			productReference = B5CFB202E5A6430FC5513818211BDC9B /* libPods-Today-UIViewAdditions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		385FEBA4FFF1C48FB1258953A4148971 /* Pods-BusRider */ = {
@@ -949,7 +1029,7 @@
 			);
 			name = "Pods-BusRider";
 			productName = "Pods-BusRider";
-			productReference = F78D11A19358FA7BAFB78866721F63B5 /* libPods-BusRider.a */;
+			productReference = 05FB29D0F5BE7FCB585F3E75DD2AAD60 /* libPods-BusRider.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		388CF4FF9767275661FC3BCBB44A3458 /* AHKActionSheet */ = {
@@ -966,7 +1046,24 @@
 			);
 			name = AHKActionSheet;
 			productName = AHKActionSheet;
-			productReference = 09CF48085C2DEB8E1624044913B47F76 /* libAHKActionSheet.a */;
+			productReference = 21E6BA8D4FB70AB5AF38B939A8BBF650 /* libAHKActionSheet.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F29AE08ED2DDD28615AF703D16FEF6F /* Pods-watchOS2 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A923D6E278FF837BE41D15966EE6B37C /* Build configuration list for PBXNativeTarget "Pods-watchOS2 Extension" */;
+			buildPhases = (
+				E6FD4F0FA5A3992D7CF45EE7D9E97898 /* Sources */,
+				D4300648C396DBD550FF4CC81986EE58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94B4531E646C7E324C40B06D6FC37066 /* PBXTargetDependency */,
+			);
+			name = "Pods-watchOS2 Extension";
+			productName = "Pods-watchOS2 Extension";
+			productReference = 295942E3FDD7A180ED21D8A49A7D66D7 /* libPods-watchOS2 Extension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		933C85A3DA3DF96CFB3E069F765C7DB3 /* Pods-Today */ = {
@@ -984,7 +1081,7 @@
 			);
 			name = "Pods-Today";
 			productName = "Pods-Today";
-			productReference = 16FCB21468C77413348525BB595A783C /* libPods-Today.a */;
+			productReference = 310BF4D1BEB350DC0BA75D58F1F3DA75 /* libPods-Today.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		A132C8D211C6B8B9D671B650DC3ACD64 /* Appirater */ = {
@@ -1002,7 +1099,7 @@
 			);
 			name = Appirater;
 			productName = Appirater;
-			productReference = B33BCE954E7404E59AF4AEBD474D2477 /* libAppirater.a */;
+			productReference = 755CA471D4D85318351A0E58B46D432B /* libAppirater.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		A7B5E55158EFC52451C03BB58C0C7ADC /* Pods-Today-STHTTPRequest */ = {
@@ -1019,7 +1116,7 @@
 			);
 			name = "Pods-Today-STHTTPRequest";
 			productName = "Pods-Today-STHTTPRequest";
-			productReference = 51E443E4A496DB66A5C16510AF00F02C /* libPods-Today-STHTTPRequest.a */;
+			productReference = 807104458C0AD72F6F7DF5D5DA397BBC /* libPods-Today-STHTTPRequest.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B6D1821393FC30189DB414D1F1EE3F49 /* Pods-BusRider WatchKit Extension */ = {
@@ -1036,7 +1133,7 @@
 			);
 			name = "Pods-BusRider WatchKit Extension";
 			productName = "Pods-BusRider WatchKit Extension";
-			productReference = 1BB3B6C37563ADF8DCC1D0891413212D /* libPods-BusRider WatchKit Extension.a */;
+			productReference = 8EB8E308883F79811DC967BB7857C2B3 /* libPods-BusRider WatchKit Extension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B787D6E4E695D1ECE21A45A6886169E7 /* Pods-BusRider WatchKit Extension-STHTTPRequest */ = {
@@ -1053,7 +1150,7 @@
 			);
 			name = "Pods-BusRider WatchKit Extension-STHTTPRequest";
 			productName = "Pods-BusRider WatchKit Extension-STHTTPRequest";
-			productReference = E21DB37DD4BD4A23ED39CDF03BD9F99A /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */;
+			productReference = 5456A99A59BB0E0DED5056F9CFA367C0 /* libPods-BusRider WatchKit Extension-STHTTPRequest.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CBA9C9F6A582DF509DC7D779E374E359 /* Appirater-Appirater */ = {
@@ -1070,8 +1167,25 @@
 			);
 			name = "Appirater-Appirater";
 			productName = "Appirater-Appirater";
-			productReference = AE4833A07FFFDFF78B21395C2B1B4295 /* Appirater.bundle */;
+			productReference = E282B05CD31A2C192A8562438CF8C8E0 /* Appirater.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		CF51F7917DE29E39FB7C1072CF439AB1 /* Pods-watchOS2 Extension-STHTTPRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34A414FA3E5C4ED949643A3855E84AAB /* Build configuration list for PBXNativeTarget "Pods-watchOS2 Extension-STHTTPRequest" */;
+			buildPhases = (
+				18D1216C54AE9C65A74514C5B41A5700 /* Sources */,
+				62C0D04B37C3DCFB0EBAD854C554FDF4 /* Frameworks */,
+				5FD8A2DBB008249489BDF379309D8EFD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-watchOS2 Extension-STHTTPRequest";
+			productName = "Pods-watchOS2 Extension-STHTTPRequest";
+			productReference = 856278BD152105D0A9866A7C9AFA5BB9 /* libPods-watchOS2 Extension-STHTTPRequest.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		D5CB17AB16F7BDE42CD261A5C22FD60D /* Pods-BusRider-STHTTPRequest */ = {
 			isa = PBXNativeTarget;
@@ -1087,7 +1201,7 @@
 			);
 			name = "Pods-BusRider-STHTTPRequest";
 			productName = "Pods-BusRider-STHTTPRequest";
-			productReference = 48BD5375F222D523B0491EC82ADD569B /* libPods-BusRider-STHTTPRequest.a */;
+			productReference = 4D5EF5C1FDE1E85B8EE1199F186DFEEC /* libPods-BusRider-STHTTPRequest.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		DB7819B7F530FDD986A37F56617F16F8 /* Pods-BusRider-UIViewAdditions */ = {
@@ -1104,7 +1218,7 @@
 			);
 			name = "Pods-BusRider-UIViewAdditions";
 			productName = "Pods-BusRider-UIViewAdditions";
-			productReference = BED54392ACE2D66D3EE5811F989F6917 /* libPods-BusRider-UIViewAdditions.a */;
+			productReference = 3D9F6F7F0EC285BA034306FE455DC8DD /* libPods-BusRider-UIViewAdditions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FA25BF9F7B95BFCAFD52D537D16B6924 /* CBStoreHouseRefreshControl */ = {
@@ -1121,7 +1235,7 @@
 			);
 			name = CBStoreHouseRefreshControl;
 			productName = CBStoreHouseRefreshControl;
-			productReference = 850054639AEAF8CF54C3AE7FC434A511 /* libCBStoreHouseRefreshControl.a */;
+			productReference = 890EE23E7757DEEEC7D3C4E6FAF77E22 /* libCBStoreHouseRefreshControl.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FEFE8707F3095D314478A361A555D591 /* SGNavigationProgress */ = {
@@ -1138,7 +1252,7 @@
 			);
 			name = SGNavigationProgress;
 			productName = SGNavigationProgress;
-			productReference = C778162E9556C445CAFBBA8025994CDC /* libSGNavigationProgress.a */;
+			productReference = CB54D0584285774ADB7FE09F335260EE /* libSGNavigationProgress.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1158,7 +1272,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 15BEA501BA3843CF768E37918302C1E5 /* Products */;
+			productRefGroup = 904D3D0254268E51EDA8797AA48350B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1174,6 +1288,8 @@
 				933C85A3DA3DF96CFB3E069F765C7DB3 /* Pods-Today */,
 				A7B5E55158EFC52451C03BB58C0C7ADC /* Pods-Today-STHTTPRequest */,
 				33C8E4CE29C2DC0C7E7D34C3FFC34202 /* Pods-Today-UIViewAdditions */,
+				4F29AE08ED2DDD28615AF703D16FEF6F /* Pods-watchOS2 Extension */,
+				CF51F7917DE29E39FB7C1072CF439AB1 /* Pods-watchOS2 Extension-STHTTPRequest */,
 				FEFE8707F3095D314478A361A555D591 /* SGNavigationProgress */,
 				0469F01249D00AAB8BF59DD4400366AD /* SVProgressHUD */,
 			);
@@ -1239,6 +1355,15 @@
 			files = (
 				3D3A324A0735C0269DCD234BFF019EDF /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m in Sources */,
 				ED580A8959A0F469D9EDE77ACB843008 /* STHTTPRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D1216C54AE9C65A74514C5B41A5700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7719A0D93E11BF665C220A060869EAA8 /* Pods-watchOS2 Extension-STHTTPRequest-dummy.m in Sources */,
+				24ACB9B6D652CCC4B1BC7A2D16FE23B6 /* STHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,6 +1475,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6FD4F0FA5A3992D7CF45EE7D9E97898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB00201A590229E58B1EE4B32C99B007 /* Pods-watchOS2 Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1376,6 +1509,12 @@
 			name = SVProgressHUD;
 			target = 0469F01249D00AAB8BF59DD4400366AD /* SVProgressHUD */;
 			targetProxy = BDBD4EA88ECE3B882977CA448EE057AA /* PBXContainerItemProxy */;
+		};
+		94B4531E646C7E324C40B06D6FC37066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-watchOS2 Extension-STHTTPRequest";
+			target = CF51F7917DE29E39FB7C1072CF439AB1 /* Pods-watchOS2 Extension-STHTTPRequest */;
+			targetProxy = 7BC74DB81F8A20E808831E1BD7A6B932 /* PBXContainerItemProxy */;
 		};
 		976B8216A61DEF3633B41DED1E5B55EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1422,40 +1561,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		052A17875CB827423D627183396CEB60 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		07C64771535315424D2620A6046C84E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5B66A24A6906E0402CA10D5E65813B2 /* Appirater.xcconfig */;
@@ -1482,7 +1587,7 @@
 		};
 		0F97AE0C753563955CF03D395DD89EC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A7756B2038D335D8DE1A9D367C89AA2 /* Pods-Today.release.xcconfig */;
+			baseConfigurationReference = DAB1BDC951F8C84B6841032DD8D87112 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1498,9 +1603,67 @@
 			};
 			name = Release;
 		};
+		0FA97197E9D302A9222459CA9B5B1FD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D5B1237EC0569D186A02F930F19C8E /* Pods-watchOS2 Extension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		16F8BE9981D95A158A7CE728F543F852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
 		182AE1841BB1D19D1D27804848C6C33D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 042BF444C7CBF5EEF82064858F0929BE /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = 4C4069ED135BE68E928D0FF4FC3197B9 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1513,6 +1676,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		243C220CA4C2D475DB19330CE1239CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510974AA3E3306C3AA705A196E22BF8C /* Pods-watchOS2 Extension-STHTTPRequest.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-watchOS2 Extension-STHTTPRequest/Pods-watchOS2 Extension-STHTTPRequest-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1555,7 +1736,7 @@
 		};
 		4E44EEBCFC38599E79ACD5B7672F8E1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E0AC1CDB3529B42191C0C810F2AAF32 /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = 76A07E7B87D7F3FD35F9086FA355278E /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1574,7 +1755,7 @@
 		};
 		516987FDCF25ECA462E177D2F73F4A6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6FEC37A67CFB148E25365E545142529 /* Pods-BusRider-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = AF6A0BEB14476783E092757D3479B1F8 /* Pods-BusRider-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch";
@@ -1608,9 +1789,27 @@
 			};
 			name = Release;
 		};
+		52E71F9325CF7E991AEF0A7DF59BC892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510974AA3E3306C3AA705A196E22BF8C /* Pods-watchOS2 Extension-STHTTPRequest.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-watchOS2 Extension-STHTTPRequest/Pods-watchOS2 Extension-STHTTPRequest-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		537A1AE3B783CD753A7664E7A419BC36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6FEC37A67CFB148E25365E545142529 /* Pods-BusRider-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = AF6A0BEB14476783E092757D3479B1F8 /* Pods-BusRider-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-BusRider-STHTTPRequest/Pods-BusRider-STHTTPRequest-prefix.pch";
@@ -1628,7 +1827,7 @@
 		};
 		5488DC8D7F07F1E09787E51B870AA30E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66EBB74BCA7BDCAD26669C42C9FACF36 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 798631AE386CF4B95217AEC7D54E9089 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1646,7 +1845,7 @@
 		};
 		5B754969A2BE260E4D53B4D90F0CA527 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE119521959288E1511CB6CD46DC5281 /* Pods-Today.debug.xcconfig */;
+			baseConfigurationReference = 2F8EB42328F15CC711237099D6B4E760 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1664,7 +1863,7 @@
 		};
 		608B36E52F9C31C2D727A57245BADF42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8255A9EC519994F3CF061623600159CA /* Pods-Today-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = 793A86E2F6E03AAEC0A250E77CC5C3DB /* Pods-Today-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1701,7 +1900,7 @@
 		};
 		7034DC856A9809EE21C861F49A69B21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39AF2951EA2B55A142EA4755BC7207CC /* Pods-BusRider.debug.xcconfig */;
+			baseConfigurationReference = 31C394B3D5B055A74C280BF63A2556EC /* Pods-BusRider.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1736,7 +1935,7 @@
 		};
 		A72884AABB21DF0BF557A6E1CD7E6374 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8255A9EC519994F3CF061623600159CA /* Pods-Today-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = 793A86E2F6E03AAEC0A250E77CC5C3DB /* Pods-Today-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1772,48 +1971,9 @@
 			};
 			name = Debug;
 		};
-		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
 		BF8F25192B778CE9013ADB10DA989173 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EBCAE06C77F5093F520CC4C73C382FD /* Pods-BusRider.release.xcconfig */;
+			baseConfigurationReference = 372057B4C04B8BB24A7B28EBC920DCDC /* Pods-BusRider.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1848,7 +2008,7 @@
 		};
 		CCA22037EE411E92C579A83E53399086 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E0AC1CDB3529B42191C0C810F2AAF32 /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */;
+			baseConfigurationReference = 76A07E7B87D7F3FD35F9086FA355278E /* Pods-BusRider WatchKit Extension-STHTTPRequest.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1919,6 +2079,24 @@
 			};
 			name = Release;
 		};
+		E552B3E018E807F6F713F606C9EFD506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5112A87BF8C68D58D414D7C87C8F28B3 /* Pods-watchOS2 Extension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		E73E732ACC1D2C656249A97B1AE66373 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C76E8F69B9B873F0F7FE9D63ABB8814 /* SVProgressHUD.xcconfig */;
@@ -1936,6 +2114,41 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		EBFA286B9AA09158030E7133A18BB3AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
 		};
 		EF31FE7A262C9304DC6B38C189CD410D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2033,8 +2246,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
-				052A17875CB827423D627183396CEB60 /* Release */,
+				16F8BE9981D95A158A7CE728F543F852 /* Debug */,
+				EBFA286B9AA09158030E7133A18BB3AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34A414FA3E5C4ED949643A3855E84AAB /* Build configuration list for PBXNativeTarget "Pods-watchOS2 Extension-STHTTPRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				243C220CA4C2D475DB19330CE1239CE9 /* Debug */,
+				52E71F9325CF7E991AEF0A7DF59BC892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2080,6 +2302,15 @@
 			buildConfigurations = (
 				5B754969A2BE260E4D53B4D90F0CA527 /* Debug */,
 				0F97AE0C753563955CF03D395DD89EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A923D6E278FF837BE41D15966EE6B37C /* Build configuration list for PBXNativeTarget "Pods-watchOS2 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA97197E9D302A9222459CA9B5B1FD5 /* Debug */,
+				E552B3E018E807F6F713F606C9EFD506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
