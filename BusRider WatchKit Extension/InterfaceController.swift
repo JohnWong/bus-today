@@ -62,7 +62,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func search() {
-        if let cityItem = JWUserDefaultsUtil.cityItem() {
+        if let _ = JWUserDefaultsUtil.cityItem() {
             pushControllerWithName(StoryBoard.Controllers.searchResult, context: nil)
         } else {
             presentControllerWithName(StoryBoard.Controllers.selectCity, context: true)

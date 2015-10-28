@@ -30,6 +30,11 @@
     return self;
 }
 
+- (instancetype)init {
+    NSAssert(NO, @"Method is not designated initializer");
+    return [self initWithLineId:nil lineNumber:nil from:nil to:nil stopName:nil order:0];
+}
+
 #pragma mark NSCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [self init]){

@@ -12,10 +12,16 @@
 @implementation JWBusInfoItem
 
 - (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         [self setUserStopOrder:stopOrder busInfo:busInfo];
     }
     return self;
+}
+
+- (instancetype)init {
+    NSAssert(NO, @"Method is not designated initializer");
+    return [self initWithUserStopOrder:0 busInfo:nil];
 }
 
 - (void)setUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)dict {

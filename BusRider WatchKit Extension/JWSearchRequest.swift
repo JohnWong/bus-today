@@ -13,7 +13,7 @@ class JWSearchRequest: JWRequest {
     var keyword = ""
     
     override func params() -> Dictionary<String, AnyObject> {
-        let encodedKeyword = self.keyword.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let encodedKeyword: String = self.keyword.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet())!
         return [
             "LsName": encodedKeyword
         ]

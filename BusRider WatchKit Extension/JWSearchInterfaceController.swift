@@ -8,9 +8,10 @@
 
 import WatchKit
 import Foundation
+import UIKit
 
 class JWSearchInterfaceController: WKInterfaceController {
-
+    
     struct Storyboard {
         static let interfaceControllerName = "JWCityInterfaceController"
         
@@ -34,12 +35,12 @@ class JWSearchInterfaceController: WKInterfaceController {
         openInputController()
         self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "重新输入", action: Selector("openInputController"))
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
@@ -80,14 +81,18 @@ class JWSearchInterfaceController: WKInterfaceController {
     }
     
     @IBAction func openInputController() {
-        if UIDevice.currentDevice().model == "iPhone Simulator" {
-            loadData("2")
-            return
+        if #available(iOSApplicationExtension 9.0, *) {
+            if WKInterfaceDevice.currentDevice().model == "iPhone Simulator" {
+                loadData("2")
+                return
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
         var initialPhrases = Array<String>()
         let allCollectItems = JWUserDefaultsUtil.allCollectItems()
-        if let allCollectItems = allCollectItems {
+        if let _ = allCollectItems {
             for item in JWUserDefaultsUtil.allCollectItems() {
                 if let collectItem = item as? JWCollectItem {
                     initialPhrases.append(collectItem.lineNumber)
@@ -97,7 +102,7 @@ class JWSearchInterfaceController: WKInterfaceController {
         
         self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
             [unowned self](results) -> Void in
-            if results.count > 0 {
+            if let results = results where results.count > 0{
                 var aResult = results[0] as! String;
                 aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions(), range: nil)
                 self.loadData(aResult)
@@ -113,5 +118,5 @@ class JWSearchInterfaceController: WKInterfaceController {
             
         }
     }
-
+    
 }

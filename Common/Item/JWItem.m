@@ -17,6 +17,11 @@
     return self;
 }
 
+- (instancetype)init {
+    NSAssert(NO, @"Method is not designated initializer");
+    return [self initWithDictionary:nil];
+}
+
 - (void)setFromDictionary:(NSDictionary *)dict {}
 
 + (NSArray *)arrayFromDictionaryArray:(NSArray *)array {

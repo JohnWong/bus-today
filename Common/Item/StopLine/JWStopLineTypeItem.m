@@ -19,6 +19,11 @@
     return self;
 }
 
+- (instancetype)init {
+    NSAssert(NO, @"Method is not designated initializer");
+    return [self initWithNextStop:nil];
+}
+
 + (NSArray *)arrayFromDictionary:(NSDictionary *)dict {
     NSArray *lineList = [JWStopLineItem arrayFromDictionaryArray:dict[@"lines"]];
     NSMutableDictionary *mutableTypeDict = [[NSMutableDictionary alloc] init];

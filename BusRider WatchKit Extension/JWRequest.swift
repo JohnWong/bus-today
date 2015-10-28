@@ -43,25 +43,26 @@ class JWRequest: NSObject {
             (headers: Dictionary!, body: String!) in
             let correctString = body as NSString
             let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions(), range: nil)
-            var error: NSError?
-            var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!, options: NSJSONReadingOptions(), error: &error)
-            if error == nil && jsonObject != nil && jsonObject!.isKindOfClass(NSDictionary) {
+            let jsonObject: AnyObject
+            do {
+                let data: NSData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!;
+                jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())
                 let dict = jsonObject as! NSDictionary
                 let jsonr: NSDictionary = dict["jsonr"] as! NSDictionary
                 let infoDict: NSDictionary = jsonr["data"] as! NSDictionary
                 if infoDict.count > 0 {
                     completion(infoDict, nil);
                 } else {
-                    error = NSError(
+                    let error = NSError(
                         domain: AppConfiguration.dataErrorDomain,
                         code: 301,
                         userInfo: [
                             NSLocalizedDescriptionKey: jsonr
-                    ])
+                        ])
                     completion(nil, error)
                 }
-            } else {
-                completion(nil, error)
+            } catch let error as NSError {
+                completion(nil, error);
             }
         }
         self.request?.errorBlock = {

@@ -20,7 +20,9 @@
 @implementation JWStopNameButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if ((self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)  owner:self options:nil][0])) {
+    self = [super initWithFrame:frame];
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)  owner:self options:nil][0];
+    if (self) {
         [self setFrame:frame];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self.titleButton setBackgroundImage:[JWViewUtil resizableImageWithColor:HEXCOLORA(0x333333, 0.3)] forState:UIControlStateHighlighted];
