@@ -64,7 +64,7 @@
 		525A1F731A5AA763006CE8BA /* JWIconTodayOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */; };
 		525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */; };
 		52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */; };
-		5280CD0D1BE1439B004FDE4F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5280CD0D1BE1439B004FDE4F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
 		5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558591A62BB1B00898779 /* JWMainTableViewCell.m */; };
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
 		528558611A642EA400898779 /* JWStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558601A642EA400898779 /* JWStopTableViewController.m */; };
@@ -86,29 +86,44 @@
 		52AC0C3A1AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C341AF4CA3800F27EE1 /* JWSearchStopItem.m */; };
 		52AC0C3B1AF4CA4700F27EE1 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52AC0C3D1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */; };
+		52B0E32E1BE3456E00621020 /* JWUserDefaultsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */; };
+		52B0E32F1BE3457200621020 /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
+		52B0E3301BE3457500621020 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
+		52B0E3311BE3457B00621020 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
+		52B0E3321BE3457E00621020 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
+		52B0E3331BE3458F00621020 /* JWBusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B21AF68092006E70D7 /* JWBusItem.m */; };
+		52B0E3341BE3459200621020 /* JWBusLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B41AF68092006E70D7 /* JWBusLineItem.m */; };
+		52B0E3351BE3459500621020 /* JWLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B61AF68092006E70D7 /* JWLineItem.m */; };
+		52B0E3361BE3459800621020 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B81AF68092006E70D7 /* JWStopItem.m */; };
+		52B0E3371BE3459D00621020 /* JWStopLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BB1AF68092006E70D7 /* JWStopLineItem.m */; };
+		52B0E3381BE345A000621020 /* JWStopLineTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6BD1AF68092006E70D7 /* JWStopLineTypeItem.m */; };
+		52B0E3391BE345A600621020 /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */; };
+		52B0E33A1BE345BE00621020 /* JWSearchLineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C301AF4CA3800F27EE1 /* JWSearchLineItem.m */; };
+		52B0E33B1BE345C000621020 /* JWSearchListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C321AF4CA3800F27EE1 /* JWSearchListItem.m */; };
+		52B0E33C1BE345CD00621020 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C341AF4CA3800F27EE1 /* JWSearchStopItem.m */; };
 		52B84A411BE1480800BC81F6 /* watchOS2 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A461BE1480800BC81F6 /* InterfaceController.m */; };
 		52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */; };
 		52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A4C1BE1480800BC81F6 /* ComplicationController.m */; };
 		52B84A4F1BE1480800BC81F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B84A4E1BE1480800BC81F6 /* Assets.xcassets */; };
 		52B84A531BE1480800BC81F6 /* watchOS2.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B84A341BE1480700BC81F6 /* watchOS2.app */; };
-		52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; settings = {ASSET_TAGS = (); }; };
-		52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A601BE14ADC00BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3A1AD2F5EF00862462 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A621BE14AE200BC81F6 /* JWCityControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A631BE14AE600BC81F6 /* JWCityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A651BE14AE600BC81F6 /* JWDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D700051AF91B74008A3C8C /* JWDetailInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A661BE14AE600BC81F6 /* JWLineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A681BE14AE600BC81F6 /* JWLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0811AD3809C00126937 /* JWRequest.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A6A1BE14AE600BC81F6 /* JWSearchControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		52B84A6C1BE14AE600BC81F6 /* JWSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; };
+		52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
+		52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; };
+		52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; };
+		52B84A601BE14ADC00BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3A1AD2F5EF00862462 /* Images.xcassets */; };
+		52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C205841AF7EBE500CBF9DE /* JWArrivingLineRowType.swift */; };
+		52B84A621BE14AE200BC81F6 /* JWCityControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DC59CF1AD6FFCC00F25621 /* JWCityControllerRowType.swift */; };
+		52B84A631BE14AE600BC81F6 /* JWCityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0761AD36D2B00126937 /* JWCityInterfaceController.swift */; };
+		52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B6D1AD42A2900C41F9D /* JWCityRequest.swift */; };
+		52B84A651BE14AE600BC81F6 /* JWDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D700051AF91B74008A3C8C /* JWDetailInterfaceController.swift */; };
+		52B84A661BE14AE600BC81F6 /* JWLineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AA1AF65856006E70D7 /* JWLineInterfaceController.swift */; };
+		52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AE1AF66E25006E70D7 /* JWLineRequest.swift */; };
+		52B84A681BE14AE600BC81F6 /* JWLineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6AC1AF66583006E70D7 /* JWLineRowType.swift */; };
+		52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9E0811AD3809C00126937 /* JWRequest.swift */; };
+		52B84A6A1BE14AE600BC81F6 /* JWSearchControllerRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C3C1AF4D8F700F27EE1 /* JWSearchControllerRowType.swift */; };
+		52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C2B1AF4929300F27EE1 /* JWSearchInterfaceController.swift */; };
+		52B84A6C1BE14AE600BC81F6 /* JWSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C291AF48A7800F27EE1 /* JWSearchRequest.swift */; };
 		52B8D5B41A57120300B3DD5C /* JWIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */; };
 		52B8D5B81A57259E00B3DD5C /* JWIconExchange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */; };
 		52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D5BA1A57F12300B3DD5C /* JWSwitchButton.m */; };
@@ -1426,21 +1441,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */,
+				52B0E32E1BE3456E00621020 /* JWUserDefaultsUtil.m in Sources */,
 				52B84A6C1BE14AE600BC81F6 /* JWSearchRequest.swift in Sources */,
+				52B0E3311BE3457B00621020 /* JWItem.m in Sources */,
+				52B0E3331BE3458F00621020 /* JWBusItem.m in Sources */,
+				52B0E3361BE3459800621020 /* JWStopItem.m in Sources */,
+				52B0E32F1BE3457200621020 /* JWCityItem.m in Sources */,
 				52B84A631BE14AE600BC81F6 /* JWCityInterfaceController.swift in Sources */,
 				52B84A681BE14AE600BC81F6 /* JWLineRowType.swift in Sources */,
 				52B84A621BE14AE200BC81F6 /* JWCityControllerRowType.swift in Sources */,
+				52B0E3351BE3459500621020 /* JWLineItem.m in Sources */,
 				52B84A6A1BE14AE600BC81F6 /* JWSearchControllerRowType.swift in Sources */,
+				52B0E3301BE3457500621020 /* JWCollectItem.m in Sources */,
 				52B84A651BE14AE600BC81F6 /* JWDetailInterfaceController.swift in Sources */,
+				52B0E3341BE3459200621020 /* JWBusLineItem.m in Sources */,
+				52B0E33A1BE345BE00621020 /* JWSearchLineItem.m in Sources */,
+				52B0E3381BE345A000621020 /* JWStopLineTypeItem.m in Sources */,
 				52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */,
 				52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */,
 				52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */,
 				52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */,
+				52B0E3321BE3457E00621020 /* JWFormatter.m in Sources */,
 				52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */,
 				52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */,
 				52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */,
+				52B0E33C1BE345CD00621020 /* JWSearchStopItem.m in Sources */,
 				52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */,
 				52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */,
+				52B0E3391BE345A600621020 /* JWBusInfoItem.m in Sources */,
+				52B0E33B1BE345C000621020 /* JWSearchListItem.m in Sources */,
+				52B0E3371BE3459D00621020 /* JWStopLineItem.m in Sources */,
 				52B84A661BE14AE600BC81F6 /* JWLineInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

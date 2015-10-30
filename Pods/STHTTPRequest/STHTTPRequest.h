@@ -19,7 +19,7 @@ extern NSUInteger const kSTHTTPRequestDefaultTimeout;
 @class STHTTPRequest;
 
 typedef void (^sendRequestBlock_t)(STHTTPRequest *request);
-typedef void (^uploadProgressBlock_t)(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite);
+typedef void (^uploadProgressBlock_t)(int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite);
 typedef void (^downloadProgressBlock_t)(NSData *data, NSUInteger totalBytesReceived, long long totalBytesExpectedToReceive);
 typedef void (^completionBlock_t)(NSDictionary *headers, NSString *body);
 typedef void (^completionDataBlock_t)(NSDictionary *headers, NSData *body);
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, STHTTPRequestCookiesStorage) {
     STHTTPRequestCookiesStorageUndefined = NSUIntegerMax
 };
 
-@interface STHTTPRequest : NSObject <NSURLConnectionDelegate>
+@interface STHTTPRequest : NSObject <NSURLSessionDelegate>
 
 @property (copy) uploadProgressBlock_t uploadProgressBlock;
 @property (copy) downloadProgressBlock_t downloadProgressBlock;
@@ -76,7 +76,6 @@ typedef NS_ENUM(NSUInteger, STHTTPRequestCookiesStorage) {
 - (NSString *)debugDescription; // logged when launched with -STHTTPRequestShowDebugDescription 1
 - (NSString *)curlDescription; // logged when launched with -STHTTPRequestShowCurlDescription 1
 
-- (NSString *)startSynchronousWithError:(NSError **)error;
 - (void)startAsynchronous;
 - (void)cancel;
 

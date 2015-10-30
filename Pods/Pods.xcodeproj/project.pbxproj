@@ -18,7 +18,6 @@
 		180B0E96CDBA9DB098407E8869022C43 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C9E18204712049399AC98279186B22 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A2FEE4467C7BED3FF0B86A7D89A74C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		1C28CBCF7DE6BC7351733C8C132F7F57 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 04F7213FF9A2FEEEB7EA916EBF7803BB /* th.lproj */; };
-		1CB4882C25F57147A3A27B0B56CD69C0 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D73D4B2FC7759477BAADA326C606CED /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4992DDF67283FB7055429DF54BE122 /* Appirater.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1DCDF8FF00138CEE33EE77ACADC65A9B /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E09DCBB1420A8EFA7BDBD208C5081 /* ro.lproj */; };
 		24ACB9B6D652CCC4B1BC7A2D16FE23B6 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -44,7 +43,6 @@
 		4B715E7B2B8EBE17948B137B036DBBEB /* AHKActionSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B612FE37F7DB3093FDBDE03C88138E81 /* AHKActionSheet-dummy.m */; };
 		4B7752114D0D75822CBC3F311B50DE92 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B27F572A83EB83FA5C5D3E86C785757 /* UIWindow+AHKAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4D3C45DA9E2407DAFB6D9574CA7C3C8E /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9DA176C6D5953E5EEEAD1F8A6905566C /* ko.lproj */; };
-		4E79B5D5BD70E09675E88928C73EF656 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4E8CB9BF65FA263B3361BDCF7619A7D9 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E69CFD7CEA19446C9FF5BD8D8B413B /* AHKActionSheet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5A68E65C18754393B8DA1C024CDFDC25 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C89AB7B916FEA830DC8BFD30658003DF /* tr.lproj */; };
 		5EEF294077F20F9982511151855AA071 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EDE472DB2D375414D54B22269F6A6 /* SystemConfiguration.framework */; };
@@ -75,6 +73,7 @@
 		A188BECB70BEB46704B7ECF391C4B145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		A28CB9761DFC05BEBBB34C1E0E1CD2D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87907BC19F887E9D5243670C36216FD /* Foundation.framework */; };
 		AB3286B42F47E0AC1237E46C4E50DF83 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5059B050120D2D65096CD252AD69DEF2 /* sk.lproj */; };
+		AE802C3BC7746EE3C96648FB0588F309 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B0BE3847E7980903F5F32A9594529B7E /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD1097329CCBD866648EFDB4478E5A9 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2F2EB36A54ABD521643C3589ECC55CF /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 484CFCBAD80E562B87F6B755DB650B2A /* ru.lproj */; };
 		B84F3E64803B61A4948C4881BA921697 /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70960BEAA7302BD591170D1FF4785F26 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,8 +97,9 @@
 		E7E252D8E0C7F0030C963A69D9B0F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */; };
 		E81A205F53F46CA880264B366B1CBBA3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22DA19CC02A58FF16944223382D1D51 /* CFNetwork.framework */; };
 		E94233F62EDE251A85CEF5ECE5244188 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EE0E503CD2FAB61CB3FB6C79C239A2 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9538DAA64165B0B3F236E6C0A08D3A0 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E9C3EBF058CA731A6DE1032E207922CC /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EB00201A590229E58B1EE4B32C99B007 /* Pods-watchOS2 Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F44403CB93ACBD56966059D91172F759 /* Pods-watchOS2 Extension-dummy.m */; };
-		ED580A8959A0F469D9EDE77ACB843008 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC51D46C91A191F7B7147FD7F053A0E /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EF6DD63CC425576CB368224B0FEA1986 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACEB6E35C3A5A8612FEC0233912FB0 /* QuartzCore.framework */; };
 		F0BA5F0B4C595A7F8BBBD1E7CEBA36F5 /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 70960BEAA7302BD591170D1FF4785F26 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4E3AE09A6F8A1A1B8C56AAA0E767855 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0ACE6492D0C7FA5C0873349962A27C3F /* sv.lproj */; };
@@ -225,6 +225,7 @@
 		31C394B3D5B055A74C280BF63A2556EC /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
 		372057B4C04B8BB24A7B28EBC920DCDC /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
 		37EE48DE222FD68283E2FDA4D6BB8800 /* Pods-Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-resources.sh"; sourceTree = "<group>"; };
+		3BC23775C63EB36AD8EB6D073027D473 /* MobClick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = umsdk_IOS_analytics_idfa_v3.6.4/UMAnalytics_Sdk_3.6.4/MobClick.h; sourceTree = "<group>"; };
 		3C4E09DCBB1420A8EFA7BDBD208C5081 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ro.lproj; sourceTree = "<group>"; };
 		3CA25EB28223728E590C18BF5DFD7121 /* Pods-Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		3CD79CDD7FCE7A9B962228B72EA9ED44 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = pt.lproj; sourceTree = "<group>"; };
@@ -285,7 +286,6 @@
 		974922F746156049CB1C7E1E3A67E13A /* Pods-Today-UIViewAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Today-UIViewAdditions-prefix.pch"; path = "../Pods-Today-UIViewAdditions/Pods-Today-UIViewAdditions-prefix.pch"; sourceTree = "<group>"; };
 		974C1983E6747D6080C0ED01C4ED9507 /* Appirater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Appirater-dummy.m"; sourceTree = "<group>"; };
 		99A40755B69C668E23F415BCDF75CEB9 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = el.lproj; sourceTree = "<group>"; };
-		9C2345FB993DBC09DA7A15FC4547FC02 /* MobClick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = umsdk_IOS_analytics_idfa_v3.4.6/UMAnalytics_Sdk_3.4.6/MobClick.h; sourceTree = "<group>"; };
 		9C76E8F69B9B873F0F7FE9D63ABB8814 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		9DA176C6D5953E5EEEAD1F8A6905566C /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ko.lproj; sourceTree = "<group>"; };
 		9E0CC3156C64980E115ECF21107875DE /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
@@ -522,7 +522,7 @@
 				35239186548ABA7F348A6F4B4266C85A /* STHTTPRequest */,
 				80F3693CA9C23F2CD2F8F4042F149325 /* SVProgressHUD */,
 				9E9235F38A1BE0ACBF141A1B382187B0 /* UIViewAdditions */,
-				7CEEE7D55956ABE072A7AA4DD4BE30A8 /* UMengAnalytics */,
+				C79CF10E31B064DA251AED82CC3F63D4 /* UMengAnalytics */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -669,14 +669,6 @@
 				95B114D59B0F211419DB2A1D74A4EEE4 /* watchOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7CEEE7D55956ABE072A7AA4DD4BE30A8 /* UMengAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				9C2345FB993DBC09DA7A15FC4547FC02 /* MobClick.h */,
-			);
-			path = UMengAnalytics;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -838,6 +830,14 @@
 				B55A57CEBA9B82738E71475C2A603643 /* Frameworks */,
 			);
 			path = "Reveal-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		C79CF10E31B064DA251AED82CC3F63D4 /* UMengAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				3BC23775C63EB36AD8EB6D073027D473 /* MobClick.h */,
+			);
+			path = UMengAnalytics;
 			sourceTree = "<group>";
 		};
 		D44757CF51AB56D951E57EBFC909AE7C /* Appirater */ = {
@@ -1354,7 +1354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D3A324A0735C0269DCD234BFF019EDF /* Pods-BusRider WatchKit Extension-STHTTPRequest-dummy.m in Sources */,
-				ED580A8959A0F469D9EDE77ACB843008 /* STHTTPRequest.m in Sources */,
+				E9C3EBF058CA731A6DE1032E207922CC /* STHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,7 +1410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80BA181FC55DD395CBB8A754C33B4D58 /* Pods-Today-STHTTPRequest-dummy.m in Sources */,
-				1CB4882C25F57147A3A27B0B56CD69C0 /* STHTTPRequest.m in Sources */,
+				AE802C3BC7746EE3C96648FB0588F309 /* STHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1428,7 +1428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2A8EC2C5EC28DFE7B0E2A7796B9ECE /* Pods-BusRider-STHTTPRequest-dummy.m in Sources */,
-				4E79B5D5BD70E09675E88928C73EF656 /* STHTTPRequest.m in Sources */,
+				E9538DAA64165B0B3F236E6C0A08D3A0 /* STHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
