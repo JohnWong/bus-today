@@ -64,6 +64,8 @@
 		525A1F731A5AA763006CE8BA /* JWIconTodayOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */; };
 		525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */; };
 		52611DED1AB8AB8600D8E0EC /* JWIconCellStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */; };
+		5277A2A41BE3F72C00F8AF63 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */; };
+		5277A2A71BE3FBC600F8AF63 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B84A361BE1480700BC81F6 /* Interface.storyboard */; };
 		5280CD0D1BE1439B004FDE4F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
 		5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 528558591A62BB1B00898779 /* JWMainTableViewCell.m */; };
 		5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285585A1A62BB1B00898779 /* JWMainTableViewCell.xib */; };
@@ -102,13 +104,10 @@
 		52B0E33B1BE345C000621020 /* JWSearchListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C321AF4CA3800F27EE1 /* JWSearchListItem.m */; };
 		52B0E33C1BE345CD00621020 /* JWSearchStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AC0C341AF4CA3800F27EE1 /* JWSearchStopItem.m */; };
 		52B84A411BE1480800BC81F6 /* watchOS2 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A461BE1480800BC81F6 /* InterfaceController.m */; };
-		52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */; };
 		52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B84A4C1BE1480800BC81F6 /* ComplicationController.m */; };
 		52B84A4F1BE1480800BC81F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B84A4E1BE1480800BC81F6 /* Assets.xcassets */; };
 		52B84A531BE1480800BC81F6 /* watchOS2.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52B84A341BE1480700BC81F6 /* watchOS2.app */; };
 		52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD481AD2F5EF00862462 /* Images.xcassets */; };
-		52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD451AD2F5EF00862462 /* Interface.storyboard */; };
 		52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A5B691AD4227100C41F9D /* AppConfiguration.swift */; };
 		52B84A5F1BE14AD800BC81F6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523DCD361AD2F5EF00862462 /* InterfaceController.swift */; };
 		52B84A601BE14ADC00BC81F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523DCD3A1AD2F5EF00862462 /* Images.xcassets */; };
@@ -359,8 +358,6 @@
 		52B84A371BE1480700BC81F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		52B84A3B1BE1480700BC81F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B84A401BE1480700BC81F6 /* watchOS2 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchOS2 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52B84A451BE1480800BC81F6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		52B84A461BE1480800BC81F6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		52B84A481BE1480800BC81F6 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
 		52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		52B84A4B1BE1480800BC81F6 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
@@ -705,8 +702,6 @@
 		52B84A441BE1480800BC81F6 /* watchOS2 Extension */ = {
 			isa = PBXGroup;
 			children = (
-				52B84A451BE1480800BC81F6 /* InterfaceController.h */,
-				52B84A461BE1480800BC81F6 /* InterfaceController.m */,
 				52B84A481BE1480800BC81F6 /* ExtensionDelegate.h */,
 				52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */,
 				52B84A4B1BE1480800BC81F6 /* ComplicationController.h */,
@@ -1148,8 +1143,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5277A2A71BE3FBC600F8AF63 /* Interface.storyboard in Resources */,
 				52B84A5C1BE14A2100BC81F6 /* Images.xcassets in Resources */,
-				52B84A5D1BE14AA500BC81F6 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,16 +1453,15 @@
 				52B0E33A1BE345BE00621020 /* JWSearchLineItem.m in Sources */,
 				52B0E3381BE345A000621020 /* JWStopLineTypeItem.m in Sources */,
 				52B84A611BE14AE000BC81F6 /* JWArrivingLineRowType.swift in Sources */,
+				5277A2A41BE3F72C00F8AF63 /* ExtensionDelegate.m in Sources */,
 				52B84A4D1BE1480800BC81F6 /* ComplicationController.m in Sources */,
 				52B84A6B1BE14AE600BC81F6 /* JWSearchInterfaceController.swift in Sources */,
-				52B84A4A1BE1480800BC81F6 /* ExtensionDelegate.m in Sources */,
 				52B0E3321BE3457E00621020 /* JWFormatter.m in Sources */,
 				52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */,
 				52B84A671BE14AE600BC81F6 /* JWLineRequest.swift in Sources */,
 				52B84A691BE14AE600BC81F6 /* JWRequest.swift in Sources */,
 				52B0E33C1BE345CD00621020 /* JWSearchStopItem.m in Sources */,
 				52B84A641BE14AE600BC81F6 /* JWCityRequest.swift in Sources */,
-				52B84A471BE1480800BC81F6 /* InterfaceController.m in Sources */,
 				52B0E3391BE345A600621020 /* JWBusInfoItem.m in Sources */,
 				52B0E33B1BE345C000621020 /* JWSearchListItem.m in Sources */,
 				52B0E3371BE3459D00621020 /* JWStopLineItem.m in Sources */,

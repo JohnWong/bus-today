@@ -41,6 +41,8 @@ class JWRequest: NSObject {
         self.request = STHTTPRequest(URLString: self.urlPath())
         self.request?.completionBlock = {
             (headers: Dictionary!, body: String!) in
+            
+            NSLog("%@\n%@", self.urlPath(), body)
             let correctString = body as NSString
             let jsonString = correctString.stringByReplacingOccurrencesOfString("**YGKJ", withString: "").stringByReplacingOccurrencesOfString("YGKJ##", withString: "", options: NSStringCompareOptions(), range: nil)
             let jsonObject: AnyObject

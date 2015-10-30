@@ -81,13 +81,9 @@ class JWSearchInterfaceController: WKInterfaceController {
     }
     
     @IBAction func openInputController() {
-        if #available(iOSApplicationExtension 9.0, *) {
-            if WKInterfaceDevice.currentDevice().model == "iPhone Simulator" {
-                loadData("2")
-                return
-            }
-        } else {
-            // Fallback on earlier versions
+        if (TARGET_OS_SIMULATOR > 0) {
+            loadData("2")
+            return
         }
         
         var initialPhrases = Array<String>()

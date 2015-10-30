@@ -43,9 +43,7 @@ class JWCityInterfaceController: WKInterfaceController {
                     self.cities.removeAll(keepCapacity: true)
                     for dict in citiesDict {
                         let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
-                        if cityItem.cityVersion == 0 {
-                            self.cities.append(cityItem)
-                        }
+                        self.cities.append(cityItem)
                     }
                     self.interfaceTable.setNumberOfRows(self.cities.count, withRowType: Storyboard.RowTypes.item)
                     for index in 0 ..< self.cities.count {

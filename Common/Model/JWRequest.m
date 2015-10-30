@@ -13,29 +13,33 @@
 
 #define JWDataErrorKey @"JWDataError"
 
+
 @interface JWRequest ()
 
 @property (nonatomic, strong) STHTTPRequest *request;
 
 @end
 
+
 @implementation JWRequest
 
-- (void)loadWithCompletion:(JWCompletion)completion {
+- (void)loadWithCompletion:(JWCompletion)completion
+{
     [self loadWithCompletion:completion progress:nil];
 }
 
-- (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress {
+- (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress
+{
     NSString *checkResult = [self validateParams];
     if (checkResult) {
         NSError *error = [NSError errorWithDomain:JWDataErrorKey code:0 userInfo:@{
-            NSLocalizedDescriptionKey: checkResult
+            NSLocalizedDescriptionKey : checkResult
         }];
         completion(nil, error);
         return;
     }
     NSLog(@"JWRequest: load %@", [self urlPath]);
-    
+
     if (self.request) {
         [self.request cancel];
     }
@@ -71,7 +75,7 @@
         }
         completion(nil, error);
     };
-    self.request.downloadProgressBlock = ^(NSData *data, NSUInteger totalBytesReceived, long long totalBytesExpectedToReceive) {
+    self.request.downloadProgressBlock = ^(NSData *data, int64_t totalBytesReceived, int64_t totalBytesExpectedToReceive) {
         NSLog(@"JWRequest: progress %ld / %lld", (unsigned long)totalBytesReceived, totalBytesExpectedToReceive);
         if (progress) {
             progress(totalBytesReceived * 100 / totalBytesExpectedToReceive);
@@ -80,7 +84,8 @@
     [self.request startAsynchronous];
 }
 
-- (NSString *)urlPath {
+- (NSString *)urlPath
+{
     NSMutableString *paramString = [[NSMutableString alloc] init];
     NSDictionary *paramDict = [self params];
     for (NSString *key in paramDict) {
@@ -94,11 +99,13 @@
     return [[NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)validateParams {
+- (NSString *)validateParams
+{
     return nil;
 }
 
-- (void)dealloc {
+- (void)dealloc
+{
     [_request cancel];
 }
 

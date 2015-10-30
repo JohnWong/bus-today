@@ -1,7 +1,7 @@
 source 'https://gitcafe.com/yellowxz/Specs.git'
 
 def shared_pods
-    pod 'STHTTPRequest', :podspec => 'https://raw.githubusercontent.com/JohnWong/STHTTPRequest/master/STHTTPRequest.podspec'
+    pod 'STHTTPRequest2', :podspec => 'https://raw.githubusercontent.com/JohnWong/STHTTPRequest/master/STHTTPRequest2/STHTTPRequest2.podspec'
 end
 
 target :BusRider do
