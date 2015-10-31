@@ -57,10 +57,10 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.toLabel.setText("--")
         self.timeLabel.setText("--")
         lineRequest.lineId = self.lineId
-        lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
-            if let result = result {
-                self.busInfoItem = JWBusInfoItem(userStopOrder: self.order, busInfo: result as [NSObject : AnyObject])
-                self.renderData()
+        lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
+            if let result = result, weakSelf = self {
+                weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: weakSelf.order, busInfo: result as [NSObject : AnyObject])
+                weakSelf.renderData()
             }
         }
     }

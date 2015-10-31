@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 John Wong. All rights reserved.
 //
 
-#import "JWRequestWithAlert.h"
+#import "JWRequest.h"
 
 @interface JWSearchRequest : JWRequest
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 John Wong. All rights reserved.
 //
 
-#import "JWRequestWithAlert.h"
+#import "JWRequest.h"
 
-@interface JWLineRequest : JWRequestWithAlert
+@interface JWLineRequest : JWRequest
 
 @property (nonatomic, strong) NSString *lineId;
 

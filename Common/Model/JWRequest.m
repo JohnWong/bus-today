@@ -96,7 +96,7 @@
     if (cityItem) {
         cityId = [NSString stringWithFormat:@"&cityId=%@", cityItem.cityId];
     }
-    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"wow" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)validateParams

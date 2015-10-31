@@ -11,8 +11,12 @@ import Foundation
 class JWRequest: NSObject {
     var request:STHTTPRequest?
     
-    internal override init() {
+    override init() {
         super.init()
+    }
+    
+    deinit {
+        self.request?.cancel()
     }
     
     func params() -> Dictionary<String, AnyObject> {
@@ -33,7 +37,7 @@ class JWRequest: NSObject {
         if  let cityItem = cityItem {
             cityId = String(format: "&cityId=%@", cityItem.cityId)
         }
-        return String(format: "http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", AppConfiguration.host, self.isKindOfClass(JWCityRequest) ? "wow" : "bus", self.actionName(), cityId, paramString)
+        return String(format: "http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", AppConfiguration.host, self.isKindOfClass(JWCityRequest) ? "goocity" : "bus", self.actionName(), cityId, paramString)
     }
     
     func loadWithCompletion(completion:(NSDictionary?, NSError?) -> Void) {

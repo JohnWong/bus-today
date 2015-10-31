@@ -22,7 +22,7 @@
 
 - (NSString *)validateParams {
     if (!self.lineId || self.lineId.length <= 0) {
-        return @"线路ID不能为空";
+        return @"请先到应用中选择路线";
     }
     return nil;
 }

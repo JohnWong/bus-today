@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 John Wong. All rights reserved.
 //
 
-#import "JWRequestWithAlert.h"
+#import "JWRequest.h"
 
-@interface JWStopRequest : JWRequestWithAlert
+@interface JWStopRequest : JWRequest
 
 @property (nonatomic, strong) NSString *stopName;
 

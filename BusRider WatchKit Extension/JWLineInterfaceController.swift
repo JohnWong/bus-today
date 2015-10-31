@@ -71,41 +71,43 @@ class JWLineInterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
         self.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
         self.lineRequest.lineId = lineId
-        self.lineRequest.loadWithCompletion { [unowned self](result, error) -> Void in
-            if let result = result {
-                self.busLineItem = JWBusLineItem(dictionary: result as [NSObject : AnyObject])
-                let lineItem = self.busLineItem.lineItem
-                self.lineNumberLabel.setText("\(lineItem.lineNumber)")
-                self.startLabel.setText("\(lineItem.from)")
-                self.stopLabel.setText("\(lineItem.to)")
-                self.timeLabel.setText("\(lineItem.firstTime)-\(lineItem.lastTime)")
-                var stopItems = self.busLineItem.stopItems
-                var stopIds = Set<Int>()
-                for item in self.busLineItem.busItems {
-                    if let busItem = item as? JWBusItem {
-                        stopIds.insert(busItem.order)
-                    }
-                }
-                
-                var rowTypes = Array<String>(count: stopItems.count, repeatedValue: Storyboard.RowTypes.item)
-                for index in 0 ..< stopItems.count {
-                    if let stopItem = stopItems[index] as? JWStopItem {
-                        if stopIds.contains(stopItem.order) {
-                            rowTypes[index] = Storyboard.RowTypes.arrivingItem
+        self.lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
+            if let weakSelf = self {
+                if let result = result {
+                    weakSelf.busLineItem = JWBusLineItem(dictionary: result as [NSObject : AnyObject])
+                    let lineItem = weakSelf.busLineItem.lineItem
+                    weakSelf.lineNumberLabel.setText("\(lineItem.lineNumber)")
+                    weakSelf.startLabel.setText("\(lineItem.from)")
+                    weakSelf.stopLabel.setText("\(lineItem.to)")
+                    weakSelf.timeLabel.setText("\(lineItem.firstTime)-\(lineItem.lastTime)")
+                    var stopItems = weakSelf.busLineItem.stopItems
+                    var stopIds = Set<Int>()
+                    for item in weakSelf.busLineItem.busItems {
+                        if let busItem = item as? JWBusItem {
+                            stopIds.insert(busItem.order)
                         }
                     }
-                }
-                
-                self.interfaceTable.setRowTypes(rowTypes)
-                
-                for index in 0 ..< stopItems.count {
-                    if let stopItem: JWStopItem = stopItems[index] as? JWStopItem {
-                        self.configureRowControllerAtIndex(index, text: stopItem.stopName)
+                    
+                    var rowTypes = Array<String>(count: stopItems.count, repeatedValue: Storyboard.RowTypes.item)
+                    for index in 0 ..< stopItems.count {
+                        if let stopItem = stopItems[index] as? JWStopItem {
+                            if stopIds.contains(stopItem.order) {
+                                rowTypes[index] = Storyboard.RowTypes.arrivingItem
+                            }
+                        }
                     }
+                    
+                    weakSelf.interfaceTable.setRowTypes(rowTypes)
+                    
+                    for index in 0 ..< stopItems.count {
+                        if let stopItem: JWStopItem = stopItems[index] as? JWStopItem {
+                            weakSelf.configureRowControllerAtIndex(index, text: stopItem.stopName)
+                        }
+                    }
+                } else {
+                    weakSelf.lineNumberLabel.setText("未找到线路")
+                    weakSelf.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
                 }
-            } else {
-                self.lineNumberLabel.setText("未找到线路")
-                self.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
             }
         }
     }

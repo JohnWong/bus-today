@@ -335,6 +335,9 @@
     __weak typeof(self) weakSelf = self;
     self.lineRequest.lineId = self.lineId;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        if (error) {
+            [JWViewUtil showError:error];
+        }
         [weakSelf.navigationController setSGProgressPercentage:100];
         [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
         if (error) {

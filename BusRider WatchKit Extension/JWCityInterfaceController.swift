@@ -37,18 +37,16 @@ class JWCityInterfaceController: WKInterfaceController {
         }
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
-        cityRequest.loadWithCompletion { [unowned self](result, error) -> Void in
-            if let result = result {
-                if let citiesDict = result["cities"]! as? NSArray {
-                    self.cities.removeAll(keepCapacity: true)
-                    for dict in citiesDict {
-                        let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
-                        self.cities.append(cityItem)
-                    }
-                    self.interfaceTable.setNumberOfRows(self.cities.count, withRowType: Storyboard.RowTypes.item)
-                    for index in 0 ..< self.cities.count {
-                        self.configureRowControllerAtIndex(index)
-                    }
+        cityRequest.loadWithCompletion { [weak self](result, error) -> Void in
+            if let result = result , weakSelf = self, citiesDict = result["cities"]! as? NSArray {
+                weakSelf.cities.removeAll(keepCapacity: true)
+                for dict in citiesDict {
+                    let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
+                    weakSelf.cities.append(cityItem)
+                }
+                weakSelf.interfaceTable.setNumberOfRows(weakSelf.cities.count, withRowType: Storyboard.RowTypes.item)
+                for index in 0 ..< weakSelf.cities.count {
+                    weakSelf.configureRowControllerAtIndex(index)
                 }
             }
         }
@@ -63,7 +61,7 @@ class JWCityInterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         let city = self.cities[rowIndex]
         JWUserDefaultsUtil.setCityItem(city)
-        if let isPushSearchController = isPushSearchController{
+        if let isPushSearchController = isPushSearchController {
             JWUserDefaultsUtil.setPushSearchController(isPushSearchController)
         }
         self.dismissController()

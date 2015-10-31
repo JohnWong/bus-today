@@ -52,17 +52,17 @@ class JWSearchInterfaceController: WKInterfaceController {
         itemRowController.setText("加载中")
         
         searchRequest.keyword = keyword
-        searchRequest.loadWithCompletion { [unowned self](result, error) -> Void in
-            if let result = result {
-                self.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
-                let totalCount = self.searchItems.lineList.count + self.searchItems.stopList.count
+        searchRequest.loadWithCompletion { [weak self](result, error) -> Void in
+            if let result = result, weakSelf = self {
+                weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
+                let totalCount = weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count
                 if totalCount > 0 {
-                    self.interfaceTable.setNumberOfRows(self.searchItems.lineList.count + self.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
-                    for index in 0 ..< self.searchItems.lineList.count + self.searchItems.stopList.count {
-                        self.configureRowControllerAtIndex(index)
+                    weakSelf.interfaceTable.setNumberOfRows(weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
+                    for index in 0 ..< weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count {
+                        weakSelf.configureRowControllerAtIndex(index)
                     }
                 } else {
-                    let itemRowController = self.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                    let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
                     itemRowController.setText("没有结果")
                 }
             }
@@ -82,7 +82,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     
     @IBAction func openInputController() {
         if (TARGET_OS_SIMULATOR > 0) {
-            loadData("2")
+            loadData("9")
             return
         }
         
@@ -97,11 +97,11 @@ class JWSearchInterfaceController: WKInterfaceController {
         }
         
         self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
-            [unowned self](results) -> Void in
-            if let results = results where results.count > 0{
+            [weak self](results) -> Void in
+            if let results = results, weakSelf = self where results.count > 0 {
                 var aResult = results[0] as! String;
                 aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions(), range: nil)
-                self.loadData(aResult)
+                weakSelf.loadData(aResult)
             }
         }
     }

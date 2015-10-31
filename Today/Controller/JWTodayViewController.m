@@ -11,13 +11,13 @@
 #import "JWBusCardView.h"
 #import "JWBusInfoItem.h"
 #import <NotificationCenter/NotificationCenter.h>
-#import "JWBusRequest.h"
+#import "JWLineRequest.h"
 #import "JWUserDefaultsUtil.h"
 
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
-@property (nonatomic, strong) JWBusRequest *busRequest;
+@property (nonatomic, strong) JWLineRequest *lineRequest;
 @property (nonatomic, strong) NSString *lineId;
 @property (nonatomic, assign) NSInteger stopOrder;
 
@@ -44,9 +44,9 @@
 - (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
     [self.busCardView setLoadingView];
     
-    self.busRequest.lineId = self.lineId; // @"0571-044-0";
+    self.lineRequest.lineId = self.lineId; // @"0571-044-0";
     __weak typeof(self) weakSelf = self;
-    [self.busRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+    [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
@@ -59,11 +59,11 @@
 }
 
 #pragma mark getter
-- (JWBusRequest *)busRequest {
-    if (!_busRequest) {
-        _busRequest = [[JWBusRequest alloc] init];
+- (JWLineRequest *)lineRequest {
+    if (!_lineRequest) {
+        _lineRequest = [[JWLineRequest alloc] init];
     }
-    return _busRequest;
+    return _lineRequest;
 }
 
 - (NSString *)lineId {
