@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface JWSearchTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

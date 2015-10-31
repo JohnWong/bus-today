@@ -8,6 +8,7 @@
 
 #import "JWItem.h"
 
+
 @interface JWCollectItem : NSObject <NSCoding>
 
 /**

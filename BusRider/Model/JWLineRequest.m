@@ -8,19 +8,23 @@
 
 #import "JWLineRequest.h"
 
+
 @implementation JWLineRequest
 
-- (NSDictionary *)params {
+- (NSDictionary *)params
+{
     return @{
-             @"lineId": self.lineId ? : @""
-             };
+        @"lineId" : self.lineId ?: @""
+    };
 }
 
-- (NSString *)actionName {
+- (NSString *)actionName
+{
     return @"line!map2";
 }
 
-- (NSString *)validateParams {
+- (NSString *)validateParams
+{
     if (!self.lineId || self.lineId.length <= 0) {
         return @"请先到应用中选择路线";
     }

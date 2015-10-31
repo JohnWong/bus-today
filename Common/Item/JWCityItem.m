@@ -12,9 +12,11 @@
 #define JWKeyCityName @"cityName"
 #define JWKeyCityVersion @"cityVersion"
 
+
 @implementation JWCityItem
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
     if (self = [super init]) {
         self.cityId = [aDecoder decodeObjectForKey:JWKeyCityId];
         self.cityName = [aDecoder decodeObjectForKey:JWKeyCityName];
@@ -23,19 +25,22 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)aCoder {
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
     [aCoder encodeObject:self.cityId forKey:JWKeyCityId];
     [aCoder encodeObject:self.cityName forKey:JWKeyCityName];
     [aCoder encodeObject:@(self.cityVersion) forKey:JWKeyCityVersion];
 }
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.cityId = dict[@"cityId"];
     self.cityName = dict[@"cityName"];
     self.cityVersion = [dict[@"cityVersion"] integerValue];
 }
 
-+ (NSArray *)arrayFromDictionary:(NSDictionary *)dict {
++ (NSArray *)arrayFromDictionary:(NSDictionary *)dict
+{
     NSArray *cities = [self arrayFromDictionaryArray:dict[@"cities"]];
     NSMutableArray *ret = [NSMutableArray array];
     for (JWCityItem *item in cities) {

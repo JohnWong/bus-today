@@ -18,6 +18,7 @@
 
 #define JWCellIdStopLine @"JWCellIdStopLine"
 
+
 @interface JWStopTableViewController ()
 
 @property (nonatomic, strong) JWStopRequest *stopRequest;
@@ -30,15 +31,17 @@
 
 @end
 
+
 @implementation JWStopTableViewController
 
 #pragma mark life cycle
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
+
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.title = self.stopItem.stopName;
-    
+
     [self.tableView registerNib:[UINib nibWithNibName:@"JWStopLineTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdStopLine];
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
@@ -52,32 +55,36 @@
                                                               horizontalRandomness:150
                                                            reverseLoadingAnimation:YES
                                                            internalAnimationFactor:1];
-    
+
     [self loadRequest];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:NSStringFromClass(self.class)];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
-    
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:NSStringFromClass(self.class)];
     [self.navigationController cancelSGProgress];
 }
 
-- (void)updateViews {
+- (void)updateViews
+{
     [self.tableView reloadData];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:JWSeguePushLineWithIdStop]) {
         JWBusLineViewController *lineViewController = segue.destinationViewController;
         lineViewController.lineId = self.selectedLineItem.lineId;
@@ -86,16 +93,19 @@
 }
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return self.lineTypeList.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     JWStopLineTypeItem *typeItem = self.lineTypeList[section];
     return typeItem.lineList.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     JWStopLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdStopLine forIndexPath:indexPath];
     JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
     JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
@@ -115,26 +125,30 @@
             break;
     }
     [cell setTitle:[NSString stringWithFormat:@"%@", lineItem.lineNumer]
-          subTitle:[NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to]
-       rightDetail:leftStopDesc];
+           subTitle:[NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to]
+        rightDetail:leftStopDesc];
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     JWStopLineTypeItem *typeItem = self.lineTypeList[section];
     return [NSString stringWithFormat:@"开往%@", typeItem.nextStop];
 }
 
 #pragma mark UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return 56;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
     return 32;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
     JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
     self.selectedLineItem = lineItem;
@@ -142,7 +156,8 @@
 }
 
 #pragma mark getter
-- (JWStopRequest *)stopRequest {
+- (JWStopRequest *)stopRequest
+{
     if (!_stopRequest) {
         _stopRequest = [[JWStopRequest alloc] init];
     }
@@ -150,8 +165,8 @@
 }
 
 #pragma mark action
-- (void)loadRequest {
-    
+- (void)loadRequest
+{
     __weak typeof(self) weakSelf = self;
     self.stopRequest.stopName = self.stopItem.stopName;
     [self.stopRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
@@ -172,11 +187,13 @@
 }
 
 #pragma mark UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
     [self.storeHouseRefreshControl scrollViewDidScroll];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 

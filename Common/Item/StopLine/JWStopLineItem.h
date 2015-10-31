@@ -8,6 +8,7 @@
 
 #import "JWItem.h"
 
+
 @interface JWStopLineItem : JWItem
 
 @property (nonatomic, strong) NSString *lineId;

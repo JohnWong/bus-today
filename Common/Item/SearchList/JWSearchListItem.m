@@ -10,9 +10,11 @@
 #import "JWSearchLineItem.h"
 #import "JWSearchStopItem.h"
 
+
 @implementation JWSearchListItem
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.lineList = [JWSearchLineItem arrayFromDictionaryArray:dict[@"linelist"]];
     self.stopList = [JWSearchStopItem arrayFromDictionaryArray:dict[@"stoplist"]];
 }

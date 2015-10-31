@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface JWMainEmptyTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

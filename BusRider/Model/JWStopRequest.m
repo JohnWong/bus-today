@@ -8,19 +8,23 @@
 
 #import "JWStopRequest.h"
 
+
 @implementation JWStopRequest
 
-- (NSDictionary *)params {
+- (NSDictionary *)params
+{
     return @{
-             @"stopName": self.stopName ? : @""
-             };
+        @"stopName" : self.stopName ?: @""
+    };
 }
 
-- (NSString *)actionName {
+- (NSString *)actionName
+{
     return @"stop!stoplist";
 }
 
-- (NSString *)validateParams {
+- (NSString *)validateParams
+{
     if (!self.stopName || self.stopName.length <= 0) {
         return @"站点名不能为空";
     }

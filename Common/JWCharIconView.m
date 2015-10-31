@@ -8,15 +8,18 @@
 
 #import "JWCharIconView.h"
 
-@interface JWCharIconView()
+
+@interface JWCharIconView ()
 
 @property (nonatomic, strong) UILabel *centerLabel;
 
 @end
 
+
 @implementation JWCharIconView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
     if (self = [super initWithCoder:aDecoder]) {
         self.layer.cornerRadius = 3.5;
         self.layer.borderColor = kJWMinorColor.CGColor;
@@ -29,7 +32,8 @@
 }
 
 #pragma mark getter
-- (UILabel *)centerLabel {
+- (UILabel *)centerLabel
+{
     if (!_centerLabel) {
         CGFloat margin = 1;
         _centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(margin, margin, self.width - margin * 2, self.height - margin * 2)];
@@ -41,11 +45,13 @@
     return _centerLabel;
 }
 
-- (void)setText:(NSString *)text {
+- (void)setText:(NSString *)text
+{
     self.centerLabel.text = text;
 }
 
-- (void)setColor:(UIColor *)color {
+- (void)setColor:(UIColor *)color
+{
     self.layer.borderColor = color.CGColor;
     self.centerLabel.textColor = color;
 }

@@ -14,6 +14,7 @@
 #import "JWLineRequest.h"
 #import "JWUserDefaultsUtil.h"
 
+
 @interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
@@ -23,27 +24,32 @@
 
 @end
 
+
 @implementation JWTodayViewController
 
 #pragma mark lifecycle
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self requestLineInfo:nil];
 }
 
 
 #pragma mark NCWidgetProviding
-- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
+{
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
-- (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
+- (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler
+{
     [self requestLineInfo:completionHandler];
 }
 
-- (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler {
+- (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler
+{
     [self.busCardView setLoadingView];
-    
+
     self.lineRequest.lineId = self.lineId; // @"0571-044-0";
     __weak typeof(self) weakSelf = self;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
@@ -59,14 +65,16 @@
 }
 
 #pragma mark getter
-- (JWLineRequest *)lineRequest {
+- (JWLineRequest *)lineRequest
+{
     if (!_lineRequest) {
         _lineRequest = [[JWLineRequest alloc] init];
     }
     return _lineRequest;
 }
 
-- (NSString *)lineId {
+- (NSString *)lineId
+{
     if (!_lineId) {
         JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
         if (todayItem) {
@@ -76,7 +84,8 @@
     return _lineId;
 }
 
-- (NSInteger)stopOrder {
+- (NSInteger)stopOrder
+{
     if (_stopOrder <= 0) {
         JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
         _stopOrder = todayItem.order;
@@ -85,11 +94,13 @@
 }
 
 #pragma mark action
-- (IBAction)refreshData:(id)sender {
+- (IBAction)refreshData:(id)sender
+{
     [self requestLineInfo:nil];
 }
 
-- (IBAction)goSettings:(id)sender {
+- (IBAction)goSettings:(id)sender
+{
     [self.extensionContext openURL:[NSURL URLWithString:@"jwapp://busrider"]
                  completionHandler:^(BOOL success) {
                      NSLog(@"open url result:%d",success);

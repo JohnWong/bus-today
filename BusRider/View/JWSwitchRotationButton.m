@@ -8,10 +8,12 @@
 
 #import "JWSwitchRotationButton.h"
 
+
 @implementation JWSwitchRotationButton
 
 #pragma mark lifecycle
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
     if (self = [super initWithCoder:(NSCoder *)aDecoder]) {
         [self addTarget:self action:@selector(didTap:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -19,7 +21,8 @@
 }
 
 #pragma mark setter
-- (void)setOn:(BOOL)on  {
+- (void)setOn:(BOOL)on
+{
     [super setOn:on];
     [UIView animateWithDuration:0.3 animations:^{
         if (on) {
@@ -31,7 +34,8 @@
 }
 
 #pragma mark action
-- (void)didTap:(UIButton *)sender {
+- (void)didTap:(UIButton *)sender
+{
     self.on = !self.on;
 }
 

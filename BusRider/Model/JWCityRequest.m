@@ -8,13 +8,16 @@
 
 #import "JWCityRequest.h"
 
+
 @implementation JWCityRequest
 
-- (NSDictionary *)params {
+- (NSDictionary *)params
+{
     return @{};
 }
 
-- (NSString *)actionName {
+- (NSString *)actionName
+{
     return @"city!morecities";
 }
 

@@ -10,6 +10,7 @@
 #import "JWCollectItem.h"
 #import "JWCityItem.h"
 
+
 @interface JWUserDefaultsUtil : NSObject
 
 #pragma mark today busline
@@ -32,7 +33,7 @@
  */
 + (NSArray *)allCollectItems;
 
-+ (void)setPushSearchController: (BOOL)value;
++ (void)setPushSearchController:(BOOL)value;
 + (BOOL)pushSearchController;
 
 @end

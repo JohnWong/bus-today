@@ -8,9 +8,11 @@
 
 #import "JWBusItem.h"
 
+
 @implementation JWBusItem
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.arrived = [dict[@"arrived"] boolValue];
     self.order = [dict[@"order"] integerValue];
     self.distance = [dict[@"distance"] integerValue];

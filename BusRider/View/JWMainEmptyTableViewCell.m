@@ -8,6 +8,7 @@
 
 #import "JWMainEmptyTableViewCell.h"
 
+
 @implementation JWMainEmptyTableViewCell
 
 @end

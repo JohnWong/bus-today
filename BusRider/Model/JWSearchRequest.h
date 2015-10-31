@@ -8,6 +8,7 @@
 
 #import "JWRequest.h"
 
+
 @interface JWSearchRequest : JWRequest
 
 @property (nonatomic, strong) NSString *keyWord;

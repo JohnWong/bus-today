@@ -10,9 +10,11 @@
 #import "JWStopItem.h"
 #import "JWBusItem.h"
 
+
 @implementation JWBusLineItem
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.lineItem = [[JWLineItem alloc] initWithDictionary:dict];
     self.stopItems = [JWStopItem arrayFromDictionaryArray:dict[@"map"]];
     self.busItems = [JWBusItem arrayFromDictionaryArray:dict[@"bus"]];

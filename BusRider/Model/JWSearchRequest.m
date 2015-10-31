@@ -8,19 +8,23 @@
 
 #import "JWSearchRequest.h"
 
+
 @implementation JWSearchRequest
 
-- (NSDictionary *)params {
+- (NSDictionary *)params
+{
     return @{
-             @"LsName": self.keyWord ? : @""
-             };
+        @"LsName" : self.keyWord ?: @""
+    };
 }
 
-- (NSString *)actionName {
+- (NSString *)actionName
+{
     return @"query!search";
 }
 
-- (NSString *)validateParams {
+- (NSString *)validateParams
+{
     if (!self.keyWord || self.keyWord.length <= 0) {
         return @"搜索关键字不能为空";
     }

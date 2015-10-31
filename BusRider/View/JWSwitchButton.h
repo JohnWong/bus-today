@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface JWSwitchButton : UIButton
 
 @property (nonatomic, assign, getter=isOn) BOOL on;

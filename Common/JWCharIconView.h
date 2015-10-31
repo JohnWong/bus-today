@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface JWCharIconView : UIView
 
 @property (nonatomic, strong) NSString *text;

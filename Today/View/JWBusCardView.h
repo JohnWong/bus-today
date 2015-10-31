@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JWBusInfoItem.h"
 
+
 @interface JWBusCardView : UIView
 
 - (void)setLoadingView;

@@ -8,22 +8,26 @@
 
 #import "JWItem.h"
 
+
 @implementation JWItem
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict {
+- (instancetype)initWithDictionary:(NSDictionary *)dict
+{
     if (self = [super init]) {
         [self setFromDictionary:dict];
     }
     return self;
 }
 
-- (instancetype)init {
+- (instancetype)init
+{
     return [super init];
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict {}
 
-+ (NSArray *)arrayFromDictionaryArray:(NSArray *)array {
++ (NSArray *)arrayFromDictionaryArray:(NSArray *)array
+{
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *dict in array) {
         id item = [[self alloc] initWithDictionary:dict];

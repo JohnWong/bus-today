@@ -8,6 +8,7 @@
 
 #import "JWItem.h"
 
+
 @interface JWStopLineTypeItem : NSObject
 
 @property (nonatomic, strong) NSString *nextStop;

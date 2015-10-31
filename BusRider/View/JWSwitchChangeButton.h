@@ -8,6 +8,7 @@
 
 #import "JWSwitchButton.h"
 
+
 @interface JWSwitchChangeButton : JWSwitchButton
 
 @property (nonatomic, strong) UIImage *onImage;

@@ -10,7 +10,8 @@
 #import "JWButtonWithAnimation.h"
 #import "JWFormatter.h"
 
-@interface JWBusCardView()
+
+@interface JWBusCardView ()
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *stationLabel;
@@ -25,15 +26,18 @@
 
 @end
 
+
 @implementation JWBusCardView
 
 #pragma mark callable
-- (void)setLoadingView {
+- (void)setLoadingView
+{
     [self setPlaceHolder];
     [self.refreshButton startAnimation];
 }
 
-- (void)setErrorView:(NSString *)errorMessage {
+- (void)setErrorView:(NSString *)errorMessage
+{
     [UIView animateWithDuration:0.3 animations:^{
         [self setToSubviews:^(UIView *view) {
             view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
@@ -51,7 +55,8 @@
     }];
 }
 
-- (void)setItem:(JWBusInfoItem *)item {
+- (void)setItem:(JWBusInfoItem *)item
+{
     [UIView animateWithDuration:0.3 animations:^{
         [self setToSubviews:^(UIView *view) {
             view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
@@ -68,27 +73,29 @@
     }];
 }
 
-- (void)setPlaceHolder {
+- (void)setPlaceHolder
+{
     self.titleLabel.text = @"--";
     self.stationLabel.text = @"--";
     self.mainLabel.text = @"--";
     self.subLabel.text = @"";
     self.updateLabel.text = @"--";
-    self.fromLabel.text =@"--";
+    self.fromLabel.text = @"--";
     self.toLabel.text = @"--";
     self.firstTimeLabel.text = @"--";
     self.lastTimeLabel.text = @"--";
 }
 
-- (void)setItemInternal:(JWBusInfoItem *)item {
+- (void)setItemInternal:(JWBusInfoItem *)item
+{
     self.titleLabel.text = [NSString stringWithFormat:@"%@", item.lineNumber];
     self.stationLabel.text = [NSString stringWithFormat:@"距%@", item.currentStop];
-    
+
     self.fromLabel.text = item.from;
     self.toLabel.text = item.to;
     self.firstTimeLabel.text = item.firstTime;
     self.lastTimeLabel.text = item.lastTime;
-    
+
     switch (item.state) {
         case JWBusStateNotStarted:
             self.mainLabel.text = @"--";
@@ -118,7 +125,8 @@
     }
 }
 
-- (void)setToSubviews:(void (^)(UIView *view))callback {
+- (void)setToSubviews:(void (^)(UIView *view))callback
+{
     NSArray *subviews = @[ self.titleLabel,
                            self.stationLabel,
                            self.mainLabel,
@@ -127,8 +135,7 @@
                            self.fromLabel,
                            self.toLabel,
                            self.firstTimeLabel,
-                           self.lastTimeLabel
-                           ];
+                           self.lastTimeLabel ];
     for (UIView *view in subviews) {
         callback(view);
     }

@@ -9,9 +9,11 @@
 #import "JWStopLineTypeItem.h"
 #import "JWStopLineItem.h"
 
+
 @implementation JWStopLineTypeItem
 
-- (instancetype)initWithNextStop:(NSString *)nextStop {
+- (instancetype)initWithNextStop:(NSString *)nextStop
+{
     if (self = [super init]) {
         self.nextStop = nextStop;
         self.lineList = [[NSMutableArray alloc] init];
@@ -19,11 +21,13 @@
     return self;
 }
 
-- (instancetype)init {
+- (instancetype)init
+{
     return [self initWithNextStop:nil];
 }
 
-+ (NSArray *)arrayFromDictionary:(NSDictionary *)dict {
++ (NSArray *)arrayFromDictionary:(NSDictionary *)dict
+{
     NSArray *lineList = [JWStopLineItem arrayFromDictionaryArray:dict[@"lines"]];
     NSMutableDictionary *mutableTypeDict = [[NSMutableDictionary alloc] init];
     for (JWStopLineItem *lineItem in lineList) {

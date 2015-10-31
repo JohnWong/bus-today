@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
     JWBusStateNotFound
 };
 
+
 @interface JWBusInfoItem : NSObject
 
 @property (nonatomic, assign) JWBusState state;

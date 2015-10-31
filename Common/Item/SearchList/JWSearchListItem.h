@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JWItem.h"
 
+
 @interface JWSearchListItem : JWItem
 
 /**

@@ -10,15 +10,18 @@
 
 #define kJWRefreshAnimationKey @"JWRefreshAnimationKey"
 
-@interface JWButtonWithAnimation()
+
+@interface JWButtonWithAnimation ()
 
 @property (nonatomic, assign) BOOL shouldStop;
 
 @end
 
+
 @implementation JWButtonWithAnimation
 
-- (void)startAnimation {
+- (void)startAnimation
+{
     // make refresh button rotate
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animation.duration = 1.0;
@@ -29,7 +32,8 @@
     [self.imageView.layer addAnimation:animation forKey:kJWRefreshAnimationKey];
 }
 
-- (void)stopAnimation {
+- (void)stopAnimation
+{
     [self.imageView.layer removeAnimationForKey:kJWRefreshAnimationKey];
 }
 

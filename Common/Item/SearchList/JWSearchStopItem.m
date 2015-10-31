@@ -8,9 +8,11 @@
 
 #import "JWSearchStopItem.h"
 
+
 @implementation JWSearchStopItem
 
-- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName {
+- (instancetype)initWithStopId:(NSString *)stopId stopName:(NSString *)stopName
+{
     if (self = [super init]) {
         self.stopName = stopName;
         self.stopId = stopId;
@@ -18,7 +20,8 @@
     return self;
 }
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.stopName = dict[@"stopName"];
     self.stopId = dict[@"stopId"];
 }

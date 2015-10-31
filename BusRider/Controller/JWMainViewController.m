@@ -27,15 +27,16 @@
 #import "CBStoreHouseRefreshControl.h"
 #import "JWMainEmptyTableViewCell.h"
 
-#define JWCellIdMain                @"JWCellIdMain"
-#define JWCellIdEmpty               @"JWCellIdEmpty"
-#define JWCellIdSearch              @"JWCellIdSearch"
+#define JWCellIdMain @"JWCellIdMain"
+#define JWCellIdEmpty @"JWCellIdEmpty"
+#define JWCellIdSearch @"JWCellIdSearch"
 
 typedef NS_ENUM(NSInteger, JWSearchResultType) {
     JWSearchResultTypeNone = 0,
     JWSearchResultTypeList = 1,
     JWSearchResultTypeSingle = 2
 };
+
 
 @interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, JWNavigationCenterDelegate, UIScrollViewDelegate>
 
@@ -68,10 +69,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 @end
 
+
 @implementation JWMainViewController
 
 #pragma mark lifecycle
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     _cityName = [JWUserDefaultsUtil cityItem].cityName;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
@@ -80,28 +83,29 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     self.tableView.backgroundColor = HEXCOLOR(0xefeff6);
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainEmptyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdEmpty];
-//    self.tableView.tableFooterView = [[UIView alloc] init];
+    //    self.tableView.tableFooterView = [[UIView alloc] init];
     self.searchController.searchBar.showsScopeBar = YES;
     self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
-                                                                  target:self
-                                                           refreshAction:@selector(loadData)
-                                                                   plist:@"bus"
-                                                                   color:HEXCOLOR(0x007AFF)
-                                                               lineWidth:1
-                                                              dropHeight:60
-                                                                   scale:1
-                                                    horizontalRandomness:150
-                                                 reverseLoadingAnimation:YES
+                                                                            target:self
+                                                                     refreshAction:@selector(loadData)
+                                                                             plist:@"bus"
+                                                                             color:HEXCOLOR(0x007AFF)
+                                                                         lineWidth:1
+                                                                        dropHeight:60
+                                                                             scale:1
+                                                              horizontalRandomness:150
+                                                           reverseLoadingAnimation:YES
                                                            internalAnimationFactor:1];
-    
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:NSStringFromClass(self.class)];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
     [self loadData];
@@ -113,13 +117,15 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:NSStringFromClass(self.class)];
     [self.navigationController cancelSGProgress];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:JWSeguePushLineWithData]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
@@ -139,9 +145,10 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 }
 
 #pragma mark UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if (tableView == self.tableView) {
-        return self.collectLineItem.count ? : 1;
+        return self.collectLineItem.count ?: 1;
     } else {
         if (self.searchListItem) {
             if (section == 0 && self.searchListItem.lineList.count > 0) {
@@ -155,7 +162,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     if (tableView == self.tableView) {
         return 1;
     } else {
@@ -167,7 +175,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (tableView == self.tableView) {
         if (self.collectLineItem.count > 0) {
             JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
@@ -196,9 +205,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     if (tableView == self.tableView) {
-        
     } else {
         if (section == 0 && self.searchListItem.lineList.count > 0) {
             return @"公交路线";
@@ -210,7 +219,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 }
 
 #pragma mark UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (tableView == self.tableView) {
         if (self.collectLineItem.count == 0) {
             return 54;
@@ -222,7 +232,8 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (tableView == self.tableView) {
         if (self.collectLineItem.count > 0) {
@@ -242,18 +253,20 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return UITableViewCellEditingStyleDelete;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if (indexPath.row < self.collectLineItem.count) {
             JWCollectItem *item = self.collectLineItem[indexPath.row];
             [JWUserDefaultsUtil removeCollectItemWithLineId:item.lineId];
             [self.collectLineItem removeObjectAtIndex:indexPath.row];
             if (self.collectLineItem.count > 0) {
-                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                [self.tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
                 [self.tableView reloadData];
             }
@@ -262,14 +275,16 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 }
 
 #pragma mark JWNavigationCenterDelegate
-- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
+- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn
+{
     if (isOn) {
         [self showCityList];
     }
 }
 
 #pragma mark UISearchBarDelegate
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
     JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
     if (cityItem) {
         return YES;
@@ -279,57 +294,65 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
     NSString *searchText = searchBar.text;
     if (searchText && searchText.length > 0) {
         [self loadRequestWithKeyword:searchText showHUD:YES];
     }
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
     if (searchText && searchText.length > 0) {
         [self loadRequestWithKeyword:searchText showHUD:NO];
     }
 }
 
 #pragma mark getter
-- (JWSearchRequest *)searchRequest {
+- (JWSearchRequest *)searchRequest
+{
     if (!_searchRequest) {
         _searchRequest = [[JWSearchRequest alloc] init];
     }
     return _searchRequest;
 }
 
-- (JWCityRequest *)cityRequest {
+- (JWCityRequest *)cityRequest
+{
     if (!_cityRequest) {
         _cityRequest = [[JWCityRequest alloc] init];
     }
     return _cityRequest;
 }
 
-- (NSMutableArray *)collectLineItem {
+- (NSMutableArray *)collectLineItem
+{
     if (!_collectLineItem) {
         _collectLineItem = [[[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects] mutableCopy];
     }
     return _collectLineItem;
 }
 
-- (JWNavigationCenterView *)cityButtonItem {
+- (JWNavigationCenterView *)cityButtonItem
+{
     if (!_cityButtonItem) {
-        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle: _cityName ? : @"城市" isBold:NO];
+        _cityButtonItem = [[JWNavigationCenterView alloc] initWithTitle:_cityName ?: @"城市" isBold:NO];
         _cityButtonItem.delegate = self;
     }
     return _cityButtonItem;
 }
 
 #pragma mark action
-- (void)loadData {
+- (void)loadData
+{
     _collectLineItem = nil;
     [self.tableView reloadData];
-    [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
+    [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[ NSRunLoopCommonModes ]];
 }
 
-- (void)showCityList {
+- (void)showCityList
+{
     __weak typeof(self) weakSelf = self;
     [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
@@ -359,11 +382,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }];
 }
 
-- (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD{
+- (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD
+{
     if (isShowHUD) {
         [JWViewUtil showProgress];
     }
-    
+
     self.searchRequest.keyWord = keyword;
     __weak typeof(self) weakSelf = self;
     [self.searchRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
@@ -405,11 +429,13 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 }
 
 #pragma mark UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
     [self.storeHouseRefreshControl scrollViewDidScroll];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 

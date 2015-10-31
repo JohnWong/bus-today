@@ -9,7 +9,8 @@
 #import "JWStopNameButton.h"
 #import "JWViewUtil.h"
 
-@interface JWStopNameButton()
+
+@interface JWStopNameButton ()
 
 @property (nonatomic, weak) IBOutlet UIView *separator;
 @property (nonatomic, weak) IBOutlet UILabel *indexLabel;
@@ -17,11 +18,13 @@
 
 @end
 
+
 @implementation JWStopNameButton
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
-    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)  owner:self options:nil][0];
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:self options:nil][0];
     if (self) {
         [self setFrame:frame];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -31,17 +34,19 @@
 }
 
 #pragma mark action
-- (void)setIndex:(NSInteger)index title:(NSString *)title last:(BOOL)isLast today:(BOOL)isToday selected:(BOOL)isSelected {
+- (void)setIndex:(NSInteger)index title:(NSString *)title last:(BOOL)isLast today:(BOOL)isToday selected:(BOOL)isSelected
+{
     if (isLast) {
         self.separator.hidden = YES;
     } else {
         self.separator.hidden = NO;
     }
-    self.indexLabel.text = [NSString stringWithFormat:@"%ld", (long)index];;
+    self.indexLabel.text = [NSString stringWithFormat:@"%ld", (long)index];
+    ;
     [self.titleButton setTitle:title forState:UIControlStateNormal];
-    
+
     [self setIsToday:isToday];
-    
+
     if (isSelected) {
         self.titleButton.selected = YES;
         self.indexLabel.backgroundColor = self.tintColor;
@@ -51,7 +56,8 @@
     }
 }
 
-- (void)setIsToday:(BOOL)isToday {
+- (void)setIsToday:(BOOL)isToday
+{
     if (isToday) {
         self.todayButton.hidden = NO;
     } else {

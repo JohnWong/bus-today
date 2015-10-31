@@ -8,6 +8,7 @@
 
 #import "JWRequest.h"
 
+
 @interface JWCityRequest : JWRequest
 
 @end

@@ -12,6 +12,7 @@
 typedef void (^JWCompletion)(NSDictionary *dict, NSError *error);
 typedef void (^JWProgress)(CGFloat percent);
 
+
 @interface JWRequest : NSObject
 
 @property (nonatomic, strong) NSDictionary *params;

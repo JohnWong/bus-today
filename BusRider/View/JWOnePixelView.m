@@ -8,9 +8,11 @@
 
 #import "JWOnePixelView.h"
 
+
 @implementation JWOnePixelView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
     if (self = [super initWithCoder:aDecoder]) {
         for (NSLayoutConstraint *constraint in self.constraints) {
             if (constraint.firstAttribute == NSLayoutAttributeHeight) {

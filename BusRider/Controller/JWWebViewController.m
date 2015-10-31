@@ -9,36 +9,43 @@
 #import "JWWebViewController.h"
 #import "UINavigationController+SGProgress.h"
 
+
 @interface JWWebViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
+
 @implementation JWWebViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self refresh:nil];
 }
 
-- (void)viewWillDisAppear:(BOOL)animated {
+- (void)viewWillDisAppear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [self.navigationController cancelSGProgress];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     [self.navigationController finishSGProgress];
 }
 
 
-- (IBAction)refresh:(id)sender {
+- (IBAction)refresh:(id)sender
+{
     [self.webView stopLoading];
     self.navigationItem.title = @"加载中...";
     [self.navigationController showSGProgressWithDuration:5.0];

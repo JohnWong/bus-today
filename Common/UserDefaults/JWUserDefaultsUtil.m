@@ -10,10 +10,11 @@
 
 #define JWSuiteName @"group.johnwong.busrider"
 
-#define JWKeyCollectedLine          @"JWKeyCollectedLine"
-#define JWKeyTodayBusLine           @"JWKeyTodayBusLine"
-#define JWKeyCity                   @"JWKeyCity"
-#define JWKeyPushSearchController   @"JWKeyPushSearchController"
+#define JWKeyCollectedLine @"JWKeyCollectedLine"
+#define JWKeyTodayBusLine @"JWKeyTodayBusLine"
+#define JWKeyCity @"JWKeyCity"
+#define JWKeyPushSearchController @"JWKeyPushSearchController"
+
 
 @interface JWUserDefaultsUtil ()
 
@@ -21,16 +22,19 @@
 
 @end
 
+
 @implementation JWUserDefaultsUtil
 
-- (instancetype)initWithUserDefaults:(NSUserDefaults *)userDefaults {
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)userDefaults
+{
     if (self = [super init]) {
         self.userDefaults = userDefaults;
     }
     return self;
 }
 
-+ (instancetype)groupUserDefaults {
++ (instancetype)groupUserDefaults
+{
     static JWUserDefaultsUtil *groupUserDefaults;
     if (!groupUserDefaults) {
         groupUserDefaults = [[self alloc] initWithUserDefaults:[[NSUserDefaults alloc] initWithSuiteName:JWSuiteName]];
@@ -38,29 +42,34 @@
     return groupUserDefaults;
 }
 
-- (void)setObject:(id)userInfo forKey:(NSString *)key {
+- (void)setObject:(id)userInfo forKey:(NSString *)key
+{
     NSUserDefaults *sharedUserDefaults = [self userDefaults];
     [sharedUserDefaults setObject:userInfo forKey:key];
     [sharedUserDefaults synchronize];
 }
 
-- (void)removeObjectForKey:(NSString *)key {
+- (void)removeObjectForKey:(NSString *)key
+{
     NSUserDefaults *sharedUserDefaults = [self userDefaults];
     [sharedUserDefaults removeObjectForKey:key];
     [sharedUserDefaults synchronize];
 }
 
-- (id)objectForKey:(NSString *)key {
+- (id)objectForKey:(NSString *)key
+{
     NSUserDefaults *sharedUserDefaults = [self userDefaults];
     return [sharedUserDefaults objectForKey:key];
 }
 
-- (void)setItem:(id)item forKey:(NSString *)key {
+- (void)setItem:(id)item forKey:(NSString *)key
+{
     NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
     [self setObject:itemData forKey:key];
 }
 
-- (id)itemForKey:(NSString *)key {
+- (id)itemForKey:(NSString *)key
+{
     NSUserDefaults *sharedUserDefaults = [self userDefaults];
     NSData *itemData = [sharedUserDefaults objectForKey:key];
     if (itemData) {
@@ -70,23 +79,26 @@
     }
 }
 
-+ (void)setCityItem:(JWCityItem *)item {
++ (void)setCityItem:(JWCityItem *)item
+{
     [[self groupUserDefaults] setItem:item forKey:JWKeyCity];
 }
 
-+ (JWCityItem *)cityItem {
++ (JWCityItem *)cityItem
+{
     return [[self groupUserDefaults] itemForKey:JWKeyCity];
 }
 
-+ (void)addCollectItem:(JWCollectItem *)item {
++ (void)addCollectItem:(JWCollectItem *)item
+{
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSMutableArray *lineList = [[userDefaults itemForKey:key] mutableCopy];
         if (lineList == nil) {
             lineList = [[NSMutableArray alloc] initWithObjects:item, nil];
-        } else  {
-            for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
+        } else {
+            for (NSInteger i = lineList.count - 1; i >= 0; i--) {
                 JWCollectItem *savedItem = lineList[i];
                 if ([savedItem.lineId isEqualToString:item.lineId]) {
                     NSMutableArray *mutableArray = [lineList mutableCopy];
@@ -101,8 +113,8 @@
     }
 }
 
-+ (void)removeCollectItemWithLineId:(NSString *)lineId {
-    
++ (void)removeCollectItemWithLineId:(NSString *)lineId
+{
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
@@ -110,7 +122,7 @@
         if (lineList == nil) {
             return;
         }
-        for (NSInteger i = lineList.count - 1; i >= 0 ; i--) {
+        for (NSInteger i = lineList.count - 1; i >= 0; i--) {
             JWCollectItem *savedItem = lineList[i];
             if ([savedItem.lineId isEqualToString:lineId]) {
                 NSMutableArray *mutableArray = [lineList mutableCopy];
@@ -123,7 +135,8 @@
     }
 }
 
-+ (JWCollectItem *)collectItemForLineId:(NSString *)lineId {
++ (JWCollectItem *)collectItemForLineId:(NSString *)lineId
+{
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
@@ -143,7 +156,8 @@
     }
 }
 
-+ (NSArray *)allCollectItems {
++ (NSArray *)allCollectItems
+{
     NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
@@ -153,7 +167,8 @@
     }
 }
 
-+ (NSString *)combinedkey:(NSString *)key {
++ (NSString *)combinedkey:(NSString *)key
+{
     JWCityItem *cityItem = [self cityItem];
     if (cityItem) {
         return [NSString stringWithFormat:@"%@-%@", cityItem.cityId, key];
@@ -162,14 +177,16 @@
     }
 }
 
-+ (void)setTodayBusLine:(JWCollectItem *)busLine {
++ (void)setTodayBusLine:(JWCollectItem *)busLine
+{
     NSString *key = [self combinedkey:JWKeyTodayBusLine];
     if (key) {
         [[self groupUserDefaults] setItem:busLine forKey:key];
     }
 }
 
-+ (JWCollectItem *)todayBusLine {
++ (JWCollectItem *)todayBusLine
+{
     NSString *key = [self combinedkey:JWKeyTodayBusLine];
     if (key) {
         return [[self groupUserDefaults] itemForKey:key];
@@ -178,18 +195,21 @@
     }
 }
 
-+ (void)removeTodayBusLine {
++ (void)removeTodayBusLine
+{
     NSString *key = [self combinedkey:JWKeyTodayBusLine];
     if (key) {
         return [[self groupUserDefaults] removeObjectForKey:key];
     }
 }
 
-+ (void)setPushSearchController: (BOOL)value {
++ (void)setPushSearchController:(BOOL)value
+{
     [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults setBool:value forKey:JWKeyPushSearchController];
 }
 
-+ (BOOL)pushSearchController {
++ (BOOL)pushSearchController
+{
     NSString *key = JWKeyPushSearchController;
     if (key) {
         return [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults boolForKey:key];

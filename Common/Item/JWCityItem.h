@@ -8,6 +8,7 @@
 
 #import "JWItem.h"
 
+
 @interface JWCityItem : JWItem <NSCoding>
 
 @property (nonatomic, strong) NSString *cityId;

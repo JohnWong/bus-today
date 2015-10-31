@@ -8,9 +8,11 @@
 
 #import "JWSwitchChangeButton.h"
 
+
 @implementation JWSwitchChangeButton
 
-- (void)setOn:(BOOL)on {
+- (void)setOn:(BOOL)on
+{
     [super setOn:on];
     if (on) {
         [self setImage:self.onImage forState:UIControlStateNormal];

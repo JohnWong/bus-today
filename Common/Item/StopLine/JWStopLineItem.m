@@ -9,9 +9,11 @@
 #import "JWStopLineItem.h"
 #import "JWFormatter.h"
 
+
 @implementation JWStopLineItem
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     self.lineId = dict[@"lineId"];
     self.lineNumer = [JWFormatter formatedLineNumber:dict[@"lineName"]];
     self.from = dict[@"startStopName"];
@@ -20,7 +22,8 @@
     self.leftStops = [dict[@"leftStopNum"] integerValue];
 }
 
-- (NSComparisonResult)compare:(JWStopLineItem *)other {
+- (NSComparisonResult)compare:(JWStopLineItem *)other
+{
     return [self.lineNumer compare:other.lineNumer options:NSNumericSearch];
 }
 

@@ -15,7 +15,9 @@
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__)
 #else
-#define NSLog(...) {}
+#define NSLog(...) \
+    {              \
+    }
 #endif
 
 //#define FAKE

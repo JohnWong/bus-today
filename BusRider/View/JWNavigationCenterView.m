@@ -10,6 +10,7 @@
 #import "JWViewUtil.h"
 #import "JWSwitchRotationButton.h"
 
+
 @interface JWNavigationCenterView ()
 
 //@property (nonatomic, strong) UILabel *titleLabel;
@@ -17,9 +18,11 @@
 
 @end
 
+
 @implementation JWNavigationCenterView
 
-- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold {
+- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold
+{
     if (self = [super initWithFrame:CGRectMake(0, 0, 0, 24)]) {
         [self addSubview:self.titleLabel];
         if (isBold) {
@@ -29,8 +32,8 @@
         }
         [self setTitle:title];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-       
-        [self setImage: [[UIImage imageNamed:@"JWIconExpand"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+
+        [self setImage:[[UIImage imageNamed:@"JWIconExpand"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.alpha = 0;
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
         [self addGestureRecognizer:tapRecognizer];
@@ -38,23 +41,26 @@
     return self;
 }
 
-- (void)setTitle:(NSString *)title {
+- (void)setTitle:(NSString *)title
+{
     [self setTitle:title forState:UIControlStateNormal];
-    CGFloat width = (title ? [title sizeWithAttributes:@{ NSFontAttributeName: self.titleLabel.font }].width : 0);
+    CGFloat width = (title ? [title sizeWithAttributes:@{NSFontAttributeName : self.titleLabel.font}].width : 0);
     CGFloat imageWidth = 18;
     self.width = width + imageWidth;
-    self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageWidth, 0, imageWidth);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth);
     self.imageEdgeInsets = UIEdgeInsetsMake(0, width + (imageWidth - 14) / 2.0, 0, (imageWidth - 14) / 2.0);
     if (title) {
         self.alpha = 1;
     }
 }
 
-- (void)didTap:(UIButton *)sender {
+- (void)didTap:(UIButton *)sender
+{
     self.on = !self.on;
 }
 
-- (void)setOn:(BOOL)on {
+- (void)setOn:(BOOL)on
+{
     [super setOn:on];
     if (self.delegate) {
         [self.delegate buttonItem:self setOn:self.isOn];

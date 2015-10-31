@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JWSearchStopItem.h"
 
+
 @interface JWStopTableViewController : UITableViewController
 
 @property (nonatomic, strong) JWSearchStopItem *stopItem;

@@ -9,9 +9,11 @@
 #import "JWBusInfoItem.h"
 #import "JWFormatter.h"
 
+
 @implementation JWBusInfoItem
 
-- (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo {
+- (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo
+{
     self = [super init];
     if (self) {
         [self setUserStopOrder:stopOrder busInfo:busInfo];
@@ -19,22 +21,23 @@
     return self;
 }
 
-- (instancetype)init {
+- (instancetype)init
+{
     return [self initWithUserStopOrder:0 busInfo:nil];
 }
 
-- (void)setUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)dict {
-    
+- (void)setUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)dict
+{
     NSArray *mapArray = dict[@"map"];
     NSArray *busArray = dict[@"bus"];
     NSDictionary *lineInfo = dict[@"line"];
-    
+
     self.lineNumber = [JWFormatter formatedLineNumber:lineInfo[@"lineName"]];
     self.from = lineInfo[@"startStopName"];
     self.to = lineInfo[@"endStopName"];
     self.firstTime = lineInfo[@"firstTime"];
     self.lastTime = lineInfo[@"lastTime"];
-    
+
     NSInteger currentOrder = -1;
     for (NSDictionary *mapInfo in mapArray) {
         if ([mapInfo[@"order"] integerValue] == stopOrder) {
@@ -47,7 +50,7 @@
         // can not find current stop
         return;
     }
-    
+
     if (busArray.count == 0) {
         self.state = JWBusStateNotFound;
         if ([dict[@"nobustip"] containsString:@"已过运营时间"]) {
@@ -66,7 +69,7 @@
             busInfo = busDict;
         }
     }
-    
+
     if (nearestOrder == -1) {
         self.state = JWBusStateNotStarted;
         self.pastTime = [dict[@"busBehindTime"] integerValue];

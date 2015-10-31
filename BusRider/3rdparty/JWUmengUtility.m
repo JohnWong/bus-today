@@ -8,11 +8,13 @@
 
 #import "JWUmengUtility.h"
 
+
 @implementation JWUmengUtility
 
 static NSString *JWUmengAppkey = @"5505ca7bfd98c5b3bc000020";
 
-+ (void)setupUmeng {
++ (void)setupUmeng
+{
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
     [MobClick startWithAppkey:JWUmengAppkey

@@ -25,7 +25,8 @@
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
 
-@interface JWBusLineViewController() <JWNavigationCenterDelegate, UIScrollViewDelegate>
+
+@interface JWBusLineViewController () <JWNavigationCenterDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstTimeLabel;
@@ -59,17 +60,19 @@
 
 @end
 
+
 @implementation JWBusLineViewController
 
 #pragma mark lifecycle
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
+
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.contentView.layer.cornerRadius = 4;
     self.contentView.layer.borderWidth = kOnePixel;
-    self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor ;
-    
+    self.contentView.layer.borderColor = HEXCOLOR(0xD7D8D9).CGColor;
+
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
     if (collectItem && collectItem.order && collectItem.stopName) {
         JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName stopId:nil];
@@ -82,70 +85,76 @@
     }
     self.navigationItem.titleView = self.stopButtonItem;
     self.storeHouseRefreshControl =
-    [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
-                                            target:self
-                                     refreshAction:@selector(loadRequest)
-                                             plist:@"bus"
-                                             color:HEXCOLOR(0x007AFF)
-                                         lineWidth:1
-                                        dropHeight:60
-                                             scale:1
-                              horizontalRandomness:150
-                           reverseLoadingAnimation:YES
-                           internalAnimationFactor:1];
+        [CBStoreHouseRefreshControl attachToScrollView:self.scrollView
+                                                target:self
+                                         refreshAction:@selector(loadRequest)
+                                                 plist:@"bus"
+                                                 color:HEXCOLOR(0x007AFF)
+                                             lineWidth:1
+                                            dropHeight:60
+                                                 scale:1
+                                  horizontalRandomness:150
+                               reverseLoadingAnimation:YES
+                               internalAnimationFactor:1];
     [self loadRequest];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:NSStringFromClass(self.class)];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:NSStringFromClass(self.class)];
     [self.navigationController cancelSGProgress];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:JWSeguePushStop]) {
         JWStopTableViewController *stopViewController = segue.destinationViewController;
         stopViewController.stopItem = self.selectedStopItem;
     }
 }
 
-- (void)updateViews {
+- (void)updateViews
+{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[JWUserDefaultsUtil collectItemForLineId:self.lineId] ? @"已收藏" : @"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
-    
+
     JWLineItem *lineItem = self.busLineItem.lineItem;
     [self.stopButtonItem setTitle:lineItem.lineNumber];
     self.titleLabel.text = [NSString stringWithFormat:@"%@(%@-%@)", lineItem.lineNumber, lineItem.from, lineItem.to];
     self.firstTimeLabel.text = lineItem.firstTime;
     self.lastTimeLabel.text = lineItem.lastTime;
-    
-    NSInteger count = self.busLineItem? self.busLineItem.stopItems.count : 0;
+
+    NSInteger count = self.busLineItem ? self.busLineItem.stopItems.count : 0;
     self.contentHeightConstraint.constant = count * kJWButtonHeight;
-    
+
     for (UIView *view in self.contentView.subviews) {
         if (view != self.lineView) {
             [view removeFromSuperview];
         }
     }
-    
+
     JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
     NSInteger todayStopOrder = 0;
     if (todayItem && [self.lineId isEqualToString:todayItem.lineId]) {
         todayStopOrder = todayItem.order;
     }
-    self.selectedStopOrder = self.selectedStopOrder ? : todayStopOrder;
-    for (int i = 0; i < count; i ++) {
+    self.selectedStopOrder = self.selectedStopOrder ?: todayStopOrder;
+    for (int i = 0; i < count; i++) {
         JWStopItem *stopItem = self.busLineItem.stopItems[i];
-        JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];;
+        JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];
+        ;
         BOOL isSelected = NO;
         if (self.selectedStopOrder) {
             isSelected = stopItem.order == self.selectedStopOrder;
@@ -159,23 +168,23 @@
             }
         }
         [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopOrder && stopItem.order == todayStopOrder selected:isSelected];
-        
+
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
         if (isSelected) {
             self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
             NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
-            if (scrollTo < - self.scrollView.contentInset.top) {
-                scrollTo = - self.scrollView.contentInset.top;
+            if (scrollTo < -self.scrollView.contentInset.top) {
+                scrollTo = -self.scrollView.contentInset.top;
             }
-            
+
             [UIView animateWithDuration:0.25 + 0.002 * fabs(scrollTo - self.scrollView.contentOffset.y) animations:^{
                 self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
             }];
         }
-        
+
         [self.contentView addSubview:stopButton];
-        
+
         // add constraints
         [stopButton addConstraint:[NSLayoutConstraint constraintWithItem:stopButton
                                                                attribute:NSLayoutAttributeHeight
@@ -190,10 +199,9 @@
                                                                         toItem:self.contentView
                                                                      attribute:NSLayoutAttributeTop
                                                                     multiplier:1.0
-                                                                      constant:kJWButtonHeight * i]
-         ];
+                                                                      constant:kJWButtonHeight * i]];
     }
-    
+
     for (JWBusItem *busItem in self.busLineItem.busItems) {
         UIImage *image = [UIImage imageNamed:@"JWIconBus"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -202,11 +210,11 @@
     }
 }
 
-- (void)updateBusInfo {
-    
+- (void)updateBusInfo
+{
     if (self.busInfoItem) {
         self.stopLabel.text = [NSString stringWithFormat:@"距%@", self.busInfoItem.currentStop];
-        
+
         switch (self.busInfoItem.state) {
             case JWBusStateNotStarted:
                 self.mainLabel.text = @"--";
@@ -243,7 +251,8 @@
     [self updateTodayButton];
 }
 
-- (void)updateTodayButton {
+- (void)updateTodayButton
+{
     JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
     if (todayItem) {
         NSString *lineId = todayItem.lineId;
@@ -256,21 +265,24 @@
     self.todayButton.on = NO;
 }
 
-- (void)didSelectStop:(UIButton *)sender {
+- (void)didSelectStop:(UIButton *)sender
+{
     JWStopItem *stopItem = self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag];
     self.selectedStopOrder = stopItem.order;
     [self updateCollectItem];
     [self loadRequest];
 }
 
-- (void)updateCollectItem {
+- (void)updateCollectItem
+{
     JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:self.lineId];
     if (collectItem) {
         [self saveCollectItem];
     }
 }
 
-- (void)saveCollectItem {
+- (void)saveCollectItem
+{
     NSString *stopName;
     for (JWStopItem *stopItem in self.busLineItem.stopItems) {
         if (stopItem.order == self.selectedStopOrder) {
@@ -283,21 +295,24 @@
 }
 
 #pragma mark getter
-- (JWLineRequest *)lineRequest {
+- (JWLineRequest *)lineRequest
+{
     if (!_lineRequest) {
         _lineRequest = [[JWLineRequest alloc] init];
     }
     return _lineRequest;
 }
 
-- (NSString *)lineId {
+- (NSString *)lineId
+{
     if (!_lineId && self.busLineItem) {
         _lineId = self.busLineItem.lineItem.lineId;
     }
     return _lineId;
 }
 
-- (JWNavigationCenterView *)stopButtonItem {
+- (JWNavigationCenterView *)stopButtonItem
+{
     if (!_stopButtonItem) {
         _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil isBold:YES];
         _stopButtonItem.delegate = self;
@@ -306,7 +321,8 @@
 }
 
 #pragma mark JWNavigationCenterDelegate
-- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn {
+- (void)buttonItem:(JWNavigationCenterView *)buttonItem setOn:(BOOL)isOn
+{
     if (isOn && self.busLineItem.stopItems.count > 0) {
         AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择站点"];
         actionSheet.cancelButtonTitle = @"取消";
@@ -331,7 +347,8 @@
 }
 
 #pragma mark action
-- (void)loadRequest {
+- (void)loadRequest
+{
     __weak typeof(self) weakSelf = self;
     self.lineRequest.lineId = self.lineId;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
@@ -355,16 +372,18 @@
     }];
 }
 
-- (IBAction)revertDirection:(id)sender {
+- (IBAction)revertDirection:(id)sender
+{
     self.lineId = self.busLineItem.lineItem.otherLineId;
     self.selectedStopOrder = 0;
     [self loadRequest];
 }
 
-- (void)collect:(id)sender {
+- (void)collect:(id)sender
+{
     if ([sender isKindOfClass:[UIBarButtonItem class]]) {
         UIBarButtonItem *barButton = (UIBarButtonItem *)sender;
-        
+
         if ([JWUserDefaultsUtil collectItemForLineId:self.lineId]) {
             [JWUserDefaultsUtil removeCollectItemWithLineId:self.lineId];
             [barButton setTitle:@"收藏"];
@@ -375,7 +394,8 @@
     }
 }
 
-- (IBAction)sendToToday:(JWSwitchChangeButton *)sender {
+- (IBAction)sendToToday:(JWSwitchChangeButton *)sender
+{
     if (self.todayButton.isOn) {
         [self removeTodayInfo];
         [self updateViews];
@@ -389,25 +409,30 @@
     }
 }
 
-- (IBAction)refresh:(id)sender {
+- (IBAction)refresh:(id)sender
+{
     [self loadRequest];
 }
 
-- (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopOrder:(NSInteger)order {
+- (void)setTodayInfoWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber stopOrder:(NSInteger)order
+{
     JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopName:nil order:self.selectedStopOrder];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
 }
 
-- (void)removeTodayInfo {
+- (void)removeTodayInfo
+{
     [JWUserDefaultsUtil removeTodayBusLine];
 }
 
 #pragma mark UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
     [self.storeHouseRefreshControl scrollViewDidScroll];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface JWFormatter : NSObject
 
 + (NSString *)formatedLineNumber:(NSString *)lineNumber;

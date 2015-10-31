@@ -17,6 +17,7 @@
 
 @end
 
+
 @interface JWNavigationCenterView : JWSwitchRotationButton
 
 @property (nonatomic, weak) id<JWNavigationCenterDelegate> delegate;

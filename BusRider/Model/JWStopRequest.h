@@ -8,6 +8,7 @@
 
 #import "JWRequest.h"
 
+
 @interface JWStopRequest : JWRequest
 
 @property (nonatomic, strong) NSString *stopName;

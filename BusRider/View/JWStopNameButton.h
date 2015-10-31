@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface JWStopNameButton : UIView
 
 @property (nonatomic, weak) IBOutlet UIButton *titleButton;
 
-- (void)setIndex:(NSInteger)index title:(NSString *)title last:(BOOL)isLast today:(BOOL)isToday selected:(BOOL)isSelected ;
+- (void)setIndex:(NSInteger)index title:(NSString *)title last:(BOOL)isLast today:(BOOL)isToday selected:(BOOL)isSelected;
 - (void)setIsToday:(BOOL)isToday;
 
 @end

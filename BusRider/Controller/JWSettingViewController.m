@@ -12,27 +12,32 @@
 #import "JWWebViewController.h"
 #import "Appirater.h"
 
+
 @interface JWSettingViewController () <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end
 
+
 @implementation JWSettingViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.width, 22)];
     self.versionLabel.text = [self appVersion];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     JWWebViewController *webController = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"JWPushAbout"]) {
         webController.url = @"http://impress.sinaapp.com/bus/about.html";
@@ -43,7 +48,8 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 1:
@@ -58,32 +64,34 @@
                     break;
             }
             break;
-            
+
         default:
             break;
     }
 }
 
-- (void)sendMail {
+- (void)sendMail
+{
     if (![MFMailComposeViewController canSendMail]) {
-       [JWViewUtil showInfoWithMessage:@"不能发送邮件，请检查邮件设置"];
+        [JWViewUtil showInfoWithMessage:@"不能发送邮件，请检查邮件设置"];
         return;
     }
     MFMailComposeViewController *mailPicker = [[MFMailComposeViewController alloc] init];
     mailPicker.mailComposeDelegate = self;
-    
+
     //设置主题
-    [mailPicker setSubject: [NSString stringWithFormat:@"[意见反馈]%@-%@", [self appName], [self appVersion]]];
+    [mailPicker setSubject:[NSString stringWithFormat:@"[意见反馈]%@-%@", [self appName], [self appVersion]]];
     //添加收件人
-    NSArray *toRecipients = [NSArray arrayWithObject: @"yellowxz@163.com"];
-    [mailPicker setToRecipients: toRecipients];
+    NSArray *toRecipients = [NSArray arrayWithObject:@"yellowxz@163.com"];
+    [mailPicker setToRecipients:toRecipients];
     //添加抄送
     NSArray *ccRecipients = [NSArray arrayWithObjects:@"huangxiaozhe1988@gmail.com", nil];
     [mailPicker setCcRecipients:ccRecipients];
-    [self presentViewController: mailPicker animated:YES completion:nil];
+    [self presentViewController:mailPicker animated:YES completion:nil];
 }
 
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
     switch (result) {
         case MFMailComposeResultSent:
             [JWViewUtil showSuccessWithMessage:@"发送成功"];
@@ -101,13 +109,14 @@
 }
 
 
-
-- (NSString *)appVersion {
+- (NSString *)appVersion
+{
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
 }
 
-- (NSString *)appName {
+- (NSString *)appName
+{
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *appName = [infoDictionary objectForKey:@"CFBundleDisplayName"];
     return appName ?: [infoDictionary objectForKey:@"CFBundleName"];

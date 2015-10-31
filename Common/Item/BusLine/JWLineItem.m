@@ -9,9 +9,11 @@
 #import "JWLineItem.h"
 #import "JWFormatter.h"
 
+
 @implementation JWLineItem
 
-- (void)setFromDictionary:(NSDictionary *)dict {
+- (void)setFromDictionary:(NSDictionary *)dict
+{
     NSDictionary *lineDict = dict[@"line"];
     self.lineId = lineDict[@"lineId"];
     self.lineNumber = [JWFormatter formatedLineNumber:lineDict[@"lineName"]];
@@ -19,7 +21,7 @@
     self.to = lineDict[@"endStopName"];
     self.firstTime = lineDict[@"firstTime"];
     self.lastTime = lineDict[@"lastTime"];
-    
+
     NSArray *otherLines = dict[@"otherlines"];
     if (otherLines.count == 1) {
         self.otherLineId = otherLines[0][@"lineId"];
