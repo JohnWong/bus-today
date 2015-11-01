@@ -39,7 +39,6 @@
 // Bottom bar
 @property (weak, nonatomic) IBOutlet UILabel *stopLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
-@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *updateLabel;
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
 
@@ -91,7 +90,7 @@
                                                  plist:@"bus"
                                                  color:HEXCOLOR(0x007AFF)
                                              lineWidth:1
-                                            dropHeight:60
+                                            dropHeight:90
                                                  scale:1
                                   horizontalRandomness:150
                                reverseLoadingAnimation:YES
@@ -212,42 +211,50 @@
 
 - (void)updateBusInfo
 {
+    NSString *stop = nil;
+    NSString *update = nil;
+    NSAttributedString *main = nil;
     if (self.busInfoItem) {
-        self.stopLabel.text = [NSString stringWithFormat:@"距%@", self.busInfoItem.currentStop];
+        stop = [NSString stringWithFormat:@"距%@", self.busInfoItem.currentStop];
 
         switch (self.busInfoItem.state) {
-            case JWBusStateNotStarted:
-                self.mainLabel.text = @"--";
-                self.unitLabel.text = @"";
-                self.updateLabel.text = self.busInfoItem.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", (long)self.busInfoItem.pastTime];
+            case JWBusStateNotStarted: {
+                main = [[NSAttributedString alloc] initWithString:self.busInfoItem.timeTable ?: @"--"];
+                update = [NSString stringWithFormat:@"准点率%@%%", @(self.busInfoItem.rate)];
                 break;
-            case JWBusStateNotFound:
-                self.mainLabel.text = @"--";
-                self.unitLabel.text = @"";
-                self.updateLabel.text = self.busInfoItem.noBusTip;
-                break;
+            }
             case JWBusStateNear:
-                if (self.busInfoItem.distance < 1000) {
-                    self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)self.busInfoItem.distance];
-                    self.unitLabel.text = @"米";
+            case JWBusStateFar: {
+                NSString *text = [NSString stringWithFormat:@"%@", self.busInfoItem.travelTime];
+                NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
+                [ats addAttribute:NSFontAttributeName
+                            value:[UIFont systemFontOfSize:14]
+                            range:NSMakeRange(self.busInfoItem.travelTime.length - 1, 1)];
+                main = [ats copy];
+                NSString *distance = nil;
+                if (self.busInfoItem.distance > 1000) {
+                    distance = [NSString stringWithFormat:@"%@千米", @(self.busInfoItem.distance / 100 / 10.0)];
                 } else {
-                    self.mainLabel.text = [NSString stringWithFormat:@"%.1f", self.busInfoItem.distance / 1000.0];
-                    self.unitLabel.text = @"千米";
+                    distance = [NSString stringWithFormat:@"%@米", @(self.busInfoItem.distance)];
                 }
-                self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
+                update = [NSString stringWithFormat:@"%@/%@ %@前上报", self.busInfoItem.remains, distance, [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;
-            case JWBusStateFar:
-                self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)self.busInfoItem.remains];
-                self.unitLabel.text = @"站";
-                self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:self.busInfoItem.updateTime]];
+            }
+            case JWBusStateNotFound:
+            default: {
+                main = [[NSAttributedString alloc] initWithString:@"--"];
+                update = self.busInfoItem.desc;
                 break;
+            }
         }
     } else {
-        self.stopLabel.text = @"--";
-        self.mainLabel.text = @"--";
-        self.unitLabel.text = @"";
-        self.updateLabel.text = @"未选择当前站点";
+        stop = @"--";
+        main = [[NSAttributedString alloc] initWithString:@"--"];
+        update = @"未选择当前站点";
     }
+    self.stopLabel.text = stop;
+    self.mainLabel.attributedText = main;
+    self.updateLabel.text = update;
     [self updateTodayButton];
 }
 
@@ -351,6 +358,7 @@
 {
     __weak typeof(self) weakSelf = self;
     self.lineRequest.lineId = self.lineId;
+    self.lineRequest.targetOrder = self.selectedStopOrder;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [JWViewUtil showError:error];
@@ -434,6 +442,11 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end

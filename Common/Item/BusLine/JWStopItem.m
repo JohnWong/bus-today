@@ -24,17 +24,15 @@
 - (void)setFromDictionary:(NSDictionary *)dict
 {
     self.order = [dict[@"order"] integerValue];
-    self.stopName = dict[@"stopName"];
-    self.coordinate = CLLocationCoordinate2DMake([dict[@"weidu"] doubleValue], [dict[@"jingdu"] doubleValue]);
-    self.stopId = dict[@"stopId"];
+    self.stopName = dict[@"sn"];
+    self.stopId = dict[@"sId"];
 }
 
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@%@", [super description], @{
         @"order" : @(self.order),
-        @"stopName" : self.stopName,
-        @"coordinate" : [NSString stringWithFormat:@"(latitude = %f, longitude = %f)", self.coordinate.latitude, self.coordinate.longitude]
+        @"stopName" : self.stopName
     }];
 }
 

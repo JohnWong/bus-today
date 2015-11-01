@@ -8,7 +8,6 @@
 
 #import "JWMainViewController.h"
 #import "JWSearchRequest.h"
-#import "JWBusLineItem.h"
 #import "JWBusLineViewController.h"
 #import "JWViewUtil.h"
 #import "JWSearchListItem.h"
@@ -53,7 +52,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 /**
  *  Pass to JWBusLineViewController
  */
-@property (nonatomic, strong) JWBusLineItem *busLineItem;
+@property (nonatomic, strong) JWSearchLineItem *lineItem;
 /**
  *  Pass to JWBusLineViewController
  */
@@ -91,7 +90,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
                                                                              plist:@"bus"
                                                                              color:HEXCOLOR(0x007AFF)
                                                                          lineWidth:1
-                                                                        dropHeight:60
+                                                                        dropHeight:90
                                                                              scale:1
                                                               horizontalRandomness:150
                                                            reverseLoadingAnimation:YES
@@ -126,12 +125,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:JWSeguePushLineWithData]) {
-        if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
-            JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
-            busLineViewController.lineId = self.busLineItem.lineItem.lineId;
-        }
-    } else if ([segue.identifier isEqualToString:JWSeguePushLineWithId]) {
+    if ([segue.identifier isEqualToString:JWSeguePushLineWithId]) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
             busLineViewController.lineId = self.selectedLineId;
@@ -196,10 +190,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];
             cell.titleLabel.text = lineItem.lineNumber;
             cell.iconView.image = [UIImage imageNamed:@"JWIconCellBus"];
+            cell.subTitleLabel.text = [NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to];
         } else {
             JWSearchStopItem *stopItem = self.searchListItem.stopList[indexPath.row];
             cell.titleLabel.text = stopItem.stopName;
             cell.iconView.image = [UIImage imageNamed:@"JWIconCellStop"];
+            cell.subTitleLabel.text = nil;
         }
         return cell;
     }
@@ -302,13 +298,6 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
-    if (searchText && searchText.length > 0) {
-        [self loadRequestWithKeyword:searchText showHUD:NO];
-    }
-}
-
 #pragma mark getter
 - (JWSearchRequest *)searchRequest
 {
@@ -403,27 +392,14 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf.searchController.searchResultsTableView reloadData];
             return;
         }
-        NSInteger result = [dict[@"result"] integerValue];
+        NSInteger result = [dict[@"type"] integerValue];
         if (result == JWSearchResultTypeNone) {
             weakSelf.searchListItem = nil;
             [weakSelf.searchController.searchResultsTableView reloadData];
-        } else if (result == JWSearchResultTypeList) {
+        } else if (result == JWSearchResultTypeList || result == JWSearchResultTypeSingle) {
             // list result
             weakSelf.searchListItem = [[JWSearchListItem alloc] initWithDictionary:dict];
             [weakSelf.searchController.searchResultsTableView reloadData];
-        } else if (result == JWSearchResultTypeSingle) {
-            // single result
-            JWBusLineItem *busLineItem = [[JWBusLineItem alloc] initWithDictionary:dict];
-            weakSelf.busLineItem = busLineItem;
-            
-            JWCollectItem *collectItem = [JWUserDefaultsUtil collectItemForLineId:busLineItem.lineItem.lineId];
-            if (collectItem && collectItem.order && collectItem.stopName) {
-                JWStopItem *stopItem = [[JWStopItem alloc] initWithOrder:collectItem.order stopName:collectItem.stopName stopId:nil];
-                weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:stopItem.order busInfo:dict];
-            } else {
-                weakSelf.busInfoItem = nil;
-            }
-            [weakSelf performSegueWithIdentifier:JWSeguePushLineWithData sender:weakSelf];
         }
     }];
 }
@@ -437,6 +413,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end

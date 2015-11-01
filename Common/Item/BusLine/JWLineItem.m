@@ -16,9 +16,9 @@
 {
     NSDictionary *lineDict = dict[@"line"];
     self.lineId = lineDict[@"lineId"];
-    self.lineNumber = [JWFormatter formatedLineNumber:lineDict[@"lineName"]];
-    self.from = lineDict[@"startStopName"];
-    self.to = lineDict[@"endStopName"];
+    self.lineNumber = [JWFormatter formatedLineNumber:lineDict[@"name"]];
+    self.from = lineDict[@"startSn"];
+    self.to = lineDict[@"endSn"];
     self.firstTime = lineDict[@"firstTime"];
     self.lastTime = lineDict[@"lastTime"];
 
@@ -26,7 +26,6 @@
     if (otherLines.count == 1) {
         self.otherLineId = otherLines[0][@"lineId"];
     }
-    self.pastTime = [dict[@"busBehindTime"] integerValue];
 }
 
 @end

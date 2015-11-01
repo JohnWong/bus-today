@@ -22,6 +22,14 @@
  *  线路名称
  */
 @property (nonatomic, strong) NSString *lineNumber;
+/**
+ *  起点站
+ */
+@property (nonatomic, strong) NSString *from;
+/**
+ *  终点站
+ */
+@property (nonatomic, strong) NSString *to;
 
 - (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber;
 

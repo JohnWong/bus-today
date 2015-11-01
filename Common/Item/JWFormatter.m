@@ -13,6 +13,10 @@
 
 + (NSString *)formatedLineNumber:(NSString *)lineNumber
 {
+    if (lineNumber.length == 0) {
+        NSAssert(NO, @"lineNumber is nil (%@)", lineNumber);
+        return @"";
+    }
     NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"\\d*" options:0 error:nil];
     if ([regularExpression stringByReplacingMatchesInString:lineNumber options:0 range:NSMakeRange(0, lineNumber.length) withTemplate:@""].length == 0) {
         return [NSString stringWithFormat:@"%@路", lineNumber];

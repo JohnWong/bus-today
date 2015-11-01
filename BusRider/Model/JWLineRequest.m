@@ -14,13 +14,14 @@
 - (NSDictionary *)params
 {
     return @{
-        @"lineId" : self.lineId ?: @""
+        @"lineId" : self.lineId ?: @"",
+        @"targetOrder" : self.targetOrder ? @(self.targetOrder) : @""
     };
 }
 
 - (NSString *)actionName
 {
-    return @"line!map2";
+    return @"line!lineDetail";
 }
 
 - (NSString *)validateParams

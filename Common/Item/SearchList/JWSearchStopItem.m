@@ -22,6 +22,7 @@
 
 - (void)setFromDictionary:(NSDictionary *)dict
 {
+    // TODO
     self.stopName = dict[@"stopName"];
     self.stopId = dict[@"stopId"];
 }

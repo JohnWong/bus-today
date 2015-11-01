@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -11,11 +12,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIo-vn-Df7">
                         <rect key="frame" x="16" y="10" width="24" height="24"/>
+                        <animations/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="Koe-1i-3Iu"/>
@@ -31,9 +33,11 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-6A-gVj">
-                        <rect key="frame" x="48" y="11" width="239" height="21"/>
+                        <rect key="frame" x="48" y="11" width="14" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="231" id="Rkh-VZ-tfb"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="14" id="ljz-Kr-gCp"/>
                             <constraint firstAttribute="height" constant="21" id="qob-Ls-JNZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -45,19 +49,35 @@
                             </mask>
                         </variation>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTg-8h-PIT">
+                        <rect key="frame" x="78" y="12" width="201" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" id="Sc2-Rh-RxP"/>
+                            <constraint firstAttribute="height" constant="21" id="Y1D-Tz-YdU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="MIo-vn-Df7" secondAttribute="centerY" id="1lb-63-YUv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="SfQ-6A-gVj" secondAttribute="trailing" constant="-8" id="4Iz-51-Zos"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DTg-8h-PIT" secondAttribute="trailing" id="6dx-bB-5nI"/>
+                    <constraint firstItem="DTg-8h-PIT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cmz-z9-vBT"/>
                     <constraint firstItem="MIo-vn-Df7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="XTA-Mn-zvy"/>
                     <constraint firstItem="SfQ-6A-gVj" firstAttribute="leading" secondItem="MIo-vn-Df7" secondAttribute="trailing" constant="8" id="dE1-bR-aD6"/>
+                    <constraint firstItem="DTg-8h-PIT" firstAttribute="leading" secondItem="SfQ-6A-gVj" secondAttribute="trailing" constant="16" id="ePn-MR-fvk"/>
                     <constraint firstAttribute="centerY" secondItem="SfQ-6A-gVj" secondAttribute="centerY" id="fYl-f4-9TA"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="iconView" destination="MIo-vn-Df7" id="5Az-bq-9hm"/>
-                <outlet property="titleLabel" destination="SfQ-6A-gVj" id="zD5-cQ-qup"/>
+                <outlet property="subTitleLabel" destination="DTg-8h-PIT" id="hjE-sw-3Nc"/>
+                <outlet property="titleLabel" destination="SfQ-6A-gVj" id="0gP-I9-3NM"/>
             </connections>
         </tableViewCell>
     </objects>

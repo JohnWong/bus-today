@@ -12,5 +12,6 @@
 @interface JWLineRequest : JWRequest
 
 @property (nonatomic, strong) NSString *lineId;
+@property (nonatomic, assign) NSInteger targetOrder;
 
 @end

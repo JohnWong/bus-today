@@ -15,8 +15,8 @@
 
 - (void)setFromDictionary:(NSDictionary *)dict
 {
-    self.lineList = [JWSearchLineItem arrayFromDictionaryArray:dict[@"linelist"]];
-    self.stopList = [JWSearchStopItem arrayFromDictionaryArray:dict[@"stoplist"]];
+    self.lineList = [JWSearchLineItem arrayFromDictionaryArray:dict[@"lines"]];
+    self.stopList = [JWSearchStopItem arrayFromDictionaryArray:dict[@"stations"]];
 }
 
 @end

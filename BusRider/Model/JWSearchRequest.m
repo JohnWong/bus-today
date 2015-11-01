@@ -14,13 +14,13 @@
 - (NSDictionary *)params
 {
     return @{
-        @"LsName" : self.keyWord ?: @""
+        @"key" : self.keyWord ?: @""
     };
 }
 
 - (NSString *)actionName
 {
-    return @"query!search";
+    return @"query!fuzzy";
 }
 
 - (NSString *)validateParams

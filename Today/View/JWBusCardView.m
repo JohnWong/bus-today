@@ -105,7 +105,7 @@
         case JWBusStateNotFound:
             self.mainLabel.text = @"--";
             self.subLabel.text = @"";
-            self.updateLabel.text = item.noBusTip;
+            self.updateLabel.text = item.desc;
             break;
         case JWBusStateNear:
             if (item.distance < 1000) {

@@ -40,9 +40,5 @@
  *  反向线路id
  */
 @property (nonatomic, strong) NSString *otherLineId;
-/**
- *  上一辆车发出的时间
- */
-@property (nonatomic, assign) NSInteger pastTime;
 
 @end

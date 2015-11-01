@@ -28,60 +28,80 @@
 
 - (void)setUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)dict
 {
-    NSArray *mapArray = dict[@"map"];
-    NSArray *busArray = dict[@"bus"];
+    NSArray *mapArray = dict[@"stations"];
+    NSArray *busArray = dict[@"buses"];
     NSDictionary *lineInfo = dict[@"line"];
 
-    self.lineNumber = [JWFormatter formatedLineNumber:lineInfo[@"lineName"]];
-    self.from = lineInfo[@"startStopName"];
-    self.to = lineInfo[@"endStopName"];
+    self.lineNumber = [JWFormatter formatedLineNumber:lineInfo[@"name"]];
+    self.from = lineInfo[@"startSn"];
+    self.to = lineInfo[@"endSn"];
     self.firstTime = lineInfo[@"firstTime"];
     self.lastTime = lineInfo[@"lastTime"];
 
-    NSInteger currentOrder = -1;
-    for (NSDictionary *mapInfo in mapArray) {
-        if ([mapInfo[@"order"] integerValue] == stopOrder) {
-            currentOrder = [mapInfo[@"order"] integerValue];
-            self.currentStop = mapInfo[@"stopName"];
-            break;
-        }
-    }
-    if (currentOrder == -1) {
-        // can not find current stop
-        return;
-    }
-
     if (busArray.count == 0) {
         self.state = JWBusStateNotFound;
-        if ([dict[@"nobustip"] containsString:@"已过运营时间"]) {
-            self.noBusTip = @"已过运营时间";
-        } else {
-            self.noBusTip = @"暂无数据";
-        }
+        self.desc = lineInfo[@"desc"];
         return;
     }
     NSInteger nearestOrder = -1;
     NSDictionary *busInfo = nil;
     for (NSDictionary *busDict in busArray) {
         NSInteger order = [busDict[@"order"] integerValue];
-        if (order > nearestOrder && order <= currentOrder) {
+        if (order > nearestOrder && order <= stopOrder) {
             nearestOrder = order;
             busInfo = busDict;
         }
     }
 
+    NSInteger currentOrder = -1;
+    NSInteger distance = 0;
+    for (NSDictionary *mapInfo in mapArray) {
+        NSInteger order = [mapInfo[@"order"] integerValue];
+        if (order == stopOrder) {
+            currentOrder = [mapInfo[@"order"] integerValue];
+            self.currentStop = mapInfo[@"sn"];
+        }
+        if (order > nearestOrder && order <= stopOrder) {
+            distance += [mapInfo[@"distanceToSp"] integerValue];
+        }
+    }
+    self.distance = distance;
+
+    if (currentOrder == -1) {
+        // can not find current stop
+        return;
+    }
+
     if (nearestOrder == -1) {
+        busInfo = busArray[0];
         self.state = JWBusStateNotStarted;
-        self.pastTime = [dict[@"busBehindTime"] integerValue];
     } else if (nearestOrder == currentOrder) {
         self.state = JWBusStateNear;
-        self.distance = (int)floor([busInfo[@"distance"] doubleValue]);
+        self.remains = @"即将到站";
     } else {
         self.state = JWBusStateFar;
-        self.remains = currentOrder - nearestOrder;
+        self.remains = [NSString stringWithFormat:@"%@站", @(currentOrder - nearestOrder)];
     }
     self.order = currentOrder;
-    self.updateTime = [busInfo[@"lastTime"] integerValue];
+    self.updateTime = [busInfo[@"syncTime"] integerValue];
+    NSArray *travels = busInfo[@"travels"];
+    if (travels.count > 0) {
+        NSDictionary *travel = travels[0];
+        self.rate = (NSInteger)floor([travel[@"pRate"] doubleValue] * 100);
+        NSInteger time = [travel[@"travelTime"] integerValue];
+        if (time / 60 >= 1) {
+            self.travelTime = [NSString stringWithFormat:@"%@分", @(time / 60)];
+        } else if (time > 30) {
+            self.travelTime = [NSString stringWithFormat:@"%@秒", @(time)];
+        } else {
+            self.travelTime = @"30秒";
+        }
+        NSInteger arrivalTime = [travel[@"arrivalTime"] integerValue] / 1000;
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:arrivalTime];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"HH:mm";
+        self.timeTable = [formatter stringFromDate:date];
+    }
 }
 
 @end

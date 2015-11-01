@@ -112,7 +112,7 @@ class InterfaceController: WKInterfaceController {
             break
         case JWBusState.NotFound:
             mainText = "--"
-            updateText = self.busInfoItem.noBusTip
+            updateText = self.busInfoItem.desc
             break
         case JWBusState.Near:
             if (self.busInfoItem.distance < 1000) {

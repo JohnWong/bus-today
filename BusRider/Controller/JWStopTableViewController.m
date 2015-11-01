@@ -50,7 +50,7 @@
                                                                              plist:@"bus"
                                                                              color:HEXCOLOR(0x007AFF)
                                                                          lineWidth:1
-                                                                        dropHeight:60
+                                                                        dropHeight:90
                                                                              scale:1
                                                               horizontalRandomness:150
                                                            reverseLoadingAnimation:YES
@@ -195,6 +195,11 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self.storeHouseRefreshControl scrollViewDidEndDragging];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end

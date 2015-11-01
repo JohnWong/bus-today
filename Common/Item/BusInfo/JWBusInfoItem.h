@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "JWItem.h"
+
 typedef NS_ENUM(NSUInteger, JWBusState) {
     JWBusStateNotStarted,
     JWBusStateFar,
@@ -16,7 +18,7 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
 };
 
 
-@interface JWBusInfoItem : NSObject
+@interface JWBusInfoItem : JWItem
 
 @property (nonatomic, assign) JWBusState state;
 /**
@@ -42,7 +44,7 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
 /**
  *  最近一辆车还有几站，JWBusStateFar时有效
  */
-@property (nonatomic, assign) NSInteger remains;
+@property (nonatomic, strong) NSString *remains;
 /**
  *  首班时间
  */
@@ -62,11 +64,23 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
 /**
  *  上一辆车发出的分钟数
  */
-@property (nonatomic, assign) NSInteger pastTime;
+@property (nonatomic, assign) NSInteger pastTime __deprecated_msg();
+/**
+ *  到站剩余时间
+ */
+@property (nonatomic, strong) NSString *travelTime;
+/**
+ *  到站时间表
+ */
+@property (nonatomic, strong) NSString *timeTable;
+/**
+ *  准点率
+ */
+@property (nonatomic, assign) NSInteger rate;
 /**
  *  没有公交提示，JWBusStateNotFound时有效
  */
-@property (nonatomic, strong) NSString *noBusTip;
+@property (nonatomic, strong) NSString *desc;
 
 - (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo NS_DESIGNATED_INITIALIZER;
 

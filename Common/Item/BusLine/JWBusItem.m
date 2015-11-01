@@ -11,6 +11,17 @@
 
 @implementation JWBusItem
 
++ (NSArray *)arrayFromDictionaryArray:(NSArray *)array
+{
+    NSMutableArray *filtered = [NSMutableArray arrayWithCapacity:array.count];
+    for (NSDictionary *bus in array) {
+        if ([bus[@"order"] integerValue] >= 0) {
+            [filtered addObject:bus];
+        }
+    }
+    return [super arrayFromDictionaryArray:filtered];
+}
+
 - (void)setFromDictionary:(NSDictionary *)dict
 {
     self.arrived = [dict[@"arrived"] boolValue];

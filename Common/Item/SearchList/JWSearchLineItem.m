@@ -24,7 +24,9 @@
 - (void)setFromDictionary:(NSDictionary *)dict
 {
     self.lineId = dict[@"lineId"];
-    self.lineNumber = [JWFormatter formatedLineNumber:dict[@"lineName"]];
+    self.lineNumber = [JWFormatter formatedLineNumber:dict[@"name"]];
+    self.from = dict[@"startSn"];
+    self.to = dict[@"endSn"];
 }
 
 @end

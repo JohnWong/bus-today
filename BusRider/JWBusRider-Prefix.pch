@@ -20,4 +20,16 @@
 #define JWSeguePushLineWithIdStop   @"JWSeguePushLineWithIdStop"
 #define JWSeguePushStop             @"JWSeguePushStop"
 
+
+// NSLog
+#ifdef DEBUG
+
+#else
+
+#define NSLog(...) \
+{              \
+}
+
+#endif
+
 #endif

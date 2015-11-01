@@ -15,10 +15,6 @@
 @interface JWStopItem : JWItem
 
 /**
- *  站点经纬度
- */
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-/**
  *  站点序号
  */
 @property (nonatomic, assign) NSInteger order;
