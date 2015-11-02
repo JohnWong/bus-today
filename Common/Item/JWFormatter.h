@@ -13,5 +13,6 @@
 
 + (NSString *)formatedLineNumber:(NSString *)lineNumber;
 + (NSString *)formatedTime:(NSInteger)time;
++ (NSString *)formatedDate:(NSInteger)time;
 
 @end

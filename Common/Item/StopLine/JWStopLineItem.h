@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *nextStop;
 @property (nonatomic, strong) NSString *from;
 @property (nonatomic, strong) NSString *to;
-@property (nonatomic, assign) NSInteger leftStops;
+@property (nonatomic, strong) NSString *desc;
 
 @end

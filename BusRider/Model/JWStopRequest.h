@@ -11,6 +11,6 @@
 
 @interface JWStopRequest : JWRequest
 
-@property (nonatomic, strong) NSString *stopName;
+@property (nonatomic, strong) NSString *stationId;
 
 @end

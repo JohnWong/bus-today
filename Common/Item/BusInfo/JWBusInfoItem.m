@@ -96,11 +96,7 @@
         } else {
             self.travelTime = @"30秒";
         }
-        NSInteger arrivalTime = [travel[@"arrivalTime"] integerValue] / 1000;
-        NSDate *date = [NSDate dateWithTimeIntervalSince1970:arrivalTime];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"HH:mm";
-        self.timeTable = [formatter stringFromDate:date];
+        self.timeTable = [JWFormatter formatedDate:[travel[@"arrivalTime"] integerValue]];
     }
 }
 

@@ -109,31 +109,16 @@
     JWStopLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdStopLine forIndexPath:indexPath];
     JWStopLineTypeItem *typeItem = self.lineTypeList[indexPath.section];
     JWStopLineItem *lineItem = typeItem.lineList[indexPath.row];
-    NSString *leftStopDesc;
-    switch (lineItem.leftStops) {
-        case -3:
-            leftStopDesc = nil;
-            break;
-        case -2:
-            leftStopDesc = @"暂无数据";
-            break;
-        case -1:
-            leftStopDesc = @"尚未发车";
-            break;
-        default:
-            leftStopDesc = [NSString stringWithFormat:@"%ld站", (long)lineItem.leftStops];
-            break;
-    }
     [cell setTitle:[NSString stringWithFormat:@"%@", lineItem.lineNumer]
            subTitle:[NSString stringWithFormat:@"%@-%@", lineItem.from, lineItem.to]
-        rightDetail:leftStopDesc];
+        rightDetail:lineItem.desc];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     JWStopLineTypeItem *typeItem = self.lineTypeList[section];
-    return [NSString stringWithFormat:@"开往%@", typeItem.nextStop];
+    return typeItem.nextStop;
 }
 
 #pragma mark UITableViewDelegate
@@ -168,7 +153,7 @@
 - (void)loadRequest
 {
     __weak typeof(self) weakSelf = self;
-    self.stopRequest.stopName = self.stopItem.stopName;
+    self.stopRequest.stationId = self.stopItem.stopId;
     [self.stopRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [JWViewUtil showError:error];

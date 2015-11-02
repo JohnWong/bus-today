@@ -14,18 +14,18 @@
 - (NSDictionary *)params
 {
     return @{
-        @"stopName" : self.stopName ?: @""
+        @"stationId" : self.stationId ?: @""
     };
 }
 
 - (NSString *)actionName
 {
-    return @"stop!stoplist";
+    return @"stop!stationDetail";
 }
 
 - (NSString *)validateParams
 {
-    if (!self.stopName || self.stopName.length <= 0) {
+    if (self.stationId.length <= 0) {
         return @"站点名不能为空";
     }
     return nil;
