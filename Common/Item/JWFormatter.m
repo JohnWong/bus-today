@@ -39,4 +39,13 @@
     return [formatter stringFromDate:date];
 }
 
++ (NSString *)formatedDistance:(NSInteger)distance
+{
+    if (distance > 1000) {
+        return [NSString stringWithFormat:@"%@千米", @(distance / 1000)];
+    } else {
+        return [NSString stringWithFormat:@"%@米", @(distance)];
+    }
+}
+
 @end

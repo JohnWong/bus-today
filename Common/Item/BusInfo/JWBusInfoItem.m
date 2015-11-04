@@ -38,11 +38,6 @@
     self.firstTime = lineInfo[@"firstTime"];
     self.lastTime = lineInfo[@"lastTime"];
 
-    if (busArray.count == 0) {
-        self.state = JWBusStateNotFound;
-        self.desc = lineInfo[@"desc"];
-        return;
-    }
     NSInteger nearestOrder = -1;
     NSDictionary *busInfo = nil;
     for (NSDictionary *busDict in busArray) {
@@ -58,7 +53,7 @@
     for (NSDictionary *mapInfo in mapArray) {
         NSInteger order = [mapInfo[@"order"] integerValue];
         if (order == stopOrder) {
-            currentOrder = [mapInfo[@"order"] integerValue];
+            currentOrder = order;
             self.currentStop = mapInfo[@"sn"];
         }
         if (order > nearestOrder && order <= stopOrder) {
@@ -67,8 +62,9 @@
     }
     self.distance = distance;
 
-    if (currentOrder == -1) {
-        // can not find current stop
+    if (busArray.count == 0 || currentOrder == -1) {
+        self.state = JWBusStateNotFound;
+        self.desc = lineInfo[@"desc"];
         return;
     }
 

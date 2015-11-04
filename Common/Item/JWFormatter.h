@@ -14,5 +14,6 @@
 + (NSString *)formatedLineNumber:(NSString *)lineNumber;
 + (NSString *)formatedTime:(NSInteger)time;
 + (NSString *)formatedDate:(NSInteger)time;
++ (NSString *)formatedDistance:(NSInteger)distance;
 
 @end

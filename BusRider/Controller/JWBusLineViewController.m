@@ -171,7 +171,7 @@
         stopButton.titleButton.tag = kJWButtonBaseTag + i;
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
         if (isSelected) {
-            self.stopLabel.text = [NSString stringWithFormat:@"距%@", stopItem.stopName];
+            self.stopLabel.text = [NSString stringWithFormat:@"到达%@", stopItem.stopName];
             NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
             if (scrollTo < -self.scrollView.contentInset.top) {
                 scrollTo = -self.scrollView.contentInset.top;
@@ -215,7 +215,7 @@
     NSString *update = nil;
     NSAttributedString *main = nil;
     if (self.busInfoItem) {
-        stop = [NSString stringWithFormat:@"距%@", self.busInfoItem.currentStop];
+        stop = [NSString stringWithFormat:@"到达%@", self.busInfoItem.currentStop];
 
         switch (self.busInfoItem.state) {
             case JWBusStateNotStarted: {
@@ -231,12 +231,7 @@
                             value:[UIFont systemFontOfSize:14]
                             range:NSMakeRange(self.busInfoItem.travelTime.length - 1, 1)];
                 main = [ats copy];
-                NSString *distance = nil;
-                if (self.busInfoItem.distance > 1000) {
-                    distance = [NSString stringWithFormat:@"%@千米", @(self.busInfoItem.distance / 100 / 10.0)];
-                } else {
-                    distance = [NSString stringWithFormat:@"%@米", @(self.busInfoItem.distance)];
-                }
+                NSString *distance = [JWFormatter formatedDistance:self.busInfoItem.distance];
                 update = [NSString stringWithFormat:@"%@/%@ %@前上报", self.busInfoItem.remains, distance, [JWFormatter formatedTime:self.busInfoItem.updateTime]];
                 break;
             }
@@ -373,7 +368,7 @@
             if (weakSelf.selectedStopOrder) {
                 weakSelf.busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:weakSelf.selectedStopOrder busInfo:dict];
             }
-            [self updateBusInfo];
+            [weakSelf updateBusInfo];
         }
     } progress:^(CGFloat percent) {
         [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];

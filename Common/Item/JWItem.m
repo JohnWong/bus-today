@@ -37,7 +37,7 @@
     return [NSArray arrayWithArray:mutableArray];
 }
 
-- (NSString *)description
+- (NSString *)debugDescription
 {
     NSMutableString *mutableString = [NSMutableString stringWithString:[super description]];
     Class c = self.class;
