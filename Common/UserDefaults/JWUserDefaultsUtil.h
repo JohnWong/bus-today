@@ -35,5 +35,7 @@
 
 + (void)setPushSearchController:(BOOL)value;
 + (BOOL)pushSearchController;
++ (void)saveCityList:(NSArray *)array;
++ (NSArray *)cityList;
 
 @end

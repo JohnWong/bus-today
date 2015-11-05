@@ -12,8 +12,8 @@
 @interface JWFormatter : NSObject
 
 + (NSString *)formatedLineNumber:(NSString *)lineNumber;
++ (NSString *)formatedCost:(NSInteger)time;
 + (NSString *)formatedTime:(NSInteger)time;
-+ (NSString *)formatedDate:(NSInteger)time;
 + (NSString *)formatedDistance:(NSInteger)distance;
 
 @end

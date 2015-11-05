@@ -342,33 +342,45 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)showCityList
 {
-    __weak typeof(self) weakSelf = self;
-    [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-        if (error) {
-            [JWViewUtil showError:error];
-            [weakSelf.cityButtonItem setOn:NO];
-        } else {
-            NSArray *array = [JWCityItem arrayFromDictionary:dict];
-            if (array.count > 0) {
-                AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择城市"];
-                actionSheet.cancelButtonTitle = @"取消";
-                actionSheet.buttonHeight = 44;
-                actionSheet.animationDuration = 0.4;
-                actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
-                    [weakSelf.cityButtonItem setOn:NO];
-                };
-                for (JWCityItem *cityItem in array) {
-                    [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
-                        [weakSelf.cityButtonItem setOn:NO];
-                        [weakSelf.cityButtonItem setTitle:cityItem.cityName];
-                        [JWUserDefaultsUtil setCityItem:cityItem];
-                        [weakSelf loadData];
-                    }];
+    NSArray *cityList = [JWUserDefaultsUtil cityList];
+    if (cityList.count > 0) {
+        [self showCityListActionSheet:cityList];
+    } else {
+        __weak typeof(self) weakSelf = self;
+        [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+            if (error) {
+                [JWViewUtil showError:error];
+                [weakSelf.cityButtonItem setOn:NO];
+            } else {
+                NSArray *array = [JWCityItem arrayFromDictionary:dict];
+                if (array.count > 0) {
+                    [weakSelf showCityListActionSheet:array];
+                    [JWUserDefaultsUtil saveCityList:array];
                 }
-                [actionSheet show];
             }
-        }
-    }];
+        }];
+    }
+}
+
+- (void)showCityListActionSheet:(NSArray *)array
+{
+    __weak typeof(self) weakSelf = self;
+    AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:@"选择城市"];
+    actionSheet.cancelButtonTitle = @"取消";
+    actionSheet.buttonHeight = 44;
+    actionSheet.animationDuration = 0.4;
+    actionSheet.cancelHandler = ^(AHKActionSheet *actionSheet) {
+        [weakSelf.cityButtonItem setOn:NO];
+    };
+    for (JWCityItem *cityItem in array) {
+        [actionSheet addButtonWithTitle:cityItem.cityName image:[UIImage imageNamed:@"JWIconCity"] type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *actionSheet) {
+            [weakSelf.cityButtonItem setOn:NO];
+            [weakSelf.cityButtonItem setTitle:cityItem.cityName];
+            [JWUserDefaultsUtil setCityItem:cityItem];
+            [weakSelf loadData];
+        }];
+    }
+    [actionSheet show];
 }
 
 - (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD

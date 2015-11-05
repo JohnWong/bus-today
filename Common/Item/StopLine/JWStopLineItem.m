@@ -30,7 +30,7 @@
         NSDictionary *stn = stns[0];
         NSInteger time = [stn[@"travelTime"] integerValue];
         if (time / 60 > 60) {
-            self.desc = [JWFormatter formatedDate:[stn[@"arrivalTime"] integerValue]];
+            self.desc = [JWFormatter formatedTime:[stn[@"arrivalTime"] integerValue]];
         } else if (time / 60 >= 1) {
             self.desc = [NSString stringWithFormat:@"%@分", @(time / 60)];
         } else if (time > 30) {

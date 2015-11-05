@@ -10,10 +10,12 @@
 
 #define JWSuiteName @"group.johnwong.busrider"
 
-#define JWKeyCollectedLine @"JWKeyCollectedLine"
-#define JWKeyTodayBusLine @"JWKeyTodayBusLine"
-#define JWKeyCity @"JWKeyCity"
-#define JWKeyPushSearchController @"JWKeyPushSearchController"
+static NSString *const JWKeyCollectedLine = @"JWKeyCollectedLine";
+static NSString *const JWKeyTodayBusLine = @"JWKeyTodayBusLine";
+static NSString *const JWKeyCity = @"JWKeyCity";
+static NSString *const JWKeyPushSearchController = @"JWKeyPushSearchController";
+static NSString *const JWKeyCityList = @"JWKeyCityList";
+static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 
 @interface JWUserDefaultsUtil ()
@@ -215,6 +217,31 @@
         return [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults boolForKey:key];
     } else {
         return NO;
+    }
+}
+
++ (NSString *)timeKey
+{
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    formater.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    formater.dateFormat = @"yyyyMMdd";
+    return [formater stringFromDate:[NSDate date]];
+}
+
++ (void)saveCityList:(NSArray *)array
+{
+    [((JWUserDefaultsUtil *)[self groupUserDefaults])setItem:array forKey:JWKeyCityList];
+    [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults setObject:[self timeKey] forKey:JWKeyCityListDate];
+}
+
++ (NSArray *)cityList
+{
+    NSString *key = [self timeKey];
+    NSString *savedKey = [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults stringForKey:JWKeyCityListDate];
+    if ([key isEqualToString:savedKey]) {
+        return [((JWUserDefaultsUtil *)[self groupUserDefaults])itemForKey:JWKeyCityList];
+    } else {
+        return nil;
     }
 }
 

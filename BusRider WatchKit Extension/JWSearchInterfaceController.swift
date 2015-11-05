@@ -51,7 +51,7 @@ class JWSearchInterfaceController: WKInterfaceController {
         let itemRowController = interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
         itemRowController.setText("加载中")
         
-        searchRequest.keyword = keyword
+        searchRequest.keyWord = keyword
         searchRequest.loadWithCompletion { [weak self](result, error) -> Void in
             if let result = result, weakSelf = self {
                 weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
@@ -70,7 +70,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     }
     
     func configureRowControllerAtIndex(index: Int) {
-        let itemRowController = interfaceTable.rowControllerAtIndex(index) as! JWSearchControllerRowType
+        let itemRowController = self.interfaceTable.rowControllerAtIndex(index) as! JWSearchControllerRowType
         if index < self.searchItems.lineList.count {
             let item: JWSearchLineItem = self.searchItems.lineList[index] as! JWSearchLineItem
             itemRowController.setText(item.lineNumber)

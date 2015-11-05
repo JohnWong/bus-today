@@ -28,9 +28,6 @@
                                         <label alignment="left" text="184" id="ZxJ-hx-Zgz">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
-                                        <label alignment="left" verticalAlignment="bottom" text="米" id="zlC-B5-cBc">
-                                            <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" id="EYI-uh-y6P">
@@ -120,7 +117,6 @@
                         <outlet property="timeLabel" destination="5Os-qh-XNf" id="bET-nq-1Bp"/>
                         <outlet property="toLabel" destination="I72-Of-2Xh" id="R0C-iF-sy3"/>
                         <outlet property="topGroup" destination="FAh-7t-PZI" id="992-sN-Vvv"/>
-                        <outlet property="unitLabel" destination="zlC-B5-cBc" id="cWv-zU-hjf"/>
                         <outlet property="updateLabel" destination="6hq-o5-7Y1" id="G1T-W0-cVj"/>
                     </connections>
                 </controller>
@@ -349,9 +345,6 @@
                                         <label alignment="left" text="1234" id="9LC-Y1-WCY">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
-                                        <label alignment="left" verticalAlignment="bottom" text="米" id="m3r-VS-k5q">
-                                            <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" id="ZMn-sT-Ge5">
@@ -431,7 +424,6 @@
                         <outlet property="stopLabel" destination="SLr-rU-bSD" id="mmt-Id-Aad"/>
                         <outlet property="timeLabel" destination="5yO-BX-9o8" id="p5u-7U-KxT"/>
                         <outlet property="toLabel" destination="r2v-vg-VQt" id="YaG-kM-1Vf"/>
-                        <outlet property="unitLabel" destination="m3r-VS-k5q" id="c92-YW-Uae"/>
                         <outlet property="updateLabel" destination="UB1-n5-PSp" id="hyg-Ch-8nO"/>
                     </connections>
                 </controller>

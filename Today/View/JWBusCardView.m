@@ -16,7 +16,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *stationLabel;
 @property (nonatomic, weak) IBOutlet UILabel *mainLabel;
-@property (nonatomic, weak) IBOutlet UILabel *subLabel;
 @property (nonatomic, weak) IBOutlet UILabel *updateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *fromLabel;
 @property (nonatomic, weak) IBOutlet UILabel *toLabel;
@@ -78,7 +77,6 @@
     self.titleLabel.text = @"--";
     self.stationLabel.text = @"--";
     self.mainLabel.text = @"--";
-    self.subLabel.text = @"";
     self.updateLabel.text = @"--";
     self.fromLabel.text = @"--";
     self.toLabel.text = @"--";
@@ -89,40 +87,19 @@
 - (void)setItemInternal:(JWBusInfoItem *)item
 {
     self.titleLabel.text = [NSString stringWithFormat:@"%@", item.lineNumber];
-    self.stationLabel.text = [NSString stringWithFormat:@"距%@", item.currentStop];
+    self.stationLabel.text = [NSString stringWithFormat:@"到达%@", item.currentStop];
 
     self.fromLabel.text = item.from;
     self.toLabel.text = item.to;
     self.firstTimeLabel.text = item.firstTime;
     self.lastTimeLabel.text = item.lastTime;
 
-    switch (item.state) {
-        case JWBusStateNotStarted:
-            self.mainLabel.text = @"--";
-            self.subLabel.text = @"";
-            self.updateLabel.text = item.pastTime < 0 ? @"上一辆车发出时间不详" : [NSString stringWithFormat:@"上一辆车发出%ld分钟", (long)item.pastTime];
-            break;
-        case JWBusStateNotFound:
-            self.mainLabel.text = @"--";
-            self.subLabel.text = @"";
-            self.updateLabel.text = item.desc;
-            break;
-        case JWBusStateNear:
-            if (item.distance < 1000) {
-                self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)item.distance];
-                self.subLabel.text = @"米";
-            } else {
-                self.mainLabel.text = [NSString stringWithFormat:@"%.1f", item.distance / 1000.0];
-                self.subLabel.text = @"千米";
-            }
-            self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:item.updateTime]];
-            break;
-        case JWBusStateFar:
-            self.mainLabel.text = [NSString stringWithFormat:@"%ld", (long)item.remains];
-            self.subLabel.text = @"站";
-            self.updateLabel.text = [NSString stringWithFormat:@"%@前报告位置", [JWFormatter formatedTime:item.updateTime]];
-            break;
-    }
+    NSArray *info = [item calulateInfo];
+    NSAttributedString *main = info[0];
+    NSString *update = info[1];
+
+    self.mainLabel.attributedText = main;
+    self.updateLabel.text = update;
 }
 
 - (void)setToSubviews:(void (^)(UIView *view))callback
@@ -130,7 +107,6 @@
     NSArray *subviews = @[ self.titleLabel,
                            self.stationLabel,
                            self.mainLabel,
-                           self.subLabel,
                            self.updateLabel,
                            self.fromLabel,
                            self.toLabel,

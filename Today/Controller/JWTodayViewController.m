@@ -51,6 +51,7 @@
     [self.busCardView setLoadingView];
 
     self.lineRequest.lineId = self.lineId; // @"0571-044-0";
+    self.lineRequest.targetOrder = self.stopOrder;
     __weak typeof(self) weakSelf = self;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {

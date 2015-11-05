@@ -214,34 +214,13 @@
     NSString *stop = nil;
     NSString *update = nil;
     NSAttributedString *main = nil;
-    if (self.busInfoItem) {
-        stop = [NSString stringWithFormat:@"到达%@", self.busInfoItem.currentStop];
+    JWBusInfoItem *item = self.busInfoItem;
+    if (item) {
+        stop = [NSString stringWithFormat:@"到达%@", item.currentStop];
 
-        switch (self.busInfoItem.state) {
-            case JWBusStateNotStarted: {
-                main = [[NSAttributedString alloc] initWithString:self.busInfoItem.timeTable ?: @"--"];
-                update = [NSString stringWithFormat:@"准点率%@%%", @(self.busInfoItem.rate)];
-                break;
-            }
-            case JWBusStateNear:
-            case JWBusStateFar: {
-                NSString *text = [NSString stringWithFormat:@"%@", self.busInfoItem.travelTime];
-                NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
-                [ats addAttribute:NSFontAttributeName
-                            value:[UIFont systemFontOfSize:14]
-                            range:NSMakeRange(self.busInfoItem.travelTime.length - 1, 1)];
-                main = [ats copy];
-                NSString *distance = [JWFormatter formatedDistance:self.busInfoItem.distance];
-                update = [NSString stringWithFormat:@"%@/%@ %@前上报", self.busInfoItem.remains, distance, [JWFormatter formatedTime:self.busInfoItem.updateTime]];
-                break;
-            }
-            case JWBusStateNotFound:
-            default: {
-                main = [[NSAttributedString alloc] initWithString:@"--"];
-                update = self.busInfoItem.desc;
-                break;
-            }
-        }
+        NSArray *info = [self.busInfoItem calulateInfo];
+        main = info[0];
+        update = info[1];
     } else {
         stop = @"--";
         main = [[NSAttributedString alloc] initWithString:@"--"];

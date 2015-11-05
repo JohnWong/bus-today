@@ -15,8 +15,8 @@ typedef void (^JWProgress)(CGFloat percent);
 
 @interface JWRequest : NSObject
 
-@property (nonatomic, strong) NSDictionary *params;
-@property (nonatomic, strong) NSString *actionName;
+- (NSDictionary *)params;
+- (NSString *)actionName;
 
 - (void)loadWithCompletion:(JWCompletion)completion;
 - (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress;

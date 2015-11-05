@@ -9,6 +9,8 @@
 #import "JWBusInfoItem.h"
 #import "JWFormatter.h"
 
+#import <UIKit/UIKit.h>
+
 
 @implementation JWBusInfoItem
 
@@ -73,7 +75,7 @@
         self.state = JWBusStateNotStarted;
     } else if (nearestOrder == currentOrder) {
         self.state = JWBusStateNear;
-        self.remains = @"即将到站";
+        self.remains = [busInfo[@"state"] integerValue] == 1 ? @"已到站" : @"即将到站";
     } else {
         self.state = JWBusStateFar;
         self.remains = [NSString stringWithFormat:@"%@站", @(currentOrder - nearestOrder)];
@@ -92,8 +94,50 @@
         } else {
             self.travelTime = @"30秒";
         }
-        self.timeTable = [JWFormatter formatedDate:[travel[@"arrivalTime"] integerValue]];
+        self.timeTable = [JWFormatter formatedTime:[travel[@"arrivalTime"] integerValue]];
     }
+}
+
+- (NSArray *)calulateInfo
+{
+    NSAttributedString *main = nil;
+    NSString *update = nil;
+    typeof(self) item = self;
+    switch (item.state) {
+        case JWBusStateNotStarted: {
+            main = [[NSAttributedString alloc] initWithString:item.timeTable ?: @"--"];
+            update = [NSString stringWithFormat:@"准点率%@%%", @(item.rate)];
+            break;
+        }
+        case JWBusStateNear: {
+            NSString *text = [NSString stringWithFormat:@"%@", item.travelTime];
+            NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
+            [ats addAttribute:NSFontAttributeName
+                        value:[UIFont systemFontOfSize:14]
+                        range:NSMakeRange(item.travelTime.length - 1, 1)];
+            main = [ats copy];
+            update = [NSString stringWithFormat:@"%@ %@前上报", item.remains, [JWFormatter formatedCost:item.updateTime]];
+            break;
+        }
+        case JWBusStateFar: {
+            NSString *text = [NSString stringWithFormat:@"%@", item.travelTime];
+            NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
+            [ats addAttribute:NSFontAttributeName
+                        value:[UIFont systemFontOfSize:14]
+                        range:NSMakeRange(item.travelTime.length - 1, 1)];
+            main = [ats copy];
+            NSString *distance = [JWFormatter formatedDistance:item.distance];
+            update = [NSString stringWithFormat:@"%@/%@ %@前上报", item.remains, distance, [JWFormatter formatedCost:item.updateTime]];
+            break;
+        }
+        case JWBusStateNotFound:
+        default: {
+            main = [[NSAttributedString alloc] initWithString:@"--"];
+            update = item.desc;
+            break;
+        }
+    }
+    return @[ main, update ];
 }
 
 @end

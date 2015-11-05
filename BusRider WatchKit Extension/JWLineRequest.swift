@@ -12,7 +12,8 @@ class JWLineRequest: JWRequest {
     
     var lineId = ""
     
-    override func params() -> Dictionary<String, AnyObject> {
+    
+    override func params() -> Dictionary<NSObject, AnyObject> {
         return [
             "lineId": self.lineId
         ]

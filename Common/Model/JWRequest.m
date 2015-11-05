@@ -13,6 +13,14 @@
 
 #define JWDataErrorKey @"JWDataError"
 
+//#define FAKE
+
+#ifdef FAKE
+#define kJWHost @"localhost:7000"
+#else
+#define kJWHost @"api.chelaile.net.cn:7000"
+#endif
+
 
 @interface JWRequest ()
 
@@ -73,7 +81,7 @@
         }
     };
     self.request.errorBlock = ^(NSError *error) {
-        if (error.code == 1) { // Connection was cancelled.
+        if (error.code == kSTHTTPRequestCancellationError) { // Connection was cancelled.
             return;
         }
         completion(nil, error);

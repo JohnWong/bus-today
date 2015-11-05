@@ -11,11 +11,6 @@
 
 @implementation JWCityRequest
 
-- (NSDictionary *)params
-{
-    return @{};
-}
-
 - (NSString *)actionName
 {
     return @"city!morecities";

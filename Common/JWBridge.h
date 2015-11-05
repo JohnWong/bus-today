@@ -18,3 +18,5 @@
 #import "JWBusInfoItem.h"
 #import "JWFormatter.h"
 #import "JWCollectItem.h"
+#import "JWRequest.h"
+#import "JWSearchRequest.h"
