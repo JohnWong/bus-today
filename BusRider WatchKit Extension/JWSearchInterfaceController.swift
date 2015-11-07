@@ -18,6 +18,7 @@ class JWSearchInterfaceController: WKInterfaceController {
         struct RowTypes {
             static let item = "JWSearchControllerRowType"
             static let noItem = "JWSearchControllerNoRowType"
+            static let errorItem = "JWSearchControllerErrorRowType"
         }
         
         struct Controllers {
@@ -47,21 +48,25 @@ class JWSearchInterfaceController: WKInterfaceController {
     }
     
     func loadData(keyword: String) {
-        self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.item)
-        let itemRowController = interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
-        itemRowController.setText("加载中")
+        self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
         searchRequest.keyWord = keyword
         searchRequest.loadWithCompletion { [weak self](result, error) -> Void in
-            if let result = result, weakSelf = self {
+            if let _ = error, weakSelf = self{
+                weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
+                let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                itemRowController.setText(error.localizedDescription)
+            } else if let result = result, weakSelf = self {
                 weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
                 let totalCount = weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count
                 if totalCount > 0 {
-                    weakSelf.interfaceTable.setNumberOfRows(weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count, withRowType: Storyboard.RowTypes.item)
+                    weakSelf.interfaceTable.setNumberOfRows(totalCount, withRowType: Storyboard.RowTypes.item)
                     for index in 0 ..< weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count {
+                        NSLog("%d", index)
                         weakSelf.configureRowControllerAtIndex(index)
                     }
                 } else {
+                    weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
                     let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
                     itemRowController.setText("没有结果")
                 }
@@ -111,6 +116,7 @@ class JWSearchInterfaceController: WKInterfaceController {
             let item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
             self.pushControllerWithName(Storyboard.Controllers.lineDetail, context: item.lineId)
         } else {
+            // TODO 展示站点或者屏蔽
             
         }
     }

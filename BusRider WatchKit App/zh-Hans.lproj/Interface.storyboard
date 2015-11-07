@@ -150,8 +150,17 @@
                                             </label>
                                         </items>
                                     </group>
+                                </tableRow>
+                                <tableRow identifier="JWCityControllerErrorRowType" selectable="NO" id="fSB-m7-aKj" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="TaP-Em-JTw">
+                                        <items>
+                                            <label width="136" height="36" alignment="left" id="R4F-6r-pgp">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
                                     <connections>
-                                        <outlet property="textLabel" destination="LVb-jv-6aU" id="vTV-vO-C1I"/>
+                                        <outlet property="textLabel" destination="R4F-6r-pgp" id="okh-Eq-zN3"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -300,6 +309,26 @@
                                     </group>
                                     <connections>
                                         <outlet property="textLabel" destination="8Km-Ow-C0s" id="8hW-fD-gVK"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="JWSearchControllerNoRowType" selectable="NO" id="2pA-0u-P9P" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="xru-dw-6rz">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="加载中..." id="1bb-qx-baa"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="1bb-qx-baa" id="DjC-fj-Hwo"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="JWSearchControllerErrorRowType" selectable="NO" id="gjV-xk-Chj" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="sZ5-qC-T5B">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" id="OXp-ae-T1Q"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="OXp-ae-T1Q" id="LOd-3f-qcF"/>
                                     </connections>
                                 </tableRow>
                             </items>

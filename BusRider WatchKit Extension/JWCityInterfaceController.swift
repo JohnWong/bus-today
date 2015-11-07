@@ -17,6 +17,7 @@ class JWCityInterfaceController: WKInterfaceController {
         struct RowTypes {
             static let item = "JWCityControllerRowType"
             static let noItem = "JWCityControllerNoRowType"
+            static let errorItem = "JWCityControllerErrorRowType"
         }
         
         struct Controllers {
@@ -37,8 +38,13 @@ class JWCityInterfaceController: WKInterfaceController {
         }
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
+        
         cityRequest.loadWithCompletion { [weak self](result, error) -> Void in
-            if let result = result , weakSelf = self, citiesDict = result["cities"]! as? NSArray {
+            if let _ = error, weakSelf = self {
+                weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
+                let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWCityControllerRowType
+                itemRowController.setText(error.localizedDescription);
+            } else if let weakSelf = self, citiesDict = result["cities"]! as? NSArray {
                 weakSelf.cities.removeAll(keepCapacity: true)
                 for dict in citiesDict {
                     let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])

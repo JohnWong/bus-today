@@ -150,8 +150,17 @@
                                             </label>
                                         </items>
                                     </group>
+                                </tableRow>
+                                <tableRow identifier="JWCityControllerErrorRowType" selectable="NO" id="ZTY-EW-O8G" customClass="JWCityControllerRowType" customModule="watchOS2_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="eqt-aY-fAV">
+                                        <items>
+                                            <label width="136" height="36" alignment="left" id="SJs-7x-GeR">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
                                     <connections>
-                                        <outlet property="textLabel" destination="LVb-jv-6aU" id="vTV-vO-C1I"/>
+                                        <outlet property="textLabel" destination="SJs-7x-GeR" id="BDa-zT-tmt"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -300,6 +309,26 @@
                                     </group>
                                     <connections>
                                         <outlet property="textLabel" destination="8Km-Ow-C0s" id="8hW-fD-gVK"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="JWSearchControllerNoRowType" selectable="NO" id="rnv-FA-vzR" customClass="JWSearchControllerRowType" customModule="watchOS2_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="aqP-hs-N9f">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="加载中..." id="Myu-zK-5G7"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="Myu-zK-5G7" id="L4b-cc-TKg"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="JWSearchControllerErrorRowType" selectable="NO" id="5BY-m8-ibE" customClass="JWSearchControllerRowType" customModule="watchOS2_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="nWA-4F-917">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" id="Izc-bw-ivf"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="Izc-bw-ivf" id="wYo-vO-tVV"/>
                                     </connections>
                                 </tableRow>
                             </items>

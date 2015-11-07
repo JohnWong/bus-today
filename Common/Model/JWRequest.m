@@ -31,6 +31,17 @@
 
 @implementation JWRequest
 
+- (NSString *)actionName
+{
+    NSAssert(NO, @"override this method %@", __FUNCTION__);
+    return nil;
+}
+
+- (NSDictionary *)params
+{
+    return nil;
+}
+
 - (void)loadWithCompletion:(JWCompletion)completion
 {
     [self loadWithCompletion:completion progress:nil];
@@ -103,14 +114,20 @@
     NSMutableString *paramString = [[NSMutableString alloc] init];
     NSDictionary *paramDict = [self params];
     for (NSString *key in paramDict) {
-        [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
+        NSString *encodedValue = [paramDict[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        [paramString appendFormat:@"&%@=%@", key, encodedValue];
     }
     NSString *cityId = @"";
     JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
     if (cityItem) {
         cityId = [NSString stringWithFormat:@"&cityId=%@", cityItem.cityId];
     }
-    return [[NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@", kJWHost, [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus", [self actionName], cityId, paramString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@",
+                                      kJWHost,
+                                      [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus",
+                                      [self actionName],
+                                      cityId,
+                                      paramString];
 }
 
 - (NSString *)validateParams

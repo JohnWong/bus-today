@@ -16,7 +16,7 @@
 {
     NSDictionary *lineDict = dict[@"line"];
     self.lineId = lineDict[@"lineId"];
-    self.lineNumber = [JWFormatter formatedLineNumber:lineDict[@"name"]];
+    self.lineNumber = [JWFormatter formatedLineNumber:lineDict[@"lineName"] ?: lineDict[@"name"]];
     self.from = lineDict[@"startSn"];
     self.to = lineDict[@"endSn"];
     self.firstTime = lineDict[@"firstTime"];

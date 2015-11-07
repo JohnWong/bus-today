@@ -343,6 +343,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)showCityList
 {
     NSArray *cityList = [JWUserDefaultsUtil cityList];
+#ifdef DEBUG
+    cityList = nil;
+#endif
     if (cityList.count > 0) {
         [self showCityListActionSheet:cityList];
     } else {
@@ -408,7 +411,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         if (result == JWSearchResultTypeNone) {
             weakSelf.searchListItem = nil;
             [weakSelf.searchController.searchResultsTableView reloadData];
-        } else if (result == JWSearchResultTypeList || result == JWSearchResultTypeSingle) {
+        } else {
             // list result
             weakSelf.searchListItem = [[JWSearchListItem alloc] initWithDictionary:dict];
             [weakSelf.searchController.searchResultsTableView reloadData];
