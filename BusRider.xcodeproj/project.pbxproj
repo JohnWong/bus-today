@@ -311,6 +311,9 @@
 		524F572C1A5E272F00DFD0A7 /* JWUserDefaultsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JWUserDefaultsUtil.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		524F572D1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWUserDefaultsUtil.m; sourceTree = "<group>"; };
 		52542E691BEF8AC800B5F9C8 /* JWDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWDetailInterfaceController.swift; sourceTree = "<group>"; };
+		52542E6C1BEFA8FF00B5F9C8 /* BusRider WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BusRider WatchKit App.entitlements"; sourceTree = "<group>"; };
+		52542E6D1BEFA91A00B5F9C8 /* watchOS2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = watchOS2.entitlements; sourceTree = "<group>"; };
+		52542E6E1BEFA92300B5F9C8 /* watchOS2 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "watchOS2 Extension.entitlements"; sourceTree = "<group>"; };
 		5257A0671A4562FC0066A354 /* JWViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWViewUtil.h; sourceTree = "<group>"; };
 		5257A0681A4562FC0066A354 /* JWViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWViewUtil.m; sourceTree = "<group>"; };
 		525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconTodayOff@2x.png"; sourceTree = "<group>"; };
@@ -542,6 +545,7 @@
 		523DCD421AD2F5EF00862462 /* BusRider WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				52542E6C1BEFA8FF00B5F9C8 /* BusRider WatchKit App.entitlements */,
 				523DCD451AD2F5EF00862462 /* Interface.storyboard */,
 				523DCD481AD2F5EF00862462 /* Assets.xcassets */,
 				523DCD431AD2F5EF00862462 /* Supporting Files */,
@@ -679,6 +683,7 @@
 		52B84A351BE1480700BC81F6 /* watchOS2 */ = {
 			isa = PBXGroup;
 			children = (
+				52542E6D1BEFA91A00B5F9C8 /* watchOS2.entitlements */,
 				52B84A361BE1480700BC81F6 /* Interface.storyboard */,
 				52B84A3B1BE1480700BC81F6 /* Info.plist */,
 			);
@@ -688,6 +693,7 @@
 		52B84A441BE1480800BC81F6 /* watchOS2 Extension */ = {
 			isa = PBXGroup;
 			children = (
+				52542E6E1BEFA92300B5F9C8 /* watchOS2 Extension.entitlements */,
 				52B84A481BE1480800BC81F6 /* ExtensionDelegate.h */,
 				52B84A491BE1480800BC81F6 /* ExtensionDelegate.m */,
 				52B84A4B1BE1480800BC81F6 /* ComplicationController.h */,
@@ -1005,6 +1011,11 @@
 					523DCD3D1AD2F5EF00862462 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = KC63T62SBR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					52AB79C81A2E193E001904CA = {
 						CreatedOnToolsVersion = 6.0;
@@ -1027,10 +1038,20 @@
 					52B84A331BE1480700BC81F6 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = KC63T62SBR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					52B84A3F1BE1480700BC81F6 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = KC63T62SBR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1542,6 +1563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "BusRider WatchKit App/BusRider WatchKit App.entitlements";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1561,6 +1583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "BusRider WatchKit App/BusRider WatchKit App.entitlements";
 				COPY_PHASE_STRIP = NO;
 				IBSC_MODULE = BusRider_WatchKit_Extension;
 				INFOPLIST_FILE = "BusRider WatchKit App/Info.plist";
@@ -1736,6 +1759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = watchOS2/watchOS2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1755,6 +1779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = watchOS2/watchOS2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1775,13 +1800,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "watchOS2 Extension/watchOS2 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "watchOS2 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";
@@ -1795,7 +1823,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "watchOS2 Extension/watchOS2 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1803,6 +1833,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.BusRider.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/JWBridge.h";

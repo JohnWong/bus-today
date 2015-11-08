@@ -55,6 +55,7 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.toLabel.setText("--")
         self.timeLabel.setText("--")
         lineRequest.lineId = self.lineId
+        lineRequest.targetOrder = self.order;
         lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
             if let weakSelf = self {
                 if let _ = error {

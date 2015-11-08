@@ -78,13 +78,12 @@ class InterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
     }
     
-    @IBAction func loadData() {
+    func loadData() {
         self.showLoading()
         let todayLine = JWUserDefaultsUtil.todayBusLine()
         if let todayLine = todayLine {
             lineRequest.lineId = todayLine.lineId
-            // TODO
-            lineRequest.targetOrder = 0
+            lineRequest.targetOrder = todayLine.order;
             lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
                 if let weakSelf = self {
                     if let _ = error {
@@ -111,7 +110,7 @@ class InterfaceController: WKInterfaceController {
         let updateText = info[1] as! String
         
         self.lineLabel.setText(self.busInfoItem.lineNumber)
-        self.stopLabel.setText("距\(self.busInfoItem.currentStop)")
+        self.stopLabel.setText("到达\(self.busInfoItem.currentStop)")
         self.updateLabel.setText(updateText)
         self.mainLabel.setAttributedText(mainText)
         

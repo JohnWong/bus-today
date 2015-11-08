@@ -14,25 +14,25 @@
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="oxp-5G-tkH">
                                     <items>
-                                        <label alignment="left" text="311路" id="cdU-MN-Bce">
+                                        <label alignment="left" text="--" id="cdU-MN-Bce">
                                             <fontDescription key="font" type="system" pointSize="24"/>
                                         </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
-                                <label alignment="left" text="距文一西路狮山路口" numberOfLines="0" id="Bhw-ts-HH5">
+                                <label alignment="left" text="--" numberOfLines="0" id="Bhw-ts-HH5">
                                     <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
                                 <group width="1" alignment="left" id="IZS-sB-aHk">
                                     <items>
-                                        <label alignment="left" text="184" id="ZxJ-hx-Zgz">
+                                        <label alignment="left" text="--" id="ZxJ-hx-Zgz">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" id="EYI-uh-y6P">
                                     <items>
-                                        <label width="1" alignment="left" text="3秒前更新" numberOfLines="0" id="6hq-o5-7Y1">
+                                        <label width="1" alignment="left" text="--" numberOfLines="0" id="6hq-o5-7Y1">
                                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                         </label>
                                     </items>
@@ -180,7 +180,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
-                                <label alignment="left" text="311路" id="10c-wS-wAT">
+                                <label alignment="left" text="--" id="10c-wS-wAT">
                                     <fontDescription key="font" type="system" pointSize="36"/>
                                 </label>
                                 <group width="1" alignment="left" layout="vertical" id="icA-TI-DWN">
@@ -190,7 +190,7 @@
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="FwP-oJ-7kd">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="余杭" numberOfLines="0" id="Uyx-Wg-tW9">
+                                                <label alignment="left" text="--" numberOfLines="0" id="Uyx-Wg-tW9">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -200,7 +200,7 @@
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="D8O-Nz-FJw">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="sHz-yx-gcI">
+                                                <label alignment="left" text="--" numberOfLines="0" id="sHz-yx-gcI">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -210,7 +210,7 @@
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="9VU-4f-07M">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="Lud-t5-1MU">
+                                                <label alignment="left" text="--" numberOfLines="0" id="Lud-t5-1MU">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -360,25 +360,25 @@
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="Vo1-Nn-sEB">
                                     <items>
-                                        <label alignment="left" text="311路" id="mlT-Bs-GMz">
+                                        <label alignment="left" text="--" id="mlT-Bs-GMz">
                                             <fontDescription key="font" type="system" pointSize="24"/>
                                         </label>
                                     </items>
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
-                                <label alignment="left" text="距文一西路狮山路口" numberOfLines="0" id="SLr-rU-bSD">
+                                <label alignment="left" text="--" numberOfLines="0" id="SLr-rU-bSD">
                                     <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
                                 <group width="1" alignment="left" id="B8h-yS-WLh">
                                     <items>
-                                        <label alignment="left" text="1234" id="9LC-Y1-WCY">
+                                        <label alignment="left" text="--" id="9LC-Y1-WCY">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" id="ZMn-sT-Ge5">
                                     <items>
-                                        <label width="1" alignment="left" text="更新" numberOfLines="0" id="UB1-n5-PSp">
+                                        <label width="1" alignment="left" text="--" numberOfLines="0" id="UB1-n5-PSp">
                                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                         </label>
                                     </items>

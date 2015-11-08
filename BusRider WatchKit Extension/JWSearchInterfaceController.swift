@@ -86,7 +86,7 @@ class JWSearchInterfaceController: WKInterfaceController {
     
     @IBAction func openInputController() {
         if (TARGET_OS_SIMULATOR > 0) {
-            loadData("9")
+            loadData("2")
             return
         }
         
