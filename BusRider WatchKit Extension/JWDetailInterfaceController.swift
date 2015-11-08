@@ -56,9 +56,13 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
         lineRequest.lineId = self.lineId
         lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
-            if let result = result, weakSelf = self {
-                weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: weakSelf.order, busInfo: result as [NSObject : AnyObject])
-                weakSelf.renderData()
+            if let weakSelf = self {
+                if let _ = error {
+                    
+                } else if let result = result {
+                    weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: weakSelf.order, busInfo: result as [NSObject : AnyObject])
+                    weakSelf.renderData()
+                }
             }
         }
     }
@@ -69,8 +73,8 @@ class JWDetailInterfaceController: WKInterfaceController {
         let updateText = info[1] as! String
     
         self.lineLabel.setText(self.busInfoItem.lineNumber)
-        self.stopLabel.setText("距\(self.busInfoItem.currentStop)")
         self.updateLabel.setText(updateText)
+        self.stopLabel.setText("到达\(self.busInfoItem.currentStop)")
         self.mainLabel.setAttributedText(mainText)
         self.fromLabel.setText(self.busInfoItem.from)
         self.toLabel.setText(self.busInfoItem.to)
@@ -81,5 +85,6 @@ class JWDetailInterfaceController: WKInterfaceController {
         let todayItem = JWCollectItem(lineId: self.lineId, lineNumber: self.busInfoItem.lineNumber, from: nil, to: nil, stopName: nil, order: self.order)
         JWUserDefaultsUtil.setTodayBusLine(todayItem)
         sendButton.setTitle("已发送")
+        self.popToRootController();
     }
 }

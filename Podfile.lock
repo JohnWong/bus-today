@@ -2,7 +2,6 @@ PODS:
   - AHKActionSheet (0.5.3)
   - Appirater (2.0.5)
   - CBStoreHouseRefreshControl (1.0)
-  - Reveal-iOS-SDK (1.5.1)
   - SGNavigationProgress (1.2)
   - STHTTPRequest2 (1.0.4)
   - SVProgressHUD (1.1.3)
@@ -13,7 +12,6 @@ DEPENDENCIES:
   - AHKActionSheet
   - Appirater (~> 2.0.4)
   - CBStoreHouseRefreshControl (from `https://raw.githubusercontent.com/JohnWong/CBStoreHouseRefreshControl/master/CBStoreHouseRefreshControl.podspec`)
-  - Reveal-iOS-SDK (~> 1.5.1)
   - SGNavigationProgress (from `https://raw.githubusercontent.com/JohnWong/SGNavigationProgress/master/SGNavigationProgress.podspec`)
   - STHTTPRequest2 (from `https://raw.githubusercontent.com/JohnWong/STHTTPRequest/master/STHTTPRequest2/STHTTPRequest2.podspec`)
   - SVProgressHUD
@@ -32,7 +30,6 @@ SPEC CHECKSUMS:
   AHKActionSheet: 0b7d3bc6467dd934441fd82beb3911fc1f7bdfd2
   Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
   CBStoreHouseRefreshControl: 15966a5e4b26b66c272795553cefe4aba77e567e
-  Reveal-iOS-SDK: fe5268543f67f1504faef4ed645015fab4412404
   SGNavigationProgress: 6620db991cfd7611f8de036f4d6536c903cf0557
   STHTTPRequest2: 3c787d5b54401c51a6552ea6a3fad474a0053807
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

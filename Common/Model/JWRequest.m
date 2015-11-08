@@ -33,7 +33,7 @@
 
 - (NSString *)actionName
 {
-    NSAssert(NO, @"override this method %@", __FUNCTION__);
+    NSAssert(NO, @"override this method %s", __FUNCTION__);
     return nil;
 }
 
@@ -114,8 +114,7 @@
     NSMutableString *paramString = [[NSMutableString alloc] init];
     NSDictionary *paramDict = [self params];
     for (NSString *key in paramDict) {
-        NSString *encodedValue = [paramDict[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-        [paramString appendFormat:@"&%@=%@", key, encodedValue];
+        [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
     NSString *cityId = @"";
     JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
@@ -127,7 +126,7 @@
                                       [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus",
                                       [self actionName],
                                       cityId,
-                                      paramString];
+                                      [paramString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 }
 
 - (NSString *)validateParams

@@ -40,19 +40,21 @@ class JWCityInterfaceController: WKInterfaceController {
         
         
         cityRequest.loadWithCompletion { [weak self](result, error) -> Void in
-            if let _ = error, weakSelf = self {
-                weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
-                let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWCityControllerRowType
-                itemRowController.setText(error.localizedDescription);
-            } else if let weakSelf = self, citiesDict = result["cities"]! as? NSArray {
-                weakSelf.cities.removeAll(keepCapacity: true)
-                for dict in citiesDict {
-                    let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
-                    weakSelf.cities.append(cityItem)
-                }
-                weakSelf.interfaceTable.setNumberOfRows(weakSelf.cities.count, withRowType: Storyboard.RowTypes.item)
-                for index in 0 ..< weakSelf.cities.count {
-                    weakSelf.configureRowControllerAtIndex(index)
+            if let weakSelf = self {
+                if let _ = error {
+                    weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
+                    let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWCityControllerRowType
+                    itemRowController.setText(error.localizedDescription);
+                } else if let _ = result, citiesDict = result["cities"]! as? NSArray {
+                    weakSelf.cities.removeAll(keepCapacity: true)
+                    for dict in citiesDict {
+                        let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
+                        weakSelf.cities.append(cityItem)
+                    }
+                    weakSelf.interfaceTable.setNumberOfRows(weakSelf.cities.count, withRowType: Storyboard.RowTypes.item)
+                    for index in 0 ..< weakSelf.cities.count {
+                        weakSelf.configureRowControllerAtIndex(index)
+                    }
                 }
             }
         }

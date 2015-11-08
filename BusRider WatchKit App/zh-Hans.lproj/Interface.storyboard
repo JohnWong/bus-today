@@ -8,7 +8,7 @@
         <!--今日公交-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="今日公交" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller title="今日公交" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
@@ -126,7 +126,7 @@
         <!--取消-->
         <scene sceneID="9uj-LL-2oS">
             <objects>
-                <controller identifier="selectCity" title="取消" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="selectCity" title="取消" hidesWhenLoading="NO" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
@@ -176,7 +176,7 @@
         <!--线路-->
         <scene sceneID="Vb9-ZZ-8uC">
             <objects>
-                <controller identifier="lineDetail" title="线路" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="lineDetail" title="线路" hidesWhenLoading="NO" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
@@ -297,7 +297,7 @@
         <!--搜索-->
         <scene sceneID="TUn-gD-QGY">
             <objects>
-                <controller identifier="searchResult" title="搜索" id="QeM-wk-tak" customClass="JWSearchInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="searchResult" title="搜索" hidesWhenLoading="NO" id="QeM-wk-tak" customClass="JWSearchInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="Onz-hq-k5C">
                             <items>
@@ -354,7 +354,7 @@
         <!--详情-->
         <scene sceneID="gTZ-oZ-xe4">
             <objects>
-                <controller identifier="detailInterface" title="详情" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="BusRider_WatchKit_Extension">
+                <controller identifier="detailInterface" title="详情" hidesWhenLoading="NO" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="8nf-bv-gW0">
                             <items>
@@ -432,7 +432,7 @@
                                 </button>
                                 <button width="0.5" alignment="left" verticalAlignment="bottom" title="发到首页" id="M1M-Qb-XXk">
                                     <connections>
-                                        <action selector="sendToGlance" destination="4ix-0Q-vfT" id="Vyt-kT-hfE"/>
+                                        <action selector="sendToGlance" destination="4ix-0Q-vfT" id="CuH-ET-nYQ"/>
                                     </connections>
                                 </button>
                             </items>
@@ -441,8 +441,16 @@
                     </items>
                     <menu key="menu" id="hew-du-8Xd">
                         <items>
-                            <menuItem title="刷新" icon="repeat" id="cfZ-7Z-dBd"/>
-                            <menuItem title="发到首页" icon="accept" id="uTk-yo-awE"/>
+                            <menuItem title="刷新" icon="repeat" id="cfZ-7Z-dBd">
+                                <connections>
+                                    <action selector="loadData" destination="4ix-0Q-vfT" id="Ai7-Tz-n2D"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="发到首页" icon="accept" id="uTk-yo-awE">
+                                <connections>
+                                    <action selector="sendToGlance" destination="4ix-0Q-vfT" id="XnX-Fx-HAB"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>

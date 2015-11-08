@@ -83,10 +83,16 @@ class InterfaceController: WKInterfaceController {
         let todayLine = JWUserDefaultsUtil.todayBusLine()
         if let todayLine = todayLine {
             lineRequest.lineId = todayLine.lineId
+            // TODO
+            lineRequest.targetOrder = 0
             lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
-                if let result = result, weakSelf = self {
-                    weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [NSObject : AnyObject])
-                    weakSelf.renderData()
+                if let weakSelf = self {
+                    if let _ = error {
+                        
+                    } else if let result = result {
+                        weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [NSObject : AnyObject])
+                        weakSelf.renderData()
+                    }
                 }
             }
             self.topGroup.setHidden(false)

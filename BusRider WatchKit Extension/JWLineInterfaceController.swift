@@ -73,7 +73,10 @@ class JWLineInterfaceController: WKInterfaceController {
         self.lineRequest.lineId = lineId
         self.lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
             if let weakSelf = self {
-                if let result = result {
+                if let _ = error {
+                    weakSelf.lineNumberLabel.setText("未找到线路")
+                    weakSelf.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
+                } else if let _ = result {
                     weakSelf.busLineItem = JWBusLineItem(dictionary: result as [NSObject : AnyObject])
                     let lineItem = weakSelf.busLineItem.lineItem
                     weakSelf.lineNumberLabel.setText("\(lineItem.lineNumber)")
@@ -104,9 +107,6 @@ class JWLineInterfaceController: WKInterfaceController {
                             weakSelf.configureRowControllerAtIndex(index, text: stopItem.stopName)
                         }
                     }
-                } else {
-                    weakSelf.lineNumberLabel.setText("未找到线路")
-                    weakSelf.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
                 }
             }
         }

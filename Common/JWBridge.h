@@ -21,3 +21,4 @@
 #import "JWRequest.h"
 #import "JWCityRequest.h"
 #import "JWSearchRequest.h"
+#import "JWLineRequest.h"

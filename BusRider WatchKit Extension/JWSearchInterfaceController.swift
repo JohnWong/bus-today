@@ -52,23 +52,25 @@ class JWSearchInterfaceController: WKInterfaceController {
         
         searchRequest.keyWord = keyword
         searchRequest.loadWithCompletion { [weak self](result, error) -> Void in
-            if let _ = error, weakSelf = self{
-                weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
-                let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
-                itemRowController.setText(error.localizedDescription)
-            } else if let result = result, weakSelf = self {
-                weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
-                let totalCount = weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count
-                if totalCount > 0 {
-                    weakSelf.interfaceTable.setNumberOfRows(totalCount, withRowType: Storyboard.RowTypes.item)
-                    for index in 0 ..< weakSelf.searchItems.lineList.count + weakSelf.searchItems.stopList.count {
-                        NSLog("%d", index)
-                        weakSelf.configureRowControllerAtIndex(index)
-                    }
-                } else {
+            if let weakSelf = self {
+                if let _ = error {
                     weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
                     let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
-                    itemRowController.setText("没有结果")
+                    itemRowController.setText(error.localizedDescription)
+                } else if let result = result {
+                    weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
+                    let totalCount = weakSelf.searchItems.lineList.count
+                    if totalCount > 0 {
+                        weakSelf.interfaceTable.setNumberOfRows(totalCount, withRowType: Storyboard.RowTypes.item)
+                        for index in 0 ..< weakSelf.searchItems.lineList.count {
+                            NSLog("%d", index)
+                            weakSelf.configureRowControllerAtIndex(index)
+                        }
+                    } else {
+                        weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
+                        let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                        itemRowController.setText("没有结果")
+                    }
                 }
             }
         }
@@ -79,9 +81,6 @@ class JWSearchInterfaceController: WKInterfaceController {
         if index < self.searchItems.lineList.count {
             let item: JWSearchLineItem = self.searchItems.lineList[index] as! JWSearchLineItem
             itemRowController.setText(item.lineNumber)
-        } else {
-            let item: JWSearchStopItem = self.searchItems.stopList[index - self.searchItems.lineList.count] as! JWSearchStopItem
-            itemRowController.setText(item.stopName)
         }
     }
     
@@ -115,9 +114,6 @@ class JWSearchInterfaceController: WKInterfaceController {
         if rowIndex < self.searchItems.lineList.count {
             let item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
             self.pushControllerWithName(Storyboard.Controllers.lineDetail, context: item.lineId)
-        } else {
-            // TODO 展示站点或者屏蔽
-            
         }
     }
     
