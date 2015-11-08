@@ -62,10 +62,6 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
  */
 @property (nonatomic, assign) NSInteger distance;
 /**
- *  上一辆车发出的分钟数
- */
-@property (nonatomic, assign) NSInteger pastTime __deprecated_msg();
-/**
  *  到站剩余时间
  */
 @property (nonatomic, strong) NSString *travelTime;
@@ -82,7 +78,7 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
  */
 @property (nonatomic, strong) NSString *desc;
 
-- (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithUserStopOrder:(NSInteger)stopOrder busInfo:(NSDictionary *)busInfo;
 - (NSArray *)calulateInfo;
 
 @end
