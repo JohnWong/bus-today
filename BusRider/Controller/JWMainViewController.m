@@ -342,27 +342,18 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)showCityList
 {
-    NSArray *cityList = [JWUserDefaultsUtil cityList];
-#ifdef DEBUG
-    cityList = nil;
-#endif
-    if (cityList.count > 0) {
-        [self showCityListActionSheet:cityList];
-    } else {
-        __weak typeof(self) weakSelf = self;
-        [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
-            if (error) {
-                [JWViewUtil showError:error];
-                [weakSelf.cityButtonItem setOn:NO];
-            } else {
-                NSArray *array = [JWCityItem arrayFromDictionary:dict];
-                if (array.count > 0) {
-                    [weakSelf showCityListActionSheet:array];
-                    [JWUserDefaultsUtil saveCityList:array];
-                }
+    __weak typeof(self) weakSelf = self;
+    [self.cityRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
+        if (error) {
+            [JWViewUtil showError:error];
+            [weakSelf.cityButtonItem setOn:NO];
+        } else {
+            NSArray *array = dict[kJWData];
+            if (array.count > 0) {
+                [weakSelf showCityListActionSheet:array];
             }
-        }];
-    }
+        }
+    }];
 }
 
 - (void)showCityListActionSheet:(NSArray *)array

@@ -45,12 +45,8 @@ class JWCityInterfaceController: WKInterfaceController {
                     weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
                     let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWCityControllerRowType
                     itemRowController.setText(error.localizedDescription);
-                } else if let _ = result, citiesDict = result["cities"]! as? NSArray {
-                    weakSelf.cities.removeAll(keepCapacity: true)
-                    for dict in citiesDict {
-                        let cityItem = JWCityItem(dictionary: dict as! [NSObject : AnyObject])
-                        weakSelf.cities.append(cityItem)
-                    }
+                } else if let _ = result, cityArray: NSArray = result[kJWData]! as? NSArray {
+                    weakSelf.cities = cityArray as! Array<JWCityItem>
                     weakSelf.interfaceTable.setNumberOfRows(weakSelf.cities.count, withRowType: Storyboard.RowTypes.item)
                     for index in 0 ..< weakSelf.cities.count {
                         weakSelf.configureRowControllerAtIndex(index)

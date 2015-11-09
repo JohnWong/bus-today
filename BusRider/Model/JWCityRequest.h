@@ -9,6 +9,9 @@
 #import "JWRequest.h"
 
 
+extern NSString *const kJWData;
+
+
 @interface JWCityRequest : JWRequest
 
 @end

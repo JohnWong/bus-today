@@ -38,9 +38,10 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 + (instancetype)groupUserDefaults
 {
     static JWUserDefaultsUtil *groupUserDefaults;
-    if (!groupUserDefaults) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         groupUserDefaults = [[self alloc] initWithUserDefaults:[[NSUserDefaults alloc] initWithSuiteName:JWSuiteName]];
-    }
+    });
     return groupUserDefaults;
 }
 
@@ -207,17 +208,13 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 + (void)setPushSearchController:(BOOL)value
 {
-    [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults setBool:value forKey:JWKeyPushSearchController];
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:JWKeyPushSearchController];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (BOOL)pushSearchController
 {
-    NSString *key = JWKeyPushSearchController;
-    if (key) {
-        return [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults boolForKey:key];
-    } else {
-        return NO;
-    }
+    return [[NSUserDefaults standardUserDefaults] boolForKey:JWKeyPushSearchController];
 }
 
 + (NSString *)timeKey
@@ -241,6 +238,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
     if ([key isEqualToString:savedKey]) {
         return [((JWUserDefaultsUtil *)[self groupUserDefaults])itemForKey:JWKeyCityList];
     } else {
+        [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults removeObjectForKey:JWKeyCityList];
         return nil;
     }
 }
