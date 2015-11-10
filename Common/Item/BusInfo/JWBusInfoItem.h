@@ -66,10 +66,6 @@ typedef NS_ENUM(NSUInteger, JWBusState) {
  */
 @property (nonatomic, strong) NSString *travelTime;
 /**
- *  到站时间表
- */
-@property (nonatomic, strong) NSString *timeTable;
-/**
  *  准点率
  */
 @property (nonatomic, assign) NSInteger rate;

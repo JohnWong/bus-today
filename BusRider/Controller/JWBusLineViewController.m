@@ -357,7 +357,7 @@
 - (IBAction)revertDirection:(id)sender
 {
     self.lineId = self.busLineItem.lineItem.otherLineId;
-    self.selectedStopOrder = 0;
+    self.selectedStopOrder = self.busLineItem.stopItems.count + 1 - self.selectedStopOrder;
     [self loadRequest];
 }
 

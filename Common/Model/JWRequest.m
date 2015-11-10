@@ -92,7 +92,8 @@
         }
     };
     self.request.errorBlock = ^(NSError *error) {
-        if (error.code == kSTHTTPRequestCancellationError) { // Connection was cancelled.
+        if (error.code == kSTHTTPRequestCancellationError ||
+            error.code == -999) { // Connection was cancelled.
             return;
         }
         completion(nil, error);
@@ -121,7 +122,7 @@
     if (cityItem) {
         cityId = [NSString stringWithFormat:@"&cityId=%@", cityItem.cityId];
     }
-    return [NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=3.3.0&s=android&sv=4.4.2&vc=37%@%@",
+    return [NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=5.2.0&s=IOS&sv=9.1&vc=10070%@%@",
                                       kJWHost,
                                       [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus",
                                       [self actionName],

@@ -123,6 +123,7 @@ class JWLineInterfaceController: WKInterfaceController {
     @IBAction func reverseDirection() {
         if let _ = self.busLineItem.lineItem where self.busLineItem.lineItem.otherLineId.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
             self.lineId = self.busLineItem.lineItem.otherLineId
+            self.lineRequest.targetOrder = self.busLineItem.stopItems.count + 1 - self.lineRequest.targetOrder;
             self.loadData()
         }
     }

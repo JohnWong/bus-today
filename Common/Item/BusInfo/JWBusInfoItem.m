@@ -67,11 +67,15 @@
     if (busArray.count == 0 || currentOrder == -1) {
         self.state = JWBusStateNotFound;
         self.desc = lineInfo[@"desc"];
+        if ([self.desc rangeOfString:@"暂时失联"].location != NSNotFound) {
+            self.desc = @"暂时失联";
+        }
         return;
     }
 
     if (nearestOrder == -1) {
-        busInfo = busArray[0];
+        // TODO
+        busInfo = busArray.lastObject;
         self.state = JWBusStateNotStarted;
     } else if (nearestOrder == currentOrder) {
         self.state = JWBusStateNear;
@@ -87,14 +91,15 @@
         NSDictionary *travel = travels[0];
         self.rate = (NSInteger)floor([travel[@"pRate"] doubleValue] * 100);
         NSInteger time = [travel[@"travelTime"] integerValue];
-        if (time / 60 >= 1) {
+        if (time / 60 >= 60) {
+            self.travelTime = [JWFormatter formatedTime:[travel[@"arrivalTime"] integerValue]];
+        } else if (time / 60 >= 1) {
             self.travelTime = [NSString stringWithFormat:@"%@分", @(time / 60)];
         } else if (time > 30) {
             self.travelTime = [NSString stringWithFormat:@"%@秒", @(time)];
         } else {
             self.travelTime = @"30秒";
         }
-        self.timeTable = [JWFormatter formatedTime:[travel[@"arrivalTime"] integerValue]];
     }
 }
 
@@ -105,38 +110,33 @@
     typeof(self) item = self;
     switch (item.state) {
         case JWBusStateNotStarted: {
-            main = [[NSAttributedString alloc] initWithString:item.timeTable ?: @"--"];
             update = [NSString stringWithFormat:@"准点率%@%%", @(item.rate)];
             break;
         }
         case JWBusStateNear: {
-            NSString *text = [NSString stringWithFormat:@"%@", item.travelTime];
-            NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
-            [ats addAttribute:NSFontAttributeName
-                        value:[UIFont systemFontOfSize:14]
-                        range:NSMakeRange(item.travelTime.length - 1, 1)];
-            main = [ats copy];
             update = [NSString stringWithFormat:@"%@ %@前上报", item.remains, [JWFormatter formatedCost:item.updateTime]];
             break;
         }
         case JWBusStateFar: {
-            NSString *text = [NSString stringWithFormat:@"%@", item.travelTime];
-            NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
-            [ats addAttribute:NSFontAttributeName
-                        value:[UIFont systemFontOfSize:14]
-                        range:NSMakeRange(item.travelTime.length - 1, 1)];
-            main = [ats copy];
             NSString *distance = [JWFormatter formatedDistance:item.distance];
             update = [NSString stringWithFormat:@"%@/%@ %@前上报", item.remains, distance, [JWFormatter formatedCost:item.updateTime]];
             break;
         }
         case JWBusStateNotFound:
         default: {
-            main = [[NSAttributedString alloc] initWithString:@"--"];
             update = item.desc;
             break;
         }
     }
+    NSString *text = self.travelTime ?: self.desc ?: @"--";
+    NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
+    NSString *lastChar = [text substringFromIndex:text.length - 1];
+    if ([lastChar isEqualToString:@"分"] || [lastChar isEqualToString:@"秒"]) {
+        [ats addAttribute:NSFontAttributeName
+                    value:[UIFont systemFontOfSize:14]
+                    range:NSMakeRange(item.travelTime.length - 1, 1)];
+    }
+    main = [ats copy];
     return @[ main, update ];
 }
 
