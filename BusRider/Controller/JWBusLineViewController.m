@@ -21,6 +21,7 @@
 #import "AHKActionSheet.h"
 #import "JWStopTableViewController.h"
 #import "CBStoreHouseRefreshControl.h"
+#import "JWSessionManager.h"
 
 #define kJWButtonHeight 50
 #define kJWButtonBaseTag 2000
@@ -400,6 +401,8 @@
 {
     JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopName:nil order:self.selectedStopOrder];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
+
+    [[JWSessionManager defaultManager] updateApplicationContext:@{ @"test" : @"1" }];
 }
 
 - (void)removeTodayInfo

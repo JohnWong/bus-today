@@ -8,18 +8,24 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
-class ExtensionDelegate : NSObject, WKExtensionDelegate {
+class ExtensionDelegate : NSObject, WKExtensionDelegate, WCSessionDelegate {
     
     func applicationDidBecomeActive() {
         
     }
     
     func applicationDidFinishLaunching() {
-        
+        WCSession.defaultSession().delegate = self
+        WCSession.defaultSession().activateSession()
     }
     
     func applicationWillResignActive() {
+        
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
         
     }
     

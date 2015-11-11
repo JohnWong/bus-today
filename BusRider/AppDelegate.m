@@ -15,6 +15,8 @@
 #import "JWUmengUtility.h"
 #import "Appirater.h"
 
+#import "JWSessionManager.h"
+
 
 @interface AppDelegate ()
 
@@ -35,6 +37,8 @@ static NSString *AppID = @"975022341";
     //    [Appirater setDebug:YES];
     //#endif
     [Appirater appLaunched:YES];
+
+    [[JWSessionManager defaultManager] activate];
     return YES;
 }
 
