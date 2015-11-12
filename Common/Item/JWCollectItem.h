@@ -38,4 +38,7 @@
 
 - (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order NS_DESIGNATED_INITIALIZER;
 
+- (NSDictionary *)toDictionary;
+- (void)setFromDictionary:(NSDictionary *)dict;
+
 @end

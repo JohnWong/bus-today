@@ -60,4 +60,27 @@
     [aCoder encodeObject:self.stopName forKey:JWKeyStopName];
 }
 
+- (void)setFromDictionary:(NSDictionary *)dict
+{
+    self.lineId = dict[@"lineId"];
+    self.lineId = dict[@"lineId"];
+    self.lineNumber = dict[@"lineNumber"];
+    self.from = dict[@"from"];
+    self.to = dict[@"to"];
+    self.order = [dict[@"order"] integerValue];
+    self.stopName = dict[@"stopName"];
+}
+
+- (NSDictionary *)toDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"lineId"] = self.lineId;
+    dict[@"lineNumber"] = self.lineNumber;
+    dict[@"from"] = self.from;
+    dict[@"to"] = self.to;
+    dict[@"order"] = @(self.order);
+    dict[@"stopName"] = self.stopName;
+    return [dict copy];
+}
+
 @end

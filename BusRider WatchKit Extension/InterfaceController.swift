@@ -37,22 +37,16 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reload"), name: AppConfiguration.Notifications.NotificationContextUpdate, object: nil)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-        if let cityItem = JWUserDefaultsUtil.cityItem() {
-            if !cityItem.cityName.isEmpty {
-                self.cityButton.setTitle(cityItem.cityName)
-            }
-        }
+        self.reload()
         if JWUserDefaultsUtil.pushSearchController() {
             self.search()
             JWUserDefaultsUtil.setPushSearchController(false)
         }
-        
-        self.loadData()
     }
 
     override func didDeactivate() {
@@ -66,6 +60,20 @@ class InterfaceController: WKInterfaceController {
         } else {
             presentControllerWithName(StoryBoard.Controllers.selectCity, context: true)
         }
+    }
+    
+    func reload() {
+        if let cityItem = JWUserDefaultsUtil.cityItem() {
+            if !cityItem.cityName.isEmpty {
+                self.cityButton.setTitle(cityItem.cityName)
+            }
+        }
+        if JWUserDefaultsUtil.pushSearchController() {
+            self.search()
+            JWUserDefaultsUtil.setPushSearchController(false)
+        }
+        
+        self.loadData()
     }
     
     func showLoading() {

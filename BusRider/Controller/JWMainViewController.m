@@ -25,6 +25,7 @@
 #import "AHKActionSheet.h"
 #import "CBStoreHouseRefreshControl.h"
 #import "JWMainEmptyTableViewCell.h"
+#import "JWSessionManager.h"
 
 #define JWCellIdMain @"JWCellIdMain"
 #define JWCellIdEmpty @"JWCellIdEmpty"
@@ -372,6 +373,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             [weakSelf.cityButtonItem setTitle:cityItem.cityName];
             [JWUserDefaultsUtil setCityItem:cityItem];
             [weakSelf loadData];
+            [[JWSessionManager defaultManager] sync];
         }];
     }
     [actionSheet show];

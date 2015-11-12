@@ -402,7 +402,7 @@
     JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopName:nil order:self.selectedStopOrder];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
 
-    [[JWSessionManager defaultManager] updateApplicationContext:@{ @"test" : @"1" }];
+    [[JWSessionManager defaultManager] sync];
 }
 
 - (void)removeTodayInfo

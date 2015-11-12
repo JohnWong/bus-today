@@ -20,7 +20,6 @@
     if (self = [super init]) {
         self.cityId = [aDecoder decodeObjectForKey:JWKeyCityId];
         self.cityName = [aDecoder decodeObjectForKey:JWKeyCityName];
-        self.cityVersion = [[aDecoder decodeObjectForKey:JWKeyCityVersion] integerValue];
     }
     return self;
 }
@@ -29,14 +28,20 @@
 {
     [aCoder encodeObject:self.cityId forKey:JWKeyCityId];
     [aCoder encodeObject:self.cityName forKey:JWKeyCityName];
-    [aCoder encodeObject:@(self.cityVersion) forKey:JWKeyCityVersion];
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict
 {
     self.cityId = dict[@"cityId"];
     self.cityName = dict[@"cityName"];
-    self.cityVersion = [dict[@"cityVersion"] integerValue];
+}
+
+- (NSDictionary *)toDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"cityId"] = self.cityId;
+    dict[@"cityName"] = self.cityName;
+    return [dict copy];
 }
 
 + (NSArray *)arrayFromDictionary:(NSDictionary *)dict

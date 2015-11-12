@@ -14,6 +14,10 @@ class AppConfiguration {
 //        return "localhost:7000"
     }
     
+    struct Notifications {
+        static let NotificationContextUpdate = "NotificationContextUpdate"
+    }
+    
     static let Debug = NSBundle.mainBundle().objectForInfoDictionaryKey("Debug") as? String == "YES"
     
     class var dataErrorDomain: String {

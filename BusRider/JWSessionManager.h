@@ -20,6 +20,6 @@
 
 @interface JWSessionManager (JWContext)
 
-- (void)updateApplicationContext:(NSDictionary<NSString *, id> *)context;
+- (void)sync;
 
 @end
