@@ -92,7 +92,7 @@
         self.rate = (NSInteger)floor([travel[@"pRate"] doubleValue] * 100);
         NSInteger time = [travel[@"travelTime"] integerValue];
         if (time / 60 >= 60) {
-            self.travelTime = [JWFormatter formatedTime:[travel[@"arrivalTime"] integerValue]];
+            self.travelTime = [JWFormatter formatedTime:[travel[@"arrivalTime"] doubleValue]];
         } else if (time / 60 >= 1) {
             self.travelTime = [NSString stringWithFormat:@"%@分", @(time / 60)];
         } else if (time > 30) {
@@ -128,7 +128,7 @@
             break;
         }
     }
-    NSString *text = self.travelTime ?: self.desc ?: @"--";
+    NSString *text = self.travelTime ?: @"--";
     NSMutableAttributedString *ats = [[NSMutableAttributedString alloc] initWithString:text];
     NSString *lastChar = [text substringFromIndex:text.length - 1];
     if ([lastChar isEqualToString:@"分"] || [lastChar isEqualToString:@"秒"]) {

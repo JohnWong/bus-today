@@ -13,7 +13,7 @@
 
 + (NSString *)formatedLineNumber:(NSString *)lineNumber;
 + (NSString *)formatedCost:(NSInteger)time;
-+ (NSString *)formatedTime:(NSInteger)time;
++ (NSString *)formatedTime:(NSTimeInterval)time;
 + (NSString *)formatedDistance:(NSInteger)distance;
 
 @end

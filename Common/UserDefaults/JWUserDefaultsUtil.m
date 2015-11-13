@@ -219,10 +219,10 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 + (NSString *)timeKey
 {
-    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-    formater.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    formater.dateFormat = @"yyyyMMdd";
-    return [formater stringFromDate:[NSDate date]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    formatter.dateFormat = @"yyyyMMdd";
+    return [formatter stringFromDate:[NSDate date]];
 }
 
 + (void)saveCityList:(NSArray *)array

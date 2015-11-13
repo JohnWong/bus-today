@@ -30,11 +30,12 @@
     return [NSString stringWithFormat:@"%ld%@", (long)(time < 60 ? time : time / 60), time < 60 ? @"秒" : @"分"];
 }
 
-+ (NSString *)formatedTime:(NSInteger)time
++ (NSString *)formatedTime:(NSTimeInterval)time
 {
-    NSInteger arrivalTime = time / 1000;
+    NSTimeInterval arrivalTime = time / 1000;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:arrivalTime];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
     formatter.dateFormat = @"HH:mm";
     return [formatter stringFromDate:date];
 }
