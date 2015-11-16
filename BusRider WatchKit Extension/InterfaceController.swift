@@ -37,7 +37,7 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reload"), name: AppConfiguration.Notifications.NotificationContextUpdate, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reload"), name: kNotificationContextUpdate, object: nil)
     }
 
     override func willActivate() {
@@ -52,6 +52,10 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     func search() {

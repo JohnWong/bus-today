@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <deployment version="512" identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
         <!--今日公交-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="今日公交" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchOS2_Extension">
+                <controller title="今日公交" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
@@ -54,7 +53,7 @@
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="5g8-FC-Zpl">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="余杭" numberOfLines="0" id="oaC-ic-pVK">
+                                                <label alignment="left" text="--" numberOfLines="0" id="oaC-ic-pVK">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -64,7 +63,7 @@
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="37a-Bb-Fqb">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="蒋村公交中心站" numberOfLines="0" id="I72-Of-2Xh">
+                                                <label alignment="left" text="--" numberOfLines="0" id="I72-Of-2Xh">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -74,7 +73,7 @@
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="n2A-c7-87c">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="5Os-qh-XNf">
+                                                <label alignment="left" text="--" numberOfLines="0" id="5Os-qh-XNf">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -122,16 +121,16 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="118" y="137.75"/>
+            <point key="canvasLocation" x="107" y="87.5"/>
         </scene>
         <!--取消-->
         <scene sceneID="9uj-LL-2oS">
             <objects>
-                <controller identifier="selectCity" title="取消" hidesWhenLoading="NO" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="watchOS2_Extension">
+                <controller identifier="selectCity" title="取消" hidesWhenLoading="NO" id="dh2-pl-C2k" customClass="JWCityInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="H8I-4n-mEl">
                             <items>
-                                <tableRow identifier="JWCityControllerRowType" id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="watchOS2_Extension">
+                                <tableRow identifier="JWCityControllerRowType" id="niG-ko-rx5" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="h4z-xq-ikW">
                                         <items>
                                             <label width="136" height="36" alignment="left" verticalAlignment="center" text="Label" id="6i2-51-WVy">
@@ -152,16 +151,16 @@
                                         </items>
                                     </group>
                                 </tableRow>
-                                <tableRow identifier="JWCityControllerErrorRowType" selectable="NO" id="ZTY-EW-O8G" customClass="JWCityControllerRowType" customModule="watchOS2_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="eqt-aY-fAV">
+                                <tableRow identifier="JWCityControllerErrorRowType" selectable="NO" id="fSB-m7-aKj" customClass="JWCityControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="TaP-Em-JTw">
                                         <items>
-                                            <label width="136" height="36" alignment="left" id="SJs-7x-GeR">
+                                            <label width="136" height="36" alignment="left" id="R4F-6r-pgp">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="textLabel" destination="SJs-7x-GeR" id="BDa-zT-tmt"/>
+                                        <outlet property="textLabel" destination="R4F-6r-pgp" id="okh-Eq-zN3"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -177,7 +176,7 @@
         <!--线路-->
         <scene sceneID="Vb9-ZZ-8uC">
             <objects>
-                <controller identifier="lineDetail" title="线路" hidesWhenLoading="NO" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="watchOS2_Extension">
+                <controller identifier="lineDetail" title="线路" hidesWhenLoading="NO" id="j7a-Ob-4ZY" customClass="JWLineInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
@@ -223,7 +222,7 @@
                         </group>
                         <table alignment="left" id="Q1p-zW-j2Y">
                             <items>
-                                <tableRow identifier="lineRow" id="OFW-3b-nXY" customClass="JWLineRowType" customModule="watchOS2_Extension">
+                                <tableRow identifier="lineRow" id="OFW-3b-nXY" customClass="JWLineRowType" customModule="BusRider_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="rVp-RG-kh7">
                                         <items>
                                             <label width="19" height="19" alignment="left" verticalAlignment="center" text="88" textAlignment="left" id="iGg-UX-iz4"/>
@@ -238,10 +237,10 @@
                                         <outlet property="numberLabel" destination="iGg-UX-iz4" id="xc5-Ab-LVE"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="arrivingRow" id="JTU-xB-U8w" customClass="JWArrivingLineRowType" customModule="watchOS2_Extension">
+                                <tableRow identifier="arrivingRow" id="JTU-xB-U8w" customClass="JWArrivingLineRowType" customModule="BusRider_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="b18-Ta-gUN">
                                         <items>
-                                            <imageView width="19" height="19" alignment="left" verticalAlignment="center" image="bus" id="fIr-U7-Kaj"/>
+                                            <imageView width="19" height="19" alignment="left" verticalAlignment="center" image="bus" animationDuration="4.5" id="fIr-U7-Kaj"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="nei-PR-NFk">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
@@ -293,16 +292,16 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="772" y="237.25"/>
+            <point key="canvasLocation" x="772" y="238"/>
         </scene>
         <!--搜索-->
         <scene sceneID="TUn-gD-QGY">
             <objects>
-                <controller identifier="searchResult" title="搜索" hidesWhenLoading="NO" id="QeM-wk-tak" customClass="JWSearchInterfaceController" customModule="watchOS2_Extension">
+                <controller identifier="searchResult" title="搜索" hidesWhenLoading="NO" id="QeM-wk-tak" customClass="JWSearchInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="Onz-hq-k5C">
                             <items>
-                                <tableRow identifier="JWSearchControllerRowType" id="s2S-RA-s2Z" customClass="JWSearchControllerRowType" customModule="watchOS2_Extension">
+                                <tableRow identifier="JWSearchControllerRowType" id="s2S-RA-s2Z" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="36" alignment="left" id="bm9-JD-GKm">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="8Km-Ow-C0s"/>
@@ -312,24 +311,24 @@
                                         <outlet property="textLabel" destination="8Km-Ow-C0s" id="8hW-fD-gVK"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="JWSearchControllerNoRowType" selectable="NO" id="rnv-FA-vzR" customClass="JWSearchControllerRowType" customModule="watchOS2_Extension">
-                                    <group key="rootItem" width="1" height="36" alignment="left" id="aqP-hs-N9f">
+                                <tableRow identifier="JWSearchControllerNoRowType" selectable="NO" id="2pA-0u-P9P" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="xru-dw-6rz">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="加载中..." id="Myu-zK-5G7"/>
+                                            <label alignment="left" verticalAlignment="center" text="加载中..." id="1bb-qx-baa"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="textLabel" destination="Myu-zK-5G7" id="L4b-cc-TKg"/>
+                                        <outlet property="textLabel" destination="1bb-qx-baa" id="DjC-fj-Hwo"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="JWSearchControllerErrorRowType" selectable="NO" id="5BY-m8-ibE" customClass="JWSearchControllerRowType" customModule="watchOS2_Extension">
-                                    <group key="rootItem" width="1" height="36" alignment="left" id="nWA-4F-917">
+                                <tableRow identifier="JWSearchControllerErrorRowType" selectable="NO" id="gjV-xk-Chj" customClass="JWSearchControllerRowType" customModule="BusRider_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="36" alignment="left" id="sZ5-qC-T5B">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" id="Izc-bw-ivf"/>
+                                            <label alignment="left" verticalAlignment="center" id="OXp-ae-T1Q"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="textLabel" destination="Izc-bw-ivf" id="wYo-vO-tVV"/>
+                                        <outlet property="textLabel" destination="OXp-ae-T1Q" id="LOd-3f-qcF"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -355,7 +354,7 @@
         <!--详情-->
         <scene sceneID="gTZ-oZ-xe4">
             <objects>
-                <controller identifier="detailInterface" title="详情" hidesWhenLoading="NO" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="watchOS2_Extension">
+                <controller identifier="detailInterface" title="详情" hidesWhenLoading="NO" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="8nf-bv-gW0">
                             <items>
@@ -390,12 +389,12 @@
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="hsE-Mr-LaU">
                                     <items>
-                                        <group width="1" alignment="left" id="gvC-1Q-cAh">
+                                        <group width="1" alignment="left" animationDuration="1" id="gvC-1Q-cAh">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="6kJ-eE-qGa">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="--" numberOfLines="0" id="EQ2-70-ARM">
+                                                <label alignment="left" text="余杭" numberOfLines="0" id="EQ2-70-ARM">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -405,7 +404,7 @@
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="dm3-sS-qot">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="--" numberOfLines="0" id="r2v-vg-VQt">
+                                                <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="r2v-vg-VQt">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -415,7 +414,7 @@
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="qqz-ww-XKx">
                                                     <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label alignment="left" text="--" numberOfLines="0" id="5yO-BX-9o8">
+                                                <label alignment="left" text="06:00-17:30" numberOfLines="0" id="5yO-BX-9o8">
                                                     <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </items>
@@ -433,7 +432,7 @@
                                 </button>
                                 <button width="0.5" alignment="left" verticalAlignment="bottom" title="发到首页" id="M1M-Qb-XXk">
                                     <connections>
-                                        <action selector="sendToGlance" destination="4ix-0Q-vfT" id="Vyt-kT-hfE"/>
+                                        <action selector="sendToGlance" destination="4ix-0Q-vfT" id="CuH-ET-nYQ"/>
                                     </connections>
                                 </button>
                             </items>
@@ -444,12 +443,12 @@
                         <items>
                             <menuItem title="刷新" icon="repeat" id="cfZ-7Z-dBd">
                                 <connections>
-                                    <action selector="loadData" destination="4ix-0Q-vfT" id="Vqr-U7-JQM"/>
+                                    <action selector="loadData" destination="4ix-0Q-vfT" id="Ai7-Tz-n2D"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="发到首页" icon="accept" id="uTk-yo-awE">
                                 <connections>
-                                    <action selector="sendToGlance" destination="4ix-0Q-vfT" id="w6V-3d-0Xg"/>
+                                    <action selector="sendToGlance" destination="4ix-0Q-vfT" id="XnX-Fx-HAB"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -466,7 +465,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="997" y="277.75"/>
+            <point key="canvasLocation" x="961" y="353"/>
         </scene>
     </scenes>
 </document>

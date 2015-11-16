@@ -9,6 +9,9 @@
 #import "JWSessionManager.h"
 #import "JWUserDefaultsUtil.h"
 
+static NSString *const kCity = @"city";
+static NSString *const kToday = @"today";
+
 
 @implementation JWSessionManager {
     WCSession *_session;
@@ -38,9 +41,7 @@
 
 - (void)activate
 {
-    if ([WCSession isSupported]) {
-        [_session activateSession];
-    }
+    [_session activateSession];
 }
 
 - (WCSession *)validSession
@@ -66,7 +67,7 @@
 - (void)sessionReachabilityDidChange:(WCSession *)session
 {
 #if TARGET_OS_WATCH
-    NSLog(@"JW: reachability change %d", session.reachable);
+    NSLog(@"JW: reachability change");
 #else
     NSLog(@"JW: reachability change %d %d", session.watchAppInstalled, session.reachable);
 #endif
@@ -85,31 +86,47 @@
     NSMutableDictionary<NSString *, id> *mutableDict = [NSMutableDictionary dictionary];
     JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
     if (cityItem) {
-        mutableDict[@"city"] = [cityItem toDictionary];
+        mutableDict[kCity] = [cityItem toDictionary];
     }
     JWCollectItem *today = [JWUserDefaultsUtil todayBusLine];
     if (today) {
-        mutableDict[@"today"] = [today toDictionary];
+        mutableDict[kToday] = [today toDictionary];
     }
     NSError *error = nil;
     WCSession *validSession = [self validSession];
     if (!validSession) {
 #if TARGET_OS_WATCH
-        NSLog(@"JW: no valid session %d", _session.reachable);
+        NSLog(@"JW: no valid session");
 #else
-        NSLog(@"JW: no valid session %d %d", _session.watchAppInstalled, _session.reachable);
+        NSLog(@"JW: no valid session %d %d", _session.paired, _session.watchAppInstalled);
 #endif
     } else if (![[self validSession] updateApplicationContext:mutableDict error:&error]) {
         NSLog(@"JW: update context fail %@", error.localizedDescription);
     }
 }
 
-- (void)session:(WCSession *__nonnull)session didFinishUserInfoTransfer:(WCSessionUserInfoTransfer *)userInfoTransfer error:(nullable NSError *)error
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
 {
-}
-
-- (void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *, id> *)userInfo
-{
+    BOOL changed = NO;
+    if (applicationContext[kCity]) {
+        JWCityItem *city = [[JWCityItem alloc] initWithDictionary:applicationContext[kCity]];
+        JWCityItem *original = [JWUserDefaultsUtil cityItem];
+        if (![city isEqual:original]) {
+            [JWUserDefaultsUtil setCityItem:city];
+            changed = YES;
+        }
+    }
+    if (applicationContext[kToday]) {
+        JWCollectItem *today = applicationContext[kToday];
+        JWCollectItem *original = [JWUserDefaultsUtil todayBusLine];
+        if (![today isEqual:original]) {
+            [JWUserDefaultsUtil setTodayBusLine:today];
+            changed = YES;
+        }
+    }
+    if (changed) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationContextUpdate object:nil];
+    }
 }
 
 @end

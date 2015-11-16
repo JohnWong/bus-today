@@ -96,6 +96,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
                                                               horizontalRandomness:150
                                                            reverseLoadingAnimation:YES
                                                            internalAnimationFactor:1];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload) name:kNotificationContextUpdate object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -137,6 +138,11 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             stopTableViewController.stopItem = self.selectedStop;
         }
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark UITableViewDataSource
@@ -377,6 +383,13 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         }];
     }
     [actionSheet show];
+}
+
+- (void)reload
+{
+    NSString *city = [JWUserDefaultsUtil cityItem].cityName;
+    [self.cityButtonItem setTitle:city];
+    [self loadData];
 }
 
 - (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD

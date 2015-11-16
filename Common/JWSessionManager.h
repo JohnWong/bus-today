@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
+static NSString *const kNotificationContextUpdate = @"NotificationContextUpdate";
+
 
 @interface JWSessionManager : NSObject <WCSessionDelegate>
 

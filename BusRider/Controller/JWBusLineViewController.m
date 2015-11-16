@@ -401,7 +401,6 @@
 {
     JWCollectItem *todayItem = [[JWCollectItem alloc] initWithLineId:lineId lineNumber:lineNumber from:nil to:nil stopName:nil order:self.selectedStopOrder];
     [JWUserDefaultsUtil setTodayBusLine:todayItem];
-
     [[JWSessionManager defaultManager] sync];
 }
 
