@@ -54,4 +54,14 @@
     return ret;
 }
 
+- (BOOL)isEqual:(id)object
+{
+    if ([object isKindOfClass:self.class]) {
+        typeof(self) cityItem = object;
+        return [self.cityId isEqualToString:cityItem.cityId] &&
+            [self.cityName isEqualToString:cityItem.cityName];
+    }
+    return NO;
+}
+
 @end

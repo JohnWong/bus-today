@@ -83,4 +83,18 @@
     return [dict copy];
 }
 
+- (BOOL)isEqual:(id)object
+{
+    if ([object isKindOfClass:self.class]) {
+        typeof(self) item = object;
+        return [self.lineId isEqualToString:item.lineId] &&
+            [self.lineNumber isEqualToString:item.lineNumber] &&
+            [self.from isEqualToString:item.from] &&
+            [self.to isEqualToString:item.to] &&
+            self.order == item.order &&
+            [self.stopName isEqualToString:item.stopName];
+    }
+    return NO;
+}
+
 @end

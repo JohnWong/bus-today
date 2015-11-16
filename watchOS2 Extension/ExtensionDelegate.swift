@@ -26,16 +26,27 @@ class ExtensionDelegate : NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        var changed = false
         if let _ = applicationContext["city"] {
             let city = JWCityItem()
             city.setFromDictionary(applicationContext["city"] as! [NSObject : AnyObject])
-            JWUserDefaultsUtil.setCityItem(city);
+            let original = JWUserDefaultsUtil.cityItem()
+            if !city.isEqual(original) {
+                JWUserDefaultsUtil.setCityItem(city);
+                changed = true
+            }
         }
         if let _ = applicationContext["today"] {
             let today = JWCollectItem()
             today.setFromDictionary(applicationContext["today"] as! [NSObject : AnyObject])
-            JWUserDefaultsUtil.setTodayBusLine(today)
-            NSNotificationCenter.defaultCenter().postNotificationName(AppConfiguration.Notifications.NotificationContextUpdate, object: nil)
+            let original = JWUserDefaultsUtil.todayBusLine()
+            if !today.isEqual(original) {
+                JWUserDefaultsUtil.setTodayBusLine(today)
+                changed = true
+            }
+            if changed {
+                NSNotificationCenter.defaultCenter().postNotificationName(AppConfiguration.Notifications.NotificationContextUpdate, object: nil)
+            }
         }
     }
 }
