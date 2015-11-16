@@ -65,6 +65,7 @@ class JWCityInterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         let city = self.cities[rowIndex]
         JWUserDefaultsUtil.setCityItem(city)
+        JWSessionManager.defaultManager().sync()
         if let isPushSearchController = isPushSearchController {
             JWUserDefaultsUtil.setPushSearchController(isPushSearchController)
         }

@@ -45,10 +45,14 @@
 
 - (WCSession *)validSession
 {
+#if TARGET_OS_WATCH
+    return _session;
+#else
     if (_session && _session.paired && _session.watchAppInstalled) {
         return _session;
     }
     return nil;
+#endif
 }
 
 - (void)sessionWatchStateDidChange:(WCSession *)session
@@ -61,7 +65,11 @@
 
 - (void)sessionReachabilityDidChange:(WCSession *)session
 {
+#if TARGET_OS_WATCH
+    NSLog(@"JW: reachability change %d", session.reachable);
+#else
     NSLog(@"JW: reachability change %d %d", session.watchAppInstalled, session.reachable);
+#endif
     if ([self validSession]) {
         [self sync];
     }
@@ -86,7 +94,11 @@
     NSError *error = nil;
     WCSession *validSession = [self validSession];
     if (!validSession) {
+#if TARGET_OS_WATCH
+        NSLog(@"JW: no valid session %d", _session.reachable);
+#else
         NSLog(@"JW: no valid session %d %d", _session.watchAppInstalled, _session.reachable);
+#endif
     } else if (![[self validSession] updateApplicationContext:mutableDict error:&error]) {
         NSLog(@"JW: update context fail %@", error.localizedDescription);
     }

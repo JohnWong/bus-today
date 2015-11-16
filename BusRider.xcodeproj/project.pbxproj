@@ -151,6 +151,8 @@
 		52EB7C251A4077FB00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
 		52EB7C261A4077FE00057723 /* JWCharIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C241A4077FB00057723 /* JWCharIconView.m */; };
 		52EC7E411A41DDE000CE4C23 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
+		52F134431BF9EC6400567FC8 /* JWSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F31A491BF39A1100358276 /* JWSessionManager.m */; };
+		52F134441BF9EC6500567FC8 /* JWSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F31A491BF39A1100358276 /* JWSessionManager.m */; };
 		52F31A4A1BF39A1100358276 /* JWSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F31A491BF39A1100358276 /* JWSessionManager.m */; };
 		52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FB0DEB1A694D0A001AF0A8 /* JWNavigationCenterView.m */; };
 		52FB0DEE1A6957F8001AF0A8 /* JWIconExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */; };
@@ -1354,6 +1356,7 @@
 				52AC0C3B1AF4CA4700F27EE1 /* JWFormatter.m in Sources */,
 				52D7000C1AF92FB3008A3C8C /* JWBusInfoItem.m in Sources */,
 				52C9E0771AD36D2B00126937 /* JWCityInterfaceController.swift in Sources */,
+				52F134441BF9EC6500567FC8 /* JWSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1454,6 +1457,7 @@
 				52B0E3321BE3457E00621020 /* JWFormatter.m in Sources */,
 				52B84A5E1BE14AD300BC81F6 /* AppConfiguration.swift in Sources */,
 				5280FBBD1BEE6D6900CB9F74 /* JWCityRequest.m in Sources */,
+				52F134431BF9EC6400567FC8 /* JWSessionManager.m in Sources */,
 				52B0E33C1BE345CD00621020 /* JWSearchStopItem.m in Sources */,
 				52B0E3391BE345A600621020 /* JWBusInfoItem.m in Sources */,
 				52B0E33B1BE345C000621020 /* JWSearchListItem.m in Sources */,

@@ -22,3 +22,4 @@
 #import "JWCityRequest.h"
 #import "JWSearchRequest.h"
 #import "JWLineRequest.h"
+#import "JWSessionManager.h"
