@@ -305,6 +305,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    self.searchListItem = nil;
+    [self.searchController.searchResultsTableView reloadData];
+}
+
 #pragma mark getter
 - (JWSearchRequest *)searchRequest
 {
