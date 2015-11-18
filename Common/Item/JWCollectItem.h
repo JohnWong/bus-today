@@ -9,7 +9,7 @@
 #import "JWItem.h"
 
 
-@interface JWCollectItem : NSObject <NSCoding>
+@interface JWCollectItem : JWItem <NSCoding>
 
 /**
  *  路线id
@@ -36,9 +36,7 @@
  */
 @property (nonatomic, assign) NSInteger order;
 
-- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order NS_DESIGNATED_INITIALIZER;
-
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order;
 - (NSDictionary *)toDictionary;
-- (void)setFromDictionary:(NSDictionary *)dict;
 
 @end

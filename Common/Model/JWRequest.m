@@ -63,7 +63,7 @@
         [self.request cancel];
     }
     if (progress) {
-        progress(0.2);
+        progress(20);
     }
     self.request = [STHTTPRequest requestWithURLString:[self urlPath]];
     self.request.completionBlock = ^(NSDictionary *headers, NSString *body) {
@@ -101,7 +101,7 @@
     self.request.downloadProgressBlock = ^(NSData *data, int64_t totalBytesReceived, int64_t totalBytesExpectedToReceive) {
         NSLog(@"JWRequest: progress %ld / %lld", (unsigned long)totalBytesReceived, totalBytesExpectedToReceive);
         if (progress) {
-            CGFloat percent = totalBytesReceived * 100 / totalBytesExpectedToReceive;
+            CGFloat percent = totalBytesReceived * 100 / (totalBytesExpectedToReceive == NSURLResponseUnknownLength? 10240: totalBytesReceived);
             if (percent > 0.2) {
                 progress(percent);
             }

@@ -117,7 +117,7 @@ static NSString *const kToday = @"today";
         }
     }
     if (applicationContext[kToday]) {
-        JWCollectItem *today = applicationContext[kToday];
+        JWCollectItem *today = [[JWCollectItem alloc] initWithDictionary:applicationContext[kToday]];
         JWCollectItem *original = [JWUserDefaultsUtil todayBusLine];
         if (![today isEqual:original]) {
             [JWUserDefaultsUtil setTodayBusLine:today];
@@ -125,7 +125,9 @@ static NSString *const kToday = @"today";
         }
     }
     if (changed) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationContextUpdate object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationContextUpdate object:nil];
+        });
     }
 }
 
