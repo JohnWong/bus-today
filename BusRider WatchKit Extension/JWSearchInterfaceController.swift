@@ -63,7 +63,6 @@ class JWSearchInterfaceController: WKInterfaceController {
                     if totalCount > 0 {
                         weakSelf.interfaceTable.setNumberOfRows(totalCount, withRowType: Storyboard.RowTypes.item)
                         for index in 0 ..< weakSelf.searchItems.lineList.count {
-                            NSLog("%d", index)
                             weakSelf.configureRowControllerAtIndex(index)
                         }
                     } else {
