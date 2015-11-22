@@ -156,15 +156,15 @@
         JWStopNameButton *stopButton = [[JWStopNameButton alloc] initWithFrame:CGRectMake(0, i * kJWButtonHeight, self.contentView.width, kJWButtonHeight)];
         ;
         BOOL isSelected = NO;
-        if (self.selectedStopOrder) {
-            isSelected = stopItem.order == self.selectedStopOrder;
-            if (isSelected) {
-                self.selectedStopId = stopItem.stopId;
-            }
-        } else if (self.selectedStopId) {
+        if (self.selectedStopId) {
             isSelected = [self.selectedStopId isEqualToString:stopItem.stopId];
             if (isSelected) {
                 self.selectedStopOrder = stopItem.order;
+            }
+        } else if (self.selectedStopOrder) {
+            isSelected = stopItem.order == self.selectedStopOrder;
+            if (isSelected) {
+                self.selectedStopId = stopItem.stopId;
             }
         }
         [stopButton setIndex:i + 1 title:stopItem.stopName last:i == count - 1 today:todayStopOrder && stopItem.order == todayStopOrder selected:isSelected];
@@ -251,6 +251,7 @@
 {
     JWStopItem *stopItem = self.busLineItem.stopItems[sender.tag - kJWButtonBaseTag];
     self.selectedStopOrder = stopItem.order;
+    self.selectedStopId = stopItem.stopId;
     [self updateCollectItem];
     [self loadRequest];
 }
@@ -358,7 +359,7 @@
 - (IBAction)revertDirection:(id)sender
 {
     self.lineId = self.busLineItem.lineItem.otherLineId;
-    self.selectedStopOrder = self.busLineItem.stopItems.count + 1 - self.selectedStopOrder;
+    self.selectedStopOrder = self.selectedStopOrder == 0 ? 0 : self.busLineItem.stopItems.count + 1 - self.selectedStopOrder;
     [self loadRequest];
 }
 

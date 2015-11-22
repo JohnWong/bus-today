@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0</string>
+	<string>${JW_VERSION}</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>${JW_BUILD}</string>
 	<key>Debug</key>
 	<string>${MTL_ENABLE_DEBUG_INFO}</string>
 	<key>LSApplicationCategoryType</key>
