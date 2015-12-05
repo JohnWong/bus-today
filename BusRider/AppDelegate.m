@@ -12,10 +12,10 @@
 #import "JWUserDefaultsUtil.h"
 #import "JWSearchLineItem.h"
 #import "JWMainViewController.h"
-#import "JWUmengUtility.h"
 #import "Appirater.h"
-
 #import "JWSessionManager.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 
 @interface AppDelegate ()
@@ -29,9 +29,7 @@ static NSString *AppID = @"975022341";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [JWUmengUtility setupUmeng];
-
-    [Appirater setAppId:AppID];
+    [Fabric with:@[ [Crashlytics class] ]];
 
     //#ifdef DEBUG
     //    [Appirater setDebug:YES];

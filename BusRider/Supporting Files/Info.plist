@@ -35,6 +35,20 @@
 	<string>${JW_BUILD}</string>
 	<key>Debug</key>
 	<string>${MTL_ENABLE_DEBUG_INFO}</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>8fcca83956bce3b157cca797318d87943a5c57ff</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

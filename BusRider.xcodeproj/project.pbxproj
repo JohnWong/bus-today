@@ -32,7 +32,6 @@
 		523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */; };
 		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
-		524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */; };
 		524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */; };
 		524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */; };
 		524F57271A5D93A800DFD0A7 /* JWIconCellBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */; };
@@ -239,8 +238,6 @@
 		523B7FBE1AB75D1A006939D6 /* JWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSettingViewController.h; sourceTree = "<group>"; };
 		523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSettingViewController.m; sourceTree = "<group>"; };
 		524B319E1A2E39C300E4A11F /* libPods-BusRider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BusRider.a"; path = "Pods/build/Debug-iphoneos/libPods-BusRider.a"; sourceTree = "<group>"; };
-		524B7A671AB6A6EC00767E9E /* JWUmengUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWUmengUtility.h; sourceTree = "<group>"; };
-		524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWUmengUtility.m; sourceTree = "<group>"; };
 		524F57211A5D3A3A00DFD0A7 /* JWSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchTableViewCell.h; sourceTree = "<group>"; };
 		524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchTableViewCell.m; sourceTree = "<group>"; };
 		524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWSearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -448,15 +445,6 @@
 			path = StopLine;
 			sourceTree = "<group>";
 		};
-		524B7A661AB6A6D300767E9E /* 3rdparty */ = {
-			isa = PBXGroup;
-			children = (
-				524B7A671AB6A6EC00767E9E /* JWUmengUtility.h */,
-				524B7A681AB6A6EC00767E9E /* JWUmengUtility.m */,
-			);
-			path = 3rdparty;
-			sourceTree = "<group>";
-		};
 		524F57281A5E271500DFD0A7 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,7 +514,6 @@
 		52AB79CB1A2E193E001904CA /* BusRider */ = {
 			isa = PBXGroup;
 			children = (
-				524B7A661AB6A6D300767E9E /* 3rdparty */,
 				522A9E8A1A5D02AB00673EB0 /* JWBusRider-Prefix.pch */,
 				52AB79D01A2E193E001904CA /* AppDelegate.h */,
 				52AB79D11A2E193E001904CA /* AppDelegate.m */,
@@ -781,6 +768,7 @@
 				525D1D491BFA194700AC93B3 /* Frameworks */,
 				525D1D4A1BFA194700AC93B3 /* Resources */,
 				CE1BE323C9A8B52DFED1538C /* Copy Pods Resources */,
+				BA58A17AE6F8EC8361B734B4 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -801,6 +789,8 @@
 				52AB7A0A1A2E1982001904CA /* Embed App Extensions */,
 				275818CA71DF195E00CF5A93 /* Copy Pods Resources */,
 				52B84A5B1BE1480800BC81F6 /* Embed Watch Content */,
+				8F768A7DB8A78B166171C853 /* Embed Pods Frameworks */,
+				523AC2111C1338FF00B6043F /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -823,6 +813,7 @@
 				52AB79F31A2E1982001904CA /* Frameworks */,
 				52AB79F41A2E1982001904CA /* Resources */,
 				B9AD4A758888148E929EA5C5 /* Copy Pods Resources */,
+				C3A4304D1B1E2E3F8A907A10 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -982,6 +973,35 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		523AC2111C1338FF00B6043F /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 8fcca83956bce3b157cca797318d87943a5c57ff 609105dfeb828407f131ccef4a6a96c88b3427f8ba997b63ccad38c9daa5e10a";
+		};
+		8F768A7DB8A78B166171C853 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B9AD4A758888148E929EA5C5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -995,6 +1015,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA58A17AE6F8EC8361B734B4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A4304D1B1E2E3F8A907A10 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE1BE323C9A8B52DFED1538C /* Copy Pods Resources */ = {
@@ -1099,7 +1149,6 @@
 				52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */,
 				52AAFBDB1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m in Sources */,
 				525D1DA41BFA23C800AC93B3 /* JWSessionManager.m in Sources */,
-				524B7A691AB6A6EC00767E9E /* JWUmengUtility.m in Sources */,
 				52FCD0721A70177800419271 /* JWCityItem.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */,
@@ -1178,7 +1227,7 @@
 			baseConfigurationReference = 4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "BusRider WatchKit Extension/Info.plist";
@@ -1219,7 +1268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = BusRider_WatchKit_Extension;
 				INFOPLIST_FILE = "BusRider WatchKit/Info.plist";
@@ -1341,6 +1390,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BusRider/BusRider.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1351,6 +1402,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1361,6 +1413,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BusRider/BusRider.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1371,6 +1425,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1379,6 +1434,8 @@
 			baseConfigurationReference = F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1390,6 +1447,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.BusRider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1399,6 +1457,8 @@
 			baseConfigurationReference = E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
 				INFOPLIST_FILE = Today/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1406,6 +1466,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.BusRider.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

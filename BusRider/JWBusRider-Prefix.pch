@@ -12,7 +12,6 @@
 #import "UIView+RSAdditions.h"
 #import "JWColorDefine.h"
 #import "JWCommonDefine.h"
-#import "MobClick.h"
 
 #define JWSeguePushLineWithData     @"JWSeguePushLineWithData"
 #define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
