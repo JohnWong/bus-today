@@ -31,21 +31,21 @@ class JWCityInterfaceController: WKInterfaceController {
     let cityRequest = JWCityRequest()
     var isPushSearchController: Bool?
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         if let context = context as? Bool {
             isPushSearchController = context
         }
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
         
-        cityRequest.loadWithCompletion { [weak self](result, error) -> Void in
+        cityRequest.load { [weak self](result, error) -> Void in
             if let weakSelf = self {
-                if let _ = error {
+                if let error = error {
                     weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
-                    let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWCityControllerRowType
+                    let itemRowController = weakSelf.interfaceTable.rowController(at: 0) as! JWCityControllerRowType
                     itemRowController.setText(error.localizedDescription);
-                } else if let _ = result, cityArray: NSArray = result[kJWData]! as? NSArray {
+                } else if let _ = result, let cityArray: NSArray = result?[kJWData]! as? NSArray {
                     weakSelf.cities = cityArray as! Array<JWCityItem>
                     weakSelf.interfaceTable.setNumberOfRows(weakSelf.cities.count, withRowType: Storyboard.RowTypes.item)
                     for index in 0 ..< weakSelf.cities.count {
@@ -56,20 +56,20 @@ class JWCityInterfaceController: WKInterfaceController {
         }
     }
     
-    func configureRowControllerAtIndex(index: Int) {
-        let itemRowController = interfaceTable.rowControllerAtIndex(index) as! JWCityControllerRowType
+    func configureRowControllerAtIndex(_ index: Int) {
+        let itemRowController = interfaceTable.rowController(at: index) as! JWCityControllerRowType
         let item = cities[index]
         itemRowController.setText(item.cityName);
     }
     
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let city = self.cities[rowIndex]
         JWUserDefaultsUtil.setCityItem(city)
-        JWSessionManager.defaultManager().sync()
+        JWSessionManager.default().sync()
         if let isPushSearchController = isPushSearchController {
             JWUserDefaultsUtil.setPushSearchController(isPushSearchController)
         }
-        self.dismissController()
+        self.dismiss()
     }
 
     override func willActivate() {

@@ -13,7 +13,8 @@ static NSString *const kCity = @"city";
 static NSString *const kToday = @"today";
 
 
-@implementation JWSessionManager {
+@implementation JWSessionManager
+{
     WCSession *_session;
 }
 
@@ -58,7 +59,7 @@ static NSString *const kToday = @"today";
 
 - (void)sessionWatchStateDidChange:(WCSession *)session
 {
-    NSLog(@"JW: session change %d %d", session.watchAppInstalled, session.reachable);
+    //    NSLog(@"JW: session change %d %d", session.watchAppInstalled, session.reachable);
     if ([self validSession]) {
         [self sync];
     }

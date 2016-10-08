@@ -110,7 +110,7 @@
     typeof(self) item = self;
     switch (item.state) {
         case JWBusStateNotStarted: {
-            update = [NSString stringWithFormat:@"准点率%@%%", @(item.rate)];
+            update = [NSString stringWithFormat:@"准点率%@", item.rate > 0 ? [NSString stringWithFormat:@"%@%%", @(item.rate)] : @"--"];
             break;
         }
         case JWBusStateNear: {

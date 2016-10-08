@@ -14,7 +14,7 @@ class AppConfiguration {
 //        return "localhost:7000"
     }
     
-    static let Debug = NSBundle.mainBundle().objectForInfoDictionaryKey("Debug") as? String == "YES"
+    static let Debug = Bundle.main.object(forInfoDictionaryKey: "Debug") as? String == "YES"
     
     class var dataErrorDomain: String {
         return "JWDataError"

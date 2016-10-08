@@ -27,8 +27,8 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var timeLabel: WKInterfaceLabel!
     @IBOutlet weak var sendButton: WKInterfaceButton!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         if let dict = context as? NSDictionary {
             lineId = dict["lineId"] as! String
             order = dict["order"] as! Int
@@ -56,12 +56,12 @@ class JWDetailInterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
         lineRequest.lineId = self.lineId
         lineRequest.targetOrder = self.order;
-        lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
+        lineRequest.load { [weak self](result, error) -> Void in
             if let weakSelf = self {
                 if let _ = error {
                     
                 } else if let result = result {
-                    weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: weakSelf.order, busInfo: result as [NSObject : AnyObject])
+                    weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: weakSelf.order, busInfo: result as [AnyHashable: Any])
                     weakSelf.renderData()
                 }
             }
@@ -70,8 +70,8 @@ class JWDetailInterfaceController: WKInterfaceController {
     
     func renderData() {
         let info = self.busInfoItem.calulateInfo()
-        let mainText = info[0] as! NSAttributedString
-        let updateText = info[1] as! String
+        let mainText = info?[0] as! NSAttributedString
+        let updateText = info?[1] as! String
     
         self.lineLabel.setText(self.busInfoItem.lineNumber)
         self.updateLabel.setText(updateText)
@@ -85,7 +85,7 @@ class JWDetailInterfaceController: WKInterfaceController {
     @IBAction func sendToGlance() {
         let todayItem = JWCollectItem(lineId: self.lineId, lineNumber: self.busInfoItem.lineNumber, from: nil, to: nil, stopName: nil, order: self.order)
         JWUserDefaultsUtil.setTodayBusLine(todayItem)
-        JWSessionManager.defaultManager().sync()
+        JWSessionManager.default().sync()
         sendButton.setTitle("已发送")
         self.popToRootController();
     }

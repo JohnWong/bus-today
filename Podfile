@@ -1,4 +1,4 @@
-source 'https://gitcafe.com/yellowxz/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 def shared_pods
     pod 'STHTTPRequest2', :podspec => 'https://raw.githubusercontent.com/JohnWong/STHTTPRequest/master/STHTTPRequest2/STHTTPRequest2.podspec'

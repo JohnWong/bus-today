@@ -13,7 +13,7 @@ class JWCityControllerRowType: NSObject {
     
     @IBOutlet weak var textLabel: WKInterfaceLabel!
     
-    func setText(text: String) {
+    func setText(_ text: String) {
         textLabel.setText(text)
     }
 }

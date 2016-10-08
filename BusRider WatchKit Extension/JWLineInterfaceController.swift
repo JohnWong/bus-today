@@ -34,8 +34,8 @@ class JWLineInterfaceController: WKInterfaceController {
     var busLineItem = JWBusLineItem()
     let lineRequest = JWLineRequest()
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         if let lineId = context as? String {
             self.lineId = lineId
         } else {
@@ -55,8 +55,8 @@ class JWLineInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    func configureRowControllerAtIndex(index: Int, text: String) {
-        let rowController: AnyObject? = interfaceTable.rowControllerAtIndex(index)
+    func configureRowControllerAtIndex(_ index: Int, text: String) {
+        let rowController: AnyObject? = interfaceTable.rowController(at: index) as AnyObject?
         if let itemRowController = rowController as? JWLineRowType {
             itemRowController.setNumber(index + 1, name: text)
         } else if let itemRowController = rowController as? JWArrivingLineRowType {
@@ -71,29 +71,29 @@ class JWLineInterfaceController: WKInterfaceController {
         self.timeLabel.setText("--")
         self.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
         self.lineRequest.lineId = lineId
-        self.lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
+        self.lineRequest.load { [weak self](result, error) -> Void in
             if let weakSelf = self {
                 if let _ = error {
                     weakSelf.lineNumberLabel.setText("未找到线路")
                     weakSelf.interfaceTable.setNumberOfRows(0, withRowType: Storyboard.RowTypes.item)
                 } else if let _ = result {
-                    weakSelf.busLineItem = JWBusLineItem(dictionary: result as [NSObject : AnyObject])
-                    let lineItem = weakSelf.busLineItem.lineItem
-                    weakSelf.lineNumberLabel.setText("\(lineItem.lineNumber)")
-                    weakSelf.startLabel.setText("\(lineItem.from)")
-                    weakSelf.stopLabel.setText("\(lineItem.to)")
-                    weakSelf.timeLabel.setText("\(lineItem.firstTime)-\(lineItem.lastTime)")
-                    var stopItems = weakSelf.busLineItem.stopItems
+                    weakSelf.busLineItem = JWBusLineItem(dictionary: result! as [AnyHashable: Any])
+                    let lineItem = weakSelf.busLineItem?.lineItem
+                    weakSelf.lineNumberLabel.setText("\(lineItem?.lineNumber)")
+                    weakSelf.startLabel.setText("\(lineItem?.from)")
+                    weakSelf.stopLabel.setText("\(lineItem?.to)")
+                    weakSelf.timeLabel.setText("\(lineItem?.firstTime)-\(lineItem?.lastTime)")
+                    var stopItems = weakSelf.busLineItem?.stopItems
                     var stopIds = Set<Int>()
-                    for item in weakSelf.busLineItem.busItems {
+                    for item in (weakSelf.busLineItem?.busItems)! {
                         if let busItem = item as? JWBusItem {
                             stopIds.insert(busItem.order)
                         }
                     }
                     
-                    var rowTypes = Array<String>(count: stopItems.count, repeatedValue: Storyboard.RowTypes.item)
-                    for index in 0 ..< stopItems.count {
-                        if let stopItem = stopItems[index] as? JWStopItem {
+                    var rowTypes = Array<String>(repeating: Storyboard.RowTypes.item, count: (stopItems?.count)!)
+                    for index in  0 ..< stopItems!.count {
+                        if let stopItem = stopItems![index] as? JWStopItem {
                             if stopIds.contains(stopItem.order) {
                                 rowTypes[index] = Storyboard.RowTypes.arrivingItem
                             }
@@ -102,8 +102,8 @@ class JWLineInterfaceController: WKInterfaceController {
                     
                     weakSelf.interfaceTable.setRowTypes(rowTypes)
                     
-                    for index in 0 ..< stopItems.count {
-                        if let stopItem: JWStopItem = stopItems[index] as? JWStopItem {
+                    for index in 0 ..< stopItems!.count {
+                        if let stopItem: JWStopItem = stopItems![index] as? JWStopItem {
                             weakSelf.configureRowControllerAtIndex(index, text: stopItem.stopName)
                         }
                     }
@@ -112,17 +112,17 @@ class JWLineInterfaceController: WKInterfaceController {
         }
     }
     
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        if let stopItem = self.busLineItem.stopItems[rowIndex] as? JWStopItem {
-            self.pushControllerWithName("detailInterface", context: [
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        if let stopItem = self.busLineItem?.stopItems[rowIndex] as? JWStopItem {
+            self.pushController(withName: "detailInterface", context: [
                 "order": stopItem.order,
-                "lineId": self.busLineItem.lineItem.lineId])
+                "lineId": self.busLineItem?.lineItem.lineId])
         }
     }
 
     @IBAction func reverseDirection() {
-        if let _ = self.busLineItem.lineItem where self.busLineItem.lineItem.otherLineId.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
-            self.lineId = self.busLineItem.lineItem.otherLineId
+        if let _ = self.busLineItem?.lineItem , (self.busLineItem?.lineItem.otherLineId.lengthOfBytes(using: String.Encoding.utf8))! > 0 {
+            self.lineId = (self.busLineItem?.lineItem.otherLineId)!
             self.loadData()
         }
     }

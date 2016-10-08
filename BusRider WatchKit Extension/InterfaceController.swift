@@ -35,9 +35,9 @@ class InterfaceController: WKInterfaceController {
     var lineRequest = JWLineRequest()
     var busInfoItem: JWBusInfoItem!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reload"), name: kNotificationContextUpdate, object: nil)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        NotificationCenter.default.addObserver(self, selector: #selector(InterfaceController.reload), name: NSNotification.Name(rawValue: kNotificationContextUpdate), object: nil)
     }
 
     override func willActivate() {
@@ -55,14 +55,14 @@ class InterfaceController: WKInterfaceController {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func search() {
         if let _ = JWUserDefaultsUtil.cityItem() {
-            pushControllerWithName(StoryBoard.Controllers.searchResult, context: nil)
+            pushController(withName: StoryBoard.Controllers.searchResult, context: nil)
         } else {
-            presentControllerWithName(StoryBoard.Controllers.selectCity, context: true)
+            presentController(withName: StoryBoard.Controllers.selectCity, context: true)
         }
     }
     
@@ -96,12 +96,12 @@ class InterfaceController: WKInterfaceController {
         if let todayLine = todayLine {
             lineRequest.lineId = todayLine.lineId
             lineRequest.targetOrder = todayLine.order;
-            lineRequest.loadWithCompletion { [weak self](result, error) -> Void in
+            lineRequest.load { [weak self](result, error) -> Void in
                 if let weakSelf = self {
                     if let _ = error {
                         
                     } else if let result = result {
-                        weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [NSObject : AnyObject])
+                        weakSelf.busInfoItem = JWBusInfoItem(userStopOrder: todayLine.order, busInfo: result as [AnyHashable: Any])
                         weakSelf.renderData()
                     }
                 }
@@ -118,8 +118,8 @@ class InterfaceController: WKInterfaceController {
     
     func renderData() {
         var info = self.busInfoItem.calulateInfo()
-        let mainText = info[0] as! NSAttributedString
-        let updateText = info[1] as! String
+        let mainText = info?[0] as! NSAttributedString
+        let updateText = info?[1] as! String
         
         self.lineLabel.setText(self.busInfoItem.lineNumber)
         self.stopLabel.setText("到达\(self.busInfoItem.currentStop)")

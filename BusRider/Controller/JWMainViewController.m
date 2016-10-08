@@ -102,10 +102,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSLog(@"johnwong: %f", CACurrentMediaTime());
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    NSLog(@"johnwong: %f", CACurrentMediaTime());
     [super viewDidAppear:animated];
     [self.storeHouseRefreshControl scrollViewDidAppear];
     [self loadData];

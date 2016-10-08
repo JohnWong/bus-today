@@ -31,10 +31,10 @@ class JWSearchInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         openInputController()
-        self.addMenuItemWithItemIcon(WKMenuItemIcon.Repeat, title: "重新输入", action: Selector("openInputController"))
+        self.addMenuItem(with: WKMenuItemIcon.repeat, title: "重新输入", action: #selector(JWSearchInterfaceController.openInputController))
     }
     
     override func willActivate() {
@@ -47,27 +47,27 @@ class JWSearchInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    func loadData(keyword: String) {
+    func loadData(_ keyword: String) {
         self.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.noItem)
         
         searchRequest.keyWord = keyword
-        searchRequest.loadWithCompletion { [weak self](result, error) -> Void in
+        searchRequest.load { [weak self](result, error) -> Void in
             if let weakSelf = self {
-                if let _ = error {
+                if let error = error {
                     weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
-                    let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                    let itemRowController = weakSelf.interfaceTable.rowController(at: 0) as! JWSearchControllerRowType
                     itemRowController.setText(error.localizedDescription)
                 } else if let result = result {
-                    weakSelf.searchItems = JWSearchListItem(dictionary: result as [NSObject : AnyObject])
-                    let totalCount = weakSelf.searchItems.lineList.count
-                    if totalCount > 0 {
-                        weakSelf.interfaceTable.setNumberOfRows(totalCount, withRowType: Storyboard.RowTypes.item)
-                        for index in 0 ..< weakSelf.searchItems.lineList.count {
+                    weakSelf.searchItems = JWSearchListItem(dictionary: result as [AnyHashable: Any])
+                    let totalCount = weakSelf.searchItems?.lineList.count
+                    if totalCount! > 0 {
+                        weakSelf.interfaceTable.setNumberOfRows(totalCount!, withRowType: Storyboard.RowTypes.item)
+                        for index in 0 ..< weakSelf.searchItems!.lineList.count {
                             weakSelf.configureRowControllerAtIndex(index)
                         }
                     } else {
                         weakSelf.interfaceTable.setNumberOfRows(1, withRowType: Storyboard.RowTypes.errorItem)
-                        let itemRowController = weakSelf.interfaceTable.rowControllerAtIndex(0) as! JWSearchControllerRowType
+                        let itemRowController = weakSelf.interfaceTable.rowController(at: 0) as! JWSearchControllerRowType
                         itemRowController.setText("没有结果")
                     }
                 }
@@ -75,10 +75,10 @@ class JWSearchInterfaceController: WKInterfaceController {
         }
     }
     
-    func configureRowControllerAtIndex(index: Int) {
-        let itemRowController = self.interfaceTable.rowControllerAtIndex(index) as! JWSearchControllerRowType
-        if index < self.searchItems.lineList.count {
-            let item: JWSearchLineItem = self.searchItems.lineList[index] as! JWSearchLineItem
+    func configureRowControllerAtIndex(_ index: Int) {
+        let itemRowController = self.interfaceTable.rowController(at: index) as! JWSearchControllerRowType
+        if index < (self.searchItems?.lineList.count)! {
+            let item: JWSearchLineItem = self.searchItems!.lineList[index] as! JWSearchLineItem
             itemRowController.setText(item.lineNumber)
         }
     }
@@ -99,20 +99,20 @@ class JWSearchInterfaceController: WKInterfaceController {
             }
         }
         
-        self.presentTextInputControllerWithSuggestions(initialPhrases, allowedInputMode: WKTextInputMode.Plain) {
+        self.presentTextInputController(withSuggestions: initialPhrases, allowedInputMode: WKTextInputMode.plain) {
             [weak self](results) -> Void in
-            if let results = results, weakSelf = self where results.count > 0 {
+            if let results = results, let weakSelf = self , results.count > 0 {
                 var aResult = results[0] as! String;
-                aResult = aResult.stringByReplacingOccurrencesOfString("路", withString: "", options: NSStringCompareOptions(), range: nil)
+                aResult = aResult.replacingOccurrences(of: "路", with: "", options: NSString.CompareOptions(), range: nil)
                 weakSelf.loadData(aResult)
             }
         }
     }
     
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        if rowIndex < self.searchItems.lineList.count {
-            let item: JWSearchLineItem = self.searchItems.lineList[rowIndex] as! JWSearchLineItem
-            self.pushControllerWithName(Storyboard.Controllers.lineDetail, context: item.lineId)
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        if rowIndex < (self.searchItems?.lineList.count)! {
+            let item: JWSearchLineItem = self.searchItems!.lineList[rowIndex] as! JWSearchLineItem
+            self.pushController(withName: Storyboard.Controllers.lineDetail, context: item.lineId)
         }
     }
     

@@ -14,7 +14,7 @@ class JWLineRowType: NSObject {
     @IBOutlet weak var numberLabel: WKInterfaceLabel!
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
-    func setNumber(number: Int, name: String) {
+    func setNumber(_ number: Int, name: String) {
         numberLabel.setText("\(number)")
         nameLabel.setText("\(name)")
     }

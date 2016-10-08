@@ -11,7 +11,7 @@ import WatchKit
 class JWArrivingLineRowType: NSObject {
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
-    func setName(name: String) {
+    func setName(_ name: String) {
         nameLabel.setText("\(name)")
     }
 }
