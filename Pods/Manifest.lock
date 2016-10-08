@@ -2,9 +2,9 @@ PODS:
   - AHKActionSheet (0.5.3)
   - Appirater (2.0.5)
   - CBStoreHouseRefreshControl (1.0)
-  - Crashlytics (3.4.1):
-    - Fabric (~> 1.6.0)
-  - Fabric (1.6.1)
+  - Crashlytics (3.8.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.9)
   - Reveal-iOS-SDK (1.6.2)
   - SGNavigationProgress (1.2)
   - STHTTPRequest2 (1.0.4)
@@ -34,8 +34,8 @@ SPEC CHECKSUMS:
   AHKActionSheet: 0b7d3bc6467dd934441fd82beb3911fc1f7bdfd2
   Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
   CBStoreHouseRefreshControl: 15966a5e4b26b66c272795553cefe4aba77e567e
-  Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
-  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
+  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
+  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SGNavigationProgress: 6620db991cfd7611f8de036f4d6536c903cf0557
   STHTTPRequest2: 3c787d5b54401c51a6552ea6a3fad474a0053807
