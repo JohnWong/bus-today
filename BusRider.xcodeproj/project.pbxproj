@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3555DE6EA974CCCA399E8152 /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79869B4D952163AD850907A0 /* libPods-BusRider.a */; };
 		52004FF21A6511EB00EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52004FF31A65125400EE9024 /* JWFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF11A6511EB00EE9024 /* JWFormatter.m */; };
 		52004FF71A66050600EE9024 /* JWStopLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52004FF51A66050600EE9024 /* JWStopLineTableViewCell.m */; };
@@ -31,7 +32,6 @@
 		5239C6C91AF680AF006E70D7 /* JWStopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239C6B81AF68092006E70D7 /* JWStopItem.m */; };
 		523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C0EB011AB606730035D912 /* AVFoundation.framework */; };
 		523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 523B7FBF1AB75D1A006939D6 /* JWSettingViewController.m */; };
-		524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B319E1A2E39C300E4A11F /* libPods-BusRider.a */; };
 		524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F57221A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m */; };
 		524F57251A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524F57231A5D3A3A00DFD0A7 /* JWSearchTableViewCell.xib */; };
 		524F57271A5D93A800DFD0A7 /* JWIconCellBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */; };
@@ -125,8 +125,8 @@
 		52FCD0731A7017BE00419271 /* JWCityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD0711A70177800419271 /* JWCityItem.m */; };
 		52FCD0741A7017C200419271 /* JWCollectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD06D1A700F5800419271 /* JWCollectItem.m */; };
 		52FCD0751A7017CB00419271 /* JWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EC7E401A41DDE000CE4C23 /* JWItem.m */; };
-		88B4BE6DA9A4962EA6631170 /* libPods-BusRider WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */; };
-		A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C72F15D51F696EE9C6872F /* libPods-Today.a */; };
+		B5E918940EF109A8BAD805A6 /* libPods-BusRider WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728F4DE30CE5363CC99DA5C /* libPods-BusRider WatchKit Extension.a */; };
+		B6D3222F4AD1F672CB76D5EF /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177731659060E4A5481E6FF6 /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,11 +197,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0FD6FEC75F04CFB73D73B8F7 /* libPods-watchOS2 Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-watchOS2 Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS2 Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension.release.xcconfig"; sourceTree = "<group>"; };
-		4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		177731659060E4A5481E6FF6 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E278BF42D04B1BF692E97F6 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBB813844FADB9AA1858656 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		52004FF01A6511EB00EE9024 /* JWFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWFormatter.h; sourceTree = "<group>"; };
 		52004FF11A6511EB00EE9024 /* JWFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWFormatter.m; sourceTree = "<group>"; };
 		52004FF41A66050600EE9024 /* JWStopLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopLineTableViewCell.h; sourceTree = "<group>"; };
@@ -348,14 +346,12 @@
 		52FCD06D1A700F5800419271 /* JWCollectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectItem.m; sourceTree = "<group>"; };
 		52FCD0701A70177800419271 /* JWCityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCityItem.h; sourceTree = "<group>"; };
 		52FCD0711A70177800419271 /* JWCityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCityItem.m; sourceTree = "<group>"; };
-		81C72F15D51F696EE9C6872F /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85C5CE01CFEBABC7D90C707D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
-		B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS2 Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS2 Extension/Pods-watchOS2 Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
-		D0ADAE7343270CEBC0352B59 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
-		F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		585B169D1F966335D652E788 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		6728F4DE30CE5363CC99DA5C /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79869B4D952163AD850907A0 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		847EC2038B90D33F8571FD76 /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
+		DC9CA1557A9371D01CF2038C /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusRider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusRider/Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
+		EB4EA984F211B1EB5E9E1D90 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,7 +359,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B4BE6DA9A4962EA6631170 /* libPods-BusRider WatchKit Extension.a in Frameworks */,
+				B5E918940EF109A8BAD805A6 /* libPods-BusRider WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +370,7 @@
 				520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */,
 				523B7FB91AB7465D006939D6 /* AVFoundation.framework in Frameworks */,
 				52C0EB001AB603FD0035D912 /* libz.dylib in Frameworks */,
-				524B319F1A2E39C300E4A11F /* libPods-BusRider.a in Frameworks */,
+				3555DE6EA974CCCA399E8152 /* libPods-BusRider.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AB79F91A2E1982001904CA /* NotificationCenter.framework in Frameworks */,
-				A93025CE2AFA5BDF42E7305A /* libPods-Today.a in Frameworks */,
+				B6D3222F4AD1F672CB76D5EF /* libPods-Today.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A19F347AB737FB1B8AC1CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +499,7 @@
 				525D1D501BFA194700AC93B3 /* BusRider WatchKit Extension */,
 				52AB79F71A2E1982001904CA /* Frameworks */,
 				52AB79CA1A2E193E001904CA /* Products */,
-				F9F4BBD7B41A279A6BD95859 /* Pods */,
+				D21F24FC096786EE79427E75 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -537,11 +540,9 @@
 				52AB7A0D1A2E2F61001904CA /* libPods.a */,
 				52AB7A0B1A2E2F01001904CA /* libPods-AFNetworking.a */,
 				52AB79F81A2E1982001904CA /* NotificationCenter.framework */,
-				85C5CE01CFEBABC7D90C707D /* libPods.a */,
-				81C72F15D51F696EE9C6872F /* libPods-Today.a */,
-				45AB26FCC46D4C8029173BC8 /* libPods-BusRider.a */,
-				0FD7A68132E5130A197E9405 /* libPods-BusRider WatchKit Extension.a */,
-				0FD6FEC75F04CFB73D73B8F7 /* libPods-watchOS2 Extension.a */,
+				79869B4D952163AD850907A0 /* libPods-BusRider.a */,
+				6728F4DE30CE5363CC99DA5C /* libPods-BusRider WatchKit Extension.a */,
+				177731659060E4A5481E6FF6 /* libPods-Today.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -724,17 +725,15 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
-		F9F4BBD7B41A279A6BD95859 /* Pods */ = {
+		D21F24FC096786EE79427E75 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */,
-				E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */,
-				9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */,
-				C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */,
-				4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */,
-				D0ADAE7343270CEBC0352B59 /* Pods-BusRider WatchKit Extension.release.xcconfig */,
-				B92AAC4D2C7E8F9A43049C5B /* Pods-watchOS2 Extension.debug.xcconfig */,
-				4C3EF30394391B5EDA284362 /* Pods-watchOS2 Extension.release.xcconfig */,
+				847EC2038B90D33F8571FD76 /* Pods-BusRider.debug.xcconfig */,
+				DC9CA1557A9371D01CF2038C /* Pods-BusRider.release.xcconfig */,
+				585B169D1F966335D652E788 /* Pods-BusRider WatchKit Extension.debug.xcconfig */,
+				4EBB813844FADB9AA1858656 /* Pods-BusRider WatchKit Extension.release.xcconfig */,
+				3E278BF42D04B1BF692E97F6 /* Pods-Today.debug.xcconfig */,
+				EB4EA984F211B1EB5E9E1D90 /* Pods-Today.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -748,6 +747,7 @@
 			buildPhases = (
 				525D1D3E1BFA194700AC93B3 /* Resources */,
 				525D1D5E1BFA194700AC93B3 /* Embed App Extensions */,
+				77A19F347AB737FB1B8AC1CF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -763,12 +763,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 525D1D5B1BFA194700AC93B3 /* Build configuration list for PBXNativeTarget "BusRider WatchKit Extension" */;
 			buildPhases = (
-				E79CD9809D5BFCBAA9A04044 /* Check Pods Manifest.lock */,
+				CDE4A7DE9BED53F20590D933 /* [CP] Check Pods Manifest.lock */,
 				525D1D481BFA194700AC93B3 /* Sources */,
 				525D1D491BFA194700AC93B3 /* Frameworks */,
 				525D1D4A1BFA194700AC93B3 /* Resources */,
-				CE1BE323C9A8B52DFED1538C /* Copy Pods Resources */,
-				BA58A17AE6F8EC8361B734B4 /* Embed Pods Frameworks */,
+				E3AB23242069E1C586661C49 /* [CP] Embed Pods Frameworks */,
+				9817D664FA7F0478EB24204E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -783,14 +783,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52AB79EC1A2E193E001904CA /* Build configuration list for PBXNativeTarget "BusRider" */;
 			buildPhases = (
+				39FF5DD43CE61A8FC21379A1 /* [CP] Check Pods Manifest.lock */,
 				52AB79C51A2E193E001904CA /* Sources */,
 				52AB79C61A2E193E001904CA /* Frameworks */,
 				52AB79C71A2E193E001904CA /* Resources */,
 				52AB7A0A1A2E1982001904CA /* Embed App Extensions */,
-				275818CA71DF195E00CF5A93 /* Copy Pods Resources */,
 				52B84A5B1BE1480800BC81F6 /* Embed Watch Content */,
-				8F768A7DB8A78B166171C853 /* Embed Pods Frameworks */,
 				523AC2111C1338FF00B6043F /* Crashlytics */,
+				3BA41C4E502590D3E5799487 /* [CP] Embed Pods Frameworks */,
+				EAB16EA83AE44EB3DFC30D27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -808,12 +809,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52AB7A071A2E1982001904CA /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
-				2AD2391BBE535461D9DE75A4 /* Check Pods Manifest.lock */,
+				972DC3A5B0CFFE76AB1C29B7 /* [CP] Check Pods Manifest.lock */,
 				52AB79F21A2E1982001904CA /* Sources */,
 				52AB79F31A2E1982001904CA /* Frameworks */,
 				52AB79F41A2E1982001904CA /* Resources */,
-				B9AD4A758888148E929EA5C5 /* Copy Pods Resources */,
-				C3A4304D1B1E2E3F8A907A10 /* Embed Pods Frameworks */,
+				77A58A82A548038A399BFD71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -946,34 +946,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		275818CA71DF195E00CF5A93 /* Copy Pods Resources */ = {
+		39FF5DD43CE61A8FC21379A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2AD2391BBE535461D9DE75A4 /* Check Pods Manifest.lock */ = {
+		3BA41C4E502590D3E5799487 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		523AC2111C1338FF00B6043F /* Crashlytics */ = {
@@ -990,29 +990,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 8fcca83956bce3b157cca797318d87943a5c57ff 609105dfeb828407f131ccef4a6a96c88b3427f8ba997b63ccad38c9daa5e10a";
 		};
-		8F768A7DB8A78B166171C853 /* Embed Pods Frameworks */ = {
+		77A58A82A548038A399BFD71 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9AD4A758888148E929EA5C5 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1020,44 +1005,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA58A17AE6F8EC8361B734B4 /* Embed Pods Frameworks */ = {
+		972DC3A5B0CFFE76AB1C29B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C3A4304D1B1E2E3F8A907A10 /* Embed Pods Frameworks */ = {
+		9817D664FA7F0478EB24204E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE1BE323C9A8B52DFED1538C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1065,19 +1035,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E79CD9809D5BFCBAA9A04044 /* Check Pods Manifest.lock */ = {
+		CDE4A7DE9BED53F20590D933 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AB23242069E1C586661C49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider WatchKit Extension/Pods-BusRider WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB16EA83AE44EB3DFC30D27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1227,7 +1227,7 @@
 /* Begin XCBuildConfiguration section */
 		525D1D5C1BFA194700AC93B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FA8963A0C25780E2766D045 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = 585B169D1F966335D652E788 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1248,7 +1248,7 @@
 		};
 		525D1D5D1BFA194700AC93B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0ADAE7343270CEBC0352B59 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 4EBB813844FADB9AA1858656 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1399,7 +1399,7 @@
 		};
 		52AB79ED1A2E193E001904CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9555F9A620FBB3E4B8E8B47F /* Pods-BusRider.debug.xcconfig */;
+			baseConfigurationReference = 847EC2038B90D33F8571FD76 /* Pods-BusRider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1420,7 +1420,7 @@
 		};
 		52AB79EE1A2E193E001904CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3F43CABE0A97BBA641DFD9A /* Pods-BusRider.release.xcconfig */;
+			baseConfigurationReference = DC9CA1557A9371D01CF2038C /* Pods-BusRider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1441,7 +1441,7 @@
 		};
 		52AB7A081A2E1982001904CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9ED86513EC76113C8DB9122 /* Pods-Today.debug.xcconfig */;
+			baseConfigurationReference = 3E278BF42D04B1BF692E97F6 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
@@ -1461,7 +1461,7 @@
 		};
 		52AB7A091A2E1982001904CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E081555793F45084A90E40F2 /* Pods-Today.release.xcconfig */;
+			baseConfigurationReference = EB4EA984F211B1EB5E9E1D90 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
 				GCC_PREFIX_HEADER = "Today/Today-Prefix.pch";
