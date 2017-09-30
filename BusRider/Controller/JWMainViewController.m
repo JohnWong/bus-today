@@ -26,6 +26,7 @@
 #import "CBStoreHouseRefreshControl.h"
 #import "JWMainEmptyTableViewCell.h"
 #import "JWSessionManager.h"
+#import "JWNetworkUtility.h"
 
 #define JWCellIdMain @"JWCellIdMain"
 #define JWCellIdEmpty @"JWCellIdEmpty"
@@ -117,6 +118,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         _cityButtonItem = nil;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButtonItem];
     }
+
+    // 测试方法调用
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        int network = [JWNetworkUtility networkType];
+        NSLog(@"Network: %d", network);
+    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated
