@@ -12,7 +12,7 @@ target :BusRider do
     pod 'Appirater'
     pod 'SGNavigationProgress', :podspec => 'https://raw.githubusercontent.com/JohnWong/SGNavigationProgress/master/SGNavigationProgress.podspec'
     pod 'CBStoreHouseRefreshControl', :podspec => 'https://raw.githubusercontent.com/JohnWong/CBStoreHouseRefreshControl/master/CBStoreHouseRefreshControl.podspec'
-    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+    pod 'Reveal-SDK', '~> 11', :configurations => ['Debug']
     pod 'Crashlytics'
 end
 

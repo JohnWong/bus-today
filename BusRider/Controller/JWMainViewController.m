@@ -444,7 +444,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
+    //    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end

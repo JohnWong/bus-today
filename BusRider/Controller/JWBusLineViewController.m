@@ -177,7 +177,7 @@
             }
 
             [UIView animateWithDuration:0.25 + 0.002 * fabs(scrollTo - self.scrollView.contentOffset.y) animations:^{
-                self.scrollView.contentOffset =  CGPointMake(0, scrollTo);
+                self.scrollView.contentOffset = CGPointMake(0, scrollTo);
             }];
         }
 
@@ -338,7 +338,7 @@
             [JWViewUtil showError:error];
         }
         [weakSelf.navigationController setSGProgressPercentage:100];
-        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
+        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[ NSRunLoopCommonModes ]];
         if (error) {
             // TODO johnwong
         } else {
@@ -421,7 +421,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
+    //    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end

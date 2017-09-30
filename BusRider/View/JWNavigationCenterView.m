@@ -30,11 +30,11 @@
         } else {
             self.titleLabel.font = [UIFont systemFontOfSize:17];
         }
+        self.alpha = 0;
         [self setTitle:title];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 
         [self setImage:[[UIImage imageNamed:@"JWIconExpand"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        self.alpha = 0;
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
         [self addGestureRecognizer:tapRecognizer];
     }

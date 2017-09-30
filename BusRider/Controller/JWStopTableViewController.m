@@ -157,9 +157,8 @@
             [JWViewUtil showError:error];
         }
         [weakSelf.navigationController setSGProgressPercentage:100];
-        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[NSRunLoopCommonModes]];
+        [self.storeHouseRefreshControl performSelector:@selector(finishingLoading) withObject:nil afterDelay:0.3 inModes:@[ NSRunLoopCommonModes ]];
         if (error) {
-            
         } else {
             weakSelf.lineTypeList = [JWStopLineTypeItem arrayFromDictionary:dict];
             [weakSelf updateViews];
@@ -182,7 +181,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
+    //    [self.storeHouseRefreshControl scrollViewDidEndDecelerating];
 }
 
 @end
