@@ -122,10 +122,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 
     // 测试方法调用
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        int network = [JWNetworkUtility networkType];
-        NSLog(@"Network: %d", network);
-    });
+    if (@available(iOS 11.0, *)) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            int network = [JWNetworkUtility networkType];
+            NSLog(@"Network: %d", network);
+        });
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -11,6 +11,6 @@
 
 @interface JWNetworkUtility : NSObject
 
-+ (int)networkType;
++ (int)networkType NS_AVAILABLE_IOS(11_0);
 
 @end
