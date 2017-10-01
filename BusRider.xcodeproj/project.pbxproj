@@ -107,6 +107,7 @@
 		52D7000A1AF92FB3008A3C8C /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */; };
 		52D7000B1AF92FB3008A3C8C /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */; };
 		52D7672C1F7FFBE3006136AC /* JWNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */; };
+		52D7672F1F80E6AD006136AC /* NSObject+ValueForKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
 		52EB7C061A3DF6CF00057723 /* JWStopNameButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EB7C031A3DF6CF00057723 /* JWStopNameButton.xib */; };
@@ -321,6 +322,8 @@
 		52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusInfoItem.m; sourceTree = "<group>"; };
 		52D7672A1F7FFBE3006136AC /* JWNetworkUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWNetworkUtility.h; sourceTree = "<group>"; };
 		52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWNetworkUtility.m; sourceTree = "<group>"; };
+		52D7672D1F80E6AD006136AC /* NSObject+ValueForKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ValueForKey.h"; sourceTree = "<group>"; };
+		52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ValueForKey.m"; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
 		52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWOnePixelView.m; sourceTree = "<group>"; };
 		52EB7C011A3DF6CF00057723 /* JWStopNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWStopNameButton.h; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 			children = (
 				52D7672A1F7FFBE3006136AC /* JWNetworkUtility.h */,
 				52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */,
+				52D7672D1F80E6AD006136AC /* NSObject+ValueForKey.h */,
+				52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1166,6 +1171,7 @@
 				52AAFBDB1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m in Sources */,
 				525D1DA41BFA23C800AC93B3 /* JWSessionManager.m in Sources */,
 				52FCD0721A70177800419271 /* JWCityItem.m in Sources */,
+				52D7672F1F80E6AD006136AC /* NSObject+ValueForKey.m in Sources */,
 				52AB79D21A2E193E001904CA /* AppDelegate.m in Sources */,
 				523B7FC01AB75D1A006939D6 /* JWSettingViewController.m in Sources */,
 				52B8D5BE1A57FA6E00B3DD5C /* JWSwitchRotationButton.m in Sources */,

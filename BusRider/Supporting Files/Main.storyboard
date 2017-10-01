@@ -356,7 +356,7 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-s5-1Lo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LAQ-Kg-cuQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="fn9-cq-g2W"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -391,6 +391,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBarHeight" destination="fn9-cq-g2W" id="oQi-FJ-tL8"/>
                         <outlet property="searchController" destination="nKC-wf-krp" id="c5I-Fu-0tr"/>
                         <outlet property="searchDisplayController" destination="nKC-wf-krp" id="jIR-sY-ykM"/>
                         <outlet property="tableView" destination="Xiu-d4-YcQ" id="GIE-Nk-Kzp"/>

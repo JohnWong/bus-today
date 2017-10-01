@@ -27,6 +27,7 @@
 #import "JWMainEmptyTableViewCell.h"
 #import "JWSessionManager.h"
 #import "JWNetworkUtility.h"
+#import <objc/runtime.h>
 
 #define JWCellIdMain @"JWCellIdMain"
 #define JWCellIdEmpty @"JWCellIdEmpty"
@@ -41,6 +42,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 @interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, JWNavigationCenterDelegate, UIScrollViewDelegate>
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchBarHeight;
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
 @property (nonatomic, strong) JWSearchListItem *searchListItem;
 @property (nonatomic, strong) NSString *cityName;
@@ -302,6 +304,45 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         [self showCityList];
         return NO;
     }
+}
+
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self adjustSearchBar];
+}
+
+- (void)adjustSearchBar
+{
+    // iOS 11需要特殊处理下
+    if (@available(iOS 11.0, *)) {
+    } else {
+        return;
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UISearchBar *searchBar = self.searchController.searchBar;
+        searchBar.height = self.searchBarHeight.constant;
+        UITextField *textField = [searchBar safeValueForKey:@"_searchField"];
+        if (textField) {
+            textField.centerY = searchBar.height / 2;
+        }
+
+        UIButton *cancelButton = [searchBar safeValueForKey:@"_cancelButton"];
+        if (cancelButton) {
+            cancelButton.centerY = searchBar.height / 2;
+        }
+
+        UIView *containerView = [self.searchController safeValueForKey:@"_containerView"];
+        if ([containerView isKindOfClass:NSClassFromString(@"UISearchDisplayControllerContainerView")]) {
+            UIView *topView = [containerView safeValueForKey:@"_topView"];
+            UIView *bottomView = [containerView safeValueForKey:@"_bottomView"];
+            topView.top = searchBar.top;
+            topView.height = searchBar.height;
+            bottomView.top = topView.bottom;
+            bottomView.height = containerView.height - bottomView.top;
+        }
+    });
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
