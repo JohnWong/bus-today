@@ -79,10 +79,10 @@ class JWLineInterfaceController: WKInterfaceController {
                 } else if let _ = result {
                     weakSelf.busLineItem = JWBusLineItem(dictionary: result! as [AnyHashable: Any])
                     let lineItem = weakSelf.busLineItem?.lineItem
-                    weakSelf.lineNumberLabel.setText("\(lineItem?.lineNumber)")
-                    weakSelf.startLabel.setText("\(lineItem?.from)")
-                    weakSelf.stopLabel.setText("\(lineItem?.to)")
-                    weakSelf.timeLabel.setText("\(lineItem?.firstTime)-\(lineItem?.lastTime)")
+                    weakSelf.lineNumberLabel.setText("\(lineItem?.lineNumber ?? "")")
+                    weakSelf.startLabel.setText("\(lineItem?.from ?? "")")
+                    weakSelf.stopLabel.setText("\(lineItem?.to ?? "")")
+                    weakSelf.timeLabel.setText("\(lineItem?.firstTime ?? "")-\(lineItem?.lastTime  ?? "")")
                     var stopItems = weakSelf.busLineItem?.stopItems
                     var stopIds = Set<Int>()
                     for item in (weakSelf.busLineItem?.busItems)! {
@@ -116,7 +116,7 @@ class JWLineInterfaceController: WKInterfaceController {
         if let stopItem = self.busLineItem?.stopItems[rowIndex] as? JWStopItem {
             self.pushController(withName: "detailInterface", context: [
                 "order": stopItem.order,
-                "lineId": self.busLineItem?.lineItem.lineId])
+                "lineId": self.busLineItem?.lineItem.lineId ?? ""])
         }
     }
 

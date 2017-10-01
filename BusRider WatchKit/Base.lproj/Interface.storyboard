@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
     </dependencies>
     <scenes>
         <!--今日公交-->
@@ -21,7 +25,7 @@
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
                                 <label alignment="left" text="--" numberOfLines="0" id="Bhw-ts-HH5">
-                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
                                 <group width="1" alignment="left" id="IZS-sB-aHk">
                                     <items>
@@ -51,30 +55,30 @@
                                         <group width="1" alignment="left" animationDuration="1" id="Id9-pQ-apN">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="5g8-FC-Zpl">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="oaC-ic-pVK">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="c9E-ch-KTP">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="37a-Bb-Fqb">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="I72-Of-2Xh">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="8b1-hA-evE">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="n2A-c7-87c">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="5Os-qh-XNf">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
@@ -188,30 +192,30 @@
                                         <group width="1" alignment="left" animationDuration="1" id="EQl-tM-Jbr">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="FwP-oJ-7kd">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="Uyx-Wg-tW9">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="Ue2-U1-9MA">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="D8O-Nz-FJw">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="sHz-yx-gcI">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="87c-PV-d9N">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="9VU-4f-07M">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="--" numberOfLines="0" id="Lud-t5-1MU">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
@@ -349,7 +353,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="452" y="319"/>
+            <point key="canvasLocation" x="460" y="401"/>
         </scene>
         <!--详情-->
         <scene sceneID="gTZ-oZ-xe4">
@@ -367,7 +371,7 @@
                                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                 </group>
                                 <label alignment="left" text="--" numberOfLines="0" id="SLr-rU-bSD">
-                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.84219682220000003" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </label>
                                 <group width="1" alignment="left" id="B8h-yS-WLh">
                                     <items>
@@ -392,30 +396,30 @@
                                         <group width="1" alignment="left" animationDuration="1" id="gvC-1Q-cAh">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Start" contentMode="center" id="6kJ-eE-qGa">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="余杭" numberOfLines="0" id="EQ2-70-ARM">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="FiK-aH-OJI">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" image="Stop" contentMode="center" id="dm3-sS-qot">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="蒋村公交中心站123" numberOfLines="0" id="r2v-vg-VQt">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="iet-9V-TEf">
                                             <items>
                                                 <imageView width="14" height="18" alignment="left" verticalAlignment="center" image="Time" contentMode="center" id="qqz-ww-XKx">
-                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label alignment="left" text="06:00-17:30" numberOfLines="0" id="5yO-BX-9o8">
-                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.84241831060000005" green="0.84824645269999999" blue="0.85077021480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </items>
                                         </group>
@@ -465,7 +469,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="961" y="353"/>
+            <point key="canvasLocation" x="1023" y="342"/>
         </scene>
     </scenes>
 </document>

@@ -122,13 +122,13 @@ class InterfaceController: WKInterfaceController {
         let updateText = info?[1] as! String
         
         self.lineLabel.setText(self.busInfoItem.lineNumber)
-        self.stopLabel.setText("到达\(self.busInfoItem.currentStop)")
+        self.stopLabel.setText("到达\(String(describing: self.busInfoItem.currentStop!))")
         self.updateLabel.setText(updateText)
         self.mainLabel.setAttributedText(mainText)
         
         self.fromLabel.setText(self.busInfoItem.from)
         self.toLabel.setText(self.busInfoItem.to)
-        self.timeLabel.setText("\(self.busInfoItem.firstTime)-\(self.busInfoItem.lastTime)")
+        self.timeLabel.setText("\(String(describing: self.busInfoItem.firstTime!))-\(String(describing: self.busInfoItem.lastTime!))")
     }
     
 }
