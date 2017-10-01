@@ -40,11 +40,11 @@
 {
     JWWebViewController *webController = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"JWPushAbout"]) {
-        webController.url = @"http://impress.sinaapp.com/bus/about.html";
+        webController.url = @"https://impress.sinaapp.com/bus/about.html";
     } else if ([segue.identifier isEqualToString:@"JWPushHelp"]) {
-        webController.url = @"http://impress.sinaapp.com/bus/help.html";
+        webController.url = @"https://impress.sinaapp.com/bus/help.html";
     } else if ([segue.identifier isEqualToString:@"JWPushPrivacy"]) {
-        webController.url = @"http://impress.sinaapp.com/bus/privacy.html";
+        webController.url = @"https://impress.sinaapp.com/bus/privacy.html";
     }
 }
 

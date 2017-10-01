@@ -42,6 +42,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *updateLabel;
 @property (weak, nonatomic) IBOutlet JWSwitchChangeButton *todayButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *maskHeight;
 
 @property (nonatomic, strong) JWNavigationCenterView *stopButtonItem;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
@@ -97,6 +98,14 @@
                                reverseLoadingAnimation:YES
                                internalAnimationFactor:1];
     [self loadRequest];
+}
+
+- (void)viewSafeAreaInsetsDidChange
+{
+    [super viewSafeAreaInsetsDidChange];
+    if (@available(iOS 11.0, *)) {
+        self.maskHeight.constant = 132 + self.view.safeAreaInsets.bottom;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -171,7 +180,11 @@
         [stopButton.titleButton addTarget:self action:@selector(didSelectStop:) forControlEvents:UIControlEventTouchUpInside];
         if (isSelected) {
             self.stopLabel.text = [NSString stringWithFormat:@"到达%@", stopItem.stopName];
-            NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132);
+            CGFloat bottomMargin = 0;
+            if (@available(iOS 11.0, *)) {
+                bottomMargin = self.view.safeAreaInsets.bottom;
+            }
+            NSInteger scrollTo = self.contentView.top + stopButton.bottom - (self.view.height - 132 - bottomMargin);
             if (scrollTo < -self.scrollView.contentInset.top) {
                 scrollTo = -self.scrollView.contentInset.top;
             }
