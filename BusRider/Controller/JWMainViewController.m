@@ -315,11 +315,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)adjustSearchBar
 {
-    // iOS 11需要特殊处理下
-    if (@available(iOS 11.0, *)) {
-    } else {
-        return;
-    }
+    // 处理search display controller的各种问题
     dispatch_async(dispatch_get_main_queue(), ^{
         UISearchBar *searchBar = self.searchController.searchBar;
         searchBar.height = self.searchBarHeight.constant;
