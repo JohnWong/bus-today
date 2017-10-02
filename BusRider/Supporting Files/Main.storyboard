@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="TYM-DL-tKA" customClass="JWBusLineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qin-lm-xzw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCQ-Jw-tBY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sly-UQ-9At">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
@@ -158,7 +158,7 @@
                                 </connections>
                             </scrollView>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sa-F3-v9B">
-                                <rect key="frame" x="0.0" y="535" width="375" height="132"/>
+                                <rect key="frame" x="0.0" y="471" width="375" height="132"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-1q-8jA" customClass="JWOnePixelView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-zI-V4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="614"/>
+            <point key="canvasLocation" x="478" y="711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="67g-oX-tOw">
@@ -408,7 +408,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-437" y="810"/>
+            <point key="canvasLocation" x="-474" y="811"/>
         </scene>
         <!--关于-->
         <scene sceneID="AgH-d6-qhE">
@@ -639,14 +639,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb1-bY-vpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="-69"/>
+            <point key="canvasLocation" x="478" y="-70"/>
         </scene>
         <!--Stop Table View Controller-->
         <scene sceneID="iWr-d8-tpT">
             <objects>
                 <tableViewController id="wuS-za-bCw" customClass="JWStopTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y4w-7w-22c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -661,7 +661,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig9-5u-5MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="1331"/>
+            <point key="canvasLocation" x="4" y="1281"/>
         </scene>
     </scenes>
     <resources>
@@ -673,8 +673,8 @@
         <image name="JWIconTodayOn.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BPd-eC-Cbi"/>
+        <segue reference="IJF-i3-WQx"/>
         <segue reference="fxV-yn-c05"/>
-        <segue reference="bKI-le-Ue2"/>
+        <segue reference="Juj-fM-HbG"/>
     </inferredMetricsTieBreakers>
 </document>
