@@ -87,11 +87,11 @@ static NSString *const kToday = @"today";
     NSMutableDictionary<NSString *, id> *mutableDict = [NSMutableDictionary dictionary];
     JWCityItem *cityItem = [JWUserDefaultsUtil cityItem];
     if (cityItem) {
-        mutableDict[kCity] = [cityItem toDictionary];
+        mutableDict[kCity] = cityItem.toDictionary;
     }
     JWCollectItem *today = [JWUserDefaultsUtil todayBusLine];
     if (today) {
-        mutableDict[kToday] = [today toDictionary];
+        mutableDict[kToday] = today.toDictionary;
     }
     NSError *error = nil;
     WCSession *validSession = [self validSession];

@@ -49,7 +49,7 @@
 
 - (void)loadWithCompletion:(JWCompletion)completion progress:(JWProgress)progress
 {
-    NSString *checkResult = [self validateParams];
+    NSString *checkResult = self.validateParams;
     if (checkResult) {
         NSError *error = [NSError errorWithDomain:JWDataErrorKey code:0 userInfo:@{
             NSLocalizedDescriptionKey : checkResult
@@ -80,12 +80,12 @@
                 error = [NSError errorWithDomain:JWDataErrorKey
                                             code:301
                                         userInfo:@{
-                                                   NSLocalizedDescriptionKey:jsonr[@"errmsg"]
-                                                   }];
+                                            NSLocalizedDescriptionKey : jsonr[@"errmsg"]
+                                        }];
                 NSLog(@"JWRequest: error %@", error);
                 completion(nil, error);
             }
-            
+
         } else {
             NSLog(@"JWRequest: error %@", error);
             completion(nil, error);
@@ -101,7 +101,7 @@
     self.request.downloadProgressBlock = ^(NSData *data, int64_t totalBytesReceived, int64_t totalBytesExpectedToReceive) {
         NSLog(@"JWRequest: progress %ld / %lld", (unsigned long)totalBytesReceived, totalBytesExpectedToReceive);
         if (progress) {
-            CGFloat percent = totalBytesReceived * 100 / (totalBytesExpectedToReceive == NSURLResponseUnknownLength? 10240: totalBytesReceived);
+            CGFloat percent = totalBytesReceived * 100 / (totalBytesExpectedToReceive == NSURLResponseUnknownLength ? 10240 : totalBytesReceived);
             if (percent > 0.2) {
                 progress(percent);
             }
@@ -113,7 +113,7 @@
 - (NSString *)urlPath
 {
     NSMutableString *paramString = [[NSMutableString alloc] init];
-    NSDictionary *paramDict = [self params];
+    NSDictionary *paramDict = self.params;
     for (NSString *key in paramDict) {
         [paramString appendFormat:@"&%@=%@", key, paramDict[key]];
     }
@@ -125,7 +125,7 @@
     return [NSString stringWithFormat:@"http://%@/%@/%@.action?sign=&v=5.2.0&s=IOS&sv=9.1&vc=10070%@%@",
                                       kJWHost,
                                       [self isKindOfClass:NSClassFromString(@"JWCityRequest")] ? @"goocity" : @"bus",
-                                      [self actionName],
+                                      self.actionName,
                                       cityId,
                                       [paramString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 }
