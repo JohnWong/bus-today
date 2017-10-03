@@ -61,7 +61,7 @@
 
 - (void)setOn:(BOOL)on
 {
-    [super setOn:on];
+    super.on = on;
     if (self.delegate) {
         [self.delegate buttonItem:self setOn:self.isOn];
     }

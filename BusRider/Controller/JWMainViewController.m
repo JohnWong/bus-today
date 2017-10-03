@@ -377,7 +377,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 - (NSMutableArray *)collectLineItem
 {
     if (!_collectLineItem) {
-        _collectLineItem = [[[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator] allObjects] mutableCopy];
+        _collectLineItem = [[[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator].allObjects mutableCopy];
     }
     return _collectLineItem;
 }

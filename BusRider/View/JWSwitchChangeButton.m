@@ -13,7 +13,7 @@
 
 - (void)setOn:(BOOL)on
 {
-    [super setOn:on];
+    super.on = on;
     if (on) {
         [self setImage:self.onImage forState:UIControlStateNormal];
         [self setImage:self.onImage forState:UIControlStateHighlighted];

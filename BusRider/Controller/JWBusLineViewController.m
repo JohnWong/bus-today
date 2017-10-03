@@ -381,10 +381,10 @@
 
         if ([JWUserDefaultsUtil collectItemForLineId:self.lineId]) {
             [JWUserDefaultsUtil removeCollectItemWithLineId:self.lineId];
-            [barButton setTitle:@"收藏"];
+            barButton.title = @"收藏";
         } else {
             [self saveCollectItem];
-            [barButton setTitle:@"已收藏"];
+            barButton.title = @"已收藏";
         }
     }
 }

@@ -47,21 +47,21 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 - (void)setObject:(id)userInfo forKey:(NSString *)key
 {
-    NSUserDefaults *sharedUserDefaults = [self userDefaults];
+    NSUserDefaults *sharedUserDefaults = self.userDefaults;
     [sharedUserDefaults setObject:userInfo forKey:key];
     [sharedUserDefaults synchronize];
 }
 
 - (void)removeObjectForKey:(NSString *)key
 {
-    NSUserDefaults *sharedUserDefaults = [self userDefaults];
+    NSUserDefaults *sharedUserDefaults = self.userDefaults;
     [sharedUserDefaults removeObjectForKey:key];
     [sharedUserDefaults synchronize];
 }
 
 - (id)objectForKey:(NSString *)key
 {
-    NSUserDefaults *sharedUserDefaults = [self userDefaults];
+    NSUserDefaults *sharedUserDefaults = self.userDefaults;
     return [sharedUserDefaults objectForKey:key];
 }
 
@@ -73,7 +73,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 - (id)itemForKey:(NSString *)key
 {
-    NSUserDefaults *sharedUserDefaults = [self userDefaults];
+    NSUserDefaults *sharedUserDefaults = self.userDefaults;
     NSData *itemData = [sharedUserDefaults objectForKey:key];
     if (itemData) {
         return [NSKeyedUnarchiver unarchiveObjectWithData:itemData];
@@ -227,7 +227,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 + (void)saveCityList:(NSArray *)array
 {
-    [((JWUserDefaultsUtil *)[self groupUserDefaults])setItem:array forKey:JWKeyCityList];
+    [((JWUserDefaultsUtil *)[self groupUserDefaults]) setItem:array forKey:JWKeyCityList];
     [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults setObject:[self timeKey] forKey:JWKeyCityListDate];
 }
 
@@ -236,7 +236,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
     NSString *key = [self timeKey];
     NSString *savedKey = [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults stringForKey:JWKeyCityListDate];
     if ([key isEqualToString:savedKey]) {
-        return [((JWUserDefaultsUtil *)[self groupUserDefaults])itemForKey:JWKeyCityList];
+        return [((JWUserDefaultsUtil *)[self groupUserDefaults]) itemForKey:JWKeyCityList];
     } else {
         [((JWUserDefaultsUtil *)[self groupUserDefaults]).userDefaults removeObjectForKey:JWKeyCityList];
         return nil;

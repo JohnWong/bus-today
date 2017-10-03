@@ -13,7 +13,7 @@
 static NSString *convertUnicodeCharEscapes(NSString *source)
 {
     const NSInteger MAX_UNICHAR_LEN = 100;
-    NSInteger lenSource = [source length];
+    NSInteger lenSource = source.length;
     unichar unicharBuf[MAX_UNICHAR_LEN]; // 一次最多转100个
     NSMutableString *dest = [[NSMutableString alloc] initWithCapacity:lenSource];
     NSInteger i = 0, copyStart = 0, slashPos = -2, escapeIndex = -1, escapePow = 0, escapeCharIndex = 0, escapeCharValue = 0;

@@ -31,6 +31,6 @@
  */
 @property (nonatomic, strong) NSString *to;
 
-- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber;
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber NS_DESIGNATED_INITIALIZER;
 
 @end

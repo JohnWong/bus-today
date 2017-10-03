@@ -30,7 +30,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@%@", [super description], @{
+    return [NSString stringWithFormat:@"%@%@", super.description, @{
         @"order" : @(self.order),
         @"stopName" : self.stopName
     }];

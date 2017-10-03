@@ -26,7 +26,6 @@
 }
 
 - (void)setFromDictionary:(NSDictionary *)dict {}
-
 + (NSArray *)arrayFromDictionaryArray:(NSArray *)array
 {
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:array.count];
@@ -39,7 +38,7 @@
 
 - (NSString *)debugDescription
 {
-    NSMutableString *mutableString = [NSMutableString stringWithString:[super description]];
+    NSMutableString *mutableString = [NSMutableString stringWithString:super.description];
     Class c = self.class;
     unsigned int level = 0;
     while (c) {
@@ -48,7 +47,7 @@
 
         for (unsigned int i = 0; i < count; i++) {
             objc_property_t property = properties[i];
-            NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+            NSString *name = @(property_getName(property));
             // 过滤掉系统自动添加的元素
             if ([name isEqualToString:@"hash"] || [name isEqualToString:@"superclass"] || [name isEqualToString:@"description"] || [name isEqualToString:@"debugDescription"] || [name rangeOfString:@"accessibility"].location != NSNotFound || [name rangeOfString:@"isAccessibilityElement"].location != NSNotFound || [name rangeOfString:@"shouldGroupAccessibilityChildren"].location != NSNotFound || [name rangeOfString:@"classForKeyedArchiver"].location != NSNotFound) {
                 continue;

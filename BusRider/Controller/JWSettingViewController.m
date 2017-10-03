@@ -82,10 +82,10 @@
     //设置主题
     [mailPicker setSubject:[NSString stringWithFormat:@"[意见反馈]%@-%@", [self appName], [self appVersion]]];
     //添加收件人
-    NSArray *toRecipients = [NSArray arrayWithObject:@"yellowxz@163.com"];
+    NSArray *toRecipients = @[ @"yellowxz@163.com" ];
     [mailPicker setToRecipients:toRecipients];
     //添加抄送
-    NSArray *ccRecipients = [NSArray arrayWithObjects:@"huangxiaozhe1988@gmail.com", nil];
+    NSArray *ccRecipients = @[ @"huangxiaozhe1988@gmail.com" ];
     [mailPicker setCcRecipients:ccRecipients];
     [self presentViewController:mailPicker animated:YES completion:nil];
 }
@@ -111,15 +111,15 @@
 
 - (NSString *)appVersion
 {
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSDictionary *infoDictionary = [NSBundle mainBundle].infoDictionary;
+    return infoDictionary[@"CFBundleShortVersionString"];
 }
 
 - (NSString *)appName
 {
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *appName = [infoDictionary objectForKey:@"CFBundleDisplayName"];
-    return appName ?: [infoDictionary objectForKey:@"CFBundleName"];
+    NSDictionary *infoDictionary = [NSBundle mainBundle].infoDictionary;
+    NSString *appName = infoDictionary[@"CFBundleDisplayName"];
+    return appName ?: infoDictionary[@"CFBundleName"];
 }
 
 @end

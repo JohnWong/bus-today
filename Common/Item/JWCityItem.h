@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *cityId;
 @property (nonatomic, strong) NSString *cityName;
 
-- (NSDictionary *)toDictionary;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *toDictionary;
 
 + (NSArray *)arrayFromDictionary:(NSDictionary *)dict;
 

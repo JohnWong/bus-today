@@ -36,7 +36,7 @@
  */
 @property (nonatomic, assign) NSInteger order;
 
-- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order;
-- (NSDictionary *)toDictionary;
+- (instancetype)initWithLineId:(NSString *)lineId lineNumber:(NSString *)lineNumber from:(NSString *)from to:(NSString *)to stopName:(NSString *)stopName order:(NSInteger)order NS_DESIGNATED_INITIALIZER;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *toDictionary;
 
 @end

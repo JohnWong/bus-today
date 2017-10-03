@@ -22,7 +22,7 @@
 
 @property (nonatomic, weak) id<JWNavigationCenterDelegate> delegate;
 
-- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold;
+- (instancetype)initWithTitle:(NSString *)title isBold:(BOOL)isBold NS_DESIGNATED_INITIALIZER;
 - (void)setTitle:(NSString *)title;
 
 @end

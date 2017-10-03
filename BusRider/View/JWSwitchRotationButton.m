@@ -23,7 +23,7 @@
 #pragma mark setter
 - (void)setOn:(BOOL)on
 {
-    [super setOn:on];
+    super.on = on;
     [UIView animateWithDuration:0.3 animations:^{
         if (on) {
             self.imageView.transform = CGAffineTransformMakeRotation(M_PI);
