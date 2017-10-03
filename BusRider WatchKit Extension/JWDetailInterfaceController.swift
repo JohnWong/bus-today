@@ -75,11 +75,11 @@ class JWDetailInterfaceController: WKInterfaceController {
     
         self.lineLabel.setText(self.busInfoItem.lineNumber)
         self.updateLabel.setText(updateText)
-        self.stopLabel.setText("到达\(self.busInfoItem.currentStop)")
+        self.stopLabel.setText("到达\(self.busInfoItem.currentStop ?? "")")
         self.mainLabel.setAttributedText(mainText)
         self.fromLabel.setText(self.busInfoItem.from)
         self.toLabel.setText(self.busInfoItem.to)
-        self.timeLabel.setText("\(self.busInfoItem.firstTime)-\(self.busInfoItem.lastTime)")
+        self.timeLabel.setText("\(self.busInfoItem.firstTime ?? "")-\(self.busInfoItem.lastTime ?? "")")
     }
     
     @IBAction func sendToGlance() {

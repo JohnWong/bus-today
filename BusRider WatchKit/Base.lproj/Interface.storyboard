@@ -14,7 +14,7 @@
             <objects>
                 <controller title="今日公交" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
+                        <group width="1" alignment="left" layout="vertical" spacing="2" id="FAh-7t-PZI">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="oxp-5G-tkH">
                                     <items>
@@ -184,7 +184,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="acJ-0O-69N">
                             <items>
-                                <label alignment="left" text="--" id="10c-wS-wAT">
+                                <label alignment="left" text="--" minimumScaleFactor="0.5" id="10c-wS-wAT">
                                     <fontDescription key="font" type="system" pointSize="36"/>
                                 </label>
                                 <group width="1" alignment="left" layout="vertical" id="icA-TI-DWN">
@@ -260,11 +260,13 @@
                         <group width="1" height="60" alignment="left" verticalAlignment="bottom" id="YIE-Dl-je9">
                             <items>
                                 <button width="0.5" alignment="left" verticalAlignment="bottom" title="刷新" id="qUZ-3S-DdP">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="loadData" destination="j7a-Ob-4ZY" id="YXf-hi-lJu"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" alignment="right" verticalAlignment="bottom" title="换向" id="9EA-aS-83v">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="reverseDirection" destination="j7a-Ob-4ZY" id="vdS-VE-Mv4"/>
                                     </connections>
@@ -340,6 +342,7 @@
                         <group width="1" height="60" alignment="left" verticalAlignment="bottom" layout="vertical" id="VhL-ff-TAw">
                             <items>
                                 <button width="1" alignment="left" verticalAlignment="bottom" title="重新输入" id="inW-tX-5oI">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="openInputController" destination="QeM-wk-tak" id="F1F-Xk-Ip8"/>
                                     </connections>
@@ -360,7 +363,7 @@
             <objects>
                 <controller identifier="detailInterface" title="详情" hidesWhenLoading="NO" id="4ix-0Q-vfT" userLabel="详情" customClass="JWDetailInterfaceController" customModule="BusRider_WatchKit_Extension">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" spacing="2" id="8nf-bv-gW0">
+                        <group width="1" alignment="left" layout="vertical" spacing="2" id="8nf-bv-gW0">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" id="Vo1-Nn-sEB">
                                     <items>
@@ -375,7 +378,7 @@
                                 </label>
                                 <group width="1" alignment="left" id="B8h-yS-WLh">
                                     <items>
-                                        <label alignment="left" text="--" id="9LC-Y1-WCY">
+                                        <label alignment="left" text="--" minimumScaleFactor="0.5" id="9LC-Y1-WCY">
                                             <fontDescription key="font" type="system" pointSize="56"/>
                                         </label>
                                     </items>
@@ -388,6 +391,7 @@
                                     </items>
                                 </group>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="8"/>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="Ram-EJ-FI9">
                             <items>
@@ -430,11 +434,13 @@
                         <group width="1" height="60" alignment="left" verticalAlignment="bottom" id="vOP-Bn-V8m">
                             <items>
                                 <button width="0.5" alignment="left" verticalAlignment="bottom" title="刷新" id="7K6-ji-WAU">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="loadData" destination="4ix-0Q-vfT" id="ygi-aV-ZIt"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" alignment="left" verticalAlignment="bottom" title="发到首页" id="M1M-Qb-XXk">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="sendToGlance" destination="4ix-0Q-vfT" id="CuH-ET-nYQ"/>
                                     </connections>
@@ -469,7 +475,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1023" y="342"/>
+            <point key="canvasLocation" x="1023" y="345"/>
         </scene>
     </scenes>
 </document>
