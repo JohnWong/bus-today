@@ -1435,6 +1435,7 @@
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				JW_BUILD = 13;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1458,6 +1459,7 @@
 				GCC_PREFIX_HEADER = "BusRider/JWBusRider-Prefix.pch";
 				INFOPLIST_FILE = "BusRider/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				JW_BUILD = 13;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.johnwong.$(PRODUCT_NAME:rfc1034identifier)";
