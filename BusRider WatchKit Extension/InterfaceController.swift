@@ -66,7 +66,7 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
-    func reload() {
+    @objc func reload() {
         if let cityItem = JWUserDefaultsUtil.cityItem() {
             if !cityItem.cityName.isEmpty {
                 self.cityButton.setTitle(cityItem.cityName)
