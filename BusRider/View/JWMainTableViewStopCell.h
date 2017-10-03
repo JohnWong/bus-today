@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface JWMainTableViewCell : UITableViewCell
+@interface JWMainTableViewStopCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subTitle;
-@property (weak, nonatomic) IBOutlet UILabel *stopLabel;
 
 @end

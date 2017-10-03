@@ -10,7 +10,7 @@
 
 #define JWSuiteName @"group.johnwong.busrider"
 
-static NSString *const JWKeyCollectedLine = @"JWKeyCollectedLine";
+static NSString *const JWKeyCollectedItem = @"JWKeyCollectedItem";
 static NSString *const JWKeyTodayBusLine = @"JWKeyTodayBusLine";
 static NSString *const JWKeyCity = @"JWKeyCity";
 static NSString *const JWKeyPushSearchController = @"JWKeyPushSearchController";
@@ -94,7 +94,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
 
 + (void)addCollectItem:(JWCollectItem *)item
 {
-    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedItem];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSMutableArray *lineList = [[userDefaults itemForKey:key] mutableCopy];
@@ -116,9 +116,12 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
     }
 }
 
-+ (void)removeCollectItemWithLineId:(NSString *)lineId
++ (void)removeCollectItemForBlock:(BOOL (^)(JWCollectItem *item))block
 {
-    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    if (!block) {
+        return;
+    }
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedItem];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSArray *lineList = [userDefaults itemForKey:key];
@@ -127,7 +130,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
         }
         for (NSInteger i = lineList.count - 1; i >= 0; i--) {
             JWCollectItem *savedItem = lineList[i];
-            if ([savedItem.lineId isEqualToString:lineId]) {
+            if (block(savedItem)) {
                 NSMutableArray *mutableArray = [lineList mutableCopy];
                 [mutableArray removeObjectAtIndex:i];
                 lineList = mutableArray;
@@ -138,9 +141,24 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
     }
 }
 
-+ (JWCollectItem *)collectItemForLineId:(NSString *)lineId
++ (void)removeCollectItemWithLineId:(NSString *)lineId
 {
-    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    [self removeCollectItemForBlock:^BOOL(JWCollectItem *item) {
+        return item.itemType == JWCollectItemTypeLine && [item.lineId isEqualToString:lineId];
+    }];
+}
+
++ (void)removeCollectItemWithStopId:(NSString *)stopId
+{
+    [self removeCollectItemForBlock:^BOOL(JWCollectItem *item) {
+        return item.itemType == JWCollectItemTypeStop && [item.stopId isEqualToString:stopId];
+    }];
+}
+
++ (JWCollectItem *)collectItemForBlock:(BOOL (^)(JWCollectItem *item))block
+{
+    if (!block) return nil;
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedItem];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         NSArray *lineList = [userDefaults itemForKey:key];
@@ -148,7 +166,7 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
             return nil;
         } else {
             for (JWCollectItem *item in lineList) {
-                if ([item.lineId isEqualToString:lineId]) {
+                if (block(item)) {
                     return item;
                 }
             }
@@ -159,9 +177,23 @@ static NSString *const JWKeyCityListDate = @"JWKeyCityListDate";
     }
 }
 
++ (JWCollectItem *)collectItemForLineId:(NSString *)lineId
+{
+    return [self collectItemForBlock:^BOOL(JWCollectItem *item) {
+        return item.itemType == JWCollectItemTypeLine && [item.lineId isEqualToString:lineId];
+    }];
+}
+
++ (JWCollectItem *)collectItemForStopId:(NSString *)stopId
+{
+    return [self collectItemForBlock:^BOOL(JWCollectItem *item) {
+        return item.itemType == JWCollectItemTypeStop && [item.stopId isEqualToString:stopId];
+    }];
+}
+
 + (NSArray *)allCollectItems
 {
-    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedLine];
+    NSString *key = [JWUserDefaultsUtil combinedkey:JWKeyCollectedItem];
     if (key) {
         JWUserDefaultsUtil *userDefaults = [self groupUserDefaults];
         return [userDefaults itemForKey:key];

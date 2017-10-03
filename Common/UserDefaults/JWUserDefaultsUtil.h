@@ -25,7 +25,9 @@
 #pragma mark collect busline
 + (void)addCollectItem:(JWCollectItem *)item;
 + (JWCollectItem *)collectItemForLineId:(NSString *)lineId;
++ (JWCollectItem *)collectItemForStopId:(NSString *)stopId;
 + (void)removeCollectItemWithLineId:(NSString *)lineId;
++ (void)removeCollectItemWithStopId:(NSString *)stopId;
 /**
  *  返回所有收藏的线路信息
  *

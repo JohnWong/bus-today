@@ -14,7 +14,6 @@
 #import "JWCommonDefine.h"
 #import "NSObject+ValueForKey.h"
 
-#define JWSeguePushLineWithData     @"JWSeguePushLineWithData"
 #define JWSeguePushLineWithId       @"JWSeguePushLineWithId"
 #define JWSeguePushStopList         @"JWSeguePushStopList"
 #define JWSeguePushLineWithIdStop   @"JWSeguePushLineWithIdStop"

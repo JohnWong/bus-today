@@ -27,9 +27,11 @@
 #import "JWMainEmptyTableViewCell.h"
 #import "JWSessionManager.h"
 #import "JWNetworkUtility.h"
+#import "JWMainTableViewStopCell.h"
 #import <objc/runtime.h>
 
 #define JWCellIdMain @"JWCellIdMain"
+#define JWCellIdMainStop @"JWCellIdMainStop"
 #define JWCellIdEmpty @"JWCellIdEmpty"
 #define JWCellIdSearch @"JWCellIdSearch"
 
@@ -85,6 +87,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     [self.searchController.searchResultsTableView registerNib:[UINib nibWithNibName:@"JWSearchTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdSearch];
     self.tableView.backgroundColor = HEXCOLOR(0xefeff6);
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMain];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JWMainTableViewStopCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdMainStop];
     [self.tableView registerNib:[UINib nibWithNibName:@"JWMainEmptyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:JWCellIdEmpty];
     //    self.tableView.tableFooterView = [[UIView alloc] init];
     self.searchController.searchBar.showsScopeBar = YES;
@@ -191,11 +194,18 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 {
     if (tableView == self.tableView) {
         if (self.collectLineItem.count > 0) {
-            JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
             JWCollectItem *item = self.collectLineItem[indexPath.row];
-            cell.titleLabel.text = item.lineNumber;
-            cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
-            return cell;
+            if (item.itemType == JWCollectItemTypeLine) {
+                JWMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMain forIndexPath:indexPath];
+                cell.titleLabel.text = item.lineNumber;
+                cell.stopLabel.text = item.stopName;
+                cell.subTitle.text = [NSString stringWithFormat:@"%@-%@", item.from, item.to];
+                return cell;
+            } else {
+                JWMainTableViewStopCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdMainStop forIndexPath:indexPath];
+                cell.titleLabel.text = item.stopName;
+                return cell;
+            }
         } else {
             JWMainEmptyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWCellIdEmpty forIndexPath:indexPath];
             cell.titleLabel.text = @"未收藏公交线路";
@@ -252,8 +262,13 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     if (tableView == self.tableView) {
         if (self.collectLineItem.count > 0) {
             JWCollectItem *item = self.collectLineItem[indexPath.row];
-            self.selectedLineId = item.lineId;
-            [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
+            if (item.itemType == JWCollectItemTypeLine) {
+                self.selectedLineId = item.lineId;
+                [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
+            } else if (item.itemType == JWCollectItemTypeStop) {
+                self.selectedStop = [[JWSearchStopItem alloc] initWithStopId:item.stopId stopName:item.stopName];
+                [self performSegueWithIdentifier:JWSeguePushStopList sender:self];
+            }
         }
     } else {
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {

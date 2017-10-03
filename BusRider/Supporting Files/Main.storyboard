@@ -392,7 +392,6 @@
                         <outlet property="searchController" destination="nKC-wf-krp" id="c5I-Fu-0tr"/>
                         <outlet property="searchDisplayController" destination="nKC-wf-krp" id="jIR-sY-ykM"/>
                         <outlet property="tableView" destination="Xiu-d4-YcQ" id="GIE-Nk-Kzp"/>
-                        <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithData" id="CnQ-hM-Yt8"/>
                         <segue destination="wuS-za-bCw" kind="push" identifier="JWSeguePushStopList" id="IJF-i3-WQx"/>
                         <segue destination="TYM-DL-tKA" kind="push" identifier="JWSeguePushLineWithId" id="Juj-fM-HbG"/>
                     </connections>
@@ -675,6 +674,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="IJF-i3-WQx"/>
         <segue reference="fxV-yn-c05"/>
-        <segue reference="Juj-fM-HbG"/>
+        <segue reference="bKI-le-Ue2"/>
     </inferredMetricsTieBreakers>
 </document>

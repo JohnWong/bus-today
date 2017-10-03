@@ -15,6 +15,7 @@
 #import "JWStopLineTableViewCell.h"
 #import "JWBusLineViewController.h"
 #import "CBStoreHouseRefreshControl.h"
+#import "JWUserDefaultsUtil.h"
 
 #define JWCellIdStopLine @"JWCellIdStopLine"
 
@@ -39,6 +40,8 @@
 {
     [super viewDidLoad];
 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[JWUserDefaultsUtil collectItemForStopId:self.stopItem.stopId] ? @"已收藏" : @"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(collect:)];
+
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.title = self.stopItem.stopName;
 
@@ -57,6 +60,27 @@
                                                            internalAnimationFactor:1];
 
     [self loadRequest];
+}
+
+- (void)collect:(id)sender
+{
+    if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+        UIBarButtonItem *barButton = (UIBarButtonItem *)sender;
+
+        if ([JWUserDefaultsUtil collectItemForStopId:self.stopItem.stopId]) {
+            [JWUserDefaultsUtil removeCollectItemWithStopId:self.stopItem.stopId];
+            barButton.title = @"收藏";
+        } else {
+            [self saveCollectItem];
+            barButton.title = @"已收藏";
+        }
+    }
+}
+
+- (void)saveCollectItem
+{
+    JWCollectItem *collectItem = [[JWCollectItem alloc] initWithStopId:self.stopItem.stopId stopName:self.stopItem.stopName];
+    [JWUserDefaultsUtil addCollectItem:collectItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated

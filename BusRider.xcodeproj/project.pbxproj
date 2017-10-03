@@ -16,6 +16,9 @@
 		5204538A1A37340A002A8541 /* JWTodayIconRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520453821A37340A002A8541 /* JWTodayIconRefresh@2x.png */; };
 		5204538B1A37340A002A8541 /* JWBusCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 520453851A37340A002A8541 /* JWBusCardView.m */; };
 		520EB0271AB7BE6C00D8988C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520EB0261AB7BE6C00D8988C /* MessageUI.framework */; };
+		520EB8361F83D67A00A4CBAB /* JWMainTableViewStopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 520EB8341F83D67A00A4CBAB /* JWMainTableViewStopCell.m */; };
+		520EB8371F83D67A00A4CBAB /* JWMainTableViewStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520EB8351F83D67A00A4CBAB /* JWMainTableViewStopCell.xib */; };
+		520EB8391F83D7CF00A4CBAB /* JWIconCellStop-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 520EB8381F83D7CF00A4CBAB /* JWIconCellStop-38@2x.png */; };
 		52211A3D1A3819E600DE5352 /* JWButtonWithAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */; };
 		522564D41BE6115C00A91F68 /* JWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 522564D31BE6115C00A91F68 /* JWLog.m */; };
 		52257BEB1AB0A95A0002863B /* bus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52257BEA1AB0A95A0002863B /* bus.plist */; };
@@ -214,6 +217,10 @@
 		520453851A37340A002A8541 /* JWBusCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusCardView.m; sourceTree = "<group>"; };
 		520C5D741A391D9100ADAC8D /* JWColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWColorDefine.h; path = Today/View/JWColorDefine.h; sourceTree = SOURCE_ROOT; };
 		520EB0261AB7BE6C00D8988C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		520EB8331F83D67900A4CBAB /* JWMainTableViewStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTableViewStopCell.h; sourceTree = "<group>"; };
+		520EB8341F83D67A00A4CBAB /* JWMainTableViewStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTableViewStopCell.m; sourceTree = "<group>"; };
+		520EB8351F83D67A00A4CBAB /* JWMainTableViewStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWMainTableViewStopCell.xib; sourceTree = "<group>"; };
+		520EB8381F83D7CF00A4CBAB /* JWIconCellStop-38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconCellStop-38@2x.png"; sourceTree = "<group>"; };
 		52211A3B1A3819E600DE5352 /* JWButtonWithAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWButtonWithAnimation.h; sourceTree = "<group>"; };
 		52211A3C1A3819E600DE5352 /* JWButtonWithAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWButtonWithAnimation.m; sourceTree = "<group>"; };
 		522564D31BE6115C00A91F68 /* JWLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLog.m; sourceTree = "<group>"; };
@@ -592,18 +599,19 @@
 		52D091F11A53092600C5A957 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */,
 				52257BEA1AB0A95A0002863B /* bus.plist */,
-				522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */,
-				522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */,
+				52D091F21A53092600C5A957 /* JWIconBus@2x.png */,
 				522C4EAC1A6B3F2D00B4C1E9 /* JWIconBusThin@2x.png */,
-				52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */,
+				522C4EBA1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png */,
 				524F57261A5D93A800DFD0A7 /* JWIconCellBus@2x.png */,
+				520EB8381F83D7CF00A4CBAB /* JWIconCellStop-38@2x.png */,
+				52611DEC1AB8AB8600D8E0EC /* JWIconCellStop@2x.png */,
+				522C4EBB1A6CAB2700B4C1E9 /* JWIconCity@2x.png */,
+				52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */,
+				52FB0DED1A6957F8001AF0A8 /* JWIconExpand@2x.png */,
+				52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */,
 				525A1F711A5AA763006CE8BA /* JWIconTodayOff@2x.png */,
 				525A1F721A5AA763006CE8BA /* JWIconTodayOn@2x.png */,
-				52B8D5B71A57259E00B3DD5C /* JWIconExchange@2x.png */,
-				52B8D5B11A57120300B3DD5C /* JWIconRefresh@2x.png */,
-				52D091F21A53092600C5A957 /* JWIconBus@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -631,6 +639,9 @@
 		52EB7BFE1A3DF6CF00057723 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				520EB8331F83D67900A4CBAB /* JWMainTableViewStopCell.h */,
+				520EB8341F83D67A00A4CBAB /* JWMainTableViewStopCell.m */,
+				520EB8351F83D67A00A4CBAB /* JWMainTableViewStopCell.xib */,
 				52AAFBD81ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.h */,
 				52AAFBD91ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.m */,
 				52AAFBDA1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.xib */,
@@ -932,10 +943,12 @@
 				524F57271A5D93A800DFD0A7 /* JWIconCellBus@2x.png in Resources */,
 				522C4EBC1A6CAB2700B4C1E9 /* JWIconCellBus-38@2x.png in Resources */,
 				525A1F731A5AA763006CE8BA /* JWIconTodayOff@2x.png in Resources */,
+				520EB8391F83D7CF00A4CBAB /* JWIconCellStop-38@2x.png in Resources */,
 				52EB7C111A3DF73900057723 /* LaunchScreen.xib in Resources */,
 				525A1F741A5AA763006CE8BA /* JWIconTodayOn@2x.png in Resources */,
 				52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */,
 				52EB7C151A3DF75C00057723 /* Images.xcassets in Resources */,
+				520EB8371F83D67A00A4CBAB /* JWMainTableViewStopCell.xib in Resources */,
 				522C4EBD1A6CAB2700B4C1E9 /* JWIconCity@2x.png in Resources */,
 				52AAFBDC1ACAE8B700ACFEC8 /* JWMainEmptyTableViewCell.xib in Resources */,
 				5285585C1A62BB1B00898779 /* JWMainTableViewCell.xib in Resources */,
@@ -1158,6 +1171,7 @@
 				5285585B1A62BB1B00898779 /* JWMainTableViewCell.m in Sources */,
 				52FB0DEC1A694D0A001AF0A8 /* JWNavigationCenterView.m in Sources */,
 				525D1D991BFA1DF700AC93B3 /* JWSearchRequest.m in Sources */,
+				520EB8361F83D67A00A4CBAB /* JWMainTableViewStopCell.m in Sources */,
 				52AC0C391AF4CA3800F27EE1 /* JWSearchStopItem.m in Sources */,
 				524F57241A5D3A3A00DFD0A7 /* JWSearchTableViewCell.m in Sources */,
 				52B8D5BB1A57F12300B3DD5C /* JWSwitchButton.m in Sources */,
