@@ -15,12 +15,15 @@
 #import "JWUserDefaultsUtil.h"
 
 
-@interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate>
+@interface JWTodayViewController () <NCWidgetProviding, NSURLConnectionDataDelegate> {
+    NSInteger _currentIdx;
+}
 
 @property (weak, nonatomic) IBOutlet JWBusCardView *busCardView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
-@property (nonatomic, strong) NSString *lineId;
-@property (nonatomic, assign) NSInteger stopOrder;
+@property(nonatomic,strong)JWCollectItem *todayItem;
+@property(nonatomic,strong)NSArray<JWCollectItem *> *allCollectItems;
 
 @end
 
@@ -28,12 +31,45 @@
 @implementation JWTodayViewController
 
 #pragma mark lifecycle
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self requestLineInfo:nil];
+    _currentIdx = 0;
+    [self.allCollectItems enumerateObjectsUsingBlock:^(JWCollectItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isEqual:self.todayItem]) {
+            _currentIdx = idx;
+            *stop = YES;
+        }
+    }];
+    [self refreshPageIndex];
+    [self requestData];
 }
 
+- (void)requestData {
+    if (_currentIdx >= 0) {
+        JWCollectItem *currentItem = self.allCollectItems[_currentIdx];
+        [self requestLineInfoWithItem:currentItem handler:nil];
+    }
+}
+- (void)refreshPageIndex {
+    if (self.allCollectItems.count <= 1) {
+        [self.segmentControl setEnabled:NO forSegmentAtIndex:0];
+        [self.segmentControl setEnabled:NO forSegmentAtIndex:1];
+        return;
+    }
+    
+    if (_currentIdx == 0) {
+        [self.segmentControl setEnabled:NO forSegmentAtIndex:0];
+        [self.segmentControl setEnabled:YES forSegmentAtIndex:1];
+    }else if(_currentIdx == self.allCollectItems.count - 1){
+        [self.segmentControl setEnabled:YES forSegmentAtIndex:0];
+        [self.segmentControl setEnabled:NO forSegmentAtIndex:1];
+    }
+}
 
 #pragma mark NCWidgetProviding
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
@@ -41,24 +77,33 @@
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
-- (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler
+- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize
 {
-    [self requestLineInfo:completionHandler];
+    if (activeDisplayMode == NCWidgetDisplayModeCompact) {
+        self.preferredContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 110);
+    } else {
+        self.preferredContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 152);
+    }
 }
 
-- (void)requestLineInfo:(void (^)(NCUpdateResult))completionHandler
+- (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler
+{
+    [self requestData];
+}
+
+- (void)requestLineInfoWithItem:(JWCollectItem *)item handler:(void (^)(NCUpdateResult))completionHandler
 {
     [self.busCardView setLoadingView];
 
-    self.lineRequest.lineId = self.lineId; // @"0571-044-0";
-    self.lineRequest.targetOrder = self.stopOrder;
+    self.lineRequest.lineId = item.lineId; // @"0571-044-0";
+    self.lineRequest.targetOrder = item.order;
     __weak typeof(self) weakSelf = self;
     [self.lineRequest loadWithCompletion:^(NSDictionary *dict, NSError *error) {
         if (error) {
             [weakSelf.busCardView setErrorView:error.userInfo[NSLocalizedDescriptionKey]?:error.domain];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         } else {
-            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:self.stopOrder busInfo:dict];
+            JWBusInfoItem *busInfoItem = [[JWBusInfoItem alloc] initWithUserStopOrder:item.order busInfo:dict];
             [weakSelf.busCardView setItem:busInfoItem];
             if (completionHandler) completionHandler(NCUpdateResultNewData);
         }
@@ -74,30 +119,39 @@
     return _lineRequest;
 }
 
-- (NSString *)lineId
-{
-    if (!_lineId) {
-        JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-        if (todayItem) {
-            _lineId = todayItem.lineId;
-        }
+- (JWCollectItem *)todayItem {
+    if (_todayItem == nil){
+        _todayItem = [JWUserDefaultsUtil todayBusLine];
     }
-    return _lineId;
+    return _todayItem;
 }
 
-- (NSInteger)stopOrder
-{
-    if (_stopOrder <= 0) {
-        JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-        _stopOrder = todayItem.order;
+- (NSArray<JWCollectItem *> *)allCollectItems {
+    if (!_allCollectItems){
+        _allCollectItems = [JWUserDefaultsUtil allCollectItems];
     }
-    return _stopOrder;
+    return _allCollectItems;
 }
 
 #pragma mark action
+- (IBAction)pageChanged:(id)sender {
+    if (self.segmentControl.selectedSegmentIndex == 0) {
+        if (_currentIdx <= 0) {
+            return;
+        }
+        _currentIdx--;
+    }else if(self.segmentControl.selectedSegmentIndex == 1){
+        if (_currentIdx >= self.allCollectItems.count -1 ) {
+            return;
+        }
+        _currentIdx++;
+    }
+    [self refreshPageIndex];
+    [self refreshData:nil];
+}
 - (IBAction)refreshData:(id)sender
 {
-    [self requestLineInfo:nil];
+    [self requestData];
 }
 
 - (IBAction)goSettings:(id)sender
