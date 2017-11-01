@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (nonatomic, strong) JWLineRequest *lineRequest;
 @property(nonatomic,strong)JWCollectItem *todayItem;
-@property(nonatomic,strong)NSArray<JWCollectItem *> *allCollectItems;
+@property(nonatomic,strong)NSMutableArray<JWCollectItem *> *allCollectItems;
 
 @end
 
@@ -38,13 +38,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _currentIdx = 0;
-    [self.allCollectItems enumerateObjectsUsingBlock:^(JWCollectItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isEqual:self.todayItem]) {
-            _currentIdx = idx;
-            *stop = YES;
-        }
-    }];
+    if (self.allCollectItems.count == 0) {
+        _currentIdx = -1;
+    }else{
+        _currentIdx = 0;
+    }
     [self refreshPageIndex];
     [self requestData];
 }
@@ -126,9 +124,21 @@
     return _todayItem;
 }
 
-- (NSArray<JWCollectItem *> *)allCollectItems {
+- (NSMutableArray<JWCollectItem *> *)allCollectItems {
     if (!_allCollectItems){
-        _allCollectItems = [JWUserDefaultsUtil allCollectItems];
+        _allCollectItems = [NSMutableArray array];
+        if (self.todayItem) {
+            [_allCollectItems addObject:self.todayItem];
+        }
+        NSArray *array = [[JWUserDefaultsUtil allCollectItems] reverseObjectEnumerator].allObjects;
+        if (array) {
+            [array enumerateObjectsUsingBlock:^(JWCollectItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (obj.order > 0 &&
+                    (![obj.lineId isEqualToString:self.todayItem.lineId] || obj.order != self.todayItem.order)) {
+                    [_allCollectItems addObject:obj];
+                }
+            }];
+        }
     }
     return _allCollectItems;
 }
@@ -156,7 +166,13 @@
 
 - (IBAction)goSettings:(id)sender
 {
-    [self.extensionContext openURL:[NSURL URLWithString:@"jwapp://busrider"]
+    NSString *params = @"";
+    if (_currentIdx >= 0) {
+        JWCollectItem *item = self.allCollectItems[_currentIdx];
+        params = [NSString stringWithFormat:@"?lineId=%@",item.lineId];
+    }
+    
+    [self.extensionContext openURL:[NSURL URLWithString:[NSString stringWithFormat:@"jwapp://busrider%@",params]]
                  completionHandler:^(BOOL success) {
                      NSLog(@"open url result:%d",success);
                  }];
