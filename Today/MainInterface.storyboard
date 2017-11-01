@@ -5,7 +5,8 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,7 +24,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4v-YC-jXK" customClass="JWBusCardView">
@@ -254,23 +255,36 @@
                                     <outlet property="updateLabel" destination="Ab5-hZ-Zkw" id="6rS-7V-6bI"/>
                                 </connections>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-nZ-Mm9">
+                                <rect key="frame" x="24" y="116" width="272" height="29"/>
+                                <segments>
+                                    <segment title="上一条"/>
+                                    <segment title="下一条"/>
+                                </segments>
+                                <color key="tintColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="gzb-ZK-bcn"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="4Qw-nZ-Mm9" firstAttribute="top" secondItem="t4v-YC-jXK" secondAttribute="bottom" constant="6" id="0nQ-C9-zEr"/>
                             <constraint firstItem="t4v-YC-jXK" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="2DP-Gn-VkE"/>
+                            <constraint firstItem="4Qw-nZ-Mm9" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="8" id="EmW-I9-DP7"/>
                             <constraint firstItem="t4v-YC-jXK" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="I52-RD-Yao"/>
                             <constraint firstAttribute="trailing" secondItem="t4v-YC-jXK" secondAttribute="trailing" id="NBa-na-mrt"/>
-                            <constraint firstAttribute="bottom" secondItem="t4v-YC-jXK" secondAttribute="bottom" id="WaL-d6-Z4u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Qw-nZ-Mm9" secondAttribute="trailing" constant="8" id="b37-x6-vaD"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <value key="contentSizeForViewInPopover" type="size" width="320" height="172"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="110"/>
+                    <size key="freeformSize" width="320" height="148"/>
                     <connections>
                         <outlet property="busCardView" destination="t4v-YC-jXK" id="zbB-hD-HOh"/>
+                        <outlet property="segmentControl" destination="4Qw-nZ-Mm9" id="Zf1-bL-ecu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

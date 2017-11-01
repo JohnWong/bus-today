@@ -87,7 +87,11 @@
 - (void)setItemInternal:(JWBusInfoItem *)item
 {
     self.titleLabel.text = [NSString stringWithFormat:@"%@", item.lineNumber];
-    self.stationLabel.text = [NSString stringWithFormat:@"到达%@", item.currentStop];
+    if (item.currentStop) {
+        self.stationLabel.text = [NSString stringWithFormat:@"到达%@", item.currentStop];
+    }else{
+        self.stationLabel.text = @"未设置当前站点";
+    }
 
     self.fromLabel.text = item.from;
     self.toLabel.text = item.to;
