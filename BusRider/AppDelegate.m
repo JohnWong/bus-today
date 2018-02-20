@@ -75,6 +75,7 @@ static NSString *AppID = @"975022341";
         [navigationViewController popToRootViewControllerAnimated:YES];
         JWMainViewController *mainViewController = (JWMainViewController *)navigationViewController.topViewController;
         mainViewController.selectedLineId = todayItem.lineId;
+        mainViewController.selectedLineNumber = todayItem.lineNumber;
         [mainViewController performSegueWithIdentifier:JWSeguePushLineWithId sender:mainViewController];
     }
     return YES;

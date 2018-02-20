@@ -108,11 +108,6 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -308,7 +303,7 @@
 - (JWNavigationCenterView *)stopButtonItem
 {
     if (!_stopButtonItem) {
-        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:nil isBold:YES];
+        _stopButtonItem = [[JWNavigationCenterView alloc] initWithTitle:self.lineNumber isBold:YES];
         _stopButtonItem.delegate = self;
     }
     return _stopButtonItem;
@@ -362,9 +357,7 @@
             }
             [weakSelf updateBusInfo];
         }
-    } progress:^(CGFloat percent) {
-        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
-    }];
+    } progress:nil];
 }
 
 - (IBAction)revertDirection:(id)sender

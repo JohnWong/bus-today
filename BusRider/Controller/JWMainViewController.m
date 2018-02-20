@@ -129,6 +129,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         if ([segue.destinationViewController isKindOfClass:[JWBusLineViewController class]]) {
             JWBusLineViewController *busLineViewController = (JWBusLineViewController *)segue.destinationViewController;
             busLineViewController.lineId = self.selectedLineId;
+            busLineViewController.lineNumber = self.selectedLineNumber;
         }
     } else if ([segue.identifier isEqualToString:JWSeguePushStopList]) {
         if ([segue.destinationViewController isKindOfClass:[JWStopTableViewController class]]) {
@@ -248,6 +249,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
             JWCollectItem *item = self.collectLineItem[indexPath.row];
             if (item.itemType == JWCollectItemTypeLine) {
                 self.selectedLineId = item.lineId;
+                self.selectedLineNumber = item.lineNumber;
                 [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
             } else if (item.itemType == JWCollectItemTypeStop) {
                 self.selectedStop = [[JWSearchStopItem alloc] initWithStopId:item.stopId stopName:item.stopName];
@@ -258,6 +260,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
         if (indexPath.section == 0 && self.searchListItem.lineList.count > 0) {
             JWSearchLineItem *lineItem = self.searchListItem.lineList[indexPath.row];
             self.selectedLineId = lineItem.lineId;
+            self.selectedLineNumber = lineItem.lineNumber;
             [self performSegueWithIdentifier:JWSeguePushLineWithId sender:self];
         } else {
             self.selectedStop = self.searchListItem.stopList[indexPath.row];

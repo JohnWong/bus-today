@@ -16,4 +16,9 @@
  */
 @property (nonatomic, strong) NSString *selectedLineId;
 
+/**
+ *  Pass to JWBusLineViewController
+ */
+@property (nonatomic, strong) NSString *selectedLineNumber;
+
 @end

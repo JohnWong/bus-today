@@ -83,11 +83,6 @@
     [JWUserDefaultsUtil addCollectItem:collectItem];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -110,6 +105,7 @@
     if ([segue.identifier isEqualToString:JWSeguePushLineWithIdStop]) {
         JWBusLineViewController *lineViewController = segue.destinationViewController;
         lineViewController.lineId = self.selectedLineItem.lineId;
+        lineViewController.lineNumber = self.selectedLineItem.lineNumer;
         lineViewController.selectedStopId = self.stopItem.stopId;
     }
 }
@@ -187,9 +183,7 @@
             weakSelf.lineTypeList = [JWStopLineTypeItem arrayFromDictionary:dict];
             [weakSelf updateViews];
         }
-    } progress:^(CGFloat percent) {
-        [weakSelf.navigationController setSGProgressPercentage:percent andTitle:@"加载中..."];
-    }];
+    } progress:nil];
 }
 
 #pragma mark UIScrollViewDelegate

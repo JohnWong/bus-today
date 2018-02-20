@@ -19,6 +19,12 @@
  *  传过来的线路id
  */
 @property (nonatomic, strong) NSString *lineId;
+
+/**
+ *  传过来的线路名称
+ */
+@property (nonatomic, strong) NSString *lineNumber;
+
 /**
  *  换向时使用
  */
