@@ -109,7 +109,6 @@
 		52D091F31A53092600C5A957 /* JWIconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D091F21A53092600C5A957 /* JWIconBus@2x.png */; };
 		52D7000A1AF92FB3008A3C8C /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */; };
 		52D7000B1AF92FB3008A3C8C /* JWBusInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */; };
-		52D7672C1F7FFBE3006136AC /* JWNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */; };
 		52D7672F1F80E6AD006136AC /* NSObject+ValueForKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */; };
 		52EB7C041A3DF6CF00057723 /* JWOnePixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C001A3DF6CF00057723 /* JWOnePixelView.m */; };
 		52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB7C021A3DF6CF00057723 /* JWStopNameButton.m */; };
@@ -327,8 +326,6 @@
 		52D091F21A53092600C5A957 /* JWIconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JWIconBus@2x.png"; sourceTree = "<group>"; };
 		52D700081AF92FB3008A3C8C /* JWBusInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBusInfoItem.h; sourceTree = "<group>"; };
 		52D700091AF92FB3008A3C8C /* JWBusInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBusInfoItem.m; sourceTree = "<group>"; };
-		52D7672A1F7FFBE3006136AC /* JWNetworkUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWNetworkUtility.h; sourceTree = "<group>"; };
-		52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWNetworkUtility.m; sourceTree = "<group>"; };
 		52D7672D1F80E6AD006136AC /* NSObject+ValueForKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ValueForKey.h"; sourceTree = "<group>"; };
 		52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ValueForKey.m"; sourceTree = "<group>"; };
 		52EB7BFF1A3DF6CF00057723 /* JWOnePixelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWOnePixelView.h; sourceTree = "<group>"; };
@@ -628,8 +625,6 @@
 		52D767261F7FFBBC006136AC /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				52D7672A1F7FFBE3006136AC /* JWNetworkUtility.h */,
-				52D7672B1F7FFBE3006136AC /* JWNetworkUtility.m */,
 				52D7672D1F80E6AD006136AC /* NSObject+ValueForKey.h */,
 				52D7672E1F80E6AD006136AC /* NSObject+ValueForKey.m */,
 			);
@@ -1115,7 +1110,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BusRider/Pods-BusRider-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/Appirater/Appirater.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/Appirater/Appirater.bundle,
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1208,7 +1203,6 @@
 				5239C6C71AF680A8006E70D7 /* JWBusLineItem.m in Sources */,
 				52EB7C121A3DF73900057723 /* main.m in Sources */,
 				524F572E1A5E272F00DFD0A7 /* JWUserDefaultsUtil.m in Sources */,
-				52D7672C1F7FFBE3006136AC /* JWNetworkUtility.m in Sources */,
 				5239C6C81AF680AB006E70D7 /* JWLineItem.m in Sources */,
 				52EB7C181A3F248800057723 /* JWMainViewController.m in Sources */,
 				52EB7C051A3DF6CF00057723 /* JWStopNameButton.m in Sources */,
