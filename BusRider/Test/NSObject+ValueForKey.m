@@ -12,7 +12,7 @@
 
 @implementation NSObject (ValueForKey)
 
-- (nullable id)safeValueForKey:(NSString *)key
+- (nullable id)JW_safeValueForKey:(NSString *)key
 {
     if (key.length == 0) {
         return nil;

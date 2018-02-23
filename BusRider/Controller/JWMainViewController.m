@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 };
 
 
-@interface JWMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, JWNavigationCenterDelegate, UIScrollViewDelegate>
+@interface JWMainViewController () <UITableViewDataSource, UITableViewDelegate, JWNavigationCenterDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchBarHeight;
 @property (nonatomic, strong) JWSearchRequest *searchRequest;
@@ -310,7 +310,6 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     }
 }
 
-
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -323,20 +322,20 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     dispatch_async(dispatch_get_main_queue(), ^{
         UISearchBar *searchBar = self.searchController.searchBar;
         searchBar.height = self.searchBarHeight.constant;
-        UITextField *textField = [searchBar safeValueForKey:@"_searchField"];
+        UITextField *textField = [searchBar JW_safeValueForKey:@"_searchField"];
         if (textField) {
             textField.centerY = searchBar.height / 2;
         }
 
-        UIButton *cancelButton = [searchBar safeValueForKey:@"_cancelButton"];
+        UIButton *cancelButton = [searchBar JW_safeValueForKey:@"_cancelButton"];
         if (cancelButton) {
             cancelButton.centerY = searchBar.height / 2;
         }
 
-        UIView *containerView = [self.searchController safeValueForKey:@"_containerView"];
+        UIView *containerView = [self.searchController JW_safeValueForKey:@"_containerView"];
         if ([containerView isKindOfClass:NSClassFromString(@"UISearchDisplayControllerContainerView")]) {
-            UIView *topView = [containerView safeValueForKey:@"_topView"];
-            UIView *bottomView = [containerView safeValueForKey:@"_bottomView"];
+            UIView *topView = [containerView JW_safeValueForKey:@"_topView"];
+            UIView *bottomView = [containerView JW_safeValueForKey:@"_bottomView"];
             topView.top = searchBar.top;
             topView.height = searchBar.height;
             bottomView.top = topView.bottom;
@@ -345,12 +344,9 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
     });
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    NSString *searchText = searchBar.text;
-    if (searchText && searchText.length > 0) {
-        [self loadRequestWithKeyword:searchText showHUD:YES];
-    }
+    [self loadRequestWithKeyword:searchText showHUD:YES];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
@@ -448,6 +444,12 @@ typedef NS_ENUM(NSInteger, JWSearchResultType) {
 
 - (void)loadRequestWithKeyword:(NSString *)keyword showHUD:(BOOL)isShowHUD
 {
+    if (keyword.length == 0) {
+        self.searchListItem = nil;
+        [self.searchController.searchResultsTableView reloadData];
+        return;
+    }
+
     if (isShowHUD) {
         [JWViewUtil showProgress];
     }

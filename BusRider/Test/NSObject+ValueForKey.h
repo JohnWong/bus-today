@@ -11,6 +11,6 @@
 
 @interface NSObject (ValueForKey)
 
-- (nullable id)safeValueForKey:(NSString *_Nullable)key;
+- (nullable id)JW_safeValueForKey:(NSString *_Nullable)key;
 
 @end
