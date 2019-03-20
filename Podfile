@@ -17,7 +17,7 @@ target :BusRider do
 end
 
 target :Today do
-    platform :ios, '8.0'
+    platform :ios, '9.0'
     shared_pods
     pod 'UIViewAdditions'
 end

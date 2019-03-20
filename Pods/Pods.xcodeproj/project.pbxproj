@@ -8,157 +8,142 @@
 
 /* Begin PBXBuildFile section */
 		07756ECA9803273EAAF6DB275183A162 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B3DF2ED32D3A6702A4144DEA27249331 /* ru.lproj */; };
-		0847B16253B76E2AB59B5AD34A93D734 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85221C23501A553B6FD44B64F13A1F /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		078C2C7DCC122CC9757EC28E2EEB996C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		0CA23C45452268C1241C53D568AE6363 /* SGProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 833DBBB0B9230CCDFF4E7568D823686E /* SGProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CDBC298EEAADBF258B5124532CD4E10 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB8CFB1541317C7794D23CEB3F8C68E /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D1A5A450EAF468DCAE48DF72C32B429 /* STHTTPRequest2-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953D8F656C31B47A0322930242CA865 /* STHTTPRequest2-iOS-dummy.m */; };
 		0F8A10AC623A293229487AF1B41E887E /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 99C3C0B5F21AD69E5E0D58A51F6BFF68 /* he.lproj */; };
 		1683272137E5131D518EA5D67ECE1FA5 /* AHKActionSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2180BE4EE445DBBEF7C46799CF72F6A /* AHKActionSheet-dummy.m */; };
+		17B624C4A11430186789E5F770613E8C /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C086CB7929A4C021B52E1F7222134A58 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		186ED99BFF153594537AC18A1731F946 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEAF0749D508167D63C783E3E2CC45E /* UIImage+AHKAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1B619643D64F83E4150068D6E55CAB98 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5B87E28570F62F680F44278E002A3 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		187DB7E0C30B1CED9A4424B67FF5F6A7 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC555FE54B1D5D22BADB1B9F77D3FA21 /* SVIndefiniteAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1EDDD736D989EF50DFB6DE33A2A2EBE7 /* hy.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DF9BC5B0FFF4CC1FC0D334541AB88F31 /* hy.lproj */; };
 		23A1637F7BDE8500BC3934408645AD89 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12A8FC8D3F3DC8CCC9169125A4012E07 /* pl.lproj */; };
-		23DB801761D11DA2AFB93B964D639322 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85221C23501A553B6FD44B64F13A1F /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		24AA8EB2FBC7804A9F7AF154D9FDD044 /* STHTTPRequest2-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F66C68877A4514493A7C8967A31FB /* STHTTPRequest2-iOS8.0-dummy.m */; };
-		26420DEDC4E7034505909C92220DBC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
-		268FBF57CDDE608E57491F341AEEB8C6 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EFE0D092F0E10B301DFFBB5FB9F016BE /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FA722B363892B256F15BF7E03F5C98 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EFE0D092F0E10B301DFFBB5FB9F016BE /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28E2378584FD420E80BA719E07FE2435 /* UIImage+AHKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0B1953C089BB201C76EB371556684B /* UIImage+AHKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C07E3703772B21DDF007C6B67946898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		2CB4BBD84853D0F55A7AE6277F37E860 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A2927C773942138575F0633C3DFFA9 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2DFE1E89399A2652A10C0B42AAB1C2E4 /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B51078DA2E2D7161B05D64D020C584FD /* ko.lproj */; };
 		2E932F9BBD7BF344F9FADD9963BC3C66 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 335D251B15F53E90383C3C32857198C2 /* fr.lproj */; };
 		2FA7925AFE697C985667C42BE23B9E98 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C3C1F52BA42F3B66682D42B324349256 /* de.lproj */; };
 		31760C0F9FB5DB4F24CC4A976E0711EB /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3DD98E0D567089B1BFF9F20BBC9B0E2F /* nl.lproj */; };
-		363495406C2BD1173E0A0CA2E685DBD9 /* Pods-BusRider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 676370E44A962DF260AB3B6360661F01 /* Pods-BusRider-dummy.m */; };
-		39F3BDD5308830D231709F3865C8E517 /* SGNavigationProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55D30D3D967E327892E8B5ED38BC59 /* SGNavigationProgress-dummy.m */; };
-		3E8853578401034D25A39BF380E37A90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		371D65207566B4474C1523386AFA39EF /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F9EA4E842C9028EAA499F1744457CC5A /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4C830A821645E4E57BA0A12726D3D0 /* Pods-Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EE8B8514BB062F9E542B9EA0DFAF9 /* Pods-Today-dummy.m */; };
 		419928F1162EB3906E296D3496167F4B /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B34F158A66D87FBCBE65B1318B3838CE /* pt.lproj */; };
-		472F67AA933C4F120725E493B0EF357D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A2927C773942138575F0633C3DFFA9 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		47C3E92C21DF1A3418D9C4CF39DE02CE /* Pods-Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 499EE8B8514BB062F9E542B9EA0DFAF9 /* Pods-Today-dummy.m */; };
-		481E11260AA9812B16F07C23908ED58B /* STHTTPRequest2-iOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F74FE146AD8E691D468BE5D850792F3F /* STHTTPRequest2-iOS9.0-dummy.m */; };
-		4E3C05649FFD6AF94EEFAD7A4371E812 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = D197A5F54EE24E79CB2FBDFC65E6F48B /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E5510705E0A13027D0FD61461CB3B28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A4A93D59E381746BA009DB5A6B1B7 /* QuartzCore.framework */; };
+		45C73C1B0C97DE9DE99366965E658FAD /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C086CB7929A4C021B52E1F7222134A58 /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E24C58F1319052D49355BF751658EE5 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C0ADD81CE95C85C430F5DE2C231F07 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EEF3332952A01C18F4D0AF27E4B1C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 		51CB5878D83F680EDBABA1E88168FCAD /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FBA85748742DEE08B7EDC934166795 /* Appirater.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		546CFE0A8533EE09E3A83163A095039E /* UIViewAdditions-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B6F9220C08BF54107E9CC1D9E1CDB3 /* UIViewAdditions-iOS8.0-dummy.m */; };
+		582CE71856CD1F09D59A95996E1A5013 /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C8DD9E1BC7FC95349D3B31CD457B5C /* UINavigationController+SGProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5AFE1A3BC7A519A51C5A93AA2F58E90C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A4A93D59E381746BA009DB5A6B1B7 /* QuartzCore.framework */; };
 		5C4D13D784A003211A3E02E35E1B45AA /* BarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 032EA05E36309CE8A567DDED8C7DD2E6 /* BarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D72D0C87C6682ACC6EC0AC88CCAAE98 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85221C23501A553B6FD44B64F13A1F /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5EB18307C6447DD1900C115B923B73A4 /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE49BE1E59627B9988491B70A44FCD /* SGProgressView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5F484C1734668A9E5302E19B1804AFBB /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AF6C709671743E3D89CFA285CA281C8A /* cs.lproj */; };
-		624C0A3D0464C14C3DD5F6F4F56FFA5C /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE5A33EFDE46675D660CC0455E16F39 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636A39009EB7BA1F4016EA62554B9295 /* STHTTPRequest2-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF298E99E635D96767A8A1AAA5D4E2 /* STHTTPRequest2-watchOS-dummy.m */; };
 		64A9BF9124B9BDEA9DB34FAFC4DA332A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202B5A721545B4496DD504C1F6C7EA31 /* CFNetwork.framework */; };
-		65F6D0C5E060B7E3F0F5B352D5923882 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7262A339B9FAF31C8A217D92328F7CF4 /* SVProgressAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		66FDB39F86BD0B8C242622D86148E83D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 		6B669D178BF16C1B70D332ED1AD3883C /* Appirater.h in Headers */ = {isa = PBXBuildFile; fileRef = FE58897114384B8D195873A9CD3ACC7D /* Appirater.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BB20995940A41D276075E5A2C939DAF /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB8CFB1541317C7794D23CEB3F8C68E /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74151EB550AA1425760168BB21FF0FEC /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B503DFF0C9D5B8A0131A453D2A286BA6 /* th.lproj */; };
-		74C6CFBF2F018ADD9099BF64BAA37E03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
 		74EE798C4922B1D3C20DE658FA3CA0FA /* CBStoreHouseRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6144692E1DA50BC3118A831738CBF0 /* CBStoreHouseRefreshControl-dummy.m */; };
-		763342ED559ACE17C3DC8BFAE7E4AFFC /* SGProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 833DBBB0B9230CCDFF4E7568D823686E /* SGProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		750DC1D93F0623D14D2DFC355289B179 /* SGNavigationProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55D30D3D967E327892E8B5ED38BC59 /* SGNavigationProgress-dummy.m */; };
 		78147B682639F4807BD681EC34B7E585 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3EB159CA6800A90E20DE8BFD8A3386BA /* sv.lproj */; };
+		783B8F78D744BA87DCAD510612FC7F5C /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBB9BB5CFDDB16CBCAF44260B3ACBA /* SVProgressHUD-dummy.m */; };
 		7E14D53A204E9F2B706956640B395066 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FE535290008D920EFA75B3262C674765 /* it.lproj */; };
 		7F1F065433D83565E6098D13A50B44AE /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C44607F428E9AC6E8AEA550C8A97F1D9 /* zh-Hant.lproj */; };
+		81BD945E9638883B86217A7ED2B58C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
 		829A6A8AE4C46981D928AC31CCD1A7D3 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 141864DCBAC8D81D6483473BEF0E0DC3 /* ca.lproj */; };
 		838AA1F95D2B575C89AF84B5C611E8A2 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 96AE6E380842CB22CB7063759E0DB1E3 /* el.lproj */; };
 		85485F3A65C4366F8DD3922F8DC94D27 /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D0F1C64340EA2B460E56976B20EA0E9D /* ar.lproj */; };
+		8971A4453852CDDAFCC0026FC21821A4 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74292AC00074CB410F93657973E38BD5 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8BD03DC02B4EC2E1851DA196A859F141 /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F4237D9D2051939B57E8EA191DB8B5B4 /* fa.lproj */; };
 		8FC30C6C6CEA5649914F121EB493C74B /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F582C9F1587DB22D19E1A5BE72EE559B /* BarItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		941A670207E09275F75A3DF2891FB026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 		95322085CE93BB2318176C3785013AAE /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 52202BDDF6A20734CF886C165E9CA70C /* da.lproj */; };
 		95494A895AFC382804A9A06658C6EF0B /* CBStoreHouseRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B152D5E6A28778FBB0E0B13A4420A8 /* CBStoreHouseRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97C0DF02A8A7C16F9754A390F99F659B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 		9813D82C34C6DF74A8708A7690C5E134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
-		98B443A341D9A6B192A9855381ACD425 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EFE0D092F0E10B301DFFBB5FB9F016BE /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		990339DA1F2153DB06798564A07B852A /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C8DD9E1BC7FC95349D3B31CD457B5C /* UINavigationController+SGProgress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9860DFBE4FA4B5C3A8AB22810CAC1628 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 640BE89A398CACAD95FA94231BF37BEB /* SVRadialGradientLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9B920FB1BC0334569DF482B41AAACEB5 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 755B99FC81B1C73CD7146CA37805AC56 /* en.lproj */; };
 		9E19181541C142FAE0FA0F75642075D2 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 73449112602F744847FFFC6842ACE203 /* tr.lproj */; };
+		9EB9E3A32A25C4B2038D5964472F3F2A /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = D197A5F54EE24E79CB2FBDFC65E6F48B /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FBDF249769250D277934EAAEA4CDBD1 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D54B6E8F885AC11B4C616F4A20CB31 /* UIWindow+AHKAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FEEB7F494A0DE2A3BA30FDD3F3848CD /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8940018919050480D745996B3C07C5B1 /* ms.lproj */; };
-		A480F89F56442EFA9C46AA8B8121F028 /* STHTTPRequest2-watchOS2.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6EE1278EF5DA74CBDA98E1440F3F96 /* STHTTPRequest2-watchOS2.0-dummy.m */; };
 		A73260787C2364BDD7E489AB661EA5DE /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911167DCF876EBAA056E8E1DE809B7F /* AHKActionSheetViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A7677D098E259306559169941825D0EE /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7262A339B9FAF31C8A217D92328F7CF4 /* SVProgressAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A908AF5B410B065C6396A2918F9BC875 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BC88F095E2F7C41ECD91B0DF055C55E3 /* es.lproj */; };
-		ADD870EF42E483EAAAE128EFD77C760A /* UIViewAdditions-iOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 801AB8F5F94493F72DB4B5598CF1D76D /* UIViewAdditions-iOS9.0-dummy.m */; };
 		AF57B850F4C8DA64F3E901C14A20E9BB /* AppiraterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0385019F17944E4564F8B36434EC1524 /* AppiraterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1B12F7E22DEB5E22A84FB6FF4A6C637 /* UINavigationController+SGProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6C7EE92D7FB17A6D8FA91264B6BE0B /* UINavigationController+SGProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B34608CD697F333367B62B701BD62678 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
-		B47F8254D7A8920A9C2A9033B1AE9F5F /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C0ADD81CE95C85C430F5DE2C231F07 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46B4BA403F406199EB1AB6D95400545 /* Pods-BusRider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 676370E44A962DF260AB3B6360661F01 /* Pods-BusRider-dummy.m */; };
 		B58C5FF92A315F055170DC4E9C855D39 /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 462106144FC770C3D3E248B2D64EE277 /* ro.lproj */; };
-		B64EBC8CC1B7B9CA46C7A6D1014D12E7 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 640BE89A398CACAD95FA94231BF37BEB /* SVRadialGradientLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B89D21D9CA4BE36279B4A721558D1551 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEBB9BB5CFDDB16CBCAF44260B3ACBA /* SVProgressHUD-dummy.m */; };
 		B93DA57C34638AE5C594C70F4E258322 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E04D375E7E0774FC59D4C6BD8581D6 /* SystemConfiguration.framework */; };
 		B9654A9C72C7F913C5C753D7565E49AF /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 89341CB9185ED47E806633DABBD5342D /* nb.lproj */; };
-		BDE775B23BB1EF1F80B81CA7290EFE94 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5B87E28570F62F680F44278E002A3 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C0B467BF25025125D2241201B2CE4D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 		C12D862BFB7595EA8167AEB314CBB293 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 68B56E0FCDC2107690AC00B1644F4118 /* fi.lproj */; };
-		C1ADF415D64384E3497513CB3522F6BC /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F5ADE812FD4A35683B9FD9A523BCC1 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C265FB5FCC04EE6AFEA5A921A00C8BF2 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49E54E1D418DB9D95A536D617909D4 /* Pods-BusRider WatchKit Extension-dummy.m */; };
+		C3E0F00C53B36838721802700FF36504 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A4A93D59E381746BA009DB5A6B1B7 /* QuartzCore.framework */; };
 		C6A09F1ADC98B2703246CB44323B8517 /* Appirater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B96F10DD2815E8F1B4EDCD7DDB3D3 /* Appirater-dummy.m */; };
 		C92A4DA2A22F3B55CCF34407DCE7CEFA /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 81029982F234A6F9044A8625C78974FD /* ja.lproj */; };
 		CABBECB9FED9FF1F1C7C253B98ED8491 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A3AF87CB1C42D124EF6135C27E89BA51 /* id.lproj */; };
 		CBA775264C540A932757B967021AF61F /* AHKActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5814F99C0A2B59F302D903C157D997EC /* AHKActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC8871CF65502C572FB7C43ECB896B03 /* UIView+RSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE5A33EFDE46675D660CC0455E16F39 /* UIView+RSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCDE204A4914E036A4B7DA89586F4C43 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9E4C3B8C3FD243D5C0295F1D6B54193 /* zh-Hans.lproj */; };
 		CD4CECD58355824D17F63BE79DD46D26 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B97C7F0ADF88334E3F876520B00E1589 /* pt-BR.lproj */; };
 		D7DFAE2EE7CB9DB0414BEA36AF3932B9 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549ECDB136B16CA57BBFA19BE71C014 /* AHKActionSheet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9A45F3F1E4305642F3773AB0F26DF71 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AC8BDACB2361D572C318797DFA436CDC /* uk.lproj */; };
 		DB888F64925E7F7186407CF8DC89A395 /* AHKActionSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E493239F7FB52EF4F3124565B501BA /* AHKActionSheetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC5048A9E78B44E901B8083EA9CBA139 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
 		DCA4DD6255D98129F784D75CA8CE33E5 /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C9CCBDDC287C8DFF0F11EA90158D7 /* CBStoreHouseRefreshControl.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DCEB99920E16612B3FE7ECF48C8724C4 /* UIWindow+AHKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D16D00CC1C897ECA9CA77BDD3BE9926C /* UIWindow+AHKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE789386EA9792F221B500C2D000218B /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C016568915B8FA3631DA5A77952B0CAC /* vi.lproj */; };
-		E2D981FF9DC85B135D16F96744BE785E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
-		EBE088E96438055F51C62F1179A09172 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC555FE54B1D5D22BADB1B9F77D3FA21 /* SVIndefiniteAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EDFA33FA1286E3B7ACFE659978A63822 /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE49BE1E59627B9988491B70A44FCD /* SGProgressView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E176170F15952A098D2AAE215D03A2D0 /* UIViewAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F978F185A32EF9D3E52F67B4B273C6CF /* UIViewAdditions-dummy.m */; };
+		E26CD170D8DC1D9FEFC346045F676C85 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49E54E1D418DB9D95A536D617909D4 /* Pods-BusRider WatchKit Extension-dummy.m */; };
+		E48F6AB95EACC6476F59326BBF107572 /* UIView+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 594949A4A62D6BAE1D4208C2066FA868 /* UIView+RSAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB613EB8F7D1C7E0D7B443F0D0BE0146 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		EB90E681DE7DEA02C833785D7E14D025 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74292AC00074CB410F93657973E38BD5 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EE91752E84B28E00378E7AA3D14BE411 /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7EA195459E294F753A0EBD27EC8AAB01 /* hu.lproj */; };
 		EF44C1880D8D2CD941E04C115791B400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
-		F10308EFE19F37F4462F1DB2B7C4B923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
 		F1CDE17AC2C031B1E6211B09EBE4E4BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		F2FA07855030B5A57BACAD332CB28442 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F5ADE812FD4A35683B9FD9A523BCC1 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3341C1196F97E2D95B401EE3CE95F24 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5340E8B0853FDE4427DC13B626B72F5A /* sk.lproj */; };
-		FE7CE4BBF455077B433DA6F6F3D740C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
+		F7A8ACBFB0D4B7BB37E024A8BAE7A2AD /* UINavigationController+SGProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6C7EE92D7FB17A6D8FA91264B6BE0B /* UINavigationController+SGProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F99E7A1072B36D30FB2BEA89607E2DD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		06097CA4A4DC5F219573EEE0B959B00D /* PBXContainerItemProxy */ = {
+		033F3FB5632C5646CFE73B67CEC92335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBBC8921BA1356CA84C7AE46DBCDDC17;
+			remoteInfo = Appirater;
+		};
+		15870EB93CD1CAFDD123BD13D5C6DA73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B231EB5A5FA8993225632F45BB06C7F2;
+			remoteInfo = SVProgressHUD;
+		};
+		43807444A856749974CCAB13E743690E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9775AD5E89AB9ED768D540D95C398D5;
+			remoteInfo = SGNavigationProgress;
+		};
+		4E1551B30EFC4D430CE4C3B314F25D99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6AF5962108EC6C6AFE87B5D754B7B3FB;
 			remoteInfo = CBStoreHouseRefreshControl;
 		};
-		08029FDDA139A5F3CAE11C5C9A1017E7 /* PBXContainerItemProxy */ = {
+		6E1A275CDB9524048D0612E4C410DEEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D6F9DBFCF274B43B1FE3BC3567984BA8;
-			remoteInfo = AHKActionSheet;
+			remoteGlobalIDString = 1B932288783BC25377C75B32B0F75F3B;
+			remoteInfo = UIViewAdditions;
 		};
-		0E1BE0945CBE6F1D123A34DBD6FBD21A /* PBXContainerItemProxy */ = {
+		ADCA62143A65E7FBB12130393BB98132 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BFB6511CC7716185B7391791734F324C;
-			remoteInfo = "STHTTPRequest2-iOS8.0";
-		};
-		26DE01AD10A861D04D76887EDE84E655 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B0BFE5E7105646C8F7040C31A269053;
-			remoteInfo = "UIViewAdditions-iOS9.0";
-		};
-		300305D5F58A22C2919ABBB55CA94012 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 564054B1648AA891A6D442AD13BE7179;
-			remoteInfo = "STHTTPRequest2-watchOS2.0";
-		};
-		78132A809AAEFA3F92491330DF6CD426 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 80AB56539DFC3DEB9D4AF11F0240640E;
-			remoteInfo = "STHTTPRequest2-iOS9.0";
-		};
-		835A9785BFE4348AB1B9206F53F8AB0A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CBBC8921BA1356CA84C7AE46DBCDDC17;
-			remoteInfo = Appirater;
+			remoteGlobalIDString = AF156FDC1B17C7719BBC69392FA67E31;
+			remoteInfo = "STHTTPRequest2-iOS";
 		};
 		B34F04D4F736261CC4241571A90DF175 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -167,26 +152,33 @@
 			remoteGlobalIDString = DF880A7BBC8CC3F13B3C8A1B5D0F5FC3;
 			remoteInfo = "Appirater-Appirater";
 		};
-		D7C9CE203E5A3BD8A5F78F776DBFB25D /* PBXContainerItemProxy */ = {
+		B454B87C01F7601720C86F4F21656B79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 74EC996E9EE2BC8400DC07314C626C50;
-			remoteInfo = SVProgressHUD;
+			remoteGlobalIDString = 37489491A913071A12AFE8A4FC0570A4;
+			remoteInfo = "STHTTPRequest2-watchOS";
 		};
-		F83BC59AF2C2B8344B1CA696AA7789BC /* PBXContainerItemProxy */ = {
+		C4696BED06DF216140A949FE80D5F233 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5973C5696DC5AA76B5BF85D141E0096F;
-			remoteInfo = "UIViewAdditions-iOS8.0";
+			remoteGlobalIDString = D6F9DBFCF274B43B1FE3BC3567984BA8;
+			remoteInfo = AHKActionSheet;
 		};
-		FFDD18D2F90915D4DC711F2748FF1124 /* PBXContainerItemProxy */ = {
+		E3555AE2A62A430C70F1FA51BADAE877 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E91E7E094BA1A2220F1E46A1EDD488CE;
-			remoteInfo = SGNavigationProgress;
+			remoteGlobalIDString = AF156FDC1B17C7719BBC69392FA67E31;
+			remoteInfo = "STHTTPRequest2-iOS";
+		};
+		F497C7BA1587CD9E600ADC1721F3253A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B932288783BC25377C75B32B0F75F3B;
+			remoteInfo = UIViewAdditions;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -194,64 +186,60 @@
 		00773E65E5D37F0BE56328210AC7CA97 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		032EA05E36309CE8A567DDED8C7DD2E6 /* BarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarItem.h; path = Class/BarItem.h; sourceTree = "<group>"; };
 		0385019F17944E4564F8B36434EC1524 /* AppiraterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		0E216196D0FE1893F3DC4B19F38516B4 /* STHTTPRequest2-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "STHTTPRequest2-watchOS.xcconfig"; path = "../STHTTPRequest2-watchOS/STHTTPRequest2-watchOS.xcconfig"; sourceTree = "<group>"; };
 		12A8FC8D3F3DC8CCC9169125A4012E07 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
 		141864DCBAC8D81D6483473BEF0E0DC3 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
-		1675C112940BC4F0364E405C174A62CE /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BusRider.a"; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		179C064BD0E1A681A8C2CECD59573283 /* UIViewAdditions-iOS8.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIViewAdditions-iOS8.0.xcconfig"; sourceTree = "<group>"; };
+		199DE18291869D8F7751D14452FB7CA7 /* libAHKActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAHKActionSheet.a; path = libAHKActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7CBCA9846245310CE1A8B4F85DAD5C /* Pods-BusRider-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-resources.sh"; sourceTree = "<group>"; };
-		1C7F66C68877A4514493A7C8967A31FB /* STHTTPRequest2-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STHTTPRequest2-iOS8.0-dummy.m"; sourceTree = "<group>"; };
-		1D85221C23501A553B6FD44B64F13A1F /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STHTTPRequest.m; path = STHTTPRequest2/STHTTPRequest.m; sourceTree = "<group>"; };
 		1EB8CFB1541317C7794D23CEB3F8C68E /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		1F8B96F10DD2815E8F1B4EDCD7DDB3D3 /* Appirater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Appirater-dummy.m"; sourceTree = "<group>"; };
 		202B5A721545B4496DD504C1F6C7EA31 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		227C9CCBDDC287C8DFF0F11EA90158D7 /* CBStoreHouseRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBStoreHouseRefreshControl.m; path = Class/CBStoreHouseRefreshControl.m; sourceTree = "<group>"; };
 		26FBA85748742DEE08B7EDC934166795 /* Appirater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		28CC77B92AD20C174A9F6F89B8E2EA90 /* Pods-BusRider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.debug.xcconfig"; sourceTree = "<group>"; };
-		2964AC34075BEACC1ED67D28FF61BDB7 /* libSTHTTPRequest2-iOS9.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSTHTTPRequest2-iOS9.0.a"; path = "libSTHTTPRequest2-iOS9.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB8864D0D09D66D301D81483788C179 /* libAppirater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAppirater.a; path = libAppirater.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6C7EE92D7FB17A6D8FA91264B6BE0B /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+SGProgress.h"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
 		2D93A1CCE6A0E6F7F3D359C5BFD6FA7A /* Pods-Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		2F55D30D3D967E327892E8B5ED38BC59 /* SGNavigationProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SGNavigationProgress-dummy.m"; sourceTree = "<group>"; };
 		335D251B15F53E90383C3C32857198C2 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
 		36317A594A7D0DE0A49394ED36C8438E /* AHKActionSheet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHKActionSheet.xcconfig; sourceTree = "<group>"; };
+		3BBFD4D0AA660BCD4374D11F3EBBDB13 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Today.a"; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD98E0D567089B1BFF9F20BBC9B0E2F /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
 		3EB159CA6800A90E20DE8BFD8A3386BA /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
-		3ED5B87E28570F62F680F44278E002A3 /* UIView+RSAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+RSAdditions.m"; path = "UIViewAdditions/Classes/UIView+RSAdditions.m"; sourceTree = "<group>"; };
 		4208FD2A80FF0D5C9527E7D2BE74384C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		43C8DD9E1BC7FC95349D3B31CD457B5C /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+SGProgress.m"; path = "SGNavigationProgress/UINavigationController+SGProgress/UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
 		44B78F18053CDFEC315EA6E12F749EFD /* Appirater-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-prefix.pch"; sourceTree = "<group>"; };
+		4518B179D9D167396B30CCF3304D0885 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSVProgressHUD.a; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		458DE08454A89F0AA31FE3D33418D3C7 /* Pods-BusRider WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		45BF719D1ABE26603BCE2A187F54D626 /* UIViewAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIViewAdditions.xcconfig; sourceTree = "<group>"; };
 		462106144FC770C3D3E248B2D64EE277 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ro.lproj; sourceTree = "<group>"; };
 		4911167DCF876EBAA056E8E1DE809B7F /* AHKActionSheetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AHKActionSheetViewController.m; path = Classes/AHKActionSheetViewController.m; sourceTree = "<group>"; };
 		499EE8B8514BB062F9E542B9EA0DFAF9 /* Pods-Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Today-dummy.m"; sourceTree = "<group>"; };
-		4E6EE1278EF5DA74CBDA98E1440F3F96 /* STHTTPRequest2-watchOS2.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "STHTTPRequest2-watchOS2.0-dummy.m"; path = "../STHTTPRequest2-watchOS2.0/STHTTPRequest2-watchOS2.0-dummy.m"; sourceTree = "<group>"; };
 		52202BDDF6A20734CF886C165E9CA70C /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
-		52B6F9220C08BF54107E9CC1D9E1CDB3 /* UIViewAdditions-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewAdditions-iOS8.0-dummy.m"; sourceTree = "<group>"; };
+		52CB27914ADDFB87AF00F2484E9355AD /* STHTTPRequest2-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STHTTPRequest2-iOS-prefix.pch"; sourceTree = "<group>"; };
 		5340E8B0853FDE4427DC13B626B72F5A /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
 		5549ECDB136B16CA57BBFA19BE71C014 /* AHKActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AHKActionSheet.m; path = Classes/AHKActionSheet.m; sourceTree = "<group>"; };
 		55C0ADD81CE95C85C430F5DE2C231F07 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		56E04D375E7E0774FC59D4C6BD8581D6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		5814F99C0A2B59F302D903C157D997EC /* AHKActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AHKActionSheet.h; path = Classes/AHKActionSheet.h; sourceTree = "<group>"; };
+		594949A4A62D6BAE1D4208C2066FA868 /* UIView+RSAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+RSAdditions.m"; path = "UIViewAdditions/Classes/UIView+RSAdditions.m"; sourceTree = "<group>"; };
+		59517BCA0C904B13CA7D63CBFDC86885 /* libSTHTTPRequest2-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSTHTTPRequest2-iOS.a"; path = "libSTHTTPRequest2-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0B1953C089BB201C76EB371556684B /* UIImage+AHKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AHKAdditions.h"; path = "Classes/UIImage+AHKAdditions.h"; sourceTree = "<group>"; };
-		628650BA45C1BBA2BEA694BCE3A3641A /* UIViewAdditions-iOS9.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewAdditions-iOS9.0-prefix.pch"; path = "../UIViewAdditions-iOS9.0/UIViewAdditions-iOS9.0-prefix.pch"; sourceTree = "<group>"; };
 		640BE89A398CACAD95FA94231BF37BEB /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		6410CF9E8BE291C236D0C4C0037C2F05 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BusRider WatchKit Extension.a"; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6528FD26C882B3D9D3B8ECF248A37C5F /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		6596F5B179E0CA0BE5F9D73C57E165CD /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		676370E44A962DF260AB3B6360661F01 /* Pods-BusRider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider-dummy.m"; sourceTree = "<group>"; };
 		68B56E0FCDC2107690AC00B1644F4118 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fi.lproj; sourceTree = "<group>"; };
 		68DCC7E9F727547E317FD5AB0EAD03D4 /* AHKActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHKActionSheet-prefix.pch"; sourceTree = "<group>"; };
-		69DED6F62121B81FCD97B7EC457D77B0 /* STHTTPRequest2-iOS9.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "STHTTPRequest2-iOS9.0-prefix.pch"; path = "../STHTTPRequest2-iOS9.0/STHTTPRequest2-iOS9.0-prefix.pch"; sourceTree = "<group>"; };
-		6C8437804969C8A1A867DB449FCB2EEA /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSVProgressHUD.a; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FBC82871F0CA07F376945E8AF3E3B2E /* libCBStoreHouseRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCBStoreHouseRefreshControl.a; path = libCBStoreHouseRefreshControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7213831A025E9AB0D73F49C319F86FCD /* libSGNavigationProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSGNavigationProgress.a; path = libSGNavigationProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1449FB202363FB79FB6ED0BF793609 /* libSGNavigationProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSGNavigationProgress.a; path = libSGNavigationProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7262A339B9FAF31C8A217D92328F7CF4 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
 		73449112602F744847FFFC6842ACE203 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
+		74292AC00074CB410F93657973E38BD5 /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STHTTPRequest.m; path = STHTTPRequest2/STHTTPRequest.m; sourceTree = "<group>"; };
 		752FD9B97195F4B63D7C3879EF1FCF27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		755B99FC81B1C73CD7146CA37805AC56 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
+		7729C47E78ACF458819E8BBA75DE10A1 /* libPods-BusRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BusRider.a"; path = "libPods-BusRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA195459E294F753A0EBD27EC8AAB01 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
-		801AB8F5F94493F72DB4B5598CF1D76D /* UIViewAdditions-iOS9.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewAdditions-iOS9.0-dummy.m"; path = "../UIViewAdditions-iOS9.0/UIViewAdditions-iOS9.0-dummy.m"; sourceTree = "<group>"; };
 		81029982F234A6F9044A8625C78974FD /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
-		832320A3BEB5A76A5356E6EDC5242FCE /* STHTTPRequest2-iOS9.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "STHTTPRequest2-iOS9.0.xcconfig"; path = "../STHTTPRequest2-iOS9.0/STHTTPRequest2-iOS9.0.xcconfig"; sourceTree = "<group>"; };
 		833DBBB0B9230CCDFF4E7568D823686E /* SGProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SGProgressView.h; path = "SGNavigationProgress/UINavigationController+SGProgress/SGProgressView.h"; sourceTree = "<group>"; };
 		83BFA387F75B8F5FD2F35200D57C57A7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		853009022134C80A87E538F753F3E5BA /* CBStoreHouseRefreshControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBStoreHouseRefreshControl.xcconfig; sourceTree = "<group>"; };
@@ -263,91 +251,95 @@
 		8D1467E08358B41C34576E1833524DD7 /* Pods-BusRider WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
 		924B223AFD0F11965903668142D31496 /* Pods-Today-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Today-acknowledgements.markdown"; sourceTree = "<group>"; };
 		931214B0AA089E0ECE1324608ADE7E52 /* SGNavigationProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SGNavigationProgress.xcconfig; sourceTree = "<group>"; };
+		932164DD0E3F106A57880484766503D8 /* libCBStoreHouseRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCBStoreHouseRefreshControl.a; path = libCBStoreHouseRefreshControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96AE6E380842CB22CB7063759E0DB1E3 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = el.lproj; sourceTree = "<group>"; };
-		99051D9BB38EDC3DFAAEA94BA4173E07 /* UIViewAdditions-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewAdditions-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
+		9953D8F656C31B47A0322930242CA865 /* STHTTPRequest2-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STHTTPRequest2-iOS-dummy.m"; sourceTree = "<group>"; };
 		99C3C0B5F21AD69E5E0D58A51F6BFF68 /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = he.lproj; sourceTree = "<group>"; };
 		9A8CA5525A1B7C8CF5C108DF360A74E8 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		9CDF298E99E635D96767A8A1AAA5D4E2 /* STHTTPRequest2-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "STHTTPRequest2-watchOS-dummy.m"; path = "../STHTTPRequest2-watchOS/STHTTPRequest2-watchOS-dummy.m"; sourceTree = "<group>"; };
 		A2F04435B1A9D8CB5541A1488B8067EA /* Pods-BusRider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider.release.xcconfig"; sourceTree = "<group>"; };
 		A3AF87CB1C42D124EF6135C27E89BA51 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = id.lproj; sourceTree = "<group>"; };
 		A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A4BC80333150DA204ED7BB10F1BBDE28 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "RevealServer-11/iOS/RevealServer.framework"; sourceTree = "<group>"; };
-		A85AB82E60A2608FC80A7C748461D3AF /* libUIViewAdditions-iOS8.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUIViewAdditions-iOS8.0.a"; path = "libUIViewAdditions-iOS8.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E9076FE3D3E4635CA4436A8E4AACD0 /* libAppirater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAppirater.a; path = libAppirater.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC11CAD896785E8DE046021160BECC3 /* UIViewAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewAdditions-prefix.pch"; sourceTree = "<group>"; };
 		ABEAF0749D508167D63C783E3E2CC45E /* UIImage+AHKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AHKAdditions.m"; path = "Classes/UIImage+AHKAdditions.m"; sourceTree = "<group>"; };
 		AC8BDACB2361D572C318797DFA436CDC /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = uk.lproj; sourceTree = "<group>"; };
-		ADE5A33EFDE46675D660CC0455E16F39 /* UIView+RSAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+RSAdditions.h"; path = "UIViewAdditions/Classes/UIView+RSAdditions.h"; sourceTree = "<group>"; };
+		AE017F0E4E54E6A4F3DCF692919E8C10 /* libUIViewAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libUIViewAdditions.a; path = libUIViewAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE36E585E1BDED30C9F8C486FB8B633B /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
-		AEE790B6F60CBFF73DE2CF45BF14A964 /* STHTTPRequest2-watchOS2.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "STHTTPRequest2-watchOS2.0-prefix.pch"; path = "../STHTTPRequest2-watchOS2.0/STHTTPRequest2-watchOS2.0-prefix.pch"; sourceTree = "<group>"; };
-		AEF6FEF84263A23CA9F23BC7F7F592A0 /* STHTTPRequest2-watchOS2.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "STHTTPRequest2-watchOS2.0.xcconfig"; path = "../STHTTPRequest2-watchOS2.0/STHTTPRequest2-watchOS2.0.xcconfig"; sourceTree = "<group>"; };
 		AF6C709671743E3D89CFA285CA281C8A /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
+		AFB9FBFF9EF031435524C5CB86817FE1 /* STHTTPRequest2-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "STHTTPRequest2-iOS.xcconfig"; sourceTree = "<group>"; };
 		B34F158A66D87FBCBE65B1318B3838CE /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
 		B3A120FE87497DE5FF5DC5D7CAC325AC /* SGNavigationProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SGNavigationProgress-prefix.pch"; sourceTree = "<group>"; };
 		B3DF2ED32D3A6702A4144DEA27249331 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
 		B503DFF0C9D5B8A0131A453D2A286BA6 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = th.lproj; sourceTree = "<group>"; };
 		B51078DA2E2D7161B05D64D020C584FD /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
-		B6238F227748768A4BF853EB80BB8F48 /* libSTHTTPRequest2-iOS8.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSTHTTPRequest2-iOS8.0.a"; path = "libSTHTTPRequest2-iOS8.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94A4A93D59E381746BA009DB5A6B1B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B97C7F0ADF88334E3F876520B00E1589 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "pt-BR.lproj"; sourceTree = "<group>"; };
 		BC88F095E2F7C41ECD91B0DF055C55E3 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
 		BD92B46366B9F69B7A2C5F022B7AA017 /* Pods-BusRider WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C016568915B8FA3631DA5A77952B0CAC /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = vi.lproj; sourceTree = "<group>"; };
+		C086CB7929A4C021B52E1F7222134A58 /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STHTTPRequest.h; path = STHTTPRequest2/STHTTPRequest.h; sourceTree = "<group>"; };
 		C2B152D5E6A28778FBB0E0B13A4420A8 /* CBStoreHouseRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBStoreHouseRefreshControl.h; path = Class/CBStoreHouseRefreshControl.h; sourceTree = "<group>"; };
 		C392DDC5BB33C0A302D3CCC610A2DB89 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
-		C3B55D3F074211AD4168682A2E1F8513 /* STHTTPRequest2-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STHTTPRequest2-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
 		C3C1F52BA42F3B66682D42B324349256 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
 		C44607F428E9AC6E8AEA550C8A97F1D9 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hant.lproj"; sourceTree = "<group>"; };
 		C47C21B0CB476FB90F609D26B4029214 /* Pods-Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Today-resources.sh"; sourceTree = "<group>"; };
 		C5DA78EF0F7EF52275E72FC24F36CAFE /* Pods-BusRider WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		C8240D88C1A0A6BFEAC6A4A5BD535466 /* Pods-BusRider-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider-frameworks.sh"; sourceTree = "<group>"; };
 		C9EEA7C4A6B9AF0808F516993BD82E3D /* Pods-BusRider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusRider-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CA85FF8F0248C0DEF6BA2671FCBDD9FF /* libSTHTTPRequest2-watchOS2.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSTHTTPRequest2-watchOS2.0.a"; path = "libSTHTTPRequest2-watchOS2.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF5DAED1F1C153B75C12189ADC780D8 /* Appirater.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Appirater.xcconfig; sourceTree = "<group>"; };
 		CB6CC8B5CC8E4D82C872786D2DD87517 /* Pods-BusRider WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusRider WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		CCEBB9BB5CFDDB16CBCAF44260B3ACBA /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		CE10F732EB8820B55D16F8F4CB0463CB /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
-		D06CFAD8988F8374438D72DB9C4E030B /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Appirater.bundle; path = Appirater.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DF90480AB40B3C50C7AC7BA4E6A656 /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Appirater.bundle; path = Appirater.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F1C64340EA2B460E56976B20EA0E9D /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ar.lproj; sourceTree = "<group>"; };
 		D16D00CC1C897ECA9CA77BDD3BE9926C /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+AHKAdditions.h"; path = "Classes/UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
 		D197A5F54EE24E79CB2FBDFC65E6F48B /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		D2180BE4EE445DBBEF7C46799CF72F6A /* AHKActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHKActionSheet-dummy.m"; sourceTree = "<group>"; };
-		D3F6313042A0D2AEF27EE48609A85621 /* STHTTPRequest2-iOS8.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "STHTTPRequest2-iOS8.0.xcconfig"; sourceTree = "<group>"; };
+		D54D560AF8C8F2DE7943A8E8F4180571 /* libSTHTTPRequest2-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSTHTTPRequest2-watchOS.a"; path = "libSTHTTPRequest2-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B8028A1A0F582DC4DFB53D82C0746D /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		D61D517466C6CA61940F84C5BD0FEFE8 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		D6E493239F7FB52EF4F3124565B501BA /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AHKActionSheetViewController.h; path = Classes/AHKActionSheetViewController.h; sourceTree = "<group>"; };
-		D7D9FEC05190ADA780EA0F8E1CE08AF3 /* libPods-BusRider WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BusRider WatchKit Extension.a"; path = "libPods-BusRider WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FDC272F3C66DA31DDABF5EB127E0B9 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
-		D9A59AF3E0DB71EC33B0C54D61AFDFE4 /* UIViewAdditions-iOS9.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "UIViewAdditions-iOS9.0.xcconfig"; path = "../UIViewAdditions-iOS9.0/UIViewAdditions-iOS9.0.xcconfig"; sourceTree = "<group>"; };
-		DE2498F0165C9CC733DE470AC7AD591A /* libUIViewAdditions-iOS9.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUIViewAdditions-iOS9.0.a"; path = "libUIViewAdditions-iOS9.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9BC5B0FFF4CC1FC0D334541AB88F31 /* hy.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hy.lproj; sourceTree = "<group>"; };
 		E12F171B0DCA948F060EC9D68CE0ECFD /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		E4F1692DB4D809C4E62420051B5BFD66 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		E65F0F5B1739B40DC942F1BAE88FDF93 /* STHTTPRequest2-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "STHTTPRequest2-watchOS-prefix.pch"; path = "../STHTTPRequest2-watchOS/STHTTPRequest2-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		E6D54B6E8F885AC11B4C616F4A20CB31 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+AHKAdditions.m"; path = "Classes/UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
 		EB6144692E1DA50BC3118A831738CBF0 /* CBStoreHouseRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CBStoreHouseRefreshControl-dummy.m"; sourceTree = "<group>"; };
 		EB7C089595F303B163AD4C752367462B /* Pods-BusRider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusRider-acknowledgements.plist"; sourceTree = "<group>"; };
 		EC555FE54B1D5D22BADB1B9F77D3FA21 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		EF49E54E1D418DB9D95A536D617909D4 /* Pods-BusRider WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusRider WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		EF7E06F4F32B31D7DD00EC44DBBF3BFA /* Pods-BusRider WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusRider WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
-		EFE0D092F0E10B301DFFBB5FB9F016BE /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STHTTPRequest.h; path = STHTTPRequest2/STHTTPRequest.h; sourceTree = "<group>"; };
 		F4237D9D2051939B57E8EA191DB8B5B4 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fa.lproj; sourceTree = "<group>"; };
 		F582C9F1587DB22D19E1A5BE72EE559B /* BarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarItem.m; path = Class/BarItem.m; sourceTree = "<group>"; };
 		F622CC5E7C34DBBA46A8A201949909F0 /* ResourceBundle-Appirater-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Appirater-Info.plist"; sourceTree = "<group>"; };
 		F6492F95855958342BC2B3A349A33B89 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 		F6529EAE2C7192ABBC512EC7ECE11B3A /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
-		F74FE146AD8E691D468BE5D850792F3F /* STHTTPRequest2-iOS9.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "STHTTPRequest2-iOS9.0-dummy.m"; path = "../STHTTPRequest2-iOS9.0/STHTTPRequest2-iOS9.0-dummy.m"; sourceTree = "<group>"; };
-		F76BF66FAF772A74B4530CB66C43A3BD /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Today.a"; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F817DE261829A331BD560796AC808B01 /* libAHKActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAHKActionSheet.a; path = libAHKActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F978F185A32EF9D3E52F67B4B273C6CF /* UIViewAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewAdditions-dummy.m"; sourceTree = "<group>"; };
 		F9E4C3B8C3FD243D5C0295F1D6B54193 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
+		F9EA4E842C9028EAA499F1744457CC5A /* UIView+RSAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+RSAdditions.h"; path = "UIViewAdditions/Classes/UIView+RSAdditions.h"; sourceTree = "<group>"; };
 		FE535290008D920EFA75B3262C674765 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
 		FE58897114384B8D195873A9CD3ACC7D /* Appirater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		FF57182F724457FA5D5F418A314CF30C /* CBStoreHouseRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBStoreHouseRefreshControl-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06940867C9AF0D7C9DFFCAACF3E6020C /* Frameworks */ = {
+		055DE3D484553D98AFC834D7D9C4352D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D981FF9DC85B135D16F96744BE785E /* Foundation.framework in Frameworks */,
+				66FDB39F86BD0B8C242622D86148E83D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1026DDD616AF43C82F8091887D618FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				941A670207E09275F75A3DF2891FB026 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,22 +349,6 @@
 			files = (
 				EF44C1880D8D2CD941E04C115791B400 /* Foundation.framework in Frameworks */,
 				5AFE1A3BC7A519A51C5A93AA2F58E90C /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49E1F42B0638A942F1EBE43433E26538 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F10308EFE19F37F4462F1DB2B7C4B923 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4BB19FBD4709F61D2F432A5521353F72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26420DEDC4E7034505909C92220DBC4A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,52 +370,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EBA45F24509D7514FBBC9E6D3140EDC /* Frameworks */ = {
+		6C54DEFF8EEA8ADB1F238AC923D7E5EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C07E3703772B21DDF007C6B67946898 /* Foundation.framework in Frameworks */,
+				EB613EB8F7D1C7E0D7B443F0D0BE0146 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7598B4262D2D1248B274F238DEED8941 /* Frameworks */ = {
+		77DD7B066A697B7FD24961444324B4A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C6CFBF2F018ADD9099BF64BAA37E03 /* Foundation.framework in Frameworks */,
+				DC5048A9E78B44E901B8083EA9CBA139 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5E0A82B0329147FB9BFD18336B92B97 /* Frameworks */ = {
+		9A0DCB23FB29CC264BA2345DABBFE98B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8853578401034D25A39BF380E37A90 /* Foundation.framework in Frameworks */,
+				4EEF3332952A01C18F4D0AF27E4B1C64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5F598AE0BCD5F5C8D5B6F06259417FB /* Frameworks */ = {
+		9BF947BF36D17627655CB8C1E072655C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B467BF25025125D2241201B2CE4D47 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BCD827B0F3CC8D2F722F90B8F73FCEFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B34608CD697F333367B62B701BD62678 /* Foundation.framework in Frameworks */,
-				4E5510705E0A13027D0FD61461CB3B28 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D52E5FA870BF3751D7D33D3D3BD83F39 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				97C0DF02A8A7C16F9754A390F99F659B /* Foundation.framework in Frameworks */,
+				F99E7A1072B36D30FB2BEA89607E2DD4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,11 +409,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F73825E5DE416857CEFEA3991B089AFB /* Frameworks */ = {
+		D9E5E61BC2BD419830901CBF95D7CA03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7CE4BBF455077B433DA6F6F3D740C8 /* Foundation.framework in Frameworks */,
+				81BD945E9638883B86217A7ED2B58C19 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD41CAAAD311D1D2A8B4E06D59930FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078C2C7DCC122CC9757EC28E2EEB996C /* Foundation.framework in Frameworks */,
+				C3E0F00C53B36838721802700FF36504 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +508,20 @@
 			path = "Target Support Files/Pods-Today";
 			sourceTree = "<group>";
 		};
+		1F03D09C5D953D295BA50C5D9318E07D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9FBFF9EF031435524C5CB86817FE1 /* STHTTPRequest2-iOS.xcconfig */,
+				9953D8F656C31B47A0322930242CA865 /* STHTTPRequest2-iOS-dummy.m */,
+				52CB27914ADDFB87AF00F2484E9355AD /* STHTTPRequest2-iOS-prefix.pch */,
+				0E216196D0FE1893F3DC4B19F38516B4 /* STHTTPRequest2-watchOS.xcconfig */,
+				9CDF298E99E635D96767A8A1AAA5D4E2 /* STHTTPRequest2-watchOS-dummy.m */,
+				E65F0F5B1739B40DC942F1BAE88FDF93 /* STHTTPRequest2-watchOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/STHTTPRequest2-iOS";
+			sourceTree = "<group>";
+		};
 		2A54955FBDCCF82CF39B4A991D003B19 /* AHKActionSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,17 +560,6 @@
 			path = SGNavigationProgress;
 			sourceTree = "<group>";
 		};
-		4BB026BC662281552F7822FCD3016D79 /* STHTTPRequest2 */ = {
-			isa = PBXGroup;
-			children = (
-				EFE0D092F0E10B301DFFBB5FB9F016BE /* STHTTPRequest.h */,
-				1D85221C23501A553B6FD44B64F13A1F /* STHTTPRequest.m */,
-				6665741E09D20C3438240F00D4EFC333 /* Support Files */,
-			);
-			name = STHTTPRequest2;
-			path = STHTTPRequest2;
-			sourceTree = "<group>";
-		};
 		4C4E0313C9FBF71117519B0E7A1E05EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,21 +596,23 @@
 			path = Crashlytics;
 			sourceTree = "<group>";
 		};
-		6665741E09D20C3438240F00D4EFC333 /* Support Files */ = {
+		61265740D77E8B168D048CF379AE18D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3F6313042A0D2AEF27EE48609A85621 /* STHTTPRequest2-iOS8.0.xcconfig */,
-				1C7F66C68877A4514493A7C8967A31FB /* STHTTPRequest2-iOS8.0-dummy.m */,
-				C3B55D3F074211AD4168682A2E1F8513 /* STHTTPRequest2-iOS8.0-prefix.pch */,
-				832320A3BEB5A76A5356E6EDC5242FCE /* STHTTPRequest2-iOS9.0.xcconfig */,
-				F74FE146AD8E691D468BE5D850792F3F /* STHTTPRequest2-iOS9.0-dummy.m */,
-				69DED6F62121B81FCD97B7EC457D77B0 /* STHTTPRequest2-iOS9.0-prefix.pch */,
-				AEF6FEF84263A23CA9F23BC7F7F592A0 /* STHTTPRequest2-watchOS2.0.xcconfig */,
-				4E6EE1278EF5DA74CBDA98E1440F3F96 /* STHTTPRequest2-watchOS2.0-dummy.m */,
-				AEE790B6F60CBFF73DE2CF45BF14A964 /* STHTTPRequest2-watchOS2.0-prefix.pch */,
+				D0DF90480AB40B3C50C7AC7BA4E6A656 /* Appirater.bundle */,
+				199DE18291869D8F7751D14452FB7CA7 /* libAHKActionSheet.a */,
+				A4E9076FE3D3E4635CA4436A8E4AACD0 /* libAppirater.a */,
+				932164DD0E3F106A57880484766503D8 /* libCBStoreHouseRefreshControl.a */,
+				7729C47E78ACF458819E8BBA75DE10A1 /* libPods-BusRider.a */,
+				6410CF9E8BE291C236D0C4C0037C2F05 /* libPods-BusRider WatchKit Extension.a */,
+				3BBFD4D0AA660BCD4374D11F3EBBDB13 /* libPods-Today.a */,
+				6D1449FB202363FB79FB6ED0BF793609 /* libSGNavigationProgress.a */,
+				59517BCA0C904B13CA7D63CBFDC86885 /* libSTHTTPRequest2-iOS.a */,
+				D54D560AF8C8F2DE7943A8E8F4180571 /* libSTHTTPRequest2-watchOS.a */,
+				4518B179D9D167396B30CCF3304D0885 /* libSVProgressHUD.a */,
+				AE017F0E4E54E6A4F3DCF692919E8C10 /* libUIViewAdditions.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/STHTTPRequest2-iOS8.0";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6942A0A7EF1D1C4EAD6DE05674CCC4C4 /* Appirater */ = {
@@ -693,7 +666,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				763F9A3BADCDBA5433E7A4316FF3721C /* Frameworks */,
 				E1DB2133E2241D0DA84DB945D40DE84F /* Pods */,
-				A83DC31F3197AFEA7A99F7042FE84D6F /* Products */,
+				61265740D77E8B168D048CF379AE18D5 /* Products */,
 				AAC0C7072E55F0B837EAED27684FE32C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -706,39 +679,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		96A7638D2E7DDFA431D1563F20C93DF3 /* Support Files */ = {
+		9D6B826E8DC8E5AE80B2FA4BA4395768 /* STHTTPRequest2 */ = {
 			isa = PBXGroup;
 			children = (
-				179C064BD0E1A681A8C2CECD59573283 /* UIViewAdditions-iOS8.0.xcconfig */,
-				52B6F9220C08BF54107E9CC1D9E1CDB3 /* UIViewAdditions-iOS8.0-dummy.m */,
-				99051D9BB38EDC3DFAAEA94BA4173E07 /* UIViewAdditions-iOS8.0-prefix.pch */,
-				D9A59AF3E0DB71EC33B0C54D61AFDFE4 /* UIViewAdditions-iOS9.0.xcconfig */,
-				801AB8F5F94493F72DB4B5598CF1D76D /* UIViewAdditions-iOS9.0-dummy.m */,
-				628650BA45C1BBA2BEA694BCE3A3641A /* UIViewAdditions-iOS9.0-prefix.pch */,
+				C086CB7929A4C021B52E1F7222134A58 /* STHTTPRequest.h */,
+				74292AC00074CB410F93657973E38BD5 /* STHTTPRequest.m */,
+				1F03D09C5D953D295BA50C5D9318E07D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UIViewAdditions-iOS8.0";
-			sourceTree = "<group>";
-		};
-		A83DC31F3197AFEA7A99F7042FE84D6F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D06CFAD8988F8374438D72DB9C4E030B /* Appirater.bundle */,
-				F817DE261829A331BD560796AC808B01 /* libAHKActionSheet.a */,
-				2CB8864D0D09D66D301D81483788C179 /* libAppirater.a */,
-				6FBC82871F0CA07F376945E8AF3E3B2E /* libCBStoreHouseRefreshControl.a */,
-				1675C112940BC4F0364E405C174A62CE /* libPods-BusRider.a */,
-				D7D9FEC05190ADA780EA0F8E1CE08AF3 /* libPods-BusRider WatchKit Extension.a */,
-				F76BF66FAF772A74B4530CB66C43A3BD /* libPods-Today.a */,
-				7213831A025E9AB0D73F49C319F86FCD /* libSGNavigationProgress.a */,
-				B6238F227748768A4BF853EB80BB8F48 /* libSTHTTPRequest2-iOS8.0.a */,
-				2964AC34075BEACC1ED67D28FF61BDB7 /* libSTHTTPRequest2-iOS9.0.a */,
-				CA85FF8F0248C0DEF6BA2671FCBDD9FF /* libSTHTTPRequest2-watchOS2.0.a */,
-				6C8437804969C8A1A867DB449FCB2EEA /* libSVProgressHUD.a */,
-				A85AB82E60A2608FC80A7C748461D3AF /* libUIViewAdditions-iOS8.0.a */,
-				DE2498F0165C9CC733DE470AC7AD591A /* libUIViewAdditions-iOS9.0.a */,
-			);
-			name = Products;
+			name = STHTTPRequest2;
+			path = STHTTPRequest2;
 			sourceTree = "<group>";
 		};
 		AAC0C7072E55F0B837EAED27684FE32C /* Targets Support Files */ = {
@@ -819,6 +768,17 @@
 			path = "Reveal-SDK";
 			sourceTree = "<group>";
 		};
+		DBAD745B11E12A81B97470075AC3640A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45BF719D1ABE26603BCE2A187F54D626 /* UIViewAdditions.xcconfig */,
+				F978F185A32EF9D3E52F67B4B273C6CF /* UIViewAdditions-dummy.m */,
+				ABC11CAD896785E8DE046021160BECC3 /* UIViewAdditions-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIViewAdditions";
+			sourceTree = "<group>";
+		};
 		E079A1A347B4FB523287B15698C523F2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,11 +800,22 @@
 				C2EF5412D91872EE097C0189775EC5BE /* Fabric */,
 				DA8D6ECFDAEECF244A093E907DC8814D /* Reveal-SDK */,
 				49AD80D585EF1B3B383F449D5C8186FB /* SGNavigationProgress */,
-				4BB026BC662281552F7822FCD3016D79 /* STHTTPRequest2 */,
+				9D6B826E8DC8E5AE80B2FA4BA4395768 /* STHTTPRequest2 */,
 				EDAA23D9BE01523B8F9BEAAC30C6BF35 /* SVProgressHUD */,
-				F65384EAA3E8B190633A84F89767F041 /* UIViewAdditions */,
+				E21F45244EFEB2F210CC0A44BD25407F /* UIViewAdditions */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E21F45244EFEB2F210CC0A44BD25407F /* UIViewAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				F9EA4E842C9028EAA499F1744457CC5A /* UIView+RSAdditions.h */,
+				594949A4A62D6BAE1D4208C2066FA868 /* UIView+RSAdditions.m */,
+				DBAD745B11E12A81B97470075AC3640A /* Support Files */,
+			);
+			name = UIViewAdditions;
+			path = UIViewAdditions;
 			sourceTree = "<group>";
 		};
 		EDAA23D9BE01523B8F9BEAAC30C6BF35 /* SVProgressHUD */ = {
@@ -873,52 +844,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		F65384EAA3E8B190633A84F89767F041 /* UIViewAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				ADE5A33EFDE46675D660CC0455E16F39 /* UIView+RSAdditions.h */,
-				3ED5B87E28570F62F680F44278E002A3 /* UIView+RSAdditions.m */,
-				96A7638D2E7DDFA431D1563F20C93DF3 /* Support Files */,
-			);
-			name = UIViewAdditions;
-			path = UIViewAdditions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		01B7E23BBB9ACA897C80CA635BBB4C7A /* Headers */ = {
+		31D37D183A1E0A7300A4CEFC32FC7805 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8871CF65502C572FB7C43ECB896B03 /* UIView+RSAdditions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C0473B93807089EB49C638301E2B4A7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				624C0A3D0464C14C3DD5F6F4F56FFA5C /* UIView+RSAdditions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C5D2E501300A9B2F1B0763EE6343213 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1ADF415D64384E3497513CB3522F6BC /* SVIndefiniteAnimatedView.h in Headers */,
-				4E3C05649FFD6AF94EEFAD7A4371E812 /* SVProgressAnimatedView.h in Headers */,
-				6BB20995940A41D276075E5A2C939DAF /* SVProgressHUD.h in Headers */,
-				B47F8254D7A8920A9C2A9033B1AE9F5F /* SVRadialGradientLayer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38A4AED01FA811023398E3180338F90A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98B443A341D9A6B192A9855381ACD425 /* STHTTPRequest.h in Headers */,
+				F2FA07855030B5A57BACAD332CB28442 /* SVIndefiniteAnimatedView.h in Headers */,
+				9EB9E3A32A25C4B2038D5964472F3F2A /* SVProgressAnimatedView.h in Headers */,
+				0CDBC298EEAADBF258B5124532CD4E10 /* SVProgressHUD.h in Headers */,
+				4E24C58F1319052D49355BF751658EE5 /* SVRadialGradientLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,14 +864,6 @@
 			files = (
 				6B669D178BF16C1B70D332ED1AD3883C /* Appirater.h in Headers */,
 				AF57B850F4C8DA64F3E901C14A20E9BB /* AppiraterDelegate.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62BBB91ABDC5B8809F3A7D99048A1C1F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				268FBF57CDDE608E57491F341AEEB8C6 /* STHTTPRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,20 +878,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C046039C46D10756AD5D8E5E3425D9D9 /* Headers */ = {
+		7B71BE2DFFDD9A60B744A1EE4EBB10AC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FA722B363892B256F15BF7E03F5C98 /* STHTTPRequest.h in Headers */,
+				371D65207566B4474C1523386AFA39EF /* UIView+RSAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1993DB3EB32507108991052D7EB2F39 /* Headers */ = {
+		8786DCEF022DB95A7FFDC095AF9CED31 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763342ED559ACE17C3DC8BFAE7E4AFFC /* SGProgressView.h in Headers */,
-				B1B12F7E22DEB5E22A84FB6FF4A6C637 /* UINavigationController+SGProgress.h in Headers */,
+				45C73C1B0C97DE9DE99366965E658FAD /* STHTTPRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25FD445D6DACF694A6FF50C7E40746C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CA23C45452268C1241C53D568AE6363 /* SGProgressView.h in Headers */,
+				F7A8ACBFB0D4B7BB37E024A8BAE7A2AD /* UINavigationController+SGProgress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C82A7BEF9FECD5A25BA503E8CA2AAC56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B624C4A11430186789E5F770613E8C /* STHTTPRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,78 +923,38 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		11476C786614DB874CCFF11C5A6E2E5B /* Pods-BusRider */ = {
+		1B932288783BC25377C75B32B0F75F3B /* UIViewAdditions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A2429796B2B1DFB089B21A2B113CC60 /* Build configuration list for PBXNativeTarget "Pods-BusRider" */;
+			buildConfigurationList = 52539FAF4A0E465516C20184796C8FCB /* Build configuration list for PBXNativeTarget "UIViewAdditions" */;
 			buildPhases = (
-				F0CCE132372AD5BF84C59AAAFEF31AFE /* Sources */,
-				F73825E5DE416857CEFEA3991B089AFB /* Frameworks */,
+				62B1F9656A3AAFDD945132E31C211A5E /* Sources */,
+				6C54DEFF8EEA8ADB1F238AC923D7E5EA /* Frameworks */,
+				7B71BE2DFFDD9A60B744A1EE4EBB10AC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				02914D1A02E837E1B4D7C5E4CE376B12 /* PBXTargetDependency */,
-				E03BF5B13172D3CA550F1F609403A070 /* PBXTargetDependency */,
-				603F5F3ED94EF28D365AF4856325181E /* PBXTargetDependency */,
-				BC626A0C96C8962BF425082F3E9F0157 /* PBXTargetDependency */,
-				3DD5387DE74EA649A193E4E3DA36C626 /* PBXTargetDependency */,
-				25C845FDD6379F88BAE6407C013D1F44 /* PBXTargetDependency */,
-				0B42ED68CCAD1F7CCE156BD8CFD60763 /* PBXTargetDependency */,
 			);
-			name = "Pods-BusRider";
-			productName = "Pods-BusRider";
-			productReference = 1675C112940BC4F0364E405C174A62CE /* libPods-BusRider.a */;
+			name = UIViewAdditions;
+			productName = UIViewAdditions;
+			productReference = AE017F0E4E54E6A4F3DCF692919E8C10 /* libUIViewAdditions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		1C032A8CF6FFDB30CF8EFF018188B2FA /* Pods-BusRider WatchKit Extension */ = {
+		37489491A913071A12AFE8A4FC0570A4 /* STHTTPRequest2-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD209460F64F71A7256EEB9CB11E6C18 /* Build configuration list for PBXNativeTarget "Pods-BusRider WatchKit Extension" */;
+			buildConfigurationList = 7D7FB0F805A6DBF4A23728275FA45459 /* Build configuration list for PBXNativeTarget "STHTTPRequest2-watchOS" */;
 			buildPhases = (
-				D23CC73E99F94011F533AE97FD064A12 /* Sources */,
-				7598B4262D2D1248B274F238DEED8941 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9264A6A675BD042E145CF315C3484F2D /* PBXTargetDependency */,
-			);
-			name = "Pods-BusRider WatchKit Extension";
-			productName = "Pods-BusRider WatchKit Extension";
-			productReference = D7D9FEC05190ADA780EA0F8E1CE08AF3 /* libPods-BusRider WatchKit Extension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		564054B1648AA891A6D442AD13BE7179 /* STHTTPRequest2-watchOS2.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFA90907A96B31C922C6E346A811C12E /* Build configuration list for PBXNativeTarget "STHTTPRequest2-watchOS2.0" */;
-			buildPhases = (
-				48470660FBAFD404F0354BB3A61AA5FC /* Sources */,
-				49E1F42B0638A942F1EBE43433E26538 /* Frameworks */,
-				C046039C46D10756AD5D8E5E3425D9D9 /* Headers */,
+				19852DD913A41D551E37FF2498CF8E5C /* Sources */,
+				77DD7B066A697B7FD24961444324B4A7 /* Frameworks */,
+				8786DCEF022DB95A7FFDC095AF9CED31 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "STHTTPRequest2-watchOS2.0";
-			productName = "STHTTPRequest2-watchOS2.0";
-			productReference = CA85FF8F0248C0DEF6BA2671FCBDD9FF /* libSTHTTPRequest2-watchOS2.0.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		5973C5696DC5AA76B5BF85D141E0096F /* UIViewAdditions-iOS8.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 652DE9EAE345A9B181CD8D4B59E72823 /* Build configuration list for PBXNativeTarget "UIViewAdditions-iOS8.0" */;
-			buildPhases = (
-				DCAC0DF99B6C2216A6A7C65157C9BC9C /* Sources */,
-				6EBA45F24509D7514FBBC9E6D3140EDC /* Frameworks */,
-				1C0473B93807089EB49C638301E2B4A7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "UIViewAdditions-iOS8.0";
-			productName = "UIViewAdditions-iOS8.0";
-			productReference = A85AB82E60A2608FC80A7C748461D3AF /* libUIViewAdditions-iOS8.0.a */;
+			name = "STHTTPRequest2-watchOS";
+			productName = "STHTTPRequest2-watchOS";
+			productReference = D54D560AF8C8F2DE7943A8E8F4180571 /* libSTHTTPRequest2-watchOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6AF5962108EC6C6AFE87B5D754B7B3FB /* CBStoreHouseRefreshControl */ = {
@@ -1067,16 +971,50 @@
 			);
 			name = CBStoreHouseRefreshControl;
 			productName = CBStoreHouseRefreshControl;
-			productReference = 6FBC82871F0CA07F376945E8AF3E3B2E /* libCBStoreHouseRefreshControl.a */;
+			productReference = 932164DD0E3F106A57880484766503D8 /* libCBStoreHouseRefreshControl.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		74EC996E9EE2BC8400DC07314C626C50 /* SVProgressHUD */ = {
+		96DC59FD7F8FF812AC300B3E9DF0E2AF /* Pods-BusRider WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 480CAE2099123D3BF4530481FCCE2B8A /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildConfigurationList = 5B1ABA06C4FF429B2B7C7DBD2DB43C02 /* Build configuration list for PBXNativeTarget "Pods-BusRider WatchKit Extension" */;
 			buildPhases = (
-				38753490540A3C7AABC4E53F7B947444 /* Sources */,
-				BCD827B0F3CC8D2F722F90B8F73FCEFE /* Frameworks */,
-				2C5D2E501300A9B2F1B0763EE6343213 /* Headers */,
+				3F500D6E6D1B5208C6C33E321C5B87CD /* Sources */,
+				D9E5E61BC2BD419830901CBF95D7CA03 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC90EC053C916260F094DA232193C2C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-BusRider WatchKit Extension";
+			productName = "Pods-BusRider WatchKit Extension";
+			productReference = 6410CF9E8BE291C236D0C4C0037C2F05 /* libPods-BusRider WatchKit Extension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF156FDC1B17C7719BBC69392FA67E31 /* STHTTPRequest2-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D975DFDCC11CE9E357C31016940660F /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS" */;
+			buildPhases = (
+				EEA8848B67E491D4D04913A6C684D44F /* Sources */,
+				055DE3D484553D98AFC834D7D9C4352D /* Frameworks */,
+				C82A7BEF9FECD5A25BA503E8CA2AAC56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STHTTPRequest2-iOS";
+			productName = "STHTTPRequest2-iOS";
+			productReference = 59517BCA0C904B13CA7D63CBFDC86885 /* libSTHTTPRequest2-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B231EB5A5FA8993225632F45BB06C7F2 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F17379136A3D0870D05A3D9DDB8820 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				4C1ADA4B62BA89D8E28FF57D2DC9B9F1 /* Sources */,
+				DFD41CAAAD311D1D2A8B4E06D59930FC /* Frameworks */,
+				31D37D183A1E0A7300A4CEFC32FC7805 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1084,76 +1022,42 @@
 			);
 			name = SVProgressHUD;
 			productName = SVProgressHUD;
-			productReference = 6C8437804969C8A1A867DB449FCB2EEA /* libSVProgressHUD.a */;
+			productReference = 4518B179D9D167396B30CCF3304D0885 /* libSVProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		80AB56539DFC3DEB9D4AF11F0240640E /* STHTTPRequest2-iOS9.0 */ = {
+		B9775AD5E89AB9ED768D540D95C398D5 /* SGNavigationProgress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33D8AF6A4D63D066FB38BA184A368BFA /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS9.0" */;
+			buildConfigurationList = 4F0FA1999373E67F947C811D89764F22 /* Build configuration list for PBXNativeTarget "SGNavigationProgress" */;
 			buildPhases = (
-				09EA1752C13A1632981FE0F32BAC291B /* Sources */,
-				A5E0A82B0329147FB9BFD18336B92B97 /* Frameworks */,
-				62BBB91ABDC5B8809F3A7D99048A1C1F /* Headers */,
+				C3EA59D8E4C7CB579B650715A815D020 /* Sources */,
+				9A0DCB23FB29CC264BA2345DABBFE98B /* Frameworks */,
+				C25FD445D6DACF694A6FF50C7E40746C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "STHTTPRequest2-iOS9.0";
-			productName = "STHTTPRequest2-iOS9.0";
-			productReference = 2964AC34075BEACC1ED67D28FF61BDB7 /* libSTHTTPRequest2-iOS9.0.a */;
+			name = SGNavigationProgress;
+			productName = SGNavigationProgress;
+			productReference = 6D1449FB202363FB79FB6ED0BF793609 /* libSGNavigationProgress.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8B0BFE5E7105646C8F7040C31A269053 /* UIViewAdditions-iOS9.0 */ = {
+		C6EFBE316D9A2929BCDC6079C4E7020B /* Pods-Today */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59D8E1541AC7B442B6DC32AF4BF19055 /* Build configuration list for PBXNativeTarget "UIViewAdditions-iOS9.0" */;
+			buildConfigurationList = 65DA3DED5E63236C6141BEAEF0373351 /* Build configuration list for PBXNativeTarget "Pods-Today" */;
 			buildPhases = (
-				1EF8E5CE5410CEF1FFE0282D792C7FE6 /* Sources */,
-				D52E5FA870BF3751D7D33D3D3BD83F39 /* Frameworks */,
-				01B7E23BBB9ACA897C80CA635BBB4C7A /* Headers */,
+				2466CCEEAB2532965F0852CDCD2D3221 /* Sources */,
+				9BF947BF36D17627655CB8C1E072655C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "UIViewAdditions-iOS9.0";
-			productName = "UIViewAdditions-iOS9.0";
-			productReference = DE2498F0165C9CC733DE470AC7AD591A /* libUIViewAdditions-iOS9.0.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A2CC68F2DCB645FF2F3ED5F02FE7138A /* Pods-Today */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27BC0D172CCF0EA5E19304BAF67FA0AE /* Build configuration list for PBXNativeTarget "Pods-Today" */;
-			buildPhases = (
-				6D27EDA5BF8C22A72DCD8F3DF1B0C18E /* Sources */,
-				4BB19FBD4709F61D2F432A5521353F72 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B191DC74B389A08B930AAFC23D2F4E76 /* PBXTargetDependency */,
-				474913D6622B60F98F6CAB091FB08575 /* PBXTargetDependency */,
+				A4CEBE8969E6D507470CFE59BDEBEA83 /* PBXTargetDependency */,
+				E8466F43E6A2C2218DDC2808440E0659 /* PBXTargetDependency */,
 			);
 			name = "Pods-Today";
 			productName = "Pods-Today";
-			productReference = F76BF66FAF772A74B4530CB66C43A3BD /* libPods-Today.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BFB6511CC7716185B7391791734F324C /* STHTTPRequest2-iOS8.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44366404F02B22BF5651328A80D805BB /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS8.0" */;
-			buildPhases = (
-				2660928E3B4AC0D2F79109DC94466BA9 /* Sources */,
-				06940867C9AF0D7C9DFFCAACF3E6020C /* Frameworks */,
-				38A4AED01FA811023398E3180338F90A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "STHTTPRequest2-iOS8.0";
-			productName = "STHTTPRequest2-iOS8.0";
-			productReference = B6238F227748768A4BF853EB80BB8F48 /* libSTHTTPRequest2-iOS8.0.a */;
+			productReference = 3BBFD4D0AA660BCD4374D11F3EBBDB13 /* libPods-Today.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CBBC8921BA1356CA84C7AE46DBCDDC17 /* Appirater */ = {
@@ -1171,7 +1075,7 @@
 			);
 			name = Appirater;
 			productName = Appirater;
-			productReference = 2CB8864D0D09D66D301D81483788C179 /* libAppirater.a */;
+			productReference = A4E9076FE3D3E4635CA4436A8E4AACD0 /* libAppirater.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D6F9DBFCF274B43B1FE3BC3567984BA8 /* AHKActionSheet */ = {
@@ -1188,7 +1092,7 @@
 			);
 			name = AHKActionSheet;
 			productName = AHKActionSheet;
-			productReference = F817DE261829A331BD560796AC808B01 /* libAHKActionSheet.a */;
+			productReference = 199DE18291869D8F7751D14452FB7CA7 /* libAHKActionSheet.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		DF880A7BBC8CC3F13B3C8A1B5D0F5FC3 /* Appirater-Appirater */ = {
@@ -1205,24 +1109,30 @@
 			);
 			name = "Appirater-Appirater";
 			productName = "Appirater-Appirater";
-			productReference = D06CFAD8988F8374438D72DB9C4E030B /* Appirater.bundle */;
+			productReference = D0DF90480AB40B3C50C7AC7BA4E6A656 /* Appirater.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		E91E7E094BA1A2220F1E46A1EDD488CE /* SGNavigationProgress */ = {
+		E078379C97F3E44C72FA1DDDBBEABE00 /* Pods-BusRider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46D0372F61423D41C9AB57A52DA00F26 /* Build configuration list for PBXNativeTarget "SGNavigationProgress" */;
+			buildConfigurationList = F3D4F5D4C611C481FD0E95E0436CF0A5 /* Build configuration list for PBXNativeTarget "Pods-BusRider" */;
 			buildPhases = (
-				FBFA8B3D6A678212973E3C114407FE7C /* Sources */,
-				A5F598AE0BCD5F5C8D5B6F06259417FB /* Frameworks */,
-				D1993DB3EB32507108991052D7EB2F39 /* Headers */,
+				57FD5DB0DC0D5BEDA7DF918C623418FE /* Sources */,
+				1026DDD616AF43C82F8091887D618FC7 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B74ED97B87E7E626D42EA1B10D64BB5E /* PBXTargetDependency */,
+				67FBAC82BC0FAA66E453212CF4417001 /* PBXTargetDependency */,
+				413C9A73A512F734851D680C1859DD61 /* PBXTargetDependency */,
+				F28429E8ACD32CD7EA5E082504DD77E0 /* PBXTargetDependency */,
+				2E16463B8D7A36A568A3A5240982C34A /* PBXTargetDependency */,
+				2576629181076BBDC148B91DA87555E4 /* PBXTargetDependency */,
+				CBC345D958767C66C64C6CBF47FECBA2 /* PBXTargetDependency */,
 			);
-			name = SGNavigationProgress;
-			productName = SGNavigationProgress;
-			productReference = 7213831A025E9AB0D73F49C319F86FCD /* libSGNavigationProgress.a */;
+			name = "Pods-BusRider";
+			productName = "Pods-BusRider";
+			productReference = 7729C47E78ACF458819E8BBA75DE10A1 /* libPods-BusRider.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1242,7 +1152,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A83DC31F3197AFEA7A99F7042FE84D6F /* Products */;
+			productRefGroup = 61265740D77E8B168D048CF379AE18D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1250,16 +1160,14 @@
 				CBBC8921BA1356CA84C7AE46DBCDDC17 /* Appirater */,
 				DF880A7BBC8CC3F13B3C8A1B5D0F5FC3 /* Appirater-Appirater */,
 				6AF5962108EC6C6AFE87B5D754B7B3FB /* CBStoreHouseRefreshControl */,
-				11476C786614DB874CCFF11C5A6E2E5B /* Pods-BusRider */,
-				1C032A8CF6FFDB30CF8EFF018188B2FA /* Pods-BusRider WatchKit Extension */,
-				A2CC68F2DCB645FF2F3ED5F02FE7138A /* Pods-Today */,
-				E91E7E094BA1A2220F1E46A1EDD488CE /* SGNavigationProgress */,
-				BFB6511CC7716185B7391791734F324C /* STHTTPRequest2-iOS8.0 */,
-				80AB56539DFC3DEB9D4AF11F0240640E /* STHTTPRequest2-iOS9.0 */,
-				564054B1648AA891A6D442AD13BE7179 /* STHTTPRequest2-watchOS2.0 */,
-				74EC996E9EE2BC8400DC07314C626C50 /* SVProgressHUD */,
-				5973C5696DC5AA76B5BF85D141E0096F /* UIViewAdditions-iOS8.0 */,
-				8B0BFE5E7105646C8F7040C31A269053 /* UIViewAdditions-iOS9.0 */,
+				E078379C97F3E44C72FA1DDDBBEABE00 /* Pods-BusRider */,
+				96DC59FD7F8FF812AC300B3E9DF0E2AF /* Pods-BusRider WatchKit Extension */,
+				C6EFBE316D9A2929BCDC6079C4E7020B /* Pods-Today */,
+				B9775AD5E89AB9ED768D540D95C398D5 /* SGNavigationProgress */,
+				AF156FDC1B17C7719BBC69392FA67E31 /* STHTTPRequest2-iOS */,
+				37489491A913071A12AFE8A4FC0570A4 /* STHTTPRequest2-watchOS */,
+				B231EB5A5FA8993225632F45BB06C7F2 /* SVProgressHUD */,
+				1B932288783BC25377C75B32B0F75F3B /* UIViewAdditions */,
 			);
 		};
 /* End PBXProject section */
@@ -1309,76 +1217,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09EA1752C13A1632981FE0F32BAC291B /* Sources */ = {
+		19852DD913A41D551E37FF2498CF8E5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0847B16253B76E2AB59B5AD34A93D734 /* STHTTPRequest.m in Sources */,
-				481E11260AA9812B16F07C23908ED58B /* STHTTPRequest2-iOS9.0-dummy.m in Sources */,
+				EB90E681DE7DEA02C833785D7E14D025 /* STHTTPRequest.m in Sources */,
+				636A39009EB7BA1F4016EA62554B9295 /* STHTTPRequest2-watchOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EF8E5CE5410CEF1FFE0282D792C7FE6 /* Sources */ = {
+		2466CCEEAB2532965F0852CDCD2D3221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE775B23BB1EF1F80B81CA7290EFE94 /* UIView+RSAdditions.m in Sources */,
-				ADD870EF42E483EAAAE128EFD77C760A /* UIViewAdditions-iOS9.0-dummy.m in Sources */,
+				3F4C830A821645E4E57BA0A12726D3D0 /* Pods-Today-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2660928E3B4AC0D2F79109DC94466BA9 /* Sources */ = {
+		3F500D6E6D1B5208C6C33E321C5B87CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23DB801761D11DA2AFB93B964D639322 /* STHTTPRequest.m in Sources */,
-				24AA8EB2FBC7804A9F7AF154D9FDD044 /* STHTTPRequest2-iOS8.0-dummy.m in Sources */,
+				E26CD170D8DC1D9FEFC346045F676C85 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38753490540A3C7AABC4E53F7B947444 /* Sources */ = {
+		4C1ADA4B62BA89D8E28FF57D2DC9B9F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE088E96438055F51C62F1179A09172 /* SVIndefiniteAnimatedView.m in Sources */,
-				65F6D0C5E060B7E3F0F5B352D5923882 /* SVProgressAnimatedView.m in Sources */,
-				B89D21D9CA4BE36279B4A721558D1551 /* SVProgressHUD-dummy.m in Sources */,
-				472F67AA933C4F120725E493B0EF357D /* SVProgressHUD.m in Sources */,
-				B64EBC8CC1B7B9CA46C7A6D1014D12E7 /* SVRadialGradientLayer.m in Sources */,
+				187DB7E0C30B1CED9A4424B67FF5F6A7 /* SVIndefiniteAnimatedView.m in Sources */,
+				A7677D098E259306559169941825D0EE /* SVProgressAnimatedView.m in Sources */,
+				783B8F78D744BA87DCAD510612FC7F5C /* SVProgressHUD-dummy.m in Sources */,
+				2CB4BBD84853D0F55A7AE6277F37E860 /* SVProgressHUD.m in Sources */,
+				9860DFBE4FA4B5C3A8AB22810CAC1628 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48470660FBAFD404F0354BB3A61AA5FC /* Sources */ = {
+		57FD5DB0DC0D5BEDA7DF918C623418FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D72D0C87C6682ACC6EC0AC88CCAAE98 /* STHTTPRequest.m in Sources */,
-				A480F89F56442EFA9C46AA8B8121F028 /* STHTTPRequest2-watchOS2.0-dummy.m in Sources */,
+				B46B4BA403F406199EB1AB6D95400545 /* Pods-BusRider-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D27EDA5BF8C22A72DCD8F3DF1B0C18E /* Sources */ = {
+		62B1F9656A3AAFDD945132E31C211A5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47C3E92C21DF1A3418D9C4CF39DE02CE /* Pods-Today-dummy.m in Sources */,
+				E48F6AB95EACC6476F59326BBF107572 /* UIView+RSAdditions.m in Sources */,
+				E176170F15952A098D2AAE215D03A2D0 /* UIViewAdditions-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D23CC73E99F94011F533AE97FD064A12 /* Sources */ = {
+		C3EA59D8E4C7CB579B650715A815D020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C265FB5FCC04EE6AFEA5A921A00C8BF2 /* Pods-BusRider WatchKit Extension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCAC0DF99B6C2216A6A7C65157C9BC9C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B619643D64F83E4150068D6E55CAB98 /* UIView+RSAdditions.m in Sources */,
-				546CFE0A8533EE09E3A83163A095039E /* UIViewAdditions-iOS8.0-dummy.m in Sources */,
+				750DC1D93F0623D14D2DFC355289B179 /* SGNavigationProgress-dummy.m in Sources */,
+				5EB18307C6447DD1900C115B923B73A4 /* SGProgressView.m in Sources */,
+				582CE71856CD1F09D59A95996E1A5013 /* UINavigationController+SGProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1420,86 +1319,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0CCE132372AD5BF84C59AAAFEF31AFE /* Sources */ = {
+		EEA8848B67E491D4D04913A6C684D44F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				363495406C2BD1173E0A0CA2E685DBD9 /* Pods-BusRider-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FBFA8B3D6A678212973E3C114407FE7C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				39F3BDD5308830D231709F3865C8E517 /* SGNavigationProgress-dummy.m in Sources */,
-				EDFA33FA1286E3B7ACFE659978A63822 /* SGProgressView.m in Sources */,
-				990339DA1F2153DB06798564A07B852A /* UINavigationController+SGProgress.m in Sources */,
+				8971A4453852CDDAFCC0026FC21821A4 /* STHTTPRequest.m in Sources */,
+				0D1A5A450EAF468DCAE48DF72C32B429 /* STHTTPRequest2-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		02914D1A02E837E1B4D7C5E4CE376B12 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AHKActionSheet;
-			target = D6F9DBFCF274B43B1FE3BC3567984BA8 /* AHKActionSheet */;
-			targetProxy = 08029FDDA139A5F3CAE11C5C9A1017E7 /* PBXContainerItemProxy */;
-		};
-		0B42ED68CCAD1F7CCE156BD8CFD60763 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIViewAdditions-iOS9.0";
-			target = 8B0BFE5E7105646C8F7040C31A269053 /* UIViewAdditions-iOS9.0 */;
-			targetProxy = 26DE01AD10A861D04D76887EDE84E655 /* PBXContainerItemProxy */;
-		};
-		25C845FDD6379F88BAE6407C013D1F44 /* PBXTargetDependency */ = {
+		2576629181076BBDC148B91DA87555E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SVProgressHUD;
-			target = 74EC996E9EE2BC8400DC07314C626C50 /* SVProgressHUD */;
-			targetProxy = D7C9CE203E5A3BD8A5F78F776DBFB25D /* PBXContainerItemProxy */;
+			target = B231EB5A5FA8993225632F45BB06C7F2 /* SVProgressHUD */;
+			targetProxy = 15870EB93CD1CAFDD123BD13D5C6DA73 /* PBXContainerItemProxy */;
 		};
-		3DD5387DE74EA649A193E4E3DA36C626 /* PBXTargetDependency */ = {
+		2E16463B8D7A36A568A3A5240982C34A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "STHTTPRequest2-iOS9.0";
-			target = 80AB56539DFC3DEB9D4AF11F0240640E /* STHTTPRequest2-iOS9.0 */;
-			targetProxy = 78132A809AAEFA3F92491330DF6CD426 /* PBXContainerItemProxy */;
+			name = "STHTTPRequest2-iOS";
+			target = AF156FDC1B17C7719BBC69392FA67E31 /* STHTTPRequest2-iOS */;
+			targetProxy = ADCA62143A65E7FBB12130393BB98132 /* PBXContainerItemProxy */;
 		};
-		474913D6622B60F98F6CAB091FB08575 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIViewAdditions-iOS8.0";
-			target = 5973C5696DC5AA76B5BF85D141E0096F /* UIViewAdditions-iOS8.0 */;
-			targetProxy = F83BC59AF2C2B8344B1CA696AA7789BC /* PBXContainerItemProxy */;
-		};
-		603F5F3ED94EF28D365AF4856325181E /* PBXTargetDependency */ = {
+		413C9A73A512F734851D680C1859DD61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CBStoreHouseRefreshControl;
 			target = 6AF5962108EC6C6AFE87B5D754B7B3FB /* CBStoreHouseRefreshControl */;
-			targetProxy = 06097CA4A4DC5F219573EEE0B959B00D /* PBXContainerItemProxy */;
+			targetProxy = 4E1551B30EFC4D430CE4C3B314F25D99 /* PBXContainerItemProxy */;
 		};
-		9264A6A675BD042E145CF315C3484F2D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "STHTTPRequest2-watchOS2.0";
-			target = 564054B1648AA891A6D442AD13BE7179 /* STHTTPRequest2-watchOS2.0 */;
-			targetProxy = 300305D5F58A22C2919ABBB55CA94012 /* PBXContainerItemProxy */;
-		};
-		B191DC74B389A08B930AAFC23D2F4E76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "STHTTPRequest2-iOS8.0";
-			target = BFB6511CC7716185B7391791734F324C /* STHTTPRequest2-iOS8.0 */;
-			targetProxy = 0E1BE0945CBE6F1D123A34DBD6FBD21A /* PBXContainerItemProxy */;
-		};
-		BC626A0C96C8962BF425082F3E9F0157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SGNavigationProgress;
-			target = E91E7E094BA1A2220F1E46A1EDD488CE /* SGNavigationProgress */;
-			targetProxy = FFDD18D2F90915D4DC711F2748FF1124 /* PBXContainerItemProxy */;
-		};
-		E03BF5B13172D3CA550F1F609403A070 /* PBXTargetDependency */ = {
+		67FBAC82BC0FAA66E453212CF4417001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Appirater;
 			target = CBBC8921BA1356CA84C7AE46DBCDDC17 /* Appirater */;
-			targetProxy = 835A9785BFE4348AB1B9206F53F8AB0A /* PBXContainerItemProxy */;
+			targetProxy = 033F3FB5632C5646CFE73B67CEC92335 /* PBXContainerItemProxy */;
+		};
+		A4CEBE8969E6D507470CFE59BDEBEA83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "STHTTPRequest2-iOS";
+			target = AF156FDC1B17C7719BBC69392FA67E31 /* STHTTPRequest2-iOS */;
+			targetProxy = E3555AE2A62A430C70F1FA51BADAE877 /* PBXContainerItemProxy */;
+		};
+		B74ED97B87E7E626D42EA1B10D64BB5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AHKActionSheet;
+			target = D6F9DBFCF274B43B1FE3BC3567984BA8 /* AHKActionSheet */;
+			targetProxy = C4696BED06DF216140A949FE80D5F233 /* PBXContainerItemProxy */;
+		};
+		CBC345D958767C66C64C6CBF47FECBA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIViewAdditions;
+			target = 1B932288783BC25377C75B32B0F75F3B /* UIViewAdditions */;
+			targetProxy = 6E1A275CDB9524048D0612E4C410DEEE /* PBXContainerItemProxy */;
+		};
+		CC90EC053C916260F094DA232193C2C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "STHTTPRequest2-watchOS";
+			target = 37489491A913071A12AFE8A4FC0570A4 /* STHTTPRequest2-watchOS */;
+			targetProxy = B454B87C01F7601720C86F4F21656B79 /* PBXContainerItemProxy */;
+		};
+		E8466F43E6A2C2218DDC2808440E0659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIViewAdditions;
+			target = 1B932288783BC25377C75B32B0F75F3B /* UIViewAdditions */;
+			targetProxy = F497C7BA1587CD9E600ADC1721F3253A /* PBXContainerItemProxy */;
+		};
+		F28429E8ACD32CD7EA5E082504DD77E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SGNavigationProgress;
+			target = B9775AD5E89AB9ED768D540D95C398D5 /* SGNavigationProgress */;
+			targetProxy = 43807444A856749974CCAB13E743690E /* PBXContainerItemProxy */;
 		};
 		F78B215F27AE2A75313E16ACDAFEB3A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1510,197 +1400,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		127B3A65FE729B722384FC981C91FFF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 931214B0AA089E0ECE1324608ADE7E52 /* SGNavigationProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SGNavigationProgress/SGNavigationProgress-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2315456971CD184262EB2EA7C7830424 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832320A3BEB5A76A5356E6EDC5242FCE /* STHTTPRequest2-iOS9.0.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS9.0/STHTTPRequest2-iOS9.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		25DEEC38DA9E1475B43D7C63BE28BD44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832320A3BEB5A76A5356E6EDC5242FCE /* STHTTPRequest2-iOS9.0.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS9.0/STHTTPRequest2-iOS9.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		28F7345BA1D6655FD9F8D606F5A5AB57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		31D7B5691C5A4B1B21B96BA010586C30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36317A594A7D0DE0A49394ED36C8438E /* AHKActionSheet.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AHKActionSheet/AHKActionSheet-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		34393E3FDB70C9F2853C97FDBCB91019 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 458DE08454A89F0AA31FE3D33418D3C7 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		5737E4FB7369C5A7670028F59560F4C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEF6FEF84263A23CA9F23BC7F7F592A0 /* STHTTPRequest2-watchOS2.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-watchOS2.0/STHTTPRequest2-watchOS2.0-prefix.pch";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		6A5BC0474C33652C26FCA7B995E98B49 /* Debug */ = {
+		1ADF3D43224E722CD35B50437AF784E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E12F171B0DCA948F060EC9D68CE0ECFD /* SVProgressHUD.xcconfig */;
 			buildSettings = {
@@ -1722,353 +1422,7 @@
 			};
 			name = Debug;
 		};
-		6EA98731313758CE41D7B0130E1E3F1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2F04435B1A9D8CB5541A1488B8067EA /* Pods-BusRider.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		728C171CFA8F765B2EC71E5251A547CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3F6313042A0D2AEF27EE48609A85621 /* STHTTPRequest2-iOS8.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS8.0/STHTTPRequest2-iOS8.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		75492BCA412BF1B4C11D62B71795DAAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D61D517466C6CA61940F84C5BD0FEFE8 /* Pods-Today.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7E7F3BC4A63DC7793D074052301BFB90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9A59AF3E0DB71EC33B0C54D61AFDFE4 /* UIViewAdditions-iOS9.0.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions-iOS9.0/UIViewAdditions-iOS9.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		97328D246639CA239FFB5451B11A6122 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28CC77B92AD20C174A9F6F89B8E2EA90 /* Pods-BusRider.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9844FDE432AE6E8970659767055523BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 931214B0AA089E0ECE1324608ADE7E52 /* SGNavigationProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SGNavigationProgress/SGNavigationProgress-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9CE112BF2AD1F65BBAD32F3EF3027C2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12F171B0DCA948F060EC9D68CE0ECFD /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9E2572AFE048CF6E26DCF5EF6F694C57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEF6FEF84263A23CA9F23BC7F7F592A0 /* STHTTPRequest2-watchOS2.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-watchOS2.0/STHTTPRequest2-watchOS2.0-prefix.pch";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		A33427E565588314E11D165C423D283A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853009022134C80A87E538F753F3E5BA /* CBStoreHouseRefreshControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A567C32C36E88E2008C1260AF27337A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 179C064BD0E1A681A8C2CECD59573283 /* UIViewAdditions-iOS8.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions-iOS8.0/UIViewAdditions-iOS8.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AC7D669A93EF25A80994D8165F1B1458 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAF5DAED1F1C153B75C12189ADC780D8 /* Appirater.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Appirater";
-				INFOPLIST_FILE = "Target Support Files/Appirater/ResourceBundle-Appirater-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = Appirater;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		AD4D4D79D010A7CDB43AB0C3038933FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853009022134C80A87E538F753F3E5BA /* CBStoreHouseRefreshControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B1F6A197AA1C4BFDC29DBD24010E8BA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3F6313042A0D2AEF27EE48609A85621 /* STHTTPRequest2-iOS8.0.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS8.0/STHTTPRequest2-iOS8.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B9BA8FD29D31405FDB12B4F67D17E8B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB6CC8B5CC8E4D82C872786D2DD87517 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		BB84F37699F914B1121C58D19400A734 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6492F95855958342BC2B3A349A33B89 /* Pods-Today.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BCC05A5DA04EFA89A7D6768BD55175E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAF5DAED1F1C153B75C12189ADC780D8 /* Appirater.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Appirater/Appirater-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C4D3238D98DE234A3F5D5B29129399AC /* Debug */ = {
+		3130FEB246420E96C3349564B7DB4B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2117,7 +1471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2129,16 +1483,270 @@
 			};
 			name = Debug;
 		};
-		CAF383DB7156C8D390286E0A11CB06D8 /* Release */ = {
+		31D7B5691C5A4B1B21B96BA010586C30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 179C064BD0E1A681A8C2CECD59573283 /* UIViewAdditions-iOS8.0.xcconfig */;
+			baseConfigurationReference = 36317A594A7D0DE0A49394ED36C8438E /* AHKActionSheet.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AHKActionSheet/AHKActionSheet-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		322F6210841148DCBE4385A0F78930B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458DE08454A89F0AA31FE3D33418D3C7 /* Pods-BusRider WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		484E1FB6C4783BC0F3A3CEC14B7E48AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12F171B0DCA948F060EC9D68CE0ECFD /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E595CE023DFF95905E4CF93FD2B900C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		5C8F1009E63FB40C636DA6C0E769872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931214B0AA089E0ECE1324608ADE7E52 /* SGNavigationProgress.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SGNavigationProgress/SGNavigationProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		769DF61E0743CCDA7C7AA019536BFA01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6492F95855958342BC2B3A349A33B89 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions-iOS8.0/UIViewAdditions-iOS8.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		794F5A2A3BFBEB4A0ED9AE66036E5253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB9FBFF9EF031435524C5CB86817FE1 /* STHTTPRequest2-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS/STHTTPRequest2-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C70F71D0E4B822DDCC0DEDA0D5624DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931214B0AA089E0ECE1324608ADE7E52 /* SGNavigationProgress.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SGNavigationProgress/SGNavigationProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F79E35FB770569356DF0F24606C1AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28CC77B92AD20C174A9F6F89B8E2EA90 /* Pods-BusRider.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A33427E565588314E11D165C423D283A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853009022134C80A87E538F753F3E5BA /* CBStoreHouseRefreshControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AABD1BA1FC2DEA0CCFF192B77AB66420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45BF719D1ABE26603BCE2A187F54D626 /* UIViewAdditions.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions/UIViewAdditions-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -2147,6 +1755,158 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC7D669A93EF25A80994D8165F1B1458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF5DAED1F1C153B75C12189ADC780D8 /* Appirater.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Appirater";
+				INFOPLIST_FILE = "Target Support Files/Appirater/ResourceBundle-Appirater-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = Appirater;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AD4D4D79D010A7CDB43AB0C3038933FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853009022134C80A87E538F753F3E5BA /* CBStoreHouseRefreshControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CBStoreHouseRefreshControl/CBStoreHouseRefreshControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B953152F0A8D5CE41C7C121A06F52633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB9FBFF9EF031435524C5CB86817FE1 /* STHTTPRequest2-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-iOS/STHTTPRequest2-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFE747E33677333626017D4CD31739E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D61D517466C6CA61940F84C5BD0FEFE8 /* Pods-Today.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCC05A5DA04EFA89A7D6768BD55175E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF5DAED1F1C153B75C12189ADC780D8 /* Appirater.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Appirater/Appirater-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6BE389342AE36A5E12CBC4432874DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E216196D0FE1893F3DC4B19F38516B4 /* STHTTPRequest2-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-watchOS/STHTTPRequest2-watchOS-prefix.pch";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		CAA8D07B2948EB549A061CB27DDBE7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F04435B1A9D8CB5541A1488B8067EA /* Pods-BusRider.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2212,15 +1972,16 @@
 			};
 			name = Debug;
 		};
-		F5DD594CF11EC724A8B7DE9011BD5572 /* Debug */ = {
+		E53F6C9322C1A86839300094196375E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9A59AF3E0DB71EC33B0C54D61AFDFE4 /* UIViewAdditions-iOS9.0.xcconfig */;
+			baseConfigurationReference = 45BF719D1ABE26603BCE2A187F54D626 /* UIViewAdditions.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions-iOS9.0/UIViewAdditions-iOS9.0-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/UIViewAdditions/UIViewAdditions-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -2231,6 +1992,49 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECB6341E396D5E2CCCA6879DB7D24D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E216196D0FE1893F3DC4B19F38516B4 /* STHTTPRequest2-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/STHTTPRequest2-watchOS/STHTTPRequest2-watchOS-prefix.pch";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F5FA259F2F9019B205F2155A652EF761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB6CC8B5CC8E4D82C872786D2DD87517 /* Pods-BusRider WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -2246,83 +2050,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27BC0D172CCF0EA5E19304BAF67FA0AE /* Build configuration list for PBXNativeTarget "Pods-Today" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB84F37699F914B1121C58D19400A734 /* Debug */,
-				75492BCA412BF1B4C11D62B71795DAAF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4D3238D98DE234A3F5D5B29129399AC /* Debug */,
-				28F7345BA1D6655FD9F8D606F5A5AB57 /* Release */,
+				3130FEB246420E96C3349564B7DB4B4C /* Debug */,
+				4E595CE023DFF95905E4CF93FD2B900C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33D8AF6A4D63D066FB38BA184A368BFA /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS9.0" */ = {
+		4F0FA1999373E67F947C811D89764F22 /* Build configuration list for PBXNativeTarget "SGNavigationProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2315456971CD184262EB2EA7C7830424 /* Debug */,
-				25DEEC38DA9E1475B43D7C63BE28BD44 /* Release */,
+				5C8F1009E63FB40C636DA6C0E769872A /* Debug */,
+				7C70F71D0E4B822DDCC0DEDA0D5624DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44366404F02B22BF5651328A80D805BB /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS8.0" */ = {
+		52539FAF4A0E465516C20184796C8FCB /* Build configuration list for PBXNativeTarget "UIViewAdditions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1F6A197AA1C4BFDC29DBD24010E8BA8 /* Debug */,
-				728C171CFA8F765B2EC71E5251A547CE /* Release */,
+				AABD1BA1FC2DEA0CCFF192B77AB66420 /* Debug */,
+				E53F6C9322C1A86839300094196375E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46D0372F61423D41C9AB57A52DA00F26 /* Build configuration list for PBXNativeTarget "SGNavigationProgress" */ = {
+		5B1ABA06C4FF429B2B7C7DBD2DB43C02 /* Build configuration list for PBXNativeTarget "Pods-BusRider WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				127B3A65FE729B722384FC981C91FFF5 /* Debug */,
-				9844FDE432AE6E8970659767055523BE /* Release */,
+				F5FA259F2F9019B205F2155A652EF761 /* Debug */,
+				322F6210841148DCBE4385A0F78930B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		480CAE2099123D3BF4530481FCCE2B8A /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+		65DA3DED5E63236C6141BEAEF0373351 /* Build configuration list for PBXNativeTarget "Pods-Today" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A5BC0474C33652C26FCA7B995E98B49 /* Debug */,
-				9CE112BF2AD1F65BBAD32F3EF3027C2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59D8E1541AC7B442B6DC32AF4BF19055 /* Build configuration list for PBXNativeTarget "UIViewAdditions-iOS9.0" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5DD594CF11EC724A8B7DE9011BD5572 /* Debug */,
-				7E7F3BC4A63DC7793D074052301BFB90 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		652DE9EAE345A9B181CD8D4B59E72823 /* Build configuration list for PBXNativeTarget "UIViewAdditions-iOS8.0" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A567C32C36E88E2008C1260AF27337A5 /* Debug */,
-				CAF383DB7156C8D390286E0A11CB06D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6A2429796B2B1DFB089B21A2B113CC60 /* Build configuration list for PBXNativeTarget "Pods-BusRider" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				97328D246639CA239FFB5451B11A6122 /* Debug */,
-				6EA98731313758CE41D7B0130E1E3F1F /* Release */,
+				769DF61E0743CCDA7C7AA019536BFA01 /* Debug */,
+				BAFE747E33677333626017D4CD31739E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2336,6 +2104,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7D7FB0F805A6DBF4A23728275FA45459 /* Build configuration list for PBXNativeTarget "STHTTPRequest2-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB6341E396D5E2CCCA6879DB7D24D5B /* Debug */,
+				C6BE389342AE36A5E12CBC4432874DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D975DFDCC11CE9E357C31016940660F /* Build configuration list for PBXNativeTarget "STHTTPRequest2-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794F5A2A3BFBEB4A0ED9AE66036E5253 /* Debug */,
+				B953152F0A8D5CE41C7C121A06F52633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BA31B7A9B2FEBA2F123125D7850DD548 /* Build configuration list for PBXNativeTarget "Appirater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2345,29 +2131,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD209460F64F71A7256EEB9CB11E6C18 /* Build configuration list for PBXNativeTarget "Pods-BusRider WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9BA8FD29D31405FDB12B4F67D17E8B7 /* Debug */,
-				34393E3FDB70C9F2853C97FDBCB91019 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFA90907A96B31C922C6E346A811C12E /* Build configuration list for PBXNativeTarget "STHTTPRequest2-watchOS2.0" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E2572AFE048CF6E26DCF5EF6F694C57 /* Debug */,
-				5737E4FB7369C5A7670028F59560F4C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F11C31EF369D912D83F165DD215F6F17 /* Build configuration list for PBXNativeTarget "Appirater-Appirater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E277284F59C100E86BA188BE774ECE1C /* Debug */,
 				AC7D669A93EF25A80994D8165F1B1458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D4F5D4C611C481FD0E95E0436CF0A5 /* Build configuration list for PBXNativeTarget "Pods-BusRider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F79E35FB770569356DF0F24606C1AA8 /* Debug */,
+				CAA8D07B2948EB549A061CB27DDBE7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F17379136A3D0870D05A3D9DDB8820 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADF3D43224E722CD35B50437AF784E7 /* Debug */,
+				484E1FB6C4783BC0F3A3CEC14B7E48AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
