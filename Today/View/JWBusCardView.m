@@ -39,7 +39,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         [self setToSubviews:^(UIView *view) {
-            view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
+            view.layer.transform = CATransform3DMakeRotation(-M_PI / 2, 1, 0, 0);
         }];
     } completion:^(BOOL finished) {
         [self setPlaceHolder];
@@ -58,7 +58,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         [self setToSubviews:^(UIView *view) {
-            view.layer.transform = CATransform3DMakeRotation(- M_PI / 2, 1, 0, 0);
+            view.layer.transform = CATransform3DMakeRotation(-M_PI / 2, 1, 0, 0);
         }];
     } completion:^(BOOL finished) {
         [self setItemInternal:item];
@@ -87,7 +87,11 @@
 - (void)setItemInternal:(JWBusInfoItem *)item
 {
     self.titleLabel.text = [NSString stringWithFormat:@"%@", item.lineNumber];
-    self.stationLabel.text = [NSString stringWithFormat:@"到达%@", item.currentStop];
+    if (item.currentStop) {
+        self.stationLabel.text = [NSString stringWithFormat:@"到达%@", item.currentStop];
+    } else {
+        self.stationLabel.text = @"未设置当前站点";
+    }
 
     self.fromLabel.text = item.from;
     self.toLabel.text = item.to;

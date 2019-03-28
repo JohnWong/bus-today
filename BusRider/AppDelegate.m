@@ -69,13 +69,23 @@ static NSString *AppID = @"975022341";
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
-    if (todayItem) {
+    __block NSString *lineId = nil;
+    NSURLComponents *component = [NSURLComponents componentsWithString:url.absoluteString];
+    [component.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        if ([obj.name isEqualToString:@"lineId"]) {
+            lineId = obj.value;
+            *stop = YES;
+        }
+    }];
+    if (!lineId) {
+        JWCollectItem *todayItem = [JWUserDefaultsUtil todayBusLine];
+        lineId = todayItem.lineId;
+    }
+    if (lineId) {
         UINavigationController *navigationViewController = (UINavigationController *)self.window.rootViewController;
         [navigationViewController popToRootViewControllerAnimated:YES];
         JWMainViewController *mainViewController = (JWMainViewController *)navigationViewController.topViewController;
-        mainViewController.selectedLineId = todayItem.lineId;
-        mainViewController.selectedLineNumber = todayItem.lineNumber;
+        mainViewController.selectedLineId = lineId;
         [mainViewController performSegueWithIdentifier:JWSeguePushLineWithId sender:mainViewController];
     }
     return YES;
